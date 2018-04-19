@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://vishnubharathi.codes/quotes/</loc>
+    <lastmod>2018-04-19T07:32:13+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://vishnubharathi.codes/blog/the-beginnings/</loc>
     <lastmod>2018-04-19T00:25:54+05:30</lastmod>
   </url>
@@ -50,7 +55,7 @@
   
   <url>
     <loc>http://vishnubharathi.codes/</loc>
-    <lastmod>2018-04-19T00:25:54+05:30</lastmod>
+    <lastmod>2018-04-19T07:32:13+05:30</lastmod>
     <priority>0</priority>
   </url>
   
