@@ -46,6 +46,7 @@ linkedin               = "//linkedin.com/in/scriptnull"
 noshowreadtime         = false                         # if true, don't show "<x> minutes read" in posts
 selfintro              = "Programming + Trying hard"                            # appears in the site header when set to a non-empty string
 twitter                = "//twitter.com/scriptnull"
+keybase                = "//keybase.io/scriptnull"
 
 highlightjs            = true
 # highlightjslanguages = ["go"]                        # additional languages not included in the "common" set
