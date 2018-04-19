@@ -21,6 +21,12 @@ weight                 = -120
 identifier             = "blog"
 url                    = "/blog/"
 
+[[menu.main]]
+name                   = "Quotes"
+weight                 = -120
+identifier             = "quotes"
+url                    = "/quotes/"
+
 [params]
 include_rss            = true                          # include RSS <link> tag in <head> and show RSS icon
 latestpostscount       = 5                             # how many posts to display on the home page
