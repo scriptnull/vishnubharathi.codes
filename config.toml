@@ -35,7 +35,7 @@ author                 = "Vishnu Bharathi"
 cachebuster            = true                          # add the current unix timestamp in query string for cache busting css assets
 dateform               = "Jan 2, 2006"
 dateformfull           = "Mon Jan 2 2006 15:04:05 MST"
-description            = "Don't panic"
+description            = "Programming + Loves learning things"
 email                  = "vishnubharathi04@gmail.com"
 extracssfiles          = [ "/css/override.css" ]       # In your `static` directory, add/remove files as necessary.
 faviconfile            = "img/leaf.ico"
@@ -44,7 +44,7 @@ instagram              = "//instagram.com/vishnu.bharathi"
 lang                   = "en"
 linkedin               = "//linkedin.com/in/scriptnull"
 noshowreadtime         = false                         # if true, don't show "<x> minutes read" in posts
-selfintro              = "Programming + Trying hard"                            # appears in the site header when set to a non-empty string
+selfintro              = "Programming + Loves learning things"                            # appears in the site header when set to a non-empty string
 twitter                = "//twitter.com/scriptnull"
 keybase                = "//keybase.io/scriptnull"
 
