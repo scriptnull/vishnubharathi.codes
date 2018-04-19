@@ -6,9 +6,46 @@
     <description>Recent content in Tags on Vishnu Bharathi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
+    <lastBuildDate>Thu, 19 Apr 2018 00:25:54 +0530</lastBuildDate>
     
 	<atom:link href="http://vishnubharathi.codes/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>College</title>
+      <link>http://vishnubharathi.codes/tags/college/</link>
+      <pubDate>Thu, 19 Apr 2018 00:25:54 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/college/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>http://vishnubharathi.codes/tags/github/</link>
+      <pubDate>Thu, 19 Apr 2018 00:25:54 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nostalgia</title>
+      <link>http://vishnubharathi.codes/tags/nostalgia/</link>
+      <pubDate>Thu, 19 Apr 2018 00:25:54 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/nostalgia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software</title>
+      <link>http://vishnubharathi.codes/tags/software/</link>
+      <pubDate>Thu, 19 Apr 2018 00:25:54 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/software/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
