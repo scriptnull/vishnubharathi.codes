@@ -2,6 +2,7 @@
 title: "The Beginnings"
 date: 2018-04-19T00:25:54+05:30
 draft: false
+tags: ["nostalgia", "software", "college", "github"]
 ---
 
 A few years back (around 2013), when I was still in college I started noticing few people sharing links to very interesting projects in my facebook feed. All the links pointed to this site called [github.com](https://github.com). I was thrilled to open and read the README.md files every time I get the link to a project.
