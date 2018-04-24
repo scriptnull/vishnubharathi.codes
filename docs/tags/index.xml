@@ -6,15 +6,24 @@
     <description>Recent content in Tags on Vishnu Bharathi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 19 Apr 2018 00:25:54 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 25 Apr 2018 00:55:12 +0530</lastBuildDate>
     
 	<atom:link href="http://vishnubharathi.codes/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Career Advice</title>
+      <link>http://vishnubharathi.codes/tags/career-advice/</link>
+      <pubDate>Wed, 25 Apr 2018 00:55:12 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/career-advice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>College</title>
       <link>http://vishnubharathi.codes/tags/college/</link>
-      <pubDate>Thu, 19 Apr 2018 00:25:54 +0530</pubDate>
+      <pubDate>Wed, 25 Apr 2018 00:55:12 +0530</pubDate>
       
       <guid>http://vishnubharathi.codes/tags/college/</guid>
       <description></description>
@@ -30,11 +39,29 @@
     </item>
     
     <item>
+      <title>Jvm</title>
+      <link>http://vishnubharathi.codes/tags/jvm/</link>
+      <pubDate>Wed, 25 Apr 2018 00:55:12 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/jvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Nostalgia</title>
       <link>http://vishnubharathi.codes/tags/nostalgia/</link>
-      <pubDate>Thu, 19 Apr 2018 00:25:54 +0530</pubDate>
+      <pubDate>Wed, 25 Apr 2018 00:55:12 +0530</pubDate>
       
       <guid>http://vishnubharathi.codes/tags/nostalgia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>http://vishnubharathi.codes/tags/programming/</link>
+      <pubDate>Wed, 25 Apr 2018 00:55:12 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/programming/</guid>
       <description></description>
     </item>
     
