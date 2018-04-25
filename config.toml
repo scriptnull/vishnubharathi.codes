@@ -23,9 +23,15 @@ url                    = "/blog/"
 
 [[menu.main]]
 name                   = "Quotes"
-weight                 = -120
+weight                 = -110
 identifier             = "quotes"
 url                    = "/quotes/"
+
+[[menu.main]]
+name                   = "Books"
+weight                 = -100
+identifier             = "books"
+url                    = "/books/"
 
 [params]
 include_rss            = true                          # include RSS <link> tag in <head> and show RSS icon
