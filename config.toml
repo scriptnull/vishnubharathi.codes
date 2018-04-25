@@ -10,7 +10,7 @@ author              = "Vishnu Bharathi"
 title               = "Vishnu Bharathi"
 pygmentsuseclasses  = true
 pluralizelisttitles = false
-googleAnalytics     = "UA-123-45"
+googleAnalytics     = "UA-64308743-3"
 
 [permalinks]
 blog  = "blog/:slug/"
