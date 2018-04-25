@@ -4,6 +4,10 @@ date: 2018-04-25T23:24:19+05:30
 draft: false
 ---
 
+This is my bookshelf. I love to collect and read books. They help me a lot.
+
+---
+
 <h3>The Linux Programming Interface: A Linux and UNIX System Programming Handbook</h3>
 <span>- Michael Kerrisk</span>
 <span><a href="https://www.amazon.in/Linux-Programming-Interface-System-Handbook-ebook/dp/B004OEJMZM?tag&#x3D;googinhydr18418-21">Book Link</a></span>
