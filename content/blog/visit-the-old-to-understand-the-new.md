@@ -1,5 +1,5 @@
 ---
-title: "Visit The Old To Understand The New"
+title: "Visit the old to understand the new"
 date: 2018-04-25T00:55:12+05:30
 draft: false
 tags: ["nostalgia", "programming", "college", "jvm", "career advice"]

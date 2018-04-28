@@ -2,6 +2,7 @@
 title: "Great Indian Developer Summit 2018"
 date: 2018-04-25T20:57:10+05:30
 draft: false
+tags: ["programming", "conference", "java", "groovy", "kotlin"]
 ---
 
 Today, I attended [GIDS18](http://www.developermarch.com/developersummit/) (Great Indian Developer Summit). It spans 5 days with following topics covered.
