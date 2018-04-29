@@ -303,3 +303,19 @@ By: Steve
 Source: Hawaii Five O S8E04
 
 ---
+
+> Don't let anyone tell you "you can't play or that is impossible". Take possible out of impossible.
+
+By: Richard Turner
+
+Source: Dealt
+
+---
+
+> I think a very general statement that can be made about magic is that it helps remind us things aren't always what they seem and that limitations aren't always limitations
+
+By: Narrator
+
+Source: Dealt
+
+---
