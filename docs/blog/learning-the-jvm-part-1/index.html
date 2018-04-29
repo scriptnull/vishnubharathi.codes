@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="author" content="Vishnu Bharathi">
+<meta name="description" content="After deciding to learn about the JVM, I started reading the JVM specification. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to tell.
+I am currently reading the Chapter 2: The Structure of the Java Virtual Machine. Here is what I got to learn.
+Java Virtual Machine Specification The first line states
+ This document specifies an abstract machine.">
+
+<meta property="og:title" content="Learning the JVM: Part 1" />
+<meta property="og:description" content="After deciding to learn about the JVM, I started reading the JVM specification. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to tell.
+I am currently reading the Chapter 2: The Structure of the Java Virtual Machine. Here is what I got to learn.
+Java Virtual Machine Specification The first line states
+ This document specifies an abstract machine." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://vishnubharathi.codes/blog/learning-the-jvm-part-1/" />
+
+
+
+<meta property="article:published_time" content="2018-04-30T00:35:05&#43;05:30"/>
+
+<meta property="article:modified_time" content="2018-04-30T00:35:05&#43;05:30"/>
+
+
+
+
+
+
+
+
+
+
+
+
+<title>
+
+
+     Learning the JVM: Part 1 
+
+</title>
+<link rel="canonical" href="http://vishnubharathi.codes/blog/learning-the-jvm-part-1/">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+
+
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:500">
+
+
+
+    
+    <link rel="stylesheet" href="http://vishnubharathi.codes/css/reset.css?t=2018-04-30%2001%3a36%3a23.034330023%20%2b0530%20IST%20m%3d%2b0.065409871">
+    <link rel="stylesheet" href="http://vishnubharathi.codes/css/pygments.css?t=2018-04-30%2001%3a36%3a23.034330023%20%2b0530%20IST%20m%3d%2b0.065409871">
+    <link rel="stylesheet" href="http://vishnubharathi.codes/css/main.css?t=2018-04-30%2001%3a36%3a23.034330023%20%2b0530%20IST%20m%3d%2b0.065409871">
+    
+        <link rel="stylesheet" href="http://vishnubharathi.codes/css/override.css?t=2018-04-30%2001%3a36%3a23.034330023%20%2b0530%20IST%20m%3d%2b0.065409871">
+    
+
+
+
+
+<link rel="shortcut icon"
+
+    href="http://vishnubharathi.codes/img/leaf.ico"
+
+>
+
+
+
+
+
+
+
+
+</head>
+
+
+<body lang="en">
+
+<section class="header">
+    <div class="container">
+        <div class="content">
+            
+            <a href="http://vishnubharathi.codes/"><img class="avatar" src="https://gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=50" rcset="https://gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=100 2x, https://gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=150 3x, https://gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=200 4x"></a>
+            
+            <a href="http://vishnubharathi.codes/"><div class="name">Vishnu Bharathi</div></a>
+            
+              <h3 class="self-intro">Programming &#43; Loves learning things</h3>
+            
+            <nav>
+                <ul>
+                    
+                        <li class="nav-blog"><a href="http://vishnubharathi.codes/blog/"><span>Blog</span></a></li>
+                    
+                        <li class="nav-quotes"><a href="http://vishnubharathi.codes/quotes/"><span>Quotes</span></a></li>
+                    
+                        <li class="nav-books"><a href="http://vishnubharathi.codes/books/"><span>Books</span></a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+<section class="icons">
+    <div class="container">
+        <div class="content">
+        
+            <a href="//github.com/scriptnull" target="_blank" rel="noopener"><img class="icon" src="http://vishnubharathi.codes/img/github.svg" alt="github" /></a>
+        
+
+        
+            <a href="//twitter.com/scriptnull" target="_blank" rel="noopener"><img class="icon" src="http://vishnubharathi.codes/img/twitter.svg" alt="twitter" /></a>
+        
+
+	
+            <a href="//keybase.io/scriptnull" target="_blank" rel="noopener"><img class="icon" src="http://vishnubharathi.codes/img/keybase.svg" alt="keybase" /></a>
+	
+
+        
+
+        
+
+        
+            <a href="//linkedin.com/in/scriptnull" target="_blank" rel="noopener"><img class="icon" src="http://vishnubharathi.codes/img/linkedin.svg" alt="linkedin" /></a>
+        
+
+        
+
+        
+            <a href="//instagram.com/vishnu.bharathi" target="_blank" rel="noopener"><img class="icon" src="http://vishnubharathi.codes/img/instagram.svg" alt="instagram" /></a>
+        
+
+        
+
+        
+
+        
+            <a href="mailto:vishnubharathi04@gmail.com"><img class="icon" src="http://vishnubharathi.codes/img/email.svg" alt="email" /></a>
+        
+
+        
+
+        
+        </div>
+    </div>
+</section>
+
+
+<section class="main post non-narrow zero-top-spacing">
+    <div class="container">
+        <div class="content">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
+
+    Learning the JVM: Part 1
+
+</div>
+
+                    <div class="initials"><a href="http://vishnubharathi.codes/"></a></div>
+                </div>
+                <div class="meta">
+                    
+                    <div class="date" title='Mon Apr 30 2018 00:35:05 IST'>Apr 30, 2018</div>
+                    
+                    
+		    <div class="reading-time"><div class="middot"></div>4 minutes read</div>
+                    
+                </div>
+            </div>
+            <div class="markdown">
+                
+
+<p>After <a href="http://vishnubharathi.codes/blog/visit-the-old-to-understand-the-new/">deciding to learn about the JVM</a>, I started reading the <a href="https://docs.oracle.com/javase/specs/jvms/se10/html/index.html">JVM specification</a>. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to tell.</p>
+
+<p>I am currently reading the <a href="https://docs.oracle.com/javase/specs/jvms/se10/html/jvms-2.html">Chapter 2: The Structure of the Java Virtual Machine</a>. Here is what I got to learn.</p>
+
+<h2 id="java-virtual-machine-specification">Java Virtual Machine Specification</h2>
+
+<p>The first line states</p>
+
+<blockquote>
+<p>This document specifies an abstract machine. It does not describe any particular implementation of the Java Virtual Machine.</p>
+</blockquote>
+
+<p>This means that the entire specification is an abstract and anyone could implement their own set Java Virtual Machine in their choice of programming. I also googled to see for an already existing implementations of the JVM and found <a href="https://en.wikipedia.org/wiki/List_of_Java_virtual_machines">this list</a>, which provides a comprehensive list of JVM implementations.</p>
+
+<p>I think the most widely used JVM implementation is the <a href="https://en.wikipedia.org/wiki/HotSpot">Hotspot</a>, which is distributed and maintained by Oracle. Just to show the interesting flavours that are possible, here is an implementation of JVM written in Go - <a href="https://github.com/zxh0/jvm.go">https://github.com/zxh0/jvm.go</a> (Thought of doing this when I learnt that JVM is an abstract machine and could be implemented on our own. But was surprised to discover this)</p>
+
+<p>The specification also tells that it does mandate few details and leave them upto the choice of the implementors, like</p>
+
+<ul>
+<li>Garbage collection algorithm used in the JVM.</li>
+<li>Memory layout of run-time data areas (not really sure of what this is)</li>
+<li>Any internal optimization of the Java Virtual Machine instructions</li>
+</ul>
+
+<p>Now, that we know some scope of what to expect, I moving forward.</p>
+
+<h2 id="class-file-format">class file format</h2>
+
+<p>The <code>class</code> file format seems to be pretty big deal.</p>
+
+<blockquote>
+<p>Compiled code to be executed by the Java Virtual Machine is represented using a hardware- and operating system-independent binary format, typically (but not necessarily) stored in a file, known as the class file format. The class file format precisely defines the representation of a class or interface, including details such as byte ordering that might be taken for granted in a platform-specific object file format.</p>
+</blockquote>
+
+<p>I used to do Java long time back (mostly in college) and I vividly remember using <code>javac</code> and <code>java</code>. The <code>javac</code> stands for java compiler. We input a java source code file into javac compiler and it produces a <code>.class</code> file, which we give as input to <code>java</code> program, which will then run our code. It is good that I remember this much.</p>
+
+<pre><code>$ man javac
+
+NAME
+       javac - Java compiler
+</code></pre>
+
+<pre><code>$ man java
+
+NAME
+       java - Java application launcher
+</code></pre>
+
+<p>At this point, I am curious to note the contents of a simple <code>.class</code> file. So, let me write a Hello world program in java and use <code>javac</code> to compile the source to a <code>.class</code> file.</p>
+
+<pre><code class="language-java">// Hello.java
+
+class Hello {
+  public static void main(String[] args) {
+    System.out.println(&quot;Hello world&quot;);
+  }
+}
+</code></pre>
+
+<p>After doing <code>javac Hello.java</code>, I got a file named <code>Hello.class</code> in the same directory. The contents of the file are</p>
+
+<pre><code>����   5 
+  	   
+     &lt;init&gt; ()V Code LineNumberTable main ([Ljava/lang/String;)V 
+SourceFile 
+Hello.java      Hello world    Hello java/lang/Object java/lang/System out Ljava/io/PrintStream; java/io/PrintStream println (Ljava/lang/String;)V               	        *� �    
+        	    	   %     	� � �    
+   
+        
+   
+</code></pre>
+
+<p>Well I am pretty intrigued at this point if I could make some sense out the of class file by writing more simple programs and comparing the class file contents.</p>
+
+<pre><code class="language-java">// Calculate.java
+
+class Calculate {
+  public int add(int a, int b) {
+    return a + b;
+  }
+
+  public int subtract(int a, int b) {
+    return a - b;
+  }
+
+  public int multiply(int a, int b) {
+    return a * b;
+  }
+
+  public int divide(int a, int b) {
+    return a / b;
+  }
+
+  public static void main(String[] args) {
+    Calculate c = new Calculate();
+
+    System.out.println(c.add(1,2));
+    System.out.println(c.subtract(2,1));
+    System.out.println(c.multiply(1,2));
+    System.out.println(c.divide(2,1));
+  }
+}
+</code></pre>
+
+<p><code>Calculate.class</code> contains the following content.</p>
+
+<pre><code>����   5 )
+ 
+  
+  	  
+  
+  
+  
+  
+  ! &quot; &lt;init&gt; ()V Code LineNumberTable add (II)I subtract multiply divide main ([Ljava/lang/String;)V 
+SourceFile Calculate.java   	Calculate # $ %   &amp; ' (       java/lang/Object java/lang/System out Ljava/io/PrintStream; java/io/PrintStream println (I)V    
+           
+        *� �                
+        `�                
+        d�                
+        h�                
+        l�            	    
+   e     9� Y� L� +� � � +� � � +� � � +� 	� �                   ,  8       
+</code></pre>
+
+<p>Well, I could see the presence of our member methods of the class and some letters that my editor could not render. My guess they are instruction codes and they would refer to the methods being called. Anyway, we will get to know about this better in the upcoming chapters. So, let me move on.</p>
+
+<p>Here are some pictures from the <a href="https://clojure.org/guides/learn/syntax#_evaluation">clojure getting started guide</a>, that potrays what I just did.</p>
+
+<h4 id="java-evaluation">Java Evaluation</h4>
+
+<p><img src="https://clojure.org/images/content/guides/learn/syntax/traditional-evaluation.png" alt="Java Evaluation" /></p>
+
+<h4 id="clojure-evaluation">Clojure Evaluation</h4>
+
+<p><img src="https://clojure.org/images/content/guides/learn/syntax/clojure-evaluation.png" alt="Clojure Evaluation" /></p>
+
+<p>Also it is worth noting this statement that is present along with these pictures.</p>
+
+<blockquote>
+<p>In Java, source code (.java files) are read as characters by the compiler (javac), which produces bytecode (.class files) which can be loaded by the JVM.</p>
+</blockquote>
+
+<p>It refers what I called <code>.class</code> file all throughout my little expedition as <em>bytecode</em>. OMG! So this is just it. <code>Bytecode</code> is not a buzz word to me anymore. I think, the weird characters that my editor could not render are just bytes of data, that represent the code I wrote. Pretty good theory, huh?</p>
+
+<p>Well. Lets see where this goes!</p>
+
+                <br>
+                
+                  <div class="tags">
+                    <strong>Tags:</strong>
+                  
+                    <a href="http://vishnubharathi.codes/tags/prgramming">prgramming</a>
+                  
+                    <a href="http://vishnubharathi.codes/tags/jvm">jvm</a>
+                  
+                    <a href="http://vishnubharathi.codes/tags/java">java</a>
+                  
+                    <a href="http://vishnubharathi.codes/tags/clojure">clojure</a>
+                  
+                  </div>
+                  <br />
+                
+                <p class="back-to-posts"><a href="http://vishnubharathi.codes/blog/">Back to posts</a></p>
+            </div>
+            <br>
+            <div class="disqus">
+                
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-64308743-3', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  
+
+  <script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+  </script>
+
+
+
+
+
+</body>
+</html>
+

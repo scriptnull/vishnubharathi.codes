@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://vishnubharathi.codes/blog/learning-the-jvm-part-1/</loc>
+    <lastmod>2018-04-30T00:35:05+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://vishnubharathi.codes/books/</loc>
     <lastmod>2018-04-25T23:24:19+05:30</lastmod>
   </url>
@@ -29,7 +34,7 @@
   
   <url>
     <loc>http://vishnubharathi.codes/blog/</loc>
-    <lastmod>2018-04-25T20:57:10+05:30</lastmod>
+    <lastmod>2018-04-30T00:35:05+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -41,6 +46,12 @@
   
   <url>
     <loc>http://vishnubharathi.codes/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vishnubharathi.codes/tags/clojure/</loc>
+    <lastmod>2018-04-30T00:35:05+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -70,13 +81,13 @@
   
   <url>
     <loc>http://vishnubharathi.codes/tags/java/</loc>
-    <lastmod>2018-04-25T20:57:10+05:30</lastmod>
+    <lastmod>2018-04-30T00:35:05+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://vishnubharathi.codes/tags/jvm/</loc>
-    <lastmod>2018-04-25T00:55:12+05:30</lastmod>
+    <lastmod>2018-04-30T00:35:05+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -89,6 +100,12 @@
   <url>
     <loc>http://vishnubharathi.codes/tags/nostalgia/</loc>
     <lastmod>2018-04-25T00:55:12+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vishnubharathi.codes/tags/prgramming/</loc>
+    <lastmod>2018-04-30T00:35:05+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -112,7 +129,7 @@
   
   <url>
     <loc>http://vishnubharathi.codes/</loc>
-    <lastmod>2018-04-25T23:24:19+05:30</lastmod>
+    <lastmod>2018-04-30T00:35:05+05:30</lastmod>
     <priority>0</priority>
   </url>
   

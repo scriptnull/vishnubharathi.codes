@@ -6,10 +6,22 @@
     <description>Recent content in Blog on Vishnu Bharathi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 25 Apr 2018 20:57:10 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 30 Apr 2018 00:35:05 +0530</lastBuildDate>
     
 	<atom:link href="http://vishnubharathi.codes/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learning the JVM: Part 1</title>
+      <link>http://vishnubharathi.codes/blog/learning-the-jvm-part-1/</link>
+      <pubDate>Mon, 30 Apr 2018 00:35:05 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/blog/learning-the-jvm-part-1/</guid>
+      <description>After deciding to learn about the JVM, I started reading the JVM specification. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to tell.
+I am currently reading the Chapter 2: The Structure of the Java Virtual Machine. Here is what I got to learn.
+Java Virtual Machine Specification The first line states
+ This document specifies an abstract machine.</description>
+    </item>
     
     <item>
       <title>Great Indian Developer Summit 2018</title>
