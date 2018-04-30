@@ -8,6 +8,44 @@ Some words that inspire and help me.
 
 ---
 
+> If it's not actionable, it's not a problem. It is a situation, a circumstance, a fact of life. It may be a drag (so to speak), but like gravity, it's not a problem that can be solved.
+
+Notes: Authors call this the gravity problems. "I couldn't climb up a mountain faster, because gravity is slowing me down". We really can't do much about it. It's a reality, which could be better tackled by accepting it and moving on.
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
+> The only response to a gravity problem is acceptance. And this is where all good designers begin. This is the "You Are Here" or "Accept" phrase of design thinking. Acceptance. That's why you start where you are. Not where you wish you were. Not where you hope you are. Not where you think you should be. But right where you are.
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
+> Somewhere, in some area of your life, you are stuck.
+>
+> You have a wicked problem.
+>
+> And that's a wonderful and exciting place to start.
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
+> Designers don't _think_ their way forward. Designers _build_ their way forward. What does that mean? It means you are not just going to be dreaming up a lot of fun fantasies that have no relationship to the real world - or the real you. You are going to  build things (we  call them prototypes), try stuff, and have a lot of fun in the process.
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
 > If you want to work on getting better, you need to start by knowing where you are.
 
 By: Aaron Swartz

@@ -8,6 +8,12 @@ This is my bookshelf. I love to collect and read books. They help me a lot.
 
 ---
 
+<h3>Designing Your Life: Build the Perfect Career, Step by Step</h3>
+<span>- Bill Burnett & Dave Evans</span>
+<span><a href="https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173">Book Link</a></span>
+
+---
+
 <h3>The Linux Programming Interface: A Linux and UNIX System Programming Handbook</h3>
 <span>- Michael Kerrisk</span>
 <span><a href="https://www.amazon.in/Linux-Programming-Interface-System-Handbook-ebook/dp/B004OEJMZM?tag&#x3D;googinhydr18418-21">Book Link</a></span>
