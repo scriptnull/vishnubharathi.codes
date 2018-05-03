@@ -2,6 +2,7 @@
 title: "Workview Reflection"
 date: 2018-05-01T12:02:21+05:30
 draft: false
+tags: ["work", "life"]
 ---
 
 This document is an exercise from the book named ["Designing Your Life: Build the Perfect Career, Step by Step"](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173) by Bill Burnett & Dave Evans
