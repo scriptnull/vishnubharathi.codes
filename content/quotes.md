@@ -8,6 +8,92 @@ Some words that inspire and help me.
 
 ---
 
+> The only wrong way to do this is to not do it at all.
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
+> fail fast and fail forward
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
+> It is okay for prototypes to fail - they are supposed to - but well-designed prototypes teach you something about the future.
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
+> You often have to go through the wild ideas to get to the actionable good ideas.
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
+> Designers learn to have lots of wild ideas because they know that the number one enemy of creativity is judgement.
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
+> Believing that there's only one idea out there leads to a lot of pressure and indecision.
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
+> Look it's simple. You can't know what you want until you know what you might want, so you are going to have to generate a lot of ideas and possibilities.
+>
+> Accept the problem.
+>
+> Get stuck.
+>
+> Get over it, and ideate, ideate, ideate!
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
+> And don't worry about being stuck. Designers get stuck all the time. Being stuck can be launching pad for creativity.
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
+> Now, what makes work fun? It's not what you might think. It's not one unending office party. It's not getting paid a lot of money. It's not having multiple weeks of paid vacations. Work is fun when you are actually leaning into your strengths and are deeply engaged and energized by what you're doing.
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
+> What you can do is pay attention to the clues in front of you, and make your best way forward with the tools you have at hand. We think the first clues are engagement and energy.
+
+By: Authors (Bill Burnett & Dave Evans)
+
+Source: [Designing Your Life: Build the Perfect Career, Step by Step](https://www.amazon.co.uk/Designing-Your-Life-Perfect-Career/dp/1784701173)
+
+---
+
 > If it's not actionable, it's not a problem. It is a situation, a circumstance, a fact of life. It may be a drag (so to speak), but like gravity, it's not a problem that can be solved.
 
 Notes: Authors call this the gravity problems. "I couldn't climb up a mountain faster, because gravity is slowing me down". We really can't do much about it. It's a reality, which could be better tackled by accepting it and moving on.
