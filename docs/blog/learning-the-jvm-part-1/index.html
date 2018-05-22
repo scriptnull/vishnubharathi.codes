@@ -63,11 +63,11 @@ Java Virtual Machine Specification The first line states
 
 
     
-    <link rel="stylesheet" href="http://vishnubharathi.codes/css/reset.css?t=2018-05-04%2000%3a05%3a31.909704576%20%2b0530%20IST%20m%3d%2b0.064645631">
-    <link rel="stylesheet" href="http://vishnubharathi.codes/css/pygments.css?t=2018-05-04%2000%3a05%3a31.909704576%20%2b0530%20IST%20m%3d%2b0.064645631">
-    <link rel="stylesheet" href="http://vishnubharathi.codes/css/main.css?t=2018-05-04%2000%3a05%3a31.909704576%20%2b0530%20IST%20m%3d%2b0.064645631">
+    <link rel="stylesheet" href="http://vishnubharathi.codes/css/reset.css?t=2018-05-22%2021%3a41%3a09.85195566%20%2b0530%20IST%20m%3d%2b0.063264104">
+    <link rel="stylesheet" href="http://vishnubharathi.codes/css/pygments.css?t=2018-05-22%2021%3a41%3a09.85195566%20%2b0530%20IST%20m%3d%2b0.063264104">
+    <link rel="stylesheet" href="http://vishnubharathi.codes/css/main.css?t=2018-05-22%2021%3a41%3a09.85195566%20%2b0530%20IST%20m%3d%2b0.063264104">
     
-        <link rel="stylesheet" href="http://vishnubharathi.codes/css/override.css?t=2018-05-04%2000%3a05%3a31.909704576%20%2b0530%20IST%20m%3d%2b0.064645631">
+        <link rel="stylesheet" href="http://vishnubharathi.codes/css/override.css?t=2018-05-22%2021%3a41%3a09.85195566%20%2b0530%20IST%20m%3d%2b0.063264104">
     
 
 
@@ -198,11 +198,11 @@ Java Virtual Machine Specification The first line states
 <p>This document specifies an abstract machine. It does not describe any particular implementation of the Java Virtual Machine.</p>
 </blockquote>
 
-<p>This means that the entire specification is an abstract and anyone could implement their own set Java Virtual Machine in their choice of programming. I also googled to see for an already existing implementations of the JVM and found <a href="https://en.wikipedia.org/wiki/List_of_Java_virtual_machines">this list</a>, which provides a comprehensive list of JVM implementations.</p>
+<p>This means that the entire specification is an abstract and anyone could implement their own Java Virtual Machine in their preferred programming language. I also googled to see for an already existing implementations of the JVM and found <a href="https://en.wikipedia.org/wiki/List_of_Java_virtual_machines">this list</a>.</p>
 
-<p>I think the most widely used JVM implementation is the <a href="https://en.wikipedia.org/wiki/HotSpot">Hotspot</a>, which is distributed and maintained by Oracle. Just to show the interesting flavours that are possible, here is an implementation of JVM written in Go - <a href="https://github.com/zxh0/jvm.go">https://github.com/zxh0/jvm.go</a> (Thought of doing this when I learnt that JVM is an abstract machine and could be implemented on our own. But was surprised to discover this)</p>
+<p>I think the most widely used JVM implementation is the <a href="https://en.wikipedia.org/wiki/HotSpot">Hotspot</a>, which is distributed and maintained by Oracle. Just to show the interesting flavours that are possible, here is an implementation of JVM written in Go - <a href="https://github.com/zxh0/jvm.go">https://github.com/zxh0/jvm.go</a> (Thought of doing this when I learnt that JVM is an abstract machine and could be implemented on our own. But was surprised to discover this.)</p>
 
-<p>The specification also tells that it does mandate few details and leave them upto the choice of the implementors, like</p>
+<p>The specification also tells that it does not mandate few details and leave them upto the choice of the implementors, like</p>
 
 <ul>
 <li>Garbage collection algorithm used in the JVM.</li>
@@ -258,7 +258,7 @@ Hello.java      Hello world    Hello java/lang/Object java/
    
 </code></pre>
 
-<p>Well I am pretty intrigued at this point if I could make some sense out the of class file by writing more simple programs and comparing the class file contents.</p>
+<p>Well, I am pretty intrigued at this point if I could make some sense out the of class file by writing more simple programs and comparing the class file contents.</p>
 
 <pre><code class="language-java">// Calculate.java
 
@@ -311,7 +311,7 @@ SourceFile Calculate.java   	Calculate # $ %   &amp; ' (    
    e     9� Y� L� +� � � +� � � +� � � +� 	� �                   ,  8       
 </code></pre>
 
-<p>Well, I could see the presence of our member methods of the class and some letters that my editor could not render. My guess they are instruction codes and they would refer to the methods being called. Anyway, we will get to know about this better in the upcoming chapters. So, let me move on.</p>
+<p>I could see the presence of our member methods of the class and some letters that my editor could not render. My guess is that they are instruction codes and they would refer to the methods being called. Anyway, we will get to know about this better in the upcoming chapters. So, let me move on.</p>
 
 <p>Here are some pictures from the <a href="https://clojure.org/guides/learn/syntax#_evaluation">clojure getting started guide</a>, that potrays what I just did.</p>
 
@@ -329,7 +329,7 @@ SourceFile Calculate.java   	Calculate # $ %   &amp; ' (    
 <p>In Java, source code (.java files) are read as characters by the compiler (javac), which produces bytecode (.class files) which can be loaded by the JVM.</p>
 </blockquote>
 
-<p>It refers what I called <code>.class</code> file all throughout my little expedition as <em>bytecode</em>. OMG! So this is just it. <code>Bytecode</code> is not a buzz word to me anymore. I think, the weird characters that my editor could not render are just bytes of data, that represent the code I wrote. Pretty good theory, huh?</p>
+<p>It refers to what I called <code>.class</code> file all throughout my little expedition as <em>bytecode</em>. OMG! So this is just it. <code>Bytecode</code> is not a buzz word to me anymore. I think, the weird characters that my editor could not render are just bytes of data, that represent the code I wrote. Pretty good theory, huh?</p>
 
 <p>Well. Lets see where this goes!</p>
 
