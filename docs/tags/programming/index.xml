@@ -6,10 +6,20 @@
     <description>Recent content in Programming on Vishnu Bharathi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 30 Apr 2018 00:35:05 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 22 May 2018 21:48:06 +0530</lastBuildDate>
     
 	<atom:link href="http://vishnubharathi.codes/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Enter the JVM: Part 2</title>
+      <link>http://vishnubharathi.codes/blog/enter-the-jvm-part-2/</link>
+      <pubDate>Tue, 22 May 2018 21:48:06 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/blog/enter-the-jvm-part-2/</guid>
+      <description>I am glad that I am continuing my journey of reading the JVM specification and learning about it. If you had missed the first part of this series, you can read it from here. I read the Chapter 2: The Structure of the Java Virtual Machine last night and I came across quite some interesting and basic things.
+First of all, the structure of the JVM is itself a beauty.</description>
+    </item>
     
     <item>
       <title>Enter the JVM: Part 1</title>
