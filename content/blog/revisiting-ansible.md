@@ -2,9 +2,10 @@
 title: "Revisiting Ansible"
 date: 2018-06-05T19:46:53+05:30
 draft: false
+tags: ["devops", "ansible", "terraform"]
 ---
 
-I used [ansible](https://www.ansible.com/) at [work](https://www.shippable.com/) few months back. Today, I faced a problem at [work](https://www.shippable.com/), trying to connect to a virtual machine on Google Cloud Platform created with ansible. I didn't feel surprised, when I was not able to be productive on it immediately, because I didn't get ansible as good as I got [terraform](https://www.terraform.io/). I learnt both of them using the docs. If you ask me to do something dealing with multiple machines, I would probably prefer terraform over ansible. Reason for this would be
+I used [ansible](https://www.ansible.com/) at [work](https://www.shippable.com/) few months back. Today, I faced a problem at [work](https://www.shippable.com/), trying to connect to a virtual machine on Google Cloud Platform created with ansible. I didn't feel surprised, when I was not able to be productive on it immediately, because I didn't learn ansible as much as I learnt [terraform](https://www.terraform.io/). I learnt both of them using the docs. If you ask me to do something dealing with multiple machines, I would probably prefer terraform over ansible. Reason for this would be
 
 - I prefer HCL (HashiCorp Configuration Language) over YAML.
 - The documentation of terraform and all the projects by [HashiCorp](https://www.hashicorp.com/) are pretty good at convincing me to do something in their way.
@@ -38,7 +39,7 @@ This probably seems to be the super cool thing about Ansible. "There is no need 
 So if there is no agent installed on the machine, how does the machine receive the tasks to be executed?
 It seems like ansible's default communication is via SSH.
 
-TK: diagram for communication of between ansible and remote machine. returns data. check video for more.
+![ansible overview](/images/ansible-overview.png)
 
 ## No State
 Ansible does not result in a state file like terraform. This means the same ansible script could be run from any machine and it will understand the state of things in the runtime.
