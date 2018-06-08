@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Vishnu Bharathi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 25 Apr 2018 00:55:12 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 05 Jun 2018 19:46:53 +0530</lastBuildDate>
     
 	<atom:link href="http://vishnubharathi.codes/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Ansible</title>
+      <link>http://vishnubharathi.codes/tags/ansible/</link>
+      <pubDate>Tue, 05 Jun 2018 19:46:53 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/ansible/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Career Advice</title>
@@ -44,6 +53,15 @@
       <pubDate>Wed, 25 Apr 2018 20:57:10 +0530</pubDate>
       
       <guid>http://vishnubharathi.codes/tags/conference/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Devops</title>
+      <link>http://vishnubharathi.codes/tags/devops/</link>
+      <pubDate>Tue, 05 Jun 2018 19:46:53 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/devops/</guid>
       <description></description>
     </item>
     
@@ -125,6 +143,15 @@
       <pubDate>Thu, 19 Apr 2018 00:25:54 +0530</pubDate>
       
       <guid>http://vishnubharathi.codes/tags/software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Terraform</title>
+      <link>http://vishnubharathi.codes/tags/terraform/</link>
+      <pubDate>Tue, 05 Jun 2018 19:46:53 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/terraform/</guid>
       <description></description>
     </item>
     

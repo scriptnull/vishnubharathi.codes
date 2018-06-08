@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terraform on Vishnu Bharathi</title>
+    <link>http://vishnubharathi.codes/tags/terraform/</link>
+    <description>Recent content in Terraform on Vishnu Bharathi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 05 Jun 2018 19:46:53 +0530</lastBuildDate>
+    
+	<atom:link href="http://vishnubharathi.codes/tags/terraform/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Revisiting Ansible</title>
+      <link>http://vishnubharathi.codes/blog/revisiting-ansible/</link>
+      <pubDate>Tue, 05 Jun 2018 19:46:53 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/blog/revisiting-ansible/</guid>
+      <description>I used ansible at work few months back. Today, I faced a problem at work, trying to connect to a virtual machine on Google Cloud Platform created with ansible. I didn&amp;rsquo;t feel surprised, when I was not able to be productive on it immediately, because I didn&amp;rsquo;t learn ansible as much as I learnt terraform. I learnt both of them using the docs. If you ask me to do something dealing with multiple machines, I would probably prefer terraform over ansible.</description>
+    </item>
+    
+  </channel>
+</rss>

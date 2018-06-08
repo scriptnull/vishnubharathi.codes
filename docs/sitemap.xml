@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://vishnubharathi.codes/blog/revisiting-ansible/</loc>
+    <lastmod>2018-06-05T19:46:53+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://vishnubharathi.codes/blog/enter-the-jvm-part-2/</loc>
     <lastmod>2018-05-22T21:48:06+05:30</lastmod>
   </url>
@@ -43,8 +48,14 @@
   </url>
   
   <url>
+    <loc>http://vishnubharathi.codes/tags/ansible/</loc>
+    <lastmod>2018-06-05T19:46:53+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vishnubharathi.codes/blog/</loc>
-    <lastmod>2018-05-22T21:48:06+05:30</lastmod>
+    <lastmod>2018-06-05T19:46:53+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -74,6 +85,12 @@
   <url>
     <loc>http://vishnubharathi.codes/tags/conference/</loc>
     <lastmod>2018-04-25T20:57:10+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vishnubharathi.codes/tags/devops/</loc>
+    <lastmod>2018-06-05T19:46:53+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -133,13 +150,19 @@
   
   <url>
     <loc>http://vishnubharathi.codes/tags/</loc>
-    <lastmod>2018-04-25T00:55:12+05:30</lastmod>
+    <lastmod>2018-06-05T19:46:53+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vishnubharathi.codes/tags/terraform/</loc>
+    <lastmod>2018-06-05T19:46:53+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://vishnubharathi.codes/</loc>
-    <lastmod>2018-05-22T21:48:06+05:30</lastmod>
+    <lastmod>2018-06-05T19:46:53+05:30</lastmod>
     <priority>0</priority>
   </url>
   
