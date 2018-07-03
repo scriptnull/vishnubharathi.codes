@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Vertx First Attempt</title>
-      <link>http://vishnubharathi.codes/blog/vertx-first-attempt/</link>
+      <title>Vert.x First Attempt</title>
+      <link>http://vishnubharathi.codes/blog/vert.x-first-attempt/</link>
       <pubDate>Tue, 03 Jul 2018 06:10:38 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/vertx-first-attempt/</guid>
+      <guid>http://vishnubharathi.codes/blog/vert.x-first-attempt/</guid>
       <description>Ever since I decided to learn about the Java Ecosystem, I have been wanting to try out something practical. May be write a small app in Java and see how the experience would be. I came across a framework called Eclipse Vert.x few months back and decided to give it a try. So I ended up reading its documentation for few weekends and today morning. I am feeling a bit comfortable to write some code on Vert.</description>
     </item>
     
