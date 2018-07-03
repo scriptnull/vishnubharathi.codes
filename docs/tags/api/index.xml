@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Api on Vishnu Bharathi</title>
+    <link>http://vishnubharathi.codes/tags/api/</link>
+    <description>Recent content in Api on Vishnu Bharathi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 03 Jul 2018 06:10:38 +0530</lastBuildDate>
+    
+	<atom:link href="http://vishnubharathi.codes/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vertx First Attempt</title>
+      <link>http://vishnubharathi.codes/blog/vertx-first-attempt/</link>
+      <pubDate>Tue, 03 Jul 2018 06:10:38 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/blog/vertx-first-attempt/</guid>
+      <description>Ever since I decided to learn about the Java Ecosystem, I have been wanting to try out something practical. May be write a small app in Java and see how the experience would be. I came across a framework called Eclipse Vert.x few months back and decided to give it a try. So I ended up reading its documentation for few weekends and today morning. I am feeling a bit comfortable to write some code on Vert.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://vishnubharathi.codes/blog/vertx-first-attempt/</loc>
+    <lastmod>2018-07-03T06:10:38+05:30</lastmod>
+  </url>
+  
+  <url>
     <loc>http://vishnubharathi.codes/blog/revisiting-ansible/</loc>
     <lastmod>2018-06-05T19:46:53+05:30</lastmod>
   </url>
@@ -54,8 +59,14 @@
   </url>
   
   <url>
+    <loc>http://vishnubharathi.codes/tags/api/</loc>
+    <lastmod>2018-07-03T06:10:38+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vishnubharathi.codes/blog/</loc>
-    <lastmod>2018-06-05T19:46:53+05:30</lastmod>
+    <lastmod>2018-07-03T06:10:38+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -108,13 +119,13 @@
   
   <url>
     <loc>http://vishnubharathi.codes/tags/java/</loc>
-    <lastmod>2018-05-22T21:48:06+05:30</lastmod>
+    <lastmod>2018-07-03T06:10:38+05:30</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://vishnubharathi.codes/tags/jvm/</loc>
-    <lastmod>2018-05-22T21:48:06+05:30</lastmod>
+    <lastmod>2018-07-03T06:10:38+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -127,6 +138,12 @@
   <url>
     <loc>http://vishnubharathi.codes/tags/life/</loc>
     <lastmod>2018-05-01T12:02:21+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://vishnubharathi.codes/tags/microservices/</loc>
+    <lastmod>2018-07-03T06:10:38+05:30</lastmod>
     <priority>0</priority>
   </url>
   
@@ -161,8 +178,14 @@
   </url>
   
   <url>
+    <loc>http://vishnubharathi.codes/tags/vertx/</loc>
+    <lastmod>2018-07-03T06:10:38+05:30</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://vishnubharathi.codes/</loc>
-    <lastmod>2018-06-05T19:46:53+05:30</lastmod>
+    <lastmod>2018-07-03T06:10:38+05:30</lastmod>
     <priority>0</priority>
   </url>
   
