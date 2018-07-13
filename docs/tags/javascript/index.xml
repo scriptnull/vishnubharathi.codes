@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Javascript on Vishnu Bharathi</title>
+    <link>http://vishnubharathi.codes/tags/javascript/</link>
+    <description>Recent content in Javascript on Vishnu Bharathi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 14 Jul 2018 00:15:24 +0530</lastBuildDate>
+    
+	<atom:link href="http://vishnubharathi.codes/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Friday Night</title>
+      <link>http://vishnubharathi.codes/blog/friday-night/</link>
+      <pubDate>Sat, 14 Jul 2018 00:15:24 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/blog/friday-night/</guid>
+      <description>It is actually a saturday morning. It&amp;rsquo;s midnight 12:17 as I type. I am writing this post in the spirit of Friday night (Weekend yay!)
+First things first. I am building a brand new software on a technology that I didn&amp;rsquo;t have chance to learn yet.
+Dark mode on! Head phones on!
+(( Playing &amp;ldquo;Go Hard or Go Home&amp;rdquo; ))
+I had been working late at office (till 10:10pm friday to be exact).</description>
+    </item>
+    
+  </channel>
+</rss>

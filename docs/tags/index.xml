@@ -6,10 +6,19 @@
     <description>Recent content in Tags on Vishnu Bharathi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 05 Jun 2018 19:46:53 +0530</lastBuildDate>
+    <lastBuildDate>Sat, 14 Jul 2018 00:15:24 +0530</lastBuildDate>
     
 	<atom:link href="http://vishnubharathi.codes/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Angular</title>
+      <link>http://vishnubharathi.codes/tags/angular/</link>
+      <pubDate>Sat, 14 Jul 2018 00:15:24 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/angular/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Ansible</title>
@@ -75,6 +84,15 @@
     </item>
     
     <item>
+      <title>Electron</title>
+      <link>http://vishnubharathi.codes/tags/electron/</link>
+      <pubDate>Sat, 14 Jul 2018 00:15:24 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/electron/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Github</title>
       <link>http://vishnubharathi.codes/tags/github/</link>
       <pubDate>Thu, 19 Apr 2018 00:25:54 +0530</pubDate>
@@ -98,6 +116,15 @@
       <pubDate>Tue, 03 Jul 2018 06:10:38 +0530</pubDate>
       
       <guid>http://vishnubharathi.codes/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>http://vishnubharathi.codes/tags/javascript/</link>
+      <pubDate>Sat, 14 Jul 2018 00:15:24 +0530</pubDate>
+      
+      <guid>http://vishnubharathi.codes/tags/javascript/</guid>
       <description></description>
     </item>
     
@@ -149,7 +176,7 @@
     <item>
       <title>Programming</title>
       <link>http://vishnubharathi.codes/tags/programming/</link>
-      <pubDate>Tue, 22 May 2018 21:48:06 +0530</pubDate>
+      <pubDate>Sat, 14 Jul 2018 00:15:24 +0530</pubDate>
       
       <guid>http://vishnubharathi.codes/tags/programming/</guid>
       <description></description>
