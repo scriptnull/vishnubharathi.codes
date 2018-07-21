@@ -8,6 +8,22 @@ Some words that inspire and help me.
 
 ---
 
+> Captain, there is only one logical direction in which to go: Forward.
+
+By: Wendy
+
+Source: [Please Stand By](https://www.imdb.com/title/tt4652650/)
+
+---
+
+> Don't be afraid, Jim. The unknown is there for us to conquer, not to fear
+
+By: Wendy
+
+Source: [Please Stand By](https://www.imdb.com/title/tt4652650/)
+
+---
+
 > The only wrong way to do this is to not do it at all.
 
 By: Authors (Bill Burnett & Dave Evans)
