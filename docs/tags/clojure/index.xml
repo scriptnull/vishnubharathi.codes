@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clojure on Vishnu Bharathi</title>
-    <link>http://vishnubharathi.codes/tags/clojure/</link>
+    <link>https://vishnubharathi.codes/tags/clojure/</link>
     <description>Recent content in Clojure on Vishnu Bharathi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Mon, 30 Apr 2018 00:35:05 +0530</lastBuildDate>
     
-	<atom:link href="http://vishnubharathi.codes/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vishnubharathi.codes/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Enter the JVM: Part 1</title>
-      <link>http://vishnubharathi.codes/blog/enter-the-jvm-part-1/</link>
+      <link>https://vishnubharathi.codes/blog/enter-the-jvm-part-1/</link>
       <pubDate>Mon, 30 Apr 2018 00:35:05 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/enter-the-jvm-part-1/</guid>
+      <guid>https://vishnubharathi.codes/blog/enter-the-jvm-part-1/</guid>
       <description>After deciding to learn about the JVM, I started reading the JVM specification. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to tell.
 I am currently reading the Chapter 2: The Structure of the Java Virtual Machine. Here is what I got to learn.
 Java Virtual Machine Specification The first line states

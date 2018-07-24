@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vishnu Bharathi</title>
-    <link>http://vishnubharathi.codes/</link>
+    <link>https://vishnubharathi.codes/</link>
     <description>Recent content on Vishnu Bharathi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sat, 14 Jul 2018 00:15:24 +0530</lastBuildDate>
     
-	<atom:link href="http://vishnubharathi.codes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vishnubharathi.codes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Friday Night</title>
-      <link>http://vishnubharathi.codes/blog/friday-night/</link>
+      <link>https://vishnubharathi.codes/blog/friday-night/</link>
       <pubDate>Sat, 14 Jul 2018 00:15:24 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/friday-night/</guid>
+      <guid>https://vishnubharathi.codes/blog/friday-night/</guid>
       <description>It is actually a saturday morning. It&amp;rsquo;s midnight 12:17 as I type. I am writing this post in the spirit of Friday night (Weekend yay!)
 First things first. I am building a brand new software on a technology that I didn&amp;rsquo;t have chance to learn yet.
 Dark mode on! Head phones on!
@@ -26,48 +26,48 @@ I had been working late at office (till 10:10pm friday to be exact).</descriptio
     
     <item>
       <title>Reading List 2018</title>
-      <link>http://vishnubharathi.codes/blog/reading-list-2018/</link>
+      <link>https://vishnubharathi.codes/blog/reading-list-2018/</link>
       <pubDate>Wed, 11 Jul 2018 20:07:39 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/reading-list-2018/</guid>
+      <guid>https://vishnubharathi.codes/blog/reading-list-2018/</guid>
       <description>Listing down the possible online documents/specifications/RFCs etc. that I wish to read in 2018. Before picking to read any one of the document, it is obvious to check for updates. Because as we know it, the technology (especially the Web) is moving forward at a great speed.
 I got to dicover rfc-editor which seems to be a nice place to discover some standards. For example, this link lists all the basic protocols responsible for the internet.</description>
     </item>
     
     <item>
       <title>Vert.x First Attempt</title>
-      <link>http://vishnubharathi.codes/blog/vert.x-first-attempt/</link>
+      <link>https://vishnubharathi.codes/blog/vert.x-first-attempt/</link>
       <pubDate>Tue, 03 Jul 2018 06:10:38 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/vert.x-first-attempt/</guid>
+      <guid>https://vishnubharathi.codes/blog/vert.x-first-attempt/</guid>
       <description>Ever since I decided to learn about the Java Ecosystem, I have been wanting to try out something practical. May be write a small app in Java and see how the experience would be. I came across a framework called Eclipse Vert.x few months back and decided to give it a try. So I ended up reading its documentation for few weekends and today morning. I am feeling a bit comfortable to write some code on Vert.</description>
     </item>
     
     <item>
       <title>Revisiting Ansible</title>
-      <link>http://vishnubharathi.codes/blog/revisiting-ansible/</link>
+      <link>https://vishnubharathi.codes/blog/revisiting-ansible/</link>
       <pubDate>Tue, 05 Jun 2018 19:46:53 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/revisiting-ansible/</guid>
+      <guid>https://vishnubharathi.codes/blog/revisiting-ansible/</guid>
       <description>I used ansible at work few months back. Today, I faced a problem at work, trying to connect to a virtual machine on Google Cloud Platform created with ansible. I didn&amp;rsquo;t feel surprised, when I was not able to be productive on it immediately, because I didn&amp;rsquo;t learn ansible as much as I learnt terraform. I learnt both of them using the docs. If you ask me to do something dealing with multiple machines, I would probably prefer terraform over ansible.</description>
     </item>
     
     <item>
       <title>Enter the JVM: Part 2</title>
-      <link>http://vishnubharathi.codes/blog/enter-the-jvm-part-2/</link>
+      <link>https://vishnubharathi.codes/blog/enter-the-jvm-part-2/</link>
       <pubDate>Tue, 22 May 2018 21:48:06 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/enter-the-jvm-part-2/</guid>
+      <guid>https://vishnubharathi.codes/blog/enter-the-jvm-part-2/</guid>
       <description>I am glad that I am continuing my journey of reading the JVM specification and learning about it. If you had missed the first part of this series, you can read it from here. I read the Chapter 2: The Structure of the Java Virtual Machine last night and I came across quite some interesting and basic things.
 First of all, the structure of the JVM is itself a beauty.</description>
     </item>
     
     <item>
       <title>Workview Reflection</title>
-      <link>http://vishnubharathi.codes/blog/workview-reflection/</link>
+      <link>https://vishnubharathi.codes/blog/workview-reflection/</link>
       <pubDate>Tue, 01 May 2018 12:02:21 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/workview-reflection/</guid>
+      <guid>https://vishnubharathi.codes/blog/workview-reflection/</guid>
       <description>This document is an exercise from the book named &amp;ldquo;Designing Your Life: Build the Perfect Career, Step by Step&amp;rdquo; by Bill Burnett &amp;amp; Dave Evans
 My thoughts on work? hmm, let me think.
 Damn, this is hard. Mind is so vague and I doubt myself highly to complete this document
@@ -76,10 +76,10 @@ Empowerment Thinking of work, one thing that comes to mind is Empowerment. I thi
     
     <item>
       <title>Enter the JVM: Part 1</title>
-      <link>http://vishnubharathi.codes/blog/enter-the-jvm-part-1/</link>
+      <link>https://vishnubharathi.codes/blog/enter-the-jvm-part-1/</link>
       <pubDate>Mon, 30 Apr 2018 00:35:05 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/enter-the-jvm-part-1/</guid>
+      <guid>https://vishnubharathi.codes/blog/enter-the-jvm-part-1/</guid>
       <description>After deciding to learn about the JVM, I started reading the JVM specification. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to tell.
 I am currently reading the Chapter 2: The Structure of the Java Virtual Machine. Here is what I got to learn.
 Java Virtual Machine Specification The first line states
@@ -88,10 +88,10 @@ Java Virtual Machine Specification The first line states
     
     <item>
       <title>Books</title>
-      <link>http://vishnubharathi.codes/books/</link>
+      <link>https://vishnubharathi.codes/books/</link>
       <pubDate>Wed, 25 Apr 2018 23:24:19 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/books/</guid>
+      <guid>https://vishnubharathi.codes/books/</guid>
       <description>This is my bookshelf. I love to collect and read books. They help me a lot.
 Designing Your Life: Build the Perfect Career, Step by Step - Bill Burnett &amp;amp; Dave Evans Book Link
 The Linux Programming Interface: A Linux and UNIX System Programming Handbook - Michael Kerrisk Book Link
@@ -101,10 +101,10 @@ Feel The Fear And Do It Anyway: How to Turn Your Fear and Indecision into Confid
     
     <item>
       <title>Great Indian Developer Summit 2018</title>
-      <link>http://vishnubharathi.codes/blog/great-indian-developer-summit-2018/</link>
+      <link>https://vishnubharathi.codes/blog/great-indian-developer-summit-2018/</link>
       <pubDate>Wed, 25 Apr 2018 20:57:10 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/great-indian-developer-summit-2018/</guid>
+      <guid>https://vishnubharathi.codes/blog/great-indian-developer-summit-2018/</guid>
       <description>Today, I attended GIDS18 (Great Indian Developer Summit). It spans 5 days with following topics covered.
  Web &amp;amp; Mobile Java &amp;amp; Dynamic Lang Data &amp;amp; Cloud Devops &amp;amp; Architecture Deep Dive  I thought of attending one day and learn about the trends in a specific topic. From my previous post you might have already guessed which one I had chosen.
 I went for Java &amp;amp; Dynamic Lang!
@@ -113,20 +113,20 @@ Good morning.</description>
     
     <item>
       <title>Visit the old to understand the new</title>
-      <link>http://vishnubharathi.codes/blog/visit-the-old-to-understand-the-new/</link>
+      <link>https://vishnubharathi.codes/blog/visit-the-old-to-understand-the-new/</link>
       <pubDate>Wed, 25 Apr 2018 00:55:12 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/visit-the-old-to-understand-the-new/</guid>
+      <guid>https://vishnubharathi.codes/blog/visit-the-old-to-understand-the-new/</guid>
       <description>Today I made a firm choice. The choice that &amp;ldquo;I would dig deep into something and learn about it in detail&amp;rdquo;.
 The Advice A few years back when I was still in college, I and my friend used to program in a computer science lab that was located near to the office of our teachers. Some teachers drop by sometime and speak with us about various things. Sometimes it would be about the cool new JavaScript framework that we are using in our project and sometimes it would just be about an interesting TV series or movie.</description>
     </item>
     
     <item>
       <title>Quotes</title>
-      <link>http://vishnubharathi.codes/quotes/</link>
+      <link>https://vishnubharathi.codes/quotes/</link>
       <pubDate>Thu, 19 Apr 2018 07:32:13 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/quotes/</guid>
+      <guid>https://vishnubharathi.codes/quotes/</guid>
       <description>Some words that inspire and help me.
  Captain, there is only one logical direction in which to go: Forward.
  By: Wendy
@@ -140,10 +140,10 @@ Source: Please Stand By
     
     <item>
       <title>The Beginnings</title>
-      <link>http://vishnubharathi.codes/blog/the-beginnings/</link>
+      <link>https://vishnubharathi.codes/blog/the-beginnings/</link>
       <pubDate>Thu, 19 Apr 2018 00:25:54 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/the-beginnings/</guid>
+      <guid>https://vishnubharathi.codes/blog/the-beginnings/</guid>
       <description>A few years back (around 2013), when I was still in college I started noticing few people sharing links to very interesting projects in my facebook feed. All the links pointed to this site called github.com. I was thrilled to open and read the README.md files every time I get the link to a project.
 During those days, the best place to get software was sourceforge. At first, I didn&amp;rsquo;t quite get what GitHub is.</description>
     </item>

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rfc on Vishnu Bharathi</title>
-    <link>http://vishnubharathi.codes/tags/rfc/</link>
+    <link>https://vishnubharathi.codes/tags/rfc/</link>
     <description>Recent content in Rfc on Vishnu Bharathi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 11 Jul 2018 20:07:39 +0530</lastBuildDate>
     
-	<atom:link href="http://vishnubharathi.codes/tags/rfc/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vishnubharathi.codes/tags/rfc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Reading List 2018</title>
-      <link>http://vishnubharathi.codes/blog/reading-list-2018/</link>
+      <link>https://vishnubharathi.codes/blog/reading-list-2018/</link>
       <pubDate>Wed, 11 Jul 2018 20:07:39 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/reading-list-2018/</guid>
+      <guid>https://vishnubharathi.codes/blog/reading-list-2018/</guid>
       <description>Listing down the possible online documents/specifications/RFCs etc. that I wish to read in 2018. Before picking to read any one of the document, it is obvious to check for updates. Because as we know it, the technology (especially the Web) is moving forward at a great speed.
 I got to dicover rfc-editor which seems to be a nice place to discover some standards. For example, this link lists all the basic protocols responsible for the internet.</description>
     </item>

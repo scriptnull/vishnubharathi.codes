@@ -16,7 +16,7 @@ First of all, the structure of the JVM is itself a beauty.">
 <meta property="og:description" content="I am glad that I am continuing my journey of reading the JVM specification and learning about it. If you had missed the first part of this series, you can read it from here. I read the Chapter 2: The Structure of the Java Virtual Machine last night and I came across quite some interesting and basic things.
 First of all, the structure of the JVM is itself a beauty." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://vishnubharathi.codes/blog/enter-the-jvm-part-2/" />
+<meta property="og:url" content="https://vishnubharathi.codes/blog/enter-the-jvm-part-2/" />
 
 
 
@@ -41,7 +41,7 @@ First of all, the structure of the JVM is itself a beauty." />
      Enter the JVM: Part 2 
 
 </title>
-<link rel="canonical" href="http://vishnubharathi.codes/blog/enter-the-jvm-part-2/">
+<link rel="canonical" href="https://vishnubharathi.codes/blog/enter-the-jvm-part-2/">
 
 
 
@@ -59,11 +59,11 @@ First of all, the structure of the JVM is itself a beauty." />
 
 
     
-    <link rel="stylesheet" href="http://vishnubharathi.codes/css/reset.css?t=2018-07-22%2001%3a04%3a29.798035277%20%2b0530%20IST%20m%3d%2b0.121896114">
-    <link rel="stylesheet" href="http://vishnubharathi.codes/css/pygments.css?t=2018-07-22%2001%3a04%3a29.798035277%20%2b0530%20IST%20m%3d%2b0.121896114">
-    <link rel="stylesheet" href="http://vishnubharathi.codes/css/main.css?t=2018-07-22%2001%3a04%3a29.798035277%20%2b0530%20IST%20m%3d%2b0.121896114">
+    <link rel="stylesheet" href="https://vishnubharathi.codes/css/reset.css?t=2018-07-24%2023%3a45%3a32.098058054%20%2b0530%20IST%20m%3d%2b0.231141179">
+    <link rel="stylesheet" href="https://vishnubharathi.codes/css/pygments.css?t=2018-07-24%2023%3a45%3a32.098058054%20%2b0530%20IST%20m%3d%2b0.231141179">
+    <link rel="stylesheet" href="https://vishnubharathi.codes/css/main.css?t=2018-07-24%2023%3a45%3a32.098058054%20%2b0530%20IST%20m%3d%2b0.231141179">
     
-        <link rel="stylesheet" href="http://vishnubharathi.codes/css/override.css?t=2018-07-22%2001%3a04%3a29.798035277%20%2b0530%20IST%20m%3d%2b0.121896114">
+        <link rel="stylesheet" href="https://vishnubharathi.codes/css/override.css?t=2018-07-24%2023%3a45%3a32.098058054%20%2b0530%20IST%20m%3d%2b0.231141179">
     
 
 
@@ -71,7 +71,7 @@ First of all, the structure of the JVM is itself a beauty." />
 
 <link rel="shortcut icon"
 
-    href="http://vishnubharathi.codes/img/leaf.ico"
+    href="https://vishnubharathi.codes/img/leaf.ico"
 
 >
 
@@ -91,20 +91,20 @@ First of all, the structure of the JVM is itself a beauty." />
     <div class="container">
         <div class="content">
             
-            <a href="http://vishnubharathi.codes/"><img class="avatar" src="https://gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=50" rcset="https://gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=100 2x, https://gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=150 3x, https://gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=200 4x"></a>
+            <a href="https://vishnubharathi.codes/"><img class="avatar" src="https://gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=50" rcset="https://gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=100 2x, https://gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=150 3x, https://gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=200 4x"></a>
             
-            <a href="http://vishnubharathi.codes/"><div class="name">Vishnu Bharathi</div></a>
+            <a href="https://vishnubharathi.codes/"><div class="name">Vishnu Bharathi</div></a>
             
               <h3 class="self-intro">Programming &#43; Loves learning things</h3>
             
             <nav>
                 <ul>
                     
-                        <li class="nav-blog"><a href="http://vishnubharathi.codes/blog/"><span>Blog</span></a></li>
+                        <li class="nav-blog"><a href="https://vishnubharathi.codes/blog/"><span>Blog</span></a></li>
                     
-                        <li class="nav-quotes"><a href="http://vishnubharathi.codes/quotes/"><span>Quotes</span></a></li>
+                        <li class="nav-quotes"><a href="https://vishnubharathi.codes/quotes/"><span>Quotes</span></a></li>
                     
-                        <li class="nav-books"><a href="http://vishnubharathi.codes/books/"><span>Books</span></a></li>
+                        <li class="nav-books"><a href="https://vishnubharathi.codes/books/"><span>Books</span></a></li>
                     
                 </ul>
             </nav>
@@ -116,15 +116,15 @@ First of all, the structure of the JVM is itself a beauty." />
     <div class="container">
         <div class="content">
         
-            <a href="//github.com/scriptnull" target="_blank" rel="noopener"><img class="icon" src="http://vishnubharathi.codes/img/github.svg" alt="github" /></a>
+            <a href="//github.com/scriptnull" target="_blank" rel="noopener"><img class="icon" src="https://vishnubharathi.codes/img/github.svg" alt="github" /></a>
         
 
         
-            <a href="//twitter.com/scriptnull" target="_blank" rel="noopener"><img class="icon" src="http://vishnubharathi.codes/img/twitter.svg" alt="twitter" /></a>
+            <a href="//twitter.com/scriptnull" target="_blank" rel="noopener"><img class="icon" src="https://vishnubharathi.codes/img/twitter.svg" alt="twitter" /></a>
         
 
 	
-            <a href="//keybase.io/scriptnull" target="_blank" rel="noopener"><img class="icon" src="http://vishnubharathi.codes/img/keybase.svg" alt="keybase" /></a>
+            <a href="//keybase.io/scriptnull" target="_blank" rel="noopener"><img class="icon" src="https://vishnubharathi.codes/img/keybase.svg" alt="keybase" /></a>
 	
 
         
@@ -132,13 +132,13 @@ First of all, the structure of the JVM is itself a beauty." />
         
 
         
-            <a href="//linkedin.com/in/scriptnull" target="_blank" rel="noopener"><img class="icon" src="http://vishnubharathi.codes/img/linkedin.svg" alt="linkedin" /></a>
+            <a href="//linkedin.com/in/scriptnull" target="_blank" rel="noopener"><img class="icon" src="https://vishnubharathi.codes/img/linkedin.svg" alt="linkedin" /></a>
         
 
         
 
         
-            <a href="//instagram.com/vishnu.bharathi" target="_blank" rel="noopener"><img class="icon" src="http://vishnubharathi.codes/img/instagram.svg" alt="instagram" /></a>
+            <a href="//instagram.com/vishnu.bharathi" target="_blank" rel="noopener"><img class="icon" src="https://vishnubharathi.codes/img/instagram.svg" alt="instagram" /></a>
         
 
         
@@ -146,7 +146,7 @@ First of all, the structure of the JVM is itself a beauty." />
         
 
         
-            <a href="mailto:vishnubharathi04@gmail.com"><img class="icon" src="http://vishnubharathi.codes/img/email.svg" alt="email" /></a>
+            <a href="mailto:vishnubharathi04@gmail.com"><img class="icon" src="https://vishnubharathi.codes/img/email.svg" alt="email" /></a>
         
 
         
@@ -168,7 +168,7 @@ First of all, the structure of the JVM is itself a beauty." />
 
 </div>
 
-                    <div class="initials"><a href="http://vishnubharathi.codes/"></a></div>
+                    <div class="initials"><a href="https://vishnubharathi.codes/"></a></div>
                 </div>
                 <div class="meta">
                     
@@ -182,7 +182,7 @@ First of all, the structure of the JVM is itself a beauty." />
             <div class="markdown">
                 
 
-<p>I am glad that I am continuing <a href="http://vishnubharathi.codes/blog/visit-the-old-to-understand-the-new/">my journey</a> of reading the JVM specification and learning about it. If you had missed the first part of this series, you can read it from <a href="http://vishnubharathi.codes/blog/enter-the-jvm-part-1/">here</a>. I read the <a href="https://docs.oracle.com/javase/specs/jvms/se10/html/jvms-2.html">Chapter 2: The Structure of the Java Virtual Machine</a> last night and I came across quite some interesting and basic things.</p>
+<p>I am glad that I am continuing <a href="https://vishnubharathi.codes/blog/visit-the-old-to-understand-the-new/">my journey</a> of reading the JVM specification and learning about it. If you had missed the first part of this series, you can read it from <a href="https://vishnubharathi.codes/blog/enter-the-jvm-part-1/">here</a>. I read the <a href="https://docs.oracle.com/javase/specs/jvms/se10/html/jvms-2.html">Chapter 2: The Structure of the Java Virtual Machine</a> last night and I came across quite some interesting and basic things.</p>
 
 <p>First of all, the structure of the JVM is itself a beauty. I usually hear of two words, &ldquo;stack and heap&rdquo; whenever someone tries to explain how a program is running (from the days of C#ing). Reading the spec made it very obvious and It is exciting to know how exactly those two are used for running programs on the JVM.</p>
 
@@ -190,7 +190,7 @@ First of all, the structure of the JVM is itself a beauty." />
 
 <p>This is different from the types in Java Programming Language. I guess that all the JVM languages boil down to use these types when executing over the JVM.</p>
 
-<p><img src="http://vishnubharathi.codes/images/jvm-types.jpg" alt="jvm-types" /></p>
+<p><img src="https://vishnubharathi.codes/images/jvm-types.jpg" alt="jvm-types" /></p>
 
 <p>Here are some key takeaways and lessons that I learnt,</p>
 
@@ -231,7 +231,7 @@ First of all, the structure of the JVM is itself a beauty." />
 
 <h2 id="run-time-data-areas">Run-Time Data Areas</h2>
 
-<p>In the <a href="http://vishnubharathi.codes/blog/enter-the-jvm-part-1/">part 1</a>, I mentioned that the JVM spec does not mandate the memory layout of run-time data areas and I was not really sure of what that meant. After going through the <a href="https://docs.oracle.com/javase/specs/jvms/se10/html/jvms-2.html#jvms-2.5">Run-Time Data Areas</a> section, I got some idea of it.</p>
+<p>In the <a href="https://vishnubharathi.codes/blog/enter-the-jvm-part-1/">part 1</a>, I mentioned that the JVM spec does not mandate the memory layout of run-time data areas and I was not really sure of what that meant. After going through the <a href="https://docs.oracle.com/javase/specs/jvms/se10/html/jvms-2.html#jvms-2.5">Run-Time Data Areas</a> section, I got some idea of it.</p>
 
 <p>Data areas are areas that hold data in JVM. It seems like the spec does not mandate the memory layout, by which I guess it does not care about the storage medium used to store or the way in which data is arranged on those. (fuel to fire 🔥 : Is it possible to use cloud storage like Amazon S3 to implement the run-time data areas of a JVM for fun? But it does not really have any use and would be very slow. PS: It is just mid night and I am in half-sleep and I am not responsible for what I suggested just now 🌙 )</p>
 
@@ -239,7 +239,7 @@ First of all, the structure of the JVM is itself a beauty." />
 <p>Some of these data areas are created on Java Virtual Machine start-up and are destroyed only when the Java Virtual Machine exits. Other data areas are per thread. Per-thread data areas are created when a thread is created and destroyed when the thread exits.</p>
 </blockquote>
 
-<p><img src="http://vishnubharathi.codes/images/jvm-structure.jpg" alt="JVM Structure" /></p>
+<p><img src="https://vishnubharathi.codes/images/jvm-structure.jpg" alt="JVM Structure" /></p>
 
 <p>Various run-time data areas mentioned in the spec are,</p>
 
@@ -297,16 +297,16 @@ First of all, the structure of the JVM is itself a beauty." />
                   <div class="tags">
                     <strong>Tags:</strong>
                   
-                    <a href="http://vishnubharathi.codes/tags/programming">programming</a>
+                    <a href="https://vishnubharathi.codes/tags/programming">programming</a>
                   
-                    <a href="http://vishnubharathi.codes/tags/jvm">jvm</a>
+                    <a href="https://vishnubharathi.codes/tags/jvm">jvm</a>
                   
-                    <a href="http://vishnubharathi.codes/tags/java">java</a>
+                    <a href="https://vishnubharathi.codes/tags/java">java</a>
                   
                   </div>
                   <br />
                 
-                <p class="back-to-posts"><a href="http://vishnubharathi.codes/blog/">Back to posts</a></p>
+                <p class="back-to-posts"><a href="https://vishnubharathi.codes/blog/">Back to posts</a></p>
             </div>
             <br>
             <div class="disqus">

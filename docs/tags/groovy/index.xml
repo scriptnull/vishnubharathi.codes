@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Groovy on Vishnu Bharathi</title>
-    <link>http://vishnubharathi.codes/tags/groovy/</link>
+    <link>https://vishnubharathi.codes/tags/groovy/</link>
     <description>Recent content in Groovy on Vishnu Bharathi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 25 Apr 2018 20:57:10 +0530</lastBuildDate>
     
-	<atom:link href="http://vishnubharathi.codes/tags/groovy/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vishnubharathi.codes/tags/groovy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Great Indian Developer Summit 2018</title>
-      <link>http://vishnubharathi.codes/blog/great-indian-developer-summit-2018/</link>
+      <link>https://vishnubharathi.codes/blog/great-indian-developer-summit-2018/</link>
       <pubDate>Wed, 25 Apr 2018 20:57:10 +0530</pubDate>
       
-      <guid>http://vishnubharathi.codes/blog/great-indian-developer-summit-2018/</guid>
+      <guid>https://vishnubharathi.codes/blog/great-indian-developer-summit-2018/</guid>
       <description>Today, I attended GIDS18 (Great Indian Developer Summit). It spans 5 days with following topics covered.
  Web &amp;amp; Mobile Java &amp;amp; Dynamic Lang Data &amp;amp; Cloud Devops &amp;amp; Architecture Deep Dive  I thought of attending one day and learn about the trends in a specific topic. From my previous post you might have already guessed which one I had chosen.
 I went for Java &amp;amp; Dynamic Lang!
