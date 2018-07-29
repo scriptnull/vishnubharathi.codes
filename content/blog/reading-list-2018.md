@@ -29,7 +29,7 @@ Woah! that is great. But I would like to stick to MQTT over TCP networks probabl
 
 ## The Websocket Protocol
 
-This is powering realtime internet applications. Got introduced to it in [socket.io]() and would like to know more about this.
+This is powering realtime internet applications. Got introduced to it in [socket.io](https://socket.io/) and would like to know more about this.
 
 [Web](https://tools.ietf.org/html/rfc6455) | [PDF](https://tools.ietf.org/pdf/rfc6455)
 
