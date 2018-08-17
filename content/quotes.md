@@ -8,6 +8,14 @@ Some words that inspire and help me.
 
 ---
 
+> Testing shows the presence, not the absence of bugs
+
+By: Edsger Dijkstra
+
+Source: The Go Programming Language (Alan A. A. Donovan, Brian W. Kernighan)
+
+---
+
 > Captain, there is only one logical direction in which to go: Forward.
 
 By: Wendy
