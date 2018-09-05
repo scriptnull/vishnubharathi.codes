@@ -2,7 +2,7 @@
 title: "Terminals"
 date: 2018-08-16T23:50:05+05:30
 draft: false
-
+tags: ["linux", "software"]
 ---
 
 IDEs helped me a lot during the early days of my programming journey (2011 - 2014) to build and run programs. I was addicted to few things like Turbo C++, Visual Studio, Eclipse, Android Studio etc. over those period. I spent enough time to memorize every cool shortcut in them and even the places where most frequently used options are present in the menu bars.
