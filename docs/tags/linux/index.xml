@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Software on Vishnu Bharathi</title>
-    <link>https://vishnubharathi.codes/tags/software/</link>
-    <description>Recent content in Software on Vishnu Bharathi</description>
+    <title>Linux on Vishnu Bharathi</title>
+    <link>https://vishnubharathi.codes/tags/linux/</link>
+    <description>Recent content in Linux on Vishnu Bharathi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Thu, 16 Aug 2018 23:50:05 +0530</lastBuildDate>
     
-	<atom:link href="https://vishnubharathi.codes/tags/software/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vishnubharathi.codes/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       <guid>https://vishnubharathi.codes/blog/terminals/</guid>
       <description>IDEs helped me a lot during the early days of my programming journey (2011 - 2014) to build and run programs. I was addicted to few things like Turbo C++, Visual Studio, Eclipse, Android Studio etc. over those period. I spent enough time to memorize every cool shortcut in them and even the places where most frequently used options are present in the menu bars.
 After sometime, I started learning this cool new technology that had been spreading like wildfire in the internet called node.</description>
-    </item>
-    
-    <item>
-      <title>The Beginnings</title>
-      <link>https://vishnubharathi.codes/blog/the-beginnings/</link>
-      <pubDate>Thu, 19 Apr 2018 00:25:54 +0530</pubDate>
-      
-      <guid>https://vishnubharathi.codes/blog/the-beginnings/</guid>
-      <description>A few years back (around 2013), when I was still in college I started noticing few people sharing links to very interesting projects in my facebook feed. All the links pointed to this site called github.com. I was thrilled to open and read the README.md files every time I get the link to a project.
-During those days, the best place to get software was sourceforge. At first, I didn&amp;rsquo;t quite get what GitHub is.</description>
     </item>
     
   </channel>
