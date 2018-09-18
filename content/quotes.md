@@ -8,6 +8,22 @@ Some words that inspire and help me.
 
 ---
 
+> "You don't stop playing 'cause you get old. You get old 'cause you stop playing"
+
+By: Boots
+
+Source: [Uncle Drew](https://www.imdb.com/title/tt7334528/)
+
+---
+
+> "I'll tell ya, youngblood, last time I checked, you miss the 100% of the shots you don't take."
+
+By: Uncle Drew
+
+Source: [Uncle Drew](https://www.imdb.com/title/tt7334528/)
+
+---
+
 > Testing shows the presence, not the absence of bugs
 
 By: Edsger Dijkstra
