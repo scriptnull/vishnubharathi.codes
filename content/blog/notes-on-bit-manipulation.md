@@ -5,9 +5,11 @@ draft: true
 tags: ["programming"]
 ---
 
-I am finally sitting down to learn some computer science basics. Bit Manipulation, yay! Here I come.
+I am finally sitting down to learn some computer science basics.
 
-Computer runs on zeros and ones. Bit Manipulation is a technique that will help us to perform operations on numbers more efficiently on a computer. To learn this technique, we will need to first try to understand how the numbers are being represented on a computer.
+Bit Manipulation is a technique that will help us to perform operations on numbers more efficiently on a computer. To learn this technique, we will need to first try to understand how the numbers are being represented on a computer.
+
+---
 
 # Binary number
 
@@ -85,9 +87,11 @@ const getLSB = num => {
 console.log(getLSB(156)); // 0
 ```
 
+---
+
 # Endianness
 
-I remember hearing this word again and again while talking to embedded device programmers. Digging a little bit into our topic made me feel that I must understand what "Endianness" is before moving on.
+I remember hearing this word again and again from embedded device programmers. Digging a little bit into our topic made me feel that I must understand what "Endianness" is before moving on.
 
 > Endianness refers to the sequential order in which bytes are arranged into larger numerical values when stored in memory or when transmitted over digital links.
 
@@ -103,6 +107,8 @@ Ok. What are "registers"?
 
 > In computer architecture, a processor register is a quickly accessible location available to a computer's central processing unit (CPU).
 
+When it comes to speed of access: Registers > Primary memory (RAM) > Secondary memory
+
 There are various kinds of registers and they differ widely for various processors (Guess what? this is how processor companies make money, by designing these hardware components)
 
 - _User accessible registers_ : registers can be read or written by machine instructions.
@@ -110,7 +116,7 @@ There are various kinds of registers and they differ widely for various processo
 
 > Registers are normally measured by the number of bits they can hold, for example, an "8-bit register", "32-bit register" or a "64-bit register" (or even with more bits).
 
-Ok. Going back a level up, words have more use other than being helpful for determining the register sizes. A detailed list of uses could be found [here](https://en.wikipedia.org/wiki/Word_(computer_architecture)#Uses_of_words)
+Ok. Going back a level up, words are more useful than being helpful for determining the register sizes. A detailed list of uses could be found [here](https://en.wikipedia.org/wiki/Word_(computer_architecture)#Uses_of_words).
 
 So, now that we know words are kind of important and Endianness is the way in which bytes of the words are stored in memory or transmitted over digital links.
 
@@ -130,9 +136,47 @@ So, now that we know words are kind of important and Endianness is the way in wh
 
 This format was popularised by Intel and is being used in their architectures (x86, x86_64).
 
+---
+
+# 1's and 2's Complement
+
+At this point, I am so pumped up to dive into various bitwise operators in programming and understand the use of them. I also tried to do it, but I couldn't do it. I bailed out in the middle because, I am unclear about two concepts: 1's complement and 2's complement.
+
+### What is 1's complement?
+
+> The ones' complement of a binary number is defined as the value obtained by inverting all the bits in the binary representation of the number (swapping 0s for 1s and vice versa).
+
+
+### What is 2's complement?
+
+> The two's complement of an N-bit number is defined as its complement with respect to 2<sup>N</sup>. For instance, for the three-bit number 010, the two's complement is 110, because 010 + 110 = 1000.
+
+### How much could 1's complement represent?
+
+with N bits, a 1's complement system could represent numbers belonging to the following range.
+
+TODO: insert the range
+
+With N bits, a 2's complement system could represent number belonging to the following range.
+
+TODO: insert the range
+
+---
+
+# Bitwise Operators
+
+Operations that could be performed on bits.
+
+## NOT (~)
+
+## AND (&)
+
+
+
 # References
 1. https://en.wikipedia.org/wiki/Binary_number
 1. https://www.wikihow.com/Convert-from-Decimal-to-Binary
 1. https://en.wikipedia.org/wiki/Endianness
 1. https://en.wikipedia.org/wiki/Word_(computer_architecture)
 1. https://en.wikipedia.org/wiki/Processor_register
+1. https://en.wikipedia.org/wiki/Ones%27_complement
