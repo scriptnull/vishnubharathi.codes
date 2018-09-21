@@ -8,8 +8,8 @@ subtitle:
 description:
 keywords:
 author: Vishnu Bharathi
-language:
-timezone:
+language: en
+timezone: Asia/Kolkata
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -17,6 +17,7 @@ url: https://vishnubharathi.codes
 root: /
 permalink: blog/:title/
 permalink_defaults:
+  lang: en
 
 # Directory
 source_dir: source
@@ -77,7 +78,24 @@ theme: cactus
 
 theme_config:
   # available schemes: dark, light, white and classic
-  colorscheme: dark
+  colorscheme: white
+  nav:
+    home: /
+    Blog: /archives/
+  gravatar:
+    email: vishnubharathi04@gmail.com
+  logo:
+    enabled: true
+    width: 50
+    height: 50
+    gravatar: true
+  favicon:
+    desktop:
+      gravatar: true
+    android:
+      gravatar: true
+    apple:
+      gravatar: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
