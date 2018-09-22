@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Ever since I decided to learn about the Java Ecosystem, I have been wanting to try out something practical. May be write a small app in Java and see how the experience would be. I came across a framew">
+<meta name="keywords" content="jvm,java,vertx,microservices,api">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vert.x First Attempt">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/vertx-first-attempt/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="Ever since I decided to learn about the Java Ecosystem, I have been wanting to try out something practical. May be write a small app in Java and see how the experience would be. I came across a framew">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://vishnubharathi.codes/images/vertx-challenges-service.png">
+<meta property="og:image" content="https://vishnubharathi.codes/images/java-vscode-autocomplete.png">
+<meta property="og:updated_time" content="2018-09-21T22:17:19.477Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vert.x First Attempt">
+<meta name="twitter:description" content="Ever since I decided to learn about the Java Ecosystem, I have been wanting to try out something practical. May be write a small app in Java and see how the experience would be. I came across a framew">
+<meta name="twitter:image" content="https://vishnubharathi.codes/images/vertx-challenges-service.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Vert.x First Attempt</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/blog/reading-list-2018/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/blog/revisiting-ansible/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/vertx-first-attempt/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&text=Vert.x First Attempt"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&title=Vert.x First Attempt"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&is_video=false&description=Vert.x First Attempt"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vert.x First Attempt&body=Check out this article: https://vishnubharathi.codes/blog/vertx-first-attempt/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&title=Vert.x First Attempt"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&title=Vert.x First Attempt"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&title=Vert.x First Attempt"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&title=Vert.x First Attempt"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&name=Vert.x First Attempt&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install"><span class="toc-number">1.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Concept"><span class="toc-number">2.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bootstrap"><span class="toc-number">3.</span> <span class="toc-text">Bootstrap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code"><span class="toc-number">4.</span> <span class="toc-text">Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Test"><span class="toc-number">5.</span> <span class="toc-text">Test</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Vert.x First Attempt
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Vishnu Bharathi</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-07-02T19:10:38.000Z" itemprop="datePublished">2018-07-03</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/api/">api</a>, <a class="tag-link" href="/tags/java/">java</a>, <a class="tag-link" href="/tags/jvm/">jvm</a>, <a class="tag-link" href="/tags/microservices/">microservices</a>, <a class="tag-link" href="/tags/vertx/">vertx</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Ever since I decided to <a href="/blog/visit-the-old-to-understand-the-new/">learn about the Java Ecosystem</a>, I have been wanting to try out something practical. May be write a small app in Java and see how the experience would be. I came across a framework called <a href="https://vertx.io/" target="_blank" rel="noopener">Eclipse Vert.x</a> few months back and decided to give it a try. So I ended up reading its documentation for few weekends and today morning. I am feeling a bit comfortable to write some code on Vert.x finally. Lets see how it goes!</p>
+<blockquote>
+<p>Eclipse Vert.x is a tool-kit for building reactive applications on the JVM.</p>
+</blockquote>
+<p>The main reasons to choose Vert.x:</p>
+<ul>
+<li>It is polyglot, I suppose “x” in Vert.x stands for any supported programming language.</li>
+<li>It has awesome documentation.</li>
+<li>Gives the bare minimum and could be extended as we like.</li>
+</ul>
+<blockquote>
+<p>Vert.x is a toolkit, not an opinionated framework where we force you to do things in a certain way.</p>
+</blockquote>
+<ul>
+<li>Event bus as communication medium between services. (More on this later, if possible)</li>
+</ul>
+<blockquote>
+<p>The event bus is the nervous system of Vert.x</p>
+</blockquote>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p>Used brew, as I am on macOS.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install vert.x</span><br></pre></td></tr></table></figure>
+<p>Check <a href="https://vertx.io/download/" target="_blank" rel="noopener">https://vertx.io/download/</a> for other download options.</p>
+<h2 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h2><p>Lets say, I am trying to build a simple service that does CRUD of a table in a database. I call this table challenges. Here is a thought process on how this could be implemented.</p>
+<p><img src="/images/vertx-challenges-service.png" alt="challenge service"></p>
+<h2 id="Bootstrap"><a href="#Bootstrap" class="headerlink" title="Bootstrap"></a>Bootstrap</h2><p>Let me start writing some code now. I am using <a href="http://start.vertx.io/" target="_blank" rel="noopener">http://start.vertx.io/</a> to get a template project.</p>
+<p>Coming from a JavaScript background, it feels very weird to download starter projects from webpages as zip packages. In the JS ecosystem, we usually have this baked into command line tools.</p>
+<p>It didn’t quite workout. I was able to run the sample web server verticle at least.</p>
+<p>I am finally able to get autocomplete support, after fiddling for 15 minutes between IntelliJ IDEA, Eclipse, Atom, and VS Code.</p>
+<p>VS Code did the magic!</p>
+<p><img src="/images/java-vscode-autocomplete.png" alt="java-vscode-autocomplete"></p>
+<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><p>I quickly wrote up event listeners in Java.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> codes.vishnubharathi.challenges;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> io.vertx.core.AbstractVerticle;</span><br><span class="line"><span class="keyword">import</span> io.vertx.core.eventbus.EventBus;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainVerticle</span> <span class="keyword">extends</span> <span class="title">AbstractVerticle</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        EventBus ev = vertx.eventBus();</span><br><span class="line">        ev.consumer(<span class="string">"challenges.create"</span>, message -&gt; &#123;</span><br><span class="line">            System.out.println(<span class="string">"challenges.create -&gt; message"</span> + message.body());</span><br><span class="line">            message.reply(<span class="string">"ack "</span> + message.body());</span><br><span class="line">        &#125;);</span><br><span class="line">        ev.consumer(<span class="string">"challenges.update"</span>, message -&gt; &#123;</span><br><span class="line">            System.out.println(<span class="string">"challenges.update -&gt; message"</span> + message.body());</span><br><span class="line">            message.reply(<span class="string">"ack "</span> + message.body());</span><br><span class="line">        &#125;);</span><br><span class="line">        ev.consumer(<span class="string">"challenges.delete"</span>, message -&gt; &#123;</span><br><span class="line">            System.out.println(<span class="string">"challenges.delete -&gt; message"</span> + message.body());</span><br><span class="line">            message.reply(<span class="string">"ack "</span> + message.body());</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><p>To test of our service is listening for the events, I am going to use Vertx unit testing to deploy a verticle.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> codes.vishnubharathi.challenges;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> io.vertx.core.AbstractVerticle;</span><br><span class="line"><span class="keyword">import</span> io.vertx.core.eventbus.EventBus;</span><br><span class="line"><span class="keyword">import</span> io.vertx.ext.unit.TestSuite;</span><br><span class="line"><span class="keyword">import</span> io.vertx.ext.unit.report.ReportOptions;</span><br><span class="line"><span class="keyword">import</span> io.vertx.ext.unit.Async;</span><br><span class="line"><span class="keyword">import</span> io.vertx.ext.unit.TestOptions;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestMainVerticle</span> <span class="keyword">extends</span> <span class="title">AbstractVerticle</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">start</span><span class="params">()</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        TestSuite suite = TestSuite.create(<span class="string">"challenges_events"</span>);</span><br><span class="line"></span><br><span class="line">        suite.before(context -&gt; &#123;</span><br><span class="line">            MainVerticle challengeVertx = <span class="keyword">new</span> MainVerticle();</span><br><span class="line">            vertx.deployVerticle(challengeVertx, context.asyncAssertSuccess());</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        suite.test(<span class="string">"publish events"</span>, context -&gt; &#123;</span><br><span class="line">            EventBus ev = vertx.eventBus();</span><br><span class="line">            Async async = context.async(<span class="number">3</span>);</span><br><span class="line">            ev.send(<span class="string">"challenges.create"</span>, <span class="string">"create payload"</span>, ar -&gt; &#123;</span><br><span class="line">                <span class="keyword">if</span> (ar.succeeded()) &#123;</span><br><span class="line">                    context.assertEquals(ar.result().body(), <span class="string">"ack create payload"</span>);</span><br><span class="line">                    async.countDown();</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    context.fail();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">            ev.send(<span class="string">"challenges.update"</span>, <span class="string">"update payload"</span>, ar -&gt; &#123;</span><br><span class="line">                <span class="keyword">if</span> (ar.succeeded()) &#123;</span><br><span class="line">                    context.assertEquals(ar.result().body(), <span class="string">"ack update payload"</span>);</span><br><span class="line">                    async.countDown();</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    context.fail();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">            ev.send(<span class="string">"challenges.delete"</span>, <span class="string">"delete payload"</span>, ar -&gt; &#123;</span><br><span class="line">                <span class="keyword">if</span> (ar.succeeded()) &#123;</span><br><span class="line">                    context.assertEquals(ar.result().body(), <span class="string">"ack delete payload"</span>);</span><br><span class="line">                    async.countDown();</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    context.fail();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        TestOptions options = <span class="keyword">new</span> TestOptions().addReporter(<span class="keyword">new</span> ReportOptions().setTo(<span class="string">"console"</span>));</span><br><span class="line">        suite.run(options);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Running the test using <code>vertx test TestMainVerticle.java</code> resulted in my tests getting passed.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Begin test suite challenges_events</span><br><span class="line">Begin test suite challenges_events</span><br><span class="line">Begin test publish events</span><br><span class="line">Begin test publish events</span><br><span class="line">challenges.create -&gt; messagecreate payload</span><br><span class="line">challenges.update -&gt; messageupdate payload</span><br><span class="line">challenges.delete -&gt; messagedelete payload</span><br><span class="line">Passed publish events</span><br><span class="line">Passed publish events</span><br><span class="line">End test suite challenges_events , run: 1, Failures: 0, Errors: 0</span><br><span class="line">End test suite challenges_events , run: 1, Failures: 0, Errors: 0</span><br><span class="line">Succeeded in deploying verticle</span><br></pre></td></tr></table></figure>
+<p>(no idea why “Begin test suite challenges_events” is being printed twice.)</p>
+<p>Anyways, I have a basic setup for my application ready. I hope to complete my handler logics afterwards. Bye until then!</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install"><span class="toc-number">1.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Concept"><span class="toc-number">2.</span> <span class="toc-text">Concept</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bootstrap"><span class="toc-number">3.</span> <span class="toc-text">Bootstrap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code"><span class="toc-number">4.</span> <span class="toc-text">Code</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Test"><span class="toc-number">5.</span> <span class="toc-text">Test</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/vertx-first-attempt/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&text=Vert.x First Attempt"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&title=Vert.x First Attempt"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&is_video=false&description=Vert.x First Attempt"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Vert.x First Attempt&body=Check out this article: https://vishnubharathi.codes/blog/vertx-first-attempt/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&title=Vert.x First Attempt"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&title=Vert.x First Attempt"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&title=Vert.x First Attempt"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&title=Vert.x First Attempt"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/vertx-first-attempt/&name=Vert.x First Attempt&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Vishnu Bharathi
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
