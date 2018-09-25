@@ -124,6 +124,9 @@ theme_config:
       gravatar: true
     apple:
       gravatar: true
+  google_analytics:
+    enabled: true
+    id: UA-64308743-3
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
