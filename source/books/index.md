@@ -7,6 +7,12 @@ This is my bookshelf. I love to collect and read books. They help me a lot.
 
 ---
 
+<h3>The Alchemist</h3>
+<span>- Paulo Coelho</span>
+<span><a href="https://www.amazon.in/Alchemist-Paulo-Coelho/dp/8172234988">Book Link</a></span>
+
+---
+
 <h3>Head First Design Patterns: A Brain-Friendly Guide</h3>
 <span>- Freeman, Elisabeth Robson, Bert Bates, Kathy Sierra</span>
 <span><a href="https://www.amazon.in/Head-First-Design-Patterns-Brain-Friendly-ebook/dp/B00AA36RZY?tag=googinhydr18418-21">Book Link</a></span>
