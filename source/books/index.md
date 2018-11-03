@@ -7,6 +7,12 @@ This is my bookshelf. I love to collect and read books. They help me a lot.
 
 ---
 
+<h3>A Tour of C++ - Second Edition</h3>
+<span>- Bjarne Stroustrup</span>
+<span><a href="http://www.stroustrup.com/tour2.html">Book Link</a></span>
+
+---
+
 <h3>The Alchemist</h3>
 <span>- Paulo Coelho</span>
 <span><a href="https://www.amazon.in/Alchemist-Paulo-Coelho/dp/8172234988">Book Link</a></span>
