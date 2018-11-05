@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> Instead of lamenting about how things are, confronting the truth makes people even stronger
+
+By: Guy sensei
+
+Source: [Boruto](https://www.crunchyroll.com/boruto-naruto-next-generations/episode-70-the-other-side-of-anxiety-775200)
+
+---
+
 > You don't stop playing 'cause you get old. You get old 'cause you stop playing
 
 By: Boots
