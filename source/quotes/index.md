@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> If there is nothing worth dying for, there is nothing worth living for
+
+By: Ravindrababu Ravula
+
+Source: [What is your reason??](https://www.youtube.com/watch?v=lxsLwZo75l8)
+
+---
+
 > Instead of lamenting about how things are, confronting the truth makes people even stronger
 
 By: Guy sensei
