@@ -46,7 +46,7 @@ h = 1; 3<sup>h</sup> = 3<sup>1</sup> = 3 leaves
 h = 2; 3<sup>h</sup> = 3<sup>2</sup> = 9 leaves
 h = 3; 3<sup>h</sup> = 3<sup>3</sup> = 27 leaves
 
-So, the formula to calculate the height of the tree with exactly 3 nodes at each level from the number of leaves is log<sub>3</sub>, where n = number of leaves.
+So, the formula to calculate the height of the tree with exactly 3 nodes at each level from the number of leaves is log<sub>3</sub>n, where n = number of leaves.
 
 ## Binary Search
 
