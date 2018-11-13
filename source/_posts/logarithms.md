@@ -64,7 +64,7 @@ Applying the same thing to 1/3 + 2/3 split, in the worst case our search had onl
 >
 > -- Steven S Skiena. The Algorithm Design Manual (Kindle Location 715). Kindle Edition.
 
-For example, a search on 1 million items using the above to strategies.
+For example, a search on 1 million items using the above two strategies.
 
 log<sub>3/2</sub>1,000,000 ≈ 35
 log<sub>2</sub>1,000,000 ≈ 20
@@ -89,7 +89,7 @@ The following is one of the interesting properties that I didn't notice for a lo
 
 log<sub>b</sub> a = log<sub>c</sub>a / log<sub>c</sub>b
 
-Mainly because it could be useful to represent of a log value of particular base in terms of another base.
+Mainly because it could be useful to represent a log value of particular base in terms of another base.
 
 Surprisingly I found this code snippet on [JavaScript MDN reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log).
 
