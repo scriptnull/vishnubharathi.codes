@@ -1,7 +1,7 @@
 ---
 title: Stacks and queues in C++
 date: 2018-11-12 23:24:08
-tags: ["programming", "c++"]
+tags: ["programming", "c++", "data structures"]
 ---
 
 ## Stack

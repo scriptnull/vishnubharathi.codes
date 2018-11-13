@@ -1,7 +1,7 @@
 ---
 title: Fixed-size arrays in C++
 date: 2018-11-12 06:13:44
-tags: ["programming", "c++"]
+tags: ["programming", "c++", "data structures"]
 ---
 
 ## Basic Usage

@@ -1,7 +1,7 @@
 ---
 title: Dynamic arrays in C++
 date: 2018-11-12 19:00:34
-tags: ["programming", "c++"]
+tags: ["programming", "c++", "data structures"]
 ---
 
 ## Initialize
