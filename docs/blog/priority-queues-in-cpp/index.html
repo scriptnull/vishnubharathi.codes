@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Prelude Priority queues are implemented as container adaptors default underlying container is vector  container classes that could be used as underlying container are deque, vector and any class that">
+<meta name="keywords" content="programming,data structures,c++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Priority queues in C++">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/priority-queues-in-cpp/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="Prelude Priority queues are implemented as container adaptors default underlying container is vector  container classes that could be used as underlying container are deque, vector and any class that">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-11-13T20:24:50.537Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Priority queues in C++">
+<meta name="twitter:description" content="Prelude Priority queues are implemented as container adaptors default underlying container is vector  container classes that could be used as underlying container are deque, vector and any class that">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Priority queues in C++</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/stacks-and-queues-in-cpp/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/priority-queues-in-cpp/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&text=Priority queues in C++"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&title=Priority queues in C++"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&is_video=false&description=Priority queues in C++"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Priority queues in C++&body=Check out this article: https://vishnubharathi.codes/blog/priority-queues-in-cpp/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&title=Priority queues in C++"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&title=Priority queues in C++"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&title=Priority queues in C++"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&title=Priority queues in C++"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&name=Priority queues in C++&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prelude"><span class="toc-number">1.</span> <span class="toc-text">Prelude</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Usage"><span class="toc-number">2.</span> <span class="toc-text">Basic Usage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functional-Compare"><span class="toc-number">3.</span> <span class="toc-text">Functional Compare</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Practical-Usage"><span class="toc-number">4.</span> <span class="toc-text">Practical Usage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Strict-Weak-Ordering"><span class="toc-number">5.</span> <span class="toc-text">Strict Weak Ordering</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Priority queues in C++
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Vishnu Bharathi</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-11-13T17:42:42.000Z" itemprop="datePublished">2018-11-13</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/c/">c++</a>, <a class="tag-link" href="/tags/data-structures/">data structures</a>, <a class="tag-link" href="/tags/programming/">programming</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Prelude"><a href="#Prelude" class="headerlink" title="Prelude"></a>Prelude</h2><ul>
+<li>Priority queues are implemented as container adaptors</li>
+<li>default underlying container is vector</li>
+</ul>
+<p>container classes that could be used as underlying container are deque, vector and any class that implements the following methods along with <a href="http://www.cplusplus.com/reference/iterator/RandomAccessIterator/" target="_blank" rel="noopener">random access iterator</a></p>
+<ul>
+<li>empty</li>
+<li>size</li>
+<li>front</li>
+<li>push_back</li>
+<li>pop_back</li>
+</ul>
+<h2 id="Basic-Usage"><a href="#Basic-Usage" class="headerlink" title="Basic Usage"></a>Basic Usage</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// include</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// initialize</span></span><br><span class="line">priority_queue&lt;<span class="keyword">int</span>&gt; pq;</span><br><span class="line"></span><br><span class="line"><span class="comment">// add items</span></span><br><span class="line">pq.push(<span class="number">1</span>);</span><br><span class="line">pq.push(<span class="number">2</span>);</span><br><span class="line">pq.push(<span class="number">10</span>);</span><br><span class="line">pq.push(<span class="number">11</span>);</span><br><span class="line">pq.push(<span class="number">3</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// pop top element</span></span><br><span class="line">pq.pop();</span><br><span class="line"></span><br><span class="line"><span class="comment">// size</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"size = "</span> &lt;&lt; pq.size() &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// iterate</span></span><br><span class="line"><span class="keyword">while</span> (!pq.empty()) &#123;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; pq.top() &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">  pq.pop();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This outputs the following:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">size = 4</span><br><span class="line">10</span><br><span class="line">3</span><br><span class="line">2</span><br><span class="line">1</span><br></pre></td></tr></table></figure></p>
+<h2 id="Functional-Compare"><a href="#Functional-Compare" class="headerlink" title="Functional Compare"></a>Functional Compare</h2><p>By default, priority queue gives the element with highest priority. What if we want our priority queue to give the least priority element on call to <code>top()</code>.</p>
+<p><code>priority_queue</code> class takes advantage of templating and <code>&lt;functional&gt;</code> classes to facilitate this.</p>
+<p>By default, <code>priority_queue</code> has the following signature<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T</span>, <span class="title">class</span> <span class="title">Container</span> = <span class="title">vector</span>&lt;T&gt;,</span></span><br><span class="line"><span class="class">  <span class="title">class</span> <span class="title">Compare</span> = <span class="title">less</span>&lt;typename Container::value_type&gt; &gt; <span class="title">class</span> <span class="title">priority_queue</span>;</span></span><br></pre></td></tr></table></figure></p>
+<p>Note that <code>less&lt;T&gt;</code> resides inside <code>&lt;functional&gt;</code>.</p>
+<p>Using <code>less</code> for <code>Compare</code> instructs <code>priority_queue</code> to have a top element which is not <em>less</em> than any other element.</p>
+<p>So, we just negate the <code>Compare</code> to make the <code>priority_queue</code> to hold the least priority element at the top.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// include functional for greater, less etc. classes</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;functional&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// change declaration for make_heap to use greater</span></span><br><span class="line">priority_queue&lt;<span class="keyword">int</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, greater&lt;<span class="keyword">int</span>&gt;&gt; pq;</span><br></pre></td></tr></table></figure>
+<p>I am not going to lie here, it is not very obvious for me. I hope that I could understand why it is this way in future.</p>
+<h2 id="Practical-Usage"><a href="#Practical-Usage" class="headerlink" title="Practical Usage"></a>Practical Usage</h2><p>Imagine job scheduling problem with each job containing a priority.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">job</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="keyword">int</span> id;</span><br><span class="line">  <span class="keyword">int</span> priority;</span><br><span class="line">  <span class="keyword">int</span> resource_consumed;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>Let us say that we are designing different types of schedulers for scheduling the jobs.</p>
+<ul>
+<li>schedule jobs with high priority first</li>
+<li>schedule jobs with low resource consumption first</li>
+</ul>
+<p>We could use priority queue inside the scheduler to get the jobs by the desired priority.</p>
+<p>To do that, we start defining functors that express those behaviours.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">high_priority</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> job &amp; lhs, <span class="keyword">const</span> job &amp; rhs)</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> lhs.priority &lt; rhs.priority;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">low_resource_consumption</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">bool</span> <span class="title">operator</span><span class="params">()</span><span class="params">(<span class="keyword">const</span> job &amp; lhs, <span class="keyword">const</span> job &amp; rhs)</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> lhs.resource_consumed &gt; rhs.resource_consumed;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Now, the priority queues could be constructed like this.<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">job j1 &#123;<span class="number">1</span>, <span class="number">101</span>, <span class="number">40</span>&#125;;</span><br><span class="line">job j2 &#123;<span class="number">2</span>, <span class="number">50</span>, <span class="number">50</span>&#125;;</span><br><span class="line">job j3 &#123;<span class="number">3</span>, <span class="number">102</span>, <span class="number">60</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"high priority jobs first"</span> &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">priority_queue&lt;job, <span class="built_in">vector</span>&lt;job&gt;, high_priority&gt; pq1;</span><br><span class="line">pq1.push(j1);</span><br><span class="line">pq1.push(j2);</span><br><span class="line">pq1.push(j3);</span><br><span class="line">iterate&lt;job, high_priority&gt;(pq1);</span><br><span class="line"></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"low resource consuming jobs first"</span> &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">priority_queue&lt;job, <span class="built_in">vector</span>&lt;job&gt;, low_resource_consumption&gt; pq2;</span><br><span class="line">pq2.push(j1);</span><br><span class="line">pq2.push(j2);</span><br><span class="line">pq2.push(j3);</span><br><span class="line">iterate&lt;job, low_resource_consumption&gt;(pq2);</span><br></pre></td></tr></table></figure></p>
+<h2 id="Strict-Weak-Ordering"><a href="#Strict-Weak-Ordering" class="headerlink" title="Strict Weak Ordering"></a>Strict Weak Ordering</h2><p>The functors <code>high_priority</code> and <code>low_resource_consumption</code> are used to form the <a href="https://en.wikipedia.org/wiki/Weak_ordering#Examples" target="_blank" rel="noopener">strict weak ordering</a>.</p>
+<p><code>comp(a,b)</code> returns true if <code>a</code> should go before <code>b</code> in the strict weak ordering.</p>
+<p><code>top()</code> of <code>priority_queue</code> points to the last of the strict weak ordering.</p>
+<p>By default <code>less&lt;T&gt;</code> is the strict weak ordering function that keeps the maximum element at the top in a normal <code>priority_queue&lt;T&gt;</code>.</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prelude"><span class="toc-number">1.</span> <span class="toc-text">Prelude</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Usage"><span class="toc-number">2.</span> <span class="toc-text">Basic Usage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Functional-Compare"><span class="toc-number">3.</span> <span class="toc-text">Functional Compare</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Practical-Usage"><span class="toc-number">4.</span> <span class="toc-text">Practical Usage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Strict-Weak-Ordering"><span class="toc-number">5.</span> <span class="toc-text">Strict Weak Ordering</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/priority-queues-in-cpp/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&text=Priority queues in C++"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&title=Priority queues in C++"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&is_video=false&description=Priority queues in C++"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Priority queues in C++&body=Check out this article: https://vishnubharathi.codes/blog/priority-queues-in-cpp/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&title=Priority queues in C++"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&title=Priority queues in C++"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&title=Priority queues in C++"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&title=Priority queues in C++"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/priority-queues-in-cpp/&name=Priority queues in C++&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Vishnu Bharathi
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-64308743-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
