@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Vishnu Bharathi">
 <meta property="og:description" content="A few months back, I asked one of my programmer friends about the impact of Logarithms in analysing algorithms. I was particularly interested in knowing about the base of log for all the log notation">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-07T16:33:07.974Z">
+<meta property="og:updated_time" content="2018-11-13T17:38:05.054Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Logarithms">
 <meta name="twitter:description" content="A few months back, I asked one of my programmer friends about the impact of Logarithms in analysing algorithms. I was particularly interested in knowing about the base of log for all the log notation">
@@ -170,7 +170,7 @@
 <p>The power of binary search comes from its logarithmic complexity, not the base of the log.</p>
 <p>– Steven S Skiena. The Algorithm Design Manual (Kindle Location 715). Kindle Edition.</p>
 </blockquote>
-<p>For example, a search on 1 million items using the above to strategies.</p>
+<p>For example, a search on 1 million items using the above two strategies.</p>
 <p>log<sub>3/2</sub>1,000,000 ≈ 35<br>log<sub>2</sub>1,000,000 ≈ 20</p>
 <p>Note how the value is affected by the logarithmic function rather than the base.</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Coming back to the question “are all <code>log</code> in algorithm analysis log base 2?”</p>
@@ -180,7 +180,7 @@
 <p>log x<sup>y</sup> =  ylog x</p>
 <p>The following is one of the interesting properties that I didn’t notice for a long time.</p>
 <p>log<sub>b</sub> a = log<sub>c</sub>a / log<sub>c</sub>b</p>
-<p>Mainly because it could be useful to represent of a log value of particular base in terms of another base.</p>
+<p>Mainly because it could be useful to represent a log value of particular base in terms of another base.</p>
 <p>Surprisingly I found this code snippet on <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log" target="_blank" rel="noopener">JavaScript MDN reference</a>.</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getBaseLog</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.log(y) / <span class="built_in">Math</span>.log(x);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Math.log uses natural logarithm.</span></span><br></pre></td></tr></table></figure>
 <p>This function applies the above principle to calculate the log value of any base in terms of base e.</p>
