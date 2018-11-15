@@ -7,14 +7,14 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="Stack LIFO - Last In First Out stacks are implemented as containers adaptors default underlying container is deque  container classes that could be used as underlying container are vector, deque, list">
-<meta name="keywords" content="programming,data structures,c++">
+<meta name="keywords" content="programming,c++,data structures">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Stacks and queues in C++">
 <meta property="og:url" content="https://vishnubharathi.codes/blog/stacks-and-queues-in-cpp/index.html">
 <meta property="og:site_name" content="Vishnu Bharathi">
 <meta property="og:description" content="Stack LIFO - Last In First Out stacks are implemented as containers adaptors default underlying container is deque  container classes that could be used as underlying container are vector, deque, list">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-13T17:39:26.610Z">
+<meta property="og:updated_time" content="2018-11-15T04:40:42.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Stacks and queues in C++">
 <meta name="twitter:description" content="Stack LIFO - Last In First Out stacks are implemented as containers adaptors default underlying container is deque  container classes that could be used as underlying container are vector, deque, list">
@@ -99,7 +99,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Stack"><span class="toc-number">1.</span> <span class="toc-text">Stack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Queue"><span class="toc-number">2.</span> <span class="toc-text">Queue</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Stack"><span class="toc-number">1.</span> <span class="toc-text">Stack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Queue"><span class="toc-number">2.</span> <span class="toc-text">Queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">3.</span> <span class="toc-text">References</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -167,6 +167,10 @@
 <li>pop_back</li>
 </ul>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// add preprocessor</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">// initialize</span></span><br><span class="line"><span class="built_in">queue</span>&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Add to queue</span></span><br><span class="line">q.push(<span class="number">1</span>);</span><br><span class="line">q.push(<span class="number">2</span>);</span><br><span class="line">q.push(<span class="number">3</span>);</span><br><span class="line">q.push(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Access front element</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"front = "</span> &lt;&lt; q.front() &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Access back element</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"back = "</span> &lt;&lt; q.back() &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Size of the queue</span></span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"size = "</span> &lt;&lt; q.size() &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Pop from front</span></span><br><span class="line">q.pop();</span><br><span class="line"></span><br><span class="line"><span class="comment">// check if queue is empty</span></span><br><span class="line"><span class="keyword">if</span> (q.empty())</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; <span class="string">"queue is empty"</span> &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; <span class="string">"queue is not empty"</span> &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// iterate</span></span><br><span class="line"><span class="keyword">while</span> (!q.empty()) &#123;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; q.front() &lt;&lt; <span class="string">"\n"</span>;</span><br><span class="line">  q.pop();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ul>
+<li><a href="http://www.cplusplus.com/reference/stack/stack" target="_blank" rel="noopener">http://www.cplusplus.com/reference/stack/stack</a></li>
+<li><a href="http://www.cplusplus.com/reference/queue/queue" target="_blank" rel="noopener">http://www.cplusplus.com/reference/queue/queue</a></li>
+</ul>
 
   </div>
 </article>
@@ -189,7 +193,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Stack"><span class="toc-number">1.</span> <span class="toc-text">Stack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Queue"><span class="toc-number">2.</span> <span class="toc-text">Queue</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Stack"><span class="toc-number">1.</span> <span class="toc-text">Stack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Queue"><span class="toc-number">2.</span> <span class="toc-text">Queue</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">3.</span> <span class="toc-text">References</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
