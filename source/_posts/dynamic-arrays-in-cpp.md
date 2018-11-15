@@ -7,7 +7,7 @@ tags: ["programming", "c++", "data structures"]
 ## Initialize
 
 ```cpp
-// add <vector> preprocessor to use this
+// Include
 #include <vector>
 
 vector<int> arr;

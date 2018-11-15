@@ -19,26 +19,26 @@ container classes that could be used as underlying container are deque, vector a
 ## Basic Usage
 
 ```cpp
-// include
+// Include
 #include <queue>
 
-// initialize
+// Initialize
 priority_queue<int> pq;
 
-// add items
+// Add items
 pq.push(1);
 pq.push(2);
 pq.push(10);
 pq.push(11);
 pq.push(3);
 
-// pop top element
+// Pop top element
 pq.pop();
 
-// size
+// Size
 cout << "size = " << pq.size() << "\n";
 
-// iterate
+// Iterate
 while (!pq.empty()) {
   cout << pq.top() << "\n";
   pq.pop();

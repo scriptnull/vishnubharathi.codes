@@ -15,6 +15,9 @@ tags: ["programming", "c++", "data structures"]
 ## Basic Usage
 
 ```cpp
+// Include
+#include <deque>
+
 // Initialize
 deque<int> dq;
 

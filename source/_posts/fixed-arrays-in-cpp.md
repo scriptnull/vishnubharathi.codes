@@ -63,48 +63,49 @@ delete[] heap_arr;
 This is a syntactic sugar on top of fixed-size arrays, with no performance overhead.
 
 ```cpp
-// #include <array> at the top
+// Include
+#include <array>
 
-// uninitialized array
+// Uninitialized array
 array<int, 5> un_init_arr;
 
-// initialize all elements with a value
+// Initialize all elements with a value
 un_init_arr.fill(1);
 
 for (const int & ele: un_init_arr)
   cout << ele << "\n";
 
-// initialize array via {} notation
+// Initialize array via {} notation
 array<int, 5> init_arr = {1,2,3,4,5};
 
-// access specific index
+// Access specific index
 cout << "should be 3 =  " << init_arr[2] << "\n";
 
-// access out of bound index - no exception thrown
+// Access out of bound index - no exception thrown
 cout << "out of bound access = " << init_arr[6] << "\n";
 
-// access out of bound index - exception thrown
+// Access out of bound index - exception thrown
 cout << "out of bound access = " << init_arr.at(6) << "\n";
 
-// front and back
+// Front and back
 init_arr.front() = 10;
 cout << "first element of the array is " << init_arr.front() << "\n";
 
 init_arr.back() = 11;
 cout << "last element of the array is " << init_arr.back() << "\n";
 
-// remember that front, back, at return refs to elements
-// so they could be used as lhs of expression
+// Remember that front, back, at return refs to elements
+// So they could be used as lhs of expression
 
-// read-only range-based loop
+// Read-only range-based loop
 for (const int & ele: init_arr)
   cout << ele << "\n";
 
-// index based loop
+// Index based loop
 for (auto i = 0; i < init_arr.size(); ++i)
   cout << init_arr.at(i) << "\n";
 
-// iterator based loop
+// Iterator based loop
 for (auto ele = init_arr.begin(); ele != init_arr.end(); ++ele)
   cout << *ele << "\n";
 ```

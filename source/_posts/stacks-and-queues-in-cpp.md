@@ -17,10 +17,10 @@ container classes that could be used as underlying container are vector, deque, 
   - pop_back
 
 ```cpp
-// add <stack> preprocessor
+// Include
 #include <stack>
 
-// initialize
+// Initialize
 stack<int> st;
 
 // Add to stack
@@ -38,13 +38,13 @@ cout << "size = " << st.size() << "\n";
 // Pop top element
 st.pop();
 
-// check if stack is empty
+// Check if stack is empty
 if (st.empty())
   cout << "stack is empty" << "\n";
 else
   cout << "stack is not empty" << "\n";
 
-// iterate
+// Iterate
 while(!st.empty()) {
   cout << st.top() << "\n";
   st.pop();
