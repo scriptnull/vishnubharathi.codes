@@ -147,3 +147,7 @@ The functors `high_priority` and `low_resource_consumption` are used to form the
 `top()` of `priority_queue` points to the last of the strict weak ordering.
 
 By default `less<T>` is the strict weak ordering function that keeps the maximum element at the top in a normal `priority_queue<T>`.
+
+## References
+- http://www.cplusplus.com/reference/queue/priority_queue/
+- https://en.wikipedia.org/wiki/Weak_ordering

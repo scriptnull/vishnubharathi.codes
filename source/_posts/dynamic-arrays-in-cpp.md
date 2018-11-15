@@ -82,3 +82,6 @@ arr.erase(arr.begin() + 1, arr.end() - 1);
 // remove everything
 arr.clear();
 ```
+
+## References
+- http://www.cplusplus.com/reference/vector/vector/

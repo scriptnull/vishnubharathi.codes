@@ -101,3 +101,7 @@ while (!q.empty()) {
   q.pop();
 }
 ```
+
+## References
+- http://www.cplusplus.com/reference/stack/stack
+- http://www.cplusplus.com/reference/queue/queue

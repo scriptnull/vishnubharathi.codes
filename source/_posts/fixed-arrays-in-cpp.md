@@ -117,3 +117,6 @@ If I want to access an element, I will always go with `.at()`.
 I see using `[]` in C++ program to be evil.
 
 I also guess that the gap between `[]` and `array` is due to the need for maintaining compatibility between C and C++
+
+## Refereneces
+- http://www.cplusplus.com/reference/array/array/
