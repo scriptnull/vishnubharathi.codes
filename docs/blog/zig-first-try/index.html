@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="I discovered Zig programming language yesterday while checking out recurse center. It aims to be a system programming language. Go, Rust, Crystal and now this. I have given all of them a try and I am">
+<meta name="keywords" content="programming,zig">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zig Programming Language - First Try">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/zig-first-try/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="I discovered Zig programming language yesterday while checking out recurse center. It aims to be a system programming language. Go, Rust, Crystal and now this. I have given all of them a try and I am">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-11-16T15:04:37.371Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Zig Programming Language - First Try">
+<meta name="twitter:description" content="I discovered Zig programming language yesterday while checking out recurse center. It aims to be a system programming language. Go, Rust, Crystal and now this. I have given all of them a try and I am">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Zig Programming Language - First Try</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/linked-lists-in-cpp/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/zig-first-try/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/zig-first-try/&text=Zig Programming Language - First Try"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/zig-first-try/&title=Zig Programming Language - First Try"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/zig-first-try/&is_video=false&description=Zig Programming Language - First Try"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Zig Programming Language - First Try&body=Check out this article: https://vishnubharathi.codes/blog/zig-first-try/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/zig-first-try/&title=Zig Programming Language - First Try"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/zig-first-try/&title=Zig Programming Language - First Try"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/zig-first-try/&title=Zig Programming Language - First Try"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/zig-first-try/&title=Zig Programming Language - First Try"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/zig-first-try/&name=Zig Programming Language - First Try&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install"><span class="toc-number">1.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-World"><span class="toc-number">2.</span> <span class="toc-text">Hello World!</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#import"><span class="toc-number">2.1.</span> <span class="toc-text">import</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main"><span class="toc-number">2.2.</span> <span class="toc-text">main</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#program"><span class="toc-number">2.3.</span> <span class="toc-text">program</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Run"><span class="toc-number">3.</span> <span class="toc-text">Run</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Community"><span class="toc-number">4.</span> <span class="toc-text">Community</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Zig Programming Language - First Try
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Vishnu Bharathi</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-11-16T13:28:56.000Z" itemprop="datePublished">2018-11-16</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/programming/">programming</a>, <a class="tag-link" href="/tags/zig/">zig</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>I discovered <a href="https://ziglang.org/" target="_blank" rel="noopener">Zig</a> programming language yesterday while checking out <a href="https://www.recurse.com" target="_blank" rel="noopener">recurse center</a>.</p>
+<p>It aims to be a system programming language. Go, Rust, Crystal and now this. I have given all of them a try and I am always in the look out to explore more. So, here we go!</p>
+<blockquote>
+<p>Zig is an open-source programming language designed for robustness, optimality, and clarity.</p>
+</blockquote>
+<p>If you haven’t watched this amazing talk, check it out.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Z4oYSByyRak" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>Zig is still in very early stages. Early stages like you won’t even have syntax highlighting for code shared on this page and very primitive editor tooling.</p>
+<p>So, if you have looked up to hack in developer tools, now is your time to steal the spot. (I am trying my best to steal one for me!)</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># I am on a mac</span></span><br><span class="line"><span class="comment"># so using brew</span></span><br><span class="line"></span><br><span class="line">brew install zig</span><br></pre></td></tr></table></figure>
+<h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h2><h3 id="import"><a href="#import" class="headerlink" title="import"></a>import</h3><p>To print “Hello World!” to stdout, we need to first import the <code>std</code> package. This could be achieved with <a href="https://ziglang.org/documentation/master/#import" target="_blank" rel="noopener">@import</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const std = @import(&quot;std&quot;);</span><br></pre></td></tr></table></figure>
+<p>Unfortunately, there is no standard library documentation in zig yet. So, if you wonder what could be imported, check out <a href="https://github.com/ziglang/zig/tree/master/std" target="_blank" rel="noopener">this</a>, especially <a href="https://github.com/ziglang/zig/blob/master/std/index.zig" target="_blank" rel="noopener">this</a></p>
+<h3 id="main"><a href="#main" class="headerlink" title="main"></a>main</h3><p>As in many programming languages, Zig also starts execution from <code>main</code> function. So, define one</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">pub fn main() !void &#123;</span><br><span class="line">    var stdout = try std.io.getStdOut();</span><br><span class="line">    try stdout.write(&quot;Hello World!\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Some points to notice here,</p>
+<ul>
+<li><code>pub</code> - publish this function to the file importing the current file. Leaving this out made the <code>main</code> to be private and gives error.</li>
+<li><code>try</code> - keyword is to denote that, the upcoming function call could result in an exception, which could be catched or rethrown. Excuse me for my terminology because I am not sure how these are called in Zig yet.</li>
+<li><code>!void</code> - return type of the function <code>!</code> denotes possibility of error arising from this function.</li>
+</ul>
+<h3 id="program"><a href="#program" class="headerlink" title="program"></a>program</h3><p>Here is the full program.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const std = @import(&quot;std&quot;);</span><br><span class="line"></span><br><span class="line">pub fn main() !void &#123;</span><br><span class="line">    var stdout = try std.io.getStdOut();</span><br><span class="line">    try stdout.write(&quot;Hello World!\n&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Run"><a href="#Run" class="headerlink" title="Run"></a>Run</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">zig build-exe hello.zig</span><br><span class="line"></span><br><span class="line">./hello</span><br></pre></td></tr></table></figure>
+<h2 id="Community"><a href="#Community" class="headerlink" title="Community"></a>Community</h2><ul>
+<li>IRC: <code>#zig</code> on Freenode (<a href="https://irclog.whitequark.org/zig/" target="_blank" rel="noopener">Channel Logs</a>) :: This is memorable for me, because this is the first time ever for me to chat on IRC.</li>
+<li>Reddit: <a href="https://www.reddit.com/r/zig" target="_blank" rel="noopener">/r/zig</a> :: Share your blog posts, questions, thoughts etc.</li>
+<li>Github Issues: <a href="https://github.com/ziglang/zig/issues" target="_blank" rel="noopener">ziglang/zig</a> :: Get to know about various proposals and pretty much everything.</li>
+<li>Email list: <a href="https://groups.google.com/forum/#!forum/ziglang" target="_blank" rel="noopener">ziglang@googlegroups.com</a> :: Not sure how active this is.</li>
+</ul>
+<p>See you there!</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Install"><span class="toc-number">1.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hello-World"><span class="toc-number">2.</span> <span class="toc-text">Hello World!</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#import"><span class="toc-number">2.1.</span> <span class="toc-text">import</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#main"><span class="toc-number">2.2.</span> <span class="toc-text">main</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#program"><span class="toc-number">2.3.</span> <span class="toc-text">program</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Run"><span class="toc-number">3.</span> <span class="toc-text">Run</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Community"><span class="toc-number">4.</span> <span class="toc-text">Community</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/zig-first-try/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/zig-first-try/&text=Zig Programming Language - First Try"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/zig-first-try/&title=Zig Programming Language - First Try"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/zig-first-try/&is_video=false&description=Zig Programming Language - First Try"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Zig Programming Language - First Try&body=Check out this article: https://vishnubharathi.codes/blog/zig-first-try/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/zig-first-try/&title=Zig Programming Language - First Try"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/zig-first-try/&title=Zig Programming Language - First Try"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/zig-first-try/&title=Zig Programming Language - First Try"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/zig-first-try/&title=Zig Programming Language - First Try"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/zig-first-try/&name=Zig Programming Language - First Try&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Vishnu Bharathi
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-64308743-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
