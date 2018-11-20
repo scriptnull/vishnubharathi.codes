@@ -7,6 +7,13 @@ This is my bookshelf. I love to collect and read books. They help me a lot.
 
 ---
 
+<h3>
+Grokking Algorithms: An illustrated guide for programmers and other curious people</h3>
+<span>- Aditya Y. Bhargava</span>
+<span><a href="https://www.safaribooksonline.com/library/view/grokking-algorithms-an/9781617292231/">Book Link</a></span>
+
+---
+
 <h3>A Tour of C++ - Second Edition</h3>
 <span>- Bjarne Stroustrup</span>
 <span><a href="http://www.stroustrup.com/tour2.html">Book Link</a></span>
