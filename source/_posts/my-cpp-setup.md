@@ -14,11 +14,11 @@ Most of the modern languages are starting to understand these needs and are comi
 Unfortunately if you are writing C++ you need to sit down and create a build environment that works for you. This involves time and in my guess, it is the reason why not-so-many projects are bootstrapped with C++. Example: `npm init` is all I need for convincing me to bootstrap a project in JavaScript and from there I know that I could easily pull in all the tools I need to achieve the development environment I need.
 
 ## What do I need?
+- Format code
 - Produce executables
 - Produce libraries
 - Add dependency
 - Run Tests
-- Formatting rules and tool
 
 ## CMake - not now!
 CMake is build system generator, which is popular and being recommended by a lot of people in 2018.
@@ -77,7 +77,9 @@ To start a bazel workspace,
 touch WORKSPACE
 ```
 
-and the project could have one or more BUILD files inside, helping bazel to figure out how to build the particular directory.
+Empty file, huh? not much use? nope. To my surprise this WORKSPACE file could be super powerful. I just realized it after seeing the [workspace rules](https://docs.bazel.build/versions/master/be/workspace.html)
+
+The project could have one or more BUILD files inside, helping bazel to figure out how to build the particular directory.
 
 > Each instance of a build rule in the BUILD file is called a target
 
@@ -101,6 +103,14 @@ This outputs the binary in `bazel-bin` folder.
 
 I recommended following [this tutorial about bazel](https://docs.bazel.build/versions/master/tutorial/cpp.html) if you are interested in learning more about it.
 
----
+## Format code
+After investigating, I came across `clang-format` - a tool to format C++ code. There are also other interesting tools and ideas for tools on [this Clang documentation page](https://clang.llvm.org/docs/ClangTools.html).
 
-To be continued...
+Some open source projects that use `clang-format` are envoy and electron. In fact, electron even has this [nice documentation](https://electronjs.org/docs/development/clang-format) on getting started with it.
+
+```sh
+npm install -g clang-format
+
+# run this to format
+clang-format -i **/*.cpp
+```
