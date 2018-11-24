@@ -113,4 +113,35 @@ npm install -g clang-format
 
 # run this to format
 clang-format -i **/*.cpp
+
+# run clang-format on git added files
+git-clang-format
+```
+
+## Produce executables
+Since we are using bazel, this is as simple as adding a new package called main and using `cc_binary` rule in it.
+
+```
+.
+├── README.md
+├── WORKSPACE
+└── main
+    ├── BUILD
+    └── app.cpp
+```
+
+Add the following rule to `main/BUILD`
+
+```
+cc_binary(
+    name = "app",
+    srcs = ["app.cpp"]
+)
+```
+
+To build the package and run the app
+```sh
+bazel build //main:app
+
+./bazel-bin/main/app
 ```
