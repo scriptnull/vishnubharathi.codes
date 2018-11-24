@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="PreludeI have been trying to write some C++ for the past few days. I was just exploring the standard library and modern C++ features. It has been going good so far, as I have been using C++ just to so">
+<meta name="keywords" content="programming,c++,devops">
+<meta property="og:type" content="article">
+<meta property="og:title" content="My C++ Setup">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/my-cpp-setup/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="PreludeI have been trying to write some C++ for the past few days. I was just exploring the standard library and modern C++ features. It has been going good so far, as I have been using C++ just to so">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-11-24T18:07:53.113Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="My C++ Setup">
+<meta name="twitter:description" content="PreludeI have been trying to write some C++ for the past few days. I was just exploring the standard library and modern C++ features. It has been going good so far, as I have been using C++ just to so">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>My C++ Setup</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/multi-dimensional-arrays-in-cpp/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/my-cpp-setup/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/my-cpp-setup/&text=My C++ Setup"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/my-cpp-setup/&title=My C++ Setup"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/my-cpp-setup/&is_video=false&description=My C++ Setup"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=My C++ Setup&body=Check out this article: https://vishnubharathi.codes/blog/my-cpp-setup/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/my-cpp-setup/&title=My C++ Setup"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/my-cpp-setup/&title=My C++ Setup"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/my-cpp-setup/&title=My C++ Setup"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/my-cpp-setup/&title=My C++ Setup"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/my-cpp-setup/&name=My C++ Setup&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prelude"><span class="toc-number">1.</span> <span class="toc-text">Prelude</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-do-I-need"><span class="toc-number">2.</span> <span class="toc-text">What do I need?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMake-not-now"><span class="toc-number">3.</span> <span class="toc-text">CMake - not now!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trying-out-Bazel"><span class="toc-number">4.</span> <span class="toc-text">Trying out Bazel</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install"><span class="toc-number">4.1.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WORKSPACE-and-BUILD"><span class="toc-number">4.2.</span> <span class="toc-text">WORKSPACE and BUILD</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        My C++ Setup
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">Vishnu Bharathi</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-11-24T14:37:16.000Z" itemprop="datePublished">2018-11-24</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/c/">c++</a>, <a class="tag-link" href="/tags/devops/">devops</a>, <a class="tag-link" href="/tags/programming/">programming</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Prelude"><a href="#Prelude" class="headerlink" title="Prelude"></a>Prelude</h2><p>I have been trying to write some C++ for the past few days. I was just exploring the standard library and modern C++ features. It has been going good so far, as I have been using C++ just to solve some puzzle questions on some sites. Now, I want to level up the game. I would like to write and understand some real world code with C++.</p>
+<p>There are some factors that need to be in check while writing OSS or some real-world project in any programming language like formatting, testing, building and packaging etc. JavaScript taught me this well. It is filled with a lot of things like npm, grunt, gulp, webpack, babel, yarn, standard, es-lint, js-hint etc. to help programmers.</p>
+<p>Most of the modern languages are starting to understand these needs and are coming up with official tools. This leads to lesser time spent on making decisions about the development environment. Example: go gives go-fmt for formatting your code, rust comes with cargo for dependency management. (Reminds me of <a href="https://www.businessinsider.in/Heres-The-Real-Reason-Mark-Zuckerberg-Wears-The-Same-T-Shirt-Every-Day/articleshow/45064550.cms" target="_blank" rel="noopener">Zuckerberg’s answer to why he wears the same colored T-shirt everyday</a>)</p>
+<p>Unfortunately if you are writing C++ you need to sit down and create a build environment that works for you. This involves time and in my guess, it is the reason why not-so-many projects are bootstrapped with C++. Example: <code>npm init</code> is all I need for convincing me to bootstrap a project in JavaScript and from there I know that I could easily pull in all the tools I need to achieve the development environment I need.</p>
+<h2 id="What-do-I-need"><a href="#What-do-I-need" class="headerlink" title="What do I need?"></a>What do I need?</h2><ul>
+<li>Produce executables</li>
+<li>Produce libraries</li>
+<li>Add dependency</li>
+<li>Run Tests</li>
+<li>Formatting rules and tool</li>
+</ul>
+<h2 id="CMake-not-now"><a href="#CMake-not-now" class="headerlink" title="CMake - not now!"></a>CMake - not now!</h2><p>CMake is build system generator, which is popular and being recommended by a lot of people in 2018.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=bsXLMQ6WgIk" target="_blank" rel="noopener">Effective CMake</a></li>
+<li><a href="https://www.youtube.com/watch?v=jt3meXdP-QI" target="_blank" rel="noopener">Introduction to CMake</a></li>
+<li><a href="https://www.youtube.com/watch?v=sFH8IvPfHx0" target="_blank" rel="noopener">How to create slides about CMake with CMake?</a> : This one is short and interesting.</li>
+</ul>
+<p>I have problems with CMake and I am not going to be secretive about it.</p>
+<p>Learning curve is high for me as I feel that getting started guides and documentation of it is not sufficient enough. When you are trying to read the documentation for cmake, you will end up hitting the <a href="https://cmake.org/cmake/help/v3.12/manual/cmake.1.html" target="_blank" rel="noopener">man page</a> of it.</p>
+<p>The man page, seriously? come on.</p>
+<p>So, how do I learn CMake properly? “Buy a book that just costs 59.00$”</p>
+<p>No, thanks.</p>
+<p>I could feel that CMake is a powerful tool - power being in <a href="https://cmake.org/cmake/help/v3.0/manual/cmake-generators.7.html" target="_blank" rel="noopener">generators</a>. It is even <a href="https://gitlab.kitware.com/cmake/cmake" target="_blank" rel="noopener">Open Sourced</a>.</p>
+<p>Another point is you need to learn its DSL to write CMake configuration file.</p>
+<p><blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Day 6 of <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw" target="_blank" rel="noopener">#100DaysOfCode</a> <br><br>Learning about CMake. Coming from a place where <code>npm ...</code> does wonders, CMake feels complex. My first impression is learning a language for writing another language adds more barriers.<br><br>I just wish we had something simple.</p>&mdash; Vishnu Bharathi (@scriptnull) <a href="https://twitter.com/scriptnull/status/1065292039439466496?ref_src=twsrc%5Etfw" target="_blank" rel="noopener">November 21, 2018</a></blockquote></p>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>My take on this is “I don’t need CMake now, but I might need it in future.”</p>
+<h2 id="Trying-out-Bazel"><a href="#Trying-out-Bazel" class="headerlink" title="Trying out Bazel"></a>Trying out Bazel</h2><p>I met <a href="https://www.bazel.build/" target="_blank" rel="noopener">Bazel</a> while exploring <a href="https://github.com/envoyproxy/envoy" target="_blank" rel="noopener">envoy</a>.</p>
+<blockquote>
+<p>{Fast, Correct} - Choose two</p>
+<p>Build and test software of any size, quickly and reliably</p>
+</blockquote>
+<p>It is open sourced and has good OPEN documentation and getting started guides. Another interesting feature for me is <a href="https://www.bazel.build/#one-tool-multiple-languages" target="_blank" rel="noopener">“One tool, multiple languages”</a>.</p>
+<p>Check out <a href="https://blog.envoyproxy.io/external-c-dependency-management-in-bazel-dd37477422f5" target="_blank" rel="noopener">this</a> cool blog post from envoy talking about how they use bazel.</p>
+<p>I am going to give it a try.</p>
+<h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><p>I am on macOS. So going with brew.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew tap bazelbuild/tap</span><br><span class="line">brew tap-pin bazelbuild/tap</span><br><span class="line">brew install bazel</span><br></pre></td></tr></table></figure>
+<h3 id="WORKSPACE-and-BUILD"><a href="#WORKSPACE-and-BUILD" class="headerlink" title="WORKSPACE and BUILD"></a>WORKSPACE and BUILD</h3><p>A bazel project makes use of two files WORKSPACE and BUILD.</p>
+<p>To start a bazel workspace,</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch WORKSPACE</span><br></pre></td></tr></table></figure>
+<p>and the project could have one or more BUILD files inside, helping bazel to figure out how to build the particular directory.</p>
+<blockquote>
+<p>Each instance of a build rule in the BUILD file is called a target</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cc_binary(</span><br><span class="line">    name = &quot;hello-world&quot;,</span><br><span class="line">    srcs = [&quot;hello-world.cc&quot;],</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p><code>cc_binary</code> is the rule and <code>hello-world</code> is the target. For the full list of available rules check out <a href="https://docs.bazel.build/versions/master/be/c-cpp.html" target="_blank" rel="noopener">this bazel docs page</a>.</p>
+<p>To run the <code>hello-world</code> target,<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># run from WORKSPACE root</span></span><br><span class="line">bazel build //main:hello-world</span><br></pre></td></tr></table></figure></p>
+<p>This outputs the binary in <code>bazel-bin</code> folder.</p>
+<p>I recommended following <a href="https://docs.bazel.build/versions/master/tutorial/cpp.html" target="_blank" rel="noopener">this tutorial about bazel</a> if you are interested in learning more about it.</p>
+<hr>
+<p>To be continued…</p>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prelude"><span class="toc-number">1.</span> <span class="toc-text">Prelude</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-do-I-need"><span class="toc-number">2.</span> <span class="toc-text">What do I need?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMake-not-now"><span class="toc-number">3.</span> <span class="toc-text">CMake - not now!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trying-out-Bazel"><span class="toc-number">4.</span> <span class="toc-text">Trying out Bazel</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install"><span class="toc-number">4.1.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WORKSPACE-and-BUILD"><span class="toc-number">4.2.</span> <span class="toc-text">WORKSPACE and BUILD</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/my-cpp-setup/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/my-cpp-setup/&text=My C++ Setup"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/my-cpp-setup/&title=My C++ Setup"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/my-cpp-setup/&is_video=false&description=My C++ Setup"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=My C++ Setup&body=Check out this article: https://vishnubharathi.codes/blog/my-cpp-setup/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/my-cpp-setup/&title=My C++ Setup"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/my-cpp-setup/&title=My C++ Setup"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/my-cpp-setup/&title=My C++ Setup"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/my-cpp-setup/&title=My C++ Setup"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/my-cpp-setup/&name=My C++ Setup&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Vishnu Bharathi
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-64308743-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
