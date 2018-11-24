@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Vishnu Bharathi">
 <meta property="og:description" content="PreludeI have been trying to write some C++ for the past few days. I was just exploring the standard library and modern C++ features. It has been going good so far, as I have been using C++ just to so">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-11-24T18:07:53.113Z">
+<meta property="og:updated_time" content="2018-11-24T21:42:37.374Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="My C++ Setup">
 <meta name="twitter:description" content="PreludeI have been trying to write some C++ for the past few days. I was just exploring the standard library and modern C++ features. It has been going good so far, as I have been using C++ just to so">
@@ -97,7 +97,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prelude"><span class="toc-number">1.</span> <span class="toc-text">Prelude</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-do-I-need"><span class="toc-number">2.</span> <span class="toc-text">What do I need?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMake-not-now"><span class="toc-number">3.</span> <span class="toc-text">CMake - not now!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trying-out-Bazel"><span class="toc-number">4.</span> <span class="toc-text">Trying out Bazel</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install"><span class="toc-number">4.1.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WORKSPACE-and-BUILD"><span class="toc-number">4.2.</span> <span class="toc-text">WORKSPACE and BUILD</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prelude"><span class="toc-number">1.</span> <span class="toc-text">Prelude</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-do-I-need"><span class="toc-number">2.</span> <span class="toc-text">What do I need?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMake-not-now"><span class="toc-number">3.</span> <span class="toc-text">CMake - not now!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trying-out-Bazel"><span class="toc-number">4.</span> <span class="toc-text">Trying out Bazel</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install"><span class="toc-number">4.1.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WORKSPACE-and-BUILD"><span class="toc-number">4.2.</span> <span class="toc-text">WORKSPACE and BUILD</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Format-code"><span class="toc-number">5.</span> <span class="toc-text">Format code</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -141,11 +141,11 @@
 <p>Most of the modern languages are starting to understand these needs and are coming up with official tools. This leads to lesser time spent on making decisions about the development environment. Example: go gives go-fmt for formatting your code, rust comes with cargo for dependency management. (Reminds me of <a href="https://www.businessinsider.in/Heres-The-Real-Reason-Mark-Zuckerberg-Wears-The-Same-T-Shirt-Every-Day/articleshow/45064550.cms" target="_blank" rel="noopener">Zuckerberg’s answer to why he wears the same colored T-shirt everyday</a>)</p>
 <p>Unfortunately if you are writing C++ you need to sit down and create a build environment that works for you. This involves time and in my guess, it is the reason why not-so-many projects are bootstrapped with C++. Example: <code>npm init</code> is all I need for convincing me to bootstrap a project in JavaScript and from there I know that I could easily pull in all the tools I need to achieve the development environment I need.</p>
 <h2 id="What-do-I-need"><a href="#What-do-I-need" class="headerlink" title="What do I need?"></a>What do I need?</h2><ul>
+<li>Format code</li>
 <li>Produce executables</li>
 <li>Produce libraries</li>
 <li>Add dependency</li>
 <li>Run Tests</li>
-<li>Formatting rules and tool</li>
 </ul>
 <h2 id="CMake-not-now"><a href="#CMake-not-now" class="headerlink" title="CMake - not now!"></a>CMake - not now!</h2><p>CMake is build system generator, which is popular and being recommended by a lot of people in 2018.</p>
 <ul>
@@ -177,7 +177,8 @@
 <h3 id="WORKSPACE-and-BUILD"><a href="#WORKSPACE-and-BUILD" class="headerlink" title="WORKSPACE and BUILD"></a>WORKSPACE and BUILD</h3><p>A bazel project makes use of two files WORKSPACE and BUILD.</p>
 <p>To start a bazel workspace,</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch WORKSPACE</span><br></pre></td></tr></table></figure>
-<p>and the project could have one or more BUILD files inside, helping bazel to figure out how to build the particular directory.</p>
+<p>Empty file, huh? not much use? nope. To my surprise this WORKSPACE file could be super powerful. I just realized it after seeing the <a href="https://docs.bazel.build/versions/master/be/workspace.html" target="_blank" rel="noopener">workspace rules</a></p>
+<p>The project could have one or more BUILD files inside, helping bazel to figure out how to build the particular directory.</p>
 <blockquote>
 <p>Each instance of a build rule in the BUILD file is called a target</p>
 </blockquote>
@@ -186,8 +187,9 @@
 <p>To run the <code>hello-world</code> target,<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># run from WORKSPACE root</span></span><br><span class="line">bazel build //main:hello-world</span><br></pre></td></tr></table></figure></p>
 <p>This outputs the binary in <code>bazel-bin</code> folder.</p>
 <p>I recommended following <a href="https://docs.bazel.build/versions/master/tutorial/cpp.html" target="_blank" rel="noopener">this tutorial about bazel</a> if you are interested in learning more about it.</p>
-<hr>
-<p>To be continued…</p>
+<h2 id="Format-code"><a href="#Format-code" class="headerlink" title="Format code"></a>Format code</h2><p>After investigating, I came across <code>clang-format</code> - a tool to format C++ code. There are also other interesting tools and ideas for tools on <a href="https://clang.llvm.org/docs/ClangTools.html" target="_blank" rel="noopener">this Clang documentation page</a>.</p>
+<p>Some open source projects that use <code>clang-format</code> are envoy and electron. In fact, electron even has this <a href="https://electronjs.org/docs/development/clang-format" target="_blank" rel="noopener">nice documentation</a> on getting started with it.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install -g clang-format</span><br><span class="line"></span><br><span class="line"><span class="comment"># run this to format</span></span><br><span class="line">clang-format -i **/*.cpp</span><br></pre></td></tr></table></figure>
 
   </div>
 </article>
@@ -210,7 +212,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prelude"><span class="toc-number">1.</span> <span class="toc-text">Prelude</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-do-I-need"><span class="toc-number">2.</span> <span class="toc-text">What do I need?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMake-not-now"><span class="toc-number">3.</span> <span class="toc-text">CMake - not now!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trying-out-Bazel"><span class="toc-number">4.</span> <span class="toc-text">Trying out Bazel</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install"><span class="toc-number">4.1.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WORKSPACE-and-BUILD"><span class="toc-number">4.2.</span> <span class="toc-text">WORKSPACE and BUILD</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prelude"><span class="toc-number">1.</span> <span class="toc-text">Prelude</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-do-I-need"><span class="toc-number">2.</span> <span class="toc-text">What do I need?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CMake-not-now"><span class="toc-number">3.</span> <span class="toc-text">CMake - not now!</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trying-out-Bazel"><span class="toc-number">4.</span> <span class="toc-text">Trying out Bazel</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install"><span class="toc-number">4.1.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WORKSPACE-and-BUILD"><span class="toc-number">4.2.</span> <span class="toc-text">WORKSPACE and BUILD</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Format-code"><span class="toc-number">5.</span> <span class="toc-text">Format code</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
