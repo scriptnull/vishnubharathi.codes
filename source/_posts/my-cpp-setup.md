@@ -1,0 +1,106 @@
+---
+title: My C++ Setup
+date: 2018-11-24 20:07:16
+tags: ["programming", "devops", "c++"]
+---
+## Prelude
+
+I have been trying to write some C++ for the past few days. I was just exploring the standard library and modern C++ features. It has been going good so far, as I have been using C++ just to solve some puzzle questions on some sites. Now, I want to level up the game. I would like to write and understand some real world code with C++.
+
+There are some factors that need to be in check while writing OSS or some real-world project in any programming language like formatting, testing, building and packaging etc. JavaScript taught me this well. It is filled with a lot of things like npm, grunt, gulp, webpack, babel, yarn, standard, es-lint, js-hint etc. to help programmers.
+
+Most of the modern languages are starting to understand these needs and are coming up with official tools. This leads to lesser time spent on making decisions about the development environment. Example: go gives go-fmt for formatting your code, rust comes with cargo for dependency management. (Reminds me of [Zuckerberg's answer to why he wears the same colored T-shirt everyday](https://www.businessinsider.in/Heres-The-Real-Reason-Mark-Zuckerberg-Wears-The-Same-T-Shirt-Every-Day/articleshow/45064550.cms))
+
+Unfortunately if you are writing C++ you need to sit down and create a build environment that works for you. This involves time and in my guess, it is the reason why not-so-many projects are bootstrapped with C++. Example: `npm init` is all I need for convincing me to bootstrap a project in JavaScript and from there I know that I could easily pull in all the tools I need to achieve the development environment I need.
+
+## What do I need?
+- Produce executables
+- Produce libraries
+- Add dependency
+- Run Tests
+- Formatting rules and tool
+
+## CMake - not now!
+CMake is build system generator, which is popular and being recommended by a lot of people in 2018.
+
+- [Effective CMake](https://www.youtube.com/watch?v=bsXLMQ6WgIk)
+- [Introduction to CMake](https://www.youtube.com/watch?v=jt3meXdP-QI)
+- [How to create slides about CMake with CMake?](https://www.youtube.com/watch?v=sFH8IvPfHx0) : This one is short and interesting.
+
+I have problems with CMake and I am not going to be secretive about it.
+
+Learning curve is high for me as I feel that getting started guides and documentation of it is not sufficient enough. When you are trying to read the documentation for cmake, you will end up hitting the [man page](https://cmake.org/cmake/help/v3.12/manual/cmake.1.html) of it.
+
+The man page, seriously? come on.
+
+So, how do I learn CMake properly? "Buy a book that just costs 59.00$"
+
+No, thanks.
+
+I could feel that CMake is a powerful tool - power being in [generators](https://cmake.org/cmake/help/v3.0/manual/cmake-generators.7.html). It is even [Open Sourced](https://gitlab.kitware.com/cmake/cmake).
+
+Another point is you need to learn its DSL to write CMake configuration file.
+
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Day 6 of <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <br><br>Learning about CMake. Coming from a place where `npm ...` does wonders, CMake feels complex. My first impression is learning a language for writing another language adds more barriers.<br><br>I just wish we had something simple.</p>&mdash; Vishnu Bharathi (@scriptnull) <a href="https://twitter.com/scriptnull/status/1065292039439466496?ref_src=twsrc%5Etfw">November 21, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+My take on this is "I don't need CMake now, but I might need it in future."
+
+## Trying out Bazel
+I met [Bazel](https://www.bazel.build/) while exploring [envoy](https://github.com/envoyproxy/envoy).
+
+> {Fast, Correct} - Choose two
+>
+> Build and test software of any size, quickly and reliably
+
+It is open sourced and has good OPEN documentation and getting started guides. Another interesting feature for me is ["One tool, multiple languages"](https://www.bazel.build/#one-tool-multiple-languages).
+
+Check out [this](https://blog.envoyproxy.io/external-c-dependency-management-in-bazel-dd37477422f5) cool blog post from envoy talking about how they use bazel.
+
+I am going to give it a try.
+
+### Install
+I am on macOS. So going with brew.
+
+```sh
+brew tap bazelbuild/tap
+brew tap-pin bazelbuild/tap
+brew install bazel
+```
+
+### WORKSPACE and BUILD
+A bazel project makes use of two files WORKSPACE and BUILD.
+
+To start a bazel workspace,
+
+```sh
+touch WORKSPACE
+```
+
+and the project could have one or more BUILD files inside, helping bazel to figure out how to build the particular directory.
+
+> Each instance of a build rule in the BUILD file is called a target
+
+```
+cc_binary(
+    name = "hello-world",
+    srcs = ["hello-world.cc"],
+)
+```
+
+`cc_binary` is the rule and `hello-world` is the target. For the full list of available rules check out [this bazel docs page](https://docs.bazel.build/versions/master/be/c-cpp.html).
+
+
+To run the `hello-world` target,
+```sh
+# run from WORKSPACE root
+bazel build //main:hello-world
+```
+
+This outputs the binary in `bazel-bin` folder.
+
+I recommended following [this tutorial about bazel](https://docs.bazel.build/versions/master/tutorial/cpp.html) if you are interested in learning more about it.
+
+---
+
+To be continued...
