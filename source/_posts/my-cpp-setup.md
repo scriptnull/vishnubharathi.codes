@@ -59,7 +59,7 @@ Check out [this](https://blog.envoyproxy.io/external-c-dependency-management-in-
 
 I am going to give it a try.
 
-#### Install
+### Install
 I am on macOS. So going with brew.
 
 ```sh
@@ -68,7 +68,7 @@ brew tap-pin bazelbuild/tap
 brew install bazel
 ```
 
-#### WORKSPACE and BUILD
+### WORKSPACE and BUILD
 A bazel project makes use of two files WORKSPACE and BUILD.
 
 To start a bazel workspace,
@@ -230,3 +230,36 @@ bazel test //test:factorial --test_output=all
 # Run all test targets
 bazel test //test:* --test_output=all
 ```
+
+## Produce library
+By this time, we should have encountered `cc_library` rule a couple of times. Yep! It could be used to produce libraries that are consumable by other projects.
+
+An example [straight from the docs](https://docs.bazel.build/versions/master/cpp-use-cases.html#using-transitive-includes)
+
+```
+cc_library(
+    name = "sandwich",
+    srcs = ["sandwich.cc"],
+    hdrs = ["sandwich.h"],
+    deps = [":bread"],
+)
+
+cc_library(
+    name = "bread",
+    srcs = ["bread.cc"],
+    hdrs = ["bread.h"],
+    deps = [":flour"],
+)
+
+cc_library(
+    name = "flour",
+    srcs = ["flour.cc"],
+    hdrs = ["flour.h"],
+)
+```
+
+## Conclusion
+
+Finally, I am kind of peaceful about what I got done here. But I am on the look out for other options too. For example, in the middle of this I gave up on bazel once and checked out ninja for sometime (haha). But then I already invested in some amount of complexity already that is too hard to ignore and move on.
+
+I also hope that C++20 modules would remove away a lot of complexity and make things easier.
