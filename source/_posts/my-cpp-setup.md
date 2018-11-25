@@ -20,7 +20,7 @@ Unfortunately if you are writing C++ you need to sit down and create a build env
 - Run test
 - Produce library
 
-## CMake - not now!
+## CMake
 CMake is build system generator, which is popular and being recommended by a lot of people in 2018.
 
 - [Effective CMake](https://www.youtube.com/watch?v=bsXLMQ6WgIk)
@@ -46,7 +46,7 @@ Another point is you need to learn its DSL to write CMake configuration file.
 
 My take on this is "I don't need CMake now, but I might need it in future."
 
-## Trying out Bazel
+## Bazel
 I met [Bazel](https://www.bazel.build/) while exploring [envoy](https://github.com/envoyproxy/envoy).
 
 > {Fast, Correct} - Choose two
@@ -59,7 +59,7 @@ Check out [this](https://blog.envoyproxy.io/external-c-dependency-management-in-
 
 I am going to give it a try.
 
-### Install
+#### Install
 I am on macOS. So going with brew.
 
 ```sh
@@ -68,7 +68,7 @@ brew tap-pin bazelbuild/tap
 brew install bazel
 ```
 
-### WORKSPACE and BUILD
+#### WORKSPACE and BUILD
 A bazel project makes use of two files WORKSPACE and BUILD.
 
 To start a bazel workspace,
@@ -164,6 +164,7 @@ cc_library(
     visibility = ["//visibility:public"],
 )
 """
+)
 ```
 
 Next step is adding catch2 as dependency in the tests target.
@@ -225,4 +226,7 @@ bazel test //test:factorial
 
 # Run tests and output information in stdout
 bazel test //test:factorial --test_output=all
+
+# Run all test targets
+bazel test //test:* --test_output=all
 ```
