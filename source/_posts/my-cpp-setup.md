@@ -15,10 +15,10 @@ Unfortunately if you are writing C++ you need to sit down and create a build env
 
 ## What do I need?
 - Format code
-- Produce executables
-- Produce libraries
+- Produce executable
 - Add dependency
-- Run Tests
+- Run test
+- Produce library
 
 ## CMake - not now!
 CMake is build system generator, which is popular and being recommended by a lot of people in 2018.
@@ -118,7 +118,7 @@ clang-format -i **/*.cpp
 git-clang-format
 ```
 
-## Produce executables
+## Produce executable
 Since we are using bazel, this is as simple as adding a new package called main and using `cc_binary` rule in it.
 
 ```
@@ -144,4 +144,85 @@ To build the package and run the app
 bazel build //main:app
 
 ./bazel-bin/main/app
+```
+
+## Add dependency
+This page about [managing external dependencies](https://docs.bazel.build/external.html) with bazel is quite useful. My best guess is that I will be trying to add non-bazel projects as third party-dependencies most of the time.
+
+Let me try adding a testing library called catch2. First step is adding the git repository as needed artifact in the WORKSPACE file.
+
+```
+load("@bazel_tools//tools/build_defs/repo:git.bzl", "new_git_repository")
+new_git_repository(
+    name = "catch2",
+    remote = "https://github.com/catchorg/catch2.git",
+    tag = "v2.4.2",
+    build_file_content="""
+cc_library(
+    name = "catch2",
+    hdrs = ["single_include/catch2/catch.hpp"],
+    visibility = ["//visibility:public"],
+)
+"""
+```
+
+Next step is adding catch2 as dependency in the tests target.
+
+```
+cc_test(
+    name = "factorial",
+    srcs = [
+        "factorial.cpp"
+    ],
+    copts = ["-Iexternal/catch2/single_include/catch2"],
+    deps = [
+        "@catch2//:catch2"
+    ],
+)
+```
+
+And our test file would look like
+
+```cpp
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
+
+unsigned int Factorial( unsigned int number ) {
+    return number <= 1 ? number : Factorial(number-1)*number;
+}
+
+TEST_CASE( "Factorials are computed", "[factorial]" ) {
+    REQUIRE( Factorial(1) == 1 );
+    REQUIRE( Factorial(2) == 2 );
+    REQUIRE( Factorial(3) == 6 );
+    REQUIRE( Factorial(10) == 3628800 );
+}
+```
+
+woof! I spend quite few hours trying to figure this out! But finally, I got it working.
+
+My first iteration made me to specify the header file like this
+
+```cpp
+#include "external/catch2/single_include/catch2/catch.hpp"
+```
+
+`copts` to the rescue and now the header is accessible just as
+
+```cpp
+#include "catch.hpp"
+```
+
+Now that we have added a library as dependency for `cc_test`, the process would be same for `cc_binary` and `cc_library`.
+
+## Run test
+
+`bazel test` command is used to run tests.
+
+```sh
+# Run tests
+bazel test //test:factorial
+
+# Run tests and output information in stdout
+bazel test //test:factorial --test_output=all
 ```
