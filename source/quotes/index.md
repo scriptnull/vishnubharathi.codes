@@ -7,6 +7,22 @@ Some words that inspire and help me.
 
 ---
 
+> I think we are getting close to intelligent machines but they're showing the necessary weaknesses of intelligent.
+
+By: Richard Feynman
+
+Source: [Richard Feynman Computer Heuristics Lecture](https://www.youtube.com/watch?v=EKWGGDXe5MA)
+
+---
+
+> One of the miseries of life is that everybody names things a little bit wrong and so it makes everything a little harder to understand in the world than it would be if it were named differently.
+
+By: Richard Feynman
+
+Source: [Richard Feynman Computer Heuristics Lecture](https://www.youtube.com/watch?v=EKWGGDXe5MA)
+
+---
+
 > If there is nothing worth dying for, there is nothing worth living for
 
 By: Ravindrababu Ravula
