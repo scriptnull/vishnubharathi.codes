@@ -89,6 +89,7 @@ theme: cactus
 theme_config:
   # available schemes: dark, light, white and classic
   colorscheme: white
+  tags_overview: true
   nav:
     home: /
     Blog: /archives/
