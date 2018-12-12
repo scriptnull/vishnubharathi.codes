@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang=en>
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="After deciding to learn about the JVM, I started reading the JVM specification. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to">
 <meta name="keywords" content="programming,jvm,java,clojure">
 <meta property="og:type" content="article">
@@ -16,7 +16,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://clojure.org/images/content/guides/learn/syntax/traditional-evaluation.png">
 <meta property="og:image" content="https://clojure.org/images/content/guides/learn/syntax/clojure-evaluation.png">
-<meta property="og:updated_time" content="2018-09-21T22:17:19.456Z">
+<meta property="og:updated_time" content="2018-12-12T05:46:02.318Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Enter the JVM: Part 1">
 <meta name="twitter:description" content="After deciding to learn about the JVM, I started reading the JVM specification. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to">
@@ -68,7 +68,7 @@
         
       </ul>
     </span>
-    <br/>
+    <br>
     <span id="actions">
       <ul>
         
@@ -85,7 +85,7 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br/>
+    <br>
     <div id="share" style="display: none">
       <ul>
   <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
@@ -102,15 +102,15 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Virtual-Machine-Specification"><span class="toc-number">1.</span> <span class="toc-text">Java Virtual Machine Specification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class-file-format"><span class="toc-number">2.</span> <span class="toc-text">class file format</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-Evaluation"><span class="toc-number">2.0.1.</span> <span class="toc-text">Java Evaluation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Clojure-Evaluation"><span class="toc-number">2.0.2.</span> <span class="toc-text">Clojure Evaluation</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Virtual-Machine-Specification"><span class="toc-number">1.</span> <span class="toc-text">Java Virtual Machine Specification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class-file-format"><span class="toc-number">2.</span> <span class="toc-text">class file format</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-Evaluation"><span class="toc-number">2.0.1.</span> <span class="toc-text">Java Evaluation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Clojure-Evaluation"><span class="toc-number">2.0.2.</span> <span class="toc-text">Clojure Evaluation</span></a></li></ol></li></ol>
     </div>
   </span>
 </div>
 
     
-    <div class="content index my4">
+    <div class="content index py4">
         
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
@@ -120,7 +120,7 @@
 
 
     <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
         <span itemprop="name">Vishnu Bharathi</span>
       </span>
       
@@ -128,6 +128,8 @@
         <time datetime="2018-04-29T13:35:05.000Z" itemprop="datePublished">2018-04-29</time>
     </div>
 
+
+      
 
       
     <div class="article-tag">
@@ -186,9 +188,8 @@
 
 
 
-    </div>
-    
-      <div id="footer-post-container">
+        
+          <div id="footer-post-container">
   <div id="footer-post">
 
     <div id="nav-footer" style="display: none">
@@ -202,7 +203,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Virtual-Machine-Specification"><span class="toc-number">1.</span> <span class="toc-text">Java Virtual Machine Specification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class-file-format"><span class="toc-number">2.</span> <span class="toc-text">class file format</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-Evaluation"><span class="toc-number">2.0.1.</span> <span class="toc-text">Java Evaluation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Clojure-Evaluation"><span class="toc-number">2.0.2.</span> <span class="toc-text">Clojure Evaluation</span></a></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Virtual-Machine-Specification"><span class="toc-number">1.</span> <span class="toc-text">Java Virtual Machine Specification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class-file-format"><span class="toc-number">2.</span> <span class="toc-text">class file format</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-Evaluation"><span class="toc-number">2.0.1.</span> <span class="toc-text">Java Evaluation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Clojure-Evaluation"><span class="toc-number">2.0.2.</span> <span class="toc-text">Clojure Evaluation</span></a></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
@@ -231,8 +232,8 @@
   </div>
 </div>
 
-    
-    <footer id="footer">
+        
+        <footer id="footer">
   <div class="footer-left">
     Copyright &copy; 2018 Vishnu Bharathi
   </div>
@@ -249,6 +250,7 @@
   </div>
 </footer>
 
+    </div>
 </body>
 </html>
 <!-- styles -->
