@@ -7,6 +7,22 @@ Some words that inspire and help me.
 
 ---
 
+> It is not what you do. It's the way that you do it. It's a style you go about doing things. It's inverting the problem and changing it.
+
+By: Hamming
+
+Source: [Hamming, "You and Your Research" (June 6, 1995)](https://www.youtube.com/watch?v=a1zDuOPkMSw)
+
+---
+
+> Any system as long as it keeps you disciplined and getting done what you say you are going to get done is fine and I think like the simple ones really work.
+
+By: Sam Altman
+
+Source: [Sam Altman on Choosing Projects, Creating Value, and Finding Purpose](https://www.youtube.com/watch?v=uEl2KUZ3JWA)
+
+---
+
 > I think we are getting close to intelligent machines but they're showing the necessary weaknesses of intelligent.
 
 By: Richard Feynman
