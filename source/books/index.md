@@ -7,6 +7,12 @@ This is my bookshelf. I love to collect and read books. They help me a lot.
 
 ---
 
+<h3>The Rust Programming Language</h3>
+<span>- Steve Klabnik and Carol Nichols with contributions from the Rust Community</span> 
+<span><a href="https://nostarch.com/rust">Book Link</a></span>
+
+---
+
 <h3>
 Grokking Algorithms: An illustrated guide for programmers and other curious people</h3>
 <span>- Aditya Y. Bhargava</span>
