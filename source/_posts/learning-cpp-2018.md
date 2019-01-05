@@ -115,7 +115,7 @@ To round up, C++ does not dictate about its tooling, which basically gives lot o
 
 Example: I just spent days learning about tools and coming up with [my own C++ setup](https://vishnubharathi.codes/blog/my-cpp-setup/)  for bootstrapping projects in C++ — when entering rust all I have to do was type `cargo new project —bin` 
 
-Oh and I not trying to advertise that Rust got everything right and you should use Rust because nothing is ever perfect and that is what make things interesting.
+Oh and I am not trying to advertise that Rust got everything right and you should use Rust because nothing is ever perfect and that is what make things interesting.
 
 There are awesome efforts going on already to overcome the problems. One such notable effort being C++ Modules which is probably the most exciting thing if you ask me.
 
