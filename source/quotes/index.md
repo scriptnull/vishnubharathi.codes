@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> There's something pleasing about a secret project. And you can take more risks, because no one will know if you fail.
+
+By: Paul Graham
+
+Source: [What You'll Wish You'd Known](http://www.paulgraham.com/hs.html)
+
+---
+
 > It is not what you do. It's the way that you do it. It's a style you go about doing things. It's inverting the problem and changing it.
 
 By: Hamming
