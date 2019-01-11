@@ -42,7 +42,7 @@ C++ is hanging around for a long time ( 34 years till date according to Wikipedi
 
 > Read more code than you write
 
-I took this programming advice seriously and as a result I have been wanting to read more code. A good way to start this would be to read books that have code in them. Because you just can't start reading the source code of a code base from top to bottom, (you can but not in most cases, but might give up at some point without understanding something. Books are in between everything from documentation to source code to contributing guides.
+I took this programming advice seriously and as a result I have been wanting to read more code. A good way to start this would be to read books that have code in them. Because you just can't start reading the source code of a code base from top to bottom (you can but not in most cases, because you might give up at some point without understanding something). Books are in between everything from documentation to source code to contributing guides.
 
 I was very much interested in reading the source code of V8, Node.js, libuv, redis, electron etc. because they will help me to understand node.js or respective technologies in a better way and all of them are written in C or C++
 
@@ -126,3 +126,8 @@ Despite all the problems I faced, I still don't have regrets learning and using 
 > "Within C++ is a smaller, simpler, safer language struggling to get out." - Bjarne Stroustrup
 
 There surely is!
+
+~ ~ ~
+
+Woah! This post got posted on [Hacker News](https://news.ycombinator.com/item?id=18845476) and received very insightful comments. Thank you everyone for sharing this in your network and giving helpful feedback!
+
