@@ -16,4 +16,4 @@ I was very much interested in building real-world software when I was in college
 
 I vividly remember using the Github GUI client for Windows and I used it for a long time and never really preferred the command line git until I got into Linux (where I was forced to). I liked the Github for Windows software. It was white and clean.
 
-Even though I didn't know a lot of things (like git, java etc.), I kept on going. I wrote code, committed and pushed day by day, without turning back or thinking if someone was watching. I just did it. I don't know how, but I guess the curiosity and my interest to learn things took me way more forward than any other thing. Coding became one of my passions. But I liked it and I still do.
+Even though I didn't know a lot of things (like git, java etc.), I kept on going. I wrote code, committed and pushed day by day, without turning back or thinking if someone was watching. I just did it. I don't know how, but I guess the curiosity and my interest to learn things took me way more forward than any other thing. Coding became one of my passions. I liked it and I still do.
