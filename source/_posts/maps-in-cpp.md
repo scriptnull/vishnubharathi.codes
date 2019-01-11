@@ -167,7 +167,7 @@ template < class Key,                                    // unordered_multimap::
 #include <unordered_map>
 
 // API similar to multimap
-unordered_map<int,string> m;
+unordered_multimap<int,string> m;
 m.insert(pair<int,string> (1, "apple"));
 m.insert(pair<int,string> (1, "pineapple"));
 cout << m.find(1)->second << "\n";

@@ -109,18 +109,18 @@ for (auto it = range_it.first; it != range_it.second; ++it)
 - Faster access time due to hash function -> constant average time
 
 ```cpp
-template < class Key,                         // unordered_multiset::key_type/value_type
-           class Hash = hash<Key>,            // unordered_multiset::hasher
-           class Pred = equal_to<Key>,        // unordered_multiset::key_equal
-           class Alloc = allocator<Key>       // unordered_multiset::allocator_type
-           > class unordered_multiset;
+template < class Key,                         // unordered_set::key_type/value_type
+           class Hash = hash<Key>,            // unordered_set::hasher
+           class Pred = equal_to<Key>,        // unordered_set::key_equal
+           class Alloc = allocator<Key>       // unordered_set::allocator_type
+           > class unordered_set;
 ```
 
 ```cpp
 // Include
 #include <unordered_set>
 
-multiset<int> s;
+unordered_set<int> s;
 
 // APIs similar to set
 // Refer docs for extra functions like hash related functions .load_factor()
