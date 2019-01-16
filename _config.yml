@@ -129,6 +129,19 @@ theme_config:
     enabled: true
     id: UA-64308743-3
 
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 500
+  content_limit_delim: ' '
+  order_by: -date
+
+# leaving rss empty uses hexo-generator-feed
+rss:
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
