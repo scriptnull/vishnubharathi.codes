@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Vishnu Bharathi</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://vishnubharathi.codes/"/>
+  <updated>2019-01-11T17:22:59.173Z</updated>
+  <id>https://vishnubharathi.codes/</id>
+  
+  <author>
+    <name>Vishnu Bharathi</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>I learnt C++ in 2018 and have no regrets</title>
+    <link href="https://vishnubharathi.codes/blog/learning-cpp-2018/"/>
+    <id>https://vishnubharathi.codes/blog/learning-cpp-2018/</id>
+    <published>2019-01-03T20:38:00.000Z</published>
+    <updated>2019-01-11T17:22:59.173Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;My quest for relearning C++ started in November 2018. I have been reading + &lt;a href=&quot;https://vishnubharathi.codes/tags/c/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;blogging&lt;/a&gt; + writing C++ from then. I would like to reflect on my journey a bit.&lt;/p&gt;
+&lt;p&gt;Before I begin, I would like to state that this is not a language war blog post (although few parts of it might sound like). My intention and emphasis is on how all these beautiful languages converge and diverge to give healthy competition and chance
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>rlwrap</title>
+    <link href="https://vishnubharathi.codes/blog/rlwrap/"/>
+    <id>https://vishnubharathi.codes/blog/rlwrap/</id>
+    <published>2018-12-12T06:01:36.000Z</published>
+    <updated>2019-01-01T17:06:08.100Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Two days back, I got to learn about a command line program called &lt;a href=&quot;https://github.com/hanslub42/rlwrap&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;rlwrap&lt;/a&gt; - short for readline wrapper. This is the kind of software that I would like to write without knowing it already existed in this world. I am feeling very excited about rlwrap because the productivity that it brings to the table is massive.&lt;/p&gt;
+&lt;p&gt;I originally discovered it while trying to learn Common Lisp. &lt;code&gt;sbcl&lt;/code&gt; is a common
+        
+      
+    
+    </summary>
+    
+    
+      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
+    
+      <category term="linux" scheme="https://vishnubharathi.codes/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pure.h</title>
+    <link href="https://vishnubharathi.codes/blog/pure-h/"/>
+    <id>https://vishnubharathi.codes/blog/pure-h/</id>
+    <published>2018-11-30T15:39:03.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Prelude&quot;&gt;&lt;a href=&quot;#Prelude&quot; class=&quot;headerlink&quot; title=&quot;Prelude&quot;&gt;&lt;/a&gt;Prelude&lt;/h2&gt;&lt;p&gt;When writing pure virtual functions in C++, I raise my eyebrows because the syntax for it feels weird to me.&lt;/p&gt;
+&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My C++ Setup</title>
+    <link href="https://vishnubharathi.codes/blog/my-cpp-setup/"/>
+    <id>https://vishnubharathi.codes/blog/my-cpp-setup/</id>
+    <published>2018-11-24T14:37:16.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Prelude&quot;&gt;&lt;a href=&quot;#Prelude&quot; class=&quot;headerlink&quot; title=&quot;Prelude&quot;&gt;&lt;/a&gt;Prelude&lt;/h2&gt;&lt;p&gt;I have been trying to write some C++ for the past few days. I was just exploring the standard library and modern C++ features. It has been going good so far, as I have been using C++ just to solve some puzzle questions on some sites. Now, I want to level up the game. I would like to write and understand some real world code with C++.&lt;/p&gt;
+&lt;p&gt;There are some factors that need to be in check while writing OSS
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+      <category term="devops" scheme="https://vishnubharathi.codes/tags/devops/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Multidimensional arrays in C++</title>
+    <link href="https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/"/>
+    <id>https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/</id>
+    <published>2018-11-19T00:48:37.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Multidimensional arrays have values in rows and columns.&lt;/p&gt;
+&lt;h2 id=&quot;Built-in-arrays&quot;&gt;&lt;a href=&quot;#Built-in-arrays&quot; class=&quot;headerlink&quot; title=&quot;Built-in arrays&quot;&gt;&lt;/a&gt;Built-in arrays&lt;/h2&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Sets in C++</title>
+    <link href="https://vishnubharathi.codes/blog/sets-in-cpp/"/>
+    <id>https://vishnubharathi.codes/blog/sets-in-cpp/</id>
+    <published>2018-11-18T06:57:24.000Z</published>
+    <updated>2019-01-11T16:56:05.358Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Sets are containers that store unique elements. There are four kinds of sets in C++&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;set&lt;/li&gt;
+&lt;li&gt;multiset&lt;/li&gt;
+&lt;li&gt;unordered_set&lt;/li&gt;
+&lt;li&gt;unordered_multiset&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;set&quot;&gt;&lt;a href=&quot;#set&quot; class=&quot;headerlink&quot; title=&quot;set&quot;&gt;&lt;/a&gt;set&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Internally, keys are sorted following a strict weak ordering criteria - default is &lt;code&gt;less&amp;lt;Key&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Implemented using binary search trees, so access takes O(log n)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Maps in C++</title>
+    <link href="https://vishnubharathi.codes/blog/maps-in-cpp/"/>
+    <id>https://vishnubharathi.codes/blog/maps-in-cpp/</id>
+    <published>2018-11-17T01:00:30.000Z</published>
+    <updated>2019-01-11T16:52:28.721Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Maps are associate containers. They associate a key and a value as pair and store them. There are four kinds of maps in C++&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;map&lt;/li&gt;
+&lt;li&gt;multimap&lt;/li&gt;
+&lt;li&gt;unordered_map&lt;/li&gt;
+&lt;li&gt;unordered_multimap&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;map&quot;&gt;&lt;a href=&quot;#map&quot; class=&quot;headerlink&quot; title=&quot;map&quot;&gt;&lt;/a&gt;map&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Internally, keys are sorted following a strict weak ordering criteria - default is &lt;code&gt;less&amp;lt;Key&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Implemented using binary search trees, so access takes O(log
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Zig Programming Language - First Try</title>
+    <link href="https://vishnubharathi.codes/blog/zig-first-try/"/>
+    <id>https://vishnubharathi.codes/blog/zig-first-try/</id>
+    <published>2018-11-16T13:28:56.000Z</published>
+    <updated>2019-01-01T17:06:08.100Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;I discovered &lt;a href=&quot;https://ziglang.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Zig&lt;/a&gt; programming language yesterday while checking out &lt;a href=&quot;https://www.recurse.com&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;recurse center&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;It aims to be a system programming language. Go, Rust, Crystal and now this. I have given all of them a try and I am always in the look out to explore more. So, here we go!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Zig is an open-source programming language designed for robustness,
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="zig" scheme="https://vishnubharathi.codes/tags/zig/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linked Lists in C++</title>
+    <link href="https://vishnubharathi.codes/blog/linked-lists-in-cpp/"/>
+    <id>https://vishnubharathi.codes/blog/linked-lists-in-cpp/</id>
+    <published>2018-11-15T05:19:44.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;forward-list&quot;&gt;&lt;a href=&quot;#forward-list&quot; class=&quot;headerlink&quot; title=&quot;forward_list&quot;&gt;&lt;/a&gt;forward_list&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Singly Linked List&lt;/li&gt;
+&lt;li&gt;No direct access to the elements. To access n-th element, iterate through n-1 elements.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;By design, it is as efficient as a simple handwritten C-style singly-linked list, and in fact is the only standard container to deliberately lack a size member function for efficiency considerations: due to its nature as a linked list,
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Deque in C++</title>
+    <link href="https://vishnubharathi.codes/blog/deque-in-cpp/"/>
+    <id>https://vishnubharathi.codes/blog/deque-in-cpp/</id>
+    <published>2018-11-15T04:43:56.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;ul&gt;
+&lt;li&gt;Double Ended queue&lt;/li&gt;
+&lt;li&gt;Pronounced as “deck”&lt;/li&gt;
+&lt;li&gt;Insertion and deletion takes place at both the ends&lt;/li&gt;
+&lt;li&gt;Used as default underlying container for stacks and queues.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Both vectors and deques provide a very similar interface and can be used for similar purposes, but internally both work in quite different ways: While vectors use a single array that needs to be occasionally reallocated for growth, the elements of a deque can be scattered in
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Priority queues in C++</title>
+    <link href="https://vishnubharathi.codes/blog/priority-queues-in-cpp/"/>
+    <id>https://vishnubharathi.codes/blog/priority-queues-in-cpp/</id>
+    <published>2018-11-13T17:42:42.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Prelude&quot;&gt;&lt;a href=&quot;#Prelude&quot; class=&quot;headerlink&quot; title=&quot;Prelude&quot;&gt;&lt;/a&gt;Prelude&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Priority queues are implemented as container adaptors&lt;/li&gt;
+&lt;li&gt;default underlying container is vector&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;container classes that could be used as underlying container are deque, vector and any class that implements the following methods along with &lt;a href=&quot;http://www.cplusplus.com/reference/iterator/RandomAccessIterator/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;random access
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Stacks and queues in C++</title>
+    <link href="https://vishnubharathi.codes/blog/stacks-and-queues-in-cpp/"/>
+    <id>https://vishnubharathi.codes/blog/stacks-and-queues-in-cpp/</id>
+    <published>2018-11-12T17:54:08.000Z</published>
+    <updated>2019-01-01T17:06:08.100Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Stack&quot;&gt;&lt;a href=&quot;#Stack&quot; class=&quot;headerlink&quot; title=&quot;Stack&quot;&gt;&lt;/a&gt;Stack&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;LIFO - Last In First Out&lt;/li&gt;
+&lt;li&gt;stacks are implemented as containers adaptors&lt;/li&gt;
+&lt;li&gt;default underlying container is deque&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;container classes that could be used as underlying container are vector, deque, list and any class that implements the following methods&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;empty&lt;/li&gt;
+&lt;li&gt;size&lt;/li&gt;
+&lt;li&gt;back&lt;/li&gt;
+&lt;li&gt;push_back&lt;/li&gt;
+&lt;li&gt;pop_back&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Dynamic arrays in C++</title>
+    <link href="https://vishnubharathi.codes/blog/dynamic-arrays-in-cpp/"/>
+    <id>https://vishnubharathi.codes/blog/dynamic-arrays-in-cpp/</id>
+    <published>2018-11-12T13:30:34.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Initialize&quot;&gt;&lt;a href=&quot;#Initialize&quot; class=&quot;headerlink&quot; title=&quot;Initialize&quot;&gt;&lt;/a&gt;Initialize&lt;/h2&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Include&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fixed-size arrays in C++</title>
+    <link href="https://vishnubharathi.codes/blog/fixed-arrays-in-cpp/"/>
+    <id>https://vishnubharathi.codes/blog/fixed-arrays-in-cpp/</id>
+    <published>2018-11-12T00:43:44.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Basic-Usage&quot;&gt;&lt;a href=&quot;#Basic-Usage&quot; class=&quot;headerlink&quot; title=&quot;Basic Usage&quot;&gt;&lt;/a&gt;Basic Usage&lt;/h2&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Logarithms</title>
+    <link href="https://vishnubharathi.codes/blog/logarithms/"/>
+    <id>https://vishnubharathi.codes/blog/logarithms/</id>
+    <published>2018-11-07T13:12:05.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;A few months back, I asked one of my programmer friends about the impact of Logarithms in analysing algorithms. I was particularly interested in knowing about the base of log for all the log notation used in algorithm analysis.&lt;/p&gt;
+&lt;p&gt;At the end of the phone call, I got into a state where &lt;code&gt;log&lt;/code&gt; notation used in algorithm analysis is always base 2. Because it is computer science and we deal with 0s and 1s which is binary, hence log base 2. (Wrong, so wrong!)&lt;/p&gt;
+&lt;p&gt;I was not
+        
+      
+    
+    </summary>
+    
+    
+      <category term="mathematics" scheme="https://vishnubharathi.codes/tags/mathematics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>A Slice of Redis - Part 2</title>
+    <link href="https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-2/"/>
+    <id>https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-2/</id>
+    <published>2018-10-12T14:49:00.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Perfect timing. The cake just arrived. Actually, cakes :P (Read &lt;a href=&quot;/blog/A-Slice-of-Redis-Part-1/&quot;&gt;Part 1&lt;/a&gt; where I actually ordered them.)&lt;/p&gt;
+&lt;p&gt;I cloned the &lt;a href=&quot;https://github.com/antirez/redis&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;redis&lt;/a&gt; repository and built it using the instructions in the &lt;a href=&quot;http://readme.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;README.md&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# very simple
+
+$ git clone git@github.com:antirez/redis.git
+
+$ cd redis
+
+$ make
+
+$ make
+        
+      
+    
+    </summary>
+    
+    
+      <category term="redis" scheme="https://vishnubharathi.codes/tags/redis/"/>
+    
+      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>A Slice of Redis - Part 1</title>
+    <link href="https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-1/"/>
+    <id>https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-1/</id>
+    <published>2018-10-12T14:34:48.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;I just ordered a slice of cake and I was confused about the title of this post, hence “A Slice of Redis”.&lt;/p&gt;
+&lt;p&gt;This is my attempt to learn about Redis in more detail and probably contribute something towards if I see a chance for it.&lt;/p&gt;
+&lt;p&gt;I have been longing to have this kind of session for a long time. Take a software that you absolutely love using and read it’s code. Redis is one of my favorite softwares and I guess it is a good start.&lt;/p&gt;
+&lt;p&gt;Yes! I will try to read stuff inside the
+        
+      
+    
+    </summary>
+    
+    
+      <category term="redis" scheme="https://vishnubharathi.codes/tags/redis/"/>
+    
+      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hugo to Hexo</title>
+    <link href="https://vishnubharathi.codes/blog/hugo-to-hexo/"/>
+    <id>https://vishnubharathi.codes/blog/hugo-to-hexo/</id>
+    <published>2018-09-30T13:39:10.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;I have been using &lt;a href=&quot;https://gohugo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hugo&lt;/a&gt; to blog for quite sometime. I recently pulled an all nighter to migrate from &lt;a href=&quot;https://gohugo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hugo&lt;/a&gt; to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Old-Look&quot;&gt;&lt;a href=&quot;#Old-Look&quot; class=&quot;headerlink&quot; title=&quot;Old Look&quot;&gt;&lt;/a&gt;Old Look&lt;/h2&gt;&lt;p&gt;I was using &lt;a href=&quot;https://github.com/nishanths/cocoa-hugo-theme&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
+    
+      <category term="blogging" scheme="https://vishnubharathi.codes/tags/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Terminals</title>
+    <link href="https://vishnubharathi.codes/blog/terminals/"/>
+    <id>https://vishnubharathi.codes/blog/terminals/</id>
+    <published>2018-08-16T12:50:05.000Z</published>
+    <updated>2019-01-01T17:06:08.100Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;IDEs helped me a lot during the early days of my programming journey (2011 - 2014) to build and run programs. I was addicted to few things like Turbo C++, Visual Studio, Eclipse, Android Studio etc. over those period. I spent enough time to memorize every cool shortcut in them and even the places where most frequently used options are present in the menu bars.&lt;/p&gt;
+&lt;p&gt;After sometime, I started learning this cool new technology that had been spreading like wildfire in the internet called
+        
+      
+    
+    </summary>
+    
+    
+      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
+    
+      <category term="linux" scheme="https://vishnubharathi.codes/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Friday Night</title>
+    <link href="https://vishnubharathi.codes/blog/friday-night/"/>
+    <id>https://vishnubharathi.codes/blog/friday-night/</id>
+    <published>2018-07-13T13:15:24.000Z</published>
+    <updated>2019-01-01T17:06:08.090Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;It is actually a saturday morning. It’s midnight 12:17 as I type. I am writing this post in the spirit of Friday night (Weekend yay!)&lt;/p&gt;
+&lt;p&gt;First things first. I am building a brand new software on a technology that I didn’t have chance to learn yet.&lt;/p&gt;
+&lt;p&gt;Dark mode on! Head phones on!&lt;/p&gt;
+&lt;p&gt;(( Playing “Go Hard or Go Home” ))&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I had been working late at office (till 10:10pm friday to be exact). I had Rose Ghulkand Quenchers from &lt;a href=&quot;http://barista.co.in/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="javascript" scheme="https://vishnubharathi.codes/tags/javascript/"/>
+    
+      <category term="electron" scheme="https://vishnubharathi.codes/tags/electron/"/>
+    
+      <category term="angular" scheme="https://vishnubharathi.codes/tags/angular/"/>
+    
+  </entry>
+  
+</feed>
