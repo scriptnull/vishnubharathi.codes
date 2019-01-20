@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2019-01-11T17:22:59.173Z</updated>
+  <updated>2019-01-20T16:23:33.352Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Binary Tree Traversals</title>
+    <link href="https://vishnubharathi.codes/blog/binary-tree-traversal/"/>
+    <id>https://vishnubharathi.codes/blog/binary-tree-traversal/</id>
+    <published>2019-01-17T23:49:39.000Z</published>
+    <updated>2019-01-20T16:23:33.352Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;The goal of this document is to present a collection of things about binary tree traversals to get the reader up to speed while solving simple tree related problems. (Be it interview prep or competitive programming or application programming; This document will try to act as a quick intro/revision)&lt;/p&gt;
+&lt;p&gt;Trees are actually a kind of graph. Hence it could be traversed/searched in two ways (most of the times, this viewpoint is not presented in textbooks because we are used to learning graphs
+        
+      
+    
+    </summary>
+    
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+  </entry>
   
   <entry>
     <title>I learnt C++ in 2018 and have no regrets</title>
@@ -29,8 +54,9 @@
       
         
         
-          &lt;p&gt;My quest for relearning C++ started in November 2018. I have been reading + &lt;a href=&quot;https://vishnubharathi.codes/tags/c/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;blogging&lt;/a&gt; + writing C++ from then. I would like to reflect on my journey a bit.&lt;/p&gt;
-&lt;p&gt;Before I begin, I would like to state that this is not a language war blog post (although few parts of it might sound like). My intention and emphasis is on how all these beautiful languages converge and diverge to give healthy competition and chance
+          &lt;p&gt;My quest for relearning C++ started in November 2018. I have been reading + &lt;a href=&quot;https://vishnubharathi.codes/tags/c/&quot;&gt;blogging&lt;/a&gt; + writing C++ from then. I would like to reflect on my journey a bit.&lt;/p&gt;
+&lt;p&gt;Before I begin, I would like to state that this is not a language war blog post (although few parts of it might sound like). My intention and emphasis is on how all these beautiful languages converge and diverge to give healthy competition and chance for evolution.&lt;/p&gt;
+&lt;h2
         
       
     
@@ -149,9 +175,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
       <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
     
   </entry>
   
@@ -188,9 +214,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
       <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
     
   </entry>
   
@@ -225,9 +251,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
       <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
     
   </entry>
   
@@ -287,9 +313,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
       <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
     
   </entry>
   
@@ -322,9 +348,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
       <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
     
   </entry>
   
@@ -354,9 +380,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
       <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
     
   </entry>
   
@@ -395,9 +421,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
       <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
     
   </entry>
   
@@ -423,9 +449,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
       <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
     
   </entry>
   
@@ -451,9 +477,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
       <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
     
   </entry>
   
@@ -599,41 +625,6 @@ $ make
       <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
     
       <category term="linux" scheme="https://vishnubharathi.codes/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Friday Night</title>
-    <link href="https://vishnubharathi.codes/blog/friday-night/"/>
-    <id>https://vishnubharathi.codes/blog/friday-night/</id>
-    <published>2018-07-13T13:15:24.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;It is actually a saturday morning. It’s midnight 12:17 as I type. I am writing this post in the spirit of Friday night (Weekend yay!)&lt;/p&gt;
-&lt;p&gt;First things first. I am building a brand new software on a technology that I didn’t have chance to learn yet.&lt;/p&gt;
-&lt;p&gt;Dark mode on! Head phones on!&lt;/p&gt;
-&lt;p&gt;(( Playing “Go Hard or Go Home” ))&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;I had been working late at office (till 10:10pm friday to be exact). I had Rose Ghulkand Quenchers from &lt;a href=&quot;http://barista.co.in/&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-      <category term="javascript" scheme="https://vishnubharathi.codes/tags/javascript/"/>
-    
-      <category term="electron" scheme="https://vishnubharathi.codes/tags/electron/"/>
-    
-      <category term="angular" scheme="https://vishnubharathi.codes/tags/angular/"/>
     
   </entry>
   
