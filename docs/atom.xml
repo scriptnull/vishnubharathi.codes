@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2019-01-20T16:23:33.352Z</updated>
+  <updated>2019-02-10T10:01:29.521Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>So you want to climb that tree?</title>
+    <link href="https://vishnubharathi.codes/blog/climb-tree/"/>
+    <id>https://vishnubharathi.codes/blog/climb-tree/</id>
+    <published>2019-02-10T09:49:16.000Z</published>
+    <updated>2019-02-10T10:01:29.521Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;I have been feeling a bit nervous lately that I am not skilled enough to solve tree (data-structure) problems. Not only on the interview prep side but also while writing application code. It is true! I failed to identify a problem as a tree problem while at work once and ended up writing a monstrous function that somehow got the job done. By the time I realized it was too late to implement/reimplement it. (However, the feature works! it still does :D )&lt;/p&gt;
+&lt;p&gt;So here it goes! My effort to
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="algorithms" scheme="https://vishnubharathi.codes/tags/algorithms/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Binary Tree Traversals</title>
     <link href="https://vishnubharathi.codes/blog/binary-tree-traversal/"/>
     <id>https://vishnubharathi.codes/blog/binary-tree-traversal/</id>
     <published>2019-01-17T23:49:39.000Z</published>
-    <updated>2019-01-20T16:23:33.352Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -46,7 +75,7 @@
     <link href="https://vishnubharathi.codes/blog/learning-cpp-2018/"/>
     <id>https://vishnubharathi.codes/blog/learning-cpp-2018/</id>
     <published>2019-01-03T20:38:00.000Z</published>
-    <updated>2019-01-11T17:22:59.173Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -74,7 +103,7 @@
     <link href="https://vishnubharathi.codes/blog/rlwrap/"/>
     <id>https://vishnubharathi.codes/blog/rlwrap/</id>
     <published>2018-12-12T06:01:36.000Z</published>
-    <updated>2019-01-01T17:06:08.100Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -101,7 +130,7 @@
     <link href="https://vishnubharathi.codes/blog/pure-h/"/>
     <id>https://vishnubharathi.codes/blog/pure-h/</id>
     <published>2018-11-30T15:39:03.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -128,7 +157,7 @@
     <link href="https://vishnubharathi.codes/blog/my-cpp-setup/"/>
     <id>https://vishnubharathi.codes/blog/my-cpp-setup/</id>
     <published>2018-11-24T14:37:16.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -157,7 +186,7 @@
     <link href="https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/</id>
     <published>2018-11-19T00:48:37.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -175,9 +204,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
       <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
     
   </entry>
   
@@ -186,7 +215,7 @@
     <link href="https://vishnubharathi.codes/blog/sets-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/sets-in-cpp/</id>
     <published>2018-11-18T06:57:24.000Z</published>
-    <updated>2019-01-11T16:56:05.358Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -214,9 +243,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
       <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
     
   </entry>
   
@@ -225,7 +254,7 @@
     <link href="https://vishnubharathi.codes/blog/maps-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/maps-in-cpp/</id>
     <published>2018-11-17T01:00:30.000Z</published>
-    <updated>2019-01-11T16:52:28.721Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -251,9 +280,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
       <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
     
   </entry>
   
@@ -262,7 +291,7 @@
     <link href="https://vishnubharathi.codes/blog/zig-first-try/"/>
     <id>https://vishnubharathi.codes/blog/zig-first-try/</id>
     <published>2018-11-16T13:28:56.000Z</published>
-    <updated>2019-01-01T17:06:08.100Z</updated>
+    <updated>2019-02-10T09:03:38.163Z</updated>
     
     <summary type="html">
     
@@ -291,7 +320,7 @@
     <link href="https://vishnubharathi.codes/blog/linked-lists-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/linked-lists-in-cpp/</id>
     <published>2018-11-15T05:19:44.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -313,9 +342,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
       <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
     
   </entry>
   
@@ -324,7 +353,7 @@
     <link href="https://vishnubharathi.codes/blog/deque-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/deque-in-cpp/</id>
     <published>2018-11-15T04:43:56.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -348,9 +377,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
       <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
     
   </entry>
   
@@ -359,7 +388,7 @@
     <link href="https://vishnubharathi.codes/blog/priority-queues-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/priority-queues-in-cpp/</id>
     <published>2018-11-13T17:42:42.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -380,9 +409,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
       <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
     
   </entry>
   
@@ -391,7 +420,7 @@
     <link href="https://vishnubharathi.codes/blog/stacks-and-queues-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/stacks-and-queues-in-cpp/</id>
     <published>2018-11-12T17:54:08.000Z</published>
-    <updated>2019-01-01T17:06:08.100Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -421,9 +450,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
       <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
     
   </entry>
   
@@ -432,7 +461,7 @@
     <link href="https://vishnubharathi.codes/blog/dynamic-arrays-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/dynamic-arrays-in-cpp/</id>
     <published>2018-11-12T13:30:34.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -449,9 +478,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
       <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
     
   </entry>
   
@@ -460,7 +489,7 @@
     <link href="https://vishnubharathi.codes/blog/fixed-arrays-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/fixed-arrays-in-cpp/</id>
     <published>2018-11-12T00:43:44.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -477,9 +506,9 @@
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
       <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
+    
+      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
     
   </entry>
   
@@ -488,7 +517,7 @@
     <link href="https://vishnubharathi.codes/blog/logarithms/"/>
     <id>https://vishnubharathi.codes/blog/logarithms/</id>
     <published>2018-11-07T13:12:05.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -514,7 +543,7 @@
     <link href="https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-2/"/>
     <id>https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-2/</id>
     <published>2018-10-12T14:49:00.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -550,7 +579,7 @@ $ make
     <link href="https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-1/"/>
     <id>https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-1/</id>
     <published>2018-10-12T14:34:48.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -579,7 +608,7 @@ $ make
     <link href="https://vishnubharathi.codes/blog/hugo-to-hexo/"/>
     <id>https://vishnubharathi.codes/blog/hugo-to-hexo/</id>
     <published>2018-09-30T13:39:10.000Z</published>
-    <updated>2019-01-01T17:06:08.090Z</updated>
+    <updated>2019-02-10T09:03:38.159Z</updated>
     
     <summary type="html">
     
@@ -598,33 +627,6 @@ $ make
       <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
     
       <category term="blogging" scheme="https://vishnubharathi.codes/tags/blogging/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Terminals</title>
-    <link href="https://vishnubharathi.codes/blog/terminals/"/>
-    <id>https://vishnubharathi.codes/blog/terminals/</id>
-    <published>2018-08-16T12:50:05.000Z</published>
-    <updated>2019-01-01T17:06:08.100Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;IDEs helped me a lot during the early days of my programming journey (2011 - 2014) to build and run programs. I was addicted to few things like Turbo C++, Visual Studio, Eclipse, Android Studio etc. over those period. I spent enough time to memorize every cool shortcut in them and even the places where most frequently used options are present in the menu bars.&lt;/p&gt;
-&lt;p&gt;After sometime, I started learning this cool new technology that had been spreading like wildfire in the internet called
-        
-      
-    
-    </summary>
-    
-    
-      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
-    
-      <category term="linux" scheme="https://vishnubharathi.codes/tags/linux/"/>
     
   </entry>
   
