@@ -7,6 +7,30 @@ Some words that inspire and help me.
 
 ---
 
+> The art of war teaches us to rely not on the likelihood of the enemy's not coming, but on our own readiness to receive him; not on the chance of his not attacking, but rather on the fact that we have made our position unassailable.
+
+By: Introduction
+
+Source: [The Art of War](http://store.doverpublications.com/0486425576.html)
+
+---
+
+> He will win who knows when to fight and when not to fight. He will win who knows how to handle both superior and inferior forces. He will win whose army is animated by the same spirit throughout all ranks. He will win who, prepared himself, waits to take the enemy unprepared.
+
+By: Sun Tzu
+
+Source: [The Art of War](http://store.doverpublications.com/0486425576.html)
+
+---
+
+> Simulated disorder postulates perfect discipline; simulated fear postulates courage; simulated weakness postulates strength.
+
+By: Sun Tzu
+
+Source: [The Art of War](http://store.doverpublications.com/0486425576.html)
+
+---
+
 > There's something pleasing about a secret project. And you can take more risks, because no one will know if you fail.
 
 By: Paul Graham
