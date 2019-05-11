@@ -3,14 +3,13 @@ Source code for [vishnubharathi.codes](https://vishnubharathi.codes)
 #### Prerequisite
 Install node.js and npm - https://nodejs.org/en/
 
-Install hexo-cli
 
 ```bash
-npm install -g hexo-cli
+npm install 
 ```
 
 #### Development
-Make changes and run `hexo server`. Visit http://localhost:4000
+Make changes and run `npm start`. Visit http://localhost:4000
 
 #### Release
 To publish all the work, run `./package.sh`. git commit and push to this repository.
