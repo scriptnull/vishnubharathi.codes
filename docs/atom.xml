@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2019-02-10T10:01:29.521Z</updated>
+  <updated>2019-05-11T17:26:05.020Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Please mind the gap</title>
+    <link href="https://vishnubharathi.codes/blog/please-mind-the-gap/"/>
+    <id>https://vishnubharathi.codes/blog/please-mind-the-gap/</id>
+    <published>2019-05-08T10:40:03.000Z</published>
+    <updated>2019-05-11T17:26:05.020Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;I haven’t been blogging for a while (2 to 3 months). Oh man, life got so busy during these days. I want to take time to write down something to break that fact that I am not blogging for a while. Let me share some of my life updates.&lt;/p&gt;
+&lt;h2 id=&quot;JFrog-acquires-Shippable&quot;&gt;&lt;a href=&quot;#JFrog-acquires-Shippable&quot; class=&quot;headerlink&quot; title=&quot;JFrog acquires Shippable&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="life" scheme="https://vishnubharathi.codes/tags/life/"/>
+    
+  </entry>
+  
+  <entry>
     <title>So you want to climb that tree?</title>
     <link href="https://vishnubharathi.codes/blog/climb-tree/"/>
     <id>https://vishnubharathi.codes/blog/climb-tree/</id>
     <published>2019-02-10T09:49:16.000Z</published>
-    <updated>2019-02-10T10:01:29.521Z</updated>
+    <updated>2019-05-08T14:23:31.754Z</updated>
     
     <summary type="html">
     
@@ -50,7 +75,7 @@
     <link href="https://vishnubharathi.codes/blog/binary-tree-traversal/"/>
     <id>https://vishnubharathi.codes/blog/binary-tree-traversal/</id>
     <published>2019-01-17T23:49:39.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.743Z</updated>
     
     <summary type="html">
     
@@ -75,7 +100,7 @@
     <link href="https://vishnubharathi.codes/blog/learning-cpp-2018/"/>
     <id>https://vishnubharathi.codes/blog/learning-cpp-2018/</id>
     <published>2019-01-03T20:38:00.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.858Z</updated>
     
     <summary type="html">
     
@@ -103,7 +128,7 @@
     <link href="https://vishnubharathi.codes/blog/rlwrap/"/>
     <id>https://vishnubharathi.codes/blog/rlwrap/</id>
     <published>2018-12-12T06:01:36.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:32.005Z</updated>
     
     <summary type="html">
     
@@ -130,7 +155,7 @@
     <link href="https://vishnubharathi.codes/blog/pure-h/"/>
     <id>https://vishnubharathi.codes/blog/pure-h/</id>
     <published>2018-11-30T15:39:03.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.958Z</updated>
     
     <summary type="html">
     
@@ -157,7 +182,7 @@
     <link href="https://vishnubharathi.codes/blog/my-cpp-setup/"/>
     <id>https://vishnubharathi.codes/blog/my-cpp-setup/</id>
     <published>2018-11-24T14:37:16.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.925Z</updated>
     
     <summary type="html">
     
@@ -186,7 +211,7 @@
     <link href="https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/</id>
     <published>2018-11-19T00:48:37.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.914Z</updated>
     
     <summary type="html">
     
@@ -215,7 +240,7 @@
     <link href="https://vishnubharathi.codes/blog/sets-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/sets-in-cpp/</id>
     <published>2018-11-18T06:57:24.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:32.028Z</updated>
     
     <summary type="html">
     
@@ -254,7 +279,7 @@
     <link href="https://vishnubharathi.codes/blog/maps-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/maps-in-cpp/</id>
     <published>2018-11-17T01:00:30.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.904Z</updated>
     
     <summary type="html">
     
@@ -291,7 +316,7 @@
     <link href="https://vishnubharathi.codes/blog/zig-first-try/"/>
     <id>https://vishnubharathi.codes/blog/zig-first-try/</id>
     <published>2018-11-16T13:28:56.000Z</published>
-    <updated>2019-02-10T09:03:38.163Z</updated>
+    <updated>2019-05-08T14:23:32.138Z</updated>
     
     <summary type="html">
     
@@ -320,7 +345,7 @@
     <link href="https://vishnubharathi.codes/blog/linked-lists-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/linked-lists-in-cpp/</id>
     <published>2018-11-15T05:19:44.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.870Z</updated>
     
     <summary type="html">
     
@@ -353,7 +378,7 @@
     <link href="https://vishnubharathi.codes/blog/deque-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/deque-in-cpp/</id>
     <published>2018-11-15T04:43:56.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.765Z</updated>
     
     <summary type="html">
     
@@ -388,7 +413,7 @@
     <link href="https://vishnubharathi.codes/blog/priority-queues-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/priority-queues-in-cpp/</id>
     <published>2018-11-13T17:42:42.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.943Z</updated>
     
     <summary type="html">
     
@@ -420,7 +445,7 @@
     <link href="https://vishnubharathi.codes/blog/stacks-and-queues-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/stacks-and-queues-in-cpp/</id>
     <published>2018-11-12T17:54:08.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:32.044Z</updated>
     
     <summary type="html">
     
@@ -461,7 +486,7 @@
     <link href="https://vishnubharathi.codes/blog/dynamic-arrays-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/dynamic-arrays-in-cpp/</id>
     <published>2018-11-12T13:30:34.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.774Z</updated>
     
     <summary type="html">
     
@@ -489,7 +514,7 @@
     <link href="https://vishnubharathi.codes/blog/fixed-arrays-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/fixed-arrays-in-cpp/</id>
     <published>2018-11-12T00:43:44.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.811Z</updated>
     
     <summary type="html">
     
@@ -517,7 +542,7 @@
     <link href="https://vishnubharathi.codes/blog/logarithms/"/>
     <id>https://vishnubharathi.codes/blog/logarithms/</id>
     <published>2018-11-07T13:12:05.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.881Z</updated>
     
     <summary type="html">
     
@@ -543,7 +568,7 @@
     <link href="https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-2/"/>
     <id>https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-2/</id>
     <published>2018-10-12T14:49:00.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.734Z</updated>
     
     <summary type="html">
     
@@ -579,7 +604,7 @@ $ make
     <link href="https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-1/"/>
     <id>https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-1/</id>
     <published>2018-10-12T14:34:48.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
+    <updated>2019-05-08T14:23:31.726Z</updated>
     
     <summary type="html">
     
@@ -600,33 +625,6 @@ $ make
       <category term="redis" scheme="https://vishnubharathi.codes/tags/redis/"/>
     
       <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hugo to Hexo</title>
-    <link href="https://vishnubharathi.codes/blog/hugo-to-hexo/"/>
-    <id>https://vishnubharathi.codes/blog/hugo-to-hexo/</id>
-    <published>2018-09-30T13:39:10.000Z</published>
-    <updated>2019-02-10T09:03:38.159Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;I have been using &lt;a href=&quot;https://gohugo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hugo&lt;/a&gt; to blog for quite sometime. I recently pulled an all nighter to migrate from &lt;a href=&quot;https://gohugo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hugo&lt;/a&gt; to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;Old-Look&quot;&gt;&lt;a href=&quot;#Old-Look&quot; class=&quot;headerlink&quot; title=&quot;Old Look&quot;&gt;&lt;/a&gt;Old Look&lt;/h2&gt;&lt;p&gt;I was using &lt;a href=&quot;https://github.com/nishanths/cocoa-hugo-theme&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
-    
-      <category term="blogging" scheme="https://vishnubharathi.codes/tags/blogging/"/>
     
   </entry>
   
