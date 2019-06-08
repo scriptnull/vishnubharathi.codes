@@ -3,6 +3,15 @@ Source code for [vishnubharathi.codes](https://vishnubharathi.codes)
 #### Prerequisite
 Install node.js and npm - https://nodejs.org/en/
 
+#### Setup
+
+Clone forked version of the theme in `themes` folder
+
+```
+git clone git@github.com:scriptnull/hexo-theme-cactus.git cactus
+```
+
+Run npm install
 
 ```bash
 npm install 
