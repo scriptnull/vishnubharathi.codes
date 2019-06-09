@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2019-06-08T13:24:00.003Z</updated>
+  <updated>2019-06-09T09:34:38.382Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Flow anywhere</title>
+    <link href="https://vishnubharathi.codes/blog/flow-anywhere/"/>
+    <id>https://vishnubharathi.codes/blog/flow-anywhere/</id>
+    <published>2019-06-09T08:07:08.000Z</published>
+    <updated>2019-06-09T09:34:38.382Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Recently I started taking yoga classes. This is like the third or fourth time, I am in the same class. So this is more of a retake. In my previous attempts, the classes were continuous and at my place (Erode, Tamil Nadu, India). This time it is the place that I am currently working at (Bangalore, Karnataka, India). The classes are in tamil and the interval between the classes are lengthy (Weekly intervals). So one of the things that is difficult to maintain is dicipline to get up everyday
+        
+      
+    
+    </summary>
+    
+    
+      <category term="life" scheme="https://vishnubharathi.codes/tags/life/"/>
+    
+  </entry>
   
   <entry>
     <title>Please mind the gap</title>
@@ -587,35 +611,6 @@ $ cd redis
 $ make
 
 $ make
-        
-      
-    
-    </summary>
-    
-    
-      <category term="redis" scheme="https://vishnubharathi.codes/tags/redis/"/>
-    
-      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A Slice of Redis - Part 1</title>
-    <link href="https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-1/"/>
-    <id>https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-1/</id>
-    <published>2018-10-12T14:34:48.000Z</published>
-    <updated>2019-06-08T13:24:00.003Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;I just ordered a slice of cake and I was confused about the title of this post, hence “A Slice of Redis”.&lt;/p&gt;
-&lt;p&gt;This is my attempt to learn about Redis in more detail and probably contribute something towards if I see a chance for it.&lt;/p&gt;
-&lt;p&gt;I have been longing to have this kind of session for a long time. Take a software that you absolutely love using and read it’s code. Redis is one of my favorite softwares and I guess it is a good start.&lt;/p&gt;
-&lt;p&gt;Yes! I will try to read stuff inside the
         
       
     
