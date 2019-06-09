@@ -1,7 +1,7 @@
 ---
 title: Flow anywhere
 date: 2019-06-09 13:37:08
-tags:
+tags: ["life"]
 ---
 
 Recently I started taking yoga classes. This is like the third or fourth time, I am in the same class. So this is more of a retake. In my previous attempts, the classes were continuous and at my place (Erode, Tamil Nadu, India). This time it is the place that I am currently working at (Bangalore, Karnataka, India). The classes are in tamil and the interval between the classes are lengthy (Weekly intervals). So one of the things that is difficult to maintain is dicipline to get up everyday and practice yoga on my own. Everytime I take these classes, I do this for sometime and leave it. This time I am learning the exercises slowly little by little and we were instructed to practice them properly before moving on. I am hoping to do it well!
