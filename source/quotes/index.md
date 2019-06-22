@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> The way never acts, yet nothing is left undone
+
+By: Dao De Jing
+
+Source: [EASTERN PHILOSOPHY: Wu Wei](https://www.youtube.com/watch?v=NvZi7ZV-SWI)
+
+---
+
 > Defeat does not exist in this dojo, does it?
 
 By: Johnny
