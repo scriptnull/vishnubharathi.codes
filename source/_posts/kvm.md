@@ -204,3 +204,93 @@ According to wikipedia,
 > A hypervisor or virtual machine monitor (VMM) is computer software, firmware or hardware that creates and runs virtual machines.  
 
 I have heard of this word "hyper" in the Windows world like "Turn on Hyper-V". Well I turned it on, but without knowing what exactly it is. Now I have the answer. Hyper-V is the a hypervisor built into Windows (just like how KVM is for linux)
+
+
+## Paravirtualization
+While reading about KVM, I came across a concept named Paravirtualization. Here is the Wikipedia verses,
+
+> A hypervisor provides the virtualization of the underlying computer system. In full virtualization, a guest operating system runs unmodified on a hypervisor. However, improved performance and efficiency is achieved by having the guest operating system communicate with the hypervisor. By allowing the guest operating system to indicate its intent to the hypervisor, each can cooperate to obtain better performance when running in a virtual machine. This type of communication is referred to as paravirtualization.
+
+And there is a line in KVM Wikipedia that states about the support for paravirtualization in KVM
+
+> KVM provides paravirtualization support for Linux, OpenBSD,[12] FreeBSD,[13] NetBSD,[14] Plan 9[15] and Windows guests using the VirtIO[16] API. This includes a paravirtual Ethernet card, disk I/O controller,[17] balloon device, and a VGA graphics interface using SPICE or VMware drivers.
+
+This line is important, because it is helping me understand the practical sense of paravirtualization. Best example: when I had run VMs previously, I noticed that the VM could connect to the host operating system and access the internet via a network connection through the host. This means the Guest operating system is able to speak with the host operating system and communicate its intent. I think this kind of capability is called Paravirtualization.
+
+## KVM Structure
+![kvm-structure](https://upload.wikimedia.org/wikipedia/commons/4/40/Kernel-based_Virtual_Machine.svg)
+
+## libvirt
+I first encountered libvirt while checking out [Digital Ocean's libvirt Go package](https://github.com/digitalocean/go-libvirt). libvirt is an open-source API written in C (with bindings in other languages) to manage virtualization. Hypervisors will be using this library to actually create and manage virtual machines.
+
+![libvirt](https://upload.wikimedia.org/wikipedia/commons/d/d0/Libvirt_support.svg)
+
+## Time for action
+I think I kind of went through some basic reading materials. Now I am going to try to create a virtual machine using the kvm interface.
+
+I am on a raspberry pi and my lsmod already revealed that I don't have kvm kernel module loaded. KVM's support as per the official page is for CPUs running on Intel or AMD. So, I going to spin up a virtual machine in Digital Ocean to play around.
+
+Doing an `lsmod` in my DO (Digital Ocean) box revealed that my `kvm.ko` and `kvm_intel.ko` are loaded.
+
+```
+root@dev:~# lsmod | grep kvm 
+kvm_intel             212992  0
+kvm                   598016  1 kvm_intel
+irqbypass              16384  1 kvm
+```
+
+`libvirtd` seems to be an important component, because it is the daemon that exposes a socket for accessing libvirt API to manage VMs
+
+```
+root@dev:~# file /var/run/libvirt/libvirt-sock
+/var/run/libvirt/libvirt-sock: socket
+```
+
+`virsh` is the command line client that connects to this socket and provides a CLI interface for managing the VMs
+
+```
+root@dev:~# virsh list --all 
+ Id    Name                           State
+----------------------------------------------------
+
+```
+
+Currently no VMs are present as per virsh.
+
+Let us try creating one!
+
+The process dealt with installing somepackes namely `virt-manager`, `libvirt-bin`, `libosinfo-bin`
+
+After some strong belief on virsh and virt-install tools, I just successfully created a VM running alpinelinux3.8
+
+![virsh-alpine](/images/virsh-alpine.png)
+
+I used `virt-install` to create the VM
+
+```
+virt-install --memory=128 \
+	--vcpus=1 \
+	--cpu=host \
+	--name=a38 \
+	--cdrom=alpine-virt-3.8.0-x86_64.iso \
+	--os-variant=alpinelinux3.8 \
+	--disk size=5 
+```
+
+To manage this VM,
+
+```
+virsh list
+virsh connect a38
+virsh shutdown a38
+virsh destroy a38
+```
+
+Before closing, I would like to check one more thing, "Where does the kvm kernel object sit?"
+
+```
+root@dev:/lib/modules/4.15.0-52-generic/kernel# find . -name kvm.ko
+./arch/x86/kvm/kvm.ko
+```
+
+I also noticed this thing called `irqbypass.ko` which is being used by `kvm.ko` [...](https://lwn.net/Articles/653706/)
