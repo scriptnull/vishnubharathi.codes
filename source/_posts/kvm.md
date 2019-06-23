@@ -31,7 +31,7 @@ This arises more questions.
 ## Kernel modules
 After googling a bit, I arrived at this [awesome link](https://linux.die.net/lkmpg/x40.html) which teaches about kernel modules.
 
-Basically it is where action is! You can add functionality to the kernel by loading modules to it instead of writing down all the code in the main kernel code. This would result in a monolithic kernel with bigger size and complexity.
+Basically it is where action is! You can add functionality to the kernel by loading modules to it instead of writing down all the code in the main kernel code. Having this modular approach avoids ending up with a monolithic kernel which has bigger size and complexity.
 
 Ok, let us see what kernel modules are running in my pi. (`lsmod` is our friend)
 
@@ -67,7 +67,7 @@ x_tables               32768  1 ip_tables
 ipv6                  425984  42
 ```
 
-I could see `.ko` extension files is the artifact needed to load a module. So, if you are writing a kernel module you would end up building a `.ko` (kernel object) file. To load this use, `insmod` command.
+I could see `.ko` extension files is the artifact that is needed to load a module. So, if you are writing a kernel module you would end up building a `.ko` (kernel object) file. To load this, use the `insmod` command.
 
 I played around a while to see all the available kernel objects that came with my installation and here is what I found.
 
@@ -197,12 +197,10 @@ fs
 
 Yeah! I could see some well know file system names. Does that mean a file system is just a kernel module and to write a file system, all I need to do is write down code and generate a `.ko` file and load it? (Strong guess from me is YES, but I will only know for sure if I attempt writing one or is someone who have attempted could tell me -- let me know if you know the answer for this!)
 
-
-
 ## Hypervisor
 
 According to wikipedia, 
 
 > A hypervisor or virtual machine monitor (VMM) is computer software, firmware or hardware that creates and runs virtual machines.  
 
-I have heard of this word "hyper" in the Windows world like "Turn on Hyper-V". Well I turned it on, but without knowing what exactly it is. Now I have the answer. Hyper-V is the a hypervisor built in to Windows (just like how KVM is for linux)
+I have heard of this word "hyper" in the Windows world like "Turn on Hyper-V". Well I turned it on, but without knowing what exactly it is. Now I have the answer. Hyper-V is the a hypervisor built into Windows (just like how KVM is for linux)
