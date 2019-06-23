@@ -1,7 +1,7 @@
 ---
 title: KVM
 date: 2019-06-22 12:55:49
-tags:
+tags: ["linux"]
 ---
 
 Yesterday, I somehow arrived at [Firecracker](https://firecracker-microvm.github.io/) and ended up reading it's design documents. Firecracker is a project by AWS which helps in creation + management of MicroVMS. This is of great interest to me, as I always wondered how AWS Lambda works and I have been interested in secure execution of code on servers for [a long long time](https://github.com/scriptnull/compilex/commit/1d3a3fef1f3dd209aa64a9f38b55034fd318734d#diff-04c6e90faac2675aa89e2176d2eec7d8). 
