@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="Yesterday, I somehow arrived at Firecracker and ended up reading it’s design documents. Firecracker is a project by AWS which helps in creation + management of MicroVMS. This is of great interest to m">
+    <meta name="description" content="Yesterday, I somehow arrived at Firecracker and ended up reading its design documents. Firecracker is a project by AWS which helps in creation + management of MicroVMS. This is of great interest to me">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="KVM">
 <meta property="og:url" content="https://vishnubharathi.codes/blog/kvm/index.html">
 <meta property="og:site_name" content="Vishnu Bharathi">
-<meta property="og:description" content="Yesterday, I somehow arrived at Firecracker and ended up reading it’s design documents. Firecracker is a project by AWS which helps in creation + management of MicroVMS. This is of great interest to m">
+<meta property="og:description" content="Yesterday, I somehow arrived at Firecracker and ended up reading its design documents. Firecracker is a project by AWS which helps in creation + management of MicroVMS. This is of great interest to me">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/4/40/Kernel-based_Virtual_Machine.svg">
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/d/d0/Libvirt_support.svg">
 <meta property="og:image" content="https://vishnubharathi.codes/images/virsh-alpine.png">
-<meta property="og:updated_time" content="2019-06-23T20:29:46.906Z">
+<meta property="og:updated_time" content="2019-06-26T14:42:13.209Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="KVM">
-<meta name="twitter:description" content="Yesterday, I somehow arrived at Firecracker and ended up reading it’s design documents. Firecracker is a project by AWS which helps in creation + management of MicroVMS. This is of great interest to m">
+<meta name="twitter:description" content="Yesterday, I somehow arrived at Firecracker and ended up reading its design documents. Firecracker is a project by AWS which helps in creation + management of MicroVMS. This is of great interest to me">
 <meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/4/40/Kernel-based_Virtual_Machine.svg">
     
     
@@ -142,7 +142,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>Yesterday, I somehow arrived at <a href="https://firecracker-microvm.github.io/" target="_blank" rel="noopener">Firecracker</a> and ended up reading it’s design documents. Firecracker is a project by AWS which helps in creation + management of MicroVMS. This is of great interest to me, as I always wondered how AWS Lambda works and I have been interested in secure execution of code on servers for <a href="https://github.com/scriptnull/compilex/commit/1d3a3fef1f3dd209aa64a9f38b55034fd318734d#diff-04c6e90faac2675aa89e2176d2eec7d8" target="_blank" rel="noopener">a long long time</a>. </p>
+    <p>Yesterday, I somehow arrived at <a href="https://firecracker-microvm.github.io/" target="_blank" rel="noopener">Firecracker</a> and ended up reading its design documents. Firecracker is a project by AWS which helps in creation + management of MicroVMS. This is of great interest to me, as I always wondered how AWS Lambda works and I have been interested in secure execution of code on servers for <a href="https://github.com/scriptnull/compilex/commit/1d3a3fef1f3dd209aa64a9f38b55034fd318734d#diff-04c6e90faac2675aa89e2176d2eec7d8" target="_blank" rel="noopener">a long long time</a>. </p>
 <p>Firecracker’s docs describe that it uses KVM (Kernel-based Virtual Machine) behind the scenes to operate. hmm, KVM huh? I have heard of it before as an alternative to QEMU, Virtual Box etc. Well, is it really the alternative? hmm not sure. Well then what exactly is it?</p>
 <p>I consider this to be a good start of learning about various virtualization technologies and probably this will give me good idea about things like, “what is KVM?”, “what are Containers?” etc.</p>
 <p>So, here we go! A series of Wikipedia pages to read now :D </p>
@@ -194,7 +194,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">root@dev:~# virsh list --all </span><br><span class="line"> Id    Name                           State</span><br><span class="line">----------------------------------------------------</span><br></pre></td></tr></table></figure>
 <p>Currently no VMs are present as per virsh.</p>
 <p>Let us try creating one!</p>
-<p>The process dealt with installing somepackes namely <code>virt-manager</code>, <code>libvirt-bin</code>, <code>libosinfo-bin</code></p>
+<p>The process dealt with installing some packages namely <code>virt-manager</code>, <code>libvirt-bin</code>, <code>libosinfo-bin</code></p>
 <p>After some strong belief on virsh and virt-install tools, I just successfully created a VM running alpinelinux3.8</p>
 <p><img src="/images/virsh-alpine.png" alt="virsh-alpine"></p>
 <p>I used <code>virt-install</code> to create the VM</p>
