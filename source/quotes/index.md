@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> To reach such goals, we need to become very serious about reliability, which is a vastly different mindset from “we must get something—anything—to market first.”
+
+By: Bjarne Stroustrup
+
+Source: [Software Development for Infrastructure](http://www.stroustrup.com/Software-for-infrastructure.pdf)
+
+---
+
 > The way never acts, yet nothing is left undone
 
 By: Dao De Jing
