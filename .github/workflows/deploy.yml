@@ -25,3 +25,4 @@ jobs:
         git config --global user.email "vishnubharathi04@gmail.com"
         git config --global user.name "Vishnu Bharathi"
         git commit -m "Generated site :sparkles:"
+        git push origin master
