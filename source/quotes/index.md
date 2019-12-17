@@ -7,6 +7,18 @@ Some words that inspire and help me.
 
 ---
 
+> Hope is not a strategy.
+
+Source: [Site Reliability Engineering - How Google Runs Production System](https://landing.google.com/sre/books/)
+
+---
+
+> They are people who stand on the cusp between one way of looking at the world and another one: like Newton, who is sometimes called not the world’s first physicist, but the world’s last alchemist.
+
+Source: [Site Reliability Engineering - How Google Runs Production System](https://landing.google.com/sre/books/)
+
+---
+
 > To reach such goals, we need to become very serious about reliability, which is a vastly different mindset from “we must get something—anything—to market first.”
 
 By: Bjarne Stroustrup
