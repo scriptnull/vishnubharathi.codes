@@ -20,3 +20,6 @@ jobs:
         popd
         ./package.sh
         git status
+        git add docs/
+        git add package-lock.json
+        git commit -m "Generated site :sparkles:"
