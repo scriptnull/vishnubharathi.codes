@@ -7,6 +7,12 @@ Some words that inspire and help me.
 
 ---
 
+> They are people who stand on the cusp between one way of looking at the world and another one: like Newton, who is sometimes called not the world’s first physicist, but the world’s last alchemist.
+
+Source: [Site Reliability Engineering - How Google Runs Production Systems](https://landing.google.com/sre/books/)
+
+---
+
 > Hope is not a strategy.
 
 Source: [Site Reliability Engineering - How Google Runs Production Systems](https://landing.google.com/sre/books/)
