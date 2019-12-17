@@ -14,3 +14,4 @@ jobs:
         ls
         git status
         git remote -v 
+        ./package.sh
