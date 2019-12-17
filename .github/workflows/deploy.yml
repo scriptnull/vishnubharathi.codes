@@ -14,5 +14,8 @@ jobs:
         ls
         git status
         git remote -v 
-        npm install hexo --save
+        npm install
+        pushd themes
+        git clone https://github.com/scriptnull/hexo-theme-cactus.git cactus
+        popd
         ./package.sh
