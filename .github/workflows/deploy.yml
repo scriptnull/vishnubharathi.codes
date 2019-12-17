@@ -12,4 +12,5 @@ jobs:
     - name: script
       run: |
         ls
-        whoami
+        git status
+        git remote -v 
