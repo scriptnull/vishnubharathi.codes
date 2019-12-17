@@ -7,6 +7,12 @@ Some words that inspire and help me.
 
 ---
 
+> Hope is not a strategy.
+
+Source: [Site Reliability Engineering - How Google Runs Production Systems](https://landing.google.com/sre/books/)
+
+---
+
 > The art of war teaches us to rely not on the likelihood of the enemy's not coming, but on our own readiness to receive him; not on the chance of his not attacking, but rather on the fact that we have made our position unassailable.
 
 By: Introduction
