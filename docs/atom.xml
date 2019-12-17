@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2019-12-17T09:31:41.150Z</updated>
+  <updated>2019-12-17T10:35:38.854Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>kvm</title>
+    <link href="https://vishnubharathi.codes/blog/kvm/"/>
+    <id>https://vishnubharathi.codes/blog/kvm/</id>
+    <published>2019-06-21T18:30:00.000Z</published>
+    <updated>2019-12-17T10:35:38.854Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Yesterday, I somehow arrived at &lt;a href=&quot;https://firecracker-microvm.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Firecracker&lt;/a&gt; and ended up reading its design documents. Firecracker is a project by AWS which helps in creation + management of MicroVMS. This is of great interest to me, as I always wondered how AWS Lambda works and I have been interested in secure execution of code on servers for &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="https://vishnubharathi.codes/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Flow anywhere</title>
@@ -584,42 +608,6 @@
     
     
       <category term="mathematics" scheme="https://vishnubharathi.codes/tags/mathematics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>A Slice of Redis - Part 2</title>
-    <link href="https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-2/"/>
-    <id>https://vishnubharathi.codes/blog/A-Slice-of-Redis-Part-2/</id>
-    <published>2018-10-12T14:49:00.000Z</published>
-    <updated>2019-12-17T09:08:18.245Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Perfect timing. The cake just arrived. Actually, cakes :P (Read &lt;a href=&quot;/blog/A-Slice-of-Redis-Part-1/&quot;&gt;Part 1&lt;/a&gt; where I actually ordered them.)&lt;/p&gt;
-&lt;p&gt;I cloned the &lt;a href=&quot;https://github.com/antirez/redis&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;redis&lt;/a&gt; repository and built it using the instructions in the &lt;a href=&quot;http://readme.md&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;README.md&lt;/a&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# very simple
-
-$ git clone git@github.com:antirez/redis.git
-
-$ cd redis
-
-$ make
-
-$ make
-        
-      
-    
-    </summary>
-    
-    
-      <category term="redis" scheme="https://vishnubharathi.codes/tags/redis/"/>
-    
-      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
     
   </entry>
   
