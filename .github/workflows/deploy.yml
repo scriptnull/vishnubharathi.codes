@@ -10,7 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Hexo Generate
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
       run: |
+        echo "github context"
+        echo "$GITHUB_CONTEXT"
         ls
         git status
         git remote -v 
@@ -25,7 +29,7 @@ jobs:
         git config --global user.email "vishnubharathi04@gmail.com"
         git config --global user.name "Vishnu Bharathi"
         git commit -m "Generated site :sparkles:"
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GH_PAGES_TOKEN }}
+#     - name: Push changes
+#       uses: ad-m/github-push-action@master
+#       with:
+#         github_token: ${{ secrets.GH_PAGES_TOKEN }}
