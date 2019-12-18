@@ -38,7 +38,7 @@ The hard lesson here is making a simple backup before being adventurous. Example
 
 > Always backup and ask the question if there is a backup somewhere
 
-## A Recovery
+## A recovery
 The recovery process involved converting html to markdown back again and stitching it together with the old backup I had. The site was down for a while (shame on me, can't keep a static site running 100% of time). It was running an older version for sometime and then now it is fully updated.
 
 The entire recovery process took me working on the terminal for a quite while with html->markdown converters and copy-paste.
@@ -113,4 +113,8 @@ The next level of automation would be to deploy a staging environment for each p
 Oh and Github gives this cool badge,
 
 ![](https://github.com/scriptnull/vishnubharathi.codes/workflows/Deployment/badge.svg)
+
+~~~
+
+NOTE: This is the first blog post that is auto deployed - https://github.com/scriptnull/vishnubharathi.codes/pull/9
 
