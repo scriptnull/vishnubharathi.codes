@@ -49,6 +49,10 @@ The root cause of the problem is that master branch was not force-push protected
 
 I changed in Github Settings to restrict force push for master.
 
+And I took a backup just in case :D
+
+![image](https://user-images.githubusercontent.com/4211715/71083387-ebae7700-21b8-11ea-8538-1ec0a17321ef.png)
+
 ## A flow
 I like hexo. [You can learn why here](https://vishnubharathi.codes/blog/hugo-to-hexo/#Reasons). But in order to get instant flow of editing and publishing, I want an environment like Wordpress or Medium. Sophistication is setting high expectations all the time. So I want to keep using Hexo, but publish Medium or Wordpress style.
 
