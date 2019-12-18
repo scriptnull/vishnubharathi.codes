@@ -98,9 +98,15 @@ jobs:
         github_token: ${{ secrets.GH_PAGES_TOKEN }}
 ```
 
+(messy script, but gets the job done. So going to leave it like that)
+
 It is bunch of git commands + this github action `ad-m/github-push-action@master` which helps us to push changes with Github token, rather than a private key.
 
 ![image](https://user-images.githubusercontent.com/4211715/71079967-3f699200-21b2-11ea-90ce-59b7a1efaa17.png)
+
+If you wonder how the job looks like for deployment,
+
+![image](https://user-images.githubusercontent.com/4211715/71081464-3fb75c80-21b5-11ea-92fe-f72dfc5a118b.png)
 
 ## Auto
 
@@ -114,7 +120,7 @@ Oh and Github gives this cool badge,
 
 ![](https://github.com/scriptnull/vishnubharathi.codes/workflows/Deployment/badge.svg)
 
-~~~
+~ ~ ~
 
-NOTE: This is the first blog post that is auto deployed - https://github.com/scriptnull/vishnubharathi.codes/pull/9
+NOTE: This is the first blog post that was auto deployed - https://github.com/scriptnull/vishnubharathi.codes/pull/9
 
