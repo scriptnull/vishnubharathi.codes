@@ -1,4 +1,4 @@
-# [vishnubharathi.codes](https://vishnubharathi.codes) ![](https://github.com/scriptnull/vishnubharathi.codes/workflows/Deployment/badge.svg)
+# [vishnubharathi.codes](https://vishnubharathi.codes) [![](https://github.com/scriptnull/vishnubharathi.codes/workflows/Deployment/badge.svg)](https://vishnubharathi.codes)
 
 Some things about me.
 
