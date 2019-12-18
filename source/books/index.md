@@ -7,6 +7,12 @@ This is my bookshelf. I love to collect and read books. They help me a lot.
 
 ---
 
+<h3>Who Moved My Cheese?</h3>
+<span>- Dr Spencer Johnson</span>
+<span><a href="https://www.amazon.in/Who-Moved-My-Cheese-Amazing/dp/0091816971">Book Link</a></span>
+
+---
+
 <h3>The Rust Programming Language</h3>
 <span>- Steve Klabnik and Carol Nichols with contributions from the Rust Community</span> 
 <span><a href="https://nostarch.com/rust">Book Link</a></span>
