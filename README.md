@@ -1,16 +1,21 @@
-Source code for [vishnubharathi.codes](https://vishnubharathi.codes)
+# [vishnubharathi.codes](https://vishnubharathi.codes) ![](https://github.com/scriptnull/vishnubharathi.codes/workflows/Deploy%20Site/badge.svg)
 
-#### Prerequisite
-Install node.js and npm - https://nodejs.org/en/
+Some things about me.
 
-Install hexo-cli
+_Framework_: This site is based on [hexo blogging framework](https://hexo.io/).
 
-```bash
-npm install -g hexo-cli
-```
+_Theme_: This site uses a [forked version](https://github.com/scriptnull/hexo-theme-cactus) of the [cactus theme for hexo](https://github.com/probberechts/hexo-theme-cactus).
 
-#### Development
-Make changes and run `hexo server`. Visit http://localhost:4000
+## Development:
 
-#### Release
-To publish all the work, run `./package.sh`. git commit and push to this repository.
+This website is deployed via Github Actions. To start an automated deployment for your commit, start the commit message with `[deploy]`.
+
+Following instructions apply for local development environment (which could be used for things like patching the theme etc.)
+
+- Install node.js and npm - https://nodejs.org/en/
+- Install hexo-cli
+    ```bash
+    npm install -g hexo-cli
+    ```
+- Make changes and run `hexo server`. Visit http://localhost:4000
+- To publish all the work, run `./package.sh`. git commit and push to this repository.
