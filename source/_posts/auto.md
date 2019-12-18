@@ -8,7 +8,7 @@ Hi, it's me, blogging after a long time.
 
 I was lazy to setup the local environment for updating anything on this site for all these days.
 
-![lazy](https://media.giphy.com/media/f4SoNPj4otohG/giphy.gif)
+![lazy](https://media.giphy.com/media/f4SoNPj4otohG/200w_d.gif)
 
 Well, those days are gone. I just finished setting up a simple auto-deployment for this website.
 
