@@ -13,6 +13,12 @@ This is my bookshelf. I love to collect and read books. They help me a lot.
 
 ---
 
+<h3>The Art of War</h3>
+<span>- Sun Tzu</span>
+<span><a href="https://en.wikipedia.org/wiki/The_Art_of_War">Book Link</a></span>
+
+---
+
 <h3>The Rust Programming Language</h3>
 <span>- Steve Klabnik and Carol Nichols with contributions from the Rust Community</span> 
 <span><a href="https://nostarch.com/rust">Book Link</a></span>
