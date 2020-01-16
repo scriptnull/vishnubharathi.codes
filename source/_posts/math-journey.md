@@ -40,7 +40,7 @@ Who would have thought solving all the problems in the portions is possible befo
 
 Ok first, why is he doing this first? It seems like solving the same types of problem again and again will make you more familiar with it which will eventually lead to speed. This speed inturn gives you the space to solve more problems within the exam time.
 
-Practice, practice and practice. It also helps remembering the understanding in mind for much more period of time. He was basically memoizing (one of his favorite computer terminologies :P ) math techniques using practice.
+Practice, practice and practice. It also helps remember the understanding in mind for much more period of time. He was basically memoizing (one of his favorite computer terminologies :P ) math techniques using practice.
 
 I tried to follow his trails. I sat down calmly. I still could kind of hear the fan sound and feel the heat in that room; also that heavy lunch we packed and came. I started solving one by one. Catching up to the speed :) It was a great feeling. You just focus without any worries or distractions like watching cartoons without any advertisment. I personally remmeber that I have never done something like that before. I think that is called productivity.
 
