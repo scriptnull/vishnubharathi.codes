@@ -10,7 +10,7 @@ where is math needed? lol, everywhere! (not really, but I just seem to be over c
 
 How about me sharing some of my math journey? haha.
 
-# Family math
+## Family math
 
 It was early morning 4 or 5 am on the day of math exam in class 6 or 7. I didn't prepare for the exam the day before as I was sick. Barely had 4 or so hours to board the school van. If you board it, then you are already in the game; you get to listen all the new movie songs and laugh out loudly with friends!
 
@@ -28,7 +28,7 @@ That time was a game changer. Math was fun. It is not like other subjects. It is
 
 Practicing math is just taking the effort to understand how some problem is solved from that point. I started spending the least amount of time in preparation for math exams compared to others :) Math seemed easy. I didn't score much, but I always passed.
 
-# Friendship math
+## Friendship math
 
 Another turning point in my math journey is in class 10. I used to study together with my best friend then (and now), [Venkat](https://twitter.com/argon_laser). By the way, to set context here I will need to say that he is very good at math, scores high and class topper.
 
@@ -46,7 +46,7 @@ I tried to follow his trails. I sat down calmly. I still could kind of hear the 
 
 Life lesson from here - Looking at what successful people do and trying to mimic; it will get you somewhere! :D
 
-# College math
+## College math
 
 College is the place where I learnt math could be applied. I signed up to help one of my math professors with her research work. I was learning java at that time. One day she contacted me saying that she needs some "programming" help for doing mathematics relating to her paper work.
 
@@ -62,7 +62,7 @@ It was a moment of rejoice for me! I understood the power of computer programmin
 
 I felt programming to be practical math.
 
-# Computer math
+## Computer math
 
 Life has gotten more about computers after that. Not really having/taking the chance to get back at math. The only available literature from me on mathematics could be found [here](/tags/mathematics/). It just has one post at the time of writing this post. It is about logarithms and its usuage in computer science.
 
