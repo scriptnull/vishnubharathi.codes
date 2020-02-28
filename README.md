@@ -18,5 +18,5 @@ Following instructions apply for local development environment (which could be u
     npm install -g hexo-cli
     ```
 - clone the [theme](https://github.com/scriptnull/hexo-theme-cactus) to themes/cactus folder
-- Make changes and run `hexo server`. Visit http://localhost:4000
+- Make changes and run `hexo generate && hexo server`. Visit http://localhost:4000
 - To publish all the work, run `./package.sh`. git commit and push to this repository.
