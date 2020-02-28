@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://user-images.githubusercontent.com/4211715/71079967-3f699200-21b2-11ea-90ce-59b7a1efaa17.png">
 <meta property="og:image" content="https://user-images.githubusercontent.com/4211715/71081464-3fb75c80-21b5-11ea-92fe-f72dfc5a118b.png">
 <meta property="og:image" content="https://github.com/scriptnull/vishnubharathi.codes/workflows/Deployment/badge.svg">
-<meta property="og:updated_time" content="2020-01-16T20:07:17.074Z">
+<meta property="og:updated_time" content="2020-02-28T22:23:58.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Auto">
 <meta name="twitter:description" content="Hi, it’s me, blogging after a long time. I was lazy to setup the local environment for updating anything on this site for all these days.  Well, those days are gone. I just finished setting up a simpl">
@@ -101,6 +101,7 @@
   <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/auto/&name=Auto&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/auto/&t=Auto"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -123,12 +124,12 @@
 
 
     <div class="meta">
-      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <span itemprop="name">Vishnu Bharathi</span>
-      </span>
       
     <div class="postdate">
+      
         <time datetime="2019-12-17T18:30:00.000Z" itemprop="datePublished">2019-12-18</time>
+        
+      
     </div>
 
 
@@ -223,6 +224,7 @@
   <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/auto/&name=Auto&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/auto/&t=Auto"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -257,15 +259,36 @@
 </footer>
 
     </div>
-</body>
-</html>
-<!-- styles -->
+    <!-- styles -->
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
-<!-- jquery -->
+    <!-- jquery -->
 <script src="/lib/jquery/jquery.min.js"></script>
 <script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
 <script src="/js/main.js"></script>
 <!-- search -->
 
@@ -285,3 +308,5 @@
 <!-- Disqus Comments -->
 
 
+</body>
+</html>

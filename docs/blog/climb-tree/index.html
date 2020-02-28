@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Vishnu Bharathi">
 <meta property="og:description" content="I have been feeling a bit nervous lately that I am not skilled enough to solve tree (data-structure) problems. Not only on the interview prep side but also while writing application code. It is true!">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-16T20:07:17.074Z">
+<meta property="og:updated_time" content="2020-02-28T22:23:58.560Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="So you want to climb that tree?">
 <meta name="twitter:description" content="I have been feeling a bit nervous lately that I am not skilled enough to solve tree (data-structure) problems. Not only on the interview prep side but also while writing application code. It is true!">
@@ -95,6 +95,7 @@
   <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/climb-tree/&title=So you want to climb that tree?"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/climb-tree/&title=So you want to climb that tree?"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/climb-tree/&name=So you want to climb that tree?&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/climb-tree/&t=So you want to climb that tree?"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -117,12 +118,12 @@
 
 
     <div class="meta">
-      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <span itemprop="name">Vishnu Bharathi</span>
-      </span>
       
     <div class="postdate">
+      
         <time datetime="2019-02-10T09:49:16.000Z" itemprop="datePublished">2019-02-10</time>
+        
+      
     </div>
 
 
@@ -230,6 +231,7 @@
   <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/climb-tree/&title=So you want to climb that tree?"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/climb-tree/&title=So you want to climb that tree?"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/climb-tree/&name=So you want to climb that tree?&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/climb-tree/&t=So you want to climb that tree?"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -264,15 +266,36 @@
 </footer>
 
     </div>
-</body>
-</html>
-<!-- styles -->
+    <!-- styles -->
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
-<!-- jquery -->
+    <!-- jquery -->
 <script src="/lib/jquery/jquery.min.js"></script>
 <script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
 <script src="/js/main.js"></script>
 <!-- search -->
 
@@ -292,3 +315,5 @@
 <!-- Disqus Comments -->
 
 
+</body>
+</html>

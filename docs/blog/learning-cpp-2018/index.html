@@ -15,7 +15,7 @@
 <meta property="og:description" content="My quest for relearning C++ started in November 2018. I have been reading + blogging + writing C++ from then. I would like to reflect on my journey a bit. Before I begin, I would like to state that th">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://media.giphy.com/media/xUA7aSnSnSnrWWSTWE/giphy.gif">
-<meta property="og:updated_time" content="2020-01-16T20:07:17.074Z">
+<meta property="og:updated_time" content="2020-02-28T22:23:58.564Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="I learnt C++ in 2018 and have no regrets">
 <meta name="twitter:description" content="My quest for relearning C++ started in November 2018. I have been reading + blogging + writing C++ from then. I would like to reflect on my journey a bit. Before I begin, I would like to state that th">
@@ -97,6 +97,7 @@
   <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/learning-cpp-2018/&title=I learnt C++ in 2018 and have no regrets"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/learning-cpp-2018/&title=I learnt C++ in 2018 and have no regrets"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/learning-cpp-2018/&name=I learnt C++ in 2018 and have no regrets&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/learning-cpp-2018/&t=I learnt C++ in 2018 and have no regrets"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -119,12 +120,12 @@
 
 
     <div class="meta">
-      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-        <span itemprop="name">Vishnu Bharathi</span>
-      </span>
       
     <div class="postdate">
+      
         <time datetime="2019-01-03T20:38:00.000Z" itemprop="datePublished">2019-01-04</time>
+        
+      
     </div>
 
 
@@ -229,6 +230,7 @@
   <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/learning-cpp-2018/&title=I learnt C++ in 2018 and have no regrets"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/learning-cpp-2018/&title=I learnt C++ in 2018 and have no regrets"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/learning-cpp-2018/&name=I learnt C++ in 2018 and have no regrets&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/learning-cpp-2018/&t=I learnt C++ in 2018 and have no regrets"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -263,15 +265,36 @@
 </footer>
 
     </div>
-</body>
-</html>
-<!-- styles -->
+    <!-- styles -->
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 <link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
-<!-- jquery -->
+    <!-- jquery -->
 <script src="/lib/jquery/jquery.min.js"></script>
 <script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
 <script src="/js/main.js"></script>
 <!-- search -->
 
@@ -291,3 +314,5 @@
 <!-- Disqus Comments -->
 
 
+</body>
+</html>
