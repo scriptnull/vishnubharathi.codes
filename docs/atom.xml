@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2020-02-28T23:26:12.881Z</updated>
+  <updated>2020-04-07T23:11:47.563Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Early</title>
+    <link href="https://vishnubharathi.codes/blog/early/"/>
+    <id>https://vishnubharathi.codes/blog/early/</id>
+    <published>2020-04-07T23:10:00.000Z</published>
+    <updated>2020-04-07T23:11:47.563Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Before starting, I hope that you are staying safe &lt;a href=&quot;https://en.wikipedia.org/wiki/Coronavirus_disease_2019&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;at times like this&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now let me start.&lt;/p&gt;
+&lt;p&gt;Yesterday I read a nice article on the web. I found it so nice that I sent it to my sister over an email. (I try to maintain a high quality RSS over mail type of thing going on with my sister in email, haha)&lt;/p&gt;
+&lt;p&gt;Here is the link to the article - &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="career advice" scheme="https://vishnubharathi.codes/tags/career-advice/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Math journey</title>
     <link href="https://vishnubharathi.codes/blog/math-journey/"/>
     <id>https://vishnubharathi.codes/blog/math-journey/</id>
     <published>2020-01-16T18:13:00.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -48,7 +75,7 @@
     <link href="https://vishnubharathi.codes/blog/auto/"/>
     <id>https://vishnubharathi.codes/blog/auto/</id>
     <published>2019-12-17T18:30:00.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -77,7 +104,7 @@
     <link href="https://vishnubharathi.codes/blog/kvm/"/>
     <id>https://vishnubharathi.codes/blog/kvm/</id>
     <published>2019-06-21T18:30:00.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -101,7 +128,7 @@
     <link href="https://vishnubharathi.codes/blog/flow-anywhere/"/>
     <id>https://vishnubharathi.codes/blog/flow-anywhere/</id>
     <published>2019-06-08T18:30:00.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -125,7 +152,7 @@
     <link href="https://vishnubharathi.codes/blog/please-mind-the-gap/"/>
     <id>https://vishnubharathi.codes/blog/please-mind-the-gap/</id>
     <published>2019-05-08T10:40:03.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -150,7 +177,7 @@
     <link href="https://vishnubharathi.codes/blog/climb-tree/"/>
     <id>https://vishnubharathi.codes/blog/climb-tree/</id>
     <published>2019-02-10T09:49:16.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -179,7 +206,7 @@
     <link href="https://vishnubharathi.codes/blog/binary-tree-traversal/"/>
     <id>https://vishnubharathi.codes/blog/binary-tree-traversal/</id>
     <published>2019-01-17T23:49:39.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -204,7 +231,7 @@
     <link href="https://vishnubharathi.codes/blog/learning-cpp-2018/"/>
     <id>https://vishnubharathi.codes/blog/learning-cpp-2018/</id>
     <published>2019-01-03T20:38:00.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -232,7 +259,7 @@
     <link href="https://vishnubharathi.codes/blog/rlwrap/"/>
     <id>https://vishnubharathi.codes/blog/rlwrap/</id>
     <published>2018-12-12T06:01:36.000Z</published>
-    <updated>2020-02-28T23:26:12.885Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -259,7 +286,7 @@
     <link href="https://vishnubharathi.codes/blog/pure-h/"/>
     <id>https://vishnubharathi.codes/blog/pure-h/</id>
     <published>2018-11-30T15:39:03.000Z</published>
-    <updated>2020-02-28T23:26:12.885Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -286,7 +313,7 @@
     <link href="https://vishnubharathi.codes/blog/my-cpp-setup/"/>
     <id>https://vishnubharathi.codes/blog/my-cpp-setup/</id>
     <published>2018-11-24T14:37:16.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -315,7 +342,7 @@
     <link href="https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/</id>
     <published>2018-11-19T00:48:37.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -344,7 +371,7 @@
     <link href="https://vishnubharathi.codes/blog/sets-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/sets-in-cpp/</id>
     <published>2018-11-18T06:57:24.000Z</published>
-    <updated>2020-02-28T23:26:12.885Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -383,7 +410,7 @@
     <link href="https://vishnubharathi.codes/blog/maps-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/maps-in-cpp/</id>
     <published>2018-11-17T01:00:30.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -420,7 +447,7 @@
     <link href="https://vishnubharathi.codes/blog/zig-first-try/"/>
     <id>https://vishnubharathi.codes/blog/zig-first-try/</id>
     <published>2018-11-16T13:28:56.000Z</published>
-    <updated>2020-02-28T23:26:12.885Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -449,7 +476,7 @@
     <link href="https://vishnubharathi.codes/blog/linked-lists-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/linked-lists-in-cpp/</id>
     <published>2018-11-15T05:19:44.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -482,7 +509,7 @@
     <link href="https://vishnubharathi.codes/blog/deque-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/deque-in-cpp/</id>
     <published>2018-11-15T04:43:56.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -517,7 +544,7 @@
     <link href="https://vishnubharathi.codes/blog/priority-queues-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/priority-queues-in-cpp/</id>
     <published>2018-11-13T17:42:42.000Z</published>
-    <updated>2020-02-28T23:26:12.885Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -549,7 +576,7 @@
     <link href="https://vishnubharathi.codes/blog/stacks-and-queues-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/stacks-and-queues-in-cpp/</id>
     <published>2018-11-12T17:54:08.000Z</published>
-    <updated>2020-02-28T23:26:12.885Z</updated>
+    <updated>2020-04-07T23:11:47.563Z</updated>
     
     <summary type="html">
     
@@ -571,34 +598,6 @@
 &lt;li&gt;pop_back&lt;/li&gt;
 &lt;/ul&gt;
 &lt;figure class=&quot;highlight
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Dynamic arrays in C++</title>
-    <link href="https://vishnubharathi.codes/blog/dynamic-arrays-in-cpp/"/>
-    <id>https://vishnubharathi.codes/blog/dynamic-arrays-in-cpp/</id>
-    <published>2018-11-12T13:30:34.000Z</published>
-    <updated>2020-02-28T23:26:12.881Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Initialize&quot;&gt;&lt;a href=&quot;#Initialize&quot; class=&quot;headerlink&quot; title=&quot;Initialize&quot;&gt;&lt;/a&gt;Initialize&lt;/h2&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;// Include&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;span
         
       
     
