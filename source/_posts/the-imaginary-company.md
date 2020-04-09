@@ -4,7 +4,7 @@ date: 2020-04-10 00:26:00
 tags: ["startups", "work"]
 ---
 
-Recently I had been wondering about companies of all sizes. How do they run? What makes them keep running? Scale-up? Scale down? Bootstrap? Raise seed? Raise more? Save more? Spend more? Build? Buy? Spend less? Hire fast? Hiring freeze? Loss? Break-even? Profit? Move fast? Make art?
+Recently I had been wondering about companies of all sizes. How do they run? What makes them keep running? Scale-up? Scale down? Bootstrap? Raise seed? Raise more? Save more? Spend more? Spend less? Build? Buy? Hire fast? Hiring freeze? Loss? Break-even? Profit? Move fast? Make art?
 
 It feels interesting to think about them these days.
 
