@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2020-04-09T19:54:48.796Z</updated>
+  <updated>2020-04-09T21:47:25.380Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Health</title>
+    <link href="https://vishnubharathi.codes/blog/health/"/>
+    <id>https://vishnubharathi.codes/blog/health/</id>
+    <published>2020-04-09T20:10:00.000Z</published>
+    <updated>2020-04-09T21:47:25.380Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;em&gt;This blog post is the first part of a blog series named &lt;a href=&quot;/blog/the-imaginary-company&quot;&gt;The Imaginary Company&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Among all the things you have and you think is powerful, the supreme is your health. That determines your very existence.&lt;/p&gt;
+&lt;p&gt;Quoting a tweet that I remember from some time back.&lt;/p&gt;
+&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Falling sick reminds you that the largest competitive advantage you can have is being healthy.&lt;/p&gt;&amp;mdash; Sahil
+        
+      
+    
+    </summary>
+    
+    
+      <category term="startups" scheme="https://vishnubharathi.codes/tags/startups/"/>
+    
+      <category term="work" scheme="https://vishnubharathi.codes/tags/work/"/>
+    
+  </entry>
+  
+  <entry>
     <title>The Imaginary Company</title>
     <link href="https://vishnubharathi.codes/blog/the-imaginary-company/"/>
     <id>https://vishnubharathi.codes/blog/the-imaginary-company/</id>
     <published>2020-04-09T18:56:00.000Z</published>
-    <updated>2020-04-09T19:54:48.796Z</updated>
+    <updated>2020-04-09T21:47:25.384Z</updated>
     
     <summary type="html">
     
@@ -50,7 +79,7 @@
     <link href="https://vishnubharathi.codes/blog/early/"/>
     <id>https://vishnubharathi.codes/blog/early/</id>
     <published>2020-04-07T23:10:00.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -77,7 +106,7 @@
     <link href="https://vishnubharathi.codes/blog/math-journey/"/>
     <id>https://vishnubharathi.codes/blog/math-journey/</id>
     <published>2020-01-16T18:13:00.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -104,7 +133,7 @@
     <link href="https://vishnubharathi.codes/blog/auto/"/>
     <id>https://vishnubharathi.codes/blog/auto/</id>
     <published>2019-12-17T18:30:00.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -133,7 +162,7 @@
     <link href="https://vishnubharathi.codes/blog/kvm/"/>
     <id>https://vishnubharathi.codes/blog/kvm/</id>
     <published>2019-06-21T18:30:00.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -157,7 +186,7 @@
     <link href="https://vishnubharathi.codes/blog/flow-anywhere/"/>
     <id>https://vishnubharathi.codes/blog/flow-anywhere/</id>
     <published>2019-06-08T18:30:00.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -181,7 +210,7 @@
     <link href="https://vishnubharathi.codes/blog/please-mind-the-gap/"/>
     <id>https://vishnubharathi.codes/blog/please-mind-the-gap/</id>
     <published>2019-05-08T10:40:03.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -206,7 +235,7 @@
     <link href="https://vishnubharathi.codes/blog/climb-tree/"/>
     <id>https://vishnubharathi.codes/blog/climb-tree/</id>
     <published>2019-02-10T09:49:16.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -235,7 +264,7 @@
     <link href="https://vishnubharathi.codes/blog/binary-tree-traversal/"/>
     <id>https://vishnubharathi.codes/blog/binary-tree-traversal/</id>
     <published>2019-01-17T23:49:39.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -260,7 +289,7 @@
     <link href="https://vishnubharathi.codes/blog/learning-cpp-2018/"/>
     <id>https://vishnubharathi.codes/blog/learning-cpp-2018/</id>
     <published>2019-01-03T20:38:00.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -288,7 +317,7 @@
     <link href="https://vishnubharathi.codes/blog/rlwrap/"/>
     <id>https://vishnubharathi.codes/blog/rlwrap/</id>
     <published>2018-12-12T06:01:36.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.384Z</updated>
     
     <summary type="html">
     
@@ -315,7 +344,7 @@
     <link href="https://vishnubharathi.codes/blog/pure-h/"/>
     <id>https://vishnubharathi.codes/blog/pure-h/</id>
     <published>2018-11-30T15:39:03.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -342,7 +371,7 @@
     <link href="https://vishnubharathi.codes/blog/my-cpp-setup/"/>
     <id>https://vishnubharathi.codes/blog/my-cpp-setup/</id>
     <published>2018-11-24T14:37:16.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -371,7 +400,7 @@
     <link href="https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/</id>
     <published>2018-11-19T00:48:37.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -400,7 +429,7 @@
     <link href="https://vishnubharathi.codes/blog/sets-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/sets-in-cpp/</id>
     <published>2018-11-18T06:57:24.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.384Z</updated>
     
     <summary type="html">
     
@@ -439,7 +468,7 @@
     <link href="https://vishnubharathi.codes/blog/maps-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/maps-in-cpp/</id>
     <published>2018-11-17T01:00:30.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -476,7 +505,7 @@
     <link href="https://vishnubharathi.codes/blog/zig-first-try/"/>
     <id>https://vishnubharathi.codes/blog/zig-first-try/</id>
     <published>2018-11-16T13:28:56.000Z</published>
-    <updated>2020-04-09T19:54:48.796Z</updated>
+    <updated>2020-04-09T21:47:25.384Z</updated>
     
     <summary type="html">
     
@@ -505,7 +534,7 @@
     <link href="https://vishnubharathi.codes/blog/linked-lists-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/linked-lists-in-cpp/</id>
     <published>2018-11-15T05:19:44.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -538,7 +567,7 @@
     <link href="https://vishnubharathi.codes/blog/deque-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/deque-in-cpp/</id>
     <published>2018-11-15T04:43:56.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
+    <updated>2020-04-09T21:47:25.380Z</updated>
     
     <summary type="html">
     
@@ -554,38 +583,6 @@
 &lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Both vectors and deques provide a very similar interface and can be used for similar purposes, but internally both work in quite different ways: While vectors use a single array that needs to be occasionally reallocated for growth, the elements of a deque can be scattered in
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Priority queues in C++</title>
-    <link href="https://vishnubharathi.codes/blog/priority-queues-in-cpp/"/>
-    <id>https://vishnubharathi.codes/blog/priority-queues-in-cpp/</id>
-    <published>2018-11-13T17:42:42.000Z</published>
-    <updated>2020-04-09T19:54:48.792Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Prelude&quot;&gt;&lt;a href=&quot;#Prelude&quot; class=&quot;headerlink&quot; title=&quot;Prelude&quot;&gt;&lt;/a&gt;Prelude&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Priority queues are implemented as container adaptors&lt;/li&gt;
-&lt;li&gt;default underlying container is vector&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;container classes that could be used as underlying container are deque, vector and any class that implements the following methods along with &lt;a href=&quot;http://www.cplusplus.com/reference/iterator/RandomAccessIterator/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;random access
         
       
     
