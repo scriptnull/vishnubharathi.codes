@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2020-04-07T23:11:47.563Z</updated>
+  <updated>2020-04-09T19:46:04.732Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>The Imaginary Company</title>
+    <link href="https://vishnubharathi.codes/blog/the-imaginary-company/"/>
+    <id>https://vishnubharathi.codes/blog/the-imaginary-company/</id>
+    <published>2020-04-09T18:56:00.000Z</published>
+    <updated>2020-04-09T19:46:04.732Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Recently I had been wondering about companies of all sizes. How do they run? What makes them keep running? Scale-up? Scale down? Bootstrap? Raise seed? Raise more? Save more? Spend more? Build? Buy? Spend less? Hire fast? Hiring freeze? Loss? Break-even? Profit? Move fast? Make art?&lt;/p&gt;
+&lt;p&gt;It feels interesting to think about them these days.&lt;/p&gt;
+&lt;p&gt;All the things here are very opinionated; proceed with caution!&lt;/p&gt;
+&lt;p&gt;So I am planning to write a series of blog posts on “The Imaginary
+        
+      
+    
+    </summary>
+    
+    
+      <category term="startups" scheme="https://vishnubharathi.codes/tags/startups/"/>
+    
+      <category term="work" scheme="https://vishnubharathi.codes/tags/work/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Early</title>
     <link href="https://vishnubharathi.codes/blog/early/"/>
     <id>https://vishnubharathi.codes/blog/early/</id>
     <published>2020-04-07T23:10:00.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -48,7 +77,7 @@
     <link href="https://vishnubharathi.codes/blog/math-journey/"/>
     <id>https://vishnubharathi.codes/blog/math-journey/</id>
     <published>2020-01-16T18:13:00.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -75,7 +104,7 @@
     <link href="https://vishnubharathi.codes/blog/auto/"/>
     <id>https://vishnubharathi.codes/blog/auto/</id>
     <published>2019-12-17T18:30:00.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -104,7 +133,7 @@
     <link href="https://vishnubharathi.codes/blog/kvm/"/>
     <id>https://vishnubharathi.codes/blog/kvm/</id>
     <published>2019-06-21T18:30:00.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -128,7 +157,7 @@
     <link href="https://vishnubharathi.codes/blog/flow-anywhere/"/>
     <id>https://vishnubharathi.codes/blog/flow-anywhere/</id>
     <published>2019-06-08T18:30:00.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -152,7 +181,7 @@
     <link href="https://vishnubharathi.codes/blog/please-mind-the-gap/"/>
     <id>https://vishnubharathi.codes/blog/please-mind-the-gap/</id>
     <published>2019-05-08T10:40:03.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.732Z</updated>
     
     <summary type="html">
     
@@ -177,7 +206,7 @@
     <link href="https://vishnubharathi.codes/blog/climb-tree/"/>
     <id>https://vishnubharathi.codes/blog/climb-tree/</id>
     <published>2019-02-10T09:49:16.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -206,7 +235,7 @@
     <link href="https://vishnubharathi.codes/blog/binary-tree-traversal/"/>
     <id>https://vishnubharathi.codes/blog/binary-tree-traversal/</id>
     <published>2019-01-17T23:49:39.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -231,7 +260,7 @@
     <link href="https://vishnubharathi.codes/blog/learning-cpp-2018/"/>
     <id>https://vishnubharathi.codes/blog/learning-cpp-2018/</id>
     <published>2019-01-03T20:38:00.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -259,7 +288,7 @@
     <link href="https://vishnubharathi.codes/blog/rlwrap/"/>
     <id>https://vishnubharathi.codes/blog/rlwrap/</id>
     <published>2018-12-12T06:01:36.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.732Z</updated>
     
     <summary type="html">
     
@@ -286,7 +315,7 @@
     <link href="https://vishnubharathi.codes/blog/pure-h/"/>
     <id>https://vishnubharathi.codes/blog/pure-h/</id>
     <published>2018-11-30T15:39:03.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.732Z</updated>
     
     <summary type="html">
     
@@ -313,7 +342,7 @@
     <link href="https://vishnubharathi.codes/blog/my-cpp-setup/"/>
     <id>https://vishnubharathi.codes/blog/my-cpp-setup/</id>
     <published>2018-11-24T14:37:16.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -342,7 +371,7 @@
     <link href="https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/</id>
     <published>2018-11-19T00:48:37.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -371,7 +400,7 @@
     <link href="https://vishnubharathi.codes/blog/sets-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/sets-in-cpp/</id>
     <published>2018-11-18T06:57:24.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.732Z</updated>
     
     <summary type="html">
     
@@ -410,7 +439,7 @@
     <link href="https://vishnubharathi.codes/blog/maps-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/maps-in-cpp/</id>
     <published>2018-11-17T01:00:30.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -447,7 +476,7 @@
     <link href="https://vishnubharathi.codes/blog/zig-first-try/"/>
     <id>https://vishnubharathi.codes/blog/zig-first-try/</id>
     <published>2018-11-16T13:28:56.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.732Z</updated>
     
     <summary type="html">
     
@@ -476,7 +505,7 @@
     <link href="https://vishnubharathi.codes/blog/linked-lists-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/linked-lists-in-cpp/</id>
     <published>2018-11-15T05:19:44.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -509,7 +538,7 @@
     <link href="https://vishnubharathi.codes/blog/deque-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/deque-in-cpp/</id>
     <published>2018-11-15T04:43:56.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.728Z</updated>
     
     <summary type="html">
     
@@ -544,7 +573,7 @@
     <link href="https://vishnubharathi.codes/blog/priority-queues-in-cpp/"/>
     <id>https://vishnubharathi.codes/blog/priority-queues-in-cpp/</id>
     <published>2018-11-13T17:42:42.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
+    <updated>2020-04-09T19:46:04.732Z</updated>
     
     <summary type="html">
     
@@ -557,47 +586,6 @@
 &lt;li&gt;default underlying container is vector&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;container classes that could be used as underlying container are deque, vector and any class that implements the following methods along with &lt;a href=&quot;http://www.cplusplus.com/reference/iterator/RandomAccessIterator/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;random access
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Stacks and queues in C++</title>
-    <link href="https://vishnubharathi.codes/blog/stacks-and-queues-in-cpp/"/>
-    <id>https://vishnubharathi.codes/blog/stacks-and-queues-in-cpp/</id>
-    <published>2018-11-12T17:54:08.000Z</published>
-    <updated>2020-04-07T23:11:47.563Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Stack&quot;&gt;&lt;a href=&quot;#Stack&quot; class=&quot;headerlink&quot; title=&quot;Stack&quot;&gt;&lt;/a&gt;Stack&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;LIFO - Last In First Out&lt;/li&gt;
-&lt;li&gt;stacks are implemented as containers adaptors&lt;/li&gt;
-&lt;li&gt;default underlying container is deque&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;container classes that could be used as underlying container are vector, deque, list and any class that implements the following methods&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;empty&lt;/li&gt;
-&lt;li&gt;size&lt;/li&gt;
-&lt;li&gt;back&lt;/li&gt;
-&lt;li&gt;push_back&lt;/li&gt;
-&lt;li&gt;pop_back&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight
         
       
     
