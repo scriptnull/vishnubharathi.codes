@@ -8,7 +8,7 @@ Recently I had been wondering about companies of all sizes. How do they run? Wha
 
 It feels interesting to think about them these days.
 
-All the things here are very opinionated; proceed with caution!
+Before moving further: All the things here (and elsewhere in this blog) are very opinionated; take it easy.
 
 So I am planning to write a series of blog posts on "The Imaginary Company", a company that I would work on starting up or perhaps the one that I wish to work for!
 
