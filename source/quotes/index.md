@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> It was normal to believe that you could chase big dreams at unsurmountable odds and succeed.
+
+By: Mitchell Hashimoto
+
+Source: [The New Normal](http://mitchellh.com/the-new-normal)
+
+---
+
 >  Unfortunately, systems can be suffering more than one performance problem, and so the first one you find may be a problem but not the problem.
 
 By: Brendan Gregg
