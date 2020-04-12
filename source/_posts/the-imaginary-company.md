@@ -23,3 +23,4 @@ If there is going to be a handbook (spoiler: there will be), these posts are goi
 The index goes here!
 
 1. [Health](/blog/health)
+2. [Learn](/blog/learn)
