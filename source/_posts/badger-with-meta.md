@@ -167,7 +167,11 @@ def compose(value, marshal, compress)
 
   value.prepend([flags].pack('C'))
 end
+```
 
+When we want to read the data write by `compose` from another client library (perhaps in another programming language), the end-user is forced to write down a equivalent function of readthis's `decompose` method.
+
+```ruby
 def decompose(string)
   flags = string[0].unpack('C').first
 
