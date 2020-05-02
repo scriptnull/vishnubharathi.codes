@@ -73,8 +73,51 @@ err := db.Update(func(txn *badger.Txn) error {
 })
 ```
 
+## Data
+
+Ok, listen more closely from now on. This is the place where things start to make more sense.
+
+Generally when you are trying to store a key-value pair in a key-value store, you might find yourself storing the data in some kind of format.
+
+When the data to be stored is simple, we could just store the string in raw format (like plain text value)
+
+When you want to store some complicated information (like an object or struct), that is where things start to get interesting.
+
+Consider a ruby hash that gets stored in a key-value store, which we might need to retrieve back from the store at point of time in future or perhaps in an another ruby process running on some other machine.
+
+This demands us in storing the information in a serialized format. If you are puzzling what it is, I highly recommend you to read through [this](https://en.wikipedia.org/wiki/Serialization).
+
+To simply put it, you will need convert the object into an array of bytes (a string representation) which could be easily sent over the network or written to a file. At the same time, the format should allow reading the serialized value and construct back the object.
+
+```ruby
+user_data = { id: 1, name: 'Naruto', village: 'leaf'}
+
+serialized_val = Marshal.dump(user_data)
+
+# serialized_val will holds the string representation of user_data
+# "\x04\b{\b:\aidi\x06:\tnameI\"\vNaruto\x06:\x06ET:\fvillageI\"\tleaf\x06;\aT"
+
+cache.write('user_1', serialized_val)
+```
+
+At the reader's end, you will need to do
+
+```ruby
+serialized_val = cache.get('user_1')
+
+user_data = Marshal.load(serialized_val)
+```
+
+Now, what will we do when we want to read the information in our ruby object in some other service written in some other programming language (Example: a node.js process trying to process our user data)
+
+The solution is to serialize the data using a format that both the services could understand. (In our example, we could convert user data into a JSON string and store it in DB. This will enable us to read the data from any programming language that could deserialize JSON)
+
+So, it is kind of obvious that when storing a key-value data, the general use-case is to store it in some kind of format and _we need a way to store in which format a data is stored_. This will help the readers of the value to use appropriate deserializer to retrieve the information.
+
+This is where we could take advantage of `WithMeta` - to store which serialization format is being used while writing the key-value data.
+
 ## Readthis
-That's quite some golang to digest. While you are at it, we will take a break to discuss about a popular gem called [readthis](https://github.com/sorentwo/readthis); some ruby code - coming up next!
+We will discuss about a popular gem called [readthis](https://github.com/sorentwo/readthis) to resume our API admiration process :D
 
 > Readthis is a Redis backed cache client for Ruby.
 
@@ -92,10 +135,54 @@ cache = Readthis::Cache.new
 cache.write('answer', 42)
 ```
 
-Ok, listen more closely from now on. This is the place where things start to make more sense.
+> Readthis uses Ruby's Marshal module for serializing all values by default.
 
-Generally when you are trying to store a key-value pair in a key-value store, you might find yourself storing the data in some kind of format.
+Apart from that, it supports using the following serializers
 
-When the data to be stored is simple, we could just store the string in raw format (like plain text value for a key)
+- Marshal (Native ruby object serialization format)
+- JSON (Javascript Object Notation)
+- Passthrough (Raw string)
 
-When you want to store some complicated information (like an object or struct), that is where things start to get interesting.
+If we try to dig in the [source code](https://github.com/sorentwo/readthis/blob/541c4227b92f6bcd76c647ff95e7783f896259c3/lib/readthis/serializers.rb#L42-L46) for this, we can notice
+
+```ruby
+BASE_SERIALIZERS = {
+  Marshal => 0x1,
+  Passthrough => 0x2,
+  JSON => 0x3
+}.freeze
+```
+This is where API comparison part kicks in, uff finally :D
+
+When readthis tries to write information in one of the above formats, it tries to store both the data and the serialization format together in the key-value pair.
+
+But the key-value store here (redis) does not have an API to store metadata information separately. So, readthis works around by prefixing the values with a byte which represents the serialization format. Further this byte also contains information regarding if the data is compressed or not.
+
+So, the data stored is not actually the serialized data. Insteaad it is `metadata byte` + `serialized data`. ([link to source](https://github.com/sorentwo/readthis/blob/541c4227b92f6bcd76c647ff95e7783f896259c3/lib/readthis/entity.rb#L104-L128))
+
+```ruby
+def compose(value, marshal, compress)
+  flags = serializers.assoc(marshal)
+  flags |= COMPRESSED_FLAG if compress
+
+  value.prepend([flags].pack('C'))
+end
+
+def decompose(string)
+  flags = string[0].unpack('C').first
+
+  if flags < 16
+    marshal = serializers.rassoc(flags)
+    compress = (flags & COMPRESSED_FLAG) != 0
+
+    [marshal, compress, string[1..-1]]
+  else
+    [@options[:marshal], @options[:compress], string]
+  end
+end
+```
+    
+
+The key-store not exposing an API to set metadata results in magical workarounds by a client library, which other client library written in other programming language have no idea of. So, the user of the library have to bear with the pain of going through the internals of how a library constructs the value part of a key-value data to access it from some other place.
+
+All because of the reason that, the key-store API doesn't expose a simple method to store the metadata.
