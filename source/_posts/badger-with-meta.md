@@ -108,7 +108,7 @@ serialized_val = cache.get('user_1')
 user_data = Marshal.load(serialized_val)
 ```
 
-Now, what will we do when we want to read the information in our ruby object in some other service written in some other programming language (Example: a node.js process trying to process our user data)
+Now, what will we do when we want to read the information in our ruby object in some other service written in some other programming language. (Example: a node.js process trying to process our user data)
 
 The solution is to serialize the data using a format that both the services could understand. (In our example, we could convert user data into a JSON string and store it in DB. This will enable us to read the data from any programming language that could deserialize JSON)
 
