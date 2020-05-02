@@ -1,5 +1,5 @@
 ---
-title: Badger - WithMeta with love
+title: Badger - WithMeta with cheers!
 date: 2020-05-03 01:00:00
 tags: ["programming", "API"]
 ---
@@ -181,8 +181,17 @@ def decompose(string)
   end
 end
 ```
-    
 
 The key-store not exposing an API to set metadata results in magical workarounds by a client library, which other client library written in other programming language have no idea of. So, the user of the library have to bear with the pain of going through the internals of how a library constructs the value part of a key-value data to access it from some other place.
 
 All because of the reason that, the key-store API doesn't expose a simple method to store the metadata.
+
+## Cheers!
+
+When I first saw the `WithMeta` method, I was completely surprised. I hoped people (especially starters) might wonder about it. So, I sat down to write this post down. Hopefully, my thoughts would have answered the questions that I asked at the start of this blog post.
+
+Never thought that having an extra byte in a struct would make me this much cheerful :D 
+
+`WithMeta` API seem to be hand-crafted carefully. The designer(s) of `WithMeta` either faced the pain that I mentioned above or just have a nice sense of API design or extensive experience with key-value stores. Anyways, whatever be the case, all I am trying to tell is:
+
+"They got it right!"
