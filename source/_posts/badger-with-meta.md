@@ -192,7 +192,7 @@ All because of the reason that the key-store API doesn't expose a simple method 
 
 ## Cheers!
 
-When I first saw the `WithMeta` method, I was completely surprised. I hoped people (especially starters) might wonder about it. So, I sat down to write this post down. Hopefully, my thoughts would have answered the questions that I asked at the start of this blog post.
+When I first saw the `WithMeta` method, I was completely surprised. I hoped people (especially starters) might wonder about it. So, I sat down to write this post. Hopefully, my thoughts would have answered the questions that I asked at the start of this blog post.
 
 Never thought that having an extra byte in a struct would make me this much cheerful :D 
 
