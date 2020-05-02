@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="Vishnu Bharathi">
 <meta property="og:description" content="This weekend I ended up reading about an open-source project called Badger. To give a short idea about what Badger is, here is an excerpt from the project page.  BadgerDB is an embeddable, persistent">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-05-02T22:49:35.011Z">
+<meta property="og:updated_time" content="2020-05-02T22:58:25.830Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Badger - WithMeta with cheers!">
 <meta name="twitter:description" content="This weekend I ended up reading about an open-source project called Badger. To give a short idea about what Badger is, here is an excerpt from the project page.  BadgerDB is an embeddable, persistent">
@@ -144,7 +144,7 @@
 <blockquote>
 <p>BadgerDB is an embeddable, persistent and fast key-value (KV) database written in pure Go. It is the underlying database for Dgraph, a fast, distributed graph database. It’s meant to be a performant alternative to non-Go-based key-value stores like RocksDB.</p>
 </blockquote>
-<p>I have been dealing with caches and key-value stores mostly at work for a while and I am generally interested in the API design, internals, client implementations, etc. of key-value stores. So I just started by reading the <a href="https://github.com/dgraph-io/badger/blob/master/README.md" target="_blank" rel="noopener">README</a> to understand what it has to provide.</p>
+<p>I have been dealing with caches and key-value stores mostly at work for a while and I am generally interested in the API design, internals, client libraries, etc. of key-value stores. So I just started by reading the <a href="https://github.com/dgraph-io/badger/blob/master/README.md" target="_blank" rel="noopener">README</a> to understand what Badger has to provide.</p>
 <h2 id="Discovery"><a href="#Discovery" class="headerlink" title="Discovery"></a>Discovery</h2><p>When reading on how to use the Badger API methods to perform basic key-value operations, I happen to discover something in the docs which completely put a smile on my face!</p>
 <p>It’s the presence of this little method called <code>WithMeta</code></p>
 <p>All you can do with it is store some metadata (of atmost a size of <code>byte</code>) alongside a key-value data.</p>
