@@ -10,7 +10,7 @@ To give a short idea about what Badger is, here is an excerpt from the project p
 
 > BadgerDB is an embeddable, persistent and fast key-value (KV) database written in pure Go. It is the underlying database for Dgraph, a fast, distributed graph database. It's meant to be a performant alternative to non-Go-based key-value stores like RocksDB.
 
-I have been dealing with caches and key-value stores mostly at work for a while and I am generally interested in the API design, internals, client implementations, etc. of key-value stores. So I just started by reading the [README](https://github.com/dgraph-io/badger/blob/master/README.md) to understand what it has to provide.
+I have been dealing with caches and key-value stores mostly at work for a while and I am generally interested in the API design, internals, client libraries, etc. of key-value stores. So I just started by reading the [README](https://github.com/dgraph-io/badger/blob/master/README.md) to understand what Badger has to provide.
 
 ## Discovery
 
