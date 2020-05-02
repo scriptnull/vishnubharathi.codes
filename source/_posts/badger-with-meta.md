@@ -4,13 +4,13 @@ date: 2020-05-03 01:00:00
 tags: ["programming", "API"]
 ---
 
-This weekend I ended up reading about an open source project called [Badger](https://github.com/dgraph-io/badger).
+This weekend I ended up reading about an open-source project called [Badger](https://github.com/dgraph-io/badger).
 
 To give a short idea about what Badger is, here is an excerpt from the project page.
 
 > BadgerDB is an embeddable, persistent and fast key-value (KV) database written in pure Go. It is the underlying database for Dgraph, a fast, distributed graph database. It's meant to be a performant alternative to non-Go-based key-value stores like RocksDB.
 
-I have been dealing with caches and key-value stores mostly at work for a while amd I am generally interested in the API design, internals, client implementations, etc. of key-value stores. So I just started by reading the [README](https://github.com/dgraph-io/badger/blob/master/README.md) to understand what it has to provide.
+I have been dealing with caches and key-value stores mostly at work for a while and I am generally interested in the API design, internals, client implementations, etc. of key-value stores. So I just started by reading the [README](https://github.com/dgraph-io/badger/blob/master/README.md) to understand what it has to provide.
 
 ## Discovery
 
@@ -41,7 +41,7 @@ err := db.Update(func(txn *badger.Txn) error {
 })
 ```
 
-Immediately after that, the discussion about the Entry API starts. The same effect as above code could be achieved by the below snippet.
+Immediately after that, the discussion about the Entry API starts. The same effect as the above code could be achieved by the below snippet.
 
 ```go
 err := db.Update(func(txn *badger.Txn) error {
@@ -63,7 +63,7 @@ err := db.Update(func(txn *badger.Txn) error {
 })
 ```
 
-Just like the fact that you could use `WithTTL` to add a TTL to an entry, we could use `WithMeta` to store a metadata information about the key-value data.
+Just like the fact that you could use `WithTTL` to add a TTL to entry, we could use `WithMeta` to store metadata information about the key-value data.
 
 ```go
 err := db.Update(func(txn *badger.Txn) error {
@@ -77,17 +77,17 @@ err := db.Update(func(txn *badger.Txn) error {
 
 Ok, listen more closely from now on. This is the place where things start to make more sense.
 
-Generally when you are trying to store a key-value pair in a key-value store, you might find yourself storing the data in some kind of format.
+Generally, when you are trying to store a key-value pair in a key-value store, you might find yourself storing the data in some kind of format.
 
 When the data to be stored is simple, we could just store the string in raw format (like plain text value)
 
 When you want to store some complicated information (like an object or struct), that is where things start to get interesting.
 
-Consider a ruby hash that gets stored in a key-value store, which we might need to retrieve back from the store at point of time in future or perhaps in an another ruby process running on some other machine.
+Consider a ruby hash that gets stored in a key-value store, which we might need to retrieve back from the store at the point of time in the future or perhaps in another ruby process running on some other machine.
 
 This demands us in storing the information in a serialized format. If you are puzzling what it is, I highly recommend you to read through [this](https://en.wikipedia.org/wiki/Serialization).
 
-To simply put it, you will need convert the object into an array of bytes (a string representation) which could be easily sent over the network or written to a file. At the same time, the format should allow reading the serialized value and construct back the object.
+To simply put it, you will need to convert the object into an array of bytes (a string representation) which could be easily sent over the network or written to a file. At the same time, the format should allow reading the serialized value and construct back the object.
 
 ```ruby
 user_data = { id: 1, name: 'Naruto', village: 'leaf'}
@@ -112,7 +112,7 @@ Now, what will we do when we want to read the information in our ruby object in 
 
 The solution is to serialize the data using a format that both the services could understand. (In our example, we could convert user data into a JSON string and store it in DB. This will enable us to read the data from any programming language that could deserialize JSON)
 
-So, it is kind of obvious that when storing a key-value data, the general use-case is to store it in some kind of format and _we need a way to store in which format a data is stored_. This will help the readers of the value to use appropriate deserializer to retrieve the information.
+So, it is kind of obvious that when storing key-value data, the general use-case is to store it in some kind of format, and _we need a way to store in which format a data is stored_. This will help the readers of the value to use appropriate deserializer to retrieve the information.
 
 This is where we could take advantage of `WithMeta` - to store which serialization format is being used while writing the key-value data.
 
@@ -156,9 +156,9 @@ This is where API comparison part kicks in, uff finally :D
 
 When readthis tries to write information in one of the above formats, it tries to store both the data and the serialization format together in the key-value pair.
 
-But the key-value store here (redis) does not have an API to store metadata information separately. So, readthis works around by prefixing the values with a byte which represents the serialization format. Further this byte also contains information regarding if the data is compressed or not.
+But the key-value store here (Redis) does not have an API to store metadata information separately. So, readthis works around by prefixing the values with a byte which represents the serialization format. Further, this byte also contains information regarding if the data is compressed or not.
 
-So, the data stored is not actually the serialized data. Insteaad it is `metadata byte` + `serialized data`. ([link to source](https://github.com/sorentwo/readthis/blob/541c4227b92f6bcd76c647ff95e7783f896259c3/lib/readthis/entity.rb#L104-L128))
+So, the data stored is not serialized data. Instead it is `metadata byte` + `serialized data`. ([link to source](https://github.com/sorentwo/readthis/blob/541c4227b92f6bcd76c647ff95e7783f896259c3/lib/readthis/entity.rb#L104-L128))
 
 ```ruby
 def compose(value, marshal, compress)
@@ -182,9 +182,9 @@ def decompose(string)
 end
 ```
 
-The key-store not exposing an API to set metadata results in magical workarounds by a client library, which other client library written in other programming language have no idea of. So, the user of the library have to bear with the pain of going through the internals of how a library constructs the value part of a key-value data to access it from some other place.
+The key-store not exposing an API to set metadata results in magical workarounds by a client library, which other client libraries written in other programming languages have no idea of. So, the user of the library has to bear with the pain of going through the internals of how a library constructs the value part of a key-value data to access it from some other place.
 
-All because of the reason that, the key-store API doesn't expose a simple method to store the metadata.
+All because of the reason that the key-store API doesn't expose a simple method to store the metadata.
 
 ## Cheers!
 
@@ -192,6 +192,6 @@ When I first saw the `WithMeta` method, I was completely surprised. I hoped peop
 
 Never thought that having an extra byte in a struct would make me this much cheerful :D 
 
-`WithMeta` API seem to be hand-crafted carefully. The designer(s) of `WithMeta` either faced the pain that I mentioned above or just have a nice sense of API design or extensive experience with key-value stores. Anyways, whatever be the case, all I am trying to tell is:
+`WithMeta` API feels to be a result of careful design. A proof of that might be the data-type used. Why use a `byte` to store metadata instead of having some other datatype? Because the designer(s) of the API was able to sense the obvious and avoid a whole bunch of pain for the users like I mentioned earlier.
 
-"They got it right!"
+Whatever be it, they got it right!
