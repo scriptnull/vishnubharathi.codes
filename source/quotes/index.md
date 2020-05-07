@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> Those who stand on tiptoes do not stand firmly. Those who rush ahead don't get very far. Those who try to outshine others dim their own light.
+
+By: Lao Tzu
+
+Source: [The Art of Not Trying](https://www.youtube.com/watch?v=tLAZvESoVgI)
+
+---
+
 > It was normal to believe that you could chase big dreams at unsurmountable odds and succeed.
 
 By: Mitchell Hashimoto
