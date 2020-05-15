@@ -39,3 +39,25 @@ Before we go further down the line, let us try to revise on the basics of TiKV.
 Here is a beautiful architecture diagram of TiKV (from the [TiKV Architecture page](https://tikv.org/docs/3.0/concepts/architecture/))
 
 ![tikv-arch](https://tikv.org/img/basic-architecture.png)
+
+In simple terms, TiKV is a distributed key-value store. That means it can store multiple copy of a key-value pair in multiple nodes. If you scale up/down nodes, the data gets distributed (balanced) among the available nodes again.
+
+So, TiKV is architectured to run with the help of something called the placement driver. It is the component that is aware of the cluster topology of TiKV, helping in auto-sharding (the balancing stuff that I spoke about above)
+
+A TiKV node has the actual KV whereas the placement driver contains information on which TiKV node is reponsible for having a KV.
+
+So, our placement driver is the entry point of things. From what I understand, here is a guess of how these clients work.
+
+- client speaks with placement driver over GRPC and asks "which TiKV node is suitable for performing this KV API call?"
+- client gets back the address of a TiKV node from placement driver and does the actual KV operation on the TiKV node.
+
+I am just guessing, but let us see. If we take a look at the method signature in Go client, we give a list of placement driver IP addresses to the constructor of the Client. So this kind of aligns towards my guess.
+
+oh, here is some other thing we need to be aware of TiKV has two kinds of APIs currently ( A third one is in progress :) )
+- Raw API : A lower-level key-value API for interacting directly with individual key-value pairs.
+- Transactional API : A higher-level key-value API that provides ACID semantics
+
+I think that is enough architecture.
+
+
+
