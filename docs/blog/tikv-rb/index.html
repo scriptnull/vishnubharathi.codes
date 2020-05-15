@@ -16,7 +16,7 @@
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https://vishnubharathi.codes/images/tikv-clients.png">
 <meta property="og:image" content="https://tikv.org/img/basic-architecture.png">
-<meta property="og:updated_time" content="2020-05-15T19:29:54.055Z">
+<meta property="og:updated_time" content="2020-05-15T19:45:10.723Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Building a ruby client for TiKV">
 <meta name="twitter:description" content="My recent interest in key-value stores and a few hours of fresh afternoon sleep is leading me to build something on this Friday night! If you haven’t heard of TiKV,  TiKV : A distributed transactional">
@@ -160,6 +160,21 @@
 <h2 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h2><p>Before we go further down the line, let us try to revise on the basics of TiKV.</p>
 <p>Here is a beautiful architecture diagram of TiKV (from the <a href="https://tikv.org/docs/3.0/concepts/architecture/" target="_blank" rel="noopener">TiKV Architecture page</a>)</p>
 <p><img src="https://tikv.org/img/basic-architecture.png" alt="tikv-arch"></p>
+<p>In simple terms, TiKV is a distributed key-value store. That means it can store multiple copy of a key-value pair in multiple nodes. If you scale up/down nodes, the data gets distributed (balanced) among the available nodes again.</p>
+<p>So, TiKV is architectured to run with the help of something called the placement driver. It is the component that is aware of the cluster topology of TiKV, helping in auto-sharding (the balancing stuff that I spoke about above)</p>
+<p>A TiKV node has the actual KV whereas the placement driver contains information on which TiKV node is reponsible for having a KV.</p>
+<p>So, our placement driver is the entry point of things. From what I understand, here is a guess of how these clients work.</p>
+<ul>
+<li>client speaks with placement driver over GRPC and asks “which TiKV node is suitable for performing this KV API call?”</li>
+<li>client gets back the address of a TiKV node from placement driver and does the actual KV operation on the TiKV node.</li>
+</ul>
+<p>I am just guessing, but let us see. If we take a look at the method signature in Go client, we give a list of placement driver IP addresses to the constructor of the Client. So this kind of aligns towards my guess.</p>
+<p>oh, here is some other thing we need to be aware of TiKV has two kinds of APIs currently ( A third one is in progress :) )</p>
+<ul>
+<li>Raw API : A lower-level key-value API for interacting directly with individual key-value pairs.</li>
+<li>Transactional API : A higher-level key-value API that provides ACID semantics</li>
+</ul>
+<p>I think that is enough architecture.</p>
 
   </div>
 </article>
