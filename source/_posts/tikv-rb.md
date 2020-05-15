@@ -59,5 +59,10 @@ oh, here is some other thing we need to be aware of TiKV has two kinds of APIs c
 
 I think that is enough architecture.
 
+## Help
 
+After hours of trying to backtrack the code in the Go client and building the proto files present at https://github.com/pingcap/kvproto , I decided to ask for a little help!
 
+![help](https://user-images.githubusercontent.com/4211715/82099608-5b536e80-9725-11ea-9941-ba11865b5b1d.png)
+
+Lets see if someone responds!
