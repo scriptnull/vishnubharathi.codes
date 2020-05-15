@@ -23,3 +23,19 @@ The current landscape of TiKV clients look like this
 With lots of good reasons, I have decided to work on a ruby client for TiKV and probably donate the implementation to the core TiKV project (if that is welcomed)
 
 This is going to be a "blog as I do it thing"!
+
+## Setup
+
+After playing around with [various deployment methods](https://tikv.org/docs/3.0/tasks/deploy/introduction/) for TiKV, I decided to do an old-fashioned, "bring up software using binaries" style of bringing up a TiKV server for local development.
+
+In order to verify the setup, I also created a simple demo app written using the Go client, as Go seems to be the stable client for TiKV (inferring from the docs)
+
+So we got a placement driver and TiKV now. (In case of if you are wondering what a placement driver is, follow along)
+
+## Architecture
+
+Before we go further down the line, let us try to revise on the basics of TiKV.
+
+Here is a beautiful architecture diagram of TiKV (from the [TiKV Architecture page](https://tikv.org/docs/3.0/concepts/architecture/))
+
+![tikv-arch](https://tikv.org/img/basic-architecture.png)
