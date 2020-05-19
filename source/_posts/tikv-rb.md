@@ -66,3 +66,5 @@ After hours of trying to backtrack the code in the Go client and building the pr
 ![help](https://user-images.githubusercontent.com/4211715/82099608-5b536e80-9725-11ea-9941-ba11865b5b1d.png)
 
 Lets see if someone responds!
+
+Got back a response saying that I am on the right track. So will continue to get the code generation from proto files working and reverse engineering the implementation of other clients.
