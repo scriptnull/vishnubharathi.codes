@@ -132,7 +132,7 @@ theme_config:
 feed:
   type: atom
   path: atom.xml
-  limit: 20
+  limit: 5
   hub:
   content:
   content_limit: 500
