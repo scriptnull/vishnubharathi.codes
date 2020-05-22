@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2020-05-19T18:11:18.741Z</updated>
+  <updated>2020-05-22T00:29:11.906Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://vishnubharathi.codes/blog/tikv-rb/"/>
     <id>https://vishnubharathi.codes/blog/tikv-rb/</id>
     <published>2020-05-15T15:05:00.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
+    <updated>2020-05-22T00:29:11.906Z</updated>
     
     <summary type="html">
     
@@ -51,7 +51,7 @@
     <link href="https://vishnubharathi.codes/blog/badger-with-meta/"/>
     <id>https://vishnubharathi.codes/blog/badger-with-meta/</id>
     <published>2020-05-02T19:30:00.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
+    <updated>2020-05-22T00:29:11.902Z</updated>
     
     <summary type="html">
     
@@ -80,7 +80,7 @@
     <link href="https://vishnubharathi.codes/blog/learn/"/>
     <id>https://vishnubharathi.codes/blog/learn/</id>
     <published>2020-04-12T21:16:00.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
+    <updated>2020-05-22T00:29:11.906Z</updated>
     
     <summary type="html">
     
@@ -109,7 +109,7 @@
     <link href="https://vishnubharathi.codes/blog/health/"/>
     <id>https://vishnubharathi.codes/blog/health/</id>
     <published>2020-04-09T20:10:00.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
+    <updated>2020-05-22T00:29:11.906Z</updated>
     
     <summary type="html">
     
@@ -138,7 +138,7 @@
     <link href="https://vishnubharathi.codes/blog/the-imaginary-company/"/>
     <id>https://vishnubharathi.codes/blog/the-imaginary-company/</id>
     <published>2020-04-09T18:56:00.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
+    <updated>2020-05-22T00:29:11.906Z</updated>
     
     <summary type="html">
     
@@ -159,432 +159,6 @@
       <category term="startups" scheme="https://vishnubharathi.codes/tags/startups/"/>
     
       <category term="work" scheme="https://vishnubharathi.codes/tags/work/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Early</title>
-    <link href="https://vishnubharathi.codes/blog/early/"/>
-    <id>https://vishnubharathi.codes/blog/early/</id>
-    <published>2020-04-07T23:10:00.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Before starting, I hope that you are staying safe &lt;a href=&quot;https://en.wikipedia.org/wiki/Coronavirus_disease_2019&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;at times like this&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Now let me start.&lt;/p&gt;
-&lt;p&gt;Yesterday I read a nice article on the web. I found it so nice that I sent it to my sister over an email. (I try to maintain a high quality RSS over mail type of thing going on with my sister in email, haha)&lt;/p&gt;
-&lt;p&gt;Here is the link to the article - &lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="career advice" scheme="https://vishnubharathi.codes/tags/career-advice/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Math journey</title>
-    <link href="https://vishnubharathi.codes/blog/math-journey/"/>
-    <id>https://vishnubharathi.codes/blog/math-journey/</id>
-    <published>2020-01-16T18:13:00.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;If I had to take a career path other than computers in my past, it would be “math” without a doubt. Probably tried to major in it (I even had a thought to do it even after some years of working in engineering) and be a teacher or in some place where math is needed.&lt;/p&gt;
-&lt;p&gt;where is math needed? lol, everywhere! (not really, but I just seem to be over curious to take out the math in everything :D)&lt;/p&gt;
-&lt;p&gt;How about me sharing some of my math journey? haha.&lt;/p&gt;
-&lt;h2 id=&quot;Family-math&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="mathematics" scheme="https://vishnubharathi.codes/tags/mathematics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Auto</title>
-    <link href="https://vishnubharathi.codes/blog/auto/"/>
-    <id>https://vishnubharathi.codes/blog/auto/</id>
-    <published>2019-12-17T18:30:00.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Hi, it’s me, blogging after a long time.&lt;/p&gt;
-&lt;p&gt;I was lazy to setup the local environment for updating anything on this site for all these days.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://media.giphy.com/media/f4SoNPj4otohG/giphy-downsized-large.gif&quot; alt=&quot;lazy&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Well, those days are gone. I just finished setting up a simple auto-deployment for this website.&lt;/p&gt;
-&lt;p&gt;So here will be my thoughts but more faster.&lt;/p&gt;
-&lt;h2 id=&quot;A-pain&quot;&gt;&lt;a href=&quot;#A-pain&quot; class=&quot;headerlink&quot; title=&quot;A pain&quot;&gt;&lt;/a&gt;A pain&lt;/h2&gt;&lt;p&gt;The
-        
-      
-    
-    </summary>
-    
-    
-      <category term="devops" scheme="https://vishnubharathi.codes/tags/devops/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>kvm</title>
-    <link href="https://vishnubharathi.codes/blog/kvm/"/>
-    <id>https://vishnubharathi.codes/blog/kvm/</id>
-    <published>2019-06-21T18:30:00.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Yesterday, I somehow arrived at &lt;a href=&quot;https://firecracker-microvm.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Firecracker&lt;/a&gt; and ended up reading its design documents. Firecracker is a project by AWS which helps in creation + management of MicroVMS. This is of great interest to me, as I always wondered how AWS Lambda works and I have been interested in secure execution of code on servers for &lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="linux" scheme="https://vishnubharathi.codes/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flow anywhere</title>
-    <link href="https://vishnubharathi.codes/blog/flow-anywhere/"/>
-    <id>https://vishnubharathi.codes/blog/flow-anywhere/</id>
-    <published>2019-06-08T18:30:00.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Recently I started taking yoga classes. This is like the third or fourth time, I am in the same class. So this is more of a retake. In my previous attempts, the classes were continuous and at my place (Erode, Tamil Nadu, India). This time it is the place that I am currently working at (Bangalore, Karnataka, India). The classes are in tamil and the interval between the classes are lengthy (Weekly intervals). So one of the things that is difficult to maintain is dicipline to get up everyday
-        
-      
-    
-    </summary>
-    
-    
-      <category term="life" scheme="https://vishnubharathi.codes/tags/life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Please mind the gap</title>
-    <link href="https://vishnubharathi.codes/blog/please-mind-the-gap/"/>
-    <id>https://vishnubharathi.codes/blog/please-mind-the-gap/</id>
-    <published>2019-05-08T10:40:03.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;I haven’t been blogging for a while (2 to 3 months). Oh man, life got so busy during these days. I want to take time to write down something to break that fact that I am not blogging for a while. Let me share some of my life updates.&lt;/p&gt;
-&lt;h2 id=&quot;JFrog-acquires-Shippable&quot;&gt;&lt;a href=&quot;#JFrog-acquires-Shippable&quot; class=&quot;headerlink&quot; title=&quot;JFrog acquires Shippable&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="life" scheme="https://vishnubharathi.codes/tags/life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>So you want to climb that tree?</title>
-    <link href="https://vishnubharathi.codes/blog/climb-tree/"/>
-    <id>https://vishnubharathi.codes/blog/climb-tree/</id>
-    <published>2019-02-10T09:49:16.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;I have been feeling a bit nervous lately that I am not skilled enough to solve tree (data-structure) problems. Not only on the interview prep side but also while writing application code. It is true! I failed to identify a problem as a tree problem while at work once and ended up writing a monstrous function that somehow got the job done. By the time I realized it was too late to implement/reimplement it. (However, the feature works! it still does :D )&lt;/p&gt;
-&lt;p&gt;So here it goes! My effort to
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
-      <category term="algorithms" scheme="https://vishnubharathi.codes/tags/algorithms/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Binary Tree Traversals</title>
-    <link href="https://vishnubharathi.codes/blog/binary-tree-traversal/"/>
-    <id>https://vishnubharathi.codes/blog/binary-tree-traversal/</id>
-    <published>2019-01-17T23:49:39.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;The goal of this document is to present a collection of things about binary tree traversals to get the reader up to speed while solving simple tree related problems. (Be it interview prep or competitive programming or application programming; This document will try to act as a quick intro/revision)&lt;/p&gt;
-&lt;p&gt;Trees are actually a kind of graph. Hence it could be traversed/searched in two ways (most of the times, this viewpoint is not presented in textbooks because we are used to learning graphs
-        
-      
-    
-    </summary>
-    
-    
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>I learnt C++ in 2018 and have no regrets</title>
-    <link href="https://vishnubharathi.codes/blog/learning-cpp-2018/"/>
-    <id>https://vishnubharathi.codes/blog/learning-cpp-2018/</id>
-    <published>2019-01-03T20:38:00.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;My quest for relearning C++ started in November 2018. I have been reading + &lt;a href=&quot;https://vishnubharathi.codes/tags/c/&quot;&gt;blogging&lt;/a&gt; + writing C++ from then. I would like to reflect on my journey a bit.&lt;/p&gt;
-&lt;p&gt;Before I begin, I would like to state that this is not a language war blog post (although few parts of it might sound like). My intention and emphasis is on how all these beautiful languages converge and diverge to give healthy competition and chance for evolution.&lt;/p&gt;
-&lt;h2
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>rlwrap</title>
-    <link href="https://vishnubharathi.codes/blog/rlwrap/"/>
-    <id>https://vishnubharathi.codes/blog/rlwrap/</id>
-    <published>2018-12-12T06:01:36.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Two days back, I got to learn about a command line program called &lt;a href=&quot;https://github.com/hanslub42/rlwrap&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;rlwrap&lt;/a&gt; - short for readline wrapper. This is the kind of software that I would like to write without knowing it already existed in this world. I am feeling very excited about rlwrap because the productivity that it brings to the table is massive.&lt;/p&gt;
-&lt;p&gt;I originally discovered it while trying to learn Common Lisp. &lt;code&gt;sbcl&lt;/code&gt; is a common
-        
-      
-    
-    </summary>
-    
-    
-      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
-    
-      <category term="linux" scheme="https://vishnubharathi.codes/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pure.h</title>
-    <link href="https://vishnubharathi.codes/blog/pure-h/"/>
-    <id>https://vishnubharathi.codes/blog/pure-h/</id>
-    <published>2018-11-30T15:39:03.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Prelude&quot;&gt;&lt;a href=&quot;#Prelude&quot; class=&quot;headerlink&quot; title=&quot;Prelude&quot;&gt;&lt;/a&gt;Prelude&lt;/h2&gt;&lt;p&gt;When writing pure virtual functions in C++, I raise my eyebrows because the syntax for it feels weird to me.&lt;/p&gt;
-&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My C++ Setup</title>
-    <link href="https://vishnubharathi.codes/blog/my-cpp-setup/"/>
-    <id>https://vishnubharathi.codes/blog/my-cpp-setup/</id>
-    <published>2018-11-24T14:37:16.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;Prelude&quot;&gt;&lt;a href=&quot;#Prelude&quot; class=&quot;headerlink&quot; title=&quot;Prelude&quot;&gt;&lt;/a&gt;Prelude&lt;/h2&gt;&lt;p&gt;I have been trying to write some C++ for the past few days. I was just exploring the standard library and modern C++ features. It has been going good so far, as I have been using C++ just to solve some puzzle questions on some sites. Now, I want to level up the game. I would like to write and understand some real world code with C++.&lt;/p&gt;
-&lt;p&gt;There are some factors that need to be in check while writing OSS
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
-      <category term="devops" scheme="https://vishnubharathi.codes/tags/devops/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Multidimensional arrays in C++</title>
-    <link href="https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/"/>
-    <id>https://vishnubharathi.codes/blog/multi-dimensional-arrays-in-cpp/</id>
-    <published>2018-11-19T00:48:37.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Multidimensional arrays have values in rows and columns.&lt;/p&gt;
-&lt;h2 id=&quot;Built-in-arrays&quot;&gt;&lt;a href=&quot;#Built-in-arrays&quot; class=&quot;headerlink&quot; title=&quot;Built-in arrays&quot;&gt;&lt;/a&gt;Built-in arrays&lt;/h2&gt;&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Sets in C++</title>
-    <link href="https://vishnubharathi.codes/blog/sets-in-cpp/"/>
-    <id>https://vishnubharathi.codes/blog/sets-in-cpp/</id>
-    <published>2018-11-18T06:57:24.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Sets are containers that store unique elements. There are four kinds of sets in C++&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;set&lt;/li&gt;
-&lt;li&gt;multiset&lt;/li&gt;
-&lt;li&gt;unordered_set&lt;/li&gt;
-&lt;li&gt;unordered_multiset&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;set&quot;&gt;&lt;a href=&quot;#set&quot; class=&quot;headerlink&quot; title=&quot;set&quot;&gt;&lt;/a&gt;set&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Internally, keys are sorted following a strict weak ordering criteria - default is &lt;code&gt;less&amp;lt;Key&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Implemented using binary search trees, so access takes O(log n)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;figure class=&quot;highlight
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Maps in C++</title>
-    <link href="https://vishnubharathi.codes/blog/maps-in-cpp/"/>
-    <id>https://vishnubharathi.codes/blog/maps-in-cpp/</id>
-    <published>2018-11-17T01:00:30.000Z</published>
-    <updated>2020-05-19T18:11:18.741Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Maps are associate containers. They associate a key and a value as pair and store them. There are four kinds of maps in C++&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;map&lt;/li&gt;
-&lt;li&gt;multimap&lt;/li&gt;
-&lt;li&gt;unordered_map&lt;/li&gt;
-&lt;li&gt;unordered_multimap&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&quot;map&quot;&gt;&lt;a href=&quot;#map&quot; class=&quot;headerlink&quot; title=&quot;map&quot;&gt;&lt;/a&gt;map&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Internally, keys are sorted following a strict weak ordering criteria - default is &lt;code&gt;less&amp;lt;Key&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Implemented using binary search trees, so access takes O(log
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-      <category term="data structures" scheme="https://vishnubharathi.codes/tags/data-structures/"/>
-    
-      <category term="c++" scheme="https://vishnubharathi.codes/tags/c/"/>
     
   </entry>
   
