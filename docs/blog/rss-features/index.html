@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="After all these years, I just started using an RSS reader. I recently read through this article “If I could bring one thing back to the internet it would be blogs”. I think the blogs are still out the">
+<meta name="keywords" content="software,reading">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Some RSS feed reader features">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/rss-features/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="After all these years, I just started using an RSS reader. I recently read through this article “If I could bring one thing back to the internet it would be blogs”. I think the blogs are still out the">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://vishnubharathi.codes/images/winds-rss.png">
+<meta property="og:updated_time" content="2020-05-22T03:01:56.633Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Some RSS feed reader features">
+<meta name="twitter:description" content="After all these years, I just started using an RSS reader. I recently read through this article “If I could bring one thing back to the internet it would be blogs”. I think the blogs are still out the">
+<meta name="twitter:image" content="https://vishnubharathi.codes/images/winds-rss.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Some RSS feed reader features</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/tikv-rb/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/rss-features/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/rss-features/&text=Some RSS feed reader features"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/rss-features/&title=Some RSS feed reader features"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/rss-features/&is_video=false&description=Some RSS feed reader features"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Some RSS feed reader features&body=Check out this article: https://vishnubharathi.codes/blog/rss-features/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/rss-features/&title=Some RSS feed reader features"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/rss-features/&title=Some RSS feed reader features"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/rss-features/&title=Some RSS feed reader features"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/rss-features/&title=Some RSS feed reader features"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/rss-features/&name=Some RSS feed reader features&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/rss-features/&t=Some RSS feed reader features"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#No-sign-ups"><span class="toc-number">1.</span> <span class="toc-text">No sign ups</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Import-and-Export"><span class="toc-number">2.</span> <span class="toc-text">Import and Export</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Categories"><span class="toc-number">3.</span> <span class="toc-text">Categories</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-tree"><span class="toc-number">3.1.</span> <span class="toc-text">A tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-deep-tree"><span class="toc-number">3.2.</span> <span class="toc-text">A deep tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Graphs"><span class="toc-number">3.3.</span> <span class="toc-text">Graphs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-would-I-choose"><span class="toc-number">3.4.</span> <span class="toc-text">What would I choose</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unread-and-Favorites"><span class="toc-number">3.5.</span> <span class="toc-text">Unread and Favorites</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-forgotten-world"><span class="toc-number">3.6.</span> <span class="toc-text">The forgotten world</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Themes"><span class="toc-number">3.7.</span> <span class="toc-text">Themes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Master-Feed"><span class="toc-number">3.8.</span> <span class="toc-text">Master Feed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enough"><span class="toc-number">3.9.</span> <span class="toc-text">Enough</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Some RSS feed reader features
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2020-05-22T01:18:00.000Z" itemprop="datePublished">2020-05-22</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/reading/">reading</a>, <a class="tag-link" href="/tags/software/">software</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>After all these years, I just started using an RSS reader. I recently read through this article <a href="http://tttthis.com/blog/if-i-could-bring-one-thing-back-to-the-internet-it-would-be-blogs" target="_blank" rel="noopener">“If I could bring one thing back to the internet it would be blogs”</a>.</p>
+<p>I think the blogs are still out there, but I just got too much attached to places like <a href="https://news.ycombinator.com/" target="_blank" rel="noopener">HN</a> on the internet. They have become that new RSS readers of these times.</p>
+<p>I used to catch up on a handful of blogs/websites just by keeping a bookmark of those link in my browser and visiting them once in a while during those nights at my home after college. I didn’t know a thing called RSS existing then. haha.</p>
+<p>I have tried a few RSS feed apps before. But I kind of stop using them at some point.</p>
+<p>I remember RSS readers used as example apps built for new app platforms. When Windows 8 from Microsoft came out, I think there used to be an RSS reader example app that was given to developers to get idea about Windows store apps. With the emergence of new RSS reader apps and with lots of people staying on good old RSS readers (I guess), writing a new RSS feed reader app is always welcome. You can do it as a programming exercise or release a new reader app that have the features you favour.</p>
+<p>What I am going to do here is to just put up some features and ideas for an RSS reader app, that I would use/build.</p>
+<h2 id="No-sign-ups"><a href="#No-sign-ups" class="headerlink" title="No sign ups"></a>No sign ups</h2><p>With the emergence of OAuth, people seem to like to bake in third-pary auth to everything they build. Forget OAuth, I just disovered an RSS reader app that asks you to fill out a form for creating an account, without which you can’t use it any further.</p>
+<p><img src="/images/winds-rss.png" alt="winds-rss"></p>
+<p>Each app is unique its own way. I understand the decision taken by the creators of those and choose to use an app that I like.</p>
+<p>I am guessing that these apps with sign-ups are easier for syncing across devices etc.</p>
+<p>May be not all sign-ups are bad.</p>
+<p>So, may be an optional sign-up after the user starts using the app is ok. But even without the sign-up part, RSS reader still make it useful.</p>
+<h2 id="Import-and-Export"><a href="#Import-and-Export" class="headerlink" title="Import and Export"></a>Import and Export</h2><p>The core input to an RSS reader is just a list of links.</p>
+<p>With these links in hand, it should be easy to take them and put them in a new reader. Hence avoiding any vendor lock-in.</p>
+<p>If I ever build an RSS reader, this would be my number one feature, right after the prototype.</p>
+<p>I have been taught that we need to maintain good relationship with everyone, especially at the time of parting ways.</p>
+<p>When you on-board to a new reader app, if the import feature didn’t work properly you would simply not use the app. But when you use an app that doesn’t allow you to export the list of links to feed it to a new app, then it is real pain.</p>
+<p>After I started setting up my new RSS reader today, I noticed that <a href="https://ravenreader.app/" target="_blank" rel="noopener">it</a> has the button to export, but it ain’t working. :/</p>
+<p>Also, I found that <a href="https://en.wikipedia.org/wiki/OPML" target="_blank" rel="noopener">OPML</a> is the data format for exporting/importing RSS feeds. So when building this feature, keep a check to not reinvent the wheels.</p>
+<h2 id="Categories"><a href="#Categories" class="headerlink" title="Categories"></a>Categories</h2><h3 id="A-tree"><a href="#A-tree" class="headerlink" title="A tree"></a>A tree</h3><p>A fairly simple RSS reader categorization technique is just to say, each of the RSS feed link we provide belongs to one category. So that you get folders of containing a list of blogs.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── Companies</span><br><span class="line">│   ├── company-blog-1</span><br><span class="line">│   └── company-blog-2</span><br><span class="line">├── People</span><br><span class="line">│   ├── person-blog-1</span><br><span class="line">│   └── person-blog-2</span><br><span class="line">└── News</span><br><span class="line">    ├── news-blog-1</span><br><span class="line">    └── news-blog-2</span><br></pre></td></tr></table></figure>
+<h3 id="A-deep-tree"><a href="#A-deep-tree" class="headerlink" title="A deep tree"></a>A deep tree</h3><p>When you introduce sub-categories, you get a tree which has more depth.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">└── Software</span><br><span class="line">    ├── Companies</span><br><span class="line">    │   ├── company-blog-1</span><br><span class="line">    │   └── company-blog-2</span><br><span class="line">    └── People</span><br><span class="line">        ├── person-blog-1</span><br><span class="line">        └── person-blog-2</span><br></pre></td></tr></table></figure>
+<p>Here the categories are <code>Software</code>, <code>Software-&gt;Companies</code>, <code>Software-&gt;People</code>.</p>
+<h3 id="Graphs"><a href="#Graphs" class="headerlink" title="Graphs"></a>Graphs</h3><p>What if we model categories as a graph.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── Companies</span><br><span class="line">│   └── company-blog-1</span><br><span class="line">├── People</span><br><span class="line">│   └── person-blog-1</span><br><span class="line">└── Software</span><br><span class="line">    ├── company-blog-1</span><br><span class="line">    └── person-blog-1</span><br></pre></td></tr></table></figure>
+<p>This allows in a type of cateforization where a blog post could belong to more than one category.</p>
+<h3 id="What-would-I-choose"><a href="#What-would-I-choose" class="headerlink" title="What would I choose"></a>What would I choose</h3><p>I think I would go with a Graph. It will serve simple as well as complex use cases.</p>
+<h3 id="Unread-and-Favorites"><a href="#Unread-and-Favorites" class="headerlink" title="Unread and Favorites"></a>Unread and Favorites</h3><p>RSS readers provide often provide a way to list all the unread articles and favorite articles.</p>
+<p>Choosing a graph type of categorization naturally lead me to think of these features as just another categories in the reader.</p>
+<p>When importing or adding a new RSS feed link to the app, all the articles that get added will be tagged with “unread” category. This should happen at times when a new article is available after syncing an RSS feed.</p>
+<p>As far as favorites, users could just tag a post with “Favorite” and be done with it. The favorites section of my current feed reader doesn’t allow categorizing posts inside the favorite category. This problem is also solved by having a graph.</p>
+<h3 id="The-forgotten-world"><a href="#The-forgotten-world" class="headerlink" title="The forgotten world"></a>The forgotten world</h3><p>I was surprised to see that some of the blogs (especially of tech companies) that I wished to follow along don’t provide an RSS feed. Are people forgetting about the RSS world? I wonder!</p>
+<p>Example: I wish to follow <a href="https://stripe.com/blog" target="_blank" rel="noopener">Stripe’s blog</a> but I couldn’t find an RSS feed link for it. It seems like we just got to visit the website for it. In this case, my old bookmarking style blog reading works! At the same time I discovered that <a href="https://support.stripe.com/questions/subscribing-to-stripe-status-updates-in-an-rss-or-atom-feed-reader" target="_blank" rel="noopener">Stripe provides their status page as RSS feed</a></p>
+<p>So, it would be good if our app can let us add links to webpages.</p>
+<h3 id="Themes"><a href="#Themes" class="headerlink" title="Themes"></a>Themes</h3><p>When writing the frontend of the app, it would be great to have the notion of themes. Like let us say there is a tree view to see categories, then we would have a css class like <code>.tree-view</code>. This would help us overriding the original properties like background color, fonts etc. </p>
+<p>It should be good to start with two themes - light and dark. Allow custom themes.</p>
+<h3 id="Master-Feed"><a href="#Master-Feed" class="headerlink" title="Master Feed"></a>Master Feed</h3><p>It makes me :sweat_smile: for mentioning at the last. Finally it would be good to have a master feed that aggregates posts from all the links that we have added.</p>
+<h3 id="Enough"><a href="#Enough" class="headerlink" title="Enough"></a>Enough</h3><p>I think these features are enough for now. ( may be forever :D ) I will add if I missed out something or discover something that I might find useful.</p>
+<p>So now, go build it and let me know. If you don’t, I might!</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#No-sign-ups"><span class="toc-number">1.</span> <span class="toc-text">No sign ups</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Import-and-Export"><span class="toc-number">2.</span> <span class="toc-text">Import and Export</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Categories"><span class="toc-number">3.</span> <span class="toc-text">Categories</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#A-tree"><span class="toc-number">3.1.</span> <span class="toc-text">A tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#A-deep-tree"><span class="toc-number">3.2.</span> <span class="toc-text">A deep tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Graphs"><span class="toc-number">3.3.</span> <span class="toc-text">Graphs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#What-would-I-choose"><span class="toc-number">3.4.</span> <span class="toc-text">What would I choose</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Unread-and-Favorites"><span class="toc-number">3.5.</span> <span class="toc-text">Unread and Favorites</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#The-forgotten-world"><span class="toc-number">3.6.</span> <span class="toc-text">The forgotten world</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Themes"><span class="toc-number">3.7.</span> <span class="toc-text">Themes</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Master-Feed"><span class="toc-number">3.8.</span> <span class="toc-text">Master Feed</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Enough"><span class="toc-number">3.9.</span> <span class="toc-text">Enough</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/rss-features/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/rss-features/&text=Some RSS feed reader features"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/rss-features/&title=Some RSS feed reader features"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/rss-features/&is_video=false&description=Some RSS feed reader features"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Some RSS feed reader features&body=Check out this article: https://vishnubharathi.codes/blog/rss-features/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/rss-features/&title=Some RSS feed reader features"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/rss-features/&title=Some RSS feed reader features"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/rss-features/&title=Some RSS feed reader features"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/rss-features/&title=Some RSS feed reader features"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/rss-features/&name=Some RSS feed reader features&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/rss-features/&t=Some RSS feed reader features"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-64308743-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

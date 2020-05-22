@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2020-05-22T00:29:11.906Z</updated>
+  <updated>2020-05-22T03:01:56.633Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Some RSS feed reader features</title>
+    <link href="https://vishnubharathi.codes/blog/rss-features/"/>
+    <id>https://vishnubharathi.codes/blog/rss-features/</id>
+    <published>2020-05-22T01:18:00.000Z</published>
+    <updated>2020-05-22T03:01:56.633Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;After all these years, I just started using an RSS reader. I recently read through this article &lt;a href=&quot;http://tttthis.com/blog/if-i-could-bring-one-thing-back-to-the-internet-it-would-be-blogs&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;“If I could bring one thing back to the internet it would be blogs”&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I think the blogs are still out there, but I just got too much attached to places like &lt;a href=&quot;https://news.ycombinator.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HN&lt;/a&gt; on the internet. They
+        
+      
+    
+    </summary>
+    
+    
+      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
+    
+      <category term="reading" scheme="https://vishnubharathi.codes/tags/reading/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Building a ruby client for TiKV</title>
     <link href="https://vishnubharathi.codes/blog/tikv-rb/"/>
     <id>https://vishnubharathi.codes/blog/tikv-rb/</id>
     <published>2020-05-15T15:05:00.000Z</published>
-    <updated>2020-05-22T00:29:11.906Z</updated>
+    <updated>2020-05-22T03:01:56.633Z</updated>
     
     <summary type="html">
     
@@ -51,7 +78,7 @@
     <link href="https://vishnubharathi.codes/blog/badger-with-meta/"/>
     <id>https://vishnubharathi.codes/blog/badger-with-meta/</id>
     <published>2020-05-02T19:30:00.000Z</published>
-    <updated>2020-05-22T00:29:11.902Z</updated>
+    <updated>2020-05-22T03:01:56.629Z</updated>
     
     <summary type="html">
     
@@ -80,7 +107,7 @@
     <link href="https://vishnubharathi.codes/blog/learn/"/>
     <id>https://vishnubharathi.codes/blog/learn/</id>
     <published>2020-04-12T21:16:00.000Z</published>
-    <updated>2020-05-22T00:29:11.906Z</updated>
+    <updated>2020-05-22T03:01:56.633Z</updated>
     
     <summary type="html">
     
@@ -109,7 +136,7 @@
     <link href="https://vishnubharathi.codes/blog/health/"/>
     <id>https://vishnubharathi.codes/blog/health/</id>
     <published>2020-04-09T20:10:00.000Z</published>
-    <updated>2020-05-22T00:29:11.906Z</updated>
+    <updated>2020-05-22T03:01:56.633Z</updated>
     
     <summary type="html">
     
@@ -121,35 +148,6 @@
 &lt;p&gt;Among all the things you have and you think is powerful, the supreme is your health. That determines your very existence.&lt;/p&gt;
 &lt;p&gt;Quoting a tweet that I remember from some time back.&lt;/p&gt;
 &lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Falling sick reminds you that the largest competitive advantage you can have is being healthy.&lt;/p&gt;&amp;mdash; Sahil
-        
-      
-    
-    </summary>
-    
-    
-      <category term="startups" scheme="https://vishnubharathi.codes/tags/startups/"/>
-    
-      <category term="work" scheme="https://vishnubharathi.codes/tags/work/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The Imaginary Company</title>
-    <link href="https://vishnubharathi.codes/blog/the-imaginary-company/"/>
-    <id>https://vishnubharathi.codes/blog/the-imaginary-company/</id>
-    <published>2020-04-09T18:56:00.000Z</published>
-    <updated>2020-05-22T00:29:11.906Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Recently I had been wondering about companies of all sizes. How do they run? What makes them keep running? Scale-up? Scale down? Bootstrap? Raise seed? Raise more? Save more? Spend more? Spend less? Build? Buy? Hire fast? Hiring freeze? Loss? Break-even? Profit? Move fast? Make art?&lt;/p&gt;
-&lt;p&gt;It feels interesting to think about them these days.&lt;/p&gt;
-&lt;p&gt;Before moving further: All the things here (and elsewhere in this blog) are very opinionated; take it easy.&lt;/p&gt;
-&lt;p&gt;So I am planning to write a
         
       
     
