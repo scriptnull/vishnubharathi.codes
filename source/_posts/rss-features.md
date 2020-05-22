@@ -98,7 +98,7 @@ This allows in a type of cateforization where a blog post could belong to more t
 I think I would go with a Graph. It will serve simple as well as complex use cases.
 
 
-### Unread and Favorites
+## Unread and Favorites
 RSS readers provide often provide a way to list all the unread articles and favorite articles.
 
 Choosing a graph type of categorization naturally lead me to think of these features as just another categories in the reader.
@@ -107,22 +107,22 @@ When importing or adding a new RSS feed link to the app, all the articles that g
 
 As far as favorites, users could just tag a post with "Favorite" and be done with it. The favorites section of my current feed reader doesn't allow categorizing posts inside the favorite category. This problem is also solved by having a graph.
 
-### The forgotten world
+## The forgotten world
 I was surprised to see that some of the blogs (especially of tech companies) that I wished to follow along don't provide an RSS feed. Are people forgetting about the RSS world? I wonder!
 
 Example: I wish to follow [Stripe's blog](https://stripe.com/blog) but I couldn't find an RSS feed link for it. It seems like we just got to visit the website for it. In this case, my old bookmarking style blog reading works! At the same time I discovered that [Stripe provides their status page as RSS feed](https://support.stripe.com/questions/subscribing-to-stripe-status-updates-in-an-rss-or-atom-feed-reader)
 
 So, it would be good if our app can let us add links to webpages.
 
-### Themes
+## Themes
 When writing the frontend of the app, it would be great to have the notion of themes. Like let us say there is a tree view to see categories, then we would have a css class like `.tree-view`. This would help us overriding the original properties like background color, fonts etc. 
 
 It should be good to start with two themes - light and dark. Allow custom themes.
 
-### Master Feed
+## Master Feed
 It makes me :sweat_smile: for mentioning at the last. Finally it would be good to have a master feed that aggregates posts from all the links that we have added.
 
-### Enough
+## Enough
 
 I think these features are enough for now. ( may be forever :D ) I will add if I missed out something or discover something that I might find useful.
 
