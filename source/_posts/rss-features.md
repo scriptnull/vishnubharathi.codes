@@ -97,6 +97,7 @@ This allows in a type of cateforization where a blog post could belong to more t
 ### What would I choose
 I think I would go with a Graph. It will serve simple as well as complex use cases.
 
+For example, you could query things like "show all unread blog posts", "show all unread blog posts in a software category", "show all unread blog posts in software and companies categories".
 
 ## Unread and Favorites
 RSS readers provide often provide a way to list all the unread articles and favorite articles.
@@ -106,6 +107,25 @@ Choosing a graph type of categorization naturally lead me to think of these feat
 When importing or adding a new RSS feed link to the app, all the articles that get added will be tagged with "unread" category. This should happen at times when a new article is available after syncing an RSS feed.
 
 As far as favorites, users could just tag a post with "Favorite" and be done with it. The favorites section of my current feed reader doesn't allow categorizing posts inside the favorite category. This problem is also solved by having a graph.
+
+## Unseen Vs Unread; notify!
+Notifications are great when done within some bounds. The right type of notification that I would expect from my RSS reader app is to "Show the count of new articles in the system tray".
+
+I am focusing on a RSS reader app that is primarily aimed at desktops, rather than mobiles. Hence the system tray terminology.
+
+Here is an example of system tray.
+
+![system-tray](https://user-images.githubusercontent.com/4211715/82918742-c1948880-9f92-11ea-84fb-9c8fa49207e1.png)
+
+If you notice closely, here is the notification for slack app. Instead of a blue dot, we would expect a number of "unseen/unread" articles on the logo of our app.
+
+![slack-notify](https://user-images.githubusercontent.com/4211715/82918939-01f40680-9f93-11ea-9569-1474fdb1348a.png)
+
+It is important to distinguish unseen vs unread to get to the way of doing notifications right!
+
+When an article occurs for the first time, it will get both "unseen" and "unread" tag on it. When the user sees the article list on the app, the "unseen" tag is removed and "seen" tag is added instead. When the article is actually read by the user, "unread" tag is removed and "read" tag is added. "unseen"->"seen" transistion is done automatically by the app when the user sees the new article in a feed list UI on the app. But "unread"->"read" transistion happens when the user of the app explicitly marks an article to be "read". This is popular among many RSS readers; there is a "Mark as read" button on every article.
+
+with that distinction made, I think it makes sense to just notify for "unseen" articles instead of "unread" articles. Ofcourse, it could be easy to have a switch in settings panel for more vigorous readers to notify the count of "unread" article instead of "unseen". But the default is "unseen".
 
 ## The forgotten world
 I was surprised to see that some of the blogs (especially of tech companies) that I wished to follow along don't provide an RSS feed. Are people forgetting about the RSS world? I wonder!
@@ -120,10 +140,12 @@ When writing the frontend of the app, it would be great to have the notion of th
 It should be good to start with two themes - light and dark. Allow custom themes.
 
 ## Master Feed
-It makes me :sweat_smile: for mentioning at the last. Finally it would be good to have a master feed that aggregates posts from all the links that we have added.
+It makes me :sweat_smile: for mentioning this at the last. Finally it would be good to have a master feed that aggregates posts from all the links that we have added.
 
 ## Enough
 
 I think these features are enough for now. ( may be forever :D ) I will add if I missed out something or discover something that I might find useful.
+
+EDIT: I started adding new feature specs to this document already.
 
 So now, go build it and let me know. If you don't, I might!
