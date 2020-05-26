@@ -17,15 +17,15 @@ I remember RSS readers used as example apps built for new app platforms. When Wi
 What I am going to do here is to just put up some features and ideas for an RSS reader app, that I would use/build.
 
 ## No sign ups
-With the emergence of OAuth, people seem to like to bake in third-pary auth to everything they build. Forget OAuth, I just disovered an RSS reader app that asks you to fill out a form for creating an account, without which you can't use it any further.
+With the emergence of OAuth, people seem to like to bake in third-pary auth to everything they build. Forget OAuth, I just disovered an RSS reader app that asks you to fill out a form for creating an account when you boot into the app, without which you can't use it any further.
 
 ![winds-rss](/images/winds-rss.png)
 
-Each app is unique its own way. I understand the decision taken by the creators of those and choose to use an app that I like.
+Each app is unique its own way. I understand the decision taken by the creators of those.
 
 I am guessing that these apps with sign-ups are easier for syncing across devices etc.
 
-May be not all sign-ups are bad.
+May be not all sign-ups are bad. But I wish not get in the way of these little humans on the internet who are trying to categorize bunch of knowledge with a "Sign up or I won't let you categorize things" attitude.
 
 So, may be an optional sign-up after the user starts using the app is ok. But even without the sign-up part, RSS reader still make it useful.
 
@@ -43,6 +43,21 @@ When you on-board to a new reader app, if the import feature didn't work properl
 After I started setting up my new RSS reader today, I noticed that [it](https://ravenreader.app/) has the button to export, but it ain't working. :/
 
 Also, I found that [OPML](https://en.wikipedia.org/wiki/OPML) is the data format for exporting/importing RSS feeds. So when building this feature, keep a check to not reinvent the wheels.
+
+## Avoid paywalls
+I understand that you might be interested in monetizing the app. It's up to you! But here are my thoughts on it.
+
+I think I would not put up a paywall for our new RSS reader. I kind of hate saying "Pay me $x then only you can access this nice little feature." to my user.
+
+Here is an example paywall in a famous RSS reader app called [feedly](https://feedly.com/). When reading an article, I selected something and noticed that a "highlight" option is present.
+
+![feedly-highlight](https://user-images.githubusercontent.com/4211715/82920631-2355f200-9f95-11ea-86b5-953111cfe64b.png)
+
+I said, "oh great, let me hightlight and take notes" and clicked on the "hightlight" button. Then I was slapped with this page on my screen asking me to pay up.
+
+![feedly-paywall](https://user-images.githubusercontent.com/4211715/82921449-02da6780-9f96-11ea-9f37-aba42c0d8623.png)
+
+I think there are other ways of monetizing, but this one feels not so right for me. I think we should be better of getting donations ("pay whatever you like for this piece of software, or don't pay at all"). Critics say this to be a not so feasible way of monetizing software. But I don't care.
 
 ## Categories
 ### A tree
