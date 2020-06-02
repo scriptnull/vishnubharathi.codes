@@ -68,3 +68,8 @@ After hours of trying to backtrack the code in the Go client and building the pr
 Lets see if someone responds!
 
 Got back a response saying that I am on the right track. So will continue to get the code generation from proto files working and reverse engineering the implementation of other clients.
+
+
+~ ~ ~
+
+I tried again and again to get the proto files to generate code, but struck with some weird C++ header file errors. Also there is not enough documentation on building clients overall. With all these obscurity, I am pausing this project to focus on something more productive.
