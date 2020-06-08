@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2020-06-02T19:56:58.941Z</updated>
+  <updated>2020-06-08T20:14:18.205Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://vishnubharathi.codes/blog/rss-features/"/>
     <id>https://vishnubharathi.codes/blog/rss-features/</id>
     <published>2020-05-22T01:18:00.000Z</published>
-    <updated>2020-06-02T19:56:58.941Z</updated>
+    <updated>2020-06-08T20:14:18.205Z</updated>
     
     <summary type="html">
     
@@ -41,6 +41,8 @@
     
       <category term="reading" scheme="https://vishnubharathi.codes/tags/reading/"/>
     
+      <category term="want-to-build" scheme="https://vishnubharathi.codes/tags/want-to-build/"/>
+    
   </entry>
   
   <entry>
@@ -48,7 +50,7 @@
     <link href="https://vishnubharathi.codes/blog/tikv-rb/"/>
     <id>https://vishnubharathi.codes/blog/tikv-rb/</id>
     <published>2020-05-15T15:05:00.000Z</published>
-    <updated>2020-06-02T19:56:58.941Z</updated>
+    <updated>2020-06-08T20:14:18.205Z</updated>
     
     <summary type="html">
     
@@ -78,7 +80,7 @@
     <link href="https://vishnubharathi.codes/blog/badger-with-meta/"/>
     <id>https://vishnubharathi.codes/blog/badger-with-meta/</id>
     <published>2020-05-02T19:30:00.000Z</published>
-    <updated>2020-06-02T19:56:58.937Z</updated>
+    <updated>2020-06-08T20:14:18.201Z</updated>
     
     <summary type="html">
     
@@ -107,7 +109,7 @@
     <link href="https://vishnubharathi.codes/blog/learn/"/>
     <id>https://vishnubharathi.codes/blog/learn/</id>
     <published>2020-04-12T21:16:00.000Z</published>
-    <updated>2020-06-02T19:56:58.937Z</updated>
+    <updated>2020-06-08T20:14:18.205Z</updated>
     
     <summary type="html">
     
@@ -136,7 +138,7 @@
     <link href="https://vishnubharathi.codes/blog/health/"/>
     <id>https://vishnubharathi.codes/blog/health/</id>
     <published>2020-04-09T20:10:00.000Z</published>
-    <updated>2020-06-02T19:56:58.937Z</updated>
+    <updated>2020-06-08T20:14:18.205Z</updated>
     
     <summary type="html">
     
