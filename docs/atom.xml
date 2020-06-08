@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2020-06-08T20:14:18.205Z</updated>
+  <updated>2020-06-08T22:05:01.423Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>On top of</title>
+    <link href="https://vishnubharathi.codes/blog/oto/"/>
+    <id>https://vishnubharathi.codes/blog/oto/</id>
+    <published>2020-06-08T20:11:00.000Z</published>
+    <updated>2020-06-08T22:05:01.423Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;This is a rough draft of thoughts on a tool that I would like to build. It is a simple command line tool named &lt;code&gt;oto&lt;/code&gt;. It stands for &lt;code&gt;on top of&lt;/code&gt;. I often hear and reaffirm to myself that&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We are built &lt;strong&gt;on top of&lt;/strong&gt; the giants.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;By saying “giants”, we mean anything that adds huge value! Try to hold your thoughts with respect to the business world where giants mean “Big corps”. Think of this word in the context of open
+        
+      
+    
+    </summary>
+    
+    
+      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
+    
+      <category term="ideas" scheme="https://vishnubharathi.codes/tags/ideas/"/>
+    
+      <category term="want-to-build" scheme="https://vishnubharathi.codes/tags/want-to-build/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Some RSS feed reader features</title>
     <link href="https://vishnubharathi.codes/blog/rss-features/"/>
     <id>https://vishnubharathi.codes/blog/rss-features/</id>
     <published>2020-05-22T01:18:00.000Z</published>
-    <updated>2020-06-08T20:14:18.205Z</updated>
+    <updated>2020-06-08T22:05:01.423Z</updated>
     
     <summary type="html">
     
@@ -39,9 +71,9 @@
     
       <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
     
-      <category term="reading" scheme="https://vishnubharathi.codes/tags/reading/"/>
-    
       <category term="want-to-build" scheme="https://vishnubharathi.codes/tags/want-to-build/"/>
+    
+      <category term="reading" scheme="https://vishnubharathi.codes/tags/reading/"/>
     
   </entry>
   
@@ -50,7 +82,7 @@
     <link href="https://vishnubharathi.codes/blog/tikv-rb/"/>
     <id>https://vishnubharathi.codes/blog/tikv-rb/</id>
     <published>2020-05-15T15:05:00.000Z</published>
-    <updated>2020-06-08T20:14:18.205Z</updated>
+    <updated>2020-06-08T22:05:01.423Z</updated>
     
     <summary type="html">
     
@@ -80,7 +112,7 @@
     <link href="https://vishnubharathi.codes/blog/badger-with-meta/"/>
     <id>https://vishnubharathi.codes/blog/badger-with-meta/</id>
     <published>2020-05-02T19:30:00.000Z</published>
-    <updated>2020-06-08T20:14:18.201Z</updated>
+    <updated>2020-06-08T22:05:01.423Z</updated>
     
     <summary type="html">
     
@@ -109,7 +141,7 @@
     <link href="https://vishnubharathi.codes/blog/learn/"/>
     <id>https://vishnubharathi.codes/blog/learn/</id>
     <published>2020-04-12T21:16:00.000Z</published>
-    <updated>2020-06-08T20:14:18.205Z</updated>
+    <updated>2020-06-08T22:05:01.423Z</updated>
     
     <summary type="html">
     
@@ -121,35 +153,6 @@
 &lt;p&gt;Learning is the core, in whatever we do. Either we succeed or fail doesn’t matter. What matters is if we did learn something in the process.&lt;/p&gt;
 &lt;p&gt;This leads to two things: better actions the next time and avoid repeating mistakes that we learned in the process.&lt;/p&gt;
 &lt;h2 id=&quot;The-parameter&quot;&gt;&lt;a href=&quot;#The-parameter&quot; class=&quot;headerlink&quot; title=&quot;The
-        
-      
-    
-    </summary>
-    
-    
-      <category term="startups" scheme="https://vishnubharathi.codes/tags/startups/"/>
-    
-      <category term="work" scheme="https://vishnubharathi.codes/tags/work/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Health</title>
-    <link href="https://vishnubharathi.codes/blog/health/"/>
-    <id>https://vishnubharathi.codes/blog/health/</id>
-    <published>2020-04-09T20:10:00.000Z</published>
-    <updated>2020-06-08T20:14:18.205Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;em&gt;This blog post is the first part of a blog series named &lt;a href=&quot;/blog/the-imaginary-company&quot;&gt;The Imaginary Company&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Among all the things you have and you think is powerful, the supreme is your health. That determines your very existence.&lt;/p&gt;
-&lt;p&gt;Quoting a tweet that I remember from some time back.&lt;/p&gt;
-&lt;blockquote class=&quot;twitter-tweet&quot;&gt;&lt;p lang=&quot;en&quot; dir=&quot;ltr&quot;&gt;Falling sick reminds you that the largest competitive advantage you can have is being healthy.&lt;/p&gt;&amp;mdash; Sahil
         
       
     
