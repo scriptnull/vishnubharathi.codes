@@ -157,6 +157,9 @@ It should be good to start with two themes - light and dark. Allow custom themes
 ## Master Feed
 It makes me :sweat_smile: for mentioning this at the last. Finally it would be good to have a master feed that aggregates posts from all the links that we have added.
 
+## Preview reader
+A basic preview reader for reading the articles would be nice!
+
 ## Enough
 
 I think these features are enough for now. ( may be forever :D ) I will add if I missed out something or discover something that I might find useful.
