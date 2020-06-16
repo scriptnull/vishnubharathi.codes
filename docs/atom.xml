@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2020-06-08T22:05:01.423Z</updated>
+  <updated>2020-06-16T03:25:04.618Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>You are building it for a million people</title>
+    <link href="https://vishnubharathi.codes/blog/rss-people/"/>
+    <id>https://vishnubharathi.codes/blog/rss-people/</id>
+    <published>2020-06-16T02:10:00.000Z</published>
+    <updated>2020-06-16T03:25:04.618Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Earlier &lt;a href=&quot;/blog/rss-features&quot;&gt;I blogged a feature guide&lt;/a&gt; for building a new RSS feed reader application.&lt;/p&gt;
+&lt;p&gt;You might be wondering “But, who uses RSS readers anyway?” if you are new to RSS.&lt;/p&gt;
+&lt;p&gt;I think RSS is a classic technology. It doesn’t get spoken about much. It feels like people are using it in silent or people aren’t using it at all. Because it feels relatively technical to setup RSS than setting up any other news app. For example, people may feel comfortable to
+        
+      
+    
+    </summary>
+    
+    
+      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
+    
+  </entry>
+  
+  <entry>
     <title>On top of</title>
     <link href="https://vishnubharathi.codes/blog/oto/"/>
     <id>https://vishnubharathi.codes/blog/oto/</id>
     <published>2020-06-08T20:11:00.000Z</published>
-    <updated>2020-06-08T22:05:01.423Z</updated>
+    <updated>2020-06-16T03:25:04.618Z</updated>
     
     <summary type="html">
     
@@ -53,7 +79,7 @@
     <link href="https://vishnubharathi.codes/blog/rss-features/"/>
     <id>https://vishnubharathi.codes/blog/rss-features/</id>
     <published>2020-05-22T01:18:00.000Z</published>
-    <updated>2020-06-08T22:05:01.423Z</updated>
+    <updated>2020-06-16T03:25:04.618Z</updated>
     
     <summary type="html">
     
@@ -82,7 +108,7 @@
     <link href="https://vishnubharathi.codes/blog/tikv-rb/"/>
     <id>https://vishnubharathi.codes/blog/tikv-rb/</id>
     <published>2020-05-15T15:05:00.000Z</published>
-    <updated>2020-06-08T22:05:01.423Z</updated>
+    <updated>2020-06-16T03:25:04.618Z</updated>
     
     <summary type="html">
     
@@ -112,7 +138,7 @@
     <link href="https://vishnubharathi.codes/blog/badger-with-meta/"/>
     <id>https://vishnubharathi.codes/blog/badger-with-meta/</id>
     <published>2020-05-02T19:30:00.000Z</published>
-    <updated>2020-06-08T22:05:01.423Z</updated>
+    <updated>2020-06-16T03:25:04.614Z</updated>
     
     <summary type="html">
     
@@ -133,35 +159,6 @@
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
       <category term="API" scheme="https://vishnubharathi.codes/tags/API/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Learn</title>
-    <link href="https://vishnubharathi.codes/blog/learn/"/>
-    <id>https://vishnubharathi.codes/blog/learn/</id>
-    <published>2020-04-12T21:16:00.000Z</published>
-    <updated>2020-06-08T22:05:01.423Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;em&gt;This blog post is the second part of the blog series named &lt;a href=&quot;/blog/the-imaginary-company&quot;&gt;The Imaginary Company&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Learning is the core, in whatever we do. Either we succeed or fail doesn’t matter. What matters is if we did learn something in the process.&lt;/p&gt;
-&lt;p&gt;This leads to two things: better actions the next time and avoid repeating mistakes that we learned in the process.&lt;/p&gt;
-&lt;h2 id=&quot;The-parameter&quot;&gt;&lt;a href=&quot;#The-parameter&quot; class=&quot;headerlink&quot; title=&quot;The
-        
-      
-    
-    </summary>
-    
-    
-      <category term="startups" scheme="https://vishnubharathi.codes/tags/startups/"/>
-    
-      <category term="work" scheme="https://vishnubharathi.codes/tags/work/"/>
     
   </entry>
   
