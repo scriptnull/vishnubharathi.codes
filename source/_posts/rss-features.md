@@ -160,6 +160,31 @@ It makes me :sweat_smile: for mentioning this at the last. Finally it would be g
 ## Preview reader
 A basic preview reader for reading the articles would be nice!
 
+## Other RSS feed reader apps
+I will use this section to collect information regarding various other RSS feed readers.
+
+### Feedly
+This is my favorite RSS reader. It is web-based and also has nice Android client. Already added the screenshot for pricing details above!
+
+Homepage: https://feedly.com/
+
+### NetNewsWire
+
+Seems to be a popular option for Mac and iOS.
+
+I really like some literatures present in the internet on NetNewsWrite; like this nice blog post from [Brent Simmons](https://inessential.com) (author of this app) on [Why NetNewsWire is Fast](https://inessential.com/2020/05/18/why_netnewswire_is_fast) and also this document on [How to support NetNewsWire](https://github.com/Ranchero-Software/NetNewsWire/blob/master/Technotes/HowToSupportNetNewsWire.markdown)
+
+Homepage: https://ranchero.com/netnewswire/
+
+### NewsBlur
+"Up to 64 sites" if we don't pay for the app. That's all I wanted to say about this. Added the rest as screenshots.
+
+Homepage: https://newsblur.com/
+
+![newsblur-1](https://user-images.githubusercontent.com/4211715/85141905-2aef7a80-b265-11ea-8413-970e35e711f8.png)
+
+![newsblur-2](https://user-images.githubusercontent.com/4211715/85141271-24acce80-b264-11ea-87c7-a5bb290c767b.png)
+
 ## Enough
 
 I think these features are enough for now. ( may be forever :D ) I will add if I missed out something or discover something that I might find useful.
