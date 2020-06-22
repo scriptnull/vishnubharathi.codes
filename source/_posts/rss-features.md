@@ -44,6 +44,15 @@ After I started setting up my new RSS reader today, I noticed that [it](https://
 
 Also, I found that [OPML](https://en.wikipedia.org/wiki/OPML) is the data format for exporting/importing RSS feeds. So when building this feature, keep a check to not reinvent the wheels.
 
+## OPML sync
+Found this idea while browsing https://github.com/captn3m0/ideas#opml-sync
+
+I think it is a nice idea. Import/exporting OPML files is a must have. But this feature could be seen as an extension for import/export. This is more like auto-import feature.
+
+Instead of giving a OPML file (that points to a bunch of RSS feeds), our RSS app can also accept a URL which points to an OPML file. The app auto-syncs with the URL to get new sources present in the OPML file periodically.
+
+This might enable easy consumption of other people's OPML files.
+
 ## Avoid paywalls
 I understand that you might be interested in monetizing the app. It's up to you! But here are my thoughts on it.
 
