@@ -156,4 +156,113 @@ func TODO() Context {
 }
 ```
 
+## Cancel Context
+
+Things start to complicate from this point onwards. Now that we have some empty contexts that could be used as the starting point / parent for other kind of complex contexts such as context with cancel/deadline/timeout.
+
+Here we will try to explore the inner workings of `context.WithCancel`.
+
+```go
+func WithCancel(parent Context) (ctx Context, cancel CancelFunc)
+```
+
+By the looks of its method signature, it is obvious that "it takes in a parent context and gives back a cancellable context".
+
+In that method definition, we know that the `Context` is an interface type and we notice that there is a new type called CancelFunc. Let's see the definition of it.
+
+```go
+// A CancelFunc tells an operation to abandon its work.
+// A CancelFunc does not wait for the work to stop.
+// A CancelFunc may be called by multiple goroutines simultaneously.
+// After the first call, subsequent calls to a CancelFunc do nothing.
+type CancelFunc func()
+```
+
+It is a simple function that takes 0 argument and returns 0 values.
+
+Now let's dig in the definition of the `WithCancel` method.
+
+```go
+// WithCancel returns a copy of parent with a new Done channel. The returned
+// context's Done channel is closed when the returned cancel function is called
+// or when the parent context's Done channel is closed, whichever happens first.
+//
+// Canceling this context releases resources associated with it, so code should
+// call cancel as soon as the operations running in this Context complete.
+func WithCancel(parent Context) (ctx Context, cancel CancelFunc) {
+	c := newCancelCtx(parent)
+	propagateCancel(parent, &c)
+	return &c, func() { c.cancel(true, Canceled) }
+}
+```
+
+The important thing to note here is the comment above the method.
+
+Note that the returned context's `Done` channel is closed either by calling the returned `CancelFunc` or if the parent context's `Done` channel is closed.
+
+### cancelCtx
+
+So as you see, the first step in the `WithCancel` method is creating a cancel context `c := newCancelCtx(parent)`
+
+```go
+func newCancelCtx(parent Context) cancelCtx {
+	return cancelCtx{Context: parent}
+}
+```
+
+It just wraps the context in a struct called `cancelCtx` and returns back it. So now on to the definition of `cancelCtx` struct.
+
+```go
+// A cancelCtx can be canceled. When canceled, it also cancels any children
+// that implement canceler.
+type cancelCtx struct {
+	Context
+
+	mu       sync.Mutex            // protects following fields
+	done     chan struct{}         // created lazily, closed by first cancel call
+	children map[canceler]struct{} // set to nil by the first cancel call
+	err      error                 // set to non-nil by the first cancel call
+}
+```
+
+Interesting point here is the presence of mutex that guards the other values of the struct. This mechanism is the one that makes the context package implementation to be concurrent.
+
+We note that there is a type called `canceler` used inside the struct, so checking the definition of it. 
+
+```go
+// A canceler is a context type that can be canceled directly. The
+// implementations are *cancelCtx and *timerCtx.
+type canceler interface {
+	cancel(removeFromParent bool, err error)
+	Done() <-chan struct{}
+}
+```
+
+Before we move on the the other parts of `WithCancel` function call, we will try to look at the implementation of `cancelCtx` struct. It seems to implement these two interfaces: `Context` and `canceller`
+
+#### Err()
+It seems to be just a wrapper for the `err` field in the `cancelCtx` struct in a thread-safe way.
+```go
+func (c *cancelCtx) Err() error {
+	c.mu.Lock()
+	err := c.err
+	c.mu.Unlock()
+	return err
+}
+```
+
+#### Done()
+Again a thread-safe wrapper for accessing the `done` field. but at the same time, it seems to create a new channel for the context if it is not already present. I wonder why it is this way!
+
+```go
+func (c *cancelCtx) Done() <-chan struct{} {
+	c.mu.Lock()
+	if c.done == nil {
+		c.done = make(chan struct{})
+	}
+	d := c.done
+	c.mu.Unlock()
+	return d
+}
+```
 
