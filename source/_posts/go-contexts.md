@@ -75,3 +75,7 @@ The above one-line statement is probably what triggered me to do this deep dive 
 That is enough copy-pastes from the docs.
 
 ## API
+
+![go-context](/images/go-context-doc.png)
+
+That is all of context for you!
