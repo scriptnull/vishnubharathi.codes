@@ -79,3 +79,80 @@ That is enough copy-pastes from the docs.
 ![go-context](/images/go-context-doc.png)
 
 That is all of context for you!
+
+## The interface
+At it's core lies the `Context` interface. it is the object that gets sent around. woah! I always imagined it to be struct. Now it is interesting to note that it is an interface.
+
+```go
+type Context interface {
+    Deadline() (dealine time.Time, ok bool)
+    Done() <-chan struct{}
+    Err() error
+    Value(key interface{}) interface{}
+}
+```
+
+This seems to accomodate the information used by various API methods of the context package.
+
+## Errors
+context package defines errors which are returned by the `Err()` method if the channel returned by `Done()` is closed. This error message is used to communicate what made the channel close.
+
+```go
+var Canceled = errors.New("context canceled")
+
+type deadlineExceededError struct{}
+func (deadlineExceededError) Error() string   { return "context deadline exceeded" }
+func (deadlineExceededError) Timeout() bool   { return true }
+func (deadlineExceededError) Temporary() bool { return true }
+```
+
+## Empty context
+Next up is an empty context. It is a context with no value, no deadline and is never cancelled. Lets see how it is defined and where it is used.\\
+
+```go
+type emptyCtx int
+
+func (*emptyCtx) Deadline() (deadline time.Time, ok bool) {
+	return
+}
+
+func (*emptyCtx) Done() <-chan struct{} {
+	return nil
+}
+
+func (*emptyCtx) Err() error {
+	return nil
+}
+
+func (*emptyCtx) Value(key interface{}) interface{} {
+	return nil
+}
+
+func (e *emptyCtx) String() string {
+	switch e {
+	case background:
+		return "context.Background"
+	case todo:
+		return "context.TODO"
+	}
+	return "unknown empty Context"
+}
+
+var (
+	background = new(emptyCtx)
+	todo       = new(emptyCtx)
+)
+```
+
+Now that we have an empty context. It seems like both `context.Background()` and `context.TODO()` return an empty context. So when you are creating a context this is probably where we start.
+
+```go
+func Background() Context {
+	return background
+}
+
+func TODO() Context {
+	return todo
+}
+```
+
