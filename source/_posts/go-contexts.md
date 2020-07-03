@@ -71,7 +71,6 @@ The above one-line statement is probably what triggered me to do this deep dive 
 
 > Do not pass a nil Context, even if a function permits it. 
 
-
 That is enough copy-pastes from the docs.
 
 ## API
@@ -107,7 +106,7 @@ func (deadlineExceededError) Temporary() bool { return true }
 ```
 
 ## Empty context
-Next up is an empty context. It is a context with no value, no deadline and is never cancelled. Lets see how it is defined and where it is used.\\
+Next up is an empty context. It is a context with no value, no deadline and is never cancelled. Lets see how it is defined and where it is used.
 
 ```go
 type emptyCtx int
@@ -252,7 +251,7 @@ func (c *cancelCtx) Err() error {
 ```
 
 #### Done()
-Again a thread-safe wrapper for accessing the `done` field. but at the same time, it seems to create a new channel for the context if it is not already present. I wonder why it is this way!
+Again a thread-safe wrapper for accessing the `done` field. but at the same time, it seems to create a new channel for the context if it is not already present.
 
 ```go
 func (c *cancelCtx) Done() <-chan struct{} {
@@ -266,3 +265,16 @@ func (c *cancelCtx) Done() <-chan struct{} {
 }
 ```
 
+#### Value()
+This seem to just return the value of parent context.
+```go
+func (c *cancelCtx) Value(key interface{}) interface{} {
+	if key == &cancelCtxKey {
+		return c
+	}
+	return c.Context.Value(key)
+}
+```
+
+### propagateCancel
+So we have a new `cancelCtx` on hand right now and it is being passed down to `propagateCancel`.
