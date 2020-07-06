@@ -237,7 +237,7 @@ type canceler interface {
 }
 ```
 
-Before we move on the the other parts of `WithCancel` function call, we will try to look at the implementation of `cancelCtx` struct. It seems to implement these two interfaces: `Context` and `canceller`
+Before we move on the the other parts of `WithCancel` function call, we will try to look at the implementation of `cancelCtx` struct. It seems to implement these  interfaces: `Context`, `canceller` and `stringer`
 
 #### Err()
 It seems to be just a wrapper for the `err` field in the `cancelCtx` struct in a thread-safe way.
@@ -346,3 +346,55 @@ go func() {
 	}
 }()
 ```
+
+### cancel
+Next up, we closely examine the cancel function of the `cancelCtx`
+
+```go
+// cancel closes c.done, cancels each of c's children, and, if
+// removeFromParent is true, removes c from its parent's children.
+func (c *cancelCtx) cancel(removeFromParent bool, err error) {
+	if err == nil {
+		panic("context: internal error: missing cancel error")
+	}
+	c.mu.Lock()
+	if c.err != nil {
+		c.mu.Unlock()
+		return // already canceled
+	}
+	c.err = err
+	if c.done == nil {
+		c.done = closedchan
+	} else {
+		close(c.done)
+	}
+	for child := range c.children {
+		// NOTE: acquiring the child's lock while holding parent's lock.
+		child.cancel(false, err)
+	}
+	c.children = nil
+	c.mu.Unlock()
+
+	if removeFromParent {
+		removeChild(c.Context, c)
+	}
+}
+```
+
+The code here is pretty self-explanatory. One supplement here is to add the implementation of `removeChild` method which is also a very simple, "delete from set" operation.
+
+```go
+// removeChild removes a context from its parent.
+func removeChild(parent Context, child canceler) {
+	p, ok := parentCancelCtx(parent)
+	if !ok {
+		return
+	}
+	p.mu.Lock()
+	if p.children != nil {
+		delete(p.children, child)
+	}
+	p.mu.Unlock()
+}
+```
+
