@@ -277,4 +277,72 @@ func (c *cancelCtx) Value(key interface{}) interface{} {
 ```
 
 ### propagateCancel
-So we have a new `cancelCtx` on hand right now and it is being passed down to `propagateCancel`.
+So we have a new `cancelCtx` on hand right now and it is being passed down to `propagateCancel`. This just propogates cancel from the parent context to our context. If the parent's Done channel is closed, then I think this function takes care of propogating that to the current context and make Done channel of current context closed.
+
+First we check if the parent's `Done` returns nil. If the parent context is also a cancelCtx and have `Done` called, this wouldn't be nil. This might be a little confusion, but see the implementation of cancelCtx's `Done` function to understand what it means to do the following nil comparison.
+
+```go
+done := parent.Done()
+if done == nil {
+	return // parent is never canceled
+}
+```
+
+After that we check if the parent channel is closed. If it is closed, then we cancel the child using the `cancel` method. We will see the implementation of `cancel` method in a short while.
+
+```go
+select {
+case <-done:
+	// parent is already canceled
+	child.cancel(false, parent.Err())
+	return
+default:
+}
+```
+
+If the channel is not closed, then we fallthrough the logic of the function. After that our flow takes two paths.
+
+```go
+if p, ok := parentCancelCtx(parent); ok {
+ ....
+} else {
+ ....
+}
+```
+
+`parentCancelCtx` is the function that returns an underlying `cancelCtx` from the given parent context.
+
+```go
+func parentCancelCtx(parent Context) (*cancelCtx, bool) {
+```
+
+After getting the `cancelCtx`, we seem to error out if p.err is non-nil. If the err is nil, then it means that there is a valid parent cancelCtx for which the current cancelCtx should be added as a child. We basically use a set to track the children.
+
+```go
+if p, ok := parentCancelCtx(parent); ok {
+	p.mu.Lock()
+	if p.err != nil {
+		// parent has already been canceled
+		child.cancel(false, p.err)
+	} else {
+		if p.children == nil {
+			p.children = make(map[canceler]struct{})
+		}
+		p.children[child] = struct{}{}
+	}
+	p.mu.Unlock()
+}
+```
+
+If it doesnot seem to have a valid underlying `cancelCtx`, we just spin up a goroutine that listens for either of the parent of child to be close its `Done` channel. We also seem to track the count of this in a variable.
+
+```go
+atomic.AddInt32(&goroutines, +1)
+go func() {
+	select {
+	case <-parent.Done():
+		child.cancel(false, parent.Err())
+	case <-child.Done():
+	}
+}()
+```
