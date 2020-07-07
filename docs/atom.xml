@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2020-06-22T19:12:24.849Z</updated>
+  <updated>2020-07-07T10:01:48.769Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Under the hood of Go&#39;s context</title>
+    <link href="https://vishnubharathi.codes/blog/go-contexts/"/>
+    <id>https://vishnubharathi.codes/blog/go-contexts/</id>
+    <published>2020-06-29T22:32:00.000Z</published>
+    <updated>2020-07-07T10:01:48.769Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;This post is dedicated to you if you had used the Go programming language and ever wondered “What is a context anyway?”.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;context&lt;/code&gt; is a package in Go’s standard library. I think &lt;code&gt;context&lt;/code&gt; is idiomatic Go, hence I find quite some external packages and standard library packages using it.&lt;/p&gt;
+&lt;p&gt;You can read all about it from here - &lt;a href=&quot;https://golang.org/pkg/context/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://golang.org/pkg/context/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;What I am trying to
+        
+      
+    
+    </summary>
+    
+    
+      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
+    
+      <category term="go" scheme="https://vishnubharathi.codes/tags/go/"/>
+    
+  </entry>
+  
+  <entry>
     <title>You are building it for a million people</title>
     <link href="https://vishnubharathi.codes/blog/rss-people/"/>
     <id>https://vishnubharathi.codes/blog/rss-people/</id>
     <published>2020-06-16T02:10:00.000Z</published>
-    <updated>2020-06-22T19:12:24.849Z</updated>
+    <updated>2020-07-07T10:01:48.773Z</updated>
     
     <summary type="html">
     
@@ -47,7 +76,7 @@
     <link href="https://vishnubharathi.codes/blog/oto/"/>
     <id>https://vishnubharathi.codes/blog/oto/</id>
     <published>2020-06-08T20:11:00.000Z</published>
-    <updated>2020-06-22T19:12:24.849Z</updated>
+    <updated>2020-07-07T10:01:48.773Z</updated>
     
     <summary type="html">
     
@@ -79,7 +108,7 @@
     <link href="https://vishnubharathi.codes/blog/rss-features/"/>
     <id>https://vishnubharathi.codes/blog/rss-features/</id>
     <published>2020-05-22T01:18:00.000Z</published>
-    <updated>2020-06-22T19:12:24.849Z</updated>
+    <updated>2020-07-07T10:01:48.773Z</updated>
     
     <summary type="html">
     
@@ -108,7 +137,7 @@
     <link href="https://vishnubharathi.codes/blog/tikv-rb/"/>
     <id>https://vishnubharathi.codes/blog/tikv-rb/</id>
     <published>2020-05-15T15:05:00.000Z</published>
-    <updated>2020-06-22T19:12:24.853Z</updated>
+    <updated>2020-07-07T10:01:48.773Z</updated>
     
     <summary type="html">
     
@@ -130,35 +159,6 @@
     
     
       <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Badger - WithMeta with cheers!</title>
-    <link href="https://vishnubharathi.codes/blog/badger-with-meta/"/>
-    <id>https://vishnubharathi.codes/blog/badger-with-meta/</id>
-    <published>2020-05-02T19:30:00.000Z</published>
-    <updated>2020-06-22T19:12:24.849Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;This weekend I ended up reading about an open-source project called &lt;a href=&quot;https://github.com/dgraph-io/badger&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Badger&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;To give a short idea about what Badger is, here is an excerpt from the project page.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;BadgerDB is an embeddable, persistent and fast key-value (KV) database written in pure Go. It is the underlying database for Dgraph, a fast, distributed graph database. It’s meant to be a performant alternative to non-Go-based
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
-    
-      <category term="API" scheme="https://vishnubharathi.codes/tags/API/"/>
     
   </entry>
   
