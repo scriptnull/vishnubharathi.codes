@@ -39,7 +39,7 @@ That leads to why it has the following concurrent nature.
 
 > The same Context may be passed to functions running in different goroutines; Contexts are safe for simultaneous use by multiple goroutines.
 
-It is mainly used for propogating a request's state across function calls.
+It is mainly used for propagating a request's state across function calls.
 
 I am going to ask a "Sorry" and silently try to assume its usage feels like the `req` object in [express middlewares](https://expressjs.com/en/guide/using-middleware.html)
 
@@ -63,7 +63,7 @@ app.use(function middleware2(req, res, next) {
 Note how we pass in data across function calls using the `req` object. I think a context has similar functionality.
 
 ## How to and How not to use it?
-Always propogate contexts as arguments to function and don't store it in a struct. That's some bulletproof wisdom from docs for you! :D
+Always propagate contexts as arguments to function and don't store it in a struct. That's some bulletproof wisdom from docs for you! :D
 
 > Pass context.TODO if you are unsure about which Context to use.
 
@@ -277,7 +277,7 @@ func (c *cancelCtx) Value(key interface{}) interface{} {
 ```
 
 ### propagateCancel
-So we have a new `cancelCtx` on hand right now and it is being passed down to `propagateCancel`. This just propogates cancel from the parent context to our context. If the parent's Done channel is closed, then I think this function takes care of propogating that to the current context and make Done channel of current context closed.
+So we have a new `cancelCtx` on hand right now and it is being passed down to `propagateCancel`. This just propagates cancel from the parent context to our context. If the parent's Done channel is closed, then I think this function takes care of propagating that to the current context and make Done channel of current context closed.
 
 First we check if the parent's `Done` returns nil. If the parent context is also a cancelCtx and have `Done` called, this wouldn't be nil. This might be a little confusion, but see the implementation of cancelCtx's `Done` function to understand what it means to do the following nil comparison.
 
@@ -484,7 +484,7 @@ func (c *timerCtx) cancel(removeFromParent bool, err error) {
 }
 ```
 
-Now that we know the details of `timerCtx`, we can go back to exploring the `WithDeadline` method. After having a timerCtx, we propogate the cancel from parent to children.
+Now that we know the details of `timerCtx`, we can go back to exploring the `WithDeadline` method. After having a timerCtx, we propagate the cancel from parent to children.
 
 ```go
 propagateCancel(parent, c)
