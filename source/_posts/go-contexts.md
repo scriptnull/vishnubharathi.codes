@@ -398,3 +398,143 @@ func removeChild(parent Context, child canceler) {
 }
 ```
 
+## WithDeadline
+Next up is `context.WithDeadline` which gets cancelled by calling the returned `cancel` method or if the context crosses a time deadline. It is comfortably built on top of the `cancelCtx`
+
+We will start with the method definition. It accepts a parent context and returns back a context and `CancelFunc`
+
+```go
+func WithDeadline(parent Context, d time.Time) (Context, CancelFunc)
+```
+
+Here is step 1. 
+
+```go
+if cur, ok := parent.Deadline(); ok && cur.Before(d) {
+	// The current deadline is already sooner than the new one.
+	return WithCancel(parent)
+}
+```
+
+In order to decipher this stuff, we will look up the doc of `Deadline` method in `Context` interface.
+
+```go
+type Context interface {
+	// Deadline returns the time when work done on behalf of this context
+	// should be canceled. Deadline returns ok==false when no deadline is
+	// set. Successive calls to Deadline return the same results.
+	Deadline() (deadline time.Time, ok bool)
+	
+	....
+}
+```
+
+so the code in step 1 translates to "If the parent context has a deadline set && if the parent's deadline is before the current deadline", we return back the parent using `WithCancel(parent)`. Because in this case, the parent would expire first, thus resulting in cancelling the child context automatically.
+
+After that, we know that the deadline of the current context occurs before the parent context. So this is what we do.
+
+```go
+c := &timerCtx{
+	cancelCtx: newCancelCtx(parent),
+	deadline:  d,
+}
+```
+
+Let is explore the definition of `timerCtx`.
+
+```go
+// A timerCtx carries a timer and a deadline. It embeds a cancelCtx to
+// implement Done and Err. It implements cancel by stopping its timer then
+// delegating to cancelCtx.cancel.
+type timerCtx struct {
+	cancelCtx
+	timer *time.Timer // Under cancelCtx.mu.
+
+	deadline time.Time
+}
+```
+
+As the comment says, its Err and Done implementation come from `cancelCtx`. Apart from that let us explore the methods associated with it.
+
+
+```go
+
+func (c *timerCtx) Deadline() (deadline time.Time, ok bool) {
+	return c.deadline, true
+}
+
+func (c *timerCtx) String() string {
+	return contextName(c.cancelCtx.Context) + ".WithDeadline(" +
+		c.deadline.String() + " [" +
+		time.Until(c.deadline).String() + "])"
+}
+
+func (c *timerCtx) cancel(removeFromParent bool, err error) {
+	c.cancelCtx.cancel(false, err)
+	if removeFromParent {
+		// Remove this timerCtx from its parent cancelCtx's children.
+		removeChild(c.cancelCtx.Context, c)
+	}
+	c.mu.Lock()
+	if c.timer != nil {
+		c.timer.Stop()
+		c.timer = nil
+	}
+	c.mu.Unlock()
+}
+```
+
+Now that we know the details of `timerCtx`, we can go back to exploring the `WithDeadline` method. After having a timerCtx, we propogate the cancel from parent to children.
+
+```go
+propagateCancel(parent, c)
+```
+
+This method is the same used before in `cancelCtx`. This adds the behaviour of "If the parent's Done channel is closed, then the children's done channel will also be closed."
+
+Next we calculate the duration of the deadline for the given context.
+
+```go
+dur := time.Until(d)
+if dur <= 0 {
+	c.cancel(true, DeadlineExceeded) // deadline has already passed
+	return c, func() { c.cancel(false, Canceled) }
+}
+```
+
+If the deadline is gone, then we immediately cancel the context and send back the context. Now if there is a valid duration, we will `cancel` the current context after the given duration.
+
+```go
+c.mu.Lock()
+defer c.mu.Unlock()
+if c.err == nil {
+	c.timer = time.AfterFunc(dur, func() {
+		c.cancel(true, DeadlineExceeded)
+	})
+}
+```
+
+At the last we return back the context and `cancelFunc`
+
+```go
+return c, func() { c.cancel(true, Canceled) }
+```
+
+## WithTimeout
+Now this becomes easy-peasy. Write a wrapper on top of `WithDuration`.
+
+```go
+// WithTimeout returns WithDeadline(parent, time.Now().Add(timeout)).
+//
+// Canceling this context releases resources associated with it, so code should
+// call cancel as soon as the operations running in this Context complete:
+//
+// 	func slowOperationWithTimeout(ctx context.Context) (Result, error) {
+// 		ctx, cancel := context.WithTimeout(ctx, 100*time.Millisecond)
+// 		defer cancel()  // releases resources if slowOperation completes before timeout elapses
+// 		return slowOperation(ctx)
+// 	}
+func WithTimeout(parent Context, timeout time.Duration) (Context, CancelFunc) {
+	return WithDeadline(parent, time.Now().Add(timeout))
+}
+```
