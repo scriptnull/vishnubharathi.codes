@@ -10,9 +10,11 @@ This post is dedicated to you if you had used the Go programming language and ev
 
 You can read all about it from here - https://golang.org/pkg/context/
 
-What I am trying to do here is just walk through the implementation details of the context package by reading the source file of it - Giving [the link](https://golang.org/src/context/context.go) to the source file, just in case if you decide to do it yourself and not hear me do it!
+What I am trying to do here is just walk through the implementation details of the context package by reading the source file of it.
 
-For all the others, let's do this!
+I can't guarantee if you could fully follow my writings here. But, I just want you to leave with a mindset that "Internal implementations of OSS software are always accessible for anyone to read. We just have to make time for it!".
+
+Giving [the link](https://golang.org/src/context/context.go) to the source file of the `context` package, just in case if you want read the source directly and understand it in your style.
 
 ## What is it?
 Bare minimum, copy pasted from the docs.
@@ -62,7 +64,7 @@ app.use(function middleware2(req, res, next) {
 
 Note how we pass in data across function calls using the `req` object. I think a context has similar functionality.
 
-## How to and How not to use it?
+## How to and How not to?
 Always propagate contexts as arguments to function and don't store it in a struct. That's some bulletproof wisdom from docs for you! :D
 
 > Pass context.TODO if you are unsure about which Context to use.
@@ -80,7 +82,7 @@ That is enough copy-pastes from the docs.
 That is all of context for you!
 
 ## The interface
-At it's core lies the `Context` interface. it is the object that gets sent around. woah! I always imagined it to be struct. Now it is interesting to note that it is an interface.
+At its core lies the `Context` interface. it is the object that gets sent around. woah! I always imagined it to be struct. Now it is interesting to note that it is an interface.
 
 ```go
 type Context interface {
