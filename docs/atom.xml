@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2020-07-11T11:42:43.619Z</updated>
+  <updated>2020-07-16T06:00:39.616Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -17,11 +17,65 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Short</title>
+    <link href="https://vishnubharathi.codes/blog/short/"/>
+    <id>https://vishnubharathi.codes/blog/short/</id>
+    <published>2020-07-16T05:55:08.000Z</published>
+    <updated>2020-07-16T06:00:39.616Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Every time I start a blog post, the words and ideas start playing around me and I just feel compelled to write down everything every time.&lt;/p&gt;
+&lt;p&gt;While long-form, detailed blog posts are great for describing ideas in depth, I have been wanting to write some short blog posts just like this
+        
+      
+    
+    </summary>
+    
+    
+      <category term="blogging" scheme="https://vishnubharathi.codes/tags/blogging/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Releasing sblog</title>
+    <link href="https://vishnubharathi.codes/blog/releasing-sblog/"/>
+    <id>https://vishnubharathi.codes/blog/releasing-sblog/</id>
+    <published>2020-07-15T15:20:20.000Z</published>
+    <updated>2020-07-16T06:00:39.616Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Today, I wrote a very simple utility that helps me kickstart new blog posts. In fact, this is the first blog post bootstrapped with the utility.&lt;/p&gt;
+&lt;p&gt;I have named it &lt;code&gt;sblog&lt;/code&gt; - short for “Start a new blog post”&lt;/p&gt;
+&lt;p&gt;It just saves a few seconds of my time and frees me from manually typing timestamps in my blog post headers everytime.&lt;/p&gt;
+&lt;p&gt;I have been continously trying to bring down the friction in starting and publishing blog posts for a long time. This is probably a small
+        
+      
+    
+    </summary>
+    
+    
+      <category term="blogging" scheme="https://vishnubharathi.codes/tags/blogging/"/>
+    
+      <category term="automation" scheme="https://vishnubharathi.codes/tags/automation/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Under the hood of Go&#39;s context</title>
     <link href="https://vishnubharathi.codes/blog/go-contexts/"/>
     <id>https://vishnubharathi.codes/blog/go-contexts/</id>
     <published>2020-06-29T22:32:00.000Z</published>
-    <updated>2020-07-11T11:42:43.619Z</updated>
+    <updated>2020-07-16T06:00:39.612Z</updated>
     
     <summary type="html">
     
@@ -50,7 +104,7 @@
     <link href="https://vishnubharathi.codes/blog/rss-people/"/>
     <id>https://vishnubharathi.codes/blog/rss-people/</id>
     <published>2020-06-16T02:10:00.000Z</published>
-    <updated>2020-07-11T11:42:43.623Z</updated>
+    <updated>2020-07-16T06:00:39.616Z</updated>
     
     <summary type="html">
     
@@ -76,7 +130,7 @@
     <link href="https://vishnubharathi.codes/blog/oto/"/>
     <id>https://vishnubharathi.codes/blog/oto/</id>
     <published>2020-06-08T20:11:00.000Z</published>
-    <updated>2020-07-11T11:42:43.619Z</updated>
+    <updated>2020-07-16T06:00:39.616Z</updated>
     
     <summary type="html">
     
@@ -100,65 +154,6 @@
       <category term="ideas" scheme="https://vishnubharathi.codes/tags/ideas/"/>
     
       <category term="want-to-build" scheme="https://vishnubharathi.codes/tags/want-to-build/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Some RSS feed reader features</title>
-    <link href="https://vishnubharathi.codes/blog/rss-features/"/>
-    <id>https://vishnubharathi.codes/blog/rss-features/</id>
-    <published>2020-05-22T01:18:00.000Z</published>
-    <updated>2020-07-11T11:42:43.623Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;After all these years, I just started using an RSS reader. I recently read through this article &lt;a href=&quot;http://tttthis.com/blog/if-i-could-bring-one-thing-back-to-the-internet-it-would-be-blogs&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;“If I could bring one thing back to the internet it would be blogs”&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;I think the blogs are still out there, but I just got too much attached to places like &lt;a href=&quot;https://news.ycombinator.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;HN&lt;/a&gt; on the internet. They
-        
-      
-    
-    </summary>
-    
-    
-      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
-    
-      <category term="want-to-build" scheme="https://vishnubharathi.codes/tags/want-to-build/"/>
-    
-      <category term="reading" scheme="https://vishnubharathi.codes/tags/reading/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Building a ruby client for TiKV</title>
-    <link href="https://vishnubharathi.codes/blog/tikv-rb/"/>
-    <id>https://vishnubharathi.codes/blog/tikv-rb/</id>
-    <published>2020-05-15T15:05:00.000Z</published>
-    <updated>2020-07-11T11:42:43.623Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;My recent interest in key-value stores and a few hours of fresh afternoon sleep is leading me to build something on this Friday night!&lt;/p&gt;
-&lt;p&gt;If you haven’t heard of TiKV,&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;TiKV : A distributed transactional key-value database&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;TiKV is a very exciting project to work on! It looks very promising. A lot to offer which means, there is also a lot to build around!&lt;/p&gt;
-&lt;p&gt;For example: I am very excited to see a new KV API in TiKV (VerKV - the one that lets
-        
-      
-    
-    </summary>
-    
-    
-      <category term="programming" scheme="https://vishnubharathi.codes/tags/programming/"/>
     
   </entry>
   
