@@ -1,7 +1,7 @@
 ---
 title: Some RSS feed reader features
 date: 2020-05-22 06:48:00
-tags: ["reading", "software", "want-to-build"]
+tags: ["reading", "software", "want-to-build", "ideas"]
 ---
 
 After all these years, I just started using an RSS reader. I recently read through this article ["If I could bring one thing back to the internet it would be blogs"](http://tttthis.com/blog/if-i-could-bring-one-thing-back-to-the-internet-it-would-be-blogs).
