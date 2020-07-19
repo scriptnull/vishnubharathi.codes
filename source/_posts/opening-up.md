@@ -1,6 +1,6 @@
 ---
 title: Opening up
-date: 2020-07-19 14:40:58
+date: 2017-07-27 04:00:00
 tags: ["blogging"]
 ---
 
