@@ -16,3 +16,5 @@ At least, I was able give my old content it's real shelter today! (Most of them 
 Thanks to this amazing project - https://github.com/xdamman/mediumexporter ; that helped me in this migration!
 
 Also, `sblog` ( https://github.com/scriptnull/sblog ) helped in some level of automation in the process. lol, becoming useful already :D
+
+EDIT: oops, I just missed one point - The reason I did this migation is same as the reason why I would not sign up for https://substack.com/
