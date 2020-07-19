@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://vishnubharathi.codes/"/>
-  <updated>2020-07-19T09:06:12.327Z</updated>
+  <updated>2020-07-19T09:11:52.429Z</updated>
   <id>https://vishnubharathi.codes/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Opening up</title>
+    <link href="https://vishnubharathi.codes/blog/opening-up/"/>
+    <id>https://vishnubharathi.codes/blog/opening-up/</id>
+    <published>2020-07-19T09:10:58.000Z</published>
+    <updated>2020-07-19T09:11:52.429Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Am I an introvert ? I don’t know.&lt;/p&gt;
+&lt;p&gt;I tried asking this question to &lt;a href=&quot;https://twitter.com/argon_laser&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;my best friend&lt;/a&gt; and he replied “You are not an introvert, you are just socially awkward”.&lt;/p&gt;
+&lt;p&gt;May be.&lt;/p&gt;
+&lt;p&gt;But the fact that I am willing to accept is, I am not opening up much, at least as far as I did in past.&lt;/p&gt;
+&lt;p&gt;So, I decide to open a little more about myself. To help people understand few things about me and what I am upto. After
+        
+      
+    
+    </summary>
+    
+    
+      <category term="blogging" scheme="https://vishnubharathi.codes/tags/blogging/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Short</title>
     <link href="https://vishnubharathi.codes/blog/short/"/>
     <id>https://vishnubharathi.codes/blog/short/</id>
     <published>2020-07-16T05:55:08.000Z</published>
-    <updated>2020-07-19T09:06:12.327Z</updated>
+    <updated>2020-07-19T09:11:52.429Z</updated>
     
     <summary type="html">
     
@@ -46,7 +74,7 @@
     <link href="https://vishnubharathi.codes/blog/releasing-sblog/"/>
     <id>https://vishnubharathi.codes/blog/releasing-sblog/</id>
     <published>2020-07-15T15:20:20.000Z</published>
-    <updated>2020-07-19T09:06:12.323Z</updated>
+    <updated>2020-07-19T09:11:52.429Z</updated>
     
     <summary type="html">
     
@@ -75,7 +103,7 @@
     <link href="https://vishnubharathi.codes/blog/go-contexts/"/>
     <id>https://vishnubharathi.codes/blog/go-contexts/</id>
     <published>2020-06-29T22:32:00.000Z</published>
-    <updated>2020-07-19T09:06:12.323Z</updated>
+    <updated>2020-07-19T09:11:52.425Z</updated>
     
     <summary type="html">
     
@@ -104,7 +132,7 @@
     <link href="https://vishnubharathi.codes/blog/rss-people/"/>
     <id>https://vishnubharathi.codes/blog/rss-people/</id>
     <published>2020-06-16T02:10:00.000Z</published>
-    <updated>2020-07-19T09:06:12.327Z</updated>
+    <updated>2020-07-19T09:11:52.429Z</updated>
     
     <summary type="html">
     
@@ -122,38 +150,6 @@
     
     
       <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>On top of</title>
-    <link href="https://vishnubharathi.codes/blog/oto/"/>
-    <id>https://vishnubharathi.codes/blog/oto/</id>
-    <published>2020-06-08T20:11:00.000Z</published>
-    <updated>2020-07-19T09:06:12.323Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;This is a rough draft of thoughts on a tool that I would like to build. It is a simple command line tool named &lt;code&gt;oto&lt;/code&gt;. It stands for &lt;code&gt;on top of&lt;/code&gt;. I often hear and reaffirm to myself that&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;We are built &lt;strong&gt;on top of&lt;/strong&gt; the giants.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;By saying “giants”, we mean anything that adds huge value! Try to hold your thoughts with respect to the business world where giants mean “Big corps”. Think of this word in the context of open
-        
-      
-    
-    </summary>
-    
-    
-      <category term="software" scheme="https://vishnubharathi.codes/tags/software/"/>
-    
-      <category term="ideas" scheme="https://vishnubharathi.codes/tags/ideas/"/>
-    
-      <category term="want-to-build" scheme="https://vishnubharathi.codes/tags/want-to-build/"/>
     
   </entry>
   
