@@ -48,6 +48,7 @@ So, from the feedback, I understood that the following things need to be improve
 
 - Sense and knowledge of design patterns. (Totally agree with this!)
 - Knowledge on basic functional programming constructs like Pure function, idompotence etc.
+- Knowledge on system design and architecture.
 
 ## But, how?
 Now that I know what needs to be improved. I am laying down what can I do to start seeing the results.
