@@ -1,7 +1,7 @@
 ---
 title: First feedback
 date: 2020-07-20 13:27:19
-tags: ["interviewing"]
+tags: ["interviewing", "tech interviews"]
 ---
 
 I just got off from a call where I gathered feedback about my interview with a company. I didn't pass the interview, but the feedback of why I failed is making have an immense smile in my face for the past hour.
@@ -32,4 +32,42 @@ I learnt that I was rejected in some days after the assignment and after a week,
 ## Good things
 Always start with the good things! A few things that they thought I was good at.
 
-- Good hands on
+- Good hands on coding skills
+- Willing to accept feedback and act on it.
+- Passionate and enthusiastic.
+
+## Things that went wrong
+The following were somethings that went wrong. 
+
+- Overly engineered solution.
+- Lagging in design principles.
+- Parts of the solution was lacking in testability.
+
+## To be Improved
+So, from the feedback, I understood that the following things need to be improved.
+
+- Sense and knowledge of design patterns. (Totally agree with this!)
+- Knowledge on basic functional programming constructs like Pure function, idompotence etc.
+
+## But, how?
+Now that I know what needs to be improved. I am laying down what can I do to start seeing the results.
+
+I also asked questions to the CTO like "If I were to apply back again, what are some action items that I can take to improve myself?" hoping that I could get some suggestions on improving.
+
+First thing was,
+
+> Code more, a lot more.
+
+Woah! that's super straight forward. I love this. I just have to write a lot more code everyday. I had been missing it for a while. When I was in college, I could dump these mountains of code everyday that would teach me things I never knew of. So I want to get back on "that level of coding more".
+
+Next was my very favorite part in the entire of the conversation. It was about how to get good at design patterns. I find it very practical advice.
+
+> Build something with some assumptions and maintain it till you see your assumptions fail
+
+This case naturally leads to refactoring of code and helps you understand why your code didn't scale. In other words, it will get us started with thinking what kind of design pattern might have saved us from having to refactor.
+
+## That's it
+
+That's pretty much of what happened. In the end, I also got the suggestion of what kind of companies I should be applying for (got 3 names). They encouraged me in a manner that convinced me that I should definitely go (prepare and) apply at those "3 names" after this. The entire feedback session gave me a moral boost - "I got this!" attitude++.
+
+With high hopes of working towards improving myself, I am signing this off with this wonder statement: "I really wonder how the tech interview process has evolved in the industry. From not getting any answer back in case of rejection to requesting and getting feedback in case of a rejection." - I am really glad to see more companies adopt this style of interviewing.
