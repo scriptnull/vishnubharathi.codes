@@ -13,7 +13,7 @@ The feedback call was between me and the CTO of the company. Whenever I find mys
 ## Background
 To give background, here is how the interview process went. It is an early-stage startup, recently funded, super-interesting to me (as it is in the Reliability, Observability space). I saw their CTO's tweet that they are hiring.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We (<a href="https://twitter.com/last9inc?ref_src=twsrc%5Etfw">@last9inc</a>) are looking for a Software Engineer who can _own_ our Reliability + Customer Integration pipeline. <br><br>Key requisites are: Strong *nix skills, and being able to think ahead and automate mundane / repetitive work.<br><br>If that&#39;s not you, help spread the word 🙏</p>&mdash; Piyush Verma (@realmeson10) <a href="https://twitter.com/realmeson10/status/1273551418448740352?ref_src=twsrc%5Etfw">June 18, 2020</a></blockquote>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">We (<a href="https://twitter.com/last9inc?ref_src=twsrc%5Etfw">@last9inc</a>) are looking for a Software Engineer who can _own_ our Reliability + Customer Integration pipeline. <br><br>Key requisites are: Strong *nix skills, and being able to think ahead and automate mundane / repetitive work.<br><br>If that&#39;s not you, help spread the word 🙏</p>&mdash; Piyush Verma (@realmeson10) <a href="https://twitter.com/realmeson10/status/1273551418448740352?ref_src=twsrc%5Etfw">June 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 After doing my homework on what they are trying to do, I arrived at one of their interesting projects which is open source - https://github.com/last9/k8stream
 
@@ -72,3 +72,7 @@ This case naturally leads to refactoring of code and helps you understand why yo
 That's pretty much of what happened. In the end, I also got the suggestion of what kind of companies I should be applying for (got 3 names). They encouraged me in a manner that convinced me that I should definitely go (prepare and) apply at those "3 names" after this. The entire feedback session gave me a moral boost - "I got this!" attitude++.
 
 With high hopes of working towards improving myself, I am signing this off with this wonder statement: "I really wonder how the tech interview process has evolved in the industry. From not getting any answer back in case of rejection to requesting and getting feedback in case of a rejection." - I am really glad to see more companies adopt this style of interviewing.
+
+~ ~ ~ ~ 
+
+Also if you have some suggestions on how I can level up, do let me know. It would be great if you could point me to opportunities that you find interesting these days!
