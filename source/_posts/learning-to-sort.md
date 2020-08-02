@@ -57,7 +57,7 @@ I think this example from [Wikipedia](https://en.wikipedia.org/wiki/Selection_so
 | (11, 12, 22, 25, 64) | ()	
 
 ### Intution
-So the intution here is to __select__ the lowest/highest number from the unsorted sublist to sorted sublist.
+So the intution here is to __select__ the lowest/highest number from the unsorted sublist and move it to sorted sublist.
 
 ### Time Complexity
 Finding the the lowest/highest element takes O(n). This search needs to be done n times in-order to get the final answer.
@@ -72,13 +72,94 @@ Now omitting the constants and lower degree, we arrive at the time complexity.
 
 __O(n<sup>2</sup>)__
 
-## Space complexity
+### Space complexity
 
 We move the lowest/highest element each time to a sorted sublist. The space complexity really depends on the way we allocate this sorted sublist.
 
 If we create a new list and append the lowest/highest each time, then we will end up with n allocations. So __O(n)__.
 
 But if we implement our code in a way to just swap the (n-1)<sup>th</sup> index for the n<sup>th</sup> lowest/highest element, we would end up doing everything in-place. So __O(1)__.
+
+### Step by step Code
+
+First we try to write down the logic for finding the lowest number (assume we need to do ascending order sort).
+
+```go
+func findSmallest(nums []int) int {
+    smallest := nums[0]
+    smallestIdx := 0
+
+    for i := 1; i < len(nums); i++ {
+        if nums[i] < smallest {
+            smallest = nums[i]
+            smallestIdx = i
+        }
+    }
+ 
+    return smallestIdx
+}
+```
+
+If we execute this n times, we will get back the same index. Our idea here is to reduce the length of the unsorted sublist being passed into the array, so that we get back the index of n<sup>th</sup> lowest item. So building up on that.
+
+```go
+func findSmallest(nums []int, start int) int {
+    smallest := nums[start]
+    smallestIdx := start
+    
+    for i := start; i < len(nums); i++ {
+        if nums[i] < smallest {
+            smallest = nums[i]
+            smallestIdx = i
+        }
+    }
+    
+    return smallestIdx
+}
+```
+
+Now, we just call the `findSmallest` procedure n times and do a swap everytime to construct the sorted sublist.
+
+```go
+func sortArray(nums []int) []int {    
+    for i := 0; i < len(nums); i++ {
+        smallestIdx := findSmallest(nums, i)
+        nums[i], nums[smallestIdx] = nums[smallestIdx], nums[i]
+    }
+    
+    return nums
+}
+```
+
+### Full code
+
+Now, we have a Space = O(1) and Time = O(n<sup>2</sup>) implementation here!
+
+```go
+func sortArray(nums []int) []int {    
+    for i := 0; i < len(nums); i++ {
+        smallestIdx := findSmallest(nums, i)
+        nums[i], nums[smallestIdx] = nums[smallestIdx], nums[i]
+    }
+    
+    return nums
+}
+
+func findSmallest(nums []int, start int) int {
+    smallest := nums[start]
+    smallestIdx := start
+    
+    for i := start; i < len(nums); i++ {
+        if nums[i] < smallest {
+            smallest = nums[i]
+            smallestIdx = i
+        }
+    }
+    
+    return smallestIdx
+}
+```
+
 
 ## Bubble Sort
 
