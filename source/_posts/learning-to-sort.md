@@ -73,15 +73,13 @@ Now omitting the constants and lower degree, we arrive at the time complexity.
 __O(n<sup>2</sup>)__
 
 ### Space complexity
-
 We move the lowest/highest element each time to a sorted sublist. The space complexity really depends on the way we allocate this sorted sublist.
 
 If we create a new list and append the lowest/highest each time, then we will end up with n allocations. So __O(n)__.
 
 But if we implement our code in a way to just swap the (n-1)<sup>th</sup> index for the n<sup>th</sup> lowest/highest element, we would end up doing everything in-place. So __O(1)__.
 
-### Step by step Code
-
+### Step by step code
 First we try to write down the logic for finding the lowest number (assume we need to do ascending order sort).
 
 ```go
@@ -132,7 +130,6 @@ func sortArray(nums []int) []int {
 ```
 
 ### Full code
-
 Now, we have a Space = O(1) and Time = O(n<sup>2</sup>) implementation here!
 
 ```go
@@ -165,11 +162,58 @@ func findSmallest(nums []int, start int) int {
 - [Book: Grokking Algorithms: An illustrated guide for programmers and other curious people](https://learning.oreilly.com/library/view/grokking-algorithms-an/9781617292231/kindle_split_008.html)
 
 ## Bubble Sort
-Values are bubbled up while sorting using Bubble sort. Lets see what we mean by "bubbling up"
+Values are bubbled up while sorting using Bubble sort. Lets see what we mean by "bubbling up".
+
+The way bubble sort works is, we compare i and i+1 elements and swap them if i<sup>th</sup> element is greater than (i+1)<sup>th</sup> element. If we do this repeatedly for ~n times, the greater elements would start bubbling up at the end of the list and the list will be sorted at the end.
 
 Consider the example of sorting: [5, 4, 6, 2, 1] (into an ascending order list)
 
-The way bubble sort works is, we compare i and i+1 elements and swap them if i<sup>th</sup> element is greater than (i+1)<sup>th</sup> element. If we do this repeatedly for ~n times, the list will be sorted.
+`i=0`; First we compare 5 and 4. Since `5 > 4`, we swap.
+
+4 5 6 2 1
+
+`i=1`; We compare 5 and 6. Since `5 < 6`, no swap.
+
+4 5 6 2 1
+
+`i=2`; We compare 6 and 2. Since `6 > 2`, we swap.
+
+4 5 2 6 1
+
+`i=3`; We compare 6 and 1. Since `6 > 1`, we swap.
+
+4 5 2 1 6
+
+That's it! Notice how 6 (the highest number) got __bubbled up__ at the end of the list.
+
+If we perform the same procedure n times, we will end up bubbling all the n highest numbers, thus resulting in sorted order.
+
+### Intution
+Bubble up the highest number to the last and build up the sorted list from backwards.
+
+### Time Complexity
+
+We are performing in-memory swaps upto the n-1<sup>th</sup> element in the first iteration. At this point, the highest number is bubbled up at the `n-1`<sup>th</sup> position.
+
+In the second iteration, we perform swapping upto the n-2<sup>th</sup> element. At this point, the highest number is bubbled up at the `n-2`<sup>th</sup> position.
+
+This iteration happens n times and for each iteration the length of the unsorted list goes down by one.
+
+n + (n-1) + (n-2) + .... + 1 
+
+Again it boils to simple math, "Sum of first n natural numbers" = (n*(n+1))/2 = (n<sup>2</sup> + n) / 2
+
+Now omitting the constants and lower degree, we arrive at the time complexity.
+
+__O(n<sup>2</sup>)__
+
+### Space Complexity
+This is easy to figure out because we are not allocating any new structures during the process. We are just doing a bunch of in-memory swaps.
+
+So, __O(1)__
+
+### Step by step code
+
 
 ### Resources
 - [Hackerrank Youtube](https://www.youtube.com/watch?v=6Gv8vg0kcHc)
