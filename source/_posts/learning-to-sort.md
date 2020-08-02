@@ -160,6 +160,9 @@ func findSmallest(nums []int, start int) int {
 }
 ```
 
+### Resources
+- [Wikipedia](https://en.wikipedia.org/wiki/Selection_sort)
+- [Book: Grokking Algorithms: An illustrated guide for programmers and other curious people](https://learning.oreilly.com/library/view/grokking-algorithms-an/9781617292231/kindle_split_008.html)
 
 ## Bubble Sort
 
