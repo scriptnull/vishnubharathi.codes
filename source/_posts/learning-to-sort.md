@@ -165,4 +165,11 @@ func findSmallest(nums []int, start int) int {
 - [Book: Grokking Algorithms: An illustrated guide for programmers and other curious people](https://learning.oreilly.com/library/view/grokking-algorithms-an/9781617292231/kindle_split_008.html)
 
 ## Bubble Sort
+Values are bubbled up while sorting using Bubble sort. Lets see what we mean by "bubbling up"
 
+Consider the example of sorting: [5, 4, 6, 2, 1] (into an ascending order list)
+
+The way bubble sort works is, we compare i and i+1 elements and swap them if i<sup>th</sup> element is greater than (i+1)<sup>th</sup> element. If we do this repeatedly for ~n times, the list will be sorted.
+
+### Resources
+- [Hackerrank Youtube](https://www.youtube.com/watch?v=6Gv8vg0kcHc)
