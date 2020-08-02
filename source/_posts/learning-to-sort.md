@@ -19,10 +19,66 @@ I hope to document each of the above stages below.
 # Preface
 I will try to collect information that might clarify details for understanding the sorting algorithms in this section. A fair warning: we will also use this section to put some spoilers like "the commonly used sorting algorithm"
 
+## 0,1
+I think it is good to think about the very basic cases first and handle them at first. The very basic case is
+
+When the list to be sorted has only one or zero elements, we just have to return back the list itself (because it is already sorted)
+
+```go
+func sortArray(nums []int) []int {
+    if len(nums) < 2 {
+        return nums
+    }
+    
+    // implement sorting for n elements here
+}
+```
+
+I think that some implementations try to embed this logic in the core logic itself, but anyway I would just like to make things simple and take one thing off from our table right away!
+
 ## Stable Sorting
 
 ## Non-decreasing order
 
 # Sorting Algorithms
 
+## Selection Sort
+A very simple sorting technique. The reason it is called a selection sort is because we will __select__ the lowest/highest element at a time and place it in a sorted manner.
+
+I think this example from [Wikipedia](https://en.wikipedia.org/wiki/Selection_sort) makes it clear
+
+| Sorted sublist | Unsorted sublist | Least element in unsorted list |
+|----------------|------------------|--------------------------------|
+| () |	(11, 25, 12, 22, 64) | 11 |
+| (11) | (25, 12, 22, 64) | 12 |
+| (11, 12) | (25, 22, 64) | 22 |
+| (11, 12, 22) | (25, 64) | 25 |
+| (11, 12, 22, 25) | (64) |	64 |
+| (11, 12, 22, 25, 64) | ()	
+
+### Intution
+So the intution here is to __select__ the lowest/highest number from the unsorted sublist to sorted sublist.
+
+### Time Complexity
+Finding the the lowest/highest element takes O(n). This search needs to be done n times in-order to get the final answer.
+
+The number of items to be searched decreases by one each time. First we search n items, then (n-1) items:
+
+n + (n-1) + (n-2) + .... + 1 
+
+Now it boils to simple math, "Sum of first n natural numbers" = (n*(n+1))/2 = (n<sup>2</sup> + n) / 2
+
+Now omitting the constants and lower degree, we arrive at the time complexity.
+
+__O(n<sup>2</sup>)__
+
+## Space complexity
+
+We move the lowest/highest element each time to a sorted sublist. The space complexity really depends on the way we allocate this sorted sublist.
+
+If we create a new list and append the lowest/highest each time, then we will end up with n allocations. So __O(n)__.
+
+But if we implement our code in a way to just swap the (n-1)<sup>th</sup> index for the n<sup>th</sup> lowest/highest element, we would end up doing everything in-place. So __O(1)__.
+
 ## Bubble Sort
+
