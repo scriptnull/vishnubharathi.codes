@@ -9,7 +9,7 @@ Medium is free to use. I mean, what really is free to use! The price I needed to
 
 But at least for me, the reason I write these blog post is for fun. So I intend to keep it free by hosting it myself. This is a migration that I wanted to do for a long time, and finally I am able to partially complete it.
 
-Why partially? because there is still some images on this blog, which are hosted on some other sites like medium CDN or Github CDN. That is still remaning.
+Why partially? because there is still some images on this blog, which are hosted on some other sites like medium CDN or Github CDN. That is still remaining.
 
 At least, I was able give my old content it's real shelter today! (Most of them were from 2017)
 
