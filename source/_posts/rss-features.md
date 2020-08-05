@@ -194,6 +194,14 @@ Homepage: https://newsblur.com/
 
 ![newsblur-2](https://user-images.githubusercontent.com/4211715/85141271-24acce80-b264-11ea-87c7-a5bb290c767b.png)
 
+### Kindle4RSS
+
+This is not a RSS reader, rather an app that would let people read RSS feeds in their Kindle. Nice concept!
+
+In free plan: 12 subscriptions and 25 articles per issue. In paid plan, 300 subscriptions and unlimited articles for $2.9 per month
+
+Homepage: http://kindle4rss.com/
+
 ## Enough
 
 I think these features are enough for now. ( may be forever :D ) I will add if I missed out something or discover something that I might find useful.
