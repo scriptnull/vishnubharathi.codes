@@ -59,26 +59,31 @@ If the above array is to be sorted using stable sorting, we would get
 
 ```json
 [
-    {name: "personB", mark: 40},
-    {name: "personC", mark: 40},
-    {name: "personA", mark: 50},
-    {name: "personD", mark: 80}
+    {"name": "personB", "mark": 40},
+    {"name": "personC", "mark": 40},
+    {"name": "personA", "mark": 50},
+    {"name": "personD", "mark": 80}
 ]
 ```
 In case of a un-stable sort, we might get
 
 ```json
 [
-    {name: "personC", mark: 40},
-    {name: "personB", mark: 40},
-    {name: "personA", mark: 50},
-    {name: "personD", mark: 80}
+    {"name": "personC", "mark": 40},
+    {"name": "personB", "mark": 40},
+    {"name": "personA", "mark": 50},
+    {"name": "personD", "mark": 80}
 ]
 ```
 
 Notice how the relative order of two persons with same mark is disrupted for an un-stable sort.
 
 Futher reading: https://en.wikipedia.org/wiki/Sorting_algorithm#Stability
+
+## Comparison and non-comparison sorts
+woah, just discovered this type of categorisation of sorting algorithms: https://en.wikipedia.org/wiki/Sorting_algorithm#Comparison_of_algorithms
+
+I think for most of the post here we will focus on Comparison sorts, but would like to explore this topic as we explore various algorithms.
 
 # Sorting Algorithms
 
@@ -319,3 +324,35 @@ func sortArray(nums []int) []int {
 
 ### Resources
 - [Hackerrank Youtube](https://www.youtube.com/watch?v=6Gv8vg0kcHc)
+
+## Insertion sort
+### Intution
+### Time complexity
+### Space complexity
+### Step by step code
+### Full code
+### Resources
+
+## Merge sort
+### Intution
+### Time complexity
+### Space complexity
+### Step by step code
+### Full code
+### Resources
+
+## Quick sort
+### Intution
+### Time complexity
+### Space complexity
+### Step by step code
+### Full code
+### Resources
+
+## Heap sort
+### Intution
+### Time complexity
+### Space complexity
+### Step by step code
+### Full code
+### Resources
