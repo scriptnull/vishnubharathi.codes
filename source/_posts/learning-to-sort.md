@@ -48,10 +48,10 @@ Here is a more practical example. Consider an array of json objects needs to be 
 
 ```json
 [
-    {name: "personA", mark: 50},
-    {name: "personB", mark: 40},
-    {name: "personC", mark: 40},
-    {name: "personD", mark: 80}
+    {"name": "personA", "mark": 50},
+    {"name": "personB", "mark": 40},
+    {"name": "personC", "mark": 40},
+    {"name": "personD", "mark": 80}
 ]
 ```
 
