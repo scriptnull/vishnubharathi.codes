@@ -36,7 +36,49 @@ I think that some implementations try to embed this logic in the core logic itse
 
 ## Stable Sorting
 
-## Non-decreasing order
+When sorting a collection, what if two items with the same value exist.
+
+[5 2 1 1 6]
+
+Notice how 1 is repeated. While sorting, should we leave their relative order the same or should we shift them.
+
+Well, it is up to you. If your sorting implementation maintains the relative order of equal elements, then it is said to be stable sorting.
+
+Here is a more practical example. Consider an array of json objects needs to be sorted based on marks of students.
+
+```json
+[
+    {name: "personA", mark: 50},
+    {name: "personB", mark: 40},
+    {name: "personC", mark: 40},
+    {name: "personD", mark: 80}
+]
+```
+
+If the above array is to be sorted using stable sorting, we would get
+
+```json
+[
+    {name: "personB", mark: 40},
+    {name: "personC", mark: 40},
+    {name: "personA", mark: 50},
+    {name: "personD", mark: 80}
+]
+```
+In case of a un-stable sort, we might get
+
+```json
+[
+    {name: "personC", mark: 40},
+    {name: "personB", mark: 40},
+    {name: "personA", mark: 50},
+    {name: "personD", mark: 80}
+]
+```
+
+Notice how the relative order of two persons with same mark is disrupted for an un-stable sort.
+
+Futher reading: https://en.wikipedia.org/wiki/Sorting_algorithm#Stability
 
 # Sorting Algorithms
 
