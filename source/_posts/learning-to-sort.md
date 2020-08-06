@@ -4,17 +4,15 @@ date: 2020-08-02 18:35:35
 tags: ["algorithms","programming","data structures","go","tech interviews"]
 ---
 
-Today, I am trying to learn about various sorting techniques in computing. I kind of procasinate over starting to learn about sorting whenever I am preparing for interviews. Mainly due to the fact that, we need to memorize the working of various soring algorithms. But over the time, I have came to a realization that each sorting algorithm is based on some intution and if we are able to understand those intutions, then it becomes easy to remember how they work.
+Today, I am trying to learn about various sorting techniques in computing. I kind of procasinate over starting to learn about sorting whenever I am preparing for interviews. Mainly due to the fact that, we need to memorize the working of various sorting algorithms. But over the time, I have come to a realization that each sorting algorithm is based on some intution and if we are able to understand those intutions, then it becomes easy to remember how they work.
 
 One of my earliest attempts at learning about sorting algorithms is by writing [machinepack-sort](http://node-machine.org/machinepack-sort)
 
 I am going to do a similar effort here, but this time I am planning to do these steps.
-1. Understand and visualize how a sort algorithm works. (by reading blogs, seeing video tutorials and lectures)
+1. Understand and visualize how a sorting algorithm works. (by reading blogs, seeing video tutorials and lectures)
 1. Come up with the time and space complexity for each of them.
 1. Write code and test the implementation using [this leetcode puzzle](https://leetcode.com/problems/sort-an-array/)
 1. Try to find practical use cases for each algorithm.
-
-I hope to document each of the above stages below.
 
 # Preface
 I will try to collect information that might clarify details for understanding the sorting algorithms in this section. A fair warning: we will also use this section to put some spoilers like "the commonly used sorting algorithm"
@@ -193,9 +191,9 @@ Bubble up the highest number to the last and build up the sorted list from backw
 
 ### Time Complexity
 
-We are performing in-memory swaps upto the n-1<sup>th</sup> element in the first iteration. At this point, the highest number is bubbled up at the `n-1`<sup>th</sup> position.
+We are performing in-memory swaps upto the n-1<sup>th</sup> index in the first iteration. At this point, the highest number is bubbled up at the `n-1`<sup>th</sup> index.
 
-In the second iteration, we perform swapping upto the n-2<sup>th</sup> element. At this point, the highest number is bubbled up at the `n-2`<sup>th</sup> position.
+In the second iteration, we perform swapping upto the n-2<sup>th</sup> index. At this point, the highest number is bubbled up at the `n-2`<sup>th</sup> index.
 
 This iteration happens n times and for each iteration the length of the unsorted list goes down by one.
 
@@ -213,7 +211,69 @@ This is easy to figure out because we are not allocating any new structures duri
 So, __O(1)__
 
 ### Step by step code
+First, we will handle for the case where array is of size 0 or 1. In that case, we just need to return back the same array.
 
+```go
+func sortArray(nums []int) []int {
+    if len(nums) < 2 {
+        return nums
+    }
+}
+```
+
+Now, we will try to get the "bubble up" code done. This part of the code will just bubble the highest element. Once we have this logic, we just perform the logic for n times to bubble up all the elements.
+
+```go
+for i := 0; i <= (len(nums)-2); i++ {
+    if nums[i] > nums[i+1] {
+        nums[i], nums[i+1] = nums[i+1], nums[i]
+    }
+}
+```
+
+Cool, we will wrap up the bubble up code with a loop running n times.
+
+```go
+for n := 0; n < len(nums); n++ {
+    for i := 0; i <= (len(nums)-2); i++ {
+        if nums[i] > nums[i+1] {
+            nums[i], nums[i+1] = nums[i+1], nums[i]
+        }
+    }
+}
+```
+
+That's it, we should now have nums sorted in-memory. We can try to do one optimisation here. Since we bubble up the highest element, we can avoid trying the swapping logic on already bubbled up values. So, instead of iterating up to `len(nums)-2` index, we will iterate up to `(len(nums)-2)-n)` index, so that we avoid the index of already bubbled up values.
+
+```go
+for n := 0; n < len(nums); n++ {
+    for i := 0; i <= ((len(nums)-2)-n) ; i++ {
+        if nums[i] > nums[i+1] {
+            nums[i], nums[i+1] = nums[i+1], nums[i]
+        }
+    }
+}
+```
+
+### Full code
+
+```go
+func sortArray(nums []int) []int {
+    if len(nums) < 2 {
+        return nums
+    }
+    
+    for n := 0; n < len(nums); n++ {
+        for i := 0; i <= ((len(nums)-2)-n) ; i++ {
+            if nums[i] > nums[i+1] {
+                nums[i], nums[i+1] = nums[i+1], nums[i]
+            }
+        }
+    }
+    
+    return nums
+}
+```
 
 ### Resources
 - [Hackerrank Youtube](https://www.youtube.com/watch?v=6Gv8vg0kcHc)
