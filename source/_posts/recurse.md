@@ -57,3 +57,27 @@ At the same time, I was trying to explore latest trends that I haven't been able
 It was good to hear it! I was actually thinking of applying to Recurse Center in these 2 months and as usual wrote CracklePop one more time and never made it to the end, haha. I went on to think about what he told over the next few days and worked on the pair programming task (Database server) over a weekend. Then there I was writing my application for one full sunday. The next day, I reviewed and submitted my application.
 
 
+## The interviews
+The entire process took upto 2 weeks. The interviewers were super helpful in having a good conversation. The conversational interview was more of a technical chat with a friend. I watched a [few TED talks](https://www.ted.com/playlists/352/talks_to_watch_before_a_job_in) earlier that day to kind of get me into the zone. Because the last time I had a technical interview before that interview, I completely paniced in the middle. So I wanted to improve myself in just talking with new people without any fear or stress. Those videos did help me and I recommend them if you are trying to overcome interview fears.
+
+For the pair programming interview, I have never pair programmed in a formal setup. It seems like there shouldn't be a formal setup after all, haha. In my previous workplaces I have paired with engineers, in a way that we don't even know that we were pairing - just two people sitting together and discussing and coding a part of microservice. So, with less formal knowledge on pair programming, I decided to just understand what it is about. So the first preparation I did was just reading through this [article on pair programming](https://martinfowler.com/articles/on-pair-programming.html). During the pair programming interview, the interviewer followed my through the coding and gave helpful feedback at the right spots.
+
+Overall, the interview experience is smooth and I encourage anyone wanting to apply for it to give it a go!
+
+## Work
+Now that I am attending the RC, you might ask what am I planning to do there? So, I will try to answer that here.
+
+Get better with distributed systems and databases in general. Trying to read up the internals of databases and build a distributed key-value store from scratch. I would like to read research papers, books, and source code. Write blogs to solidify my understanding and write code to improve my coding skills. Example: What is the difference between a B+ tree and LSM tree? How does postgres do row level locking? What are the different protocols used by different datastores for communication between server and client?
+
+I am building the project in hope that it might become production ready someday! There are already lot of innovations going on in this space and it would be great if we end up building something in the sweet spot!
+
+Apart from that I plan on just having more conversations with people in the RC community. Being a non-native speaker of English, it would greatly help me in just getting my thought and speech upto speed. Also, it is fun getting to know people from varying backgrounds.
+
+Next one: prepare for my interviews. This involves data-structure and algorithm stuff + system design.
+
+## Start
+I hope this post gave you an idea about my journey to the Recurse Center. You can follow up the rest of my journey here in this blog and on [my twitter](https://twitter.com/scriptnull). If you are thinking to attend it, I encourage you to apply!
+
+By the way, my batch starts tomorrow. (yay! excited!) 
+
+Looking forward to recurse!
