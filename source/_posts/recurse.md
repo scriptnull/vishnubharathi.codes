@@ -35,5 +35,25 @@ So that makes it seem like attending RC is almost a dream for me and as [my frie
 > Dreams do come true
 
 ## First attempt
-
 My first attempt to apply to RC dates back to the end of 2018. I got so excited to apply for it that I started writing a lisp parse ( https://github.com/scriptnull/yali ) inspired by a task in their [pair programming tasks](https://www.recurse.com/pairing-tasks). I had started filling [the written application for RC](https://www.recurse.com/apply/retreat) a couple of times and I would stop right after "Code CracklePop". When I want to get back to it, life happened - like one of my employer getting acquired by another company and there is no way to take a sabattical right after it.
+
+## Inspiration
+I should say that two people inspired me a lot to attend the Recurse Center.
+
+- [Julia Evans](https://jvns.ca/) : I often end up reading her amazing blog posts and it kind of fostered me to blog more.
+- [Andrew Kelley](https://andrewkelley.me/) : Reason is these three little letters "Zig". It was super interesting to see his presentation in RC's [localhost](https://www.recurse.com/events/localhost-andrew-kelley)
+
+Both of them are alums of RC who have done cool stuff! Apart from that there are a lot of cool stuff people (who have attended and are attending) seem to do. I follow those updates usually on twitter and [Joy of Computing](https://joy.recurse.com/).
+
+## How I applied now?
+hmm, well after losing my job I was taking that long-needed break and preparing for my next adventure. I was learning and learning for most of the time - with the fear of not passing interviews etc. These are uncertain times and it has been a little rough. I was slowly starting to get out of the fear zone and become productive.
+
+The thing with me is I don't usually apply for a lot of jobs. I apply selectively to the jobs that I really like to have because even if it is a rejection it has to mean something and I don't want to waste the time of the people who are giving an interview chance to me! In these two months I just applied and attended only one interview. Earlier I blogged about the interview and the [feedback](/blog/first-feedback/) I got out of it. I was gradually making my steps to get better by acting on the feedback.
+
+At the same time, I was trying to explore latest trends that I haven't been able to catch up like paying a little visit to the frontend ecosystem - React & Redux. During one such days, [Nabarun](https://twitter.com/theonlynabarun) (we used to work together) messaged me on twitter asking what I am upto these days. I said that I was mostly learning and experimenting things to figure out if I should be trying out for backend or full-stack roles. Then he said,
+
+> It is nice to experiment and identify what one really likes. If you want to experiment more for some time, try Recurse Center. They are doing all cohorts online this year.
+
+It was good to hear it! I was actually thinking of applying to Recurse Center in these 2 months and as usual wrote CracklePop one more time and never made it to the end, haha. I went on to think about what he told over the next few days and worked on the pair programming task (Database server) over a weekend. Then there I was writing my application for one full sunday. The next day, I reviewed and submitted my application.
+
+
