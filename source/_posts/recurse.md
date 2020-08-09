@@ -13,7 +13,7 @@ For those who haven't heard of it yet:
 
 > The Recurse Center is a self-directed, community-driven educational retreat for programmers based in New York City and currently operating online.
 
-Retreats happen in batches and there are two types of batches: Full (12 weeks) and Mini (1 week). It is self-directed, so we pick what to learn during that time. We will be working along-side a [diverse](https://www.recurse.com/diversity) group of people, so there is much to learn from them.
+Retreats happen in batches and the batches run for varying length: Full (12 weeks), Half (6 weeks) and Mini (1 week). It is self-directed, so we pick what to learn during that time. We will be working along-side a [diverse](https://www.recurse.com/diversity) group of people, so there is much to learn from them.
 
 I won't steal the fun of knowing about RC for the first time from you! haha, When I heard of RC for the first time - I spent like an hour reading all their contents at https://www.recurse.com - so go ahead and enjoy the link!
 
