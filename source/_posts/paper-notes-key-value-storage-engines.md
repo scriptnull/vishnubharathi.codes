@@ -1,5 +1,5 @@
 ---
-title: Paper notes: Key-Value Storage Engines
+title: "Paper notes: Key-Value Storage Engines"
 date: 2020-08-11 08:48:16
 tags: ["research papers","recurse center"," databases"]
 ---
