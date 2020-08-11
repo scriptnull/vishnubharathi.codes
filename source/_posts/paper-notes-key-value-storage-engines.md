@@ -1,7 +1,7 @@
 ---
 title: "Paper notes: Key-Value Storage Engines"
 date: 2020-08-11 08:48:16
-tags: ["research papers","recurse center"," databases"]
+tags: ["research papers","recurse center","databases"]
 ---
 
 These are my notes and thoughts that came up while reading this research paper called [Key-Value Storage Engines](https://stratos.seas.harvard.edu/files/stratos/files/keyvaluestorageengines.pdf).
