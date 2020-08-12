@@ -326,12 +326,63 @@ func sortArray(nums []int) []int {
 - [Hackerrank Youtube](https://www.youtube.com/watch?v=6Gv8vg0kcHc)
 
 ## Insertion sort
+At first, it felt similar to selection sort and made me wonder what actually is the difference between them.
+
+I would say that insertion sort is little bit intelligent than both of the above algorithms: selection sort and bubble sort. This is because when we feed an already sorted array or an _almost_ sorted array to those algorithms, they don't understand that it is an already/almost sorted array and run for O(n<sup>2</sup>) time, no matter what.
+
+But in that case, insertion sort seem to run just for O(n) time. [This video](https://www.youtube.com/watch?v=eTvQIbB-AuE) gave an example of where we might get an already/almost sorted database: think of a database where keys are already sorted.
+
 ### Intution
+Given an array, consider the first element to be sorted already. Start from the next element and _insert_ it at the right position in the sorted array. If the element is already in the right position of the sorted array, we just move to the next position.
+
+(I recommend you to watch the video resources below to get more idea about this technique)
+
 ### Time complexity
+
+Worst and Average case: O(n<sup>2</sup>) because it would take (n(n+1))/2 swaps in these cases.
+
+Best case: When the array is already sorted, insertion sort just takes O(n) times. If you compare this with selection sort and bubble sort, they both take O(n<sup>2</sup>). Hence insertion sort is a better choice.
+
 ### Space complexity
+Swaps are done in-place.
+
+So __O(n)__
+
 ### Step by step code
+First we start with the second item in the array.
+
+```go
+for i := 1 ; i < len(nums); i++ {
+    // take i-th element and insert it in the right position of the sorted sub-array
+    // and index in sorted sub-array obeys 0 <= idx < i
+}
+```
+
+Now, we just insert the i-th element at the right place of the array.
+
+```go
+for i := 1 ; i < len(nums); i++ {
+    for j := i; (j > 0) && (nums[j] < nums[j-1]); j-- {
+        nums[j], nums[j-1] = nums[j-1], nums[j]
+    }
+}
+```
+
 ### Full code
+```go
+func sortArray(nums []int) []int {
+    for i := 1 ; i < len(nums); i++ {
+        for j := i; (j > 0) && (nums[j] < nums[j-1]); j-- {
+            nums[j], nums[j-1] = nums[j-1], nums[j]
+        }
+    }
+    return nums
+}
+```
 ### Resources
+- [CS50 Insertion sort](https://www.youtube.com/watch?v=O0VbBkUvriI)
+- :star: [San Diego State University - Rob Edwards - Insertion Sort](https://www.youtube.com/watch?v=eTvQIbB-AuE)
+- [Insertion Sort Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
 
 ## Merge sort
 ### Intution
