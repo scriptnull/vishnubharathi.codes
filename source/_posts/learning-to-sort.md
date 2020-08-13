@@ -385,12 +385,36 @@ func sortArray(nums []int) []int {
 - [Insertion Sort Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
 
 ## Merge sort
+Merge sort is a good example for divide and conquer algorithm. It is easy to solve this problem by thinking in recursion. To give a mental model of what a merge sort looks like, I am going to use a nice picture that I found in [Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
+
+![mergesort](https://upload.wikimedia.org/wikipedia/commons/e/e6/Merge_sort_algorithm_diagram.svg)
+
+Found this insight in [The Algorithm Design Manual book](http://www.algorist.com/),
+
+> Mergesort is a great algorithm for sorting linked lists, because it does not rely on random access to elements as does heapsort or quicksort.
+
+
 ### Intution
+Split the array to be sorted into two, sort those individually, and merge them back together. Repeatedly apply this on the divided arrays. When the divided array has only one element, it is already sorted. (That's the point where we stop splitting and merging back starts!)
+
 ### Time complexity
+Recommending the [MIT 6.006 Merge Sort video](https://youtu.be/Kg4bqzAqRBM?t=1487) to figure out how this is done.
+
+At each level of splitted arrays, we access `n` items and we would have a total of `log n` levels. Hence, time complexity is __O(n log n)__
+
 ### Space complexity
+I tried attempting merge sort 
+
 ### Step by step code
+
+
 ### Full code
+
 ### Resources
+- [Merge Sort Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
+- [MIT 6.006 Merge Sort](https://youtu.be/Kg4bqzAqRBM?t=1487)
+- [The Algorithm Design Manual Book](http://www.algorist.com/)
+
 
 ## Quick sort
 ### Intution
