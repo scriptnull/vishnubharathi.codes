@@ -403,18 +403,206 @@ Recommending the [MIT 6.006 Merge Sort video](https://youtu.be/Kg4bqzAqRBM?t=148
 At each level of splitted arrays, we access `n` items and we would have a total of `log n` levels. Hence, time complexity is __O(n log n)__
 
 ### Space complexity
-I tried attempting merge sort 
+I tried implementing merge sort with the help of "Top Down Split Merge" + "Two queues" like mentioned in [The Algorithm Design Manual book](http://www.algorist.com/). I think the space for this method is also __O(n log n)__.
+
+But if we follow the algorithm where we use a temporary array instead of allocating two queues everytime , we can get a __O(n)__ space complexity.
 
 ### Step by step code
+We will try to code the temp array method here! Two queue method is relatively easy. You should try doing the two queue method first, if you are not sure. (I have provided the two queue technique in the full code section below.
 
+Prepare for a recursive ride! haha. Merge sort has two parts: Split and Merge (remember the diagram).
+
+first we make a temporary array (which we use to merge) and call merge sort procedure from index `0` to `n-1`.
+
+```go
+func sortArray(nums []int) []int {
+    temp := make([]int, len(nums))
+    ms(nums, temp, 0, len(nums)-1)
+    return nums
+}
+```
+
+The `ms` call actually does the split. then we call a merge function to perform the merge.
+
+```go
+func ms(nums, temp []int, low, high int) {
+    if low < high {
+        mid := (low + high) / 2
+        ms(nums, temp, low, mid)
+        ms(nums, temp, mid+1, high)
+        merge(nums, temp, low, mid, high)
+    }
+}
+```
+
+Now the merge part:
+
+```go
+func merge(nums, temp []int, low, mid, high int) {
+    i1 := low
+    i2 := mid+1
+    i := low
+    
+    for (i1 <= mid) && (i2 <= high) {
+        if nums[i1] <= nums[i2] {
+            temp[i] = nums[i1]
+            i1++
+        } else {
+            temp[i] = nums[i2]
+            i2++
+        }
+        i++
+    }
+    
+    for i1 <= mid {
+        temp[i] = nums[i1]
+        i++
+        i1++
+    }
+    for i2 <= high {
+        temp[i] = nums[i2]
+        i++
+        i2++
+    }
+    
+    for i := low; i <= high; i++ {
+        nums[i] = temp[i]
+    }
+}
+```
+
+The thing that I miss out is the last section of merge where we copy the temp array to the source array.
 
 ### Full code
+#### Two queues
+```go
+func sortArray(nums []int) []int {
+    ms(nums, 0, len(nums)-1)
+    return nums
+}
+
+func ms(nums []int, low, high int) {
+    if low < high {
+        mid := (low + high) / 2
+        ms(nums, low, mid)
+        ms(nums, mid+1, high)
+        merge(nums, low, mid, high)
+    }
+}
+
+type Queue struct {
+    qList *list.List
+}
+
+func NewQueue() *Queue {
+    return &Queue{
+        qList: list.New(),
+    }
+}
+
+func (q *Queue) Enqueue(item int) {
+    q.qList.PushBack(item)
+}
+
+func (q *Queue) Dequeue() int {
+    return q.qList.Remove(q.qList.Front()).(int)
+}
+
+func (q *Queue) Empty() bool {
+    return q.qList.Len() == 0
+}
+
+func (q *Queue) Top() int {
+    return q.qList.Front().Value.(int)
+}
+
+func merge(nums []int, low, mid, high int) {
+    var q1 = NewQueue()
+    var q2 = NewQueue()
+
+    for i := low; i <= mid; i++ {
+        q1.Enqueue(nums[i])
+    }
+    for i := mid+1; i <= high; i++ {
+        q2.Enqueue(nums[i])
+    }
+    
+    i := low
+    for !q1.Empty() && !q2.Empty() {
+        if q1.Top() < q2.Top() {
+            nums[i] = q1.Dequeue()
+        } else {
+            nums[i] = q2.Dequeue()
+        }
+        i++
+    }
+    
+    for !q1.Empty() {
+        nums[i] = q1.Dequeue()
+        i++
+    }
+    for !q2.Empty() {
+        nums[i] = q2.Dequeue()
+        i++
+    }
+}
+```
+
+#### Temporary array
+```go
+func sortArray(nums []int) []int {
+    temp := make([]int, len(nums))
+    ms(nums, temp, 0, len(nums)-1)
+    return nums
+}
+
+func ms(nums, temp []int, low, high int) {
+    if low < high {
+        mid := (low + high) / 2
+        ms(nums, temp, low, mid)
+        ms(nums, temp, mid+1, high)
+        merge(nums, temp, low, mid, high)
+    }
+}
+
+func merge(nums, temp []int, low, mid, high int) {
+    i1 := low
+    i2 := mid+1
+    i := low
+    
+    for (i1 <= mid) && (i2 <= high) {
+        if nums[i1] <= nums[i2] {
+            temp[i] = nums[i1]
+            i1++
+        } else {
+            temp[i] = nums[i2]
+            i2++
+        }
+        i++
+    }
+    
+    for i1 <= mid {
+        temp[i] = nums[i1]
+        i++
+        i1++
+    }
+    for i2 <= high {
+        temp[i] = nums[i2]
+        i++
+        i2++
+    }
+    
+    for i := low; i <= high; i++ {
+        nums[i] = temp[i]
+    }
+}
+```
 
 ### Resources
 - [Merge Sort Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
 - [MIT 6.006 Merge Sort](https://youtu.be/Kg4bqzAqRBM?t=1487)
 - [The Algorithm Design Manual Book](http://www.algorist.com/)
-
+- :star: [San Diego State University - Rob Edwards - Merge Sort](https://www.youtube.com/watch?v=jr10xrAFSEg) (Despite the black screen problem in the video, I still think the video did a good job of explaining the merge part)
 
 ## Quick sort
 ### Intution
