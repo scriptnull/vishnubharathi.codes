@@ -605,12 +605,92 @@ func merge(nums, temp []int, low, mid, high int) {
 - :star: [San Diego State University - Rob Edwards - Merge Sort](https://www.youtube.com/watch?v=jr10xrAFSEg) (Despite the black screen problem in the video, I still think the video did a good job of explaining the merge part)
 
 ## Quick sort
+Quick sort is one of the sorting algorithms that I have noticed in practice often. For example: I remember noticing `QSORT` while reading [git's source code](https://github.com/git/git/search?q=QSORT&unscoped_q=QSORT) on how git suggests commands when we make a mistake while typing a git command.
+
+Also, I have read that quick sort seems to be a choice for standard library implementation of sorting in some programming languages. Example: [Go's sort package](https://golang.org/src/sort/sort.go?s=8174:8200#L183)
+
+There are different flavours of qsort and one needs to consider the tradeoffs to choose the one that suits their needs. For example: [Lomuto Partition Scheme](https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme) chooses the pivot point as the last element of the array and performs qsort, whereas 
+
 ### Intution
+Choose a pivot point (probably the last element of the array) and partition lesser and higher elements based on the pivot. Perform the pivot and partition logic recursively for the partitions.
+
 ### Time complexity
+If the pivot point we choose is approximately the middle of sorted list, then the list is divided equally (like merge sort). So quick sort has a time complexity of __O(n log n)__ for best and average case.
+
+For the worst case, (where we choose the pivot point as the first or last element of sorted array as the first pivot), the algorithm performs O(n<sup>2</sup>).
+
 ### Space complexity
+For the best and average case, the space complexity would be __(log n)__ (because of the call stack used for recursion). In the worst case, that would become __O(n)__
+
 ### Step by step code
+First, we write the recursive logic of partition and qsort.
+
+```go
+func qsort(nums []int, low, high int) {
+    if low < high {
+        p := part(nums, low, high)
+        qsort(nums, low, p-1)
+        qsort(nums, p+1, high)
+    }
+}
+```
+
+Next we implement the partitioning logic. I am using the [Lomuto Partition Scheme](https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme) here.
+
+```go
+func part(nums []int, low, high int) int {
+    pivot := nums[high]
+    i := low
+    
+    for j := low; j <= high; j++ {
+        if nums[j] < pivot {
+            nums[j], nums[i] = nums[i], nums[j]
+            i++
+        }
+    }
+
+    nums[i], nums[high] = nums[high], nums[i]
+    return i
+}
+```
+
 ### Full code
+```go
+func sortArray(nums []int) []int {
+    qsort(nums, 0, len(nums)-1)
+    
+    return nums
+}
+
+func qsort(nums []int, low, high int) {
+    if low < high {
+        p := part(nums, low, high)
+        qsort(nums, low, p-1)
+        qsort(nums, p+1, high)
+    }
+}
+
+func part(nums []int, low, high int) int {
+    pivot := nums[high]
+    i := low
+    
+    for j := low; j <= high; j++ {
+        if nums[j] < pivot {
+            nums[j], nums[i] = nums[i], nums[j]
+            i++
+        }
+    }
+
+    nums[i], nums[high] = nums[high], nums[i]
+    return i
+}
+```
+
 ### Resources
+- :star: [Quick sort Wikipedia](https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme)
+- [San Diego State University - Rob Edwards - Quick sort](https://www.youtube.com/watch?v=ZHVk2blR45Q)
+- [San Diego State University - Rob Edwards - Quick sort worst case](https://www.youtube.com/watch?v=auclbmnm4iA)
+- [San Diego State University - Rob Edwards - Quick sort code](https://www.youtube.com/watch?v=4IE3wIXFVPc)
 
 ## Heap sort
 ### Intution
