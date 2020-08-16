@@ -18,8 +18,6 @@ I am going to do a similar effort here, but this time I am planning to do these 
 
 There are just a lot of different sorting algorithms. This blog contains the most common ones at first and is open to get updated with some more sorting algorithms as I learn/discover them.
 
-oh! one more thing, I refrain myself from adding any of those fancy animation GIFs that move rectangles around to give a visualization of the algorithm. They trip me up. So my focus is on getting the intuition behind the algorithms for implementation + understanding the trade-offs.
-
 ## Preface
 I will try to collect information that might clarify details for understanding the sorting algorithms in this section.
 
