@@ -693,9 +693,61 @@ func part(nums []int, low, high int) int {
 - [San Diego State University - Rob Edwards - Quick sort code](https://www.youtube.com/watch?v=4IE3wIXFVPc)
 
 ## Heap sort
+The most important idea behind heap sort is to first build a heap out of the given array. A heap is just a common way of implementing a priority queue. A priority queue is just a data-strucutre, where we could request for an element with either the largest or smallest priority at a given point of time.
+
+With that intution, the implementation could be pretty simple. Consider a language with a priority queue implementation built into the standard library like C++. In this case, we could write something like,
+
+```cpp
+class Solution {
+public:
+    vector<int> sortArray(vector<int>& nums) {
+        std::vector<int> result;
+        // build a min-heap
+        priority_queue<int, vector<int>, std::greater<int>> q;
+        
+        for (int n : nums) {
+            q.push(n);
+        }
+        
+        while (!q.empty()) {
+            result.push_back(q.top());
+            q.pop();
+        }
+        
+        return result;
+    }
+};
+```
+
+We just create a min-heap and extract the minimum element each time and append it to a list. While this approach involves allocating space, there is a way to achieve this in-memory if the input is an array.
+
 ### Intution
+Construct a max-heap and pick the largest element using it, one at a time to fill it at the end of the sorted list.
+
 ### Time complexity
+I recommend watching the [MIT 6.006 Heaps and Heap sort](https://www.youtube.com/watch?v=B7hVxCmfPtM) lecture for deriving the time complexity. It seems like building a heap from scratch is O(n) and extracting a min/max element seems to be O(log n), since we extract the min/max n times, the time complexity would be __O(n log n)__
+
 ### Space complexity
+A naive implementation of constructing a priority queue from scrach (like with standard library code or any other libarary) might lead to O(n).
+
+But we will be using a binary heap (just represented in-place in the given array), there is no extra space allocated. So the space complexity would be __O(1)__.
+
+This might seem to be the best algorithm so far, but there should be something that we are losing, right? It is the stableness. Seems like heap sort is not stable.
+
 ### Step by step code
+We need to learn and remember about a few array-tree math before trying to code it. First binary heaps are array representation of a binary tree.
+
+[0 1 2 3 4]
+
+Value at 0 is the root node. value at 1 and 2 are children of root node (0). The children of 1 would be 3 and 4.
+
+This leads to arriving at the following formulae.
+
+left child of a node at index i is given by `(2 * i) + 1` and right child of a node at index i is given by `(2 * i) + 2`.
+
+If there are n nodes, `(n/2) - 1`th index will give the node whose children will all be leaf nodes. This is a very useful insight that I got from [MIT 6.006 Heaps and Heap sort](https://www.youtube.com/watch?v=B7hVxCmfPtM). This means that, since its children are leaf nodes, they already satisfy the heap property and it might be the right place to start recursion procedure for building up the heap from bottom up.
+
 ### Full code
 ### Resources
+- [MIT 6.006 Heaps and Heap sort](https://www.youtube.com/watch?v=B7hVxCmfPtM)
+- [GeeksForGeeks solution](https://www.geeksforgeeks.org/heap-sort/) (this closely follows the ideas behind the MIT 6.006 lecture)
