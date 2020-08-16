@@ -747,7 +747,83 @@ left child of a node at index i is given by `(2 * i) + 1` and right child of a n
 
 If there are n nodes, `(n/2) - 1`th index will give the node whose children will all be leaf nodes. This is a very useful insight that I got from [MIT 6.006 Heaps and Heap sort](https://www.youtube.com/watch?v=B7hVxCmfPtM). This means that, since its children are leaf nodes, they already satisfy the heap property and it might be the right place to start recursion procedure for building up the heap from bottom up.
 
+Ok, lets start writing this! First we call the `heapify` procedure from `(n/2)-1`th index to `0`th index
+
+```go
+for i := (len(nums)/2) - 1; i >= 0; i-- {
+    heapify(nums, len(nums), i)
+}
+```
+
+With this, the root node is guaranted to have the largest element. So, we start filling up the array from back by extracting the max element. Everytime we extract the max element, the heap becomes dirty. So we could just call heapify for only the unsorted sub-array at the beginning.
+
+```go
+for i := len(nums)-1; i >= 0; i-- {
+    nums[i], nums[0] = nums[0], nums[i]
+    heapify(nums, i, 0)
+}
+```
+
+Ok, now we start implementing the heapify function.
+
+```go
+func heapify(nums []int, n, idx int) {    
+    largest := idx
+    left := (2 * idx) + 1
+    right := (2 * idx) + 2
+    
+    if left < n && nums[largest] < nums[left] {
+        largest = left
+    }
+    
+    if right < n && nums[largest] < nums[right] {
+        largest = right
+    }
+    
+    if largest != idx {
+        nums[idx], nums[largest] = nums[largest], nums[idx]
+        
+        heapify(nums, n, largest)
+    }
+}
+```
+
 ### Full code
+```go
+func sortArray(nums []int) []int {
+    for i := (len(nums)/2) - 1; i >= 0; i-- {
+        heapify(nums, len(nums), i)
+    }
+    
+    for i := len(nums)-1; i >= 0; i-- {
+        nums[i], nums[0] = nums[0], nums[i]
+        heapify(nums, i, 0)
+    }
+    
+    return nums
+}
+
+func heapify(nums []int, n, idx int) {    
+    largest := idx
+    left := (2 * idx) + 1
+    right := (2 * idx) + 2
+    
+    if left < n && nums[largest] < nums[left] {
+        largest = left
+    }
+    
+    if right < n && nums[largest] < nums[right] {
+        largest = right
+    }
+    
+    if largest != idx {
+        nums[idx], nums[largest] = nums[largest], nums[idx]
+        
+        heapify(nums, n, largest)
+    }
+}
+```
+
 ### Resources
 - [MIT 6.006 Heaps and Heap sort](https://www.youtube.com/watch?v=B7hVxCmfPtM)
 - [GeeksForGeeks solution](https://www.geeksforgeeks.org/heap-sort/) (this closely follows the ideas behind the MIT 6.006 lecture)
