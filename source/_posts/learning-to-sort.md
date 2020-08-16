@@ -4,7 +4,7 @@ date: 2020-08-02 18:35:35
 tags: ["algorithms","programming","data structures","go","tech interviews"]
 ---
 
-Today, I am trying to learn about various sorting techniques in computing. I kind of procasinate over starting to learn about sorting whenever I am preparing for interviews. Mainly due to the fact that, we need to memorize the working of various sorting algorithms. But over the time, I have come to a realization that each sorting algorithm is based on some intution and if we are able to understand those intutions, then it becomes easy to remember how they work.
+I kind of procasinate over starting to learn about sorting whenever I am preparing for interviews. Mainly due to the fact that, we need to memorize the working of various sorting algorithms. But over the time, I have come to a realization that each sorting algorithm is based on some intution and if we are able to understand those intutions, then it becomes easy to remember how they work.
 
 One of my earliest attempts at learning about sorting algorithms is by writing [machinepack-sort](http://node-machine.org/machinepack-sort)
 
@@ -12,12 +12,23 @@ I am going to do a similar effort here, but this time I am planning to do these 
 1. Understand and visualize how a sorting algorithm works. (by reading blogs, seeing video tutorials and lectures)
 1. Come up with the time and space complexity for each of them.
 1. Write code and test the implementation using [this leetcode puzzle](https://leetcode.com/problems/sort-an-array/)
-1. Try to find practical use cases for each algorithm.
+1. Try to find practical use cases for each algorithm. (in the retrospect, wasn't able to concentrate on this much. May be I will update the this post, as I discover a usage in a practical usecase)
 
-# Preface
-I will try to collect information that might clarify details for understanding the sorting algorithms in this section. A fair warning: we will also use this section to put some spoilers like "the commonly used sorting algorithm"
+There are just a lot of different sorting algorithms. This blog contains the most common ones at first and is open to get updated with some more sorting algorihms as I learn/discover them.
 
-## 0,1
+oh! one more thing, I refrain myself from adding any of those fancy animation GIFs that move rectangles around to give a visualization of the algorithm. They personally trip me up. So my focus is on getting the intution behind the algorithms for implementation + understanding the trade-offs.
+
+## Preface
+I will try to collect information that might clarify details for understanding the sorting algorithms in this section.
+
+### Trade-off
+I heavily recommend taking a look at [this comparison table](https://en.wikipedia.org/wiki/Sorting_algorithm#Comparison_sorts) to understand the trade-offs of different kinds of sorting algorithms.
+
+Pasting a screenshot of the table here. One could use this table to compare and contrast different algorithms and reason about which one to use!
+
+![sorting](/images/sorting.png)
+
+### 0,1
 I think it is good to think about the very basic cases first and handle them at first. The very basic case is
 
 When the list to be sorted has only one or zero elements, we just have to return back the list itself (because it is already sorted)
@@ -34,7 +45,7 @@ func sortArray(nums []int) []int {
 
 I think that some implementations try to embed this logic in the core logic itself, but anyway I would just like to make things simple and take one thing off from our table right away!
 
-## Stable Sorting
+### Stable Sorting
 
 When sorting a collection, what if two items with the same value exist.
 
@@ -80,14 +91,14 @@ Notice how the relative order of two persons with same mark is disrupted for an 
 
 Futher reading: https://en.wikipedia.org/wiki/Sorting_algorithm#Stability
 
-## Comparison and non-comparison sorts
+### Comparison and non-comparison sorts
 woah, just discovered this type of categorisation of sorting algorithms: https://en.wikipedia.org/wiki/Sorting_algorithm#Comparison_of_algorithms
 
 I think for most of the post here we will focus on Comparison sorts, but would like to explore this topic as we explore various algorithms.
 
-# Sorting Algorithms
+## Sorting Algorithms
 
-## Selection Sort
+### Selection Sort
 A very simple sorting technique. The reason it is called a selection sort is because we will __select__ the lowest/highest element at a time and place it in a sorted manner.
 
 I think this example from [Wikipedia](https://en.wikipedia.org/wiki/Selection_sort) makes it clear
@@ -101,10 +112,10 @@ I think this example from [Wikipedia](https://en.wikipedia.org/wiki/Selection_so
 | (11, 12, 22, 25) | (64) |	64 |
 | (11, 12, 22, 25, 64) | ()	
 
-### Intution
+#### Intution
 So the intution here is to __select__ the lowest/highest number from the unsorted sublist and move it to sorted sublist.
 
-### Time Complexity
+#### Time Complexity
 Finding the the lowest/highest element takes O(n). This search needs to be done n times in-order to get the final answer.
 
 The number of items to be searched decreases by one each time. First we search n items, then (n-1) items:
@@ -117,14 +128,14 @@ Now omitting the constants and lower degree, we arrive at the time complexity.
 
 __O(n<sup>2</sup>)__
 
-### Space complexity
+#### Space complexity
 We move the lowest/highest element each time to a sorted sublist. The space complexity really depends on the way we allocate this sorted sublist.
 
 If we create a new list and append the lowest/highest each time, then we will end up with n allocations. So __O(n)__.
 
 But if we implement our code in a way to just swap the (n-1)<sup>th</sup> index for the n<sup>th</sup> lowest/highest element, we would end up doing everything in-place. So __O(1)__.
 
-### Step by step code
+#### Step by step code
 First we try to write down the logic for finding the lowest number (assume we need to do ascending order sort).
 
 ```go
@@ -174,7 +185,7 @@ func sortArray(nums []int) []int {
 }
 ```
 
-### Full code
+#### Full code
 Now, we have a Space = O(1) and Time = O(n<sup>2</sup>) implementation here!
 
 ```go
@@ -202,11 +213,11 @@ func findSmallest(nums []int, start int) int {
 }
 ```
 
-### Resources
+#### Resources
 - [Wikipedia](https://en.wikipedia.org/wiki/Selection_sort)
 - [Book: Grokking Algorithms: An illustrated guide for programmers and other curious people](https://learning.oreilly.com/library/view/grokking-algorithms-an/9781617292231/kindle_split_008.html)
 
-## Bubble Sort
+### Bubble Sort
 Values are bubbled up while sorting using Bubble sort. Lets see what we mean by "bubbling up".
 
 The way bubble sort works is, we compare i and i+1 elements and swap them if i<sup>th</sup> element is greater than (i+1)<sup>th</sup> element. If we do this repeatedly for ~n times, the greater elements would start bubbling up at the end of the list and the list will be sorted at the end.
@@ -233,10 +244,10 @@ That's it! Notice how 6 (the highest number) got __bubbled up__ at the end of th
 
 If we perform the same procedure n times, we will end up bubbling all the n highest numbers, thus resulting in sorted order.
 
-### Intution
+#### Intution
 Bubble up the highest number to the last and build up the sorted list from backwards.
 
-### Time Complexity
+#### Time Complexity
 
 We are performing in-memory swaps upto the n-1<sup>th</sup> index in the first iteration. At this point, the highest number is bubbled up at the `n-1`<sup>th</sup> index.
 
@@ -252,12 +263,12 @@ Now omitting the constants and lower degree, we arrive at the time complexity.
 
 __O(n<sup>2</sup>)__
 
-### Space Complexity
+#### Space Complexity
 This is easy to figure out because we are not allocating any new structures during the process. We are just doing a bunch of in-memory swaps.
 
 So, __O(1)__
 
-### Step by step code
+#### Step by step code
 First, we will handle for the case where array is of size 0 or 1. In that case, we just need to return back the same array.
 
 ```go
@@ -302,7 +313,7 @@ for n := 0; n < len(nums); n++ {
 }
 ```
 
-### Full code
+#### Full code
 
 ```go
 func sortArray(nums []int) []int {
@@ -322,33 +333,33 @@ func sortArray(nums []int) []int {
 }
 ```
 
-### Resources
+#### Resources
 - [Hackerrank Youtube](https://www.youtube.com/watch?v=6Gv8vg0kcHc)
 
-## Insertion sort
+### Insertion sort
 At first, it felt similar to selection sort and made me wonder what actually is the difference between them.
 
 I would say that insertion sort is little bit intelligent than both of the above algorithms: selection sort and bubble sort. This is because when we feed an already sorted array or an _almost_ sorted array to those algorithms, they don't understand that it is an already/almost sorted array and run for O(n<sup>2</sup>) time, no matter what.
 
 But in that case, insertion sort seem to run just for O(n) time. [This video](https://www.youtube.com/watch?v=eTvQIbB-AuE) gave an example of where we might get an already/almost sorted database: think of a database where keys are already sorted.
 
-### Intution
+#### Intution
 Given an array, consider the first element to be sorted already. Start from the next element and _insert_ it at the right position in the sorted array. If the element is already in the right position of the sorted array, we just move to the next position.
 
 (I recommend you to watch the video resources below to get more idea about this technique)
 
-### Time complexity
+#### Time complexity
 
 Worst and Average case: O(n<sup>2</sup>) because it would take (n(n+1))/2 swaps in these cases.
 
 Best case: When the array is already sorted, insertion sort just takes O(n) times. If you compare this with selection sort and bubble sort, they both take O(n<sup>2</sup>). Hence insertion sort is a better choice.
 
-### Space complexity
+#### Space complexity
 Swaps are done in-place.
 
 So __O(n)__
 
-### Step by step code
+#### Step by step code
 First we start with the second item in the array.
 
 ```go
@@ -368,7 +379,7 @@ for i := 1 ; i < len(nums); i++ {
 }
 ```
 
-### Full code
+#### Full code
 ```go
 func sortArray(nums []int) []int {
     for i := 1 ; i < len(nums); i++ {
@@ -379,12 +390,12 @@ func sortArray(nums []int) []int {
     return nums
 }
 ```
-### Resources
+#### Resources
 - [CS50 Insertion sort](https://www.youtube.com/watch?v=O0VbBkUvriI)
 - :star: [San Diego State University - Rob Edwards - Insertion Sort](https://www.youtube.com/watch?v=eTvQIbB-AuE)
 - [Insertion Sort Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)
 
-## Merge sort
+### Merge sort
 Merge sort is a good example for divide and conquer algorithm. It is easy to solve this problem by thinking in recursion. To give a mental model of what a merge sort looks like, I am going to use a nice picture that I found in [Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
 
 ![mergesort](https://upload.wikimedia.org/wikipedia/commons/e/e6/Merge_sort_algorithm_diagram.svg)
@@ -394,20 +405,20 @@ Found this insight in [The Algorithm Design Manual book](http://www.algorist.com
 > Mergesort is a great algorithm for sorting linked lists, because it does not rely on random access to elements as does heapsort or quicksort.
 
 
-### Intution
+#### Intution
 Split the array to be sorted into two, sort those individually, and merge them back together. Repeatedly apply this on the divided arrays. When the divided array has only one element, it is already sorted. (That's the point where we stop splitting and merging back starts!)
 
-### Time complexity
+#### Time complexity
 Recommending the [MIT 6.006 Merge Sort video](https://youtu.be/Kg4bqzAqRBM?t=1487) to figure out how this is done.
 
 At each level of splitted arrays, we access `n` items and we would have a total of `log n` levels. Hence, time complexity is __O(n log n)__
 
-### Space complexity
+#### Space complexity
 I tried implementing merge sort with the help of "Top Down Split Merge" + "Two queues" like mentioned in [The Algorithm Design Manual book](http://www.algorist.com/). I think the space for this method is also __O(n log n)__.
 
 But if we follow the algorithm where we use a temporary array instead of allocating two queues everytime , we can get a __O(n)__ space complexity.
 
-### Step by step code
+#### Step by step code
 We will try to code the temp array method here! Two queue method is relatively easy. You should try doing the two queue method first, if you are not sure. (I have provided the two queue technique in the full code section below.
 
 Prepare for a recursive ride! haha. Merge sort has two parts: Split and Merge (remember the diagram).
@@ -473,8 +484,8 @@ func merge(nums, temp []int, low, mid, high int) {
 
 The thing that I miss out is the last section of merge where we copy the temp array to the source array.
 
-### Full code
-#### Two queues
+#### Full code
+##### Two queues
 ```go
 func sortArray(nums []int) []int {
     ms(nums, 0, len(nums)-1)
@@ -548,7 +559,7 @@ func merge(nums []int, low, mid, high int) {
 }
 ```
 
-#### Temporary array
+##### Temporary array
 ```go
 func sortArray(nums []int) []int {
     temp := make([]int, len(nums))
@@ -598,31 +609,31 @@ func merge(nums, temp []int, low, mid, high int) {
 }
 ```
 
-### Resources
+#### Resources
 - [Merge Sort Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
 - [MIT 6.006 Merge Sort](https://youtu.be/Kg4bqzAqRBM?t=1487)
 - [The Algorithm Design Manual Book](http://www.algorist.com/)
 - :star: [San Diego State University - Rob Edwards - Merge Sort](https://www.youtube.com/watch?v=jr10xrAFSEg) (Despite the black screen problem in the video, I still think the video did a good job of explaining the merge part)
 
-## Quick sort
+### Quick sort
 Quick sort is one of the sorting algorithms that I have noticed in practice often. For example: I remember noticing `QSORT` while reading [git's source code](https://github.com/git/git/search?q=QSORT&unscoped_q=QSORT) on how git suggests commands when we make a mistake while typing a git command.
 
 Also, I have read that quick sort seems to be a choice for standard library implementation of sorting in some programming languages. Example: [Go's sort package](https://golang.org/src/sort/sort.go?s=8174:8200#L183)
 
 There are different flavours of qsort and one needs to consider the tradeoffs to choose the one that suits their needs. For example: [Lomuto Partition Scheme](https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme) chooses the pivot point as the last element of the array and performs qsort, whereas 
 
-### Intution
+#### Intution
 Choose a pivot point (probably the last element of the array) and partition lesser and higher elements based on the pivot. Perform the pivot and partition logic recursively for the partitions.
 
-### Time complexity
+#### Time complexity
 If the pivot point we choose is approximately the middle of sorted list, then the list is divided equally (like merge sort). So quick sort has a time complexity of __O(n log n)__ for best and average case.
 
 For the worst case, (where we choose the pivot point as the first or last element of sorted array as the first pivot), the algorithm performs O(n<sup>2</sup>).
 
-### Space complexity
+#### Space complexity
 For the best and average case, the space complexity would be __(log n)__ (because of the call stack used for recursion). In the worst case, that would become __O(n)__
 
-### Step by step code
+#### Step by step code
 First, we write the recursive logic of partition and qsort.
 
 ```go
@@ -654,7 +665,7 @@ func part(nums []int, low, high int) int {
 }
 ```
 
-### Full code
+#### Full code
 ```go
 func sortArray(nums []int) []int {
     qsort(nums, 0, len(nums)-1)
@@ -686,13 +697,13 @@ func part(nums []int, low, high int) int {
 }
 ```
 
-### Resources
+#### Resources
 - :star: [Quick sort Wikipedia](https://en.wikipedia.org/wiki/Quicksort#Lomuto_partition_scheme)
 - [San Diego State University - Rob Edwards - Quick sort](https://www.youtube.com/watch?v=ZHVk2blR45Q)
 - [San Diego State University - Rob Edwards - Quick sort worst case](https://www.youtube.com/watch?v=auclbmnm4iA)
 - [San Diego State University - Rob Edwards - Quick sort code](https://www.youtube.com/watch?v=4IE3wIXFVPc)
 
-## Heap sort
+### Heap sort
 The most important idea behind heap sort is to first build a heap out of the given array. A heap is just a common way of implementing a priority queue. A priority queue is just a data-strucutre, where we could request for an element with either the largest or smallest priority at a given point of time.
 
 With that intution, the implementation could be pretty simple. Consider a language with a priority queue implementation built into the standard library like C++. In this case, we could write something like,
@@ -721,20 +732,20 @@ public:
 
 We just create a min-heap and extract the minimum element each time and append it to a list. While this approach involves allocating space, there is a way to achieve this in-memory if the input is an array.
 
-### Intution
+#### Intution
 Construct a max-heap and pick the largest element using it, one at a time to fill it at the end of the sorted list.
 
-### Time complexity
+#### Time complexity
 I recommend watching the [MIT 6.006 Heaps and Heap sort](https://www.youtube.com/watch?v=B7hVxCmfPtM) lecture for deriving the time complexity. It seems like building a heap from scratch is O(n) and extracting a min/max element seems to be O(log n), since we extract the min/max n times, the time complexity would be __O(n log n)__
 
-### Space complexity
+#### Space complexity
 A naive implementation of constructing a priority queue from scrach (like with standard library code or any other libarary) might lead to O(n).
 
 But we will be using a binary heap (just represented in-place in the given array), there is no extra space allocated. So the space complexity would be __O(1)__.
 
 This might seem to be the best algorithm so far, but there should be something that we are losing, right? It is the stableness. Seems like heap sort is not stable.
 
-### Step by step code
+#### Step by step code
 We need to learn and remember about a few array-tree math before trying to code it. First binary heaps are array representation of a binary tree.
 
 [0 1 2 3 4]
@@ -788,7 +799,7 @@ func heapify(nums []int, n, idx int) {
 }
 ```
 
-### Full code
+#### Full code
 ```go
 func sortArray(nums []int) []int {
     for i := (len(nums)/2) - 1; i >= 0; i-- {
@@ -824,6 +835,18 @@ func heapify(nums []int, n, idx int) {
 }
 ```
 
-### Resources
+#### Resources
 - [MIT 6.006 Heaps and Heap sort](https://www.youtube.com/watch?v=B7hVxCmfPtM)
 - [GeeksForGeeks solution](https://www.geeksforgeeks.org/heap-sort/) (this closely follows the ideas behind the MIT 6.006 lecture)
+
+
+## More
+Leaving the space for this blog post to get updated. Some interesting sorting algorithms to watch out for are
+
+- BST sort
+- AVL sort
+- Shell sort
+- Counting sort
+- Radix sort
+
+( you [tell me](https://twitter.com/scriptnull) )
