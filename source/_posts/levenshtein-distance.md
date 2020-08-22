@@ -92,7 +92,8 @@ int levenshtein(const char *string1, const char *string2,
 	ALLOC_ARRAY(row1, len2 + 1);
 	ALLOC_ARRAY(row2, len2 + 1);
   
-  // Do DP logic
+  	//...........
+	//...........
 
 	i = row1[len2];
 	free(row0);
@@ -100,6 +101,62 @@ int levenshtein(const char *string1, const char *string2,
 	free(row2);
 
 	return i;
+}
+```
+
+## Where else?
+
+After a while of staring at git source code today with a little bit of struggle reading C and getting into all the details of the solution, I wanted to read the implementation in some other programs as well. There are lot of command line tools and I have noticed a lot of the good ones support this spell check feature.
+
+In-fact this kind of functionality should typically be provided by the sub-command parsing cli library, so that it is available more easily to cli writers. I was right again! Since I am into Go recently, I tried searching through a famous command line parser library for Go called [Cobra](https://github.com/spf13/cobra).
+
+> Cobra is used in many Go projects such as Kubernetes, Hugo, and Github CLI to name a few
+
+## Cobra
+
+[Cobra](https://github.com/spf13/cobra) contains a reference to Levenshtein distance in the [README file](https://github.com/spf13/cobra#suggestions-when-unknown-command-happens).
+
+![edit-distance-readme](/images/edit-distance-readme.png)
+
+Cool, it even has the configuration to choose the distance based on which the suggestions should be picked.
+
+Now, on to the source code. It is written as [a simple function](https://github.com/spf13/cobra/blob/993cc5372a05240dfd59e3ba952748b36b2cd117/cobra.go#L164).
+
+```go
+// ld compares two strings and returns the levenshtein distance between them.
+func ld(s, t string, ignoreCase bool) int {
+	if ignoreCase {
+		s = strings.ToLower(s)
+		t = strings.ToLower(t)
+	}
+	d := make([][]int, len(s)+1)
+	for i := range d {
+		d[i] = make([]int, len(t)+1)
+	}
+	for i := range d {
+		d[i][0] = i
+	}
+	for j := range d[0] {
+		d[0][j] = j
+	}
+	for j := 1; j <= len(t); j++ {
+		for i := 1; i <= len(s); i++ {
+			if s[i-1] == t[j-1] {
+				d[i][j] = d[i-1][j-1]
+			} else {
+				min := d[i-1][j]
+				if d[i][j-1] < min {
+					min = d[i][j-1]
+				}
+				if d[i-1][j-1] < min {
+					min = d[i-1][j-1]
+				}
+				d[i][j] = min + 1
+			}
+		}
+
+	}
+	return d[len(s)][len(t)]
 }
 ```
 
