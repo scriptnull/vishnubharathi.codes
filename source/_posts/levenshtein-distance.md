@@ -8,7 +8,7 @@ You might have heard about the [Levenshtein distance](https://en.wikipedia.org/w
 
 You still there? even after I said the words "Dynamic Programming"? haha. Good! Because unlike you, I am good at running away from it; most of the time. But I am kind of sitting down to learn + practice this stuff now.
 
-[This amazing book](https://www.manning.com/books/grokking-algorithms) played a major role in making this topic a little less scary. What intrigued me the most is the spot where the author tries to explain some practical applications for dynamic programming.
+[This amazing book](https://www.manning.com/books/grokking-algorithms) played a major role in making this topic a little less scary for me. What intrigued me the most is the spot where the author tries to explain some practical applications for dynamic programming.
 
 Among all the applications I read there, two of them were practical and in-fact something that I use almost every day. One is in diff tools like `git diff` to compare text and another one is in spell checkers to figure out the closest matching words to the spelling we typed.
 
