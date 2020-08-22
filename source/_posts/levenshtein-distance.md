@@ -160,3 +160,136 @@ func ld(s, t string, ignoreCase bool) int {
 }
 ```
 
+It is an iterative solution. To understand it better, I copy pasted the function onto the [Go playground](https://play.golang.org/) and started playing around with it.
+
+```go
+func main() {
+	fmt.Printf("Edit distance = %d", ld("abc", "ac", true))
+}
+```
+
+The answer correctly came up as 1. (just 1 deletion operation of b)
+
+Now let me try to go line by line and try to figure out what is happening.
+
+We accept two input strings `s` and `t`. We ignore the cases if the flag is set.
+
+```go
+if ignoreCase {
+	s = strings.ToLower(s)
+	t = strings.ToLower(t)
+}
+```
+
+After that we create a two dimensional array called `d` to act as the memo table.
+
+```go
+d := make([][]int, len(s)+1)
+for i := range d {
+	d[i] = make([]int, len(t)+1)
+}
+```
+
+Now to visualize things, I am adding a little function that prints the memo table.
+
+```
+   "  a  c 
+"  0  0  0 
+a  0  0  0 
+b  0  0  0 
+c  0  0  0 
+```
+ 
+ Next, we initialize the first column of every row with the value of row index.
+ 
+ ```go
+for i := range d {
+	d[i][0] = i
+}
+```
+
+Now the table becomes
+
+```
+   "  a  c 
+"  0  0  0 
+a  1  0  0 
+b  2  0  0 
+c  3  0  0 
+```
+
+After that we initialize the first row of every column to the value of column index.
+ 
+```go 
+for j := range d[0] {
+	d[0][j] = j
+}
+```
+
+That yields
+
+```
+   "  a  c 
+"  0  1  2 
+a  1  0  0 
+b  2  0  0 
+c  3  0  0
+```
+
+That completes the base case: "When you start with an empty string and start building the strings, the operation count would just increase by one as it involves only one insertion operation.
+
+Now, we start filling the inner parts of the table.
+
+```go
+for j := 1; j <= len(t); j++ {
+	for i := 1; i <= len(s); i++ {
+		// logic
+	}
+}
+```
+
+Ah nice, that felt so easy. If the row and column alphabet value is same, then we don't need to perform any operation and hence we get use the last counted operation value by looking at the diagonal.
+
+```go
+if s[i-1] == t[j-1] {
+	d[i][j] = d[i-1][j-1]
+} else {
+	//....
+}
+```
+
+For example: Here is the final table. Notice how `(a,a)` is filled up with looking at the diagonal `(",")`.
+
+```
+   "  a  c That is because, when the resulting string is already `a` there is no need to perform any 
+"  0  1  2 
+a  1  0  1 
+b  2  1  1 
+c  3  2  1 
+```
+
+If the alphabets differ, then we need to perform one of the operations (insert, remove, replace) to arrive at the desired alphabet. It seems like the way we figure out this is by finding the minimum of the adjacent cells (that are already filled) and adding 1 to it (to effectively say that we need to perform one more operation)
+
+```go
+min := d[i-1][j]
+if d[i][j-1] < min {
+	min = d[i][j-1]
+}
+if d[i-1][j-1] < min {
+	min = d[i-1][j-1]
+}
+d[i][j] = min + 1
+```
+
+So, at last we return the last cell of the matrix.
+
+```go
+return d[len(s)][len(t)]
+```
+
+It may not be obvious of what is going on especially in the last part of the code explanation above (apologies for not trying to explain that here). The recommendation for it is to watch/read some tutorial on how the memo table is filled up like this. The point of this explanation is to share how cleanly those ideas behind filling up the memo table is implemented in the library code.
+
+## Closing
+The main difficulty I feel here is the arrival of the idea behind the memo table. What should be the columns and rows? What should be the values that should be filled up in the cells? How do we compute the value of each cell?
+
+Apart from the interview prep point of view, knowing these techniques (just knowing that these kind of technique exists in the world) can be a nice addition to one's problem solving toolbox. The next time you are working on cli app or some other app that needs spell check like suggestions, you know what to do!
