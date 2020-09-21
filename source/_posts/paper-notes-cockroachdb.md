@@ -91,3 +91,33 @@ It might be a bit more interesting to actually use them in a practical system.
 ## Transactions
 
 > CRDB uses a variation of multi-version concurrency control (MVCC) to provide serializable isolation.
+
+It seems like CRDB employs two approaches to optimize transactions: Write pipelining and parallel commits. There is a graph in the paper comparing parallel commits and two-phase commit. I am not sure how parallel commits work (something to dig up on), but it seems like it is helpful in reducing extra round of consensus.
+
+One interesting stuff that I found here is that CRDB uses TLA+ to verify the safety properties of Parallel Commits - https://github.com/cockroachdb/cockroach/tree/master/docs/tla-plus
+
+It is good to note that transaction deals with two things - a co-ordinator and a leaseholder. The SQL client that wants to perform a transaction actually connects to a node in the cluster (typically the one that is close to the client) and co-ordinates the transaction. Thus called the co-ordinator.
+
+### Atomicity Guarantees
+
+> An atomic commit for a transaction is achieved by considering all of its writes provisional until commit time. CRDB calls these provisional values write intents.
+
+So, it does something like - write whatever data is involved in the transaction as a KV-pair. Use the metadata associated with it to actually commit the data. It seems like a transaction could be any of these states - pending, staging, committed or aborted.
+
+### Conflicts
+
+The core part of a transaction is its timestamp. The paper decribes the following conflicts occuring due to the ordering of the timestamps in the transactions:
+
+#### Write-read conflict:
+> A read running into an uncommitted intent with a lower timestamp will wait for the earlier transaction to finalize. Waiting is implemented using in-memory queue structures
+
+#### Read-write conflict
+> A write to a key at timestamp ta cannot be performed if there’s already been a read on the same key at a higher timestamp  tb >= ta . CRDB forces the writing transaction to advance its commit timestamp past tb
+
+#### Write-write conflict
+> A write running into an uncommitted intent with a lower timestamp will wait for the earlier transaction to finalize (similar to write-read conflicts)
+
+Also it is good to know that,
+
+> CRDB employs a distributed deadlock-detection algorithm to abort one transaction from a cycle of waiters.
+
