@@ -15,7 +15,7 @@ A little graphic that is linked in that comment to summarize the idea of zero da
 
 ![](https://i.imgur.com/7xsp7hJ.png)
 
-It gave a great momentum - I read books followed by books everynight, practiced a lot of coding, and even got very active on this blog at that time only. The last 2 months of 2018 were very productive. At that time, I was able to crack the interview of one of my dream companies and wrote a very successful blog post that went on to the top of Hackernews (which completely proved the point that people really find some of my writings useful).
+It gave a great momentum - I read books followed by books everynight, practiced a lot of coding, and even got very active on this blog at that time only. The last 2 months of 2018 were very productive. At that time, I was able to crack the interview of one of my dream companies and wrote a very successful blog post that went on to the top of Hackernews (which made me feel good about my writing skills and gave me a little encouragement to blog and speak out more!).
 
 After that, I just went on to being normal. In short, a lot happened. A lot of zero days.
 
