@@ -4,7 +4,7 @@ date: 2020-08-09 04:39:39
 tags: ["life", "recurse center"]
 ---
 
-I am happy to announce that I got accepted into [The Recurse Center](https://www.recurse.com/) center for the Fall 1 '20 batch. It's quite a life event because attending RC was one of my dreams for about a year and a half now.
+I am happy to announce that I got accepted into [The Recurse Center](https://www.recurse.com/) for the Fall 1 '20 batch. It's quite a life event because attending RC was one of my dreams for about a year and a half now.
 
 Trying to share a few things about my journey.
 
