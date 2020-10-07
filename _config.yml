@@ -8,13 +8,15 @@ subtitle:
 description: >
             Hi, I am Vishnu Bharathi (aka `scriptnull` on the Internet). <br />
 
-            Currently a [Recurser](https://www.recurse.com/) (F1 '20); Previously worked as a Software Engineer at [Clarisights](https://clarisights.com), [JFrog](https://jfrog.com/pipelines), [Shippable](https://www.shippable.com/) etc. My previous work involved around writing backend microservices and command line tools for various platforms.<br />
+            Currently an Engineer at [Hasura](https://hasura.io/); Previously built software at [Clarisights](https://clarisights.com), [JFrog](https://jfrog.com/pipelines), [Shippable](https://www.shippable.com/) etc.<br />
 
-            I love programming and building developer tools. Fiddling around with data stores and distributed systems these days. <br />
+            I love programming and building developer tools. <br />
+            
+            In the past, I attended the [Recurse Center](https://www.recurse.com/) (F1 '20) to learn about databases and distributed systems in depth. <br />
 
             I <3 contributing to Open Source Software and learning from it! <br />
 
-            In my free time, I read [books](/books) and watch anime + movies + TV shows. I am always in the lookout for life lessons and [quotes](/quotes). <br />
+            I like reading [books](/books), research papers, and blogs. I am always in the lookout for life lessons and [quotes](/quotes). <br />
 
 keywords:
 author: Vishnu Bharathi
@@ -105,7 +107,6 @@ theme_config:
     pinterest-square: https://in.pinterest.com/scriptnull/
     docker: https://hub.docker.com/u/scriptnull/
     free-code-camp: https://www.freecodecamp.org/scriptnull
-    google-plus: https://plus.google.com/u/0/+VishnuBharathi
     mastodon: https://mastodon.technology/@scriptnull
     quora: https://www.quora.com/profile/Vishnu-Bharathi
     telegram: http://telegram.me/scriptnull
