@@ -140,8 +140,60 @@ When I arrived, I was introduced to the interviewers. I think there were 2 techn
 
 Then in the afternoon, one of the interviewers took me to their team lunch and introduced me to a bunch of team members. I had lunch with them. For the most part they were all speaking in Hindi (a language that I don't know). Then I said that I am sorry and I don't understand Hindi. Then they also said it's ok (and sorry).
 
-Then they said the recruiter would contact me. The recruiter reached out to me over phone and said, "we were looking for people who are already very specialized in frontend and you are more aligned towards backend. So it didn't work out, but we will let you know once those positions open up."
+I was notified that the recruiter would contact me for the results. The recruiter reached out to me over phone and said, "we were looking for people who are already very specialized in frontend and you are more aligned towards backend. So it didn't work out, but we will let you know once those positions open up."
 
 [Rejected]
 
 When discussing this interview experience with one of my friends, he said that the part where I went in for lunch with the team was also part of the interview to evaluate culture fit. haha :D
+
+## Amazon
+
+This was one of the turning points for me. I never interviewed with big co. at that point and this was the first time. A recruiter reached out to me via LinkedIN and I sent my resume back showing interest.
+
+Why was I interested? AWS was the main reason. After that is Kindle, haha :D Apart from those, I felt good about Amazon's growth inside India. I was interested in how these big co. operate (spent most of the time working at startups at that point of time). I was in the hiring drive for their newly established Amazon Pay team. After a few rounds, I met with someone who said that I might be part of an internal team. Not sure, if those two were the same roles :D
+
+The interiew experience was so much energy consuming. I first took a few weeks preparing Data Structure and Algorithms. I think I just went through [the list of data structures](https://en.wikipedia.org/wiki/List_of_data_structures). At this point I didn't do much puzzle questions and my point of view was if I am just good at knowing these data strucutres and coding basic operations in them, I might be able to answer whatever was thrown at me!
+
+The first day was fully data strucutre and algorithm puzzle questions. There was a written round. After that there were two more rounds with Amazon Engineers. I enjoyed the conversation I had with both of the engineers.
+
+Next rounds were about system design. This is where things went wrong with me. I think I was over-confident and didn't prepare well. The over-confidence is mostly due to me thinking like "system design, right? I already do a good job at work while designing stuff. So it should be easy peasy."
+
+They asked me some pretty common design questions in multiple rounds - I was told to draw the class diagram and stuff. They were checking on the Object oriented design skills. They probably expected me to be writing Singletons and Abstact Factories there, haha. At that time, I was working with JavaScript at work and wasn't ready for it!
+
+Also one of the rounds was about testing knowledge on concurrent programming. I was expected to write code involving 2 threads etc. I tried answering that thing in Go but it didn't go well. I should have just told them upfront that I work mostly with Node.js and it is single threaded.
+
+[Rejected]
+
+The HR called me over phone and shared that I wasn't strong enough in my system design skills and apply back in 6 months. Some good things here: they didn't ghost. They shared the feedback and encouraged to reapply. Also, I didn't have to pay for cabs and food during these interviews :D haha.
+
+Jokes apart, I think I learnt a few things in here:
+- If you don't know something, accept that you don't know and come clean with the interviewer.
+- Don't be over-confident.
+- Go in prepared!
+- Choose the right tech while preparing for interviews. If not choose the interview where they ask you about the tech you know of. Example: probably choosing some Object Oriented Language like Java or C++ might have been more suitable for answering the design part of the interview here or I should have tried out for roles like Web developer or something that deals with JavaScript.
+
+## IBM
+
+A recruiter reached out via LinkedIN and I sent back the resume showing interest. They called for a hiring fair - 100s of people were there.
+
+We were asked to dress formally I think (I went in wearing white shirt, black pants and formal shoes). First round was written (write programs on a paper). Followed by a in-person round.
+
+interviewer: are you experienced in python?
+
+me: no. I am experienced in JavaScript and Node.js
+
+interviewer: (looking confused) but the role we are interviewing for is for someone who is experienced in python
+
+me: oh, ok.
+
+interviewer: asked a question just for the sake of it (but hugely confused about how they allowed me in there)
+
+me: (answered the question)
+
+It was so short. Then I was asked to wait and the HR spoke to me asking "did you tell that you were in for node.js to the interviewer?". I said yes. Then they were like "oops, sorry, we are looking for python and the node.js role might open up afterwards"
+
+hmmmmm, ok!
+
+I regret most part of doing this. But there is a good thing. I discovered a good milkshake shop near their office. The milk shake that I had there was so awesome and I made it a habbit to drop by that shop whenever I was nearby. haha, sweet!
+
+[Rejected]
