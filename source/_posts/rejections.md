@@ -371,6 +371,6 @@ I hope that this post helped you a little bit or at least served as relaxation i
 
 Focus on preparation and getting better! That's probably something in our control.
 
-Also, note how common Ghosting is! I wish that we get better at not ghosting people as an Industry.
+Also, note how common ghosting is! I wish that we get better at not ghosting people as an Industry.
 
 Just in case if you are searching for a job: Stay cool, search strong!
