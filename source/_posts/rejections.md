@@ -255,4 +255,57 @@ The Uber Recruiting Team
 
 [Rejected]
 
+## Donut
 
+I was interested in building a slack bot and read through entire of slack's documentation. I was amazed by all the slack bots out there.
+
+One such slack bot is Donut. So I applied to them.
+
+~ ~ ~ ~
+
+Hi Vishnu,
+
+Thank you for your application to Donut. We recently filled the role you applied for and are no longer actively recruiting for this position. That being said, we’d love to keep your resume on file as our team continues to grow and stay in touch about future opportunities that may be a good fit.
+
+We appreciate your interest in Donut and wish you success in your job search.
+
+Best,
+The Donut Team
+
+~ ~ ~ 
+
+[Rejected]
+
+## Last9
+
+Startup in initial stages. Small team focused on an interesting problem space (observability) - also remote first.
+
+Almost got ghosted, but I messaged them asking if I was still being considered; if not atleast a simple feedback.
+
+They were generous enough to spend some time over a call to give me feedback. I wrote an [entire blog post about this.](/blog/first-feedback/).
+
+[Rejected]
+
+## Walmart labs
+
+Received a call from HR saying that they are interested in the profile. They said the first round will be data structure and algorithms. They asked if I am prepared for it. I should have just said yes, but I said "prepared but not sure if I am at the level to crack Walmart labs". lol, rookie mistake!
+
+They said that they will send the ds and algo online round to email. But never received one.
+
+[Ghosted && Rejected]
+
+## Zoom
+
+Applied via their job portal. Received an email:
+
+~ ~ ~ ~ 
+
+Hi Vishnu Bharathi P,
+
+Thank you for your application to our Web DevOps Engineer position. We appreciate the time you took to consider opportunities at Zoom Video Communications. At this time, we are not seeing exact alignment with the current team needs.
+
+..........................
+
+~ ~ ~ ~
+
+[Rejected]
