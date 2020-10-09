@@ -369,7 +369,7 @@ Thank you for your application to our Web DevOps Engineer position. We appreciat
 
 I hope that this post helped you a little bit or at least served as relaxtion in your job search :D Sometimes you get a job and sometimes you get an adventure - like in my case of discovering a good milkshake shop in the worst possible interview experience.
 
-Focus on preparation and getting better! That's probably the route I had found along the way.
+Focus on preparation and getting better! That's probably something in our control.
 
 Also note how common Ghosting is! I wish that we get better at not ghosting people as an Industry.
 
