@@ -197,3 +197,19 @@ hmmmmm, ok!
 I regret most part of doing this. But there is a good thing. I discovered a good milkshake shop near their office. The milk shake that I had there was so awesome and I made it a habbit to drop by that shop whenever I was nearby. haha, sweet!
 
 [Rejected]
+
+## Schneider Electric
+
+Felt very similar to IBM type interview. Both of these were optimized for filtering out from a large number of people.
+
+First round was written MCQ or fill in the blanks style questions. Forgot exactly. But I had noted down that I got 23 out of 30 in that. haha!
+
+Two rounds with engineers.
+
+One round was about discussion regarding previous work experience.
+
+Another round, I was asked a puzzle SQL question - couldn't answer it.
+
+[Rejected]
+
+Preparation and a little luck of getting asked what you know in play here!
