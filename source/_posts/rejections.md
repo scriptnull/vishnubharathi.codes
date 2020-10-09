@@ -237,6 +237,8 @@ I was using Uber almost everyday around that time. This was when ride-sharing ap
 
 Also I like reading through their engineering blog etc. So I was excited to apply for a position there.
 
+I applied via their careers portal on a weekend and received this mail first thing on the monday morning!
+
 ~ ~ ~ ~ 
 
 Hi Vishnu, 
