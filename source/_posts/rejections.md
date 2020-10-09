@@ -282,7 +282,7 @@ Startup in initial stages. Small team focused on an interesting problem space (o
 
 Almost got ghosted, but I messaged them asking if I was still being considered; if not atleast a simple feedback.
 
-They were generous enough to spend some time over a call to give me feedback. I wrote an [entire blog post about this.](/blog/first-feedback/).
+They were generous enough to spend some time over a call to give me feedback. I wrote an [entire blog post about this](/blog/first-feedback/).
 
 [Rejected]
 
@@ -298,7 +298,39 @@ A HR spoke with me. Told that they will send a coding test.
 
 Never got the coding test.
 
-[ (Ghosted && Rejected)) x2 ]
+[ (Ghosted && Rejected) x2 ]
+
+## PhonePe
+
+I tried reaching out to a recruiter on LinkedIn (after seeing their LinkedIn posts), but they never responded back with a message.
+
+It felt like writing to /dev/null.
+
+[Ghosted && Rejected]
+
+## epiFi
+
+Already missed the UPI wave and didn't want to miss out the Neo bank wave in India.
+
+Applied via their careers page. Got back this email.
+
+~ ~ ~ ~ 
+
+Hi Vishnu,
+
+Thank you for your interest in epiFI Technologies! We wanted to let you know we received your application for DevOps Engineer, and we are delighted that you would consider joining our team.
+
+Our team will review your application and will be in touch if your qualifications match our needs for the role. If you are not selected for this position, keep an eye on our jobs page as we're growing and adding openings.
+
+Best,
+The epiFI Technologies Team
+
+~ ~ ~ ~
+
+Never got back a review.
+
+[Ghosted && Rejected]
+
 
 ## Walmart labs
 
