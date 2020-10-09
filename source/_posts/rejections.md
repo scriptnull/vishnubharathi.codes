@@ -67,3 +67,25 @@ interviewer: Kbye
 [Ghosted && Rejected]
 
 Shortwhile, I called my friend who had been preparing for interviews and he introduced me to the fact that asking data structure questions is normal. That's when I got the taste of how the interviewing world is :D 
+
+## DoSelect
+
+It was the same year and just after the paytm rejection, I came across [DoSelect](https://doselect.com/). It is a coding assessment platform like [Hackerrank](https://www.hackerrank.com/). Those kind of sites were gaining a lot of traction at that time. Remotely executing your code and evaluating solutions from a website is pretty cool.
+
+Earlier as a student, I released one of my successful projects called [compilex](https://github.com/scriptnull/compilex) which is a library useful for building such kind of sites. So I was so much interested in working on such a product. Hence I applied.
+
+The first round was using the DoSelect platform itself. Simple algorithm and datastructure style questions (I think I answered 2 out of 3 correctly; the other one partially accepting soltion). They asked for a Google hangout video chat. But I had a very poor internet connection at that time and openly mailed them about it and asked if it is ok to do an in-person interview instead.
+
+They said ok! At that time, they were based out of [InMobi](https://www.inmobi.com/) office. I took a "500D" BMTC to arrive at their office (used google map to track the right bus stop, but got down early in the previous bus stop. haha). Thankfully, there are lot of 500D buses and so I hopped on the next one and arrived at the right spot. This was the first time I entered a tech park and a big office. I was WOWed!
+
+I was nervous and thinking of what they will be asking me. There was a technical discussion. The thing that went wrong there was "I wasn't confident while telling my answer". They asked me something like "how to get realtime updates in browser?", I knew that websockets are used for them but I didn' confidently put that infront of them. I said about long polling and was a bit reluctant about starting the conversation about web sockets. Because I wasn't sure about how standard web socket approach is. So the conversation went a little bit weird.
+
+After that I spoke with the founders. I was so naive throughout the entire conversation both in-person and mail. I was so new to a lot of things - tech, speaking with people etc. I am sure that I looked like a fool at some point in time. haha. The conversation ended in a good note. I very much appreciate their time.
+
+Got back home. I was very happy and even naively told my grand-mother that I might be getting an offer anytime soon. We waited for their email (lol, she still keeps a check on me whenever I start job search - even after 5 years). Waited and waited.... haha. Even mailed them back 10 days after to followup. (I read through that mail to get the feel of nostalgia and how naive I was - it felt like I was so desparate for the job)
+
+[Ghosted && Rejected]
+
+At this point, I already learnt a couple of things about job search
+1. Don't be desparate. Just accept who you are and try to find people who are willing to accept who you are and help you improve.
+2. Never say that you are getting an offer to others before receiving the actual offer letter. That way we avoid embrassements infront of family and friends. hahahaha.
