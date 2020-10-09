@@ -213,3 +213,44 @@ Another round, I was asked a puzzle SQL question - couldn't answer it.
 [Rejected]
 
 Preparation and a little luck of getting asked what you know in play here!
+
+## Grab
+
+Got a referral for this! (thanks to the friend who referred me)
+
+Intially there was a small phone call with the HR and showed up on-site.
+
+Two rounds:
+
+1. Whiteboard an algorithm question
+2. Design question - picked up from an actual work problem that they had solved.
+
+I wrote a sub-optimal solution for the coding question. Also didn't do the design round well.
+
+[Rejected]
+
+But got the chance to meet up with the friend who referred me and felt encouraged in the job search process :)
+
+## Uber
+
+I was using Uber almost everyday around that time. This was when ride-sharing apps were booming!
+
+Also I like reading through their engineering blog etc. So I was excited to apply for a position there.
+
+~ ~ ~ ~ 
+
+Hi Vishnu, 
+
+Thank you so much for giving us the opportunity to consider you for the Software Engineer II role. We know it takes a lot to submit an application, and we want you to know how much we truly appreciate your interest in Uber! We've carefully reviewed your application, and unfortunately it isn't a match for what we’re looking for this time around.
+
+Please do not hesitate to keep in touch and reach out if we have another role you think could be a fit in the future. We wish you all the best. 
+
+Regards,
+
+The Uber Recruiting Team
+
+~ ~ ~ ~
+
+[Rejected]
+
+
