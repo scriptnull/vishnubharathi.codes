@@ -102,7 +102,7 @@ The second reason is MDN Web Docs - Mozilla Developer Network documentation for 
 
 I saw really different role in their career page. It wasn't particular about any tech stack, but it was more like a research/prototyping engineer. I also think that it was a remote role. I just applied away to see if they would even consider me for such a role.
 
-Then I received this nicely written rejection email.
+Then I received this nicely written rejection email. I am copying and pasting the full email, because I love the way they used the word "Web" in there!
 
 ~ ~ ~ ~ 
 
@@ -331,6 +331,15 @@ Never got back a review.
 
 [Ghosted && Rejected]
 
+## Raksul
+
+[Raksul](https://corp.raksul.com/en/about/) is a japanese company which was trying to hire for building a fresh development center in India. A recruiter reached out to me regarding the opportunity. First was a general webinar kind of session where the CTO spoke about the culture etc. They seemed cool. The idea of building a fresh team from scratch kind of attracted me. So, I decided to interview further. Also they were hiring for Go Engineers - so it kind of aligned with me.
+
+First round was 1 day take home assignment. It went well. Next was a 1hr chat with leadership. It went good as well. Then there was coding assignment for which 7 days time was given. I was busy with other commitments around that time and couldn't complete it properly - barely spent 2 days on the assignment.
+
+I enjoyed the conversation and the coding assignments. They helped me in honing my Go skills. I even got a thorough code-review on the assignments. Thanks for that! But unfortunately, I never received an official mail intimation from them about the rejection. So I will have to consider this ghosting.
+
+[Ghosted && Rejected]
 
 ## Walmart labs
 
