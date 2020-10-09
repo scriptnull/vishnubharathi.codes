@@ -130,3 +130,18 @@ Thanks for taking the time to look into my application and giving notification o
 
 [Rejected]
 
+## Cohesity
+
+These were the times when I was having questions like "What do I want to focus and specialize on? Do I want to concentrate on frontend, backend or devops?" - kind of like adolescence. I think a recruiter from Cohesity reached out to me. They said that there was a position open for Frontend engineer. I thought of trying out for it (just to know if people trust me for a frontend role) - I had been mostly doing full-stack stuff for a while.
+
+There was an on-site interview. I went in super-delayed for that - who knew there will be that much traffic in outer ring road of Bangalore and also I was the first rider for the uber driver that I had got that day (I mean like the first ever rider in his uber driver career). Spend quite sometime helping him out with Google maps, Uber driver parnter app and what not, android and phones in general!
+
+When I arrived, I was introduced to the interviewers. I think there were 2 technical rounds - needed to write JavaScript in both of them. Questions like implement a debounce function were asked. I think I did it well. But I might have troubled a bit while speaking with one of the interviewers.
+
+Then in the afternoon, one of the interviewers took me to their team lunch and introduced me to a bunch of team members. I had lunch with them. For the most part they were all speaking in Hindi (a language that I don't know). Then I said that I am sorry and I don't understand Hindi. Then they also said it's ok (and sorry).
+
+Then they said the recruiter would contact me. The recruiter reached out to me over phone and said, "we were looking for people who are already very specialized in frontend and you are more aligned towards backend. So it didn't work out, but we will let you know once those positions open up."
+
+[Rejected]
+
+When discussing this interview experience with one of my friends, he said that the part where I went in for lunch with the team was also part of the interview to evaluate culture fit. haha :D
