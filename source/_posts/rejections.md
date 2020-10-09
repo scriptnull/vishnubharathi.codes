@@ -89,3 +89,44 @@ Got back home. I was very happy and even naively told my grand-mother that I mig
 At this point, I already learnt a couple of things about job search
 1. Don't be desparate. Just accept who you are and try to find people who are willing to accept who you are and help you improve.
 2. Never say that you are getting an offer to others before receiving the actual offer letter. That way we avoid embrassements infront of family and friends. hahahaha.
+
+## Mozilla
+
+I think this was 2 years after that. I was so interested in open source communities, side projects etc. Mozilla was doing cool stuff like rust. Also it's presence in India was increasing more and more.
+
+I think I loved Mozilla as a company because of these reasons:
+
+Firefox was one of the coolest browsers back when I was in school. It was amazing to notice all the improvements Mozilla bring in after every new update. Those days Opera and Firefox were two of my favorite browsers (untill Chrome came along).
+
+The second reason is MDN Web Docs - Mozilla Developer Network documentation for JavaScript. I love these docs and these have a huge respect from me even now.
+
+I saw really different role in their career page. It wasn't particular about any tech stack, but it was more like a research/prototyping engineer. I also think that it was a remote role. I just applied away to see if they would even consider me for such a role.
+
+Then I received this nicely written rejection email.
+
+~ ~ ~ ~ 
+
+Hi Vishnu,
+
+Thank you for your time and interest in Mozilla and our Staff Experiments Integration Full Stack Developer position. We have looked at your resume and, although we appreciate your background and experience, we are choosing not to move forward at this time.
+
+This isn’t necessarily the end! We know that people are always learning and growing and we have new jobs opening all the time. We do keep you in mind and will contact you if we think we have an opening here that you would be well-suited to.  Also, every position we open is posted to our twitter feed, so follow us at @mozilla to keep an eye out for other positions that would be a good fit for you!
+
+We're sorry that we were unable to make it work this time, but we hope that we see you around the Web.
+
+Thank you!
+
+The Mozilla Recruiting Team
+
+~ ~ ~ ~
+
+I wrote back happily saying,
+
+~ ~ ~ ~
+
+Thanks for taking the time to look into my application and giving notification on the status of it. I hope to see you around!
+
+~ ~ ~ ~
+
+[Rejected]
+
