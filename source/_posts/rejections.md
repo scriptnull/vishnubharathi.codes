@@ -286,6 +286,20 @@ They were generous enough to spend some time over a call to give me feedback. I 
 
 [Rejected]
 
+## Juspay
+
+I love [Juspay](https://juspay.in/) while making payments on mobile. I spoke with their founders back in 2015 in a JavaScript conference.
+
+The founder started an email conversation with someone in the company CCing me and their careers email - asking to co-ordinate a coding test. That person never got back and ghosted.
+
+While that was in 2015, I happened to apply back again after 5 years. They posted in "Ask HN: Who is hiring?" thread.
+
+A HR spoke with me. Told that they will send a coding test.
+
+Never got the coding test.
+
+[ (Ghosted && Rejected)) x2 ]
+
 ## Walmart labs
 
 Received a call from HR saying that they are interested in the profile. They said the first round will be data structure and algorithms. They asked if I am prepared for it. I should have just said yes, but I said "prepared but not sure if I am at the level to crack Walmart labs". lol, rookie mistake!
