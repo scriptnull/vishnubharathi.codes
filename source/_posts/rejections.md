@@ -1,6 +1,6 @@
 ---
 title: Rejections
-date: 2020-10-08 03:20:13
+date: 2020-10-10 01:02:18
 tags: ["interviewing"," tech interviews"]
 ---
 
