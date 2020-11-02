@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> So here is the ultimate advice for young would-be startup founders, boiled down to two words: just learn.
+
+By: Paul Graham
+
+Source: [Before the Startup](http://www.paulgraham.com/before.html)
+
+---
+
 > When we don't know what we want in life, the next best thing that we want is everything.
 
 By: Ankur Warikoo
