@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="PreludeWhen writing pure virtual functions in C++, I raise my eyebrows because the syntax for it feels weird to me. 1234class Command &amp;#123;public:  virtual void execute() = 0;&amp;#125;; Notice = 0 ? It">
+<meta name="keywords" content="programming,c++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pure.h">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/pure-h/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="PreludeWhen writing pure virtual functions in C++, I raise my eyebrows because the syntax for it feels weird to me. 1234class Command &amp;#123;public:  virtual void execute() = 0;&amp;#125;; Notice = 0 ? It">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-11-01T19:05:11.501Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="pure.h">
+<meta name="twitter:description" content="PreludeWhen writing pure virtual functions in C++, I raise my eyebrows because the syntax for it feels weird to me. 1234class Command &amp;#123;public:  virtual void execute() = 0;&amp;#125;; Notice = 0 ? It">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>pure.h</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/blog/rlwrap/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/blog/my-cpp-setup/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/pure-h/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/pure-h/&text=pure.h"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/pure-h/&is_video=false&description=pure.h"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=pure.h&body=Check out this article: https://vishnubharathi.codes/blog/pure-h/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/pure-h/&name=pure.h&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/pure-h/&t=pure.h"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prelude"><span class="toc-number">1.</span> <span class="toc-text">Prelude</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-C-needs"><span class="toc-number">2.</span> <span class="toc-text">What C++ needs?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-so"><span class="toc-number">3.</span> <span class="toc-text">Why so?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-we-are-ok-with-it"><span class="toc-number">4.</span> <span class="toc-text">Why we are ok with it?</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        pure.h
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2018-11-30T15:39:03.000Z" itemprop="datePublished">2018-11-30</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/c/">c++</a>, <a class="tag-link" href="/tags/programming/">programming</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Prelude"><a href="#Prelude" class="headerlink" title="Prelude"></a>Prelude</h2><p>When writing pure virtual functions in C++, I raise my eyebrows because the syntax for it feels weird to me.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Command</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Notice <code>= 0</code> ? It means this virtual function is pure.</p>
+<p>For the context of non-C++ programmers here, pure virtual function means a function which must be defined as part of the derived class, thus allowing the class in which they are declared (abstract class) to act as an interface for accessing any class derived from it.</p>
+<p>This concept is present in various programming languages like Java, Go etc. and is very useful to implement design patterns like the strategy pattern.</p>
+<h2 id="What-C-needs"><a href="#What-C-needs" class="headerlink" title="What C++ needs?"></a>What C++ needs?</h2><p>C++ has a concept called specifiers - some keywords mentioned after the () of function to tell more about a function.</p>
+<p>My favorite specifier is <code>const</code> specifier.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">  <span class="keyword">int</span> _id;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  Employee(<span class="keyword">int</span> id): _id&#123;id&#125; &#123;&#125;</span><br><span class="line">  <span class="function"><span class="keyword">int</span> <span class="title">getId</span><span class="params">()</span> <span class="keyword">const</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> _id;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Employee emp1 &#123;<span class="number">1</span>&#125;;</span><br><span class="line"><span class="keyword">auto</span> id1 = emp1.getId(); <span class="comment">// OK, as type is const Employee</span></span><br><span class="line"></span><br><span class="line">Employee emp2 &#123;<span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">auto</span> id2 = emp2.getId(); <span class="comment">// Error, as type is Employee</span></span><br></pre></td></tr></table></figure>
+<p><code>const</code> specifier allows the function to be available only for the const variant of the class.</p>
+<p>This is cool. So, if we want to denote a pure virtual function in a class, all we need is a specifier called <code>pure</code>.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Command</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span> pure</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>Even better is</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Command</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span> pure <span class="keyword">virtual</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>But here we are still stuck with <code>= 0</code> instead of <code>pure</code> or <code>pure virtual</code>.</p>
+<h2 id="Why-so"><a href="#Why-so" class="headerlink" title="Why so?"></a>Why so?</h2><p>Why C++ does not have a pure keyword?</p>
+<p>A Google search skill took me to <a href="https://softwareengineering.stackexchange.com/questions/284412/why-does-c-not-have-a-pure-keyword-for-virtual-functions" target="_blank" rel="noopener">this page</a>.</p>
+<p>It references Bjarne Stroustrup’s answer for this question in <a href="http://www.stroustrup.com/dne.html" target="_blank" rel="noopener">The Design and Evolution of C++</a></p>
+<blockquote>
+<p>The curious = 0 syntax was chosen over the obvious alternative of introducing a new keyword pure or abstract because at the time I saw no chance of getting a new keyword accepted. Had I suggested pure, Release 2.0 would have shipped without abstract classes. Given a choice between a nicer syntax and abstract classes, I chose abstract classes. Rather than risking delay and incurring the certain fights over pure, I used the tradition C and C++ convention of using 0 to represent not there.</p>
+</blockquote>
+<p>Seems like even the greatest are in the race to catch release deadlines :D</p>
+<h2 id="Why-we-are-ok-with-it"><a href="#Why-we-are-ok-with-it" class="headerlink" title="Why we are ok with it?"></a>Why we are ok with it?</h2><p>Because C++ allows us to define our own <code>pure</code>. Remember macros?</p>
+<p>I found this simple and very cool (IMO) technique/code while reading <a href="https://github.com/envoyproxy/envoy" target="_blank" rel="noopener">envoyproxy’s code</a>.</p>
+<p>A pure virtual function in envoyproxy’s code base looks like</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Command</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span> PURE</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>pretty close to what we need, huh?</p>
+<p>I went in and checked how it worked. Answer to it is present in a header file called <a href="https://github.com/envoyproxy/envoy/blob/15706964a29e595c045a5d7ef0646d04f347dcc1/include/envoy/common/pure.h" target="_blank" rel="noopener">pure.h</a>.</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> Envoy &#123;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Friendly name for a pure virtual routine.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PURE = 0</span></span><br><span class="line">&#125; <span class="comment">// Envoy</span></span><br></pre></td></tr></table></figure>
+<p>That’s it! Simple, but elegant usage of macros. This code is pure bliss and I wish for more things like <code>pure.h</code> in this world.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Prelude"><span class="toc-number">1.</span> <span class="toc-text">Prelude</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#What-C-needs"><span class="toc-number">2.</span> <span class="toc-text">What C++ needs?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-so"><span class="toc-number">3.</span> <span class="toc-text">Why so?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-we-are-ok-with-it"><span class="toc-number">4.</span> <span class="toc-text">Why we are ok with it?</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/pure-h/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/pure-h/&text=pure.h"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/pure-h/&is_video=false&description=pure.h"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=pure.h&body=Check out this article: https://vishnubharathi.codes/blog/pure-h/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/pure-h/&name=pure.h&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/pure-h/&t=pure.h"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-64308743-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+
+</body>
+</html>
