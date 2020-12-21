@@ -15,14 +15,6 @@ Source: [Before the Startup](http://www.paulgraham.com/before.html)
 
 ---
 
-> When we don't know what we want in life, the next best thing that we want is everything.
-
-By: Ankur Warikoo
-
-Source: [Do you HATE your job but can't quit?](https://www.youtube.com/watch?v=HpvCXV4mcMM)
-
----
-
 > Those who stand on tiptoes do not stand firmly. Those who rush ahead don't get very far. Those who try to outshine others dim their own light.
 
 By: Lao Tzu
