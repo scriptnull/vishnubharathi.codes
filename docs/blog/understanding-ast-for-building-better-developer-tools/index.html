@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="If you had used a full fledged IDE like Visual Studio, Eclipse, Android Studio etc. you may have noticed features like code completion, linters etc. Code completion in VS Code Code linting in VS Code">
-<meta name="keywords" content="programming,software">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Understanding AST for building better developer tools">
 <meta property="og:url" content="https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/index.html">
 <meta property="og:site_name" content="Vishnu Bharathi">
 <meta property="og:description" content="If you had used a full fledged IDE like Visual Studio, Eclipse, Android Studio etc. you may have noticed features like code completion, linters etc. Code completion in VS Code Code linting in VS Code">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*AzXU42cs7MUtW5ZuMX6vpg.png">
 <meta property="og:image" content="https://cdn-images-1.medium.com/max/2000/1*AevLZ5XepOaLNrhZmWRMTA.png">
-<meta property="og:updated_time" content="2020-11-01T19:05:11.505Z">
+<meta property="article:published_time" content="2017-08-01T22:30:00.000Z">
+<meta property="article:modified_time" content="2020-12-21T17:52:14.053Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="software">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Understanding AST for building better developer tools">
-<meta name="twitter:description" content="If you had used a full fledged IDE like Visual Studio, Eclipse, Android Studio etc. you may have noticed features like code completion, linters etc. Code completion in VS Code Code linting in VS Code">
 <meta name="twitter:image" content="https://cdn-images-1.medium.com/max/2000/1*AzXU42cs7MUtW5ZuMX6vpg.png">
     
     
@@ -42,15 +43,19 @@
     <!-- title -->
     <title>Understanding AST for building better developer tools</title>
     <!-- styles -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
     <!-- persian styles -->
     
-      <link rel="stylesheet" href="/css/rtl.css">
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
     
     <!-- rss -->
     
     
-</head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 <body class="max-width mx-auto px3 ltr">
     
@@ -68,7 +73,7 @@
         
       </ul>
     </span>
-    <br>
+    <br/>
     <span id="actions">
       <ul>
         
@@ -85,33 +90,33 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br>
+    <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&text=Understanding AST for building better developer tools"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&is_video=false&description=Understanding AST for building better developer tools"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&text=Understanding AST for building better developer tools"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&is_video=false&description=Understanding AST for building better developer tools"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="mailto:?subject=Understanding AST for building better developer tools&body=Check out this article: https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&name=Understanding AST for building better developer tools&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&t=Understanding AST for building better developer tools"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&name=Understanding AST for building better developer tools&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&t=Understanding AST for building better developer tools"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-AST"><span class="toc-number">1.</span> <span class="toc-text">What is AST?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compilers-and-AST"><span class="toc-number">2.</span> <span class="toc-text">Compilers and AST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Developer-tools-and-AST"><span class="toc-number">3.</span> <span class="toc-text">Developer tools and AST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Practice"><span class="toc-number">4.</span> <span class="toc-text">Practice</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#“அடுக்கி-வரினும்-அழிவிலான்-உற்ற"><span class="toc-number"></span> <span class="toc-text">“அடுக்கி வரினும் அழிவிலான் உற்ற</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#இடுக்கண்-இடுக்கட்-படும்-”"><span class="toc-number"></span> <span class="toc-text">இடுக்கண் இடுக்கட் படும்.”</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#—-திருக்குறள்"><span class="toc-number"></span> <span class="toc-text">— திருக்குறள்</span></a>
-    </li></div>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-AST"><span class="toc-number">1.</span> <span class="toc-text">What is AST?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compilers-and-AST"><span class="toc-number">2.</span> <span class="toc-text">Compilers and AST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Developer-tools-and-AST"><span class="toc-number">3.</span> <span class="toc-text">Developer tools and AST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Practice"><span class="toc-number">4.</span> <span class="toc-text">Practice</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%80%9C%E0%AE%85%E0%AE%9F%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%BF-%E0%AE%B5%E0%AE%B0%E0%AE%BF%E0%AE%A9%E0%AF%81%E0%AE%AE%E0%AF%8D-%E0%AE%85%E0%AE%B4%E0%AE%BF%E0%AE%B5%E0%AE%BF%E0%AE%B2%E0%AE%BE%E0%AE%A9%E0%AF%8D-%E0%AE%89%E0%AE%B1%E0%AF%8D%E0%AE%B1"><span class="toc-number"></span> <span class="toc-text">“அடுக்கி வரினும் அழிவிலான் உற்ற</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E0%AE%87%E0%AE%9F%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%A3%E0%AF%8D-%E0%AE%87%E0%AE%9F%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%9F%E0%AF%8D-%E0%AE%AA%E0%AE%9F%E0%AF%81%E0%AE%AE%E0%AF%8D-%E2%80%9D"><span class="toc-number"></span> <span class="toc-text">இடுக்கண் இடுக்கட் படும்.”</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%80%94-%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AE%B3%E0%AF%8D"><span class="toc-number"></span> <span class="toc-text">— திருக்குறள்</span></a>
+    </div>
   </span>
 </div>
 
     
     <div class="content index py4">
         
-        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
@@ -135,7 +140,7 @@
       
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/programming/">programming</a>, <a class="tag-link" href="/tags/software/">software</a>
+        <a class="tag-link-link" href="/tags/programming/" rel="tag">programming</a>, <a class="tag-link-link" href="/tags/software/" rel="tag">software</a>
     </div>
 
 
@@ -148,28 +153,28 @@
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*AzXU42cs7MUtW5ZuMX6vpg.png" alt="Code completion in VS Code"><em>Code completion in VS Code</em></p>
 <p><img src="https://cdn-images-1.medium.com/max/2000/1*AevLZ5XepOaLNrhZmWRMTA.png" alt="Code linting in VS Code"><em>Code linting in VS Code</em></p>
 <p>These are pretty amazing features, that help a lot. I always wonder how these kind of tools work?</p>
-<p>Seems like the answer is pretty simple. They all use <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank" rel="noopener">Abstract Syntax Tree (AST)</a>.</p>
+<p>Seems like the answer is pretty simple. They all use <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">Abstract Syntax Tree (AST)</a>.</p>
 <p>That’s interesting, because I have taken a “Compiler Design” course in college and seem to have come across the term throughout the course. But never really got to see it in action.</p>
 <p>So, I decided to jump a bit and explore.</p>
-<iframe src="https://medium.com/media/32d528fe3448b395032630a34fae30de" frameborder="0"></iframe>
+<iframe src="https://medium.com/media/32d528fe3448b395032630a34fae30de" frameborder=0></iframe>
 
 <h3 id="What-is-AST"><a href="#What-is-AST" class="headerlink" title="What is AST?"></a>What is AST?</h3><p>Abstract is not having a concrete form. Syntax is the structure of code. Tree is a data structure.</p>
-<p>When the compiler tries to compile the source code, it does it <a href="https://www.tutorialspoint.com/compiler_design/compiler_design_phases_of_compiler.htm" target="_blank" rel="noopener">phase by phase</a>. First, the compiler generates tokens from the source code. Then it forms a tree with the tokens generated previously. This help us in removing inessential data like punctuation marks, spaces etc. and help the compiler to just focus on the important things. Yay! <a href="https://www.youtube.com/watch?v=SsoOG6ZeyUI" target="_blank" rel="noopener">No more “Tabs Vs Spaces”</a>.</p>
-<p>Feel free to dive deep on the <a href="https://en.wikipedia.org/wiki/Abstract_syntax_tree" target="_blank" rel="noopener">Wikipedia</a> Page.</p>
+<p>When the compiler tries to compile the source code, it does it <a target="_blank" rel="noopener" href="https://www.tutorialspoint.com/compiler_design/compiler_design_phases_of_compiler.htm">phase by phase</a>. First, the compiler generates tokens from the source code. Then it forms a tree with the tokens generated previously. This help us in removing inessential data like punctuation marks, spaces etc. and help the compiler to just focus on the important things. Yay! <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=SsoOG6ZeyUI">No more “Tabs Vs Spaces”</a>.</p>
+<p>Feel free to dive deep on the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Abstract_syntax_tree">Wikipedia</a> Page.</p>
 <h3 id="Compilers-and-AST"><a href="#Compilers-and-AST" class="headerlink" title="Compilers and AST"></a>Compilers and AST</h3><p>One thing to note is if there is some error, compiler uses the information in the AST to report where the error exists to the user. Thats freaking awesome. All the error messages that I see while compiling my code is actually being generated with the help of AST.</p>
 <h3 id="Developer-tools-and-AST"><a href="#Developer-tools-and-AST" class="headerlink" title="Developer tools and AST"></a>Developer tools and AST</h3><p>Do we have to wait for the compiler to report errors in our code. Couldn’t we just make our code editor catch those silly errors and show to them while typing the code. If the IDE program or editor plugin could generate the tool AST by themselves, when the user types in the code, this could be possible.</p>
 <p>So, my initial guess is that generating ASTs alone inside the developer tools could help a lot in accessing various information related to the code that user writes.</p>
-<h3 id="Practice"><a href="#Practice" class="headerlink" title="Practice"></a>Practice</h3><p>So, I wanted to play around with ASTs practically. Recently, I have been trying to program in Go programming language. I came across this tool called <a href="https://github.com/dominikh/go-tools/tree/master/cmd/gosimple" target="_blank" rel="noopener">gosimple</a>. It is a linter that provides suggestion for simplifying the code.</p>
-<p>I saw some of the open tasks welcoming contribution in the issue tracker of that tool. So, I decided to <a href="https://github.com/dominikh/go-tools/issues/67" target="_blank" rel="noopener">pick one</a> and started working on it. May be this will help me unveil the truth.</p>
-<p>Yes. It did. Seems like gosimple uses the inbuilt <a href="https://golang.org/pkg/go/ast/" target="_blank" rel="noopener">go/ast package</a> provided by Go standard library. The same package is being used by the Go parser to build Go source code.</p>
+<h3 id="Practice"><a href="#Practice" class="headerlink" title="Practice"></a>Practice</h3><p>So, I wanted to play around with ASTs practically. Recently, I have been trying to program in Go programming language. I came across this tool called <a target="_blank" rel="noopener" href="https://github.com/dominikh/go-tools/tree/master/cmd/gosimple">gosimple</a>. It is a linter that provides suggestion for simplifying the code.</p>
+<p>I saw some of the open tasks welcoming contribution in the issue tracker of that tool. So, I decided to <a target="_blank" rel="noopener" href="https://github.com/dominikh/go-tools/issues/67">pick one</a> and started working on it. May be this will help me unveil the truth.</p>
+<p>Yes. It did. Seems like gosimple uses the inbuilt <a target="_blank" rel="noopener" href="https://golang.org/pkg/go/ast/">go/ast package</a> provided by Go standard library. The same package is being used by the Go parser to build Go source code.</p>
 <p>A tree is built of nodes. In go/ast, the tree is built on top three kinds of nodes.</p>
 <blockquote>
-<p>There are 3 main classes of nodes: Expressions and type nodes, statement nodes, and declaration nodes. — <a href="https://github.com/golang/go/blob/master/src/go/ast/ast.go#L20" target="_blank" rel="noopener">go/ast source code commen</a>t</p>
+<p>There are 3 main classes of nodes: Expressions and type nodes, statement nodes, and declaration nodes. — <a target="_blank" rel="noopener" href="https://github.com/golang/go/blob/master/src/go/ast/ast.go#L20">go/ast source code commen</a>t</p>
 </blockquote>
-<p>Once I learnt about the basic node types, it was easy for me to write the <a href="https://github.com/dominikh/go-tools/issues/67" target="_blank" rel="noopener">linting rule for gosimple, that I was working on.</a> gosimple traverses the AST in a depth-first order and checks for the satisfaction of a linting rule at every node. If the node matches the preconditions, the linting rule is run and we return a boolean representing to allow traversal further down.</p>
-<p>Cool! I sat down to write some code and here it is<br><a href="https://github.com/dominikh/go-tools/pull/148" target="_blank" rel="noopener"><strong>simple: adds S1031 LintNilCheckAroundRange by scriptnull · Pull Request #148 · dominikh/go-tools</strong><br><em>Fixes #67 I am relatively new to manipulating AST and this code base. So, please take a look at the code and let me…</em>github.com</a></p>
+<p>Once I learnt about the basic node types, it was easy for me to write the <a target="_blank" rel="noopener" href="https://github.com/dominikh/go-tools/issues/67">linting rule for gosimple, that I was working on.</a> gosimple traverses the AST in a depth-first order and checks for the satisfaction of a linting rule at every node. If the node matches the preconditions, the linting rule is run and we return a boolean representing to allow traversal further down.</p>
+<p>Cool! I sat down to write some code and here it is<br><a target="_blank" rel="noopener" href="https://github.com/dominikh/go-tools/pull/148"><strong>simple: adds S1031 LintNilCheckAroundRange by scriptnull · Pull Request #148 · dominikh/go-tools</strong><br><em>Fixes #67 I am relatively new to manipulating AST and this code base. So, please take a look at the code and let me…</em>github.com</a></p>
 <p>Its still in review phase at the time of writing this post. So, let me wait and see how things turn out. But overall, it was fun to read, understand and write code with ASTs.</p>
-<p>Thanks for reading. I quote verses from my favourite Tamil literature “<a href="https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7" target="_blank" rel="noopener">Tirukkuṛaḷ</a>” at the end of my blog posts.</p>
+<p>Thanks for reading. I quote verses from my favourite Tamil literature “<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7">Tirukkuṛaḷ</a>” at the end of my blog posts.</p>
 <blockquote>
 <h1 id="“அடுக்கி-வரினும்-அழிவிலான்-உற்ற"><a href="#“அடுக்கி-வரினும்-அழிவிலான்-உற்ற" class="headerlink" title="“அடுக்கி வரினும் அழிவிலான் உற்ற"></a>“அடுக்கி வரினும் அழிவிலான் உற்ற</h1><h1 id="இடுக்கண்-இடுக்கட்-படும்-”"><a href="#இடுக்கண்-இடுக்கட்-படும்-”" class="headerlink" title="இடுக்கண் இடுக்கட் படும்.”"></a>இடுக்கண் இடுக்கட் படும்.”</h1><h1 id="—-திருக்குறள்"><a href="#—-திருக்குறள்" class="headerlink" title="— திருக்குறள்"></a><em>— திருக்குறள்</em></h1></blockquote>
 <p>Translated meaning (in my words): When a man tries to overcome his sorrows in life constantly, the sorrows will become sorrowful in front of him and eventually fade away.</p>
@@ -194,22 +199,22 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-AST"><span class="toc-number">1.</span> <span class="toc-text">What is AST?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compilers-and-AST"><span class="toc-number">2.</span> <span class="toc-text">Compilers and AST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Developer-tools-and-AST"><span class="toc-number">3.</span> <span class="toc-text">Developer tools and AST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Practice"><span class="toc-number">4.</span> <span class="toc-text">Practice</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#“அடுக்கி-வரினும்-அழிவிலான்-உற்ற"><span class="toc-number"></span> <span class="toc-text">“அடுக்கி வரினும் அழிவிலான் உற்ற</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#இடுக்கண்-இடுக்கட்-படும்-”"><span class="toc-number"></span> <span class="toc-text">இடுக்கண் இடுக்கட் படும்.”</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#—-திருக்குறள்"><span class="toc-number"></span> <span class="toc-text">— திருக்குறள்</span></a>
-    </li></div>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#What-is-AST"><span class="toc-number">1.</span> <span class="toc-text">What is AST?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Compilers-and-AST"><span class="toc-number">2.</span> <span class="toc-text">Compilers and AST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Developer-tools-and-AST"><span class="toc-number">3.</span> <span class="toc-text">Developer tools and AST</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Practice"><span class="toc-number">4.</span> <span class="toc-text">Practice</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%80%9C%E0%AE%85%E0%AE%9F%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%BF-%E0%AE%B5%E0%AE%B0%E0%AE%BF%E0%AE%A9%E0%AF%81%E0%AE%AE%E0%AF%8D-%E0%AE%85%E0%AE%B4%E0%AE%BF%E0%AE%B5%E0%AE%BF%E0%AE%B2%E0%AE%BE%E0%AE%A9%E0%AF%8D-%E0%AE%89%E0%AE%B1%E0%AF%8D%E0%AE%B1"><span class="toc-number"></span> <span class="toc-text">“அடுக்கி வரினும் அழிவிலான் உற்ற</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E0%AE%87%E0%AE%9F%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%A3%E0%AF%8D-%E0%AE%87%E0%AE%9F%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AE%9F%E0%AF%8D-%E0%AE%AA%E0%AE%9F%E0%AF%81%E0%AE%AE%E0%AF%8D-%E2%80%9D"><span class="toc-number"></span> <span class="toc-text">இடுக்கண் இடுக்கட் படும்.”</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%80%94-%E0%AE%A4%E0%AE%BF%E0%AE%B0%E0%AF%81%E0%AE%95%E0%AF%8D%E0%AE%95%E0%AF%81%E0%AE%B1%E0%AE%B3%E0%AF%8D"><span class="toc-number"></span> <span class="toc-text">— திருக்குறள்</span></a>
+    </div>
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&text=Understanding AST for building better developer tools"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&is_video=false&description=Understanding AST for building better developer tools"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&text=Understanding AST for building better developer tools"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&is_video=false&description=Understanding AST for building better developer tools"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="mailto:?subject=Understanding AST for building better developer tools&body=Check out this article: https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&name=Understanding AST for building better developer tools&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&t=Understanding AST for building better developer tools"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&title=Understanding AST for building better developer tools"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&name=Understanding AST for building better developer tools&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/understanding-ast-for-building-better-developer-tools/&t=Understanding AST for building better developer tools"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -227,7 +232,7 @@
         
         <footer id="footer">
 <div class="footer-left">
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
 </div>
 <div class="footer-right">
 <nav>
@@ -247,15 +252,25 @@
 
     </div>
     <!-- styles -->
+
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
 <link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
+
     <!-- jquery -->
+
 <script src="/lib/jquery/jquery.min.js"></script>
+
+
 <script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
 <!-- clipboard -->
 
-  <script src="/lib/clipboard/clipboard.min.js"></script>
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
@@ -276,7 +291,9 @@
   })
   </script>
 
+
 <script src="/js/main.js"></script>
+
 <!-- search -->
 
 <!-- Google Analytics -->

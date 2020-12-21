@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="Mocha stays very closer to me than any other test framework, I have worked with. I love reading and writing idiomatic code. The best thing about all the fancy libraries out there is that they help us">
-<meta name="keywords" content="programming,software,nodejs,npm,testing,library">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mocha-github-reporter v1.0.0">
 <meta property="og:url" content="https://vishnubharathi.codes/blog/mocha-github-reporter/index.html">
 <meta property="og:site_name" content="Vishnu Bharathi">
 <meta property="og:description" content="Mocha stays very closer to me than any other test framework, I have worked with. I love reading and writing idiomatic code. The best thing about all the fancy libraries out there is that they help us">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://cdn-images-1.medium.com/max/2078/1*1JvQ9h1ua4TBHiBl-I4OsA.png">
 <meta property="og:image" content="https://cdn-images-1.medium.com/max/2842/1*CxuloN6dl65GqeT1pjGOAQ.png">
 <meta property="og:image" content="https://cdn-images-1.medium.com/max/2752/1*cGiVhnYZlSdhWgvSfR0DIQ.png">
 <meta property="og:image" content="https://cdn-images-1.medium.com/max/2752/1*jMOFzGvv7SK3I-rvfW4L3w.png">
 <meta property="og:image" content="https://cdn-images-1.medium.com/max/2752/1*pZuUKEYtawFcsAM9kKHELg.png">
-<meta property="og:updated_time" content="2020-11-01T19:05:11.501Z">
+<meta property="article:published_time" content="2017-03-10T22:30:00.000Z">
+<meta property="article:modified_time" content="2020-12-21T17:52:14.053Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="software">
+<meta property="article:tag" content="nodejs">
+<meta property="article:tag" content="npm">
+<meta property="article:tag" content="testing">
+<meta property="article:tag" content="library">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mocha-github-reporter v1.0.0">
-<meta name="twitter:description" content="Mocha stays very closer to me than any other test framework, I have worked with. I love reading and writing idiomatic code. The best thing about all the fancy libraries out there is that they help us">
 <meta name="twitter:image" content="https://cdn-images-1.medium.com/max/2078/1*1JvQ9h1ua4TBHiBl-I4OsA.png">
     
     
@@ -45,15 +50,19 @@
     <!-- title -->
     <title>mocha-github-reporter v1.0.0</title>
     <!-- styles -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
     <!-- persian styles -->
     
-      <link rel="stylesheet" href="/css/rtl.css">
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
     
     <!-- rss -->
     
     
-</head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 <body class="max-width mx-auto px3 ltr">
     
@@ -71,7 +80,7 @@
         
       </ul>
     </span>
-    <br>
+    <br/>
     <span id="actions">
       <ul>
         
@@ -88,20 +97,20 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br>
+    <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/mocha-github-reporter/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&text=mocha-github-reporter v1.0.0"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&is_video=false&description=mocha-github-reporter v1.0.0"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/mocha-github-reporter/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&text=mocha-github-reporter v1.0.0"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&is_video=false&description=mocha-github-reporter v1.0.0"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="mailto:?subject=mocha-github-reporter v1.0.0&body=Check out this article: https://vishnubharathi.codes/blog/mocha-github-reporter/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&name=mocha-github-reporter v1.0.0&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/mocha-github-reporter/&t=mocha-github-reporter v1.0.0"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&name=mocha-github-reporter v1.0.0&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/mocha-github-reporter/&t=mocha-github-reporter v1.0.0"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -114,7 +123,7 @@
     
     <div class="content index py4">
         
-        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
@@ -138,7 +147,7 @@
       
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/library/">library</a>, <a class="tag-link" href="/tags/nodejs/">nodejs</a>, <a class="tag-link" href="/tags/npm/">npm</a>, <a class="tag-link" href="/tags/programming/">programming</a>, <a class="tag-link" href="/tags/software/">software</a>, <a class="tag-link" href="/tags/testing/">testing</a>
+        <a class="tag-link-link" href="/tags/library/" rel="tag">library</a>, <a class="tag-link-link" href="/tags/nodejs/" rel="tag">nodejs</a>, <a class="tag-link-link" href="/tags/npm/" rel="tag">npm</a>, <a class="tag-link-link" href="/tags/programming/" rel="tag">programming</a>, <a class="tag-link-link" href="/tags/software/" rel="tag">software</a>, <a class="tag-link-link" href="/tags/testing/" rel="tag">testing</a>
     </div>
 
 
@@ -149,32 +158,32 @@
   <div class="content" itemprop="articleBody">
     <p>Mocha stays very closer to me than any other test framework, I have worked with. I love reading and writing idiomatic code. The best thing about all the fancy libraries out there is that they help us write idiomatic code.</p>
 <p>They drag us into their own world. They give some primitive structures and give us the tools. They help you think in a different way ( right way ), that makes writing code easier and more intuitive.</p>
-<h3 id="CI-Workflow"><a href="#CI-Workflow" class="headerlink" title="CI Workflow"></a>CI Workflow</h3><p>A lot of companies and projects employ <a href="https://en.wikipedia.org/wiki/Continuous_integration" target="_blank" rel="noopener">Continuous Integration</a> ( often mentioned as CI ). These <a href="https://github.com/ciandcd/awesome-ciandcd#online-build-system" target="_blank" rel="noopener">CI systems</a>, enables running tests, generating coverage reports etc. whenever some code is merged in a project.</p>
-<p>These tests run on different machine and is usually a one provided by a SaaS CI system. When tests fail or coverage is below expected, these CI systems notify it via their web dashboards, Messaging apps like <a href="https://slack.com/" target="_blank" rel="noopener">Slack</a>, <a href="https://gitter.im/" target="_blank" rel="noopener">Gitter</a> etc.</p>
-<p><img src="https://cdn-images-1.medium.com/max/2078/1*1JvQ9h1ua4TBHiBl-I4OsA.png" alt="Web dashboard notification for test failures. ( CI System : [Shippable](https://app.shippable.com/) )"><em>Web dashboard notification for test failures. ( CI System : <a href="https://app.shippable.com/" target="_blank" rel="noopener">Shippable</a> )</em></p>
+<h3 id="CI-Workflow"><a href="#CI-Workflow" class="headerlink" title="CI Workflow"></a>CI Workflow</h3><p>A lot of companies and projects employ <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Continuous_integration">Continuous Integration</a> ( often mentioned as CI ). These <a target="_blank" rel="noopener" href="https://github.com/ciandcd/awesome-ciandcd#online-build-system">CI systems</a>, enables running tests, generating coverage reports etc. whenever some code is merged in a project.</p>
+<p>These tests run on different machine and is usually a one provided by a SaaS CI system. When tests fail or coverage is below expected, these CI systems notify it via their web dashboards, Messaging apps like <a target="_blank" rel="noopener" href="https://slack.com/">Slack</a>, <a target="_blank" rel="noopener" href="https://gitter.im/">Gitter</a> etc.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2078/1*1JvQ9h1ua4TBHiBl-I4OsA.png" alt="Web dashboard notification for test failures. ( CI System : [Shippable](https://app.shippable.com/) )"><em>Web dashboard notification for test failures. ( CI System : <a target="_blank" rel="noopener" href="https://app.shippable.com/">Shippable</a> )</em></p>
 <p><img src="https://cdn-images-1.medium.com/max/2842/1*CxuloN6dl65GqeT1pjGOAQ.png" alt="Web Dashboard reports passing of tests"><em>Web Dashboard reports passing of tests</em></p>
-<h3 id="Github-Issues"><a href="#Github-Issues" class="headerlink" title="Github Issues"></a>Github Issues</h3><p><a href="https://github.com/" target="_blank" rel="noopener">Github</a> issue tracker is a great tool to work on software projects. It helps in reporting, tracking and triaging bugs, feature requests etc.</p>
+<h3 id="Github-Issues"><a href="#Github-Issues" class="headerlink" title="Github Issues"></a>Github Issues</h3><p><a target="_blank" rel="noopener" href="https://github.com/">Github</a> issue tracker is a great tool to work on software projects. It helps in reporting, tracking and triaging bugs, feature requests etc.</p>
 <p>A most commonly seen workflow looks like this. When one person merges some code to the master branch ( the final branch ), CI system triggers and reports the error in web dashboard. The project maintainer or someone else observes it and opens an issue in github and marks it with appropriate label. The person who broke the build or someone else merges the fix until the build becomes green and closes the github issue finally.</p>
 <p>People usually ( at least me ) often go to the web dashboard of CI systems, only when the build fails and copy paste the failed test details in a github issue.</p>
 <h3 id="Automating-Github-Issue-Creation"><a href="#Automating-Github-Issue-Creation" class="headerlink" title="Automating Github Issue Creation"></a>Automating Github Issue Creation</h3><p>I have seen code, that couples reporting the test results inside the mocha tests itself.</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// WARNING: Following code snippet is a bad practice.</span></span><br><span class="line"></span><br><span class="line">describe(<span class="string">'test suite'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// store failed tests for reporting</span></span><br><span class="line">  <span class="keyword">var</span> failedTests = [];</span><br><span class="line"></span><br><span class="line">  it(<span class="string">'test case 1'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="comment">// some test</span></span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  it(<span class="string">'test case 1'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="comment">// some test</span></span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  after(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">if</span> (failedTests.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">       <span class="comment">// make HTTP call to create github issue</span></span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// WARNING: Following code snippet is a bad practice.</span></span><br><span class="line"></span><br><span class="line">describe(<span class="string">&#x27;test suite&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">// store failed tests for reporting</span></span><br><span class="line">  <span class="keyword">var</span> failedTests = [];</span><br><span class="line"></span><br><span class="line">  it(<span class="string">&#x27;test case 1&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="comment">// some test</span></span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  it(<span class="string">&#x27;test case 1&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="comment">// some test</span></span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">  after(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">     <span class="keyword">if</span> (failedTests.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">       <span class="comment">// make HTTP call to create github issue</span></span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 <p>As you might guess, this after function gets copied to all the test case files and results in duplicated code all over.</p>
 <p>After reading code like this somewhere, I started asking myself the some basic questions</p>
 <p>1.What can be done to avoid such duplication ?</p>
 <ol start="2">
 <li>What is the right abstraction that separates the tests from how it is reported ?</li>
 </ol>
-<p>After browsing through mocha docs, I happened to discover <a href="https://mochajs.org/#reporters" target="_blank" rel="noopener">mocha reporters</a>.</p>
+<p>After browsing through mocha docs, I happened to discover <a target="_blank" rel="noopener" href="https://mochajs.org/#reporters">mocha reporters</a>.</p>
 <h3 id="Mocha-Reporters"><a href="#Mocha-Reporters" class="headerlink" title="Mocha Reporters"></a>Mocha Reporters</h3><p>Once the tests are complete, mocha reporters are interfaces that report the test results to the developer visually. They range from fancy formatted text output to html outputs.</p>
 <p>So, this was the thing I was talking about in the beginning. Reporters is just a abstraction provided by mocha to present your test data.</p>
 <p>I decided to quickly rollout a library that can be used as devDependency in a project.</p>
 <h3 id="Meet-mocha-github-reporter"><a href="#Meet-mocha-github-reporter" class="headerlink" title="Meet mocha-github-reporter"></a>Meet mocha-github-reporter</h3><p>Its a custom mocha reporter, that can be used to report mocha test results as a github issue from various CI systems.</p>
-<p>Its published in <a href="https://www.npmjs.com/package/mocha-github-reporter" target="_blank" rel="noopener">npm</a> and its source code is available open on <a href="https://github.com/scriptnull/mocha-github-reporter" target="_blank" rel="noopener">github</a>.</p>
+<p>Its published in <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/mocha-github-reporter">npm</a> and its source code is available open on <a target="_blank" rel="noopener" href="https://github.com/scriptnull/mocha-github-reporter">github</a>.</p>
 <h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><p>It can be installed as devDependency via npm</p>
 <pre><code>$ npm install --save-dev mocha-github-reporter
 </code></pre><h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h3><p>Setting it up should be straight forward. The required environment variables has to be set first.</p>
 <ul>
-<li><p>GITHUB_ACCESS_TOKEN— It can be generated <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">here</a>. Make sure that, you don’t expose this token and have it as a secure environment variable in your CI system.</p>
+<li><p>GITHUB_ACCESS_TOKEN— It can be generated <a target="_blank" rel="noopener" href="https://github.com/settings/tokens">here</a>. Make sure that, you don’t expose this token and have it as a secure environment variable in your CI system.</p>
 </li>
 <li><p>GITHUB_REPO_SLUG — Github repository where the issue has to be created for test results.</p>
 </li>
@@ -201,9 +210,9 @@
 <p>That’s it. We have decoupled the code for reporting test results from the actual tests.</p>
 <p>Thanks for taking time to read this. Please free to share your suggestions and thoughts around this.</p>
 <h3 id="Quick-Links"><a href="#Quick-Links" class="headerlink" title="Quick Links"></a>Quick Links</h3><ul>
-<li><p>Github — <a href="https://github.com/scriptnull/mocha-github-reporter" target="_blank" rel="noopener">https://github.com/scriptnull/mocha-github-reporter</a></p>
+<li><p>Github — <a target="_blank" rel="noopener" href="https://github.com/scriptnull/mocha-github-reporter">https://github.com/scriptnull/mocha-github-reporter</a></p>
 </li>
-<li><p>npm — <a href="https://www.npmjs.com/package/mocha-github-reporter" target="_blank" rel="noopener">https://www.npmjs.com/package/mocha-github-reporter</a></p>
+<li><p>npm — <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/mocha-github-reporter">https://www.npmjs.com/package/mocha-github-reporter</a></p>
 </li>
 </ul>
 
@@ -232,17 +241,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/mocha-github-reporter/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&text=mocha-github-reporter v1.0.0"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&is_video=false&description=mocha-github-reporter v1.0.0"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/mocha-github-reporter/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&text=mocha-github-reporter v1.0.0"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&is_video=false&description=mocha-github-reporter v1.0.0"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="mailto:?subject=mocha-github-reporter v1.0.0&body=Check out this article: https://vishnubharathi.codes/blog/mocha-github-reporter/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&name=mocha-github-reporter v1.0.0&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/mocha-github-reporter/&t=mocha-github-reporter v1.0.0"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&title=mocha-github-reporter v1.0.0"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/mocha-github-reporter/&name=mocha-github-reporter v1.0.0&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/mocha-github-reporter/&t=mocha-github-reporter v1.0.0"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -260,7 +269,7 @@
         
         <footer id="footer">
 <div class="footer-left">
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
 </div>
 <div class="footer-right">
 <nav>
@@ -280,15 +289,25 @@
 
     </div>
     <!-- styles -->
+
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
 <link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
+
     <!-- jquery -->
+
 <script src="/lib/jquery/jquery.min.js"></script>
+
+
 <script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
 <!-- clipboard -->
 
-  <script src="/lib/clipboard/clipboard.min.js"></script>
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
@@ -309,7 +328,9 @@
   })
   </script>
 
+
 <script src="/js/main.js"></script>
+
 <!-- search -->
 
 <!-- Google Analytics -->

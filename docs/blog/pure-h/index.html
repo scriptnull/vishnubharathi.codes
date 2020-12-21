@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="PreludeWhen writing pure virtual functions in C++, I raise my eyebrows because the syntax for it feels weird to me. 1234class Command &amp;#123;public:  virtual void execute() = 0;&amp;#125;; Notice = 0 ? It">
-<meta name="keywords" content="programming,c++">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="PreludeWhen writing pure virtual functions in C++, I raise my eyebrows because the syntax for it feels weird to me. 1234class Command &amp;#123;public:  virtual void execute() &#x3D; 0;&amp;#125;; Notice &#x3D; 0 ? It">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pure.h">
 <meta property="og:url" content="https://vishnubharathi.codes/blog/pure-h/index.html">
 <meta property="og:site_name" content="Vishnu Bharathi">
-<meta property="og:description" content="PreludeWhen writing pure virtual functions in C++, I raise my eyebrows because the syntax for it feels weird to me. 1234class Command &amp;#123;public:  virtual void execute() = 0;&amp;#125;; Notice = 0 ? It">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-11-01T19:05:11.501Z">
+<meta property="og:description" content="PreludeWhen writing pure virtual functions in C++, I raise my eyebrows because the syntax for it feels weird to me. 1234class Command &amp;#123;public:  virtual void execute() &#x3D; 0;&amp;#125;; Notice &#x3D; 0 ? It">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2018-11-30T15:39:03.000Z">
+<meta property="article:modified_time" content="2020-12-21T17:52:14.053Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pure.h">
-<meta name="twitter:description" content="PreludeWhen writing pure virtual functions in C++, I raise my eyebrows because the syntax for it feels weird to me. 1234class Command &amp;#123;public:  virtual void execute() = 0;&amp;#125;; Notice = 0 ? It">
     
     
         
@@ -39,15 +40,19 @@
     <!-- title -->
     <title>pure.h</title>
     <!-- styles -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
     <!-- persian styles -->
     
-      <link rel="stylesheet" href="/css/rtl.css">
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
     
     <!-- rss -->
     
     
-</head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 <body class="max-width mx-auto px3 ltr">
     
@@ -65,7 +70,7 @@
         
       </ul>
     </span>
-    <br>
+    <br/>
     <span id="actions">
       <ul>
         
@@ -82,20 +87,20 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br>
+    <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/pure-h/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/pure-h/&text=pure.h"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/pure-h/&is_video=false&description=pure.h"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/pure-h/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/pure-h/&text=pure.h"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/pure-h/&is_video=false&description=pure.h"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="mailto:?subject=pure.h&body=Check out this article: https://vishnubharathi.codes/blog/pure-h/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/pure-h/&name=pure.h&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/pure-h/&t=pure.h"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/pure-h/&name=pure.h&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/pure-h/&t=pure.h"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -108,7 +113,7 @@
     
     <div class="content index py4">
         
-        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
@@ -132,7 +137,7 @@
       
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/c/">c++</a>, <a class="tag-link" href="/tags/programming/">programming</a>
+        <a class="tag-link-link" href="/tags/c/" rel="tag">c++</a>, <a class="tag-link-link" href="/tags/programming/" rel="tag">programming</a>
     </div>
 
 
@@ -156,18 +161,18 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Command</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span> pure <span class="keyword">virtual</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>But here we are still stuck with <code>= 0</code> instead of <code>pure</code> or <code>pure virtual</code>.</p>
 <h2 id="Why-so"><a href="#Why-so" class="headerlink" title="Why so?"></a>Why so?</h2><p>Why C++ does not have a pure keyword?</p>
-<p>A Google search skill took me to <a href="https://softwareengineering.stackexchange.com/questions/284412/why-does-c-not-have-a-pure-keyword-for-virtual-functions" target="_blank" rel="noopener">this page</a>.</p>
-<p>It references Bjarne Stroustrup’s answer for this question in <a href="http://www.stroustrup.com/dne.html" target="_blank" rel="noopener">The Design and Evolution of C++</a></p>
+<p>A Google search skill took me to <a target="_blank" rel="noopener" href="https://softwareengineering.stackexchange.com/questions/284412/why-does-c-not-have-a-pure-keyword-for-virtual-functions">this page</a>.</p>
+<p>It references Bjarne Stroustrup’s answer for this question in <a target="_blank" rel="noopener" href="http://www.stroustrup.com/dne.html">The Design and Evolution of C++</a></p>
 <blockquote>
 <p>The curious = 0 syntax was chosen over the obvious alternative of introducing a new keyword pure or abstract because at the time I saw no chance of getting a new keyword accepted. Had I suggested pure, Release 2.0 would have shipped without abstract classes. Given a choice between a nicer syntax and abstract classes, I chose abstract classes. Rather than risking delay and incurring the certain fights over pure, I used the tradition C and C++ convention of using 0 to represent not there.</p>
 </blockquote>
 <p>Seems like even the greatest are in the race to catch release deadlines :D</p>
 <h2 id="Why-we-are-ok-with-it"><a href="#Why-we-are-ok-with-it" class="headerlink" title="Why we are ok with it?"></a>Why we are ok with it?</h2><p>Because C++ allows us to define our own <code>pure</code>. Remember macros?</p>
-<p>I found this simple and very cool (IMO) technique/code while reading <a href="https://github.com/envoyproxy/envoy" target="_blank" rel="noopener">envoyproxy’s code</a>.</p>
+<p>I found this simple and very cool (IMO) technique/code while reading <a target="_blank" rel="noopener" href="https://github.com/envoyproxy/envoy">envoyproxy’s code</a>.</p>
 <p>A pure virtual function in envoyproxy’s code base looks like</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Command</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">execute</span><span class="params">()</span> PURE</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>pretty close to what we need, huh?</p>
-<p>I went in and checked how it worked. Answer to it is present in a header file called <a href="https://github.com/envoyproxy/envoy/blob/15706964a29e595c045a5d7ef0646d04f347dcc1/include/envoy/common/pure.h" target="_blank" rel="noopener">pure.h</a>.</p>
+<p>I went in and checked how it worked. Answer to it is present in a header file called <a target="_blank" rel="noopener" href="https://github.com/envoyproxy/envoy/blob/15706964a29e595c045a5d7ef0646d04f347dcc1/include/envoy/common/pure.h">pure.h</a>.</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> once</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> Envoy &#123;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Friendly name for a pure virtual routine.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PURE = 0</span></span><br><span class="line">&#125; <span class="comment">// Envoy</span></span><br></pre></td></tr></table></figure>
 <p>That’s it! Simple, but elegant usage of macros. This code is pure bliss and I wish for more things like <code>pure.h</code> in this world.</p>
 
@@ -196,17 +201,17 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/pure-h/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/pure-h/&text=pure.h"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/pure-h/&is_video=false&description=pure.h"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/pure-h/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/pure-h/&text=pure.h"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/pure-h/&is_video=false&description=pure.h"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="mailto:?subject=pure.h&body=Check out this article: https://vishnubharathi.codes/blog/pure-h/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/pure-h/&name=pure.h&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/pure-h/&t=pure.h"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/pure-h/&title=pure.h"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/pure-h/&name=pure.h&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/pure-h/&t=pure.h"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -224,7 +229,7 @@
         
         <footer id="footer">
 <div class="footer-left">
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
 </div>
 <div class="footer-right">
 <nav>
@@ -244,15 +249,25 @@
 
     </div>
     <!-- styles -->
+
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
 <link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
+
     <!-- jquery -->
+
 <script src="/lib/jquery/jquery.min.js"></script>
+
+
 <script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
 <!-- clipboard -->
 
-  <script src="/lib/clipboard/clipboard.min.js"></script>
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
@@ -273,7 +288,9 @@
   })
   </script>
 
+
 <script src="/js/main.js"></script>
+
 <!-- search -->
 
 <!-- Google Analytics -->

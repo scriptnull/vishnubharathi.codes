@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.8.0">
+<head>
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="After deciding to learn about the JVM, I started reading the JVM specification. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to">
-<meta name="keywords" content="programming,jvm,java,clojure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Enter the JVM: Part 1">
 <meta property="og:url" content="https://vishnubharathi.codes/blog/enter-the-jvm-part-1/index.html">
 <meta property="og:site_name" content="Vishnu Bharathi">
 <meta property="og:description" content="After deciding to learn about the JVM, I started reading the JVM specification. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to">
-<meta property="og:locale" content="en">
+<meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://clojure.org/images/content/guides/learn/syntax/traditional-evaluation.png">
 <meta property="og:image" content="https://clojure.org/images/content/guides/learn/syntax/clojure-evaluation.png">
-<meta property="og:updated_time" content="2020-11-01T19:05:11.497Z">
+<meta property="article:published_time" content="2018-04-29T13:35:05.000Z">
+<meta property="article:modified_time" content="2020-12-21T17:52:14.049Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="jvm">
+<meta property="article:tag" content="java">
+<meta property="article:tag" content="clojure">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Enter the JVM: Part 1">
-<meta name="twitter:description" content="After deciding to learn about the JVM, I started reading the JVM specification. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to">
 <meta name="twitter:image" content="https://clojure.org/images/content/guides/learn/syntax/traditional-evaluation.png">
     
     
@@ -42,15 +45,19 @@
     <!-- title -->
     <title>Enter the JVM: Part 1</title>
     <!-- styles -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
     <!-- persian styles -->
     
-      <link rel="stylesheet" href="/css/rtl.css">
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
     
     <!-- rss -->
     
     
-</head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 <body class="max-width mx-auto px3 ltr">
     
@@ -68,7 +75,7 @@
         
       </ul>
     </span>
-    <br>
+    <br/>
     <span id="actions">
       <ul>
         
@@ -85,25 +92,25 @@
       <span id="i-top" class="info" style="display:none;">Back to top</span>
       <span id="i-share" class="info" style="display:none;">Share post</span>
     </span>
-    <br>
+    <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&text=Enter the JVM: Part 1"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&is_video=false&description=Enter the JVM: Part 1"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&text=Enter the JVM: Part 1"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&is_video=false&description=Enter the JVM: Part 1"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="mailto:?subject=Enter the JVM: Part 1&body=Check out this article: https://vishnubharathi.codes/blog/enter-the-jvm-part-1/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&name=Enter the JVM: Part 1&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&t=Enter the JVM: Part 1"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&name=Enter the JVM: Part 1&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&t=Enter the JVM: Part 1"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Virtual-Machine-Specification"><span class="toc-number">1.</span> <span class="toc-text">Java Virtual Machine Specification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class-file-format"><span class="toc-number">2.</span> <span class="toc-text">class file format</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-Evaluation"><span class="toc-number">2.0.1.</span> <span class="toc-text">Java Evaluation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Clojure-Evaluation"><span class="toc-number">2.0.2.</span> <span class="toc-text">Clojure Evaluation</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Virtual-Machine-Specification"><span class="toc-number">1.</span> <span class="toc-text">Java Virtual Machine Specification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class-file-format"><span class="toc-number">2.</span> <span class="toc-text">class file format</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-Evaluation"><span class="toc-number">2.0.1.</span> <span class="toc-text">Java Evaluation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Clojure-Evaluation"><span class="toc-number">2.0.2.</span> <span class="toc-text">Clojure Evaluation</span></a></li></ol></li></ol></li></ol>
     </div>
   </span>
 </div>
@@ -111,7 +118,7 @@
     
     <div class="content index py4">
         
-        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
     
     <h1 class="posttitle" itemprop="name headline">
@@ -135,7 +142,7 @@
       
     <div class="article-tag">
         <i class="fas fa-tag"></i>
-        <a class="tag-link" href="/tags/clojure/">clojure</a>, <a class="tag-link" href="/tags/java/">java</a>, <a class="tag-link" href="/tags/jvm/">jvm</a>, <a class="tag-link" href="/tags/programming/">programming</a>
+        <a class="tag-link-link" href="/tags/clojure/" rel="tag">clojure</a>, <a class="tag-link-link" href="/tags/java/" rel="tag">java</a>, <a class="tag-link-link" href="/tags/jvm/" rel="tag">jvm</a>, <a class="tag-link-link" href="/tags/programming/" rel="tag">programming</a>
     </div>
 
 
@@ -144,14 +151,14 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>After <a href="/blog/visit-the-old-to-understand-the-new/">deciding to learn about the JVM</a>, I started reading the <a href="https://docs.oracle.com/javase/specs/jvms/se10/html/index.html" target="_blank" rel="noopener">JVM specification</a>. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to tell.</p>
-<p>I am currently reading the <a href="https://docs.oracle.com/javase/specs/jvms/se10/html/jvms-2.html" target="_blank" rel="noopener">Chapter 2: The Structure of the Java Virtual Machine</a>. Here is what I got to learn.</p>
+    <p>After <a href="/blog/visit-the-old-to-understand-the-new/">deciding to learn about the JVM</a>, I started reading the <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/specs/jvms/se10/html/index.html">JVM specification</a>. I felt the need for trying out few things on my machine to get some practical idea about what the specification tries to tell.</p>
+<p>I am currently reading the <a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/specs/jvms/se10/html/jvms-2.html">Chapter 2: The Structure of the Java Virtual Machine</a>. Here is what I got to learn.</p>
 <h2 id="Java-Virtual-Machine-Specification"><a href="#Java-Virtual-Machine-Specification" class="headerlink" title="Java Virtual Machine Specification"></a>Java Virtual Machine Specification</h2><p>The first line states</p>
 <blockquote>
 <p>This document specifies an abstract machine. It does not describe any particular implementation of the Java Virtual Machine.</p>
 </blockquote>
-<p>This means that the entire specification is an abstract and anyone could implement their own Java Virtual Machine in their preferred programming language. I also googled to see for an already existing implementations of the JVM and found <a href="https://en.wikipedia.org/wiki/List_of_Java_virtual_machines" target="_blank" rel="noopener">this list</a>.</p>
-<p>I think the most widely used JVM implementation is the <a href="https://en.wikipedia.org/wiki/HotSpot" target="_blank" rel="noopener">Hotspot</a>, which is distributed and maintained by Oracle. Just to show the interesting flavours that are possible, here is an implementation of JVM written in Go - <a href="https://github.com/zxh0/jvm.go" target="_blank" rel="noopener">https://github.com/zxh0/jvm.go</a> (Thought of doing this when I learnt that JVM is an abstract machine and could be implemented on our own. But was surprised to discover this.)</p>
+<p>This means that the entire specification is an abstract and anyone could implement their own Java Virtual Machine in their preferred programming language. I also googled to see for an already existing implementations of the JVM and found <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/List_of_Java_virtual_machines">this list</a>.</p>
+<p>I think the most widely used JVM implementation is the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/HotSpot">Hotspot</a>, which is distributed and maintained by Oracle. Just to show the interesting flavours that are possible, here is an implementation of JVM written in Go - <a target="_blank" rel="noopener" href="https://github.com/zxh0/jvm.go">https://github.com/zxh0/jvm.go</a> (Thought of doing this when I learnt that JVM is an abstract machine and could be implemented on our own. But was surprised to discover this.)</p>
 <p>The specification also tells that it does not mandate few details and leave them upto the choice of the implementors, like</p>
 <ul>
 <li>Garbage collection algorithm used in the JVM.</li>
@@ -167,14 +174,13 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ man javac</span><br><span class="line"></span><br><span class="line">NAME</span><br><span class="line">       javac - Java compiler</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ man java</span><br><span class="line"></span><br><span class="line">NAME</span><br><span class="line">       java - Java application launcher</span><br></pre></td></tr></table></figure>
 <p>At this point, I am curious to note the contents of a simple <code>.class</code> file. So, let me write a Hello world program in java and use <code>javac</code> to compile the source to a <code>.class</code> file.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Hello.java</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"Hello world"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Hello.java</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;Hello world&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>After doing <code>javac Hello.java</code>, I got a file named <code>Hello.class</code> in the same directory. The contents of the file are</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">����   5 </span><br><span class="line">  	   </span><br><span class="line">     &lt;init&gt; ()V Code LineNumberTable main ([Ljava/lang/String;)V </span><br><span class="line">SourceFile </span><br><span class="line">Hello.java      Hello world    Hello java/lang/Object java/lang/System out Ljava/io/PrintStream; java/io/PrintStream println (Ljava/lang/String;)V               	        *� �    </span><br><span class="line">        	    	   %     	� � �    </span><br><span class="line">   </span><br><span class="line">        </span><br><span class="line">   </span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">����   5 </span><br><span class="line">  	   </span><br><span class="line">     &lt;init&gt; ()V Code LineNumberTable main ([Ljava&#x2F;lang&#x2F;String;)V </span><br><span class="line">SourceFile </span><br><span class="line">Hello.java      Hello world    Hello java&#x2F;lang&#x2F;Object java&#x2F;lang&#x2F;System out Ljava&#x2F;io&#x2F;PrintStream; java&#x2F;io&#x2F;PrintStream println (Ljava&#x2F;lang&#x2F;String;)V               	        *� �    </span><br><span class="line">        	    	   %     	� � �    </span><br><span class="line">   </span><br><span class="line">        </span><br><span class="line">   </span><br></pre></td></tr></table></figure>
 <p>Well, I am pretty intrigued at this point if I could make some sense out the of class file by writing more simple programs and comparing the class file contents.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Calculate.java</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Calculate</span> </span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a + b;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">subtract</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a - b;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">multiply</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a * b;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">divide</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a / b;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Calculate c = <span class="keyword">new</span> Calculate();</span><br><span class="line"></span><br><span class="line">    System.out.println(c.add(<span class="number">1</span>,<span class="number">2</span>));</span><br><span class="line">    System.out.println(c.subtract(<span class="number">2</span>,<span class="number">1</span>));</span><br><span class="line">    System.out.println(c.multiply(<span class="number">1</span>,<span class="number">2</span>));</span><br><span class="line">    System.out.println(c.divide(<span class="number">2</span>,<span class="number">1</span>));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><code>Calculate.class</code> contains the following content.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">����   5 )</span><br><span class="line"> </span><br><span class="line">  </span><br><span class="line">  	  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  ! &quot; &lt;init&gt; ()V Code LineNumberTable add (II)I subtract multiply divide main ([Ljava/lang/String;)V </span><br><span class="line">SourceFile Calculate.java   	Calculate # $ %   &amp; &apos; (       java/lang/Object java/lang/System out Ljava/io/PrintStream; java/io/PrintStream println (I)V    </span><br><span class="line">           </span><br><span class="line">        *� �                </span><br><span class="line">        `�                </span><br><span class="line">        d�                </span><br><span class="line">        h�                </span><br><span class="line">        l�            	    </span><br><span class="line">   e     9� Y� L� +� � � +� � � +� � � +� 	� �                   ,  8       </span><br></pre></td></tr></table></figure></p>
-<p>I could see the presence of our member methods of the class and some letters that my editor could not render. My guess is that they are instruction codes and they would refer to the methods being called. Anyway, we will get to know about this better in the upcoming chapters. So, let me move on.</p>
-<p>Here are some pictures from the <a href="https://clojure.org/guides/learn/syntax#_evaluation" target="_blank" rel="noopener">clojure getting started guide</a>, that potrays what I just did.</p>
+<p><code>Calculate.class</code> contains the following content.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">����   5 )</span><br><span class="line"> </span><br><span class="line">  </span><br><span class="line">  	  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  ! &quot; &lt;init&gt; ()V Code LineNumberTable add (II)I subtract multiply divide main ([Ljava&#x2F;lang&#x2F;String;)V </span><br><span class="line">SourceFile Calculate.java   	Calculate # $ %   &amp; &#39; (       java&#x2F;lang&#x2F;Object java&#x2F;lang&#x2F;System out Ljava&#x2F;io&#x2F;PrintStream; java&#x2F;io&#x2F;PrintStream println (I)V    </span><br><span class="line">           </span><br><span class="line">        *� �                </span><br><span class="line">        &#96;�                </span><br><span class="line">        d�                </span><br><span class="line">        h�                </span><br><span class="line">        l�            	    </span><br><span class="line">   e     9� Y� L� +� � � +� � � +� � � +� 	� �                   ,  8       </span><br></pre></td></tr></table></figure><br>I could see the presence of our member methods of the class and some letters that my editor could not render. My guess is that they are instruction codes and they would refer to the methods being called. Anyway, we will get to know about this better in the upcoming chapters. So, let me move on.</p>
+<p>Here are some pictures from the <a target="_blank" rel="noopener" href="https://clojure.org/guides/learn/syntax#_evaluation">clojure getting started guide</a>, that potrays what I just did.</p>
 <h4 id="Java-Evaluation"><a href="#Java-Evaluation" class="headerlink" title="Java Evaluation"></a>Java Evaluation</h4><p><img src="https://clojure.org/images/content/guides/learn/syntax/traditional-evaluation.png" alt="Java Evaluation"></p>
 <h4 id="Clojure-Evaluation"><a href="#Clojure-Evaluation" class="headerlink" title="Clojure Evaluation"></a>Clojure Evaluation</h4><p><img src="https://clojure.org/images/content/guides/learn/syntax/clojure-evaluation.png" alt="Clojure Evaluation"></p>
 <p>Also it is worth noting this statement that is present along with these pictures.</p>
@@ -204,22 +210,22 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Virtual-Machine-Specification"><span class="toc-number">1.</span> <span class="toc-text">Java Virtual Machine Specification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class-file-format"><span class="toc-number">2.</span> <span class="toc-text">class file format</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-Evaluation"><span class="toc-number">2.0.1.</span> <span class="toc-text">Java Evaluation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Clojure-Evaluation"><span class="toc-number">2.0.2.</span> <span class="toc-text">Clojure Evaluation</span></a></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java-Virtual-Machine-Specification"><span class="toc-number">1.</span> <span class="toc-text">Java Virtual Machine Specification</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#class-file-format"><span class="toc-number">2.</span> <span class="toc-text">class file format</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Java-Evaluation"><span class="toc-number">2.0.1.</span> <span class="toc-text">Java Evaluation</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Clojure-Evaluation"><span class="toc-number">2.0.2.</span> <span class="toc-text">Clojure Evaluation</span></a></li></ol></li></ol></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&text=Enter the JVM: Part 1"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&is_video=false&description=Enter the JVM: Part 1"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&text=Enter the JVM: Part 1"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&is_video=false&description=Enter the JVM: Part 1"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="mailto:?subject=Enter the JVM: Part 1&body=Check out this article: https://vishnubharathi.codes/blog/enter-the-jvm-part-1/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&name=Enter the JVM: Part 1&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&t=Enter the JVM: Part 1"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&title=Enter the JVM: Part 1"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&name=Enter the JVM: Part 1&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/enter-the-jvm-part-1/&t=Enter the JVM: Part 1"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -237,7 +243,7 @@
         
         <footer id="footer">
 <div class="footer-left">
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
 </div>
 <div class="footer-right">
 <nav>
@@ -257,15 +263,25 @@
 
     </div>
     <!-- styles -->
+
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
 <link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
+
     <!-- jquery -->
+
 <script src="/lib/jquery/jquery.min.js"></script>
+
+
 <script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
 <!-- clipboard -->
 
-  <script src="/lib/clipboard/clipboard.min.js"></script>
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
   <script type="text/javascript">
   $(function() {
     // copy-btn HTML
@@ -286,7 +302,9 @@
   })
   </script>
 
+
 <script src="/js/main.js"></script>
+
 <!-- search -->
 
 <!-- Google Analytics -->
