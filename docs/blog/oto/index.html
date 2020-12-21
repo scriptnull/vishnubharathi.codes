@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="This is a rough draft of thoughts on a tool that I would like to build. It is a simple command line tool named oto. It stands for on top of. I often hear and reaffirm to myself that  We are built on t">
+<meta name="keywords" content="software,ideas,want-to-build">
+<meta property="og:type" content="article">
+<meta property="og:title" content="On top of">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/oto/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="This is a rough draft of thoughts on a tool that I would like to build. It is a simple command line tool named oto. It stands for on top of. I often hear and reaffirm to myself that  We are built on t">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://raw.githubusercontent.com/all-contributors/all-contributors/master/docs/assets/contributors-table-small.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/d1cc35572ae57f015e917614d0bf4661aa7d49d8/68747470733a2f2f636c2e6c792f33673256334d3230305532642f53637265656e25323053686f74253230323031362d30372d31382532306174253230342e33342e3438253230504d2e706e67">
+<meta property="og:image" content="https://l.sr.ht/TRrJ.png">
+<meta property="og:updated_time" content="2020-11-01T19:05:11.501Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="On top of">
+<meta name="twitter:description" content="This is a rough draft of thoughts on a tool that I would like to build. It is a simple command line tool named oto. It stands for on top of. I often hear and reaffirm to myself that  We are built on t">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/all-contributors/all-contributors/master/docs/assets/contributors-table-small.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>On top of</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/blog/rss-people/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/blog/rss-features/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/oto/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/oto/&text=On top of"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/oto/&title=On top of"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/oto/&is_video=false&description=On top of"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=On top of&body=Check out this article: https://vishnubharathi.codes/blog/oto/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/oto/&title=On top of"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/oto/&title=On top of"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/oto/&title=On top of"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/oto/&title=On top of"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/oto/&name=On top of&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/oto/&t=On top of"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#all-contributors"><span class="toc-number">1.</span> <span class="toc-text">all-contributors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#backers-amp-sponsors"><span class="toc-number">2.</span> <span class="toc-text">backers &amp; sponsors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#openring"><span class="toc-number">3.</span> <span class="toc-text">openring</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Meet-oto"><span class="toc-number">4.</span> <span class="toc-text">Meet oto</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Contributors"><span class="toc-number">5.</span> <span class="toc-text">Contributors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Inside-companies"><span class="toc-number">6.</span> <span class="toc-text">Inside companies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Features"><span class="toc-number">7.</span> <span class="toc-text">Basic Features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Programming-languages"><span class="toc-number">7.1.</span> <span class="toc-text">Programming languages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration-files-and-directories"><span class="toc-number">7.2.</span> <span class="toc-text">Configuration files and directories</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Package-managers"><span class="toc-number">7.3.</span> <span class="toc-text">Package managers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Manual-gear"><span class="toc-number">7.4.</span> <span class="toc-text">Manual gear</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sign-off"><span class="toc-number">8.</span> <span class="toc-text">Sign off</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        On top of
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2020-06-08T20:11:00.000Z" itemprop="datePublished">2020-06-09</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/ideas/">ideas</a>, <a class="tag-link" href="/tags/software/">software</a>, <a class="tag-link" href="/tags/want-to-build/">want-to-build</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>This is a rough draft of thoughts on a tool that I would like to build. It is a simple command line tool named <code>oto</code>. It stands for <code>on top of</code>. I often hear and reaffirm to myself that</p>
+<blockquote>
+<p>We are built <strong>on top of</strong> the giants.</p>
+</blockquote>
+<p>By saying “giants”, we mean anything that adds huge value! Try to hold your thoughts with respect to the business world where giants mean “Big corps”. Think of this word in the context of open source / software developement in general. It means any project that adds massive value to your project.</p>
+<p>Want a web-server? <code>npm install --save express</code></p>
+<p>Want a cache? <code>docker run redis</code></p>
+<p>You just stood on top of all these giants: npm, express, docker, redis</p>
+<p>Want any piece of software? you download it, add it to your project and just forget about it! Just think of all those projects that help you with your project.</p>
+<p>Don’t you think we often take things for granted?</p>
+<p>How about we give a little credits to them.</p>
+<p><a href="https://www.youtube.com/watch?v=AdVQdXS6ooQ" target="_blank" rel="noopener">There is a value in open source</a> or any kind of software. The least we can do is to give credits to them.</p>
+<p>That’s what <code>oto</code> is going to help you with!</p>
+<h2 id="all-contributors"><a href="#all-contributors" class="headerlink" title="all-contributors"></a>all-contributors</h2><p>There is this awesome project called <a href="https://github.com/all-contributors/all-contributors" target="_blank" rel="noopener">all-contributors</a> that comes very close to the motives of this tool.</p>
+<p>It helps in recognising and giving credits to all the contributors of a project. It does it by generating a table of contributors and adding it to the README of the project. Like this :point_down:</p>
+<p><img src="https://raw.githubusercontent.com/all-contributors/all-contributors/master/docs/assets/contributors-table-small.png" alt="all-contributors"></p>
+<p><em>Picture Credits: <a href="https://github.com/all-contributors/all-contributors/blob/master/README.md" target="_blank" rel="noopener">https://github.com/all-contributors/all-contributors/blob/master/README.md</a></em></p>
+<h2 id="backers-amp-sponsors"><a href="#backers-amp-sponsors" class="headerlink" title="backers &amp; sponsors"></a>backers &amp; sponsors</h2><p>Next thing where I find this kind of culture is with giving credits to backers and sponsors in a project. </p>
+<p><img src="https://camo.githubusercontent.com/d1cc35572ae57f015e917614d0bf4661aa7d49d8/68747470733a2f2f636c2e6c792f33673256334d3230305532642f53637265656e25323053686f74253230323031362d30372d31382532306174253230342e33342e3438253230504d2e706e67" alt="backers"></p>
+<p><em>Picture Credits: <a href="https://github.com/opencollective/opencollective/wiki/Show-Backers-and-Sponsors" target="_blank" rel="noopener">https://github.com/opencollective/opencollective/wiki/Show-Backers-and-Sponsors</a></em></p>
+<h2 id="openring"><a href="#openring" class="headerlink" title="openring"></a>openring</h2><p>There is this amazing project called <a href="https://git.sr.ht/~sircmpwn/openring" target="_blank" rel="noopener">openring</a>. What this does is create a <a href="https://en.wikipedia.org/wiki/Webring" target="_blank" rel="noopener">webring</a> that could be embedded in blogs. It is kind of giving credits to other people on the idea with nice / related blog posts.</p>
+<p><img src="https://l.sr.ht/TRrJ.png" alt="openring"></p>
+<p><em>Picture Credits: <a href="https://git.sr.ht/~sircmpwn/openring" target="_blank" rel="noopener">https://git.sr.ht/~sircmpwn/openring</a></em></p>
+<h2 id="Meet-oto"><a href="#Meet-oto" class="headerlink" title="Meet oto"></a>Meet oto</h2><p><code>oto</code> builds on the core of all the above tools: Giving credits!</p>
+<p>I searched through the internet and discovered that there is no tool to give credits for the technologies, tools, libraries, frameworks etc. used within our project. <code>oto</code> aims to address that!</p>
+<p>(Also if you happen to find a project that already does this, please drop me a <a href="mailto:vishnubharathi04@gmail.com" target="_blank" rel="noopener">message</a> / <a href="https://twitter.com/scriptnull" target="_blank" rel="noopener">tweet</a></p>
+<p>It is a really simple tool. It is aimed to do the following.</p>
+<ul>
+<li>Analyse source code of project and generate an embeddable credits with logos of technologies, tools, libraries, frameworks etc.</li>
+<li>Compatible for markdown, HTML and plain text. So that credits could be embedded anywhere.</li>
+</ul>
+<h2 id="Contributors"><a href="#Contributors" class="headerlink" title="Contributors"></a>Contributors</h2><p>By generating credits to the things used inside a project, we essentially put up a banner to the future contributors of the OSS project.</p>
+<p>It gives a person an idea about what they might be learning by contributing to the project upfront!</p>
+<p>I suspect that <code>oto</code> will encourage new-contributors to the project and also gives a nice space for people who are skimming/researching the project.</p>
+<h2 id="Inside-companies"><a href="#Inside-companies" class="headerlink" title="Inside companies"></a>Inside companies</h2><p>lol, I don’t know why I am including this passage here, but hear me out.</p>
+<p>Whenever I joined a new company, I usually like to get an idea of all the technologies they are using. Then I start digging in the code at multiple repositories to figure out the things. Another way is talking to different people inside the org about it.</p>
+<p>In this case <code>oto</code> could be run in the private code bases. This will help understanding what is being done in the code-base faster. </p>
+<p>You might tell, “oh! just read the package.json and be done with it”.</p>
+<p>I wish! What if I am a person that doesn’t even know what <code>package.json</code> is? In this case having a bunch of logos in README will more likely trigger a person to gather knowledge about the dependencies of the project.</p>
+<p>So, clear communication of what are being used and faster understanding by engineers who are on-boarding the company.</p>
+<p>This might just be the first step to having some kind of docs on their technical architecture. Most likely helpful in startups where they don’t have time to document their architecture and how things are being used.</p>
+<h2 id="Basic-Features"><a href="#Basic-Features" class="headerlink" title="Basic Features"></a>Basic Features</h2><p>Enough of story, let me try to write out the basic feature set of <code>oto</code></p>
+<h3 id="Programming-languages"><a href="#Programming-languages" class="headerlink" title="Programming languages"></a>Programming languages</h3><p>Most of the programming languages have a logo these days. So it would be good to analyse the source tree for files with respective file extensions and create thumnails of all the programming languages used in the project.</p>
+<h3 id="Configuration-files-and-directories"><a href="#Configuration-files-and-directories" class="headerlink" title="Configuration files and directories"></a>Configuration files and directories</h3><p>Most of the projects have configuration files checked into the source tree. For example: a ruby project might have <code>.rubocop.yml</code> file which means that it is using the <a href="https://github.com/rubocop-hq/rubocop" target="_blank" rel="noopener">Rubocop static analyser and formatter for ruby</a>. So, we add it’s logo/name to the output generated by <code>oto</code>.</p>
+<p>Another low hanging fruit. Check if <code>.git</code> folder exists and add the git logo to the output. :)</p>
+<p>Also, people tend to give templates for configuration files: If the project is using redis, there might be a <code>example.redis.conf</code> or <code>redis.conf</code> or redis.template.conf<code>etc. file that denotes the redis config. So,</code>oto` needs to understand this and add the logo of redis to the output.</p>
+<h3 id="Package-managers"><a href="#Package-managers" class="headerlink" title="Package managers"></a>Package managers</h3><p>Files used for package management like <code>package.json</code>, <code>Gemfile</code> etc. needs to be understood and the logos of packages by the project could be rendered in the output.</p>
+<h3 id="Manual-gear"><a href="#Manual-gear" class="headerlink" title="Manual gear"></a>Manual gear</h3><p>So far everything was automatic. But the user should be able to manually pass the name of some tools to <code>oto</code>, so that those get added automatically.</p>
+<h2 id="Sign-off"><a href="#Sign-off" class="headerlink" title="Sign off"></a>Sign off</h2><p>I think this is a pretty decent document on the rational behind <code>oto</code>. This obviously helped me to normalize my thoughts around it (probably made it one step closer to building this tool).</p>
+<p>I hope <code>oto</code> gets built with the help of all the amazing technologies in computing at present.</p>
+<p>After all, <strong>we are built on top of the giants</strong>!</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#all-contributors"><span class="toc-number">1.</span> <span class="toc-text">all-contributors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#backers-amp-sponsors"><span class="toc-number">2.</span> <span class="toc-text">backers &amp; sponsors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#openring"><span class="toc-number">3.</span> <span class="toc-text">openring</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Meet-oto"><span class="toc-number">4.</span> <span class="toc-text">Meet oto</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Contributors"><span class="toc-number">5.</span> <span class="toc-text">Contributors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Inside-companies"><span class="toc-number">6.</span> <span class="toc-text">Inside companies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Features"><span class="toc-number">7.</span> <span class="toc-text">Basic Features</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Programming-languages"><span class="toc-number">7.1.</span> <span class="toc-text">Programming languages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configuration-files-and-directories"><span class="toc-number">7.2.</span> <span class="toc-text">Configuration files and directories</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Package-managers"><span class="toc-number">7.3.</span> <span class="toc-text">Package managers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Manual-gear"><span class="toc-number">7.4.</span> <span class="toc-text">Manual gear</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sign-off"><span class="toc-number">8.</span> <span class="toc-text">Sign off</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/oto/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/oto/&text=On top of"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/oto/&title=On top of"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/oto/&is_video=false&description=On top of"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=On top of&body=Check out this article: https://vishnubharathi.codes/blog/oto/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/oto/&title=On top of"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/oto/&title=On top of"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/oto/&title=On top of"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/oto/&title=On top of"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/oto/&name=On top of&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/oto/&t=On top of"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-64308743-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+
+</body>
+</html>

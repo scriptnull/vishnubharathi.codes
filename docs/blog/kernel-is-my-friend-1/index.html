@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Kernel is my friend — Part 1 Fun with file descriptorsAt the start of 2018, I wished to learn in general about Linux and Systems Programming. That means, being friends with the Kernel! So, I started r">
+<meta name="keywords" content="software,linux,kernel">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kernel is my friend — Part 1">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/kernel-is-my-friend-1/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="Kernel is my friend — Part 1 Fun with file descriptorsAt the start of 2018, I wished to learn in general about Linux and Systems Programming. That means, being friends with the Kernel! So, I started r">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2084/1*7oWSG_RvSyUf003g_j4Nmw.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2592/1*FEfd7Tu_MuJgCyqC_2Gv1g.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2456/1*ba3qUr1QOBHMMJ5U69w9DQ.png">
+<meta property="og:image" content="https://cdn-images-1.medium.com/max/2184/1*DVuquAhjz3W3AtwMTQF0dg.png">
+<meta property="og:updated_time" content="2020-11-01T19:05:11.497Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Kernel is my friend — Part 1">
+<meta name="twitter:description" content="Kernel is my friend — Part 1 Fun with file descriptorsAt the start of 2018, I wished to learn in general about Linux and Systems Programming. That means, being friends with the Kernel! So, I started r">
+<meta name="twitter:image" content="https://cdn-images-1.medium.com/max/2084/1*7oWSG_RvSyUf003g_j4Nmw.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Kernel is my friend — Part 1</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/blog/the-beginnings/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/blog/going-down/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&text=Kernel is my friend — Part 1"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&title=Kernel is my friend — Part 1"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&is_video=false&description=Kernel is my friend — Part 1"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Kernel is my friend — Part 1&body=Check out this article: https://vishnubharathi.codes/blog/kernel-is-my-friend-1/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&title=Kernel is my friend — Part 1"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&title=Kernel is my friend — Part 1"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&title=Kernel is my friend — Part 1"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&title=Kernel is my friend — Part 1"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&name=Kernel is my friend — Part 1&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&t=Kernel is my friend — Part 1"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Fun-with-file-descriptors"><span class="toc-number">1.</span> <span class="toc-text">Fun with file descriptors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Types-of-files"><span class="toc-number">2.</span> <span class="toc-text">Types of files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#System-calls"><span class="toc-number">3.</span> <span class="toc-text">System calls</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#File-Descriptors"><span class="toc-number">4.</span> <span class="toc-text">File Descriptors</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#Each-process-has-its-own-set-of-file-descriptors"><span class="toc-number"></span> <span class="toc-text">Each process has its own set of file descriptors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#One-process-one-file"><span class="toc-number">1.</span> <span class="toc-text">One process, one file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#One-process-multiple-files"><span class="toc-number">2.</span> <span class="toc-text">One process, multiple files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-processes-multiple-files"><span class="toc-number">3.</span> <span class="toc-text">Multiple processes, multiple files</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Each-process-has-its-own-set-of-file-descriptors-1"><span class="toc-number"></span> <span class="toc-text">Each process has its own set of file descriptors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Standard-File-Descriptors"><span class="toc-number">1.</span> <span class="toc-text">Standard File Descriptors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mysteries"><span class="toc-number">2.</span> <span class="toc-text">Mysteries</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#செய்தக்க-அல்ல-செயக்கெடும்-செய்தக்க"><span class="toc-number"></span> <span class="toc-text">செய்தக்க அல்ல செயக்கெடும் செய்தக்க</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#செய்யாமை-யானும்-கெடும்"><span class="toc-number"></span> <span class="toc-text">செய்யாமை யானும் கெடும்.</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#—-திருக்குறள்"><span class="toc-number"></span> <span class="toc-text">— திருக்குறள்</span></a>
+    </li></div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Kernel is my friend — Part 1
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2018-02-28T22:30:00.000Z" itemprop="datePublished">2018-03-01</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/kernel/">kernel</a>, <a class="tag-link" href="/tags/linux/">linux</a>, <a class="tag-link" href="/tags/software/">software</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Kernel is my friend — Part 1</p>
+<h3 id="Fun-with-file-descriptors"><a href="#Fun-with-file-descriptors" class="headerlink" title="Fun with file descriptors"></a>Fun with file descriptors</h3><p>At the start of 2018, I wished to learn in general about <a href="https://hackernoon.com/tagged/linux" target="_blank" rel="noopener">Linux</a> and Systems <a href="https://hackernoon.com/tagged/programming" target="_blank" rel="noopener">Programming</a>. That means, being friends with the Kernel! So, I started reading <a href="http://man7.org/tlpi/" target="_blank" rel="noopener">The Linux Programming Interface</a>. This is the first part of the series of blog posts that I will be writing as I go through the book and unravel the mysteries of Linux.</p>
+<p>This post is an attempt to understand some parts of the lesson “<a href="http://man7.org/tlpi/" target="_blank" rel="noopener">File I/O: The Universal I/O Model</a>” from <a href="http://man7.org/tlpi/" target="_blank" rel="noopener">The Linux Programming Interface</a>.</p>
+<h3 id="Types-of-files"><a href="#Types-of-files" class="headerlink" title="Types of files"></a>Types of files</h3><p>I have heard of the statement that “everything in Linux is a file”. But, I got learn that there are different types of files in Linux.</p>
+<iframe src="https://medium.com/media/68f351b92069cf24265a45886692e11c" frameborder="0"></iframe>
+
+<h3 id="System-calls"><a href="#System-calls" class="headerlink" title="System calls"></a>System calls</h3><p>System call is a way of asking the kernel to do some work for us. For example, these are the four basic system calls that help to work with files in Linux</p>
+<ul>
+<li><p>open — Hey kernel, could you open a file for me? So that the process could do something with it.</p>
+</li>
+<li><p>read — Hey kernel, could you read this amazing piece of code that I saved in ~/cool/stuff/is/here.js ?</p>
+</li>
+<li><p>write — Hey kernel, could you help me write my really long homework to this file?</p>
+</li>
+<li><p>close — Hey kernel, I am done with my homework, please close the file. We will go hangout and do some other fun stuff.</p>
+</li>
+</ul>
+<h3 id="File-Descriptors"><a href="#File-Descriptors" class="headerlink" title="File Descriptors"></a>File Descriptors</h3><p>File descriptor is a non-negative integer number that is used to reference a file.</p>
+<p>When open() system call is being called by a process, a file descriptor is being returned from it, which could be used in other system calls like read, write, close.</p>
+<p>One of the interesting thing that I missed out to observe closely when I read the lesson for the first time is (This is probably an important key take away)</p>
+<blockquote>
+<h1 id="Each-process-has-its-own-set-of-file-descriptors"><a href="#Each-process-has-its-own-set-of-file-descriptors" class="headerlink" title="Each process has its own set of file descriptors"></a>Each process has its own set of file descriptors</h1></blockquote>
+<p>Lets try to understand this in a step by step manner.</p>
+<h3 id="One-process-one-file"><a href="#One-process-one-file" class="headerlink" title="One process, one file"></a>One process, one file</h3><p>Lets write a program that just opens a file and print its file descriptor value.</p>
+<iframe src="https://medium.com/media/733c0fc4f97ca12d53a8ee233b9112bb" frameborder="0"></iframe>
+
+<p>I created a binary and executed it to read one file at a time. So, this is basically reading one file from one process at a time.</p>
+<p><img src="https://cdn-images-1.medium.com/max/2084/1*7oWSG_RvSyUf003g_j4Nmw.png" alt="The file always gets the file descriptor value of 3 always"><em>The file always gets the file descriptor value of 3 always</em></p>
+<h3 id="One-process-multiple-files"><a href="#One-process-multiple-files" class="headerlink" title="One process, multiple files"></a>One process, multiple files</h3><p>Now, lets try opening multiple files from one process at a time</p>
+<iframe src="https://medium.com/media/76da565e8ea3b5a2d75c61592e991e69" frameborder="0"></iframe>
+
+<p><img src="https://cdn-images-1.medium.com/max/2592/1*FEfd7Tu_MuJgCyqC_2Gv1g.png" alt="files got allocated with sequential integer values"><em>files got allocated with sequential integer values</em></p>
+<p>The way the files get the file descriptor number is based on this simple idea</p>
+<blockquote>
+<p>SUSv3 specifies that if open() succeeds, it is guaranteed to use the lowest-numbered unused file descriptor for the process.<br>— Kerrisk, Michael. The Linux Programming Interface: A Linux and UNIX System Programming Handbook (p. 73). No Starch Press. Kindle Edition.</p>
+</blockquote>
+<h3 id="Multiple-processes-multiple-files"><a href="#Multiple-processes-multiple-files" class="headerlink" title="Multiple processes, multiple files"></a>Multiple processes, multiple files</h3><p>This is the interesting part. What happens if same files are accessed by multiple processes at the same time. How is the file descriptor allocated then?</p>
+<iframe src="https://medium.com/media/916cbce74ea4b92e8b14aa4ee40cd2db" frameborder="0"></iframe>
+
+<p><img src="https://cdn-images-1.medium.com/max/2456/1*ba3qUr1QOBHMMJ5U69w9DQ.png" alt="Numbering is done at a process level"><em>Numbering is done at a process level</em></p>
+<p>This proves the statement that we started with,</p>
+<blockquote>
+<h1 id="Each-process-has-its-own-set-of-file-descriptors-1"><a href="#Each-process-has-its-own-set-of-file-descriptors-1" class="headerlink" title="Each process has its own set of file descriptors"></a>Each process has its own set of file descriptors</h1></blockquote>
+<p>Process 9012 opened 1.js assigning fd 3 and 2.js assigning fd 4. Process 9015 is no different, it did the same thing. Because those are the lowest numbered unused file descriptor value within those processes.</p>
+<p>Now that we have come this long way, the interesting question in my mind is what will happen if two processes try to write to the opened files at the same time. (I guess, this is probably worth answering another time!)</p>
+<h3 id="Standard-File-Descriptors"><a href="#Standard-File-Descriptors" class="headerlink" title="Standard File Descriptors"></a>Standard File Descriptors</h3><p>I have already heard of these names and to my surprise, they are just file descriptors.</p>
+<iframe src="https://medium.com/media/6205e5ec2f35cd59ea18a146d39ba522" frameborder="0"></iframe>
+
+<p>When a process is created, it seems like it automatically opens the stdin, stdout and stderr files and allocate the fd numbers 0,1,2 respectively.</p>
+<p>I went a step further and tried to see where these files are present. But I ended up with something that I don’t know yet. (Amazing! We have something to dwell about)</p>
+<p><img src="https://cdn-images-1.medium.com/max/2184/1*DVuquAhjz3W3AtwMTQF0dg.png" alt="character special? ¯\_(ツ)_/¯"><em>character special? ¯_(ツ)_/¯</em></p>
+<h3 id="Mysteries"><a href="#Mysteries" class="headerlink" title="Mysteries"></a>Mysteries</h3><ul>
+<li><p>What will happen if two processes try to read from an open file at the same time?</p>
+</li>
+<li><p>What will happen if two processes try to write to an open file at the same time?</p>
+</li>
+<li><p>What is /dev/pts/0?</p>
+</li>
+<li><p>What is file type “character special” ?</p>
+</li>
+</ul>
+<p>(Please do comment, if you got the chance to solve these)</p>
+<p>Thanks for reading. I quote verses from my favourite Tamil literature “<a href="https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7" target="_blank" rel="noopener">Tirukkuṛaḷ</a>” at the end of my blog posts.</p>
+<blockquote>
+<h1 id="செய்தக்க-அல்ல-செயக்கெடும்-செய்தக்க"><a href="#செய்தக்க-அல்ல-செயக்கெடும்-செய்தக்க" class="headerlink" title="செய்தக்க அல்ல செயக்கெடும் செய்தக்க"></a>செய்தக்க அல்ல செயக்கெடும் செய்தக்க</h1><h1 id="செய்யாமை-யானும்-கெடும்"><a href="#செய்யாமை-யானும்-கெடும்" class="headerlink" title="செய்யாமை யானும் கெடும்."></a>செய்யாமை யானும் கெடும்.</h1><h1 id="—-திருக்குறள்"><a href="#—-திருக்குறள்" class="headerlink" title="— திருக்குறள்"></a><em>— திருக்குறள்</em></h1></blockquote>
+<p>Translated meaning ( in my words ): Things go wrong for people who do the things that are not supposed to be done by them and also for the people who do not do what they are supposed to do.</p>
+<iframe src="https://medium.com/media/3c851dac986ab6dbb2d1aaa91205a8eb" frameborder="0"></iframe>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Fun-with-file-descriptors"><span class="toc-number">1.</span> <span class="toc-text">Fun with file descriptors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Types-of-files"><span class="toc-number">2.</span> <span class="toc-text">Types of files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#System-calls"><span class="toc-number">3.</span> <span class="toc-text">System calls</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#File-Descriptors"><span class="toc-number">4.</span> <span class="toc-text">File Descriptors</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#Each-process-has-its-own-set-of-file-descriptors"><span class="toc-number"></span> <span class="toc-text">Each process has its own set of file descriptors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#One-process-one-file"><span class="toc-number">1.</span> <span class="toc-text">One process, one file</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#One-process-multiple-files"><span class="toc-number">2.</span> <span class="toc-text">One process, multiple files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Multiple-processes-multiple-files"><span class="toc-number">3.</span> <span class="toc-text">Multiple processes, multiple files</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Each-process-has-its-own-set-of-file-descriptors-1"><span class="toc-number"></span> <span class="toc-text">Each process has its own set of file descriptors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Standard-File-Descriptors"><span class="toc-number">1.</span> <span class="toc-text">Standard File Descriptors</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mysteries"><span class="toc-number">2.</span> <span class="toc-text">Mysteries</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#செய்தக்க-அல்ல-செயக்கெடும்-செய்தக்க"><span class="toc-number"></span> <span class="toc-text">செய்தக்க அல்ல செயக்கெடும் செய்தக்க</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#செய்யாமை-யானும்-கெடும்"><span class="toc-number"></span> <span class="toc-text">செய்யாமை யானும் கெடும்.</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#—-திருக்குறள்"><span class="toc-number"></span> <span class="toc-text">— திருக்குறள்</span></a>
+    </li></div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&text=Kernel is my friend — Part 1"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&title=Kernel is my friend — Part 1"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&is_video=false&description=Kernel is my friend — Part 1"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Kernel is my friend — Part 1&body=Check out this article: https://vishnubharathi.codes/blog/kernel-is-my-friend-1/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&title=Kernel is my friend — Part 1"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&title=Kernel is my friend — Part 1"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&title=Kernel is my friend — Part 1"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&title=Kernel is my friend — Part 1"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&name=Kernel is my friend — Part 1&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/kernel-is-my-friend-1/&t=Kernel is my friend — Part 1"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-64308743-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+
+</body>
+</html>

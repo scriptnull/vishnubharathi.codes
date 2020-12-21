@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Hi, it’s me, blogging after a long time. I was lazy to setup the local environment for updating anything on this site for all these days.  Well, those days are gone. I just finished setting up a simpl">
+<meta name="keywords" content="devops">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Auto">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/auto/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="Hi, it’s me, blogging after a long time. I was lazy to setup the local environment for updating anything on this site for all these days.  Well, those days are gone. I just finished setting up a simpl">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://media.giphy.com/media/f4SoNPj4otohG/giphy-downsized-large.gif">
+<meta property="og:image" content="https://user-images.githubusercontent.com/4211715/71083387-ebae7700-21b8-11ea-8538-1ec0a17321ef.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/4211715/71079967-3f699200-21b2-11ea-90ce-59b7a1efaa17.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/4211715/71081464-3fb75c80-21b5-11ea-92fe-f72dfc5a118b.png">
+<meta property="og:image" content="https://github.com/scriptnull/vishnubharathi.codes/workflows/Deployment/badge.svg">
+<meta property="og:updated_time" content="2020-11-01T19:05:11.497Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Auto">
+<meta name="twitter:description" content="Hi, it’s me, blogging after a long time. I was lazy to setup the local environment for updating anything on this site for all these days.  Well, those days are gone. I just finished setting up a simpl">
+<meta name="twitter:image" content="https://media.giphy.com/media/f4SoNPj4otohG/giphy-downsized-large.gif">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Auto</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/blog/math-journey/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/blog/kvm/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/auto/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/auto/&text=Auto"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/auto/&is_video=false&description=Auto"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Auto&body=Check out this article: https://vishnubharathi.codes/blog/auto/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/auto/&name=Auto&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/auto/&t=Auto"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-pain"><span class="toc-number">1.</span> <span class="toc-text">A pain</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-lesson-learnt"><span class="toc-number">2.</span> <span class="toc-text">A lesson learnt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-recovery"><span class="toc-number">3.</span> <span class="toc-text">A recovery</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-flow"><span class="toc-number">4.</span> <span class="toc-text">A flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Auto"><span class="toc-number">5.</span> <span class="toc-text">Auto</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Auto
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2019-12-17T18:30:00.000Z" itemprop="datePublished">2019-12-18</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/devops/">devops</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Hi, it’s me, blogging after a long time.</p>
+<p>I was lazy to setup the local environment for updating anything on this site for all these days.</p>
+<p><img src="https://media.giphy.com/media/f4SoNPj4otohG/giphy-downsized-large.gif" alt="lazy"></p>
+<p>Well, those days are gone. I just finished setting up a simple auto-deployment for this website.</p>
+<p>So here will be my thoughts but more faster.</p>
+<h2 id="A-pain"><a href="#A-pain" class="headerlink" title="A pain"></a>A pain</h2><p>The real pain for starting/editing blog posts is that I have to setup a local development environment. Bring up vagrant, install all prereqs and clone the source code and theme and ….. You get it, it needs work and needs a computer all the time, even just to do simple things like <a href="https://vishnubharathi.codes/quotes">adding a quote here</a>.</p>
+<h2 id="A-lesson-learnt"><a href="#A-lesson-learnt" class="headerlink" title="A lesson learnt"></a>A lesson learnt</h2><p>I was wanting to give <a href="https://github.com/features/actions" target="_blank" rel="noopener">Github Actions</a> a try from when it was in beta. So I gave it a try during this process.</p>
+<p>When I started looking at it, I came across it’s marketplace and got very excited. Since I was using hexo blogging framework for the site, my natural intution was to <a href="https://github.com/marketplace?utf8=%E2%9C%93&amp;type=actions&amp;query=hexo" target="_blank" rel="noopener">try any of these actions in the marketplace</a>. I went with <a href="https://github.com/marketplace/actions/hexo-deploy-with-cname-enabled" target="_blank" rel="noopener">hexo-deploy-with-cname-enabled</a>.</p>
+<p>That was a disastrous decision. After commiting the workflow yaml, the action ran and force pushed to master.</p>
+<p>The action basically took all the source code and generated a hexo site (probably by running <code>hexo generate</code>) and force pushed to master.</p>
+<p>I usually have the source files (markdown blog posts and other pages) in the root and have the generated hexo site in <code>/docs</code> folder. So, now all the markdown files are gone. Only the hexo generated html files are there. Boom! thankfully, it the data is still there, but just a different format.</p>
+<p>At this point, I started searching for some local backup, which I didn’t find at first. PANIC!</p>
+<p>After a while, I found an old copy probably missing the last 3 blog posts I posted. LESS PANIC!</p>
+<p>The hard lesson here is making a simple backup before being adventurous. Example, I could have been chill throughout this entire situation, if I had did a git clone before trying out the action or just used two mouse clicks to create a backup branch from Github.</p>
+<blockquote>
+<p>Always backup and ask the question if there is a backup somewhere</p>
+</blockquote>
+<h2 id="A-recovery"><a href="#A-recovery" class="headerlink" title="A recovery"></a>A recovery</h2><p>The recovery process involved converting html to markdown back again and stitching it together with the old backup I had. The site was down for a while (shame on me, can’t keep a static site running 100% of time). It was running an older version for sometime and then now it is fully updated.</p>
+<p>The entire recovery process took me working on the terminal for a quite while with html-&gt;markdown converters and copy-paste.</p>
+<p>But wait, recovery does not stop here. True recovery is recovering from the root cause of the problem.</p>
+<p>The root cause of the problem is that master branch was not force-push protected. I usually do this, but this got missed somehow. (What to do. We humans, right?)</p>
+<p>I changed in Github Settings to restrict force push for master.</p>
+<p>And I took a backup just in case :D</p>
+<p><img src="https://user-images.githubusercontent.com/4211715/71083387-ebae7700-21b8-11ea-8538-1ec0a17321ef.png" alt="image"></p>
+<h2 id="A-flow"><a href="#A-flow" class="headerlink" title="A flow"></a>A flow</h2><p>I like hexo. <a href="https://vishnubharathi.codes/blog/hugo-to-hexo/#Reasons">You can learn why here</a>. But in order to get instant flow of editing and publishing, I want an environment like Wordpress or Medium. Sophistication is setting high expectations all the time. So I want to keep using Hexo, but publish Medium or Wordpress style.</p>
+<p>First I was thinking of writing a fresh blogging platform that will try to address this. But I can’t draw lines on what I should be building. So I wanted to see if there is a way to publish content from something more accessible (like a markdown editor on the web). How about Github’s markdown editor. I am pretty familiar with it and like it.</p>
+<p>In the spirit of exploring Github Actions again, I started writing yaml configurations for it that will build and generate the hexo site. The whole disaster I was speaking about before gave me the idea that you could push some code easily from your github action.</p>
+<p>Here is my YAML config.</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Deployment</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line"><span class="attr">  push:</span></span><br><span class="line"><span class="attr">    branches:</span></span><br><span class="line"><span class="bullet">      -</span> <span class="string">master</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line"><span class="attr">  build:</span></span><br><span class="line"></span><br><span class="line"><span class="attr">    runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line"></span><br><span class="line"><span class="attr">    steps:</span></span><br><span class="line"><span class="attr">    - uses:</span> <span class="string">actions/checkout@v1</span></span><br><span class="line"><span class="attr">    - name:</span> <span class="string">Hexo</span> <span class="string">Generate</span></span><br><span class="line"><span class="attr">      env:</span></span><br><span class="line"><span class="attr">        GITHUB_CONTEXT:</span> <span class="string">$&#123;&#123;</span> <span class="string">toJson(github)</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">      run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">        ls</span></span><br><span class="line"><span class="string">        git status</span></span><br><span class="line"><span class="string">        git remote -v </span></span><br><span class="line"><span class="string">        npm install</span></span><br><span class="line"><span class="string">        pushd themes</span></span><br><span class="line"><span class="string">        git clone https://github.com/scriptnull/hexo-theme-cactus.git cactus</span></span><br><span class="line"><span class="string">        popd</span></span><br><span class="line"><span class="string">        ./package.sh</span></span><br><span class="line"><span class="string">        git status</span></span><br><span class="line"><span class="string">        git add docs/</span></span><br><span class="line"><span class="string">        git add package-lock.json</span></span><br><span class="line"><span class="string">        git config --global user.email "vishnubharathi04@gmail.com"</span></span><br><span class="line"><span class="string">        git config --global user.name "Vishnu Bharathi"</span></span><br><span class="line"><span class="string">        git commit -m "Generated site :sparkles:"</span></span><br><span class="line"><span class="string"></span><span class="attr">    - name:</span> <span class="string">Push</span> <span class="string">changes</span></span><br><span class="line"><span class="attr">      if:</span> <span class="string">startsWith(github.event.head_commit.message,</span> <span class="string">'[deploy]'</span><span class="string">)</span></span><br><span class="line"><span class="attr">      uses:</span> <span class="string">ad-m/github-push-action@master</span></span><br><span class="line"><span class="attr">      with:</span></span><br><span class="line"><span class="attr">        github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_PAGES_TOKEN</span> <span class="string">&#125;&#125;</span></span><br></pre></td></tr></table></figure>
+<p>(messy script, but gets the job done. So going to leave it like that)</p>
+<p>It is bunch of git commands + this github action <code>ad-m/github-push-action@master</code> which helps us to push changes with Github token, rather than a private key.</p>
+<p><img src="https://user-images.githubusercontent.com/4211715/71079967-3f699200-21b2-11ea-90ce-59b7a1efaa17.png" alt="image"></p>
+<p>If you wonder how the job looks like for deployment,</p>
+<p><img src="https://user-images.githubusercontent.com/4211715/71081464-3fb75c80-21b5-11ea-92fe-f72dfc5a118b.png" alt="image"></p>
+<h2 id="Auto"><a href="#Auto" class="headerlink" title="Auto"></a>Auto</h2><p>There are more things behind the story, which would have been fun if I had blogged it like a live journal. But I didn’t have that setup before. But now I have it.</p>
+<p>All I have to do is, open up the github repository and commit the changes with the commit message starting with <code>[deploy]</code> and it will automatically deploy the site.</p>
+<p>The next level of automation would be to deploy a staging environment for each pull requests and see a live version of the site before merging the PR. But for now, I am just happy with this setup.</p>
+<p>Oh and Github gives this cool badge,</p>
+<p><img src="https://github.com/scriptnull/vishnubharathi.codes/workflows/Deployment/badge.svg" alt=""></p>
+<p>~ ~ ~</p>
+<p>NOTE: This is the first blog post that was auto deployed - <a href="https://github.com/scriptnull/vishnubharathi.codes/pull/9" target="_blank" rel="noopener">https://github.com/scriptnull/vishnubharathi.codes/pull/9</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#A-pain"><span class="toc-number">1.</span> <span class="toc-text">A pain</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-lesson-learnt"><span class="toc-number">2.</span> <span class="toc-text">A lesson learnt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-recovery"><span class="toc-number">3.</span> <span class="toc-text">A recovery</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-flow"><span class="toc-number">4.</span> <span class="toc-text">A flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Auto"><span class="toc-number">5.</span> <span class="toc-text">Auto</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/auto/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/auto/&text=Auto"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/auto/&is_video=false&description=Auto"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Auto&body=Check out this article: https://vishnubharathi.codes/blog/auto/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/auto/&title=Auto"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/auto/&name=Auto&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/auto/&t=Auto"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<!-- clipboard -->
+
+  <script src="/lib/clipboard/clipboard.min.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-64308743-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+
+</body>
+</html>
