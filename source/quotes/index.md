@@ -7,6 +7,174 @@ Some words that inspire and help me.
 
 ---
 
+> If you’re not moving forward, you’re moving backward.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> 1,000,000 people overseas can do your job. What makes you so special?
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> If you try to be the best at everything and better than everyone (that is, if you believe success means ascending one global, mega leaderboard), you’ll be the best at nothing and better than no one. Instead, compete in local contests—local not just in terms of geography but also in terms of industry segment and skill set.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> Unfortunately, for far too many, focused learning ends at college graduation. They read about stocks and bonds instead of reading books that improve their mind. They compare their cash salary to their peers’ instead of comparing lessons learned. They invest in the stock market and neglect investing in themselves. They focus, in short, on hard assets instead of soft assets. This is a mistake.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> If you have a business idea you want to pursue, a skill you want to learn, a relationship you want to form, or some other curiosity or aspiration, start on it as a side project
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> The certainty of the Plan Z backstop is what enables you to be aggressive—not tentative—about Plans A and B.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> Indeed, if you study the life of any notable person, you’ll find that the main character operates within a web of support.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> Research shows that a team in the business world will tend to perform at the level of the worst individual team member.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> Relationship builders, on the other hand, try to help other people first. They don’t keep score. They’re aware that many good deeds get reciprocated, but they’re not calculated about it. And they think about their relationships all the time, not just when they need something.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> Seeing what someone’s reading is like seeing the first derivative of their thinking.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> They were out on the move, exploring, traveling widely when they encountered their accidental good fortune,
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> The best way to ensure that lucky things happen is to make sure a lot of things happen.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> Be Resilient: When the Naysayers Are Loud, Turn Up the Music
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> When you have no choice but to fight, you fight hard. When you have no choice but to create, you create.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> Many people think you get career stability by minimizing all risk. But ironically, in a changing world, that’s one of the riskiest things you can do.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> Overestimating threats and avoiding losses may be a fine strategy for achieving evolution’s cold mandate to pass our genes on to future generations. But it’s not the way to make the most of this life. To lead a big and vigorous life, you must work to overcome this negativity bias. The first step is to remind yourself that the downside of a given situation is probably not as bad, or as likely, as it seems.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> Warren Buffett has a mantra: “Be fearful when others are greedy and greedy when others are fearful.”
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> What are the settings where you have a privileged position and better-than-average information to assess risk?
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> Remember: If you don’t find risk, risk will find you.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> Dig until a deeper answer takes shape. Some people hesitate to ask too many questions because they fear it will make them look ignorant. It won’t. It’ll make you look like a curious, intelligent person hungering for valuable information.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
+> For life in permanent beta, the trick is to never stop starting. The start-up is you.
+
+By: Reid Hoffman and Ben Casnocha
+
+Source: [The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career](https://www.amazon.com/dp/B00755MHV8)
+
+---
+
 > So here is the ultimate advice for young would-be startup founders, boiled down to two words: just learn.
 
 By: Paul Graham
