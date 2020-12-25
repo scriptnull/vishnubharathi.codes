@@ -7,6 +7,12 @@ This is my bookshelf. I love to collect and read books. They help me a lot.
 
 ---
 
+<h3>The Start-up of You: Adapt to the Future, Invest in Yourself, and Transform Your Career</h3>
+<span>- Reid Hoffman and Ben Casnocha</span>
+<span><a href="https://www.amazon.com/dp/B00755MHV8">Book Link</a></span>
+
+---
+
 <h3>Who Moved My Cheese?</h3>
 <span>- Dr Spencer Johnson</span>
 <span><a href="https://www.amazon.in/Who-Moved-My-Cheese-Amazing/dp/0091816971">Book Link</a></span>
