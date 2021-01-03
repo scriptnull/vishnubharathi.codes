@@ -22,15 +22,11 @@ Hashicorp seem to have [Serf](https://github.com/hashicorp/serf) which could be 
 A. Das, I. Gupta and A. Motivala, "SWIM: scalable weakly-consistent infection-style process group membership protocol," Proceedings International Conference on Dependable Systems and Networks, Washington, DC, USA, 2002, pp. 303-312, doi: 10.1109/DSN.2002.1028914.
 ```
 
-[memberlist](https://github.com/hashicorp/memberlist) seem to extend SWIM with [Lifeguard: Local Health Awareness for More Accurate Failure Detection](https://arxiv.org/abs/1707.00788). So this might be a nice followup read on this topic.
-
-The SWIM paper starts with this nice quote:
+Here are some of my notes on the SWIM paper. The SWIM paper starts with this nice quote:
 
 > As you swim lazily through the milieu,
 > 
 > The secrets of the world will infect you.
-
-Here are some of my notes on the SWIM paper.
 
 ## Motivation
 The main motivation behind the SWIM paper is
