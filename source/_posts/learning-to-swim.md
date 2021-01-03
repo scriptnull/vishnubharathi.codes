@@ -41,7 +41,7 @@ Example of what we are dealing with here:
 
 When there are 5 nodes, we will end up making 5<sup>2</sup> = 25 network communications. For 10, it will be 100 and for 100, it will be 10,000. Remember this is just for sharing the knowledge of what nodes are in the cluster. That's too much and impractical.
 
-SWIM avoid this quadratic growth.
+SWIM avoids this quadratic growth.
 
 ## Performance metrics
 If we are desigining a membership system for a cluster, the following performance metrics could be considered:
@@ -64,3 +64,29 @@ SWIM tries to give the following performance metrics:
 > (4) propagates membership updates, including information about failures, in infection-style (also gossip-style or epidemic-style [2, 8]); the dissemination latency in the group grows slowly (logarithmically) with the number of members;
 >
 > (5) provides a mechanism to reduce the rate of false positives by “suspecting” a process before “declaring” it as failed within the group.
+
+## SWIM
+SWIM contains two approaches
+
+> (1) a Failure Detector Component, that detects failures of members, and
+> 
+> (2) a Dissemination Component, that disseminates information about members that have recently either joined or left the group, or failed.
+
+### Failure Detector Component
+The good thing about this is
+
+> The protocol does not require clocks to be synchronized across members
+
+(I love it when some distributed system stuff is independent of clocks. I think this is probably due to the weak consistency nature of SWIM)
+
+The failure detector component has two parameters:
+- protocol period (T')
+- number of nodes to be chosen for indirect probing (k)
+
+Attaching the text from the paper on how the failure detector component works
+
+![SWIM detection](/images/failure-detector-of-swim.png)
+
+![SWIM](/images/swim.png)
+
+If you are interested, I suggest you pick up the paper and read through this section.
