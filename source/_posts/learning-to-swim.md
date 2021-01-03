@@ -14,7 +14,7 @@ First, I started by reading the Raft paper and was trying to go through a few op
 - https://github.com/hashicorp/raft-mdb
 
 
-Halfway through my Raft journey, I understood that Raft is a consensus algorithm - It is about making a few machines (a cluster) agree on something. But it does not deal with how machines could be added/removed in the cluster. So we need to handle cluster membership outside it. While digging the above libraries, I arrived at how cluster membership is done in some of the practical systems (mostly the Hashicorp stack).
+Halfway through my Raft journey, I understood that Raft is a consensus algorithm - It is about making a few machines (a cluster) agree on something. But it does not deal with how machines could be added/removed in the cluster. So we need to handle cluster membership outside it. So I started digging the above libraries, I arrived at how cluster membership is done in some of the practical systems (mostly the Hashicorp stack).
 
 Hashicorp seem to have [Serf](https://github.com/hashicorp/serf) which could be used for performing cluster membership. More specifically it uses this [memberlist](https://github.com/hashicorp/memberlist) library to do it which is based on this awesome research paper.
 
@@ -53,4 +53,14 @@ If we are desigining a membership system for a cluster, the following performanc
 
 Typically we might want to have this in our monitoring system to figure out if something is going wrong with our membership system.
 
+SWIM tries to give the following performance metrics:
 
+> (1) imposes a constant message load per group member;
+> 
+> (2) detects a process failure in an (expected) constant time at some non-faulty process in the group;
+>
+> (3) provides a deterministic bound (as a function of group size) on the local time that a non-faulty process takes to de-tect failure of another process;
+>
+> (4) propagates membership updates, including information about failures, in infection-style (also gossip-style or epidemic-style [2, 8]); the dissemination latency in the group grows slowly (logarithmically) with the number of members;
+>
+> (5) provides a mechanism to reduce the rate of false positives by “suspecting” a process before “declaring” it as failed within the group.
