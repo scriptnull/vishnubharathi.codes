@@ -39,4 +39,18 @@ If the cluster has n nodes, then it needs to send message to all the other (n-1)
 
 Example of what we are dealing with here:
 
-When there are 5 nodes, we will end up making 5<sup>2</sup> = 25 network communications. For 10, it will be 100 and for 100, it will be 10,000 (just for sharing the knowledge of what nodes are in the cluster)
+When there are 5 nodes, we will end up making 5<sup>2</sup> = 25 network communications. For 10, it will be 100 and for 100, it will be 10,000. Remember this is just for sharing the knowledge of what nodes are in the cluster. That's too much and impractical.
+
+SWIM avoid this quadratic growth.
+
+## Performance metrics
+If we are desigining a membership system for a cluster, the following performance metrics could be considered:
+
+- Membership propogation speed (should be high)
+- Message load on the network (should be low)
+- Computation load on the process (should be low)
+- False failure detections (should be low)
+
+Typically we might want to have this in our monitoring system to figure out if something is going wrong with our membership system.
+
+
