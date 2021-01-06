@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="I finished reading a research paper called “SWIM: Scalable Weakly-consistent Infection-style Process Group Membership Protocol” last night. This post is going to be about it. If you are here to read m">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Learning to SWIM">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/learning-to-swim/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="I finished reading a research paper called “SWIM: Scalable Weakly-consistent Infection-style Process Group Membership Protocol” last night. This post is going to be about it. If you are here to read m">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-03T03:52:20.000Z">
+<meta property="article:modified_time" content="2021-01-06T01:18:22.172Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="databases">
+<meta property="article:tag" content="research papers">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Learning to SWIM</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/expense-sheets/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/learning-to-swim/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/learning-to-swim/&text=Learning to SWIM"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/learning-to-swim/&title=Learning to SWIM"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/learning-to-swim/&is_video=false&description=Learning to SWIM"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Learning to SWIM&body=Check out this article: https://vishnubharathi.codes/blog/learning-to-swim/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/learning-to-swim/&title=Learning to SWIM"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/learning-to-swim/&title=Learning to SWIM"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/learning-to-swim/&title=Learning to SWIM"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/learning-to-swim/&title=Learning to SWIM"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/learning-to-swim/&name=Learning to SWIM&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/learning-to-swim/&t=Learning to SWIM"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Motivation"><span class="toc-number">1.</span> <span class="toc-text">Motivation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Performance-metrics"><span class="toc-number">2.</span> <span class="toc-text">Performance metrics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swimming"><span class="toc-number">3.</span> <span class="toc-text">Swimming</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Learning to SWIM
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2021-01-03T03:52:20.000Z" itemprop="datePublished">2021-01-03</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/databases/" rel="tag">databases</a>, <a class="tag-link-link" href="/tags/research-papers/" rel="tag">research papers</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>I finished reading a research paper called “SWIM: Scalable Weakly-consistent Infection-style Process Group Membership Protocol” last night. This post is going to be about it. If you are here to read my experience about real-world swimming, I have disappointed you - I still don’t know to swim in waters, haha.</p>
+<p>First, I started by reading the Raft paper and was trying to go through a few open-source RAft implementation libraries and see how those libraries are used in software that is currently used in production. The exploration included the following places:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/hashicorp/raft">https://github.com/hashicorp/raft</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/hashicorp/consul">https://github.com/hashicorp/consul</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/hashicorp/nomad">https://github.com/hashicorp/nomad</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/hashicorp/raft-mdb">https://github.com/hashicorp/raft-mdb</a></li>
+</ul>
+<p>Halfway through my Raft journey, I understood that Raft is a consensus algorithm - It is about making a few machines (a cluster) agree on something. But it does not deal with how machines could be added/removed in the cluster. So we need to handle cluster membership outside it. So I started digging the above libraries, I arrived at how cluster membership is done in some of the practical systems (mostly the Hashicorp stack).</p>
+<p>Hashicorp seems to have <a target="_blank" rel="noopener" href="https://github.com/hashicorp/serf">Serf</a> which could be used for performing cluster membership. More specifically it uses this <a target="_blank" rel="noopener" href="https://github.com/hashicorp/memberlist">memberlist</a> library to do it which is based on this awesome research paper.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">A. Das, I. Gupta and A. Motivala, &quot;SWIM: scalable weakly-consistent infection-style process group membership protocol,&quot; Proceedings International Conference on Dependable Systems and Networks, Washington, DC, USA, 2002, pp. 303-312, doi: 10.1109&#x2F;DSN.2002.1028914.</span><br></pre></td></tr></table></figure>
+<p>Here are some of my notes on the SWIM paper. The SWIM paper starts with this nice quote:</p>
+<blockquote>
+<p>As you swim lazily through the milieu,</p>
+<p>The secrets of the world will infect you.</p>
+</blockquote>
+<h2 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h2><p>The main motivation behind the SWIM paper is</p>
+<blockquote>
+<p>The SWIM effort is motivated by the unscalability of traditional heart-beating protocols, which either impose network loads that grow quadratically with group size, or compromise response times or false positive frequency w.r.t. detecting process crashes.</p>
+</blockquote>
+<p>Before SWIM, the norm is to use a simple many-to-many heart-beating protocol to propagate cluster membership in the cluster. Consider this example:</p>
+<p>If the cluster has n nodes, then it needs to send a message to all the other (n-1) nodes. Hence we end up sending n*(n-1) messages across the network when we want to exchange information about cluster membership. This means that our network load (number of communications that happen on the cluster network) grows quadratically (n<sup>2</sup>) for a group of n nodes in the cluster.</p>
+<p>Example of what we are dealing with here:</p>
+<p>When there are 5 nodes, we will end up making 5<sup>2</sup> = 25 network communications. For 10, it will be 100 and for 100, it will be 10,000. Remember this is just for sharing the knowledge of what nodes are in the cluster. That’s too much and impractical.</p>
+<p>SWIM avoids this quadratic growth.</p>
+<h2 id="Performance-metrics"><a href="#Performance-metrics" class="headerlink" title="Performance metrics"></a>Performance metrics</h2><p>If we are designing a membership system for a cluster, the following performance metrics could be considered:</p>
+<ul>
+<li>Membership propagation speed (should be high)</li>
+<li>Message load on the network (should be low)</li>
+<li>Computation load on the process (should be low)</li>
+<li>False failure detections (should be low)</li>
+</ul>
+<p>Typically we might want to have this in our monitoring system to figure out if something is going wrong with our membership system.</p>
+<p>SWIM tries to give the following performance metrics:</p>
+<blockquote>
+<p>(1) imposes a constant message load per group member;</p>
+<p>(2) detects a process failure in an (expected) constant time at some non-faulty process in the group;</p>
+<p>(3) provides a deterministic bound (as a function of group size) on the local time that a non-faulty process takes to detect failure of another process;</p>
+<p>(4) propagates membership updates, including information about failures, in infection-style (also gossip-style or epidemic-style [2, 8]); the dissemination latency in the group grows slowly (logarithmically) with the number of members;</p>
+<p>(5) provides a mechanism to reduce the rate of false positives by “suspecting” a process before “declaring” it as failed within the group.</p>
+</blockquote>
+<h2 id="Swimming"><a href="#Swimming" class="headerlink" title="Swimming"></a>Swimming</h2><p>I started describing the internal workings of SWIM here to get a deep understanding, but I kind of thought it to be a long-running note that might be lacking good diagrams and so I am adding some awesome sources that I am using to learn about SWIM. (that frees up my time to try to build some cool thing with it)</p>
+<p>The first resource would be the <a target="_blank" rel="noopener" href="https://www.cs.cornell.edu/projects/Quicksilver/public_pdfs/SWIM.pdf">SWIM paper</a> itself.</p>
+<p>The second link would be the <a target="_blank" rel="noopener" href="https://github.com/hashicorp/memberlist">hashicorp/memberlist</a> library source code that implements SWIM.</p>
+<p>The next is one of the best ways to quickly get a taste for SWIM. It is a “papers we love” video presentation of the SWIM paper by Armon Dadgar from HashiCorp. (linked below) </p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bkmbWsDz8LM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>In the presentation, they mention the missing pieces of SWIM and arrive at improvements to SWIM which makes it production-ready. For example, SWIM implementation by the original paper authors was using 56 nodes, but Hashicorp’s implementation was tested in a production use-case having 2000+ nodes. In those massive number of node environments, we need to deal with rejoins efficiently, encryption, etc.</p>
+<p>They took all these improvements and present a paper named <a target="_blank" rel="noopener" href="https://arxiv.org/abs/1707.00788">Lifeguard: Local Health Awareness for More Accurate Failure Detection</a>. Furthermore, they created this project called <a target="_blank" rel="noopener" href="https://www.serf.io">Serf</a> which builds on top of the memberlist library that can be tuned to have a raw SWIM implementation. So if we need a production-ready SWIM implementation, we might just use the Serf library.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Motivation"><span class="toc-number">1.</span> <span class="toc-text">Motivation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Performance-metrics"><span class="toc-number">2.</span> <span class="toc-text">Performance metrics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Swimming"><span class="toc-number">3.</span> <span class="toc-text">Swimming</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/learning-to-swim/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/learning-to-swim/&text=Learning to SWIM"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/learning-to-swim/&title=Learning to SWIM"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/learning-to-swim/&is_video=false&description=Learning to SWIM"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Learning to SWIM&body=Check out this article: https://vishnubharathi.codes/blog/learning-to-swim/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/learning-to-swim/&title=Learning to SWIM"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/learning-to-swim/&title=Learning to SWIM"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/learning-to-swim/&title=Learning to SWIM"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/learning-to-swim/&title=Learning to SWIM"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/learning-to-swim/&name=Learning to SWIM&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/learning-to-swim/&t=Learning to SWIM"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-64308743-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+
+</body>
+</html>
