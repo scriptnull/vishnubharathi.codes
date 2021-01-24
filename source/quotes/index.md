@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> Every minute spent doing something other than what you love most today is a minute you’ll regret when you’re 80.
+
+By: Julian Shapiro
+
+Source: [What to work on](https://www.julian.com/blog/life-planning)
+
+---
+
 > If you’re not moving forward, you’re moving backward.
 
 By: Reid Hoffman and Ben Casnocha
