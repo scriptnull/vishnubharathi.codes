@@ -10,8 +10,6 @@ Few days back, I happened to read this blog post ["In defense of blub studies"](
 
 To put it simply - it is usually the boring stuff that you get away by googling and arriving at stack overflow. The idea is to learn things that help in day to day task instead of chasing the shiny new thing that got released yesterday on HN. we have underrated blub studies for a long time. I find it more satisfying to learn about them these days because they improve my workflow and speed in getting stuff done.
 
-One of the examples of blub studies would be to learn about git internals which will give idea about how the high level git commands like checkout, fetch etc. work and using that knowledge to work with git. This would help in avoiding or at the least bringing down googling stuff.
-
 So, I am listing down my blub study syllabus below.
 
 ## Utils
