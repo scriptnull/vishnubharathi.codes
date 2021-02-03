@@ -30,6 +30,7 @@ sys	0m2.875s
 So normal clone took `4 minutes and 15 seconds` to complete.
 
 Here is the same thing but with a shallow clone
+
 ```
 $ time git clone --depth=1 git@github.com:redis/redis.git
 Cloning into 'redis'...
@@ -46,4 +47,6 @@ sys	0m0.167s
 
 ```
 
-Just took `12 seconds`. So fast!
+Just `12 seconds`
+
+So fast!
