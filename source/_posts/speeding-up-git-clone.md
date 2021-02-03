@@ -46,6 +46,4 @@ sys	0m0.167s
 
 ```
 
-And shallow clone took just `12 seconds` to complete.
-
-so fast!
+Just took `12 seconds`. So fast!
