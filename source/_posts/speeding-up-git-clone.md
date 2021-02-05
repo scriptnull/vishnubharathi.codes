@@ -4,13 +4,13 @@ date: 2021-02-03 07:53:04
 tags: ["devops","tools","productivity"]
 ---
 
-Imagine that you need to take the latest source code of a project and deploy it somewhere by creating some artifacts with it. If it is a git project with a few commits, a simple `git clone .....` would do it. But if it is a project with thousands of commits, then you might be bored of your time waiting for the git clone to complete while deploying.
+Imagine that you need to take the latest source code of a project and deploy it somewhere by creating some artifacts with it. If it is a git project with a few commits, a simple `git clone .....` would do it. But if it is a project with thousands of commits, then you might be bored of your time waiting for the git clone to complete. This is often the case in CI/CD pipelines - that is where I ultimately learned this trick from :D
 
-I recently discovered about something called shallow clones in git. The idea is simple: instead of getting all the commits of a git repo, shallow clone only gets the latest commit. The `--depth=N` flag seems to enable shallow cloning in git where N is the number of latest commits to be fetched.
+I recently discovered something called shallow clones in git. The idea is simple: instead of getting all the commits of a git repo, the shallow clone only gets the latest commit. The `--depth=N` flag seems to enable shallow cloning in git where N is the number of latest commits to be fetched.
 
-Here is an example for comparing how these much of a time you can save:
+Here is an example for comparing how much time you can save:
 
-I tried cloning the redis project - https://github.com/redis/redis which had 10,009 commits while cloning.
+I tried cloning the Redis project - https://github.com/redis/redis which had 10,009 commits while cloning.
 
 ```
 $ time git clone git@github.com:redis/redis.git
