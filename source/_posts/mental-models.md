@@ -54,4 +54,16 @@ Example: This software library does not have a feature or does not have the exte
 
 This will try to sink you in deep thoughts - I mean the ones that you think about in shower and make you "forget if you applied soap to your legs" level of thought.
 
+## Last Principles
 
+First of all, I made up this name "Last Principles" - because this is the opposite of the first principles mental model.
+
+But very often useful. You are doing this when you are googling for something.
+
+When faced with a problem, asking how will I solve it if I were to start from scratch is first principles. Instead, asking how has this problem been solved in various ways and using one of the ways is last principles.
+
+Last principles are a very critical mental model to have. Because that's where the learning and experience happens. You get to see this awesome ways various people are solving the problem you have at hand. It might teach you the best practices, the knowledge that the field has accrued over time. 
+
+oh! and probably save you a ton of time.
+
+Reading a research paper is last principles. I love the way those papers build upon the knowledge from their reference papers. That reference section is last principles. Getting what I mean? :D 
