@@ -14,7 +14,7 @@ I used to not care about mental models when there was a trend on Twitter where p
 
 ## Five Whys
 
-This mental model has a nice [Wikipedia page](https://en.wikipedia.org/wiki/Five_whys) that describes about it nicely.
+This mental model even has a [Wikipedia page](https://en.wikipedia.org/wiki/Five_whys) that describes about it nicely.
 
 > The technique was originally developed by Sakichi Toyoda and was used within the Toyota Motor Corporation during the evolution of its manufacturing methodologies. It is a critical component of problem-solving training, delivered as part of the induction into the Toyota Production System.
 
@@ -41,5 +41,17 @@ Why was the command-line program not found? Because the base image of the build 
 ......
 
 I can go all day asking why. haha - but I should say that I kind of abuse this technique most of the time like stopping with 3 whys in interest of time and control. But that is fine and we just have to find peace somewhere, so this might as well be.
+
+## First Principles
+
+This was mentioned in [Julian's post](https://www.julian.com/blog/mental-model-examples) and is famously used by Elon Musk. I am sure that there is a good chance that you might be using it too. Because I had been quite a while.
+
+Remember those moments at work where you feel nothing is working out. Then this one of the models to be used at those times.
+
+"What if nothing existed about this problem and you were to build a solution for it completely from scratch?" 
+
+Example: This software library does not have a feature or does not have the extensibility to add this feature. Ok! What if you wrote this library from scratch? What are your design decisions like in that case? Will your design accomodate the extensibility for the feature that you are aiming for?
+
+This will try to sink you in deep thoughts - I mean the ones that you think about in shower and make you "forget if you applied soap to your legs" level of thought.
 
 
