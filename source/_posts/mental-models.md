@@ -18,7 +18,7 @@ This mental model even has a [Wikipedia page](https://en.wikipedia.org/wiki/Five
 
 > The technique was originally developed by Sakichi Toyoda and was used within the Toyota Motor Corporation during the evolution of its manufacturing methodologies. It is a critical component of problem-solving training, delivered as part of the induction into the Toyota Production System.
 
-I learned this technique from when I was working for [shippable.com](https://www.shippable.com/) - a lot of work and how things operate inside the company was based on Toyoto's manufacturing process. They used to even refer the term "Software Manufacturing" for the vision of where they want the product to do for software development.
+I learned this technique from when I was working for [shippable.com](https://www.shippable.com/) - a lot of work and how things operate inside the company was based on Toyoto's manufacturing process. They used to even refer the term "Software Manufacturing" for the vision of what they want the product to do for software development.
 
 Often times I have found myself get to the answer of the problem in less than 5 whys. Sometimes going and fixing all the whys may not be in your control. So, chillax and fix what is within your control.
 
