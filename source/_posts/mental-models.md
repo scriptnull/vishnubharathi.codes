@@ -62,7 +62,7 @@ But very often useful. You are doing this when you are googling for something.
 
 When faced with a problem, asking how will I solve it if I were to start from scratch is first principles. Instead, asking how has this problem been solved in various ways and using one of the ways is last principles.
 
-Last principles are a very critical mental model to have. Because that's where the learning and experience happens. You get to see this awesome ways various people are solving the problem you have at hand. It might teach you the best practices, the knowledge that the field has accrued over time. 
+Last principles are a very critical mental model to have. Because that's where the learning and experience happens. You get to see this awesome ways various people are solving the problem you have at hand. It might teach you the best practices and the knowledge that the field has accrued over time. 
 
 oh! and probably save you a ton of time.
 
