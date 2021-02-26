@@ -76,4 +76,4 @@ Particularly helpful for taking big decisions.
 
 It is as simple as asking this question before undertaking big things:
 
-"Will I regret doing this when I am old?"
+"Will I regret not doing this when I am old?"
