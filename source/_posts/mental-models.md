@@ -67,3 +67,13 @@ Last principles are a very critical mental model to have. Because that's where t
 oh! and probably save you a ton of time.
 
 Reading a research paper is last principles. I love the way those papers build upon the knowledge from their reference papers. That reference section is last principles. Getting what I mean? :D 
+
+## Regret Minimization
+
+Popularised by Jeff Bezos - also has been mentioned in [Julian's post](https://www.julian.com/blog/mental-model-examples). 
+
+Particularly helpful for taking big decisions. 
+
+It is as simple as asking this question before undertaking big things:
+
+"Will I regret doing this when I am old?"
