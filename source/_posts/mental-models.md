@@ -94,10 +94,14 @@ I am linking the awesome talk below from where I learnt this.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HZcXup7p5-8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-The talk ends where he discusses about work-life balance. He firmly believes that it is achievable but we just have to be disciplined about it. Vinod Khosla seem to schedule his time into 15 minutes slots and even give appointments. Early on he had 20 main categories and each 15 minute time slot can belong to one of those categories. One of the important categories for him was "having dinner with family/kids" and he started by setting an impossible goal of 25 times per month and eventually achieved it in an year.
+The talk ends where he discusses about work-life balance. He firmly believes that it is achievable but we just have to be disciplined about it. Vinod Khosla seem to schedule his time into 15 minutes slots. Early on he had 20 main categories and each 15 minute time slot can belong to one of those categories. One of the important categories for him was "having dinner with family/kids" and he started by setting an impossible goal of 25 times per month and eventually achieved it in an year.
 
-The key part is he had to do the tracking - measure how he spent his time in-order to make time.
+The key part is measuring how he spent his time in-order to make time for something he thinks is very important.
 
-So, if you are having this problem of "not finding enough time", start by measuring them. Once you measure how you spend time, it is way simpler to identify the fluff and be very self-aware about how you are spending time.
+So, if you are having this problem of "not finding enough time", start by measuring time. Once you measure how you spend time, it is way simpler to identify the t and be very self-aware about how you are spending time.
 
 Bonus: I personally use 1 hour slots, as that is easy to track and gives me more focus by avoiding context switching often.
+
+## Lookout
+
+Alright, I am going to end this blog up here. I am always in the lookout for life lessons and mental models that make me better and help me. So if you have some mental models based on which you operate, send it my way. I will be happy to learn about them and possibly use them.
