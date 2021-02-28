@@ -44,9 +44,9 @@ I can go all day asking why. haha - but I should say that I kind of abuse this t
 
 ## First Principles
 
-This was mentioned in [Julian's post](https://www.julian.com/blog/mental-model-examples) and is famously used by Elon Musk. I am sure that there is a good chance that you might be using it too. Because I had been quite a while.
+This was mentioned in [Julian's post](https://www.julian.com/blog/mental-model-examples) and is famously used by Elon Musk. I am sure that there is a good chance that you might be using it too. Because I had been using it quite a while.
 
-Remember those moments at work where you feel nothing is working out. Then this one of the models to be used at those times.
+Remember those moments at work where you feel nothing is working out. This is one of the models to be used at those times.
 
 "What if nothing existed about this problem and you were to build a solution for it completely from scratch?" 
 
