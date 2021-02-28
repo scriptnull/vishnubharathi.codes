@@ -77,3 +77,10 @@ Particularly helpful for taking big decisions.
 It is as simple as asking this question before undertaking big things:
 
 "Will I regret not doing this when I am old?"
+
+## Minus Five
+
+This is a mental model that I learnt a few backs from [Sridhar Vembhu](https://en.wikipedia.org/wiki/Sridhar_Vembu). He has this advice for people wanting to bootstrap their own company, "Start from -5 years" - meaning start working for what you want to build 5 years before actually starting to build it. This includes saving up money for such a long period of time, gathering skillsets that you need for the business etc.
+
+The core idea that I understand from the minus five mindset is that in-order to do anything substancially big in life, try to plan ahead and save up for those times. Because you don't want to enter the war zone unarmed.
+
