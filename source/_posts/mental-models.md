@@ -1,5 +1,5 @@
 ---
-title: Mental Models
+title: Mental models
 date: 2021-02-26 05:19:27
 tags: ["life"," career advice"]
 ---
