@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> If you are desperate, it's a great asset. If you have too many choices in life, it clouds your thinking. When you have one way to go and that's forward, it's very easy.
+
+By: Doug Leone
+
+Source: [Sequoia Capital's Doug Leone on Luck & Taking Risks](https://www.youtube.com/watch?v=4cl8X02Xd1I)
+
+---
+
 > Let me tell you what we think about children. They're hardwired for struggle when they get here. And when you hold those perfect little babies in your hand, our job is not to say, "Look at her, she's perfect. My job is just to keep her perfect -- make sure she makes the tennis team by fifth grade and Yale by seventh." That's not our job. Our job is to look and say, "You know what? You're imperfect, and you're wired for struggle, but you are worthy of love and belonging." That's our job. Show me a generation of kids raised like that, and we'll end the problems, I think, that we see today.
 
 By: Brené Brown
