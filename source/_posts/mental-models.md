@@ -90,7 +90,9 @@ Picked up this mental model from Vinod Khosla. Been using this for a few weeks n
 
 I am linking the awesome talk below from where I learnt this.
 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HZcXup7p5-8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 The talk ends where he discusses about work-life balance. He firmly believes that it is achievable but we just have to be disciplined about it. Vinod Khosla seem to schedule his time into 15 minutes slots and even give appointments. Early on he had 20 main categories and each 15 minute time slot can belong to one of those categories. One of the important categories for him was "having dinner with family/kids" and he started by setting an impossible goal of 25 times per month and eventually achieved it in an year.
 
