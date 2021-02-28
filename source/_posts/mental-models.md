@@ -84,3 +84,18 @@ This is a mental model that I learnt sometime back from [Sridhar Vembhu](https:/
 
 The core idea that I understand from the minus five mindset is that in-order to do anything substancially big in life, try to plan ahead and save up for those times. Because you don't want to enter the war zone unarmed.
 
+## Measure them
+
+Picked up this mental model from Vinod Khosla. Been using this for a few weeks now and I feel good about it.
+
+I am linking the awesome talk below from where I learnt this.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HZcXup7p5-8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+The talk ends where he discusses about work-life balance. He firmly believes that it is achievable but we just have to be disciplined about it. Vinod Khosla seem to schedule his time into 15 minutes slots and even give appointments. Early on he had 20 main categories and each 15 minute time slot can belong to one of those categories. One of the important categories for him was "having dinner with family/kids" and he started by setting an impossible goal of 25 times per month and eventually achieved it in an year.
+
+The key part is he had to do the tracking - measure how he spent his time in-order to make time.
+
+So, if you are having this problem of "not finding enough time", start by measuring them. Once you measure how you spend time, it is way simpler to identify the fluff and be very self-aware about how you are spending time.
+
+Bonus: I personally use 1 hour slots, as that is easy to track and gives me more focus by avoiding context switching often.
