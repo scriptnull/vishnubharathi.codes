@@ -1,7 +1,7 @@
 ---
 title: Mental models
 date: 2021-02-26 05:19:27
-tags: ["life"," career advice"]
+tags: ["life","career advice"]
 ---
 
 This post is inspired by [Julian's Mental Models](https://www.julian.com/blog/mental-model-examples). I will use the explanation in that blog post to explain what it is: 
