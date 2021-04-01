@@ -1,5 +1,5 @@
 ---
-title: My first-ever conferance talk 🎤
+title: My first-ever conference talk 🎤
 date: 2021-04-02 02:41:22
 tags: ["life","milestone","conference"]
 ---
