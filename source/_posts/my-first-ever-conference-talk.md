@@ -46,7 +46,9 @@ I really liked this video called [Talk nerdy to me](https://www.ted.com/talks/me
 
 In the meantime came the speaker kit from GitHub! They comfortably stocked me with all gadgets that I need for the tech talk.
 
+<center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thank you <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a>/<a href="https://twitter.com/GitHubIndia?ref_src=twsrc%5Etfw">@GitHubIndia</a> for these lovely gadgets. 🙏❤️<br><br>Deploying them to my desk is the first thing I want to do this weekend 😀👨‍💻 <a href="https://t.co/0r3PyxCeLu">pic.twitter.com/0r3PyxCeLu</a></p>&mdash; Vishnu Bharathi (@scriptnull) <a href="https://twitter.com/scriptnull/status/1372945054243774467?ref_src=twsrc%5Etfw">March 19, 2021</a></blockquote>
+</center>
 
 It wow-ed everyone around. Happens every time I receive free goodies :D
 
@@ -60,7 +62,9 @@ Then came the technical rehearsal where we needed to set up the gadgets we recei
 
 Finally, it was happening :)
 
+<center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Friends, I am presenting a lightning tech talk at <a href="https://twitter.com/hashtag/GitHubSatellite?src=hash&amp;ref_src=twsrc%5Etfw">#GitHubSatellite</a> (kind of my first-ever proper tech talk 😄)<br><br>If you are interested in learning how we build internal dev tools at <a href="https://twitter.com/HasuraHQ?ref_src=twsrc%5Etfw">@HasuraHQ</a>, tune in to <a href="https://t.co/dPngNVra99">https://t.co/dPngNVra99</a> tomorrow at 11:45 AM IST. <a href="https://t.co/kZaDH5bBli">pic.twitter.com/kZaDH5bBli</a></p>&mdash; Vishnu Bharathi (@scriptnull) <a href="https://twitter.com/scriptnull/status/1375479210551074818?ref_src=twsrc%5Etfw">March 26, 2021</a></blockquote>
+</center>
 
 Here is the [link](https://youtu.be/YXBFTDdf1-E?t=8766) to the awesome MCs introducing me and passing me the mic. Wow, that gave me the feel of attending a physical conference.
 
