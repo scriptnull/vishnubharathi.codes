@@ -14,7 +14,9 @@ I don't usually speak up much in real life. But I recently felt that I haven't b
 
 At the same time, I discovered that the GitHub Satellite conference is happening soon and CFPs are open for it.
 
+<center>
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">GitHub Satellite is coming to India (well, virtually)!🎉<br>We want to hear your stories about open source, secure development &amp; DevOps.<br>Submit a proposal to speak at GitHub Satellite India 2021 on March 26-27.<a href="https://t.co/uDsbubEIyh">https://t.co/uDsbubEIyh</a> <a href="https://t.co/N4Nxp28rHE">pic.twitter.com/N4Nxp28rHE</a></p>&mdash; GitHubIndia (@GitHubIndia) <a href="https://twitter.com/GitHubIndia/status/1358001577110368256?ref_src=twsrc%5Etfw">February 6, 2021</a></blockquote>
+</center>
 
 Then struck the thought: Maybe I should give a talk because I am kind of doing some cool DevOps stuff with GitHub Actions at work. Maybe share about it?
 
