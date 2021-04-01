@@ -47,3 +47,29 @@ In the meantime came the speaker kit from GitHub! They comfortably stocked my wi
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Thank you <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a>/<a href="https://twitter.com/GitHubIndia?ref_src=twsrc%5Etfw">@GitHubIndia</a> for these lovely gadgets. 🙏❤️<br><br>Deploying them to my desk is the first thing I want to do this weekend 😀👨‍💻 <a href="https://t.co/0r3PyxCeLu">pic.twitter.com/0r3PyxCeLu</a></p>&mdash; Vishnu Bharathi (@scriptnull) <a href="https://twitter.com/scriptnull/status/1372945054243774467?ref_src=twsrc%5Etfw">March 19, 2021</a></blockquote>
 
 It wow-ed everyone around. Happens everytime I receive free goodies :D
+
+GitHub arranged a speaker coaching session that is optional to attend. I completely went in for it because I knew that it will definitely help me out. It was conducted in batches of speakers. We were supposed to get ready with the first few slides of our talk and go through it infront of the speaker coach. Then they give us honest feedback and ways to improve.
+
+I completely bombed my coaching session. I think I was nowhere close to ready for it except that I felt to have nice presentation slides. The speaking coach was brutally honest and kind in what I was doing wrong and how I should go about fixing it. The problem was I had loose ends while talking that gave the idea that I wasn't confident about what I was talking.
+
+From that point onward, things got real :D
+
+Then came the technical rehersal where we needed to setup the gadgets we received and check if lightning, audio, video etc. are good by jumping into a zoom call with the event producers. Followed up by sending over my entire deck of slides to the event organizer and a dress rehersal.
+
+Finally it was happening :)
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Friends, I am presenting a lightning tech talk at <a href="https://twitter.com/hashtag/GitHubSatellite?src=hash&amp;ref_src=twsrc%5Etfw">#GitHubSatellite</a> (kind of my first-ever proper tech talk 😄)<br><br>If you are interested in learning how we build internal dev tools at <a href="https://twitter.com/HasuraHQ?ref_src=twsrc%5Etfw">@HasuraHQ</a>, tune in to <a href="https://t.co/dPngNVra99">https://t.co/dPngNVra99</a> tomorrow at 11:45 AM IST. <a href="https://t.co/kZaDH5bBli">pic.twitter.com/kZaDH5bBli</a></p>&mdash; Vishnu Bharathi (@scriptnull) <a href="https://twitter.com/scriptnull/status/1375479210551074818?ref_src=twsrc%5Etfw">March 26, 2021</a></blockquote>
+
+Here is the [link](https://youtu.be/YXBFTDdf1-E?t=8766) to the awesome MCs introducing me and passing me the mic. Wow, that gave me the feel of attending a physical conference.
+
+Finally, here is the recording my first-ever conference talk.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IeptXqgu_k8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Every thing went well! I feel that I did better than what I was thinking to do (lol, kind of reliving to write it).
+
+I would definitely like to thank team [@GitHubIndia](https://twitter.com/githubindia) for organising the conference! They definitely did a great job here _/\_
+
+oh! I forgot to mention, they even sent me some snacks to munch during the conference :)
+
+![gh-snacks](/images/gh-snacks.jpg)
