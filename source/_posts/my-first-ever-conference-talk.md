@@ -64,7 +64,9 @@ Here is the [link](https://youtu.be/YXBFTDdf1-E?t=8766) to the awesome MCs intro
 
 Finally, here is the recording of my first-ever conference talk.
 
+<center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IeptXqgu_k8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</center>
 
 Everything went well! I feel that I did better than what I was thinking to do (lol, kind of reliving to write it).
 
@@ -73,3 +75,6 @@ I would definitely like to thank team [@GitHubIndia](https://twitter.com/githubi
 oh! I forgot to mention, they even sent me some snacks to munch during the conference :)
 
 ![gh-snacks](/images/gh-snacks.jpg)
+
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
