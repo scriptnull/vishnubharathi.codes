@@ -14,6 +14,7 @@ So, I am listing down my blub study syllabus below.
 
 ## Utils
 
+- [ ] [Shell expansions](https://www.gnu.org/software/bash/manual/html_node/Shell-Expansions.html)
 - [ ] [grep, awk and sed – three VERY useful command-line utilities](https://www-users.york.ac.uk/~mijp1/teaching/2nd_year_Comp_Lab/guides/grep_awk_sed.pdf)
 - [ ] [sed, a stream editor](https://www.gnu.org/software/sed/manual/sed.html) - GNU software manual
 - [ ] [GNU make](https://www.gnu.org/software/make/manual/make.html) - GNU software manual
