@@ -6,16 +6,18 @@ tags: ["life", "productivity", "nostalgia"]
 
 I remember this incident distinctly from my childhood. I had gone to my uncle's home and was playing his video game. It was this amazing game of "Road Fighter". I totally forgot the name of this game and had to google it to get it back now. Just in case if you haven't heard of this game or forgot about it, here is a small clip from YouTube that might remind you of this super A W E S O M E game.
 
+<center>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5Q5-QNfmsbQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+</center>
 
 I was a beginner at video games in general at that time. I played for fun. Of course, I wanted to win. I neither had a strategy nor cared to think about it. I just played again and again with the hope that I would win.
 
 Well, it took quite a few years (or should I say more than a decade) to get this wisdom about hope:
 
 > Hope is not a strategy.
+> 
 >
-> -- Traditional SRE saying [Google SRE](https://sre.google/sre-book/introduction/)
+> -- Traditional SRE saying ([Google SRE](https://sre.google/sre-book/introduction/))
 
 haha! poor me.
 
