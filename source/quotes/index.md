@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> "Negotiation is the heart of collaboration. It is what makes conflict potentially meaningful and productive for all parties. It can change your life, as it has changed mine."
+
+By: Chris Voss
+
+Source: [Never split the difference](https://www.goodreads.com/book/show/26156469-never-split-the-difference?ac=1&from_search=true&qid=3lq2H8RuHa&rank=1)
+
+---
+
 > If you are desperate, it's a great asset. If you have too many choices in life, it clouds your thinking. When you have one way to go and that's forward, it's very easy.
 
 By: Doug Leone
