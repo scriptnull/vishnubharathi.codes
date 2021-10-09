@@ -1,7 +1,7 @@
 ---
 title: The Levenshtein distance in production
 date: 2020-08-22 23:11:29
-tags: ["algorithms", "programming", "open source"]
+tags: ["algorithms", "programming", "open source", "recurse center"]
 ---
 
 You might have heard about the [Levenshtein distance](https://en.wikipedia.org/wiki/Levenshtein_distance) while in college or while preparing for tech interviews. It is the famous [edit distance problem](https://leetcode.com/problems/edit-distance/). It is one of those must-try [Dynamic Programming](https://en.wikipedia.org/wiki/Dynamic_programming) challenges.
