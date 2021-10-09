@@ -1,7 +1,7 @@
 ---
 title: Learning to sort
 date: 2020-08-17 00:07:42
-tags: ["algorithms","programming","data structures","go","tech interviews"]
+tags: ["algorithms","programming","data structures","go","tech interviews", "recurse center"]
 ---
 
 I kind of procrastinate over starting to learn about sorting whenever I am preparing for interviews. Mainly because we need to memorize the working of various sorting algorithms. But over time, I have realized that each sorting algorithm is based on some intuition and if we can understand those intuitions, then it becomes easy to remember how they work.
