@@ -59,3 +59,29 @@ I have never been called out with a bad/curse word in our native language before
 It was a great lesson for me. From that point onwards, I usually address people by their name. I never use {sir, madam, brother, sister}. Most of all, I stick with english while communicating at workplace.
 
 I wish I learnt this lesson from a less-rude experience.
+
+## Ticket master
+
+I was at work. We were seeing a strange bug which was happening randomly. I think it was pretty serious bug and I witnessed it twice. I had previously mentioned about this bug to a senior engineer. When I witnessed the same bug for the seond time, I ran taking my laptop to that senior engineer showing it. We started checking the logs and trying to make sense of the situation.
+
+It was a fresh monday, if I remember correctly. An very senior engineer (who was trying to be an aspiring engineering manager) was visiting our office at that time and it was the first time I was seeing them in our office. They came down here to work from the India office for a couple of weeks. They saw us debugging something and came in interrupting our debugging session.
+
+He talked to me for the first time ever, "what are you doing here?". I said, "I might have run into some bug, which I am not sure if it a bug that happens due to my local environment...."
+
+He asked, "Do we have a GitHub issue for it?". I said, "No! But before opening it, I wanted to confirm if it is a bug and I needed the help from this person".
+
+The last sentence that I said, they didn't allow me to complete it. Right in the middle of what I was speaking, they again asked in strong voice, "Do we have a GitHub issue for it".
+
+I repeated "No."
+
+They continued asking me, (in strong tone): "Then why are you wasting everybody's time? Did you know that you must create a GitHub issue for everything?". I was trying to explain that "it was not a waste of time to clarify a little bit before opening an issue,......".
+
+They didn't allow me to complete my sentences. They preached me the process.
+
+At that point, I felt speechless to talk back to them and I felt the same rudeness as the football match situation.
+
+(at this point, I guess everybody in office was looking at us and my eyes were filled with tears)
+
+I returned back to my desk, silently.
+
+See the pattern here, in both the situations: The rudeness is mostly due to some person chose not to listen to some other person and care to explain back them in a peaceful way.
