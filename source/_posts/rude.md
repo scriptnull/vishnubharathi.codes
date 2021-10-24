@@ -34,7 +34,7 @@ I was allowed to play the match. I sat in as a substitute in the first half and 
 
 I returned home that night. Though the victory was on the side I was part of, I couldn't really be happy about playing there. All that kept repeating in mind was the things that captain said to me "jump off the wall and go home". I wondered deeply that "wow, people could be this rude". If the captain were to "talk" to me instead of stating rude stuff and not giving me chance to explain what is on my side, this story would not be present here.
 
-Ok, pattern 1 on people who might bahave rude: "They don't care to listen what you have to say." - so maybe "listen to people on what they have to say" if you don't want to be rude. That was my learing from that event.
+Ok, pattern 1 on people who might bahave rude: "They don't care to listen what you have to say." - so maybe "listen to people on what they have to say" if you don't want to be rude. That was my learning from that event.
 
 I quit playing football in school after that incident. But I still played street football where there is no coach or captain - lol (and no self-doubt). Just a plain field and a football with some good old friends near my house.
 
@@ -44,4 +44,18 @@ uff, damn this was heavy for me - I have never shared this moment with anyone an
 
 I think it was 2016 or 17. I started working as an engineer for a startup. A lot of things were new to me at that point - especially the place and people. I started working in Bangalore and I came from a small town. I was getting adjusted to the new job and my circumstance there. There was a culture shift that I had to get used to. I had learn and unlearn somethings. I learnt it the hard way.
 
-At my place, we address most people as "sir/madam" or "brother/sister". We were taught that it is the right way to give respect by default. So, I always addressed people that way and I never had compains about it.
+At my place, we address most people as "sir/madam" or "brother/sister". We were taught that it is the right way to give respect by default. So, I always addressed people that way and I never had compains about it. At work, I was informed that the norm at workplace was to refer everyboady by just their name. So, I did my best to unlearn my habit and addressed everybody with their name except one. (retrospect: my fault, I shouldn't have made this exception)
+
+The exception I made was to an engineer who spoke the native language as me. I spoke in english to everybody in the company except this person. We spoke in our native language (Tamil) when we met each other in the bean bag spot. Due to my 25 years of experience in adding "anna" (meaning brother in the native language) at the end or beginning of sentence when talking with someone of higher age groups, my dialogues heavily included it. I was lonely and it felt home when talking to this person mostly because he was the only one to speak in the same native languages as me in a new world that I was part of. That person told me not to refer hime as "anna" but instead just use his name to address him. Well, my mind couldn't accept it - I was trying to be respectful and having that word is far more natural while trying to address someone like him back in my home place. But it wasn't my home place - lol, that was the disconnect that I didn't understand. I mostly continued using that word and he didn't show any "strong" opposition about it. Until ,....
+
+There was a team party. (I think it was my first time ever stepping into what they call a "pub")
+
+I don't drink alcohol and I requested for some fresh juice - lol (I still do this). I think I was given non-alcoholic drinks with a lot of sugar and fresh fruits mashed on top of it. Most of the team started drinking and it was long hours of dicussion, play and enjoyment.
+
+I had the chance to sit near the person that I mentioned previously at some point in that event. I referred them as brother in my native language casually and that's it. The person was on alcohol and maybe the reaction is due to that. They reacted back with what I feel to be my life's rudest moment. He cursed me back with a bad word in our native language. He said something along the lines of "(some really bad words), I have been asking you to stop calling me that why would you still address me like that". We were surrounded by a lot of our teammates and luckily no-one understood what he said.
+
+I have never been called out with a bad/curse word in our native language before in my entire life. I never created problems or get myself into such situations. I felt bad that the person whom I was thinking close to home would do something like that to me. I didn't respond anything, I just sat there in shock and silently retired home after the event. I never spoke about that event with them afterwards.
+
+It was a great lesson for me. From that point onwards, I usually address people by their name. I never use {sir, madam, brother, sister}. Most of all, I stick with english while communicating at workplace.
+
+I wish I learnt this lesson from a less-rude experience.
