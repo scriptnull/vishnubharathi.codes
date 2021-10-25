@@ -8,7 +8,7 @@ Hello! It's me, posting here after a long time. I had been a bit busy recently a
 
 Maybe I will try to write some interesting tech stuff that I have been doing in the past months - but not tonight. Tonight, I will try to offload some life events that had been weighing on me for a long time.
 
-(disclaimer - if you are new to this blog: once in a while I tend to sit down on a sleepless night to capture some life events that happened to me on this blog. They don't always convey something in particular. But however, this post tries to convey a simple idea which is :point_down: )
+(disclaimer - if you are new to this blog: once in a while I tend to sit down on a sleepless night to capture some life events that happened to me. They don't always convey something in particular. But however, this post tries to convey something which is :point_down: )
 
 > "Don't be rude to people"
 
@@ -85,3 +85,26 @@ At that point, I felt speechless to talk back to them and I felt the same rudene
 I returned back to my desk, silently.
 
 See the pattern here, in both the situations: The rudeness is mostly due to some person chose not to listen to some other person and care to explain back them in a peaceful way.
+
+## Laptop
+
+I am a bit emotionally attached to machines :D which mainly includes computing devices that I use everyday, like my laptop. (call me whatever, but I love my devices that help me to be productive)
+
+I was working at a place where you could BYOD (bring your own device). Well, this was more of a MBYOD situation (Must bring your own device) situation. The startup didn't have enough funds to buy laptops for the engineers so every had to use their own laptop.
+
+I didn't exactly have my own laptop when joining this company. What I had was a laptop with Windows installed, which was bought recently for my brother (cousin) - kind of like a graduation gift from me to him. I explained my situation to my brother and he was nice enough to spare me his new laptop, so that I could use it for a month or two to get a paycheck and buy a laptop for me.
+
+It was stressful times. I had a lot of commitments and I wasn't able to buy a new machine for about 6 months. I feel sorry for getting myself into that situation. But I had no choice but to use the laptop that I got as gift for my brother for work. I think it was lenovo ideapad 145s. During that time, I was trying to be careful to give the laptop like a new one to my brother. So, I didn't remove Windows 10 and install linux like I would do usually. I didn't install much software. I want to be minimal and was planning for a reset before giving him the laptop.
+
+That is the reason why I kept using Ideapad with Windows at work then. I was able to do the tasks in hand mostly by spinning up a linux VM on cloud and using a basic code editor.
+
+My peer engineers in that office were mostly using Thinkpads, XPS, MacBooks etc. (lucky for them that they were able to afford it on their own. Poor me, haha.)
+
+There was this one engineer to whom I had approached about a doubt, I guess. They sounded very brilliant with lot of subject matter expertise. They were trying to use my laptop. Apparently they were a thinkpad fan and they started discussion on how great thinkpad was with some other thinkpad fan who was sitting near me - while there was an I/O delay on my laptop. I guess they pressed a bunch of keys and the ideapad didn't respond quickly as they expected.
+
+Suddenly this brilliant engineer informed me that my ideapad is "piece of s*%t" and more heavy words. I felt bad and they had already said words that seem to have judged me to be a stupid person for using ideapad and on top of it windows. I tried explaining to them that this was a spare machine and I am looking forward to get a machine of my own. They didn't seem to care and they just walked away in the middle of the conversation.
+
+I am ok with the "your laptop is not cool" conversation, but I wish that it was not rude. Maybe all that is needed to make this situation non-rude were these:
+1. avoid curse words
+2. ask politely why I preferred this hardware
+3. listen what I had to tell for 2 minutes
