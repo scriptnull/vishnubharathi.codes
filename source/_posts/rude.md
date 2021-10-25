@@ -108,3 +108,21 @@ I am ok with the "your laptop is not cool" conversation, but I wish that it was 
 1. avoid curse words
 2. ask politely why I preferred this hardware
 3. listen what I had to tell for 2 minutes
+
+## Thanks for listening
+
+Not sure if somebody read this long post till here but if you have read so far I want to thank you for listening to me. Because that is step 1 of not being rude to somebody.
+
+I am sorry if I have been rude to you in some way in the past. I try very hard to be not rude to anyone. If you feel I had behaved rude anytime, feel free to talk to me about it. I will ask a polite sorry to you and correct myself. I deeply care about you and our friendship.
+
+A special sorry to everyone who had been rude to me and found a spot on this blog post. You should probably forget that you read this, just like the way I try to forget the rude moments. I have been quite successful in forgetting bad moments. How do I say, because most of this post is an approximation of what I remember from that rude moment.
+
+One more thing is, some of these events might not seem rude to someone reading this. But I cried or almost cried in all the above situations. Remember the cultural gaps and try respecting what a person might be going through. I wish that no-one has to go through this bad feeling of "rudeness" at workplace especially.
+
+## Takeaways
+1. Try not to be rude.
+2. Try hard not to be rude.
+3. Try listening to people and treat them in a good way.
+4. Avoid bad/curse words.
+5. Apologize if you feel that you had been rude to somebody in someway.
+ 
