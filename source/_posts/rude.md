@@ -30,7 +30,7 @@ He said, "hey small boy" (or some kind of equivalent - probably because he think
 
 Then in a while, some of the people with who I have practiced (especially some "hostellers") came in. They all vouched for me saying that this person practices and is good at defense. The football coach came in and says to the captain, "He seems pitiful, why not you include him in the match". I respect that the coach asked to include me in the game, but I didn't exactly want to there because I was "pitiful". This kicked a whole bunch of self-doubt in my young mind.
 
-I was allowed to play the match. I sat in as a substitute in the first half and was on the ground for the second half. I got the chance to kick the ball one or two times during the match. The team that I was part of winning the match.
+I was allowed to play the match. I sat in as a substitute in the first half and was on the ground for the second half. I got the chance to kick the ball one or two times during the match. The team that I was part of won the match.
 
 I returned home that night. Though the victory was on the side I was part of, I couldn't really be happy about playing there. All that kept repeating in mind was the things that captain said to me "jump off the wall and go home". I wondered deeply that "wow, people could be this rude". If the captain were to "talk" to me instead of stating rude stuff and not giving me chance to explain what is on my side, this story would not be present here.
 
