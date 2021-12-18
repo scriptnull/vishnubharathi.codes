@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> "The advice that I would give people is that you know a lot less than you think and that's okay. It's actually probably really good thing but to make up for that you really have to surround yourself with people who are good at what they do and interested in helping you learn..... Don't chase names, don't chase fame - none of that stuff. Success will come if you just focus on sort of building the fundamentals."
+
+By: Mitchell Hashimoto
+
+Source: [Code Story - S4 Bonus: Mitchell Hashimoto, HashiCorp (Replay)](https://youtu.be/PCDuv_K-2gQ)
+
+---
+
 > "Negotiation is the heart of collaboration. It is what makes conflict potentially meaningful and productive for all parties. It can change your life, as it has changed mine."
 
 By: Chris Voss
