@@ -56,3 +56,38 @@ The book introduces something called "Fogg's elements of simplicty". These are t
 >
 > These factors will differ by person and context: therefore, designers should ask, "What is the thing that is missing that would allow my users to proceed to the next step?" Designing with an eye toward simplifying the overall user experience reduces friction, removes obstacles, and heps push the user across Fogg's action line.
 
+I have come across various brain "biases". I felt it to be mostly psychological theory. But the book picked up four biases in particular and tries to explain with help of examples. (Found it to be practical)
+- The Scarcity Effect - This is why Amazon shows "1 out of 10 remaining in stock"
+- The Framing Effect - This is why you should care about the design of the box you package your product with.
+- The Anchoring Effect - "Buy one, get two", "Shops that have 20% off always"
+- The Endowed Progress Effect - This why most sign-up flows show progress (Like Linkedin showing 80% complete to making you fill to becomes an "All-star" profile")
+
+> The appearance of scarcity affected their perception of value.
+
+> People often anchor to one piece of information when making a decision.
+
+> The study demonstrates the endowed progress effect, a phenomenon that increases motivation as people believe they are nearing a goal.
+
+## Variable Reward
+
+> The magic words the reseacrcher discovered? The phrase "But you are free to accept or refuse"
+> 
+> The "but ou are free" technique demonstrates how we are more likely to be persuaded to give when our ability to choose is reaffirmed. Not only was the effect observed during face-to-face interactions, but also over email. Although the research did not directly look at how products and services might use the technique, the study provides an important insight into how companies maintain or lose the user's attention."
+
+## Investment
+
+> Unlike its competitors who sell preassembled merchandise, IKEA puts its customers to work. It turns out there's a hidden benefit to making users invest physical effort in assembling the product - by asking customers to assemble their own furnitur, Ariely believes they adopt an irrational love of the furniture they built, just like the test subjects did in the origami experiments. Business that leverage user effort confer higher value to their products simply because their users have put work into them. The users have invested in the products through their labor.
+
+> Studies reveal that our past is an excellent predictor of our future.
+
+## Habit Testing
+
+> For example, in its early days, Twitter discovered that once new users followed thrity other members, they hit a tipping point that dramatically increased the odds they would keep using the site.
+
+> Twitter used the insights gained from the previous step to modify its on-boarding process, encouraging new users to immediately begin following others.
+
+## Bonus
+
+Throughout the book, I felt that the author themselves applied the principles to the book itself. One thing that put a smile on my face was during the closing chapter of the book, the authors say this
+
+> Also, it would mean so much to me if you could take a moment to review the book online, "but you are free to accept or refuse"
