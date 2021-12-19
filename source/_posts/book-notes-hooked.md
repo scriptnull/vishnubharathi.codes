@@ -34,3 +34,25 @@ tags: ["books"]
 
 ## Action
 
+> Fogg posits that there are three ingredients required to initiate any and all behaviours: (1) the user must have sufficient motivation; (2) the user must have the ability to complete the desired action; and (3) a trigger must present to activate the behaviour.
+>
+> The Fogg Behaviour Model is represented in the forumula B = MAT, which represents that a given behaviour will occur when motivation, ability, and a trigger are present at the same time and in sufficient degrees.
+
+> Evan Williams, cofounder of Blogger, Twitter, and Medium, echoes Hauptly's formula for innovation when he describes his own approach to building three massively successful companies:
+>
+> "Take a human desire, preferrably one that has been around for a really long time... Identify that desire and use modern technology to take out steps."
+
+The book introduces something called "Fogg's elements of simplicty". These are the factors that influence a task's difficulty. They are
+- Time - how long it takes to complete an action.
+- Money - the fiscal cost of taking an action.
+- Physical effort - the amount of labor involved in taking the action.
+- Brain cycles - the level of mental effort and focus required to take an action.
+- Social deviance - how accepted the behaviour is by others
+- Non-routine - according to Fogg, "How much the action matches or dirupts existing routines"
+
+> To increase the likelihook that a behaviour will occur, Fogg instructs designers to focus on simplicity as a function of the user's scarcest resource at that moment. In other words: Identify what the user is missing. What is making it diffcult for the user to accomplish the desired action?
+>
+> Is the user short on time? Is the behaviour too expensive? Is the user exhausted after a long day of work? Is the product too difficut to understand? Is the user in a social context where the behaviour could be perceived as inappropriate? Is the behaviour simply so far removed from the user's normal routine that its strangeness is off-putting?
+>
+> These factors will differ by person and context: therefore, designers should ask, "What is the thing that is missing that would allow my users to proceed to the next step?" Designing with an eye toward simplifying the overall user experience reduces friction, removes obstacles, and heps push the user across Fogg's action line.
+
