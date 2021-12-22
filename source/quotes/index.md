@@ -7,6 +7,22 @@ Some words that inspire and help me.
 
 ---
 
+> "Try to be happy because in this world, everything is temporary. You know. So you should be happy. You know. That's the way my grandmother taught me. Nothing is permanent, so you should be with what you got."
+
+By: Thiru Kumar, AKA the Dosa Man
+
+Source: [The Legendary Dosa Man of NYC | Street Food Icons](https://www.youtube.com/watch?v=sxt4YCIsn2I)
+
+---
+
+> "Especially cooking food, my grandmother told me here to put lot of love into it. If you don't love what you do, it's very hard to come up in the business."
+
+By: Thiru Kumar, AKA the Dosa Man
+
+Source: [The Legendary Dosa Man of NYC | Street Food Icons](https://www.youtube.com/watch?v=sxt4YCIsn2I)
+
+---
+
 > "The advice that I would give people is that you know a lot less than you think and that's okay. It's actually probably really good thing but to make up for that you really have to surround yourself with people who are good at what they do and interested in helping you learn..... Don't chase names, don't chase fame - none of that stuff. Success will come if you just focus on sort of building the fundamentals."
 
 By: Mitchell Hashimoto
