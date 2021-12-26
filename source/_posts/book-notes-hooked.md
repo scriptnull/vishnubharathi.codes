@@ -4,9 +4,9 @@ date: 2021-12-19 13:09:58
 tags: ["books"]
 ---
 
-I recently had the chance to read through this book: [Hooked: How to Build Habit-Forming Products](https://www.goodreads.com/book/show/22668729-hooked). My attempt at bringing back my "builder" spirit. I have worked on projects without proper plan before - my side projects are literally whatever I like to do with my time at any given point - LOL :D
+I recently had the chance to read through this book: [Hooked: How to Build Habit-Forming Products](https://www.goodreads.com/book/show/22668729-hooked). It is my  attempt at bringing back the "builder" spirit. I have worked on projects without proper plan before - my side projects are literally whatever I like to do with my time at any given point - LOL :D
 
-So, I thought I will learn how some good products are getting built. Apart from that this book is about "habit forming products". By this time, I have realized that I have a "habit" of using certain things everyday - I don't even know how it became a habit, but it is a habit for me now (example: picking up phone to check twitter a lot). So, I was curious to understand how I ended up like this and probably use the book in reverse-effect to control my habits (so that they don't become addiction).
+So, I thought I will learn how some good products are getting built. Apart from that this book is about "habit forming products". By this time, I have realized that I have a "habit" of using certain things everyday - I don't even know how it became a habit, but it is a habit for me now (example: picking up phone to check twitter). So, I was curious to understand how I ended up like this and probably use the book in reverse-effect to control my habits (so that they don't become addiction).
 
 Overall, I liked the book and I am going to have a "worksheet" of things discussed in the book before I start building anything new. So, I am writing this blog post to revise the notes from that book whenever I am trying to build some product to see how good the thing I am yet to build is positioned for success.
 
@@ -44,7 +44,7 @@ External triggers:
 Internal triggers:
 You can't see, touch, or hear an internal trigger. It is completely internal to the user. They probably are triggered due to the feelings/emotions/state-of-mind of the user.
 
-When do you use instagram? Maybe you feel lonely. (that's the emotion)
+When do you use instagram? FOMO - Fear Of Missing Out updates from your friends (fear is the emotion)
 
 > Emotions, particularly negative ones, are powerful internal triggers and greatly influence our daily routines.
 
@@ -96,6 +96,15 @@ I have come across various brain "biases". I felt it to be mostly psychological 
 
 ## Variable Reward
 
+> Reward your users by solving a problem, reinforcing their motivation for the action taken in the previous phase.
+
+I think variable rewards pay for internal triggers. This section like many sections in the book is filled with research data and past experiments.
+
+Variable reward comes in three types:
+- Rewards of the Tribe: Facebook Likes and comments.Stack overflow upvotes of answer.
+- Rewards of the Hunt: Twitter's feed and Pinterest's endless scroll.
+- Rewards of the Self: Video games, Codecademy's progress bar on skill development.
+
 > The magic words the reseacrcher discovered? The phrase "But you are free to accept or refuse"
 > 
 > The "but ou are free" technique demonstrates how we are more likely to be persuaded to give when our ability to choose is reaffirmed. Not only was the effect observed during face-to-face interactions, but also over email. Although the research did not directly look at how products and services might use the technique, the study provides an important insight into how companies maintain or lose the user's attention."
@@ -105,6 +114,10 @@ I have come across various brain "biases". I felt it to be mostly psychological 
 > Unlike its competitors who sell preassembled merchandise, IKEA puts its customers to work. It turns out there's a hidden benefit to making users invest physical effort in assembling the product - by asking customers to assemble their own furnitur, Ariely believes they adopt an irrational love of the furniture they built, just like the test subjects did in the origami experiments. Business that leverage user effort confer higher value to their products simply because their users have put work into them. The users have invested in the products through their labor.
 
 > Studies reveal that our past is an excellent predictor of our future.
+
+Product has to provide "value" to keep the user invested in the product. Some ways of providing value:
+- Content: Spotify's users consume the content it provides. Spotify generates "Discover Weekly" based on the content consumption which provides more value to the user who invested in listening on Spotify.
+- Data: 
 
 ## Habit Testing
 
