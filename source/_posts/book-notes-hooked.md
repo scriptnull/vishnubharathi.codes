@@ -116,8 +116,11 @@ Variable reward comes in three types:
 > Studies reveal that our past is an excellent predictor of our future.
 
 Product has to provide "value" to keep the user invested in the product. Some ways of providing value:
-- Content: Spotify's users consume the content it provides. Spotify generates "Discover Weekly" based on the content consumption which provides more value to the user who invested in listening on Spotify.
-- Data: 
+- Content: Spotify's users consume the content it provides. Spotify generates "Discover Weekly" based on the content consumption which provides more value to the user whom invested in listening on Spotify.
+- Data: Mint.com stores all the financial data of a user.
+- Followers: Investing in following the right people on Twitter improves the service for ths user.
+- Reputation: Online marketplaces such as eBay, Upwork,Yelp, and Airbnb, people with negative scores are treated very differently from those with good reputations.
+- Skill: Investing time and effort into learning to use a product is a form of investment and stored value. Example: Learning Adobe Photoshop is an investment which adds design skill to the users as a result of which they are more invested in the product.
 
 ## Habit Testing
 
