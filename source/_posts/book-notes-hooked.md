@@ -1,5 +1,5 @@
 ---
-title: Book notes: Hooked
+title: "Book notes: Hooked"
 date: 2021-12-19 13:09:58
 tags: ["books"]
 ---
