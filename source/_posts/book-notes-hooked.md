@@ -4,6 +4,8 @@ date: 2021-12-19 13:09:58
 tags: ["books"]
 ---
 
+I recently had the chance to read through this book: [Hooked: How to Build Habit-Forming Products](https://www.goodreads.com/book/show/22668729-hooked).
+
 > As one of its findings, the study concluded that the more frequently the new hbehaviour occurred, the stronger the habit became.
 
 > So Why haven't more Google users switched to Bing? Habits keep isers loyal
