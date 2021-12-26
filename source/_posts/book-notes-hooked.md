@@ -42,6 +42,9 @@ External triggers:
 - Owned Triggers: Email newsletter to which user is subscribed, app icon on user's iphone screen, bookmarks, app notifications, etc.
 
 Internal triggers:
+You can't see, touch, or hear an internal trigger. It is completely internal to the user. They probably are triggered due to the feelings/emotions/state-of-mind of the user.
+
+When do you use instagram? Maybe you feel lonely. (that's the emotion)
 
 > Emotions, particularly negative ones, are powerful internal triggers and greatly influence our daily routines.
 
