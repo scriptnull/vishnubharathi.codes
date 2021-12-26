@@ -4,13 +4,19 @@ date: 2021-12-19 13:09:58
 tags: ["books"]
 ---
 
-I recently had the chance to read through this book: [Hooked: How to Build Habit-Forming Products](https://www.goodreads.com/book/show/22668729-hooked).
+I recently had the chance to read through this book: [Hooked: How to Build Habit-Forming Products](https://www.goodreads.com/book/show/22668729-hooked). My attempt at bringing back my "builder" spirit. I have worked on projects without proper plan before - my side projects are literally whatever I like to do with my time at any given point - LOL :D
+
+So, I thought I will learn how some good products are getting built. Apart from that this book is about "habit forming products". By this time, I have realized that I have a "habit" of using certain things everyday - I don't even know how it became a habit, but it is a habit for me now (example: picking up phone to check twitter a lot). So, I was curious to understand how I ended up like this and probably use the book in reverse-effect to control my habits (so that they don't become addiction).
+
+Overall, I liked the book and I am going to have a "worksheet" of things discussed in the book before I start building anything new. So, I am writing this blog post to revise the notes from that book whenever I am trying to build some product to see how good the thing I am yet to build is positioned for success.
+
+This post is mostly going to be quotes that I highligted from that book and my rough notes.
 
 > As one of its findings, the study concluded that the more frequently the new hbehaviour occurred, the stronger the habit became.
 
-> So Why haven't more Google users switched to Bing? Habits keep isers loyal
+> So Why haven't more Google users switched to Bing? Habits keep users loyal
 
-> Sometimes a behaviour does not occur as frequently as flossing or Googling, but it still becomes a habit. For an infrquent action to become a habit, the user must perceive a high degree of utiity either from gaining pleasure or avoid pain
+> Sometimes a behaviour does not occur as frequently as flossing or Googling, but it still becomes a habit. For an infrquent action to become a habit, the user must perceive a high degree of utility either from gaining pleasure or avoid pain
 
 > A company can begin to determine its product's habit-forming potential by plotting two factors: frequency (how often the behaviour occurs) and perceived utility (how useful and rewarding the behaviour is in the user's mind over alternative solutions)
 
@@ -20,7 +26,22 @@ I recently had the chance to read through this book: [Hooked: How to Build Habit
 
 > A habit is when not doing an action causes a bit of discomfort
 
+The books introduces four parameters that we should think about while building new products. They are
+- Trigger
+- Action
+- Variable Reward
+- Investment
+
 ## Triggers
+Trigger is something that triggers the user to use your product. There are two kinds of triggers: External and Internal triggers.
+
+External triggers:
+- Paid Triggers: Advertising, search engine marketing, etc.
+- Earned Triggers: Favourable Press mentions, features on app store, etc.
+- Relationship Triggers: Word of mouth, referrals, somebody shared on social media, etc.
+- Owned Triggers: Email newsletter to which user is subscribed, app icon on user's iphone screen, bookmarks, app notifications, etc.
+
+Internal triggers:
 
 > Emotions, particularly negative ones, are powerful internal triggers and greatly influence our daily routines.
 
