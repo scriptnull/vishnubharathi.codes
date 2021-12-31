@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> "The magic bullet is mathematics"
+
+By: Leslie Lamport
+
+Source: [How to think clearly as a programmer with mathematics and TLA+ - Leslie Lamport @ HLF 2019](https://www.youtube.com/watch?v=de7Id8sKQzY)
+
+---
+
 > "Try to be happy because in this world, everything is temporary. You know. So you should be happy. You know. That's the way my grandmother taught me. Nothing is permanent, so you should be with what you got."
 
 By: Thiru Kumar, AKA the Dosa Man
