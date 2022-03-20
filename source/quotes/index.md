@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> Don’t be afraid of complexity. I think too many engineers look at stereotypically complex projects such as programming languages, browsers, databases, etc. as magic or as destined for higher-beings. I like to remember that all projects were started by other humans. If they could do it, I can do it too. And so can you.
+
+By: Mitchell Hashimoto
+
+Source: [Contributing to Complex Projects](https://mitchellh.com/writing/contributing-to-complex-projects)
+
+---
+
 > "The magic bullet is mathematics"
 
 By: Leslie Lamport
