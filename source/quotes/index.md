@@ -7,6 +7,22 @@ Some words that inspire and help me.
 
 ---
 
+> If “you” try to get involved in the “how” of things, you will just interfere, because you’re a bottleneck on how much “yourself” can do!
+
+By: PJ
+
+Source: [The Multiple Self](https://dirtsimple.org/2005/08/multiple-self.html)
+
+---
+
+> In the same way, most of us don’t really know how to use our own brains in a systematic way. We give them commands like we were a cat walking across a keyboard: every now and then we end up with something syntactically valid, but semantically… questionable.
+
+By: PJ
+
+Source: [The Multiple Self](https://dirtsimple.org/2005/08/multiple-self.html)
+
+---
+
 > Don’t be afraid of complexity. I think too many engineers look at stereotypically complex projects such as programming languages, browsers, databases, etc. as magic or as destined for higher-beings. I like to remember that all projects were started by other humans. If they could do it, I can do it too. And so can you.
 
 By: Mitchell Hashimoto
