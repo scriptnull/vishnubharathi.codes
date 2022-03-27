@@ -7,6 +7,15 @@ Some words that inspire and help me.
 
 ---
 
+> Ideas are very important. I think that bringing ideas into the world is one of the most important things that people do and I think that great ideas in the form of great art, stories, inventions, scientific theories - these things take on lives of their own which give meaning to our lives as people.
+
+
+By: Bret Victor
+
+Source: [Inventing On Principle](https://youtu.be/PUv66718DII)
+
+---
+
 > If “you” try to get involved in the “how” of things, you will just interfere, because you’re a bottleneck on how much “yourself” can do!
 
 By: PJ
