@@ -102,3 +102,69 @@ Here comes HCL (one of my favorite config languages):
 
 > Also, whether the removal of inheritance was a coincidence or great insight, there is no construct given in return that one might need for larger scale configuration management. This means the use of HCL may hit a ceiling for medium to larger setups.
 
+## Data Validation
+
+### Validating YAML and JSON
+
+one of the neat things about CUE is that it tries to play a bit nice with YAML and JSON whenever possible. A great example is how CUE could be used as a way to validate already existing YAML or JSON configurations.
+
+I installed `cue` tool on my machine at this point and thought of re-writing the example from docs to practice CUE.
+
+```
+$ cue vet --help 
+vet validates CUE and other data files
+
+By default it will only validate if there are no errors.
+The -c validates that all regular fields are concrete.
+
+
+Checking non-CUE files
+
+Vet can also check non-CUE files. The following file formats are
+currently supported:
+
+  Format       Extensions
+	JSON       .json .jsonl .ndjson
+	YAML       .yaml .yml
+	TEXT       .txt  (validate a single string value)
+
+To activate this mode, the non-cue files must be explicitly mentioned on the
+command line. There must also be at least one CUE file to hold the constraints.
+```
+
+
+Let us consider a YAML config that is absurd.
+
+```yaml
+min: 10
+max: 5
+```
+
+Equivalent JSON file:
+
+```json
+{
+  "min": 10,
+  "max": 5
+}
+```
+
+The above config is absurd because "min" is greater than "max" - what a contradiction! It seems like we could write a CUE file to check for these kind of mistakes:
+
+```cue
+min: *0 | number
+max: number & >min
+```
+
+After writing the CUE check, we could vet it like this
+
+```
+$ cue vet check.cue range.json range.yaml 
+max: invalid value 5 (out of bound >10):
+    ./check.cue:2:15
+    ./range.json:3:10
+```
+
+The above command first validates the JSON file and throws the error at that point and STOPs without showing the error for YAML file (Why so? Why can't it continue? - maybe I will discover it afterwards)
+
+Fixing the error in JSON file and retrying `cue vet` shows the problem in the YAML file.
