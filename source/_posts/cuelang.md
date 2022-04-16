@@ -40,9 +40,11 @@ One more point that I want to highlight is this:
 
 This means that the order in which we write a config in the config file does not matter - pretty much like other config formats.
 
-One of the cool things that CUE is doing which we don't see much in the wild is having "types" for the configuration. Like we mention types in a real programming language, we could use types in CUE to represent how the config should look like.
+### Types
 
-Example config from the docs example:
+One of the cool things that CUE is doing which we don't see much in the wild is having "types" for the configuration. Like we mention types in a real programming language, we could use types in CUE to represent how the config should look like. I guess this in turn will be used by the tooling to validate the config.
+
+Example config from the docs:
 
 ```cue
 #Spec: {
@@ -71,4 +73,17 @@ spec: {
   name: last:  "Doe"
 }
 ```
+
+### Boilerplate and Inheritance
+
+Copy pasting a hundrend lines of config (boilerplate) to add or edit one line of config - done that ✔️
+
+Opening a random file with 2 lines of config and wondering "what does this even do 🤔" - done that ✔️ (because the actual config that contains most of the config is placed in a different file and is _inherited_ to this config file to reduce boilerplate)
+
+CUE is a config language, so obivously there is a mechanism to avoid boilerplate but this point sounds particularly interesting:
+
+> Like with other configuration languages, CUE can add complexity if values are organized to come from multiple places. However, as CUE disallows overrides, deep layerings are naturally prevented.
+
+CUE disallows overrides - want to see a practical example of this. Forgetting to override values in an inherited config file is a great way to do something bad in production systems; if the default value is not good enough, then forgetting to override that default value might easily cause troubles. Example: default config setting of a container has memory limit as 256mb but the application running in the container needs 512mb of memory to function properly; if the author of that application forgets to override, then that would impact the application when it is trying to run - often silently after deploying to prod :D  Does CUE help us combat this problem? I will continue reading for now and wait to know.
+
 
