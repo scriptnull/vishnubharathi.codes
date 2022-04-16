@@ -86,4 +86,19 @@ CUE is a config language, so obivously there is a mechanism to avoid boilerplate
 
 CUE disallows overrides - want to see a practical example of this. Forgetting to override values in an inherited config file is a great way to do something bad in production systems; if the default value is not good enough, then forgetting to override that default value might easily cause troubles. Example: default config setting of a container has memory limit as 256mb but the application running in the container needs 512mb of memory to function properly; if the author of that application forgets to override, then that would impact the application when it is trying to run - often silently after deploying to prod :D  Does CUE help us combat this problem? I will continue reading for now and wait to know.
 
+> Inheritance, is not commutative and idempotent in the general case. In other words, order matters. This makes it hard to track where values are coming from. This is not only true for humans, but also machines.
+
+### Other config languages
+
+Some notes from the docs with comparison to other config languages:
+
+> Like Jsonnet, CUE is a superset of JSON
+
+> CUE’s focus is data validation whereas Jsonnet focuses on data templating (boilerplate removal). Jsonnet was not designed with validation in mind.
+
+Here comes HCL (one of my favorite config languages):
+
+> HCL has some striking similarities with GCL. But whether this was a coincidence or deliberate, it removes the core source of complexity of GCL: inheritance.
+
+> Also, whether the removal of inheritance was a coincidence or great insight, there is no construct given in return that one might need for larger scale configuration management. This means the use of HCL may hit a ceiling for medium to larger setups.
 
