@@ -234,3 +234,59 @@ hello world
 $ cue cmd --inject who_arg=humans hello
 hello humans
 ```
+
+# Integrations
+
+## JSON
+
+> CUE is a superset of JSON: any valid JSON file is a valid CUE file. There is not much more integration you can get than that. The main motivation to make it a superset was to promote familiarity.
+
+While we are here, I would like to point out a style in CUE with respect to an equivalent JSON.
+
+```json
+{
+  "first": {
+    "second": {
+      "key": "value"
+    }
+  }
+}
+```
+
+is usually written in CUE using a folded form like this
+
+```cue
+
+first: second: key: "value"
+```
+
+I ultimately checked the above line of CUE using the `cue export` command takes in CUE file and returns JSON/YAML.
+
+Also there is "encoding/json" package in CUE's scripting layer to manipulate JSON data in configuration.
+
+## YAML
+
+> Unlike with JSON, CUE is not a superset of YAML. One of the design goals of CUE was to be easily machine generatable and modifiable. The sensitivity to indentation and the lexical obscurity of the typing of tokens make YAML too bug prone for this purpose.
+
+That gave me a smile :D
+
+`cue vet` is your friend here. `encoding/yaml` package in the scripting layer to deal with YAML configs. I guess this is mainly to play nice with the existing ecosystem.
+
+## Go
+
+Cue is written in Go and so has nice integration with it.
+
+First thing is if you need a package at the scripting layer, you could probably do so by writing a Go package. Builtin packages that are available inside a CUE file are listed here: https://pkg.go.dev/cuelang.org/go/pkg
+
+It seems like we could also import definitions into CUE from other Go code base using this command:
+```
+cue get go k8s.io/api/core/v1
+```
+
+This enables us to do the following:
+
+```cue
+import "k8s.io/api/core/v1"
+
+services: [string]: v1.#Service
+```
