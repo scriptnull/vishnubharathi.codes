@@ -173,8 +173,64 @@ Fixing the error in JSON file and retrying `cue vet` shows the problem in the YA
 
 I have written JSON Schmema in the past to define the structure of how the configuration should look like. It also helps in validation of the configuration. JSON Schema becomes very complex at scale. When you are past some point, it becomes very difficult digest it.
 
-
 CUE feels more readable than JSON Schema in the first look so far.
 
 If we write Schema in CUE, there is a way to check if `v2` of schema is backwards-compatible with `v1` of the schema. [This example](https://cuelang.org/docs/usecases/datadef/#validating-backwards-compatibility) in the docs describes it very neatly. I guess there is a potential to use this to enhance tooling for all of us here.
 
+> JSON Schema and OpenAPI are purely data-driven data definition standards. OpenAPI originates from Swagger. As of version 3, OpenAPI is more or less a subset of JSON Schema. OpenAPI is used to define Kubernetes Custom Resource Definitions
+
+To know that an alternative for the above technologies is emerging gives a fresh breeze to me.
+
+## Code generation and extraction
+As of writing this, it seems like we could extract CUE definitions from Go code and protobuf definitions. The docs doesn't tell exactly how yet - but we might discover it afterwards, I guess.
+
+Also, it seems like CUE could be used to annotate Go source code and Go structs could be validated with the help of that. Cue at this point plays nicely with Go (because it is written in Go) and I am guessing that it will play nice with other languages based on how it is getting adopted by the community.
+
+## Querying
+Just realized that CUE could act as a query language. Let us say that we have a 1000 lines of config and we would like to extract a few configs that match a certain constraint, then CUE might be used for this. Example: Give me all config settings, whose value are numbers.
+
+I think right now we will have to use CUE API (via Go code) to perform these kind of querying, but the docs called for discussion of use-cases if you have one!
+
+## Scripting
+
+It seems like CUE is providing a scripting layer for data. The docs is suggesting to refer `cue help cmd` for more information at this point. 
+
+After reading that help section, I learnt that cue places itself as an alternative to make files. We could have a `cue` file with various commands which perform some task when we run `cue cmd <that_command_name>`
+
+```cue
+package project
+
+import "tool/exec"
+
+command: hello: {
+	print: exec.Run & {
+		cmd: "echo hello"
+	}
+}
+```
+
+We could also inject data from environment with something like this:
+
+```cue
+package project
+
+import "tool/exec"
+
+who: *"world" | string @tag(who_arg)
+
+command: hello: {
+	print: exec.Run & {
+		cmd: "echo hello \(who)"
+	}
+}
+```
+
+The expressing tripped me up at first, but by re-reading it slowly I was able to understand it more clearly. It defines `who` to either be of value "world" OR a value of type string which is injected by `who_arg`
+
+```
+$ cue cmd hello
+hello world
+
+$ cue cmd --inject who_arg=humans hello
+hello humans
+```
