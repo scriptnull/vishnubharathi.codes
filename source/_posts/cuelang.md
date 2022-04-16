@@ -290,3 +290,5 @@ import "k8s.io/api/core/v1"
 
 services: [string]: v1.#Service
 ```
+
+I would recommend reading this [doc](https://cuelang.org/docs/integrations/go/) for getting more idea on what is possible here. One thing that might be come in handy is if you are looking to build applications which take CUE files as config, you could parse the config from your Go program easily via https://pkg.go.dev/cuelang.org/go/cue#Runtime
