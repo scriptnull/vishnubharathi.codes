@@ -298,3 +298,10 @@ I would recommend reading this [doc](https://cuelang.org/docs/integrations/go/) 
 I started learning about CUE tonigh with the idea that I could avoid writing YAML and JSON Schema with the help of this. But to my surprise, CUE is trying to help me not write Protobuf (which I am not a fan of).
 
 
+# Continue reading
+
+I would like to stop this blog post here, beacause it is already morning :D I am a bit disappointed that I couldn't discuss about the philosophy behind CUE here - they are awesome; go read it for yourself from [here](https://cuelang.org/docs/about/#philosophy-and-principles).
+
+Apart from that I am going to continue reading the docs to learn more about CUE. Once I am a bit comfortable with it, I would like to peek into dagger to see how they have integrated with CUE.
+
+Also, CUE stands for "Configure Unify Execute".
