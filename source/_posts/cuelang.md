@@ -168,3 +168,13 @@ max: invalid value 5 (out of bound >10):
 The above command first validates the JSON file and throws the error at that point and STOPs without showing the error for YAML file (Why so? Why can't it continue? - maybe I will discover it afterwards)
 
 Fixing the error in JSON file and retrying `cue vet` shows the problem in the YAML file.
+
+## Schema Definition
+
+I have written JSON Schmema in the past to define the structure of how the configuration should look like. It also helps in validation of the configuration. JSON Schema becomes very complex at scale. When you are past some point, it becomes very difficult digest it.
+
+
+CUE feels more readable than JSON Schema in the first look so far.
+
+If we write Schema in CUE, there is a way to check if `v2` of schema is backwards-compatible with `v1` of the schema. [This example](https://cuelang.org/docs/usecases/datadef/#validating-backwards-compatibility) in the docs describes it very neatly. I guess there is a potential to use this to enhance tooling for all of us here.
+
