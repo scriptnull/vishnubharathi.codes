@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="When I was working on this project at work, I wished to take a closer look at CUE. It seemed like a candidate for the project that we were undertaking (defining CI configs). But we didn’t end up choos">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Exploring CUE">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/cuelang/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="When I was working on this project at work, I wished to take a closer look at CUE. It seemed like a candidate for the project that we were undertaking (defining CI configs). But we didn’t end up choos">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-16T19:45:31.000Z">
+<meta property="article:modified_time" content="2022-04-17T00:07:32.560Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="devops">
+<meta property="article:tag" content="cue">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Exploring CUE</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/book-notes-hooked/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/cuelang/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/cuelang/&text=Exploring CUE"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/cuelang/&title=Exploring CUE"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/cuelang/&is_video=false&description=Exploring CUE"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Exploring CUE&body=Check out this article: https://vishnubharathi.codes/blog/cuelang/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/cuelang/&title=Exploring CUE"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/cuelang/&title=Exploring CUE"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/cuelang/&title=Exploring CUE"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/cuelang/&title=Exploring CUE"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/cuelang/&name=Exploring CUE&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/cuelang/&t=Exploring CUE"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CUE-and-its-history"><span class="toc-number">1.</span> <span class="toc-text">CUE and its history</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Use-cases"><span class="toc-number">2.</span> <span class="toc-text">Use-cases</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuration"><span class="toc-number">2.1.</span> <span class="toc-text">Configuration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Types"><span class="toc-number">2.1.1.</span> <span class="toc-text">Types</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boilerplate-and-Inheritance"><span class="toc-number">2.1.2.</span> <span class="toc-text">Boilerplate and Inheritance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-config-languages"><span class="toc-number">2.1.3.</span> <span class="toc-text">Other config languages</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Validation"><span class="toc-number">2.2.</span> <span class="toc-text">Data Validation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Validating-YAML-and-JSON"><span class="toc-number">2.2.1.</span> <span class="toc-text">Validating YAML and JSON</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Schema-Definition"><span class="toc-number">2.3.</span> <span class="toc-text">Schema Definition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-generation-and-extraction"><span class="toc-number">2.4.</span> <span class="toc-text">Code generation and extraction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Querying"><span class="toc-number">2.5.</span> <span class="toc-text">Querying</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scripting"><span class="toc-number">2.6.</span> <span class="toc-text">Scripting</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Integrations"><span class="toc-number">3.</span> <span class="toc-text">Integrations</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON"><span class="toc-number">3.1.</span> <span class="toc-text">JSON</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#YAML"><span class="toc-number">3.2.</span> <span class="toc-text">YAML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Go"><span class="toc-number">3.3.</span> <span class="toc-text">Go</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Protobuf"><span class="toc-number">3.4.</span> <span class="toc-text">Protobuf</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Continue-reading"><span class="toc-number">4.</span> <span class="toc-text">Continue reading</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Exploring CUE
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2022-04-16T19:45:31.000Z" itemprop="datePublished">2022-04-17</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/cue/" rel="tag">cue</a>, <a class="tag-link-link" href="/tags/devops/" rel="tag">devops</a>, <a class="tag-link-link" href="/tags/programming/" rel="tag">programming</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>When I was working on <a target="_blank" rel="noopener" href="https://hasura.io/blog/what-we-learnt-by-migrating-from-circleci-to-buildkite">this project</a> at work, I wished to take a closer look at CUE. It seemed like a candidate for the project that we were undertaking (defining CI configs). But we didn’t end up choosing it at that time. We ended up using golang for writing our CI config - reasons: Turing completeness, familiarity for the team, good tooling, ease for other teams to understand, and a great deal of support from the compiler.</p>
+<p>But tonight, I would like to take a closer look at CUE. The main reason for my curiosity is the recently released <a target="_blank" rel="noopener" href="https://dagger.io">dagger</a> project. CUE seems to be at the center of this project. I hope I could understand the reason for that preference during my exploration here.</p>
+<p>Also, I have been dabbling in this problem space for a long while. I know that the pain is real - That 2000 lines CI config written as YAML file, that 1800 lines <a target="_blank" rel="noopener" href="https://json-schema.org">JSON schema</a> file - I have edited them all. They have all hurt me! It is good to see projects emerging that acknowledge that this problem exists.</p>
+<h1 id="CUE-and-its-history"><a href="#CUE-and-its-history" class="headerlink" title="CUE and its history"></a>CUE and its history</h1><p>Time to borrow some quotes from CUE docs:</p>
+<blockquote>
+<p>CUE is an open-source data validation language and inference engine with its roots in logic programming. Although the language is not a general-purpose programming language, it has many applications, such as data validation, data templating, configuration, querying, code generation, and even scripting</p>
+</blockquote>
+<p>And here is the gist of where it came from:</p>
+<blockquote>
+<p>Although it is a very different language, the roots of CUE lie in GCL, the dominant configuration language in use at Google as of this writing. It was originally designed to configure Borg, the predecessor of Kubernetes.</p>
+</blockquote>
+<p>CUE has a set of philosophies and principles, which I hope to revisit at the end of this blog post to get a better idea of how they are practically applied.</p>
+<h1 id="Use-cases"><a href="#Use-cases" class="headerlink" title="Use-cases"></a>Use-cases</h1><p>Starting by reading - <a target="_blank" rel="noopener" href="https://cuelang.org/docs/usecases/">https://cuelang.org/docs/usecases/</a></p>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>The first line in docs - I love it &lt;3</p>
+<blockquote>
+<p>Arguably, validation should be the foremost task of any configuration language. Most configuration languages, however, focus on boilerplate removal. CUE is different in that it takes the validation first stance.</p>
+</blockquote>
+<p>One more point that I want to highlight is this:</p>
+<blockquote>
+<p>CUE basic operation merges configurations in a way that the outcome is always the same regardless of the order in which it is carried out (it is associative, commutative, and idempotent).</p>
+</blockquote>
+<p>This means that the order in which we write a config in the config file does not matter - pretty much like other config formats.</p>
+<h3 id="Types"><a href="#Types" class="headerlink" title="Types"></a>Types</h3><p>One of the cool things that CUE is doing which we don’t see much in the wild is having “types” for the configuration. Like we mention types in a real programming language, we could use types in CUE to represent how the config should look like. I guess this in turn will be used by the tooling to validate the config.</p>
+<p>Example config from the docs:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#Spec: &#123;</span><br><span class="line">  kind: string</span><br><span class="line"></span><br><span class="line">  name: &#123;</span><br><span class="line">    first:   !&#x3D;&quot;&quot;  &#x2F;&#x2F; must be specified and non-empty</span><br><span class="line">    middle?: !&#x3D;&quot;&quot;  &#x2F;&#x2F; optional, but must be non-empty when specified</span><br><span class="line">    last:    !&#x3D;&quot;&quot;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  &#x2F;&#x2F; The minimum must be strictly smaller than the maximum and vice versa.</span><br><span class="line">  minimum?: int &amp; &lt;maximum</span><br><span class="line">  maximum?: int &amp; &gt;minimum</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Now the above type called “Spec” could be used by the actual config like this</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">spec: #Spec</span><br><span class="line">spec: &#123;</span><br><span class="line">  knid: &quot;Homo Sapiens&quot; &#x2F;&#x2F; error, misspelled field</span><br><span class="line"></span><br><span class="line">  name: first: &quot;Jane&quot;</span><br><span class="line">  name: last:  &quot;Doe&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Boilerplate-and-Inheritance"><a href="#Boilerplate-and-Inheritance" class="headerlink" title="Boilerplate and Inheritance"></a>Boilerplate and Inheritance</h3><p>Copy pasting a hundred lines of config (boilerplate) to add or edit one line of config - done that ✔️</p>
+<p>Opening a random file with 2 lines of config and wondering “what does this even do 🤔” - done that ✔️ (because the actual config that contains most of the config is placed in a different file and is <em>inherited</em> to this config file to reduce boilerplate)</p>
+<p>CUE is a config language, so obviously there is a mechanism to avoid boilerplate but this point sounds particularly interesting:</p>
+<blockquote>
+<p>Like with other configuration languages, CUE can add complexity if values are organized to come from multiple places. However, as CUE disallows overrides, deep layerings are naturally prevented.</p>
+</blockquote>
+<p>CUE disallows overrides - want to see a practical example of this. Forgetting to override values in an inherited config file is a great way to do something bad in production systems; if the default value is not good enough, then forgetting to override that default value might easily cause trouble. For example default config setting of a container has a memory limit of 256MB but the application running in the container needs 512MB of memory to function properly; if the author of that application forgets to override, then that would impact the application when it is trying to run - often silently after deploying to prod :D  Does CUE help us combat this problem? I will continue reading for now and wait to know.</p>
+<blockquote>
+<p>Inheritance, is not commutative and idempotent in the general case. In other words, order matters. This makes it hard to track where values are coming from. This is not only true for humans, but also machines.</p>
+</blockquote>
+<h3 id="Other-config-languages"><a href="#Other-config-languages" class="headerlink" title="Other config languages"></a>Other config languages</h3><p>Some notes from the docs with comparison to other config languages:</p>
+<blockquote>
+<p>Like Jsonnet, CUE is a superset of JSON</p>
+</blockquote>
+<blockquote>
+<p>CUE’s focus is data validation whereas Jsonnet focuses on data templating (boilerplate removal). Jsonnet was not designed with validation in mind.</p>
+</blockquote>
+<p>Here comes HCL (one of my favorite config languages):</p>
+<blockquote>
+<p>HCL has some striking similarities with GCL. But whether this was a coincidence or deliberate, it removes the core source of complexity of GCL: inheritance.</p>
+</blockquote>
+<blockquote>
+<p>Also, whether the removal of inheritance was a coincidence or great insight, there is no construct given in return that one might need for larger scale configuration management. This means the use of HCL may hit a ceiling for medium to larger setups.</p>
+</blockquote>
+<h2 id="Data-Validation"><a href="#Data-Validation" class="headerlink" title="Data Validation"></a>Data Validation</h2><h3 id="Validating-YAML-and-JSON"><a href="#Validating-YAML-and-JSON" class="headerlink" title="Validating YAML and JSON"></a>Validating YAML and JSON</h3><p>one of the neat things about CUE is that it tries to play a bit nice with YAML and JSON whenever possible. A great example is how CUE could be used as a way to validate already existing YAML or JSON configurations.</p>
+<p>I installed the <code>cue</code> tool on my machine at this point and thought of re-writing the example from docs to practice CUE.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ cue vet --help </span><br><span class="line">vet validates CUE and other data files</span><br><span class="line"></span><br><span class="line">By default, it will only validate if there are no errors.</span><br><span class="line">The -c validates that all regular fields are concrete.</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Checking non-CUE files</span><br><span class="line"></span><br><span class="line">Vet can also check non-CUE files. The following file formats are</span><br><span class="line">currently supported:</span><br><span class="line"></span><br><span class="line">  Format       Extensions</span><br><span class="line">	JSON       .json .jsonl .ndjson</span><br><span class="line">	YAML       .yaml .yml</span><br><span class="line">	TEXT       .txt  (validate a single string value)</span><br><span class="line"></span><br><span class="line">To activate this mode, the non-cue files must be explicitly mentioned on the</span><br><span class="line">command line. There must also be at least one CUE file to hold the constraints.</span><br></pre></td></tr></table></figure>
+<p>Let us consider a YAML config that is absurd.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">min:</span> <span class="number">10</span></span><br><span class="line"><span class="attr">max:</span> <span class="number">5</span></span><br></pre></td></tr></table></figure>
+<p>Equivalent JSON file:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;min&quot;</span>: <span class="number">10</span>,</span><br><span class="line">  <span class="attr">&quot;max&quot;</span>: <span class="number">5</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The above config is absurd because “min” is greater than “max” - what a contradiction! It seems like we could write a CUE file to check for these kinds of mistakes:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">min: *0 | number</span><br><span class="line">max: number &amp; &gt;min</span><br></pre></td></tr></table></figure>
+<p>After writing the CUE check, we could vet it like this</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ cue vet check.cue range.json range.yaml </span><br><span class="line">max: invalid value 5 (out of bound &gt;10):</span><br><span class="line">    .&#x2F;check.cue:2:15</span><br><span class="line">    .&#x2F;range.json:3:10</span><br></pre></td></tr></table></figure>
+<p>The above command first validates the JSON file and throws the error at that point and STOPs without showing the error for YAML file (Why so? Why can’t it continue? - maybe I will discover it afterward)</p>
+<p>Fixing the error in JSON file and retrying <code>cue vet</code> shows the problem in the YAML file.</p>
+<h2 id="Schema-Definition"><a href="#Schema-Definition" class="headerlink" title="Schema Definition"></a>Schema Definition</h2><p>I have written JSON Schema in the past to define the structure of what the configuration should look like. It also helps in the validation of the configuration. JSON Schema becomes very complex at scale. When you are past some point, it becomes very difficult to digest it.</p>
+<p>CUE feels more readable than JSON Schema in the first look so far.</p>
+<p>If we write Schema in CUE, there is a way to check if <code>v2</code> of schema is backward-compatible with <code>v1</code> of the schema. <a target="_blank" rel="noopener" href="https://cuelang.org/docs/usecases/datadef/#validating-backwards-compatibility">This example</a> in the docs describes it very neatly. I guess there is a potential to use this to enhance tooling for all of us here.</p>
+<blockquote>
+<p>JSON Schema and OpenAPI are purely data-driven data definition standards. OpenAPI originates from Swagger. As of version 3, OpenAPI is more or less a subset of JSON Schema. OpenAPI is used to define Kubernetes Custom Resource Definitions</p>
+</blockquote>
+<p>To know that an alternative for the above technologies is emerging gives me a fresh breeze to me.</p>
+<h2 id="Code-generation-and-extraction"><a href="#Code-generation-and-extraction" class="headerlink" title="Code generation and extraction"></a>Code generation and extraction</h2><p>As of writing this, it seems like we could extract CUE definitions from Go code and protobuf definitions. The docs don’t tell exactly how yet - but we might discover it afterward, I guess.</p>
+<p>Also, it seems like CUE could be used to annotate Go source code, and Go structs could be validated with the help of that. Cue at this point plays nicely with Go (because it is written in Go) and I am guessing that it will play nice with other languages based on how it is getting adopted by the community.</p>
+<h2 id="Querying"><a href="#Querying" class="headerlink" title="Querying"></a>Querying</h2><p>Just realized that CUE could act as a query language. Let us say that we have a 1000 lines of config and we would like to extract a few configs that match a certain constraint, then CUE might be used for this. Example: Give me all config settings, whose values are numbers.</p>
+<p>I think right now we will have to use CUE API (via Go code) to perform these kinds of querying, but the docs called for discussion of use-cases if you have one!</p>
+<h2 id="Scripting"><a href="#Scripting" class="headerlink" title="Scripting"></a>Scripting</h2><p>It seems like CUE is providing a scripting layer for data. The docs are suggesting to refer <code>cue help cmd</code> for more information at this point. </p>
+<p>After reading that help section, I learned that cue places itself as an alternative to make files. We could have a <code>cue</code> file with various commands which perform some task when we run <code>cue cmd &lt;that_command_name&gt;</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">package project</span><br><span class="line"></span><br><span class="line">import &quot;tool&#x2F;exec&quot;</span><br><span class="line"></span><br><span class="line">command: hello: &#123;</span><br><span class="line">	print: exec.Run &amp; &#123;</span><br><span class="line">		cmd: &quot;echo hello&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>We could also inject data from the environment with something like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">package project</span><br><span class="line"></span><br><span class="line">import &quot;tool&#x2F;exec&quot;</span><br><span class="line"></span><br><span class="line">who: *&quot;world&quot; | string @tag(who_arg)</span><br><span class="line"></span><br><span class="line">command: hello: &#123;</span><br><span class="line">	print: exec.Run &amp; &#123;</span><br><span class="line">		cmd: &quot;echo hello \(who)&quot;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The expression tripped me up at first, but by re-reading it slowly I was able to understand it more clearly. It defines <code>who</code> to either be of value “world” OR a value of type string which is injected by <code>who_arg</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ cue cmd hello</span><br><span class="line">hello world</span><br><span class="line"></span><br><span class="line">$ cue cmd --inject who_arg&#x3D;humans hello</span><br><span class="line">hello humans</span><br></pre></td></tr></table></figure>
+<h1 id="Integrations"><a href="#Integrations" class="headerlink" title="Integrations"></a>Integrations</h1><h2 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h2><blockquote>
+<p>CUE is a superset of JSON: any valid JSON file is a valid CUE file. There is not much more integration you can get than that. The main motivation to make it a superset was to promote familiarity.</p>
+</blockquote>
+<p>While we are here, I would like to point out a style in CUE for an equivalent JSON.</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;first&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;second&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;key&quot;</span>: <span class="string">&quot;value&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>is usually written in CUE using a folded form like this</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">first: second: key: &quot;value&quot;</span><br></pre></td></tr></table></figure>
+<p>I ultimately checked the above line of CUE using the <code>cue export</code> command takes in CUE file and returns JSON/YAML.</p>
+<p>Also, there is “encoding/json” package in CUE’s scripting layer to manipulate JSON data in configuration.</p>
+<h2 id="YAML"><a href="#YAML" class="headerlink" title="YAML"></a>YAML</h2><blockquote>
+<p>Unlike with JSON, CUE is not a superset of YAML. One of the design goals of CUE was to be easily machine generatable and modifiable. The sensitivity to indentation and the lexical obscurity of the typing of tokens make YAML too bug prone for this purpose.</p>
+</blockquote>
+<p>That gave me a smile :D</p>
+<p><code>cue vet</code> is your friend here. <code>encoding/yaml</code> package in the scripting layer to deal with YAML configs. I guess this is mainly to play nice with the existing ecosystem.</p>
+<h2 id="Go"><a href="#Go" class="headerlink" title="Go"></a>Go</h2><p>Cue is written in Go and so has nice integration with it.</p>
+<p>The first thing is if you need a package at the scripting layer, you could probably do so by writing a Go package. Builtin packages that are available inside a CUE file are listed here: <a target="_blank" rel="noopener" href="https://pkg.go.dev/cuelang.org/go/pkg">https://pkg.go.dev/cuelang.org/go/pkg</a></p>
+<p>It seems like we could also import definitions into CUE from other Go code bases using this command:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cue get go k8s.io&#x2F;api&#x2F;core&#x2F;v1</span><br></pre></td></tr></table></figure><br>This enables us to do the following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import &quot;k8s.io&#x2F;api&#x2F;core&#x2F;v1&quot;</span><br><span class="line"></span><br><span class="line">services: [string]: v1.#Service</span><br></pre></td></tr></table></figure>
+<p>I would recommend reading this <a target="_blank" rel="noopener" href="https://cuelang.org/docs/integrations/go/">doc</a> for getting more idea of what is possible here. One thing that might come in handy is if you are looking to build applications that take CUE files as config, you could parse the config from your Go program easily via <a target="_blank" rel="noopener" href="https://pkg.go.dev/cuelang.org/go/cue#Runtime">https://pkg.go.dev/cuelang.org/go/cue#Runtime</a></p>
+<h2 id="Protobuf"><a href="#Protobuf" class="headerlink" title="Protobuf"></a>Protobuf</h2><p>I started learning about CUE tonight with the idea that I could avoid writing YAML and JSON Schema with the help of this. But to my surprise, CUE is trying to help me not write Protobuf (which I am not a fan of).</p>
+<h1 id="Continue-reading"><a href="#Continue-reading" class="headerlink" title="Continue reading"></a>Continue reading</h1><p>I would like to stop this blog post here because it is already morning :D I am a bit disappointed that I couldn’t discuss the philosophy behind CUE here - they are awesome; go read it for yourself from <a target="_blank" rel="noopener" href="https://cuelang.org/docs/about/#philosophy-and-principles">here</a>.</p>
+<p>Apart from that, I am going to continue reading the docs to learn more about CUE. Once I am a bit comfortable with it, I would like to peek into dagger to see how they have integrated with CUE.</p>
+<p>Also, CUE stands for “Configure Unify Execute”.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CUE-and-its-history"><span class="toc-number">1.</span> <span class="toc-text">CUE and its history</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Use-cases"><span class="toc-number">2.</span> <span class="toc-text">Use-cases</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuration"><span class="toc-number">2.1.</span> <span class="toc-text">Configuration</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Types"><span class="toc-number">2.1.1.</span> <span class="toc-text">Types</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boilerplate-and-Inheritance"><span class="toc-number">2.1.2.</span> <span class="toc-text">Boilerplate and Inheritance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Other-config-languages"><span class="toc-number">2.1.3.</span> <span class="toc-text">Other config languages</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Data-Validation"><span class="toc-number">2.2.</span> <span class="toc-text">Data Validation</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Validating-YAML-and-JSON"><span class="toc-number">2.2.1.</span> <span class="toc-text">Validating YAML and JSON</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Schema-Definition"><span class="toc-number">2.3.</span> <span class="toc-text">Schema Definition</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code-generation-and-extraction"><span class="toc-number">2.4.</span> <span class="toc-text">Code generation and extraction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Querying"><span class="toc-number">2.5.</span> <span class="toc-text">Querying</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Scripting"><span class="toc-number">2.6.</span> <span class="toc-text">Scripting</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Integrations"><span class="toc-number">3.</span> <span class="toc-text">Integrations</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON"><span class="toc-number">3.1.</span> <span class="toc-text">JSON</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#YAML"><span class="toc-number">3.2.</span> <span class="toc-text">YAML</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Go"><span class="toc-number">3.3.</span> <span class="toc-text">Go</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Protobuf"><span class="toc-number">3.4.</span> <span class="toc-text">Protobuf</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Continue-reading"><span class="toc-number">4.</span> <span class="toc-text">Continue reading</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/cuelang/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/cuelang/&text=Exploring CUE"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/cuelang/&title=Exploring CUE"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/cuelang/&is_video=false&description=Exploring CUE"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Exploring CUE&body=Check out this article: https://vishnubharathi.codes/blog/cuelang/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/cuelang/&title=Exploring CUE"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/cuelang/&title=Exploring CUE"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/cuelang/&title=Exploring CUE"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/cuelang/&title=Exploring CUE"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/cuelang/&name=Exploring CUE&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/cuelang/&t=Exploring CUE"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-64308743-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+
+</body>
+</html>
