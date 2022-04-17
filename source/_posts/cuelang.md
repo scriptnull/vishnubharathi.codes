@@ -1,7 +1,7 @@
 ---
 title: Exploring CUE
 date: 2022-04-17 01:15:31
-tags: ["programming"]
+tags: ["programming", "cue", "devops"]
 ---
 
 When I was working on [this project](https://hasura.io/blog/what-we-learnt-by-migrating-from-circleci-to-buildkite) at work, I wished to take a closer look at CUE. It seemed like a candidate for the project that we were undertaking (defining CI configs). But we didn't end up choosing it at that time. We ended up using golang for writing our CI config - reasons: Turing completeness, familiarity for the team, good tooling, ease for other teams to understand, and a great deal of support from the compiler.
