@@ -119,9 +119,6 @@ theme_config:
       gravatar: true
     apple:
       gravatar: true
-  google_analytics:
-    enabled: true
-    id: UA-64308743-3
 
 feed:
   type: atom
