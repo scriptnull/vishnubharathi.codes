@@ -106,6 +106,23 @@ Moving on. There is this little `warn` function that is bugging myself to paste 
   }
 ```
 
+I cleaned up all the server-side rendered templates to make code folding work for the script :D With that, we are entering the real action.
+
+```javascript
+var queue = (window.plausible && window.plausible.q) || []
+```
+
+So, we are creating a queue which hopefully is getting saved in `window.plausible.q` object further down the lane.
+
+```javascript
+  window.plausible = trigger
+  for (var i = 0; i < queue.length; i++) {
+    trigger.apply(this, queue[i])
+  }
+```
+
+`trigger` is a big function and is getting assigned to `window.plausible`. After that, we call `trigger` function for every element in the queue. Initially, the queue will be empty, so I am going to see what is happening when that is the case.
+
 
 
 
