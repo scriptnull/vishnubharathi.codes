@@ -124,5 +124,31 @@ So, we are creating a queue which hopefully is getting saved in `window.plausibl
 `trigger` is a big function and is getting assigned to `window.plausible`. After that, we call `trigger` function for every element in the queue. Initially, the queue will be empty, so I am going to see what is happening when that is the case.
 
 
+Now there is a divide happening.
+```javascript
+    {{#if hash}}
+    window.addEventListener('hashchange', page)
+    {{else}}
+    var his = window.history
+    if (his.pushState) {
+      var originalPushState = his['pushState']
+      his.pushState = function() {
+        originalPushState.apply(this, arguments)
+        page();
+      }
+      window.addEventListener('popstate', page)
+    }
+    {{/if}}
+```
+
+If the URL contains `#some-id` at the end, then the if block would be executed and if the URL doesn't contain any reference to an HTML element identifier, then the `else` block is executed.
+
+TIL that there is a DOM event called [hashchange](https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event).
+
+> The hashchange event is fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the # symbol).
+
+So, if the page's URL contains the `#` suffix, then this makes sures that the `page` function is executed after the fragment identified of the URL is changed.
+
+In the other case, we seem to access [window.history](https://developer.mozilla.org/en-US/docs/Web/API/Window/history).
 
 
