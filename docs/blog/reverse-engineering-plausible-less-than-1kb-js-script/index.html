@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Plausible is “Simple and privacy-friendly Google Analytics alternative”. It is an open-source software. While trying to self-host it, I arrived at a page which talks about their less than 1kb analytic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Reverse engineering Plausible&#39;s less than 1kb JS script">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="Plausible is “Simple and privacy-friendly Google Analytics alternative”. It is an open-source software. While trying to self-host it, I arrived at a page which talks about their less than 1kb analytic">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-01-08T00:32:14.000Z">
+<meta property="article:modified_time" content="2023-01-12T20:16:46.656Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="javascript">
+<meta property="article:tag" content="tinkering">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Reverse engineering Plausible&#39;s less than 1kb JS script</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/blog/the-absolute-minimum-things-that-i-need-to-know-about-helm/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/blog/my-second-conference-talk/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&text=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&title=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&is_video=false&description=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Reverse engineering Plausible&#39;s less than 1kb JS script&body=Check out this article: https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&title=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&title=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&title=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&title=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&name=Reverse engineering Plausible&#39;s less than 1kb JS script&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&t=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Adding-the-script"><span class="toc-number">1.</span> <span class="toc-text">Adding the script</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-script"><span class="toc-number">2.</span> <span class="toc-text">The script</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-code"><span class="toc-number">3.</span> <span class="toc-text">The code</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Reverse engineering Plausible&#39;s less than 1kb JS script
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2023-01-08T00:32:14.000Z" itemprop="datePublished">2023-01-08</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/javascript/" rel="tag">javascript</a>, <a class="tag-link-link" href="/tags/tinkering/" rel="tag">tinkering</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><a target="_blank" rel="noopener" href="https://plausible.io/">Plausible</a> is “Simple and privacy-friendly Google Analytics alternative”. It is an open-source software. While trying to self-host it, I arrived at <a target="_blank" rel="noopener" href="https://plausible.io/lightweight-web-analytics">a page</a> which talks about their less than 1kb analytics script. It got me curious about what would be inside it 🤔</p>
+<p>So, here we go. Let us start to understand this from scratch.</p>
+<h2 id="Adding-the-script"><a href="#Adding-the-script" class="headerlink" title="Adding the script"></a>Adding the script</h2><p>When you want to enable Plausible analytics for your website, it seems like you would start by adding this little snippet to your website.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">defer</span> <span class="attr">data-domain</span>=<span class="string">&quot;domain.com&quot;</span></span></span><br><span class="line"><span class="tag"><span class="attr">src</span>=<span class="string">&quot;https://plausible.io/js/script.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>script</code> tag is used to load JavaScript on the webpage.</li>
+<li><code>src</code> is the web address to the contents of the JavaScript.</li>
+</ul>
+<p>Bigger question here is, “what does <code>defer</code> and <code>data-domain</code> do?”</p>
+<p>Reading through the MDN docs, I learnt that the browser would defer the execution of the JS script to a time when all of the HTML is loaded and parsed. That means all the HTML tags from <code>&lt;html&gt;....&lt;/html&gt;</code> would be present when the script gets executed.</p>
+<p>More specfically, it seems like the script would get eexecuted before the <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event">DOMContentLoaded event</a>. This event waits only for the loading and parsing of HTML and does not wait for other things like stylesheets, images, etc. The more common <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event">load</a> seem to be responsible for catching the occurence of loading the HTML document and all its dependencies like the stylesheets, images, etc.</p>
+<p>Okay, so this way the script doesn’t immediately try to load and block things and it waits for at-least a skeleton of HTML to load.</p>
+<p>Regarding the <code>data-domain</code> part, I can’t seem to find references of it in the MDN docs for the script tag. So it is not an in-built attribute of the <code>script</code> tag. I think it might be a way of passing data from HTML to the JS script. Let us continue and see where this leads us.</p>
+<h2 id="The-script"><a href="#The-script" class="headerlink" title="The script"></a>The script</h2><p>This is the entire script.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="string">&quot;use strict&quot;</span>;<span class="keyword">var</span> a=<span class="built_in">window</span>.location,r=<span class="built_in">window</span>.document,o=r.currentScript,s=o.getAttribute(<span class="string">&quot;data-api&quot;</span>)||<span class="keyword">new</span> URL(o.src).origin+<span class="string">&quot;/api/event&quot;</span>;<span class="function"><span class="keyword">function</span> <span class="title">l</span>(<span class="params">t</span>)</span>&#123;<span class="built_in">console</span>.warn(<span class="string">&quot;Ignoring Event: &quot;</span>+t)&#125;<span class="function"><span class="keyword">function</span> <span class="title">t</span>(<span class="params">t,e</span>)</span>&#123;<span class="keyword">if</span>(<span class="regexp">/^localhost$|^127(\.[0-9]+)&#123;0,2&#125;\.[0-9]+$|^\[::1?\]$/</span>.test(a.hostname)||<span class="string">&quot;file:&quot;</span>===a.protocol)<span class="keyword">return</span> l(<span class="string">&quot;localhost&quot;</span>);<span class="keyword">if</span>(!(<span class="built_in">window</span>._phantom||<span class="built_in">window</span>.__nightmare||<span class="built_in">window</span>.navigator.webdriver||<span class="built_in">window</span>.Cypress))&#123;<span class="keyword">try</span>&#123;<span class="keyword">if</span>(<span class="string">&quot;true&quot;</span>===<span class="built_in">window</span>.localStorage.plausible_ignore)<span class="keyword">return</span> l(<span class="string">&quot;localStorage flag&quot;</span>)&#125;<span class="keyword">catch</span>(t)&#123;&#125;<span class="keyword">var</span> i=&#123;&#125;;i.n=t,i.u=a.href,i.d=o.getAttribute(<span class="string">&quot;data-domain&quot;</span>),i.r=r.referrer||<span class="literal">null</span>,i.w=<span class="built_in">window</span>.innerWidth,e&amp;&amp;e.meta&amp;&amp;(i.m=<span class="built_in">JSON</span>.stringify(e.meta)),e&amp;&amp;e.props&amp;&amp;(i.p=e.props);<span class="keyword">var</span> n=<span class="keyword">new</span> XMLHttpRequest;n.open(<span class="string">&quot;POST&quot;</span>,s,!<span class="number">0</span>),n.setRequestHeader(<span class="string">&quot;Content-Type&quot;</span>,<span class="string">&quot;text/plain&quot;</span>),n.send(<span class="built_in">JSON</span>.stringify(i)),n.onreadystatechange=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;<span class="number">4</span>===n.readyState&amp;&amp;e&amp;&amp;e.callback&amp;&amp;e.callback()&#125;&#125;&#125;<span class="keyword">var</span> e=<span class="built_in">window</span>.plausible&amp;&amp;<span class="built_in">window</span>.plausible.q||[];<span class="built_in">window</span>.plausible=t;<span class="keyword">for</span>(<span class="keyword">var</span> i,n=<span class="number">0</span>;n&lt;e.length;n++)t.apply(<span class="built_in">this</span>,e[n]);<span class="function"><span class="keyword">function</span> <span class="title">p</span>(<span class="params"></span>)</span>&#123;i!==a.pathname&amp;&amp;(i=a.pathname,t(<span class="string">&quot;pageview&quot;</span>))&#125;<span class="keyword">var</span> w,d=<span class="built_in">window</span>.history;d.pushState&amp;&amp;(w=d.pushState,d.pushState=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;w.apply(<span class="built_in">this</span>,<span class="built_in">arguments</span>),p()&#125;,<span class="built_in">window</span>.addEventListener(<span class="string">&quot;popstate&quot;</span>,p)),<span class="string">&quot;prerender&quot;</span>===r.visibilityState?r.addEventListener(<span class="string">&quot;visibilitychange&quot;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;i||<span class="string">&quot;visible&quot;</span>!==r.visibilityState||p()&#125;):p()&#125;();</span><br></pre></td></tr></table></figure>
+<p>Feels small. Let me try to get some line breaks to make it more readable.</p>
+<p>oh wait! Plausible is an Open Source Software. That means, I can try to get the source code of the un-minified version of the above code.</p>
+<p>Going to the plausible <a target="_blank" rel="noopener" href="https://github.com/plausible/analytics">github repo</a>, pressing “t” and typing “plausible.js” landed me to the file that is in need: <a target="_blank" rel="noopener" href="https://github.com/plausible/analytics/blob/1772ddff17f5c2880400f7f7c42d7c1aa772feef/tracker/src/plausible.js">https://github.com/plausible/analytics/blob/1772ddff17f5c2880400f7f7c42d7c1aa772feef/tracker/src/plausible.js</a></p>
+<p>Let us start reading the code now!</p>
+<h2 id="The-code"><a href="#The-code" class="headerlink" title="The code"></a>The code</h2><p>The script starts with a good old immediately invoked anonymous function and <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode">‘use strict’ notation</a>.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="meta">  &#x27;use strict&#x27;</span>;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// ......</span></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+<p>After that some variables and functions are getting defined.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> location = <span class="built_in">window</span>.location</span><br><span class="line"><span class="keyword">var</span> <span class="built_in">document</span> = <span class="built_in">window</span>.document</span><br><span class="line"></span><br><span class="line">&#123;&#123;#<span class="keyword">if</span> compat&#125;&#125;</span><br><span class="line"><span class="keyword">var</span> scriptEl = <span class="built_in">document</span>.getElementById(<span class="string">&#x27;plausible&#x27;</span>);</span><br><span class="line">&#123;&#123;<span class="keyword">else</span>&#125;&#125;</span><br><span class="line"><span class="keyword">var</span> scriptEl = <span class="built_in">document</span>.currentScript;</span><br><span class="line">&#123;&#123;/<span class="keyword">if</span>&#125;&#125;</span><br><span class="line"><span class="keyword">var</span> endpoint = scriptEl.getAttribute(<span class="string">&#x27;data-api&#x27;</span>) || defaultEndpoint(scriptEl)</span><br></pre></td></tr></table></figure>
+<p><code>location</code> and <code>document</code> are okay - probably defined to avoid typing <code>window</code> repeatedly. <code>&#123;&#123;#if compat&#125;&#125;</code> seems like a server-renered template language notation. They are using it to get a reference to the script element which is executing the plausible script. After that <code>endpoint</code> variable is set by picking the <code>data-api</code> if it is present on the script tag or by calling a function called <code>defaultEndpoint</code>.</p>
+<p>Since the script tag doesn’t have the <code>data-api</code> attribute, let us look at what <code>defaultEndpoint</code> function does.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">defaultEndpoint</span>(<span class="params">el</span>) </span>&#123;</span><br><span class="line">  &#123;&#123;#<span class="keyword">if</span> compat&#125;&#125;</span><br><span class="line">  <span class="keyword">var</span> pathArray = el.src.split( <span class="string">&#x27;/&#x27;</span> );</span><br><span class="line">  <span class="keyword">var</span> protocol = pathArray[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">var</span> host = pathArray[<span class="number">2</span>];</span><br><span class="line">  <span class="keyword">return</span> protocol + <span class="string">&#x27;//&#x27;</span> + host  + <span class="string">&#x27;/api/event&#x27;</span>;</span><br><span class="line">  &#123;&#123;<span class="keyword">else</span>&#125;&#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> URL(el.src).origin + <span class="string">&#x27;/api/event&#x27;</span></span><br><span class="line">  &#123;&#123;/<span class="keyword">if</span>&#125;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>At this point, I am guessing <code>compat</code> is for compatibility with old browsers. For now, my browser us comfortable using the <code>else</code> block. So, let us zoom on to that. It returns <code>new URL(el.src).origin + &#39;/api/event&#39;</code>. That means, it takes the script element’s src attribute and forms a new URL object and get’s the origin property.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; new URL(&quot;https:&#x2F;&#x2F;plausible.io&#x2F;js&#x2F;script.js&quot;).origin</span><br><span class="line"></span><br><span class="line">&#39;https:&#x2F;&#x2F;plausible.io&#39; + &#39;&#x2F;api&#x2F;event&#39;</span><br></pre></td></tr></table></figure>
+<p>Moving on. There is this little <code>warn</code> function that is bugging myself to paste it here.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">warn</span>(<span class="params">reason</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.warn(<span class="string">&#x27;Ignoring Event: &#x27;</span> + reason);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>I cleaned up all the server-side rendered templates to make code folding work for the script :D With that, we are entering the real action.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> queue = (<span class="built_in">window</span>.plausible &amp;&amp; <span class="built_in">window</span>.plausible.q) || []</span><br></pre></td></tr></table></figure>
+<p>So, we are creating a queue which hopefully is getting saved in <code>window.plausible.q</code> object further down the lane.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.plausible = trigger</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; queue.length; i++) &#123;</span><br><span class="line">  trigger.apply(<span class="built_in">this</span>, queue[i])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>trigger</code> is a big function and is getting assigned to <code>window.plausible</code>. After that, we call <code>trigger</code> function for every element in the queue. Initially, the queue will be empty, so I am going to see what is happening when that is the case.</p>
+<p>Now there is a divide happening.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;#<span class="keyword">if</span> hash&#125;&#125;</span><br><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">&#x27;hashchange&#x27;</span>, page)</span><br><span class="line">&#123;&#123;<span class="keyword">else</span>&#125;&#125;</span><br><span class="line"><span class="keyword">var</span> his = <span class="built_in">window</span>.history</span><br><span class="line"><span class="keyword">if</span> (his.pushState) &#123;</span><br><span class="line">  <span class="keyword">var</span> originalPushState = his[<span class="string">&#x27;pushState&#x27;</span>]</span><br><span class="line">  his.pushState = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    originalPushState.apply(<span class="built_in">this</span>, <span class="built_in">arguments</span>)</span><br><span class="line">    page();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">window</span>.addEventListener(<span class="string">&#x27;popstate&#x27;</span>, page)</span><br><span class="line">&#125;</span><br><span class="line">&#123;&#123;/<span class="keyword">if</span>&#125;&#125;</span><br></pre></td></tr></table></figure><br>If the URL contains <code>#some-id</code> at the end, then the if block would be executed and if the URL doesn’t contain any reference to an HTML element identifier, then the <code>else</code> block is executed.</p>
+<p>TIL that there is a DOM event called <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/hashchange_event">hashchange</a>.</p>
+<blockquote>
+<p>The hashchange event is fired when the fragment identifier of the URL has changed (the part of the URL beginning with and following the # symbol).</p>
+</blockquote>
+<p>So, if the page’s URL contains the <code>#</code> suffix, then this makes sures that the <code>page</code> function is executed after the fragment identified of the URL is changed.</p>
+<p>In the other case, we seem to access <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/history">window.history</a>.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Adding-the-script"><span class="toc-number">1.</span> <span class="toc-text">Adding the script</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-script"><span class="toc-number">2.</span> <span class="toc-text">The script</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-code"><span class="toc-number">3.</span> <span class="toc-text">The code</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&text=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&title=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&is_video=false&description=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Reverse engineering Plausible&#39;s less than 1kb JS script&body=Check out this article: https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&title=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&title=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&title=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&title=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&name=Reverse engineering Plausible&#39;s less than 1kb JS script&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/reverse-engineering-plausible-less-than-1kb-js-script/&t=Reverse engineering Plausible&#39;s less than 1kb JS script"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+
+</body>
+</html>
