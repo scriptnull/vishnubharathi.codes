@@ -4,6 +4,8 @@ date: 2023-01-08 06:02:14
 tags: ["javascript", "tinkering"]
 ---
 
+⚠️ oops, I published this blog post by mistake before completing it 😅 LOL - I am not sure how to unpublish this now :D so I am going to leave this as it is and remove this warning line once the post is complete. ⚠️
+
 [Plausible](https://plausible.io/) is "Simple and privacy-friendly Google Analytics alternative". It is an open-source software. While trying to self-host it, I arrived at [a page](https://plausible.io/lightweight-web-analytics) which talks about their less than 1kb analytics script. It got me curious about what would be inside it 🤔
 
 So, here we go. Let us start to understand this from scratch.
@@ -151,4 +153,6 @@ So, if the page's URL contains the `#` suffix, then this makes sures that the `p
 
 In the other case, we seem to access [window.history](https://developer.mozilla.org/en-US/docs/Web/API/Window/history).
 
+~ ~ ~ ~
 
+To be continued.
