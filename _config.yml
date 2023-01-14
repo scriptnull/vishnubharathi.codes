@@ -119,6 +119,9 @@ theme_config:
       gravatar: true
     apple:
       gravatar: true
+  cloudflare_analytics:
+    enabled: true
+    token: "3a998e7dd4534719a1186cd0b01043fc"
 
 feed:
   type: atom
