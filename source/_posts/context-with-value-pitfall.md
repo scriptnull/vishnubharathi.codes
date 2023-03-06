@@ -14,10 +14,10 @@ All these lessons come from [this single commit](https://github.com/scriptnull/w
 
 ## my use-case
 
-I have three packages.
+I have three kinds of packages.
 - `main` package - starting point of my app
 - `trigger`, `connector`, `scaler` packages - these are called from `main` and accept a context.
-- `event` package which is initialized in `main` and supposed to be used in the above packages
+- `event` package which is initialized in `main` and is supposed to be used in the above packages
 
 ```go
 package main
@@ -63,7 +63,7 @@ func (s *Scaler) Register(ctx context.Context) error {
 
 This line `ctx = context.WithValue(ctx, "eventBus", eventBus)` in `main.go` is what is wrong.
 
-While trying to refactor, I accidently removed that line from `main.go` and ran `go build`. Guess what? The build succeeded without any problem 😱
+While trying to refactor, I accidentally removed that line from `main.go` and ran `go build`. Guess what? The build succeeded without any problem 😱
 
 This is scary because the `eventBus` is at the core of my project. All the packages emit and subscribe to events via it. I would maybe expect a compiler error if something as obvious as not passing it to these packages was happening.
 
@@ -95,7 +95,7 @@ I did have this idea in mind and wanted to do it as a refactor.
 
 > To avoid allocating when assigning to an interface{}, context keys often have concrete type struct{}. Alternatively, exported context key variables' static type should be a pointer or interface.
 
-Okay, I still don't fully understand this part because the example in the Go Doc seem to use the type of `string`
+Okay, I still don't fully understand this part because the example in the Go Doc seems to use the type of `string`
 
 ```go
 type favContextKey string
@@ -104,7 +104,7 @@ k1 := favContextKey("k1")
 k2 := favContextKey("k2")
 ```
 
-I would have expected it to be something like based on that last line from the docs
+I would have expected it to be something like this based on that last line from the docs
 
 ```go
 type favContextKey struct{}
@@ -113,28 +113,26 @@ s1 := favContextKey{}
 s2 := favContextKey{}
 ```
 
-I am guessing `k1` and `k2` will result in memory allocation whereas `s1` and `s2` won't. Could somebody comfirm it for me?
+I am guessing `k1` and `k2` will result in memory allocation whereas `s1` and `s2` won't. Could somebody confirm it for me?
 
 ## Then how to use context.WithValue
 
-As the docs suggest, it is should be strictly used for carrying request-scoped data that ideally live only during lifetime of a request.
+As the docs suggest, it is should be strictly used for carrying request-scoped data that ideally live only during the lifetime of a request.
 
-Example: let us consider a http handler which gets called everytime we make a http request to a client.
+Example: let us consider an http handler which gets called every time we make an http request to a client.
 
 ```go
 func(w http.ResponseWriter, r *http.Request) {
   // ......
   
-  ctx := context.WithValue(r.Context(), userAgent{}, r.Header.Get("User-Agent"))
+  ctx := context.WithValue(r.Context(), requestID{}, r.Header.Get("X-Request-ID"))
   resp, err := someOtherAPI.client.Request(ctx)
   
   // ....
 }
 ```
 
-So, here the context is very specific to the handler and lives only throughout the lifetime of the handler. It is used to store an information very specific to the request (i.e. the user agent of the request) and pass it to the downstream API requests which could make use of it.
-
-But definitely not something that you would pass as an optional argument or a mandatory argument 😅
+So, here the context is very specific to the handler and lives only throughout the lifetime of the handler. It is used to store a piece of information very specific to the request (i.e. the request-id of the request) and pass it to the downstream API requests which could make use of it.
 
 ## References
 
@@ -145,4 +143,4 @@ Two URLs on the internet helped me in my learning here:
 
 ~ ~ ~ ~
 
-I dedicate this to all people who are faced with the question of "should I pass down my logger in my go context?" in their busy lives. Answer is simple. Don't do it.
+I dedicate this to all people who are faced with the question of "should I pass down my logger in my go context?" in their busy lives. The answer is simple. Don't do it.
