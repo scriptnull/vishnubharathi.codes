@@ -35,10 +35,9 @@ func main() {
   // .....
   
   for id, scaler := range scalers {
-		err := scaler.Register(ctx)
-		if err != nil {
-			registerErrs = append(registerErrs, err)
-		}
+	err := scaler.Register(ctx)
+	if err != nil {
+		registerErrs = append(registerErrs, err)
 	}
   
   // .....
@@ -49,13 +48,14 @@ Inside the scaler, I would do something like this.
 
 ```go
 func (s *Scaler) Register(ctx context.Context) error {
-  // .....
+  	// .....
 
 	eventBus := ctx.Value("eventBus").(event.Bus)
-	eventBus.Subscribe(fmt.Sprintf("scaler.%s", s.id), func() {
-  }
+	eventBus.Subscribe(fmt.Sprintf("scaler.%s", s.id), func({
+		// .....
+	})
   
-  // .....
+	// .....
 } 
 ```
 
@@ -123,12 +123,12 @@ Example: let us consider an http handler which gets called every time we make an
 
 ```go
 func(w http.ResponseWriter, r *http.Request) {
-  // ......
-  
-  ctx := context.WithValue(r.Context(), requestID{}, r.Header.Get("X-Request-ID"))
-  resp, err := someOtherAPI.client.Request(ctx)
-  
-  // ....
+	// ......
+
+	ctx := context.WithValue(r.Context(), requestID{}, r.Header.Get("X-Request-ID"))
+	resp, err := someOtherAPI.client.Request(ctx)
+
+	// ....
 }
 ```
 
