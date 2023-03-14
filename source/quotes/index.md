@@ -7,6 +7,46 @@ Some words that inspire and help me.
 
 ---
 
+>  ... a lot of people will see a successful company and not just Docker or something anything in the world and they would say I thought of that years ago and it's like your idea is somewhat valueless like it's worth zero, exactly zero because an idea that isn't executed is zero value ...
+
+By: Mitchell Hashimoto
+
+Source: [alphalist podcast](https://www.youtube.com/watch?v=1acR2HDk-7Q)
+
+---
+
+> Most people only have a few significant alternate life paths so close to them. But you, here, you're capable of anything, because you're so bad at everything.
+
+By: Waymond
+
+Source: [Everything Everywhere All At Once](https://m.imdb.com/title/tt6710474/characters/nm0702841)
+
+---
+
+> Every rejection, every disappointment has led you to this moment. Don't let anything distract you from it.
+
+By: Alpha Waymond
+
+Source: [Everything Everywhere All At Once](https://m.imdb.com/title/tt6710474/characters/nm0702841)
+
+---
+
+> You think because l'm kind that it means I'm naive, and maybe I am. It's strategic and necessary. This is how I fight.
+
+By: Waymond
+
+Source: [Everything Everywhere All At Once](https://m.imdb.com/title/tt6710474/characters/nm0702841)
+
+---
+
+> The only thing I do know is that we have to be kind. Please, be kind. Especially when we don't know what's going on.
+
+By: Waymond
+
+Source: [Everything Everywhere All At Once](https://m.imdb.com/title/tt6710474/characters/nm0702841)
+
+---
+
 > Ideas are very important. I think that bringing ideas into the world is one of the most important things that people do and I think that great ideas in the form of great art, stories, inventions, scientific theories - these things take on lives of their own which give meaning to our lives as people.
 
 
