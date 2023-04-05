@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> If you do it right, one disruption will fuel the next. One revolution will domino into another. People will laugh at you and tell you it's ludicrous, but that just means they're starting to pay attention. You've found something worth doing. Keep doing it.
+
+By: Tony Fadell
+
+Source: [Build](https://www.goodreads.com/book/show/59696349-build)
+
+---
+
 >  ... a lot of people will see a successful company and not just Docker or something anything in the world and they would say I thought of that years ago and it's like your idea is somewhat valueless like it's worth zero, exactly zero because an idea that isn't executed is zero value ...
 
 By: Mitchell Hashimoto
