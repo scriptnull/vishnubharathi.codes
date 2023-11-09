@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="It has been a while since I posted paper notes or anything at all in this blog. Luckily, I got curious last night about “How are distributed systems tested?”. My curiosity was evoked by these factors:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Paper notes: Use of Formal Methods at Amazon Web Services">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="It has been a while since I posted paper notes or anything at all in this blog. Luckily, I got curious last night about “How are distributed systems tested?”. My curiosity was evoked by these factors:">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/scriptnull/vishnubharathi.codes/assets/4211715/fc2e094e-f7b9-4e26-b139-c99d5cc7baf8">
+<meta property="article:published_time" content="2023-11-08T22:26:53.000Z">
+<meta property="article:modified_time" content="2023-11-09T00:40:29.911Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="research papers">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/scriptnull/vishnubharathi.codes/assets/4211715/fc2e094e-f7b9-4e26-b139-c99d5cc7baf8">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Paper notes: Use of Formal Methods at Amazon Web Services</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/double-bongos/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&text=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&title=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&is_video=false&description=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Paper notes: Use of Formal Methods at Amazon Web Services&body=Check out this article: https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&title=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&title=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&title=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&title=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&name=Paper notes: Use of Formal Methods at Amazon Web Services&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&t=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Precise-Designs"><span class="toc-number">2.</span> <span class="toc-text">Precise Designs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#The-Value-of-Formal-Methods-for-%E2%80%98Real-world-Systems%E2%80%99"><span class="toc-number">3.</span> <span class="toc-text">The Value of Formal Methods for ‘Real-world Systems’</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Side-Benefit-A-Better-Way-to-Design-Systems"><span class="toc-number">4.</span> <span class="toc-text">Side Benefit: A Better Way to Design Systems</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#More-Side-Benefits-Improved-Understanding-Productivity-and-Innovation"><span class="toc-number">5.</span> <span class="toc-text">More Side Benefits: Improved Understanding, Productivity and Innovation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#What-Formal-Specification-Is-Not-Good-For"><span class="toc-number">6.</span> <span class="toc-text">What Formal Specification Is Not Good For</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#First-Steps-To-Formal-Methods"><span class="toc-number">7.</span> <span class="toc-text">First Steps To Formal Methods</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#First-Big-Success-at-Amazon"><span class="toc-number">8.</span> <span class="toc-text">First Big Success at Amazon</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Persuading-More-Engineers-Leads-to-Further-Successes"><span class="toc-number">9.</span> <span class="toc-text">Persuading More Engineers Leads to Further Successes</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#The-Most-Frequently-Asked-Question"><span class="toc-number">10.</span> <span class="toc-text">The Most Frequently Asked Question</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Alternatives-to-TLA"><span class="toc-number">11.</span> <span class="toc-text">Alternatives to TLA+</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-number">12.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Paper notes: Use of Formal Methods at Amazon Web Services
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2023-11-08T22:26:53.000Z" itemprop="datePublished">2023-11-09</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/research-papers/" rel="tag">research papers</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>It has been a while since I posted paper notes or anything at all in this blog. Luckily, I got curious last night about “How are distributed systems tested?”. My curiosity was evoked by these factors:</p>
+<ul>
+<li>I keep on hearing about “Deterministic Simulation Testing” used in the <a target="_blank" rel="noopener" href="https://github.com/tigerbeetle/tigerbeetle">TigerBeetle</a> project. I wonder what is it (haven’t explored it yet) and what are the other methods to test distributed systems.</li>
+<li>I have been wanting to add “High Availability” modes in <a target="_blank" rel="noopener" href="https://github.com/scriptnull/waymond">my little side project</a> and I wanted to understand how to test the high availability of the system before declaring it to be highly available :D</li>
+<li>Maybe there are some lessons that I can take away for designing and implementing different testing strategies at <a target="_blank" rel="noopener" href="https://hasura.io/">my current work</a>.</li>
+</ul>
+<p>With those very good enough reasons, I stumbled upon <a target="_blank" rel="noopener" href="https://github.com/asatarin/testing-distributed-systems">this awesome github repo</a> which curates various testing strategies for distributed systems. One of the things that stood out for me in that list was “Formal methods”, more specifically “TLA+”. It then led me to watch <a target="_blank" rel="noopener" href="https://youtu.be/sPSPEgz3o9U?si=oyvODVhHCr5l7ZnQ">this awesome conference video</a> where they compare TLA+ and <a target="_blank" rel="noopener" href="https://jepsen.io/">Jepsen</a>/<a target="_blank" rel="noopener" href="https://github.com/jepsen-io/maelstrom">maelstrom</a> - the video made me feel excited about both the technologies. A quick lesson from the video: TLA+ is apples and Jepsen is oranges - we would ideally want to eat both.</p>
+<p>I then decided to learn more about TLA+ since that comes in the earlier stages of the design process. I have previously attempted to learn TLA+ but couldn’t succeed in it successfully - mainly due to a lack of motivation in the middle of the learning process. So, I wanted to be motivated enough this time before attempting to learn it again and try to use it in my side project or at work. This line of thinking made me remember that AWS had published a paper about TLA+ that I had heard of in the past. So I decided to pick it up and read it.</p>
+<p>You can get a copy of it from <a target="_blank" rel="noopener" href="https://www.amazon.science/publications/how-amazon-web-services-uses-formal-methods">here</a>.</p>
+<h1 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h1><p>This paper is an experience report from the Engineers who spearheaded the moment of using formal methods to verify complex distributed systems that were getting built at AWS such as S3, Dynamodb, etc. At first, they didn’t think of formal methods and were investing in other types of testing. Those tests helped but there were still edge cases that could cause serious bugs.</p>
+<p>They open up with the scale that they are dealing with here.</p>
+<blockquote>
+<p>As an example of this growth; in 2006 we launched S3, our Simple Storage Service. In the 6 years after launch, S3 grew to store 1 trillion objects [1]. Less than a year later it had grown to 2 trillion objects, and was regularly handling 1.1 million requests per second [2].</p>
+</blockquote>
+<p>Imagine that you were about to design a system for such a high scale and growth - how will you gain confidence about its design and correctness? If you are making any changes to the system at some point, how will you be confident about the effects of your changes?</p>
+<p>The first line of defense in order to gain that confidence is using formal methods to specify and check your system design. Once we made sure that our design is correct, then we start to implement it and write “tests” which check the correctness of the code (this is the classic software testing bit that we are used to).</p>
+<h1 id="Precise-Designs"><a href="#Precise-Designs" class="headerlink" title="Precise Designs"></a>Precise Designs</h1><p>What do most of us do most of the time while designing systems?</p>
+<blockquote>
+<p>… conventional design documents consist of prose, static diagrams, and perhaps pseudo-code in an ad hoc untestable language. Such descriptions are far from precise; they are often ambiguous, or omit critical aspects such as partial failure or the granularity of concurrency (i.e. which constructs are assumed to be atomic).</p>
+</blockquote>
+<p>I have noticed this divergence between the reality and the design doc/diagrams in day-to-day engineering. What if we wrote something during that process of creating those beautiful diagrams and design docs - something that is more detailed and helps us down the line when we are trying to alter the system? That something turned out to be TLA+ for AWS.</p>
+<blockquote>
+<p>TLA+ is based on simple discrete math, i.e. basic set theory and predicates, with which all engineers are familiar. A TLA+ specification describes the set of all possible legal behaviors (execution traces) of a system.</p>
+</blockquote>
+<blockquote>
+<p>TLA+ is intended to make it as easy as possible to show that a system design correctly implements the desired correctness properties, either via conventional mathematical reasoning, or more easily and quickly by using tools such as the TLC model checker [5], a tool which takes a TLA+ specification and exhaustively checks the desired correctness properties across all of the possible execution traces.</p>
+</blockquote>
+<blockquote>
+<p>TLA+ is accompanied by a second language called PlusCal which is closer to a C-style programming language, but much more expressive as it uses TLA+ for expressions and values. In fact, PlusCal is intended to be a direct replacement for pseudo-code.</p>
+</blockquote>
+<h1 id="The-Value-of-Formal-Methods-for-‘Real-world-Systems’"><a href="#The-Value-of-Formal-Methods-for-‘Real-world-Systems’" class="headerlink" title="The Value of Formal Methods for ‘Real-world Systems’"></a>The Value of Formal Methods for ‘Real-world Systems’</h1><blockquote>
+<p>In industry, formal methods have a reputation of requiring a huge amount of training and effort to verify a tiny piece of relatively straightforward code, so the return on investment is only justified in safety-critical domains such as medical systems and avionics. Our experience with TLA+ has shown that perception to be quite wrong.</p>
+</blockquote>
+<p>Excellent, that is exactly what I needed to hear. They also provided this nice table of real world things:</p>
+<p><img src="https://github.com/scriptnull/vishnubharathi.codes/assets/4211715/fc2e094e-f7b9-4e26-b139-c99d5cc7baf8" alt="image"></p>
+<h1 id="Side-Benefit-A-Better-Way-to-Design-Systems"><a href="#Side-Benefit-A-Better-Way-to-Design-Systems" class="headerlink" title="Side Benefit: A Better Way to Design Systems"></a>Side Benefit: A Better Way to Design Systems</h1><blockquote>
+<p>TLA+ has been helping us shift to a better way of designing systems. Engineers naturally focus on designing the ‘happy case’ for a system</p>
+</blockquote>
+<p>and</p>
+<blockquote>
+<p>Once the design for the happy case is done, the engineer then tries to think of “what might go wrong?”, based on personal experience and that of colleagues and reviewers.<br>…. Almost always, the engineer stops well short of handling ‘extremely rare’ combinations of events, as there are too many such scenarios to imagine.</p>
+</blockquote>
+<p>and</p>
+<blockquote>
+<p>In contrast, when using formal specification we begin by precisely stating “what needs to go right?”<br>….</p>
+<ul>
+<li>Safety properties: “what the system is allowed to do”</li>
+<li>Liveness properties: “what the system must eventually do”</li>
+</ul>
+</blockquote>
+<p>After we define those properties, we will need to see if those hold true for various kind of things that can happen in the system.</p>
+<blockquote>
+<p>Next, with the goal of confirming that our design correctly handles all of the dynamic events in the environment, we specify the effects of each of those possible events; e.g. network errors and repairs, disk errors, process crashes and restarts, data center failures and repairs, and actions by human operators.</p>
+</blockquote>
+<p>So there should be a way to model these events in the system too. (The video that I mentioned at the top helped me digest this portion of the paper more easily)</p>
+<blockquote>
+<p>We have found this rigorous “what needs to go right?” approach to be significantly less error prone than the ad hoc “what might go wrong?” approach.</p>
+</blockquote>
+<h1 id="More-Side-Benefits-Improved-Understanding-Productivity-and-Innovation"><a href="#More-Side-Benefits-Improved-Understanding-Productivity-and-Innovation" class="headerlink" title="More Side Benefits: Improved Understanding, Productivity and Innovation"></a>More Side Benefits: Improved Understanding, Productivity and Innovation</h1><blockquote>
+<p>In several cases we have prevented subtle, serious bugs from reaching production. In other cases we have been able to make innovative performance optimizations – e.g. removing or narrowing locks, or weakening constraints on message ordering – which we would not have dared to do without having model checked those changes.</p>
+</blockquote>
+<p>Awesome!</p>
+<h1 id="What-Formal-Specification-Is-Not-Good-For"><a href="#What-Formal-Specification-Is-Not-Good-For" class="headerlink" title="What Formal Specification Is Not Good For"></a>What Formal Specification Is Not Good For</h1><p>They are interested in two things</p>
+<blockquote>
+<p>1) bugs and operator errors that cause a departure from the logical intent of the system, and</p>
+<p>2) surprising ‘sustained emergent performance degradation’ of complex systems that inevitably contain feedback loops.</p>
+</blockquote>
+<p>(1) is achievable via formal methods but not (2). They give a good example of what (2) would look like and they mention that they have other ways to mitigate those.</p>
+<h1 id="First-Steps-To-Formal-Methods"><a href="#First-Steps-To-Formal-Methods" class="headerlink" title="First Steps To Formal Methods"></a>First Steps To Formal Methods</h1><p>This and the upcoming sections of the paper are well narrated and I felt like I was watching a documentary movie while reading these sections.</p>
+<p>One another option that they were considering was <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Alloy_(specification_language">Alloy</a>) as they found evidence of its usage.</p>
+<blockquote>
+<p>Zave used a language called Alloy to find serious bugs in the membership protocol of a distributed system called Chord. Chord was designed by a strong group at MIT and is certainly successful; it won a ’10-year test of time’ award at SIGCOMM 2011</p>
+</blockquote>
+<p>But they chose TLA+ over Alloy as it was not as expressive as they needed it to be.</p>
+<blockquote>
+<p>Eventually C.N. stumbled across a language with those properties when he found a TLA+ specification in the appendix of a paper on a canonical algorithm in our problem domain: the Paxos consensus algorithm</p>
+<p>The fact that TLA+ was created by the designer of such a widely used algorithm gave us some confidence that TLA+ worked for real-world systems.</p>
+</blockquote>
+<p>Yeah, TLA+ was invented by <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Leslie_Lamport">Leslie Lamport</a> who given us with some of the coolest research that are getting used in a lot of stuff.</p>
+<h1 id="First-Big-Success-at-Amazon"><a href="#First-Big-Success-at-Amazon" class="headerlink" title="First Big Success at Amazon"></a>First Big Success at Amazon</h1><blockquote>
+<p>T.R. says that, had he known about TLA+ before starting work on DynamoDB, he would have used it from the start. He believes that the investment he made in writing and checking the formal TLA+ specifications was both more reliable, and also less time consuming than the work he put into writing and checking his informal proofs.</p>
+</blockquote>
+<h1 id="Persuading-More-Engineers-Leads-to-Further-Successes"><a href="#Persuading-More-Engineers-Leads-to-Further-Successes" class="headerlink" title="Persuading More Engineers Leads to Further Successes"></a>Persuading More Engineers Leads to Further Successes</h1><p>Totally love this section. I would use the techniques mentioned here if I were to introduce formal methods and verification to other engineers.</p>
+<blockquote>
+<p>This raised a challenge; how to convey the purpose and benefits of formal methods to an audience of software engineers? Engineers think in terms of debugging rather than ‘verification’, so we called the presentation “Debugging Designs”</p>
+</blockquote>
+<p>and</p>
+<blockquote>
+<p>Continuing that metaphor, we have found that software engineers more readily grasp the concept and practical value of TLA+ if we dub it:</p>
+<p>Exhaustively testable pseudo-code</p>
+</blockquote>
+<p>One another thing that I saw that I didn’t expect was</p>
+<blockquote>
+<p>Most recently we discovered that TLA+ is an excellent tool for data modeling, e.g. designing the schema for a relational or ‘No SQL’ database.</p>
+</blockquote>
+<p>Wow, his helped them in coming up with a better schema!</p>
+<h1 id="The-Most-Frequently-Asked-Question"><a href="#The-Most-Frequently-Asked-Question" class="headerlink" title="The Most Frequently Asked Question"></a>The Most Frequently Asked Question</h1><blockquote>
+<p>“How do we know that the executable code correctly implements the verified design?”</p>
+</blockquote>
+<p>We don’t, but</p>
+<blockquote>
+<p>Formal methods help engineers to get the design right, which is a necessary first step toward getting the code right. If the design is broken then the code is almost certainly broken, as mistakes during coding are extremely unlikely to compensate for mistakes in design. Worse, engineers will probably be deceived into believing that the code is ‘correct’ because it appears to correctly implement the (broken) design. Engineers are unlikely to realize that the design is incorrect while they are focusing on coding.</p>
+</blockquote>
+<h1 id="Alternatives-to-TLA"><a href="#Alternatives-to-TLA" class="headerlink" title="Alternatives to TLA+"></a>Alternatives to TLA+</h1><p>Seems like they published a whole other paper on this topic.</p>
+<blockquote>
+<p>When we found that TLA+ met those requirements, we stopped evaluating methods, as our goal was always practical engineering rather than an exhaustive survey.</p>
+</blockquote>
+<h1 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h1><p>I hope you enjoyed this post and got the urge to explore and learn TLA+ - I feel this has the power to change the way we think and reason about our systems. I hope to write up more when I try to use it in real-world situations.</p>
+<p>From here, I would like to read <a target="_blank" rel="noopener" href="https://brooker.co.za/blog/2013/01/20/two-phase.html">this</a> which was one of the references from that paper and try to learn and write TLA+ for something(s).</p>
+<blockquote>
+<p>Formal methods deal with models of systems, not the systems themselves, so the adage applies;</p>
+<p>“All models are wrong, some are useful.”</p>
+</blockquote>
+<p>~ ~ ~</p>
+<p>oh, and TLA is an acronym for <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Temporal_logic_of_actions">Temporal logic of actions</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Precise-Designs"><span class="toc-number">2.</span> <span class="toc-text">Precise Designs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#The-Value-of-Formal-Methods-for-%E2%80%98Real-world-Systems%E2%80%99"><span class="toc-number">3.</span> <span class="toc-text">The Value of Formal Methods for ‘Real-world Systems’</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Side-Benefit-A-Better-Way-to-Design-Systems"><span class="toc-number">4.</span> <span class="toc-text">Side Benefit: A Better Way to Design Systems</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#More-Side-Benefits-Improved-Understanding-Productivity-and-Innovation"><span class="toc-number">5.</span> <span class="toc-text">More Side Benefits: Improved Understanding, Productivity and Innovation</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#What-Formal-Specification-Is-Not-Good-For"><span class="toc-number">6.</span> <span class="toc-text">What Formal Specification Is Not Good For</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#First-Steps-To-Formal-Methods"><span class="toc-number">7.</span> <span class="toc-text">First Steps To Formal Methods</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#First-Big-Success-at-Amazon"><span class="toc-number">8.</span> <span class="toc-text">First Big Success at Amazon</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Persuading-More-Engineers-Leads-to-Further-Successes"><span class="toc-number">9.</span> <span class="toc-text">Persuading More Engineers Leads to Further Successes</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#The-Most-Frequently-Asked-Question"><span class="toc-number">10.</span> <span class="toc-text">The Most Frequently Asked Question</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Alternatives-to-TLA"><span class="toc-number">11.</span> <span class="toc-text">Alternatives to TLA+</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-number">12.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&text=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&title=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&is_video=false&description=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Paper notes: Use of Formal Methods at Amazon Web Services&body=Check out this article: https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&title=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&title=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&title=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&title=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&name=Paper notes: Use of Formal Methods at Amazon Web Services&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/paper-notes-use-of-formal-methods-at-amazon-web-services/&t=Paper notes: Use of Formal Methods at Amazon Web Services"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+<!-- Cloudflare analytics -->
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3a998e7dd4534719a1186cd0b01043fc"}'></script>
+
+
+</body>
+</html>
