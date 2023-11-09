@@ -4,7 +4,7 @@ date: 2023-11-09 03:56:53
 tags: ["research papers"]
 ---
 
-It has been a while that I posted paper notes or anything at all in this blog. Luckily, I got curious last night about "How are distributed systems tested?". My curiosity was evoked by these factors:
+It has been a while since I posted paper notes or anything at all in this blog. Luckily, I got curious last night about "How are distributed systems tested?". My curiosity was evoked by these factors:
 - I keep on hearing about "Deterministic Simulation Testing" used in the [TigerBeetle](https://github.com/tigerbeetle/tigerbeetle) project. I wonder what is it (haven't explored it yet) and what are the other methods to test distributed systems.
 - I have been wanting to add "High Availability" modes in [my little side project](https://github.com/scriptnull/waymond) and I wanted to understand how to test the high availability of the system before declaring it to be highly available :D
 - Maybe there are some lessons that I can take away for designing and implementing different testing strategies at [my current work](https://hasura.io/).
