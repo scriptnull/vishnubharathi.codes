@@ -1,5 +1,5 @@
 ---
-title: Paper notes: Use of Formal Methods at Amazon Web Services
+title: "Paper notes: Use of Formal Methods at Amazon Web Services"
 date: 2023-11-09 03:56:53
 tags: ["research papers"]
 ---
