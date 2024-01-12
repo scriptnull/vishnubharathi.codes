@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+>  Engineering requires not just the ability to use mathematics, but the ability to understand what, if anything, the mathematics tells us about an actual system.
+
+By: Leslie Lamport
+
+Source: [Specifying Systems](https://lamport.azurewebsites.net/tla/book-21-07-04.pdf)
+
+---
+
 > If you do it right, one disruption will fuel the next. One revolution will domino into another. People will laugh at you and tell you it's ludicrous, but that just means they're starting to pay attention. You've found something worth doing. Keep doing it.
 
 By: Tony Fadell
