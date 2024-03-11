@@ -10,7 +10,7 @@ I am publishing my rough notes on Google Cloud networking which I collected whil
 
 ## VPC
 - VPC is a global construct
-  - Create subnets that belong to a different region
+  - You can create subnets that belong to a different region
 - Shared VPC
 	- One host project has VPC and subnets
 	- Share all or some subnets with other projects that host the project-level service
