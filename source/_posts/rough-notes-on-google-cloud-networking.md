@@ -8,14 +8,14 @@ I am publishing my rough notes on Google Cloud networking which I collected whil
 
 (Any images seen here are attributed to the presentation in the video series mentioned above. This blog post is more like watching those videos on fast-forward and I would definitely encourage you to check out the videos if you would like more clarity)
 
-#### VPC
+## VPC
 - VPC is a global construct
   - Create subnets that belong to a different region
 - Shared VPC
 	- One host project has VPC and subnets
 	- Share all or some subnets with other projects that host the project-level service
 
-#### Interconnecting to Google Cloud
+## Interconnecting to Google Cloud
 - Layer 3
 	- Dedicated (Direct peering)
 	- Shared (Carrier peering)
@@ -31,7 +31,7 @@ I am publishing my rough notes on Google Cloud networking which I collected whil
 		- Shared bandwidth other people who are using the interconnect
 	- Has SLA
 
-#### Routing
+## Routing
 - Pre-programmed routes
 	- Automatically created.
 	- User can't delete or change these routes
@@ -66,7 +66,7 @@ I am publishing my rough notes on Google Cloud networking which I collected whil
 	- Static forwarding to a VPN gateway when cloud routers/dynamic routing isn't used.
 	- Force some IPs to be routed to a third-party service
 
-#### VPC Peering
+## VPC Peering
 - In case of VPNs, you can adverstise only a few subnets between network. In case of VPC peering, it is binary. All subnets in VPC A will get advertised to all subnets in VPC B and vice versa. You are basically smashing two VPCs.
 - Security policies still exist in both the VPCs and there is no "single" security policy for the smashed up VPC. So, if something is going wrong, check the firewall rules associated with both VPCs.
 - Can not have overlapping IP ranges
@@ -75,7 +75,7 @@ I am publishing my rough notes on Google Cloud networking which I collected whil
 	- 15,500 total VMs across all peering relationships
 	- A network can have upto 25 peered networks
 
-#### Load Balancers
+## Load Balancers
 - Families (based on where they face)
 	- External load balancer: Internet-facing
 	- Internal load balancer: Internal to google cloud
