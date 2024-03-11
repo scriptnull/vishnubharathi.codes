@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://github.com/scriptnull/vishnubharathi.codes/assets/4211715/0e178e1f-c9c9-472b-9506-f76385ae5870">
 <meta property="og:image" content="https://github.com/scriptnull/vishnubharathi.codes/assets/4211715/e918cf25-7f13-4697-8fb2-a8550125a5b0">
 <meta property="article:published_time" content="2024-03-11T00:52:46.000Z">
-<meta property="article:modified_time" content="2024-03-11T01:09:51.571Z">
+<meta property="article:modified_time" content="2024-03-11T01:12:38.407Z">
 <meta property="article:author" content="Vishnu Bharathi">
 <meta property="article:tag" content="devops">
 <meta property="article:tag" content="cloud">
@@ -107,7 +107,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#VPC"><span class="toc-number">1.</span> <span class="toc-text">VPC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Interconnecting-to-Google-Cloud"><span class="toc-number">2.</span> <span class="toc-text">Interconnecting to Google Cloud</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Routing"><span class="toc-number">3.</span> <span class="toc-text">Routing</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#VPC-Peering"><span class="toc-number">4.</span> <span class="toc-text">VPC Peering</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Load-Balancers"><span class="toc-number">5.</span> <span class="toc-text">Load Balancers</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VPC"><span class="toc-number">1.</span> <span class="toc-text">VPC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Interconnecting-to-Google-Cloud"><span class="toc-number">2.</span> <span class="toc-text">Interconnecting to Google Cloud</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Routing"><span class="toc-number">3.</span> <span class="toc-text">Routing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VPC-Peering"><span class="toc-number">4.</span> <span class="toc-text">VPC Peering</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Load-Balancers"><span class="toc-number">5.</span> <span class="toc-text">Load Balancers</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -150,7 +150,7 @@
   <div class="content" itemprop="articleBody">
     <p>I am publishing my rough notes on Google Cloud networking which I collected while watching the first few episodes of the <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=0hN-dyOV10c&amp;list=PLDGXb-1k3XY1RaEfzp_nDSJMPP0iAQEtP">Google Cloud Networking playlist</a>. lol, I don’t know how many more times I will need to revise them.</p>
 <p>(Any images seen here are attributed to the presentation in the video series mentioned above. This blog post is more like watching those videos on fast-forward and I would definitely encourage you to check out the videos if you would like more clarity)</p>
-<h4 id="VPC"><a href="#VPC" class="headerlink" title="VPC"></a>VPC</h4><ul>
+<h2 id="VPC"><a href="#VPC" class="headerlink" title="VPC"></a>VPC</h2><ul>
 <li>VPC is a global construct<ul>
 <li>Create subnets that belong to a different region</li>
 </ul>
@@ -161,7 +161,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="Interconnecting-to-Google-Cloud"><a href="#Interconnecting-to-Google-Cloud" class="headerlink" title="Interconnecting to Google Cloud"></a>Interconnecting to Google Cloud</h4><ul>
+<h2 id="Interconnecting-to-Google-Cloud"><a href="#Interconnecting-to-Google-Cloud" class="headerlink" title="Interconnecting to Google Cloud"></a>Interconnecting to Google Cloud</h2><ul>
 <li>Layer 3<ul>
 <li>Dedicated (Direct peering)</li>
 <li>Shared (Carrier peering)</li>
@@ -185,7 +185,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="Routing"><a href="#Routing" class="headerlink" title="Routing"></a>Routing</h4><ul>
+<h2 id="Routing"><a href="#Routing" class="headerlink" title="Routing"></a>Routing</h2><ul>
 <li>Pre-programmed routes<ul>
 <li>Automatically created.</li>
 <li>User can’t delete or change these routes</li>
@@ -239,7 +239,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="VPC-Peering"><a href="#VPC-Peering" class="headerlink" title="VPC Peering"></a>VPC Peering</h4><ul>
+<h2 id="VPC-Peering"><a href="#VPC-Peering" class="headerlink" title="VPC Peering"></a>VPC Peering</h2><ul>
 <li>In case of VPNs, you can adverstise only a few subnets between network. In case of VPC peering, it is binary. All subnets in VPC A will get advertised to all subnets in VPC B and vice versa. You are basically smashing two VPCs.</li>
 <li>Security policies still exist in both the VPCs and there is no “single” security policy for the smashed up VPC. So, if something is going wrong, check the firewall rules associated with both VPCs.</li>
 <li>Can not have overlapping IP ranges</li>
@@ -250,7 +250,7 @@
 </ul>
 </li>
 </ul>
-<h4 id="Load-Balancers"><a href="#Load-Balancers" class="headerlink" title="Load Balancers"></a>Load Balancers</h4><ul>
+<h2 id="Load-Balancers"><a href="#Load-Balancers" class="headerlink" title="Load Balancers"></a>Load Balancers</h2><ul>
 <li>Families (based on where they face)<ul>
 <li>External load balancer: Internet-facing</li>
 <li>Internal load balancer: Internal to google cloud</li>
@@ -334,7 +334,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#VPC"><span class="toc-number">1.</span> <span class="toc-text">VPC</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Interconnecting-to-Google-Cloud"><span class="toc-number">2.</span> <span class="toc-text">Interconnecting to Google Cloud</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Routing"><span class="toc-number">3.</span> <span class="toc-text">Routing</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#VPC-Peering"><span class="toc-number">4.</span> <span class="toc-text">VPC Peering</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Load-Balancers"><span class="toc-number">5.</span> <span class="toc-text">Load Balancers</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#VPC"><span class="toc-number">1.</span> <span class="toc-text">VPC</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Interconnecting-to-Google-Cloud"><span class="toc-number">2.</span> <span class="toc-text">Interconnecting to Google Cloud</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Routing"><span class="toc-number">3.</span> <span class="toc-text">Routing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#VPC-Peering"><span class="toc-number">4.</span> <span class="toc-text">VPC Peering</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Load-Balancers"><span class="toc-number">5.</span> <span class="toc-text">Load Balancers</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
