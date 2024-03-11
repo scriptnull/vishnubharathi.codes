@@ -40,7 +40,6 @@ I am publishing my rough notes on Google Cloud networking which I collected whil
 	- Pre-programmed 0.0.0.0/0 route to an internet gateway
 	- Unlike pre-programmed routes, this can be changed.
 - Cloud Router (CR)
-  collapsed:: true
 	- Cloud Router is similar to a traditional router but has differences that are important to understand
 	- In a traditional router, a router provides two functionalities
 		- Control plane functionality - BGP route communication mechanisms.
