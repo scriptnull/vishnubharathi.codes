@@ -218,3 +218,62 @@ func main() {
 	http.ListenAndServe(":3000", nil)
 }
 ```
+
+## Standard library Middlewares
+
+The `net/http` package in the standard library of Go contains middlewares. If you haven't realized it yet, don't worry. That is because they don't advertise those functions as "middleware" (ctrl+f on docs for middleware leaves you with 0 matches :D)
+
+### AllowQuerySemicolons
+
+```go
+func AllowQuerySemicolons(h Handler) Handler
+```
+
+TIL that we could use semicolons instead of ampersand in query strings (a deprecated usage from W3C). Read more about it here: https://github.com/golang/go/issues/25192. This middleware is present in the stdlib for soving that problem by replacing the `;` with `&` under the hood. 
+
+### MaxBytesHandler
+
+```go
+func MaxBytesHandler(h Handler, n int64) Handler
+```
+
+This could be used to limit the acceptable request body size. Under the hood it uses `MaxBytesReader`:
+
+> MaxBytesReader prevents clients from accidentally or maliciously sending a large request and wasting server resources. If possible, it tells the ResponseWriter to close the connection after the limit has been reached.
+
+### StripPrefix
+
+```go
+func StripPrefix(prefix string, h Handler) Handler
+```
+
+The docs says
+
+> StripPrefix returns a handler that serves HTTP requests by removing the given prefix from the request URL's Path (and RawPath if set) and invoking the handler h.
+
+My first impression is how could this be useful. Oh, wait for the blast! Here we go once again with a beautiful copy paste of an stdlib example.
+
+```go
+package main
+
+import (
+	"net/http"
+)
+
+func main() {
+	// To serve a directory on disk (/tmp) under an alternate URL
+	// path (/tmpfiles/), use StripPrefix to modify the request
+	// URL's path before the FileServer sees it:
+	http.Handle("/tmpfiles/", http.StripPrefix("/tmpfiles/", http.FileServer(http.Dir("/tmp"))))
+}
+```
+
+### TimeoutHandler
+
+```go
+func TimeoutHandler(h Handler, dt time.Duration, msg string) Handler
+```
+
+Like the name says, it times out the handler if the request is taking more than the given duration.
+
+
