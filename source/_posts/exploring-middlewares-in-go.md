@@ -292,6 +292,16 @@ I would suggest starting with the default chi recommendation:
 
 and then build up the chain. Go explore and catch 'em all!
 
+(also let me know your favorite middlewares if you have one - because I am trying to discover more third party middlewares in Go)
+
+## Communicate
+
+TODO
+
+## Chain
+
+TODO
+
 
 
 
