@@ -17,13 +17,15 @@ Let us take a simple problem and work our way upwards. Here is the problem state
 Write a HTTP server that contains multiple routes. When a request is made to a route, print a log line at the start and the end of the request. Something like
 
 ```
-2024/05/21 00:39:39 INFO start method=GET path=/one
-2024/05/21 00:39:39 INFO start method=GET path=/one
-2024/05/21 00:39:42 INFO start method=GET path=/two
-2024/05/21 00:39:42 INFO end method=GET path=/two
+2024/05/21 00:49:32 INFO start method=GET path=/one
+2024/05/21 00:49:32 INFO end method=GET path=/one
+2024/05/21 00:49:34 INFO start method=GET path=/two
+2024/05/21 00:49:34 INFO end method=GET path=/two
 ```
 
 ## Solution
+
+### Without Middleware
 
 A solution without using middlewares would look like
 
@@ -39,7 +41,7 @@ import (
 func main() {
 	http.HandleFunc("/one", func(w http.ResponseWriter, r *http.Request) {
 		slog.Info("start", "method", r.Method, "path", r.URL.Path)
-		defer slog.Info("start", "method", r.Method, "path", r.URL.Path)
+		defer slog.Info("end", "method", r.Method, "path", r.URL.Path)
 
 		fmt.Fprintln(w, "this is one")
 	})
@@ -50,6 +52,168 @@ func main() {
 
 		fmt.Fprintln(w, "this is two")
 	})
+
+	http.ListenAndServe(":3000", nil)
+}
+```
+
+How do we avoid copy pasting those two lines to every HTTP handler function? Middlewares for the win!
+
+### Basic Middleware
+
+```go
+package main
+
+import (
+	"fmt"
+	"log/slog"
+	"net/http"
+)
+
+func logRequest(next func(http.ResponseWriter, *http.Request)) func(http.ResponseWriter, *http.Request) {
+	return func(w http.ResponseWriter, r *http.Request) {
+		slog.Info("start", "method", r.Method, "path", r.URL.Path)
+		defer slog.Info("end", "method", r.Method, "path", r.URL.Path)
+
+		next(w, r)
+	}
+}
+
+func oneHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "this is one")
+}
+
+func twoHander(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "this is two")
+}
+
+func main() {
+	http.HandleFunc("/one", logRequest(oneHandler))
+	http.HandleFunc("/two", logRequest(twoHander))
+
+	http.ListenAndServe(":3000", nil)
+}
+```
+
+## Using http.HandleFunc
+
+We are not done yet! There is still room for improvement. Notice how big the method signature for `logRequest` is! we can start from there. I remember a standard library type called `http.HandlerFunc` which could be used in the place of `func(ResponseWriter, *Request)`. So now our middleware looks like this.
+
+```go
+func logRequest(next http.HandlerFunc) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		slog.Info("start", "method", r.Method, "path", r.URL.Path)
+		defer slog.Info("end", "method", r.Method, "path", r.URL.Path)
+
+		next(w, r)
+	}
+}
+```
+
+While browsing through the Go docs, I noticed that `http.HandleFunc` to have the below method signature.
+
+```go
+func HandleFunc(pattern string, handler func(ResponseWriter, *Request))
+```
+
+That arose a question in me. Why don't they not use `func HandleFunc(pattern string, handler http.HandlerFunc)` instead? I thought `http.HandlerFunc` is an alias type for `func(ResponseWriter, *Request)`. Digging through the standard library source code had the answer. It seems like it is just not a simple alias, but more than that. Copy pasting the implementation of `http.HanderFunc` for you straight our to Go source :D
+
+```go
+// The HandlerFunc type is an adapter to allow the use of
+// ordinary functions as HTTP handlers. If f is a function
+// with the appropriate signature, HandlerFunc(f) is a
+// [Handler] that calls f.
+type HandlerFunc func(ResponseWriter, *Request)
+
+// ServeHTTP calls f(w, r).
+func (f HandlerFunc) ServeHTTP(w ResponseWriter, r *Request) {
+	f(w, r)
+}
+```
+
+oh wow, so http.HandleFunc is a `func(ResponseWriter, *Request)` which implements the [http.Handler](https://pkg.go.dev/net/http#Handler) interface.
+
+## Enter http.Handler
+
+Why would we need an adapter like `http.HandlerFunc` that implements the `http.Handler` interface. To understand, let us take a look at the interface definition.
+
+```go
+type Handler interface {
+	ServeHTTP(ResponseWriter, *Request)
+}
+```
+
+and also read through the [http.Handler documentation](https://pkg.go.dev/net/http#Handler). At first, it didn't solve my doubt, but then I discovered [this beautiful example](https://pkg.go.dev/net/http#example-Handle) in the docs. Copy pasting the example from the docs here for you to have a quick look.
+
+```go
+package main
+
+import (
+	"fmt"
+	"log"
+	"net/http"
+	"sync"
+)
+
+type countHandler struct {
+	mu sync.Mutex // guards n
+	n  int
+}
+
+func (h *countHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	h.mu.Lock()
+	defer h.mu.Unlock()
+	h.n++
+	fmt.Fprintf(w, "count is %d\n", h.n)
+}
+
+func main() {
+	http.Handle("/count", new(countHandler))
+	log.Fatal(http.ListenAndServe(":8080", nil))
+}
+```
+
+wow, did you get it? Sometimes your handler is more than just a `func(http.ResponseWriter, *http.Request)`. It could be a struct that contains data that could be used in your request logic. Like in the above case, `countHandler` maintains a counter protected by a mutex. Each and every request to `/count` would increment the counter atmoically.
+
+For simple routes, which is just a bunch of instructions we could use `http.HandleFunc`. But once your handler gets complex, like having to maintain data that is common to all requests of the handler, then move upward and go for `http.Handle`.
+
+woah, this just cleared my long standing doubt about "when to use `http.Handle` and `http.HandleFunc`?"
+
+It is getting a bit clear now on why the `http.Handler` interface is needed. With two ways of defining a HTTP handler: one being wrte a `func(http.ResponseWriter, *http.Request)` and pass it to `http.HandleFunc` and another being write a struct with the necessary logic and pass it down to `http.Handle` function, the standard libary needs a common ground in which all its methods can operate on both the types of handlers. Hence an interface.
+
+### http.HandlerFunc to http.Handler
+
+Now that it is evident that a Go programmer could choose between using `http.Handle` or `http.HandleFunc` to serve their handlers, it is necessry that any HTTP middleware should work for both of those use-cases. With the current approach to our solution, we will only support middlerwares which are input to `http.HandleFunc`. Hance moving our middleware to use `http.Handler` interface, that way we could accommodate both types of handlers.
+
+```go
+package main
+
+import (
+	"fmt"
+	"log/slog"
+	"net/http"
+)
+
+func logRequest(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		slog.Info("start", "method", r.Method, "path", r.URL.Path)
+		defer slog.Info("end", "method", r.Method, "path", r.URL.Path)
+
+		next.ServeHTTP(w, r)
+	})
+}
+
+func oneHandler(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "this is one")
+}
+
+func twoHander(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintln(w, "this is two")
+}
+
+func main() {
+	http.Handle("/one", logRequest(http.HandlerFunc(oneHandler)))
+	http.Handle("/two", logRequest(http.HandlerFunc(twoHander)))
 
 	http.ListenAndServe(":3000", nil)
 }
