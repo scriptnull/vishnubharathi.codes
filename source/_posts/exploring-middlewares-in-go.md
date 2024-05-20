@@ -276,4 +276,22 @@ func TimeoutHandler(h Handler, dt time.Duration, msg string) Handler
 
 Like the name says, it times out the handler if the request is taking more than the given duration.
 
+## Third-party Middlewares
+
+I came across this beautiful library called `chi` which comes loaded up with a bunch of middlewares out of the box: https://github.com/go-chi/chi?tab=readme-ov-file#middlewares
+
+I would suggest starting with the default chi recommendation:
+
+```go
+  // A good base middleware stack
+  r.Use(middleware.RequestID)
+  r.Use(middleware.RealIP)
+  r.Use(middleware.Logger)
+  r.Use(middleware.Recoverer)
+```
+
+and then build up the chain. Go explore and catch 'em all!
+
+
+
 
