@@ -177,9 +177,9 @@ wow, did you get it? Sometimes your handler is more than just a `func(http.Respo
 
 For simple routes, which are just a bunch of instructions we could use `http.HandleFunc`. But once your handler gets complex, like having to maintain data that is common to all requests of the handler, then move upward and go for `http.Handle`.
 
-woah, this just cleared my long standing doubt about "when to use `http.Handle` and `http.HandleFunc`?"
+woah, this just cleared my long-standing doubt about "when to use `http.Handle` and `http.HandleFunc`?"
 
-It is getting a bit clear now on why the `http.Handler` interface is needed. With two ways of defining a HTTP handler: one being wrte a `func(http.ResponseWriter, *http.Request)` and pass it to `http.HandleFunc` and another being write a struct with the necessary logic and pass it down to `http.Handle` function, the standard libary needs a common ground in which all its methods can operate on both the types of handlers. Hence an interface.
+It is getting a bit clearer now on why the `http.Handler` interface is needed. With two ways of defining a HTTP handler: one being to write a `func(http.ResponseWriter, *http.Request)` and pass it to `http.HandleFunc` and another being to write a struct with the necessary logic and pass it down to `http.Handle` function, the standard libary needs a common ground in which all its methods can operate on both the types of handlers. Hence an interface.
 
 ### http.HandlerFunc to http.Handler
 
