@@ -296,12 +296,67 @@ and then build up the chain. Go explore and catch 'em all!
 
 ## Communicate
 
-TODO
+When writing or using middlewares, you may need to pass down a variable that was created by one middleware into another middleware or in the request handler. In case of JS, we would just mutate the `request` object directly since it is dynamically typed :D (lol, good old days). In case of Go, we can't do that and we will need a way of passing through variable of any type via the available `ResponseWriter` or `Request` objects.
+
+I have previously written a whole blog post on the [pitfalls of context.WithValue](https://vishnubharathi.codes/blog/context-with-value-pitfall) and when not to use them. And well, this is actually the use-case where you can use them!
+
+A context variable is available to you in all the middlewares and the handlers via the `http.Request` object. We could use that to store and pass down information. 
+
+```go
+
+type RequestKey string
+
+var (
+	RequestIDKey RequestKey = "request-id"
+)
+
+func RequestID(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		ctx := context.WithValue(r.Context(), RequestIDKey, uuid.New())
+		next.ServeHTTP(w, r.WithContext(ctx))
+	})
+}
+
+func handlerThatUsesRequestID(w http.ResponseWriter, r *http.Request) {
+	reqID, ok := r.Context().Value(RequestIDKey).(uuid.UUID)
+	if !ok || reqID == uuid.Nil {
+		fmt.Fprintln(w, "this a request without requestID")
+		return
+	}
+	fmt.Fprintf(w, "request id is %s\n", reqID)
+}
+```
+
+You still need to be careful while using `context.WithValue`. What if you miss calling a middleware, but try to look up the value that it is supposed to set in `r.Context`? It changes the trajectory of your request during runtime and in the worst-case it will lead to runtime panics in your handler. I am wondering if we could somehow catch this kind of stuff during compile time (like maybe by writing a library or perhaps someone already thought about this before - if so, let me know!)
 
 ## Chain
 
-TODO
+You might soon end up having to call multiple middlewares for your handlers. In that case, your code would look like:
 
+```go
+// middlewares for unauthenticated routes
+http.Handle("/", Logger(RequestID(homeHandler))))
 
+// middlewares for authenticated routes
+http.Handle("/profile", Logger(RequestID(BasicAuth(userProfileHandler)))))
+```
 
+We need a way to chain the middlewares and store the chain so that we can re-use it between handlers. I recently discovered a library for this, which might help here: https://github.com/justinas/alice
 
+```go
+unAuth := alice.New(Logger, RequestID)
+auth := alice.New(Logger, RequestID)
+
+http.Handle("/", unAuth.Then(homeHandler))
+http.Handle("/profile", auth.Then(userProfileHandler))
+```
+
+You can also use routing library lke `chi` where the request middlewares are defined at the router level.
+
+## Closing Thoughts
+
+I hope this exploration was useful to you! It definitely made me learn some unexpected things like "when to use http.Handle? when to use http.HandleFunc? ....". This is also inspiring me to write a small middleware library that I have been thinking about.
+
+~ ~ ~ ~
+
+In an alternate universe, someone declared `type Middleware func(Handler) Handler)` in `net/http` and (use your imagination).
