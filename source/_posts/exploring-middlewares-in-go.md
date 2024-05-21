@@ -4,9 +4,9 @@ date: 2024-05-21 00:10:08
 tags: ["go"]
 ---
 
-I came across "Middlewares" for writing HTTP servers originally in the Node.js ecosystem. There is this beautiful library called [express](https://expressjs.com/) which sparked the joy of middlewares in me. In case if you haven't heard of middlewares before, I think you should read [this beautiful page](https://expressjs.com/en/guide/using-middleware.html) from express documentation to get a taste of them. (I genuinely feel that it is the best possible introduction for middleware, hence opening up the post with it)
+I came across "Middlewares" for writing HTTP servers originally in the Node.js ecosystem. There is this beautiful library called [express](https://expressjs.com/) which sparked the joy of middlewares in me. In case if you haven't heard of middlewares before, I think you should read [this beautiful page](https://expressjs.com/en/guide/using-middleware.html) from expressjs documentation to get a taste of them. (I genuinely feel that it is the best possible introduction for middleware, hence opening up the post with it)
 
-With enough Javascript for the day, we will jump into Go now. 😅
+With enough JavaScript for the day, we will jump into Go now. 😅
 
 My goal for this post is to understand how to {use, write} middlewares in Go HTTP servers. We will also try to search the internet and surface some Go middlewares that we can add to our day to day toolkit.
 
@@ -97,7 +97,7 @@ func main() {
 
 ## Using http.HandleFunc
 
-We are not done yet! There is still room for improvement. Notice how big the method signature for `logRequest` is! we can start from there. I remember a standard library type called `http.HandlerFunc` which could be used in the place of `func(ResponseWriter, *Request)`. So now our middleware looks like this.
+We are not done yet! There is still room for improvement. Notice how big the method signature for `logRequest` is! we can start from there. I remember a standard library type called `http.HandlerFunc` which could be used in the place of `func(ResponseWriter, *Request)`. If we start using it, our middleware looks like this.
 
 ```go
 func logRequest(next http.HandlerFunc) http.HandlerFunc {
@@ -116,7 +116,7 @@ While browsing through the Go docs, I noticed that `http.HandleFunc` to have the
 func HandleFunc(pattern string, handler func(ResponseWriter, *Request))
 ```
 
-That arose a question in me. Why don't they not use `func HandleFunc(pattern string, handler http.HandlerFunc)` instead? I thought `http.HandlerFunc` is an alias type for `func(ResponseWriter, *Request)`. Digging through the standard library source code had the answer. It seems like it is just not a simple alias, but more than that. Copy pasting the implementation of `http.HanderFunc` for you straight our to Go source :D
+That arose a question in me. Why don't they use `func HandleFunc(pattern string, handler http.HandlerFunc)` instead? I thought `http.HandlerFunc` is an alias type for `func(ResponseWriter, *Request)`. Digging through the standard library source code had the answer. It seems like it is just not a simple alias, but more than that. Copy pasting the implementation of `http.HanderFunc` for you straight out of Go source :D
 
 ```go
 // The HandlerFunc type is an adapter to allow the use of
@@ -173,7 +173,7 @@ func main() {
 }
 ```
 
-wow, did you get it? Sometimes your handler is more than just a `func(http.ResponseWriter, *http.Request)`. It could be a struct that contains data that could be used in your request logic. Like in the above case, `countHandler` maintains a counter protected by a mutex. Each and every request to `/count` would increment the counter atmoically.
+wow, did you get it? Sometimes your handler is more than just a `func(http.ResponseWriter, *http.Request)`. It could be a struct that contains data that could be used in your request logic. Like in the above case, `countHandler` maintains a counter protected by a mutex. Each and every request to `/count` would increment the counter atomically.
 
 For simple routes, which is just a bunch of instructions we could use `http.HandleFunc`. But once your handler gets complex, like having to maintain data that is common to all requests of the handler, then move upward and go for `http.Handle`.
 
@@ -229,7 +229,7 @@ The `net/http` package in the standard library of Go contains middlewares. If yo
 func AllowQuerySemicolons(h Handler) Handler
 ```
 
-TIL that we could use semicolons instead of ampersand in query strings (a deprecated usage from W3C). Read more about it here: https://github.com/golang/go/issues/25192. This middleware is present in the stdlib for soving that problem by replacing the `;` with `&` under the hood. 
+TIL that we could use semicolons instead of ampersand in query strings (though this style is deprecated by W3C). Read more about it here: https://github.com/golang/go/issues/25192. This middleware is present in the stdlib for soving that problem by replacing the `;` with `&` under the hood. 
 
 ### MaxBytesHandler
 
