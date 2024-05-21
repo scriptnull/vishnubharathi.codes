@@ -345,7 +345,7 @@ We need a way to chain the middlewares and store the chain so that we can re-use
 
 ```go
 unAuth := alice.New(Logger, RequestID)
-auth := alice.New(Logger, RequestID)
+auth := alice.New(Logger, RequestID, BasicAuth)
 
 http.Handle("/", unAuth.Then(homeHandler))
 http.Handle("/profile", auth.Then(userProfileHandler))
