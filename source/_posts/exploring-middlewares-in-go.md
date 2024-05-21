@@ -95,7 +95,7 @@ func main() {
 }
 ```
 
-## Using http.HandleFunc
+### Using http.HandleFunc
 
 We are not done yet! There is still room for improvement. Notice how big the method signature for `logRequest` is! we can start from there. I remember a standard library type called `http.HandlerFunc` which could be used in the place of `func(ResponseWriter, *Request)`. If we start using it, our middleware looks like this.
 
@@ -133,7 +133,7 @@ func (f HandlerFunc) ServeHTTP(w ResponseWriter, r *Request) {
 
 oh wow, so http.HandleFunc is a `func(ResponseWriter, *Request)` which implements the [http.Handler](https://pkg.go.dev/net/http#Handler) interface.
 
-## Enter http.Handler
+### Enter http.Handler
 
 Why would we need an adapter like `http.HandlerFunc` that implements the `http.Handler` interface. To understand, let us take a look at the interface definition.
 
