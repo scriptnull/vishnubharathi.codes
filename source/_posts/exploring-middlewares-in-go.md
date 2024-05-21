@@ -359,4 +359,4 @@ I hope this exploration was useful to you! It definitely made me learn some unex
 
 ~ ~ ~ ~
 
-In an alternate universe, someone declared `type Middleware func(Handler) Handler)` in `net/http` and (use your imagination).
+In an alternate universe, someone declared `type Middleware func(Handler) Handler` in `net/http` and (use your imagination).
