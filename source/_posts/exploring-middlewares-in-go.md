@@ -4,17 +4,17 @@ date: 2024-05-21 00:10:08
 tags: ["go"]
 ---
 
-I came across "Middlewares" for writing HTTP servers originally in the Node.js ecosystem. There is this beautiful library called [express](https://expressjs.com/) which sparked the joy of middlewares in me. In case if you haven't heard of middlewares before, I think you should read [this beautiful page](https://expressjs.com/en/guide/using-middleware.html) from expressjs documentation to get a taste of them. (I genuinely feel that it is the best possible introduction for middleware, hence opening up the post with it)
+I came across "Middlewares" for writing HTTP servers originally in the Node.js ecosystem. There is this beautiful library called [express](https://expressjs.com/) which sparked the joy of middleware in me. In case you haven't heard of middleware before, I think you should read [this beautiful page](https://expressjs.com/en/guide/using-middleware.html) from expressjs documentation to get a taste of them. (I genuinely feel that it is the best possible introduction for middleware, hence opening up the post with it)
 
 With enough JavaScript for the day, we will jump into Go now. 😅
 
-My goal for this post is to understand how to {use, write} middlewares in Go HTTP servers. We will also try to search the internet and surface some Go middlewares that we can add to our day to day toolkit.
+My goal for this post is to understand how to {use, write} middlewares in Go HTTP servers. We will also try to search the internet and surface some Go middlewares that we can add to our day-to-day toolkit.
 
 ## Problem
 
 Let us take a simple problem and work our way upwards. Here is the problem statement:
 
-Write a HTTP server that contains multiple routes. When a request is made to a route, print a log line at the start and the end of the request. Something like
+Write an HTTP server that contains multiple routes. When a request is made to a route, print a log line at the start and the end of the request. Something like
 
 ```
 2024/05/21 00:49:32 INFO start method=GET path=/one
@@ -27,7 +27,7 @@ Write a HTTP server that contains multiple routes. When a request is made to a r
 
 ### Without Middleware
 
-A solution without using middlewares would look like
+A solution without using middleware would look like
 
 ```go
 package main
@@ -57,7 +57,7 @@ func main() {
 }
 ```
 
-How do we avoid copy pasting those two lines to every HTTP handler function? Middlewares for the win!
+How do we avoid copy-pasting those two lines to every HTTP handler function? Middlewares for the win!
 
 ### Basic Middleware
 
@@ -110,13 +110,13 @@ func logRequest(next http.HandlerFunc) http.HandlerFunc {
 }
 ```
 
-While browsing through the Go docs, I noticed that `http.HandleFunc` to have the below method signature.
+While browsing through the Go docs, I noticed that `http.HandleFunc` has the below method signature.
 
 ```go
 func HandleFunc(pattern string, handler func(ResponseWriter, *Request))
 ```
 
-That arose a question in me. Why don't they use `func HandleFunc(pattern string, handler http.HandlerFunc)` instead? I thought `http.HandlerFunc` is an alias type for `func(ResponseWriter, *Request)`. Digging through the standard library source code had the answer. It seems like it is just not a simple alias, but more than that. Copy pasting the implementation of `http.HanderFunc` for you straight out of Go source :D
+That raised a question in me. Why don't they use `func HandleFunc(pattern string, handler http.HandlerFunc)` instead? I thought `http.HandlerFunc` is an alias type for `func(ResponseWriter, *Request)`. Digging through the standard library source code had the answer. It seems like it is just not a simple alias, but more than that. Copy pasting the implementation of `http.HanderFunc` for you straight out of Go source :D
 
 ```go
 // The HandlerFunc type is an adapter to allow the use of
@@ -175,7 +175,7 @@ func main() {
 
 wow, did you get it? Sometimes your handler is more than just a `func(http.ResponseWriter, *http.Request)`. It could be a struct that contains data that could be used in your request logic. Like in the above case, `countHandler` maintains a counter protected by a mutex. Each and every request to `/count` would increment the counter atomically.
 
-For simple routes, which is just a bunch of instructions we could use `http.HandleFunc`. But once your handler gets complex, like having to maintain data that is common to all requests of the handler, then move upward and go for `http.Handle`.
+For simple routes, which are just a bunch of instructions we could use `http.HandleFunc`. But once your handler gets complex, like having to maintain data that is common to all requests of the handler, then move upward and go for `http.Handle`.
 
 woah, this just cleared my long standing doubt about "when to use `http.Handle` and `http.HandleFunc`?"
 
@@ -183,7 +183,7 @@ It is getting a bit clear now on why the `http.Handler` interface is needed. Wit
 
 ### http.HandlerFunc to http.Handler
 
-Now that it is evident that a Go programmer could choose between using `http.Handle` or `http.HandleFunc` to serve their handlers, it is necessry that any HTTP middleware should work for both of those use-cases. With the current approach to our solution, we will only support middlerwares which are input to `http.HandleFunc`. Hance moving our middleware to use `http.Handler` interface, that way we could accommodate both types of handlers.
+Now that it is evident that a Go programmer could choose between using `http.Handle` or `http.HandleFunc` to serve their handlers, it is necessary that any HTTP middleware should work for both of those use cases. With the current approach to our solution, we will only support middlewares that are input to `http.HandleFunc`. Hence moving our middleware to use `http.Handler` interface, that way we could accommodate both types of handlers.
 
 ```go
 package main
@@ -229,7 +229,7 @@ The `net/http` package in the standard library of Go contains middlewares. If yo
 func AllowQuerySemicolons(h Handler) Handler
 ```
 
-TIL that we could use semicolons instead of ampersand in query strings (though this style is deprecated by W3C). Read more about it here: https://github.com/golang/go/issues/25192. This middleware is present in the stdlib for soving that problem by replacing the `;` with `&` under the hood. 
+TIL that we could use semicolons instead of ampersands in query strings (though this style is deprecated by W3C). Read more about it here: https://github.com/golang/go/issues/25192. This middleware is present in the stdlib for solving that problem by replacing the `;` with `&` under the hood. 
 
 ### MaxBytesHandler
 
@@ -237,7 +237,7 @@ TIL that we could use semicolons instead of ampersand in query strings (though t
 func MaxBytesHandler(h Handler, n int64) Handler
 ```
 
-This could be used to limit the acceptable request body size. Under the hood it uses `MaxBytesReader`:
+This could be used to limit the acceptable request body size. Under the hood, it uses `MaxBytesReader`:
 
 > MaxBytesReader prevents clients from accidentally or maliciously sending a large request and wasting server resources. If possible, it tells the ResponseWriter to close the connection after the limit has been reached.
 
@@ -251,7 +251,7 @@ The docs says
 
 > StripPrefix returns a handler that serves HTTP requests by removing the given prefix from the request URL's Path (and RawPath if set) and invoking the handler h.
 
-My first impression is how could this be useful. Oh, wait for the blast! Here we go once again with a beautiful copy paste of an stdlib example.
+My first impression is how could this be useful. Oh, wait for the blast! Here we go once again with a beautiful copy-paste of an stdlib example.
 
 ```go
 package main
@@ -274,7 +274,7 @@ func main() {
 func TimeoutHandler(h Handler, dt time.Duration, msg string) Handler
 ```
 
-Like the name says, it times out the handler if the request is taking more than the given duration.
+As the name says, it times out the handler if the request is taking more than the given duration.
 
 ## Third-party Middlewares
 
@@ -292,11 +292,11 @@ I would suggest starting with the default chi recommendation:
 
 and then build up the chain. Go explore and catch 'em all!
 
-(also let me know your favorite middlewares if you have one - because I am trying to discover more third party middlewares in Go)
+(also let me know your favorite middleware if you have one - because I am trying to discover more third-party middlewares in Go)
 
 ## Communicate
 
-When writing or using middlewares, you may need to pass down a variable that was created by one middleware into another middleware or in the request handler. In case of JS, we would just mutate the `request` object directly since it is dynamically typed :D (lol, good old days). In case of Go, we can't do that and we will need a way of passing through variable of any type via the available `ResponseWriter` or `Request` objects.
+When writing or using middleware, you may need to pass down a variable that was created by one middleware into another middleware or in the request handler. In the case of JS, we would just mutate the `request` object directly since it is dynamically typed :D (lol, good old days). In the case of Go, we can't do that and we will need a way of passing through variables of any type via the available `ResponseWriter` or `Request` objects.
 
 I have previously written a whole blog post on the [pitfalls of context.WithValue](https://vishnubharathi.codes/blog/context-with-value-pitfall) and when not to use them. And well, this is actually the use-case where you can use them!
 
@@ -327,11 +327,11 @@ func handlerThatUsesRequestID(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-You still need to be careful while using `context.WithValue`. What if you miss calling a middleware, but try to look up the value that it is supposed to set in `r.Context`? It changes the trajectory of your request during runtime and in the worst-case it will lead to runtime panics in your handler. I am wondering if we could somehow catch this kind of stuff during compile time (like maybe by writing a library or perhaps someone already thought about this before - if so, let me know!)
+You still need to be careful while using `context.WithValue`. What if you miss calling a middleware, but try to look up the value that it is supposed to set in `r.Context`? It changes the trajectory of your request during runtime and in the worst case it will lead to runtime panics in your handler. I am wondering if we could somehow catch this kind of stuff during compile time (like maybe by writing a library or perhaps someone already thought about this before - if so, let me know!)
 
 ## Chain
 
-You might soon end up having to call multiple middlewares for your handlers. In that case, your code would look like:
+You might soon end up having to call multiple middleware for your handlers. In that case, your code would look like:
 
 ```go
 // middlewares for unauthenticated routes
@@ -341,7 +341,7 @@ http.Handle("/", Logger(RequestID(homeHandler))))
 http.Handle("/profile", Logger(RequestID(BasicAuth(userProfileHandler)))))
 ```
 
-We need a way to chain the middlewares and store the chain so that we can re-use it between handlers. I recently discovered a library for this, which might help here: https://github.com/justinas/alice
+We need a way to chain the middleware and store the chain so that we can reuse it between handlers. I recently discovered a library for this, which might help here: https://github.com/justinas/alice
 
 ```go
 unAuth := alice.New(Logger, RequestID)
@@ -351,7 +351,7 @@ http.Handle("/", unAuth.Then(homeHandler))
 http.Handle("/profile", auth.Then(userProfileHandler))
 ```
 
-You can also use routing library lke `chi` where the request middlewares are defined at the router level.
+You can also use a routing library like `chi` where the request middlewares are defined at the router level.
 
 ## Closing Thoughts
 
