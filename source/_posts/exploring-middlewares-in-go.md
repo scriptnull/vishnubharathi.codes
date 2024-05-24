@@ -131,7 +131,7 @@ func (f HandlerFunc) ServeHTTP(w ResponseWriter, r *Request) {
 }
 ```
 
-oh wow, so http.HandleFunc is a `func(ResponseWriter, *Request)` which implements the [http.Handler](https://pkg.go.dev/net/http#Handler) interface.
+oh wow, so `http.HandlerFunc` is a `func(ResponseWriter, *Request)` which implements the [http.Handler](https://pkg.go.dev/net/http#Handler) interface.
 
 ### Enter http.Handler
 
