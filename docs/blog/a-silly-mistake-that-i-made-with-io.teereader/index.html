@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="I recently made a silly mistake while using io.TeeReader in Go and I am writing this blog post to sum up my learnings from this experience. Why I used it in the first placeOk, here is why I chose to u">
+<meta property="og:type" content="article">
+<meta property="og:title" content="A silly mistake that I made with io.TeeReader">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="I recently made a silly mistake while using io.TeeReader in Go and I am writing this blog post to sum up my learnings from this experience. Why I used it in the first placeOk, here is why I chose to u">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-06-27T00:39:47.000Z">
+<meta property="article:modified_time" content="2024-06-27T01:54:26.123Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="go">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>A silly mistake that I made with io.TeeReader</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/exploring-middlewares-in-go/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&text=A silly mistake that I made with io.TeeReader"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&title=A silly mistake that I made with io.TeeReader"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&is_video=false&description=A silly mistake that I made with io.TeeReader"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=A silly mistake that I made with io.TeeReader&body=Check out this article: https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&title=A silly mistake that I made with io.TeeReader"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&title=A silly mistake that I made with io.TeeReader"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&title=A silly mistake that I made with io.TeeReader"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&title=A silly mistake that I made with io.TeeReader"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&name=A silly mistake that I made with io.TeeReader&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&t=A silly mistake that I made with io.TeeReader"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-I-used-it-in-the-first-place"><span class="toc-number">1.</span> <span class="toc-text">Why I used it in the first place</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-TeeReader-but-with-my-mistake"><span class="toc-number">2.</span> <span class="toc-text">Using TeeReader (but with my mistake)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fixing-the-mistake"><span class="toc-number">3.</span> <span class="toc-text">Fixing the mistake</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#io-Pipe"><span class="toc-number">4.</span> <span class="toc-text">io.Pipe</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        A silly mistake that I made with io.TeeReader
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2024-06-27T00:39:47.000Z" itemprop="datePublished">2024-06-27</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/go/" rel="tag">go</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>I recently made a silly mistake while using <code>io.TeeReader</code> in Go and I am writing this blog post to sum up my learnings from this experience.</p>
+<h2 id="Why-I-used-it-in-the-first-place"><a href="#Why-I-used-it-in-the-first-place" class="headerlink" title="Why I used it in the first place"></a>Why I used it in the first place</h2><p>Ok, here is why I chose to use it in the first place: I had some content and two functions that needed that content and perform uploads to two different HTTP endpoints. Something like</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	Upload(strings.NewReader(<span class="string">&quot;hello world&quot;</span>))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Upload</span><span class="params">(r io.Reader)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> err := firstUpload(r); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err := secondUpload(r); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">firstUpload</span><span class="params">(r io.Reader)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">	content := io.MultiReader(strings.NewReader(<span class="string">&quot;first upload:&quot;</span>), r, strings.NewReader(<span class="string">&quot;\n&quot;</span>))</span><br><span class="line">	<span class="keyword">if</span> _, err := io.Copy(os.Stdout, content); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">secondUpload</span><span class="params">(r io.Reader)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">	content := io.MultiReader(strings.NewReader(<span class="string">&quot;second upload:&quot;</span>), r, strings.NewReader(<span class="string">&quot;\n&quot;</span>))</span><br><span class="line">	<span class="keyword">if</span> _, err := io.Copy(os.Stdout, content); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The output of the above program would be</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">first upload:hello world</span><br><span class="line">second upload:</span><br></pre></td></tr></table></figure>
+<p>The first upload consumes all the data from the reader and by the time the reader reaches the second upload, there isn’t anything to be read. If this is new to you, I encourage you to take a look at the standard lib docs for <code>io.Reader</code> to better understand the situation: <a target="_blank" rel="noopener" href="https://pkg.go.dev/io#Reader">https://pkg.go.dev/io#Reader</a></p>
+<h2 id="Using-TeeReader-but-with-my-mistake"><a href="#Using-TeeReader-but-with-my-mistake" class="headerlink" title="Using TeeReader (but with my mistake)"></a>Using TeeReader (but with my mistake)</h2><p>OK, so what do I do now? I google search the problem and discover about Go’s <a target="_blank" rel="noopener" href="https://pkg.go.dev/io#TeeReader">io.TeeReader</a>. Let us see what the program would look like after I tried to use the TeeReader.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Upload</span><span class="params">(r io.Reader)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">	contentForFirstUpload := <span class="built_in">new</span>(bytes.Buffer)</span><br><span class="line">	contentForSecondUpload := io.TeeReader(r, contentForFirstUpload)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err := firstUpload(contentForFirstUpload); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err := secondUpload(contentForSecondUpload); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>And the output for this is</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">first upload:</span><br><span class="line">second upload:hello world</span><br></pre></td></tr></table></figure>
+<p>That is weird. The second upload is succeeding but not the first one?</p>
+<h2 id="Fixing-the-mistake"><a href="#Fixing-the-mistake" class="headerlink" title="Fixing the mistake"></a>Fixing the mistake</h2><p>This probably is the best place to quote the docs of <code>io.TeeReader</code>:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TeeReader</span><span class="params">(r Reader, w Writer)</span> <span class="title">Reader</span></span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>TeeReader returns a Reader that writes to w what it reads from r. All reads from r performed through it are matched with corresponding writes to w. There is no internal buffering - the write must complete before the read completes. Any error encountered while writing is reported as a read error.</p>
+</blockquote>
+<p>So we get back a Reader (<code>contentForSecondUpload</code> in our case) and when that is read, a simultaneous write is happening to the writer (<code>contentForFirstUpload</code> in our case) that we pass. But what happens in the code is, we try to read from the writer before writes are happening to it.</p>
+<p>I am not sure if I did a good job of explaining the fix in plain words above, but here is the code that fixes the problem:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Upload</span><span class="params">(r io.Reader)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">	contentForSecondUpload := <span class="built_in">new</span>(bytes.Buffer)</span><br><span class="line">	contentForFirstUpload := io.TeeReader(r, contentForSecondUpload)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err := firstUpload(contentForFirstUpload); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> err := secondUpload(contentForSecondUpload); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>So rule no.1 here is: always read the reader returned back from <code>io.TeeReader</code> first. That is the thing that is copying the data and making it available for the other buffer (writer).</p>
+<p>That’s it, that is the only rule.</p>
+<h2 id="io-Pipe"><a href="#io-Pipe" class="headerlink" title="io.Pipe"></a>io.Pipe</h2><p>Now that we have fixed the problem, I think we can take a short detour to visit one of my favorite Go constructs: <code>io.Pipe</code> which could also help solve these kinds of problems.</p>
+<p>Here is a quick refactor of our code using <code>io.Pipe</code>.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Upload</span><span class="params">(r io.Reader)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> upload errgroup.Group</span><br><span class="line"></span><br><span class="line">	fr, fw := io.Pipe()</span><br><span class="line">	upload.Go(<span class="function"><span class="keyword">func</span><span class="params">()</span> <span class="title">error</span></span> &#123;</span><br><span class="line">		<span class="keyword">return</span> firstUpload(fr)</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	sr, sw := io.Pipe()</span><br><span class="line">	upload.Go(<span class="function"><span class="keyword">func</span><span class="params">()</span> <span class="title">error</span></span> &#123;</span><br><span class="line">		<span class="keyword">return</span> secondUpload(sr)</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	upload.Go(<span class="function"><span class="keyword">func</span><span class="params">()</span> <span class="title">error</span></span> &#123;</span><br><span class="line">		<span class="keyword">var</span> err error</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			fw.CloseWithError(err)</span><br><span class="line">			sw.CloseWithError(err)</span><br><span class="line">		&#125;()</span><br><span class="line"></span><br><span class="line">		_, err = io.Copy(io.MultiWriter(fw, sw), r)</span><br><span class="line">		<span class="keyword">return</span> err</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> upload.Wait()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This has some advantages and one of them would have helped me in avoiding my mistake with <code>io.TeeReader</code>.</p>
+<ul>
+<li>uploads become concurrent naturally unlike TeeReader where it is sequential.</li>
+<li>the order in which we read the readers for the first upload and second upload does not matter anymore.</li>
+</ul>
+<p>With that said, I would still be mindful about introducing <code>io.Pipe</code>. Here is what I have decided.</p>
+<p>If I need to write to one or two writers and do not need concurrency, I would stick with <code>io.TeeReader</code>. I will stick to <code>io.Pipe</code> for every other case.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Why-I-used-it-in-the-first-place"><span class="toc-number">1.</span> <span class="toc-text">Why I used it in the first place</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Using-TeeReader-but-with-my-mistake"><span class="toc-number">2.</span> <span class="toc-text">Using TeeReader (but with my mistake)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Fixing-the-mistake"><span class="toc-number">3.</span> <span class="toc-text">Fixing the mistake</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#io-Pipe"><span class="toc-number">4.</span> <span class="toc-text">io.Pipe</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&text=A silly mistake that I made with io.TeeReader"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&title=A silly mistake that I made with io.TeeReader"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&is_video=false&description=A silly mistake that I made with io.TeeReader"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=A silly mistake that I made with io.TeeReader&body=Check out this article: https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&title=A silly mistake that I made with io.TeeReader"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&title=A silly mistake that I made with io.TeeReader"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&title=A silly mistake that I made with io.TeeReader"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&title=A silly mistake that I made with io.TeeReader"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&name=A silly mistake that I made with io.TeeReader&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/a-silly-mistake-that-i-made-with-io.teereader/&t=A silly mistake that I made with io.TeeReader"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+<!-- Cloudflare analytics -->
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3a998e7dd4534719a1186cd0b01043fc"}'></script>
+
+
+</body>
+</html>
