@@ -162,3 +162,5 @@ This has some advantages and one of them would have helped me in avoiding my mis
 With that said, I would still be mindful about introducing `io.Pipe`. Here is what I have decided.
 
 If I need to write to one or two writers and do not need concurrency, I would stick with `io.TeeReader`. I will stick to `io.Pipe` for every other case.
+
+I have changed my mind a bit, please turn to the next page: https://vishnubharathi.codes/blog/against-the-io.teereader/
