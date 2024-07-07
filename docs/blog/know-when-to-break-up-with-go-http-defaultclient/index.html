@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="These might be the first set of snippets that you see when trying to use Go’s HTTP client. (taken from the “overview” section of the standard library docs) 1234resp, err :&#x3D; http.Get(&quot;http:&#x2F;&#x2F;examp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Know when to break up with Go&#39;s http.DefaultClient">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="These might be the first set of snippets that you see when trying to use Go’s HTTP client. (taken from the “overview” section of the standard library docs) 1234resp, err :&#x3D; http.Get(&quot;http:&#x2F;&#x2F;examp">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-07-07T15:32:27.000Z">
+<meta property="article:modified_time" content="2024-07-07T17:55:52.123Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="go">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Know when to break up with Go&#39;s http.DefaultClient</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/against-the-io.teereader/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&text=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&title=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&is_video=false&description=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Know when to break up with Go&#39;s http.DefaultClient&body=Check out this article: https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&title=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&title=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&title=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&title=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&name=Know when to break up with Go&#39;s http.DefaultClient&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&t=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Meet-the-DefaultClient"><span class="toc-number">1.</span> <span class="toc-text">Meet the DefaultClient</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-small-example"><span class="toc-number">2.</span> <span class="toc-text">A small example</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-do-we-fix-this"><span class="toc-number">3.</span> <span class="toc-text">How do we fix this?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OK-how-do-I-really-fix-this"><span class="toc-number">4.</span> <span class="toc-text">OK, how do I really fix this?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#It-is-fine"><span class="toc-number">5.</span> <span class="toc-text">It is fine</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Know when to break up with Go&#39;s http.DefaultClient
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2024-07-07T15:32:27.000Z" itemprop="datePublished">2024-07-07</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/go/" rel="tag">go</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>These might be the first set of snippets that you see when trying to use Go’s HTTP client. (taken from the “overview” section of <a target="_blank" rel="noopener" href="https://pkg.go.dev/net/http">the standard library docs</a>)</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">resp, err := http.Get(<span class="string">&quot;http://example.com/&quot;</span>)</span><br><span class="line">...</span><br><span class="line">resp, err := http.Post(<span class="string">&quot;http://example.com/upload&quot;</span>, <span class="string">&quot;image/jpeg&quot;</span>, &amp;buf)</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>The same set of snippets has the potential to cause your first production outage. It is perfectly good code (up to a certain point). Things will start to get dirty when you introduce the following things into the mix:</p>
+<ul>
+<li>when your program is starting to make a lot of HTTP calls.</li>
+<li>when your program is making HTTP calls to more than one service (host names).</li>
+</ul>
+<p>The reason behind it is this little variable declared in the <code>net/http</code> package.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> DefaultClient = &amp;Client&#123;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Meet-the-DefaultClient"><a href="#Meet-the-DefaultClient" class="headerlink" title="Meet the DefaultClient"></a>Meet the DefaultClient</h2><p><code>DefaultClient</code> is of type <code>*http.Client</code> and <code>http.Client</code> is the struct that has all the code to perform HTTP calls. <code>DefaultClient</code> is a HTTP client with all the underlying settings pointing to the default values.</p>
+<p>When you try calling those package-level HTTP methods like <code>http.Get</code>, <code>http.Post</code>, <code>http.Do</code> etc., the HTTP call is made using the <code>DefaultClient</code> variable. Two fields in the <code>http.Client</code> struct could translate the “default” and “shared” behavior of <code>http.DefaultClient</code> into potential problems:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Client <span class="keyword">struct</span> &#123;</span><br><span class="line">	<span class="comment">// Transport specifies the mechanism by which individual</span></span><br><span class="line">	<span class="comment">// HTTP requests are made.</span></span><br><span class="line">	<span class="comment">// If nil, DefaultTransport is used.</span></span><br><span class="line">	Transport RoundTripper</span><br><span class="line"></span><br><span class="line">  <span class="comment">// ......</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// Timeout specifies a time limit for requests made by this</span></span><br><span class="line">	<span class="comment">// Client. The timeout includes connection time, any</span></span><br><span class="line">	<span class="comment">// redirects, and reading the response body. The timer remains</span></span><br><span class="line">	<span class="comment">// running after Get, Head, Post, or Do return and will</span></span><br><span class="line">	<span class="comment">// interrupt reading of the Response.Body.</span></span><br><span class="line">	<span class="comment">//</span></span><br><span class="line">	<span class="comment">// A Timeout of zero means no timeout.</span></span><br><span class="line">	<span class="comment">//</span></span><br><span class="line">	<span class="comment">// The Client cancels requests to the underlying Transport</span></span><br><span class="line">	<span class="comment">// as if the Request&#x27;s Context ended.</span></span><br><span class="line">	<span class="comment">//</span></span><br><span class="line">	<span class="comment">// ....</span></span><br><span class="line">	Timeout time.Duration</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The default value for <code>Timeout</code> is zero, so the <code>http.DefaultClient</code> does not timeout by default and will try to hold on to a local port/socket as long as the connection is live. What if there are too many requests? Combine this with an HTTP server which doesn’t timeout. Bingo! You got a production outage. You will run out of ports and there won’t be newer ports available for making further HTTP calls.</p>
+<p>Next up is the <code>Transport</code> field in the <code>http.Client</code>. By default, the following <code>DefaultTransport</code> would be used in <code>DefaultClient</code>.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> DefaultTransport RoundTripper = &amp;Transport&#123;</span><br><span class="line">	Proxy: ProxyFromEnvironment,</span><br><span class="line">	DialContext: defaultTransportDialContext(&amp;net.Dialer&#123;</span><br><span class="line">		Timeout:   <span class="number">30</span> * time.Second,</span><br><span class="line">		KeepAlive: <span class="number">30</span> * time.Second,</span><br><span class="line">	&#125;),</span><br><span class="line">	ForceAttemptHTTP2:     <span class="literal">true</span>,</span><br><span class="line">	MaxIdleConns:          <span class="number">100</span>,</span><br><span class="line">	IdleConnTimeout:       <span class="number">90</span> * time.Second,</span><br><span class="line">	TLSHandshakeTimeout:   <span class="number">10</span> * time.Second,</span><br><span class="line">	ExpectContinueTimeout: <span class="number">1</span> * time.Second,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>(a lot of things in there, but turn your attention to <code>MaxIdleConns</code>)</p>
+<p>Here is the doc on what it does:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// MaxIdleConns controls the maximum number of idle (keep-alive)</span></span><br><span class="line"><span class="comment">// connections across all hosts. Zero means no limit.</span></span><br><span class="line">MaxIdleConns <span class="keyword">int</span></span><br></pre></td></tr></table></figure>
+<p>Since the <code>DefaultClient</code> is shared, you might end up making calls to more than one service (host names) from it. In that case, there might be an unfair distribution of the <code>MaxIdleConns</code> maintained by the default client for the given set of hosts.</p>
+<h2 id="A-small-example"><a href="#A-small-example" class="headerlink" title="A small example"></a>A small example</h2><p>Let us take an example here:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> LoanAPIClient <span class="keyword">struct</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(l *LoanAPIClient)</span> <span class="title">List</span><span class="params">()</span> <span class="params">([]Loan, error)</span></span> &#123;</span><br><span class="line">  <span class="comment">// ....</span></span><br><span class="line">  err := http.Get(<span class="string">&quot;https://loan.api.example.com/v1/loans&quot;</span>)</span><br><span class="line">  <span class="comment">// ....</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> PaymentAPIClient <span class="keyword">struct</span> &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(p *PaymentAPIClient)</span> <span class="title">Pay</span><span class="params">(amount <span class="keyword">int</span>)</span> <span class="params">(error)</span></span> &#123;</span><br><span class="line">  <span class="comment">// ....</span></span><br><span class="line">  err := http.Post(<span class="string">&quot;https://payment.api.example.com/v1/card&quot;</span>, <span class="string">&quot;application/json&quot;</span>, &amp;req)</span><br><span class="line">  <span class="comment">// ....</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Both <code>LoanAPIClient</code> and <code>PaymentAPIClient</code> use the <code>http.DefaultClient</code> by calling into <code>http.Get</code> and<code>http.Post</code>. Let us say our program makes 80 calls from <code>LoanAPIClient</code> initially and then makes 200 calls from <code>PaymentAPIClient</code>. By default <code>DefaultClient</code> only maintains 100 maximum idle connections. So, <code>LoadAPIClient</code> will capture 80 spots in those 100 spots, and <code>PaymentAPIClient</code> will only get 20 remanining spots. This means that for the rest of 60 calls from <code>PaymentAPIClient</code>, a new connection needs to be opened and closed. This will cause unnecessary pressure on the payments API server. The allocation of these MaxIdleConns will soon get out of your hands! (trust me 😅)</p>
+<h2 id="How-do-we-fix-this"><a href="#How-do-we-fix-this" class="headerlink" title="How do we fix this?"></a>How do we fix this?</h2><p>Increase the <code>MaxIdleConns</code>? Yes, you can but if the client is still shared between <code>LoanAPIClient</code> and <code>PaymentAPIClient</code> then that too shall get out of hand at some scale.</p>
+<p>I discovered the sibling of <code>MaxIdleConns</code> and that is <code>MaxIdleConnsPerHost</code>.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// MaxIdleConnsPerHost, if non-zero, controls the maximum idle</span></span><br><span class="line"><span class="comment">// (keep-alive) connections to keep per-host. If zero,</span></span><br><span class="line"><span class="comment">// DefaultMaxIdleConnsPerHost is used.</span></span><br><span class="line">MaxIdleConnsPerHost <span class="keyword">int</span></span><br></pre></td></tr></table></figure>
+<p>This could help in maintaining a predictable number of idle connections for each endpoint (host name).</p>
+<h2 id="OK-how-do-I-really-fix-this"><a href="#OK-how-do-I-really-fix-this" class="headerlink" title="OK, how do I really fix this?"></a>OK, how do I really fix this?</h2><p>If your program is calling into more than one HTTP service, then you might most probably want to tweak other settings of the Client too. So, it might be beneficial to have a separate <code>http.Client</code> for these services. That way we can fine-tune them if needed in the future.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> LoanAPIClient <span class="keyword">struct</span> &#123;</span><br><span class="line">  http.Client</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> PaymentAPIClient <span class="keyword">struct</span> &#123;</span><br><span class="line">  http.Client</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="It-is-fine"><a href="#It-is-fine" class="headerlink" title="It is fine"></a>It is fine</h2><p>The conclusion would be this: It is okay to use <code>http.DefaultClient</code> to start with. But if you think you will have more clients and will make more API calls, avoid it.</p>
+<p>Bonus: If you are authoring a library that has an API client, do a favor for your users: provide a way to customize the <code>http.Client</code> that you are using to make API calls. That way, your users have full control of what they would like to achieve while using your client.</p>
+<p>~ ~ ~ ~</p>
+<p>HTTP Clients inside an HTTP Server talking to another HTTP Server that has HTTP Clients, all authored by you. That will be your cue.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Meet-the-DefaultClient"><span class="toc-number">1.</span> <span class="toc-text">Meet the DefaultClient</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-small-example"><span class="toc-number">2.</span> <span class="toc-text">A small example</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#How-do-we-fix-this"><span class="toc-number">3.</span> <span class="toc-text">How do we fix this?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OK-how-do-I-really-fix-this"><span class="toc-number">4.</span> <span class="toc-text">OK, how do I really fix this?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#It-is-fine"><span class="toc-number">5.</span> <span class="toc-text">It is fine</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&text=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&title=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&is_video=false&description=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Know when to break up with Go&#39;s http.DefaultClient&body=Check out this article: https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&title=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&title=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&title=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&title=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&name=Know when to break up with Go&#39;s http.DefaultClient&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/know-when-to-break-up-with-go-http-defaultclient/&t=Know when to break up with Go&#39;s http.DefaultClient"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+<!-- Cloudflare analytics -->
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3a998e7dd4534719a1186cd0b01043fc"}'></script>
+
+
+</body>
+</html>
