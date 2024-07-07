@@ -37,7 +37,7 @@ type Client struct {
 	// If nil, DefaultTransport is used.
 	Transport RoundTripper
 
-  // ......
+	// .............
 
 	// Timeout specifies a time limit for requests made by this
 	// Client. The timeout includes connection time, any
@@ -93,17 +93,17 @@ Let us take an example here:
 type LoanAPIClient struct {}
 
 func (l *LoanAPIClient) List() ([]Loan, error) {
-  // ....
-  err := http.Get("https://loan.api.example.com/v1/loans")
-  // ....
+	// ....
+	err := http.Get("https://loan.api.example.com/v1/loans")
+	// ....
 }
 
 type PaymentAPIClient struct {}
 
 func (p *PaymentAPIClient) Pay(amount int) (error) {
-  // ....
-  err := http.Post("https://payment.api.example.com/v1/card", "application/json", &req)
-  // ....
+	// ....
+	err := http.Post("https://payment.api.example.com/v1/card", "application/json", &req)
+	// ....
 }
 ```
 
@@ -116,7 +116,6 @@ Increase the `MaxIdleConns`? Yes, you can but if the client is still shared betw
 I discovered the sibling of `MaxIdleConns` and that is `MaxIdleConnsPerHost`.
 
 ```go
-
 	// MaxIdleConnsPerHost, if non-zero, controls the maximum idle
 	// (keep-alive) connections to keep per-host. If zero,
 	// DefaultMaxIdleConnsPerHost is used.
@@ -131,11 +130,11 @@ If your program is calling into more than one HTTP service, then you might most 
 
 ```go
 type LoanAPIClient struct {
-  client *http.Client
+	client *http.Client
 }
 
 type PaymentAPIClient struct {
-  client *http.Client
+	client *http.Client
 }
 ```
 
