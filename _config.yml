@@ -91,19 +91,19 @@ theme_config:
     home: /
     Blog: /archives/
   social_links:
-    github: https://github.com/scriptnull
-    mastodon: https://recurse.social/@vishnu
-    linkedin: https://linkedin.com/in/scriptnull
     mail: mailto:vishnubharathi04@gmail.com
-    instagram: https://www.instagram.com/vishnu.bharathi/
+    twitter: https://twitter.com/scriptnull
+    github: https://github.com/scriptnull
+    linkedin: https://linkedin.com/in/scriptnull
     reddit: https://www.reddit.com/user/scriptnull
     hacker-news: https://news.ycombinator.com/user?id=scriptnull
+    mastodon: https://recurse.social/@vishnu
+    instagram: https://www.instagram.com/vishnu.bharathi/
     angellist: https://angel.co/scriptnull
     pinterest-square: https://in.pinterest.com/scriptnull/
     docker: https://hub.docker.com/u/scriptnull/
     quora: https://www.quora.com/profile/Vishnu-Bharathi
     telegram: http://telegram.me/scriptnull
-    twitter: https://twitter.com/scriptnull
     
   gravatar:
     email: vishnubharathi04@gmail.com
