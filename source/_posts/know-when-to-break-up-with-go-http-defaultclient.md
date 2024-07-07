@@ -107,7 +107,7 @@ func (p *PaymentAPIClient) Pay(amount int) (error) {
 }
 ```
 
-Both `LoanAPIClient` and `PaymentAPIClient` use the `http.DefaultClient` by calling into `http.Get` and`http.Post`. Let us say our program makes 80 calls from `LoanAPIClient` initially and then makes 200 calls from `PaymentAPIClient`. By default `DefaultClient` only maintains 100 maximum idle connections. So, `LoadAPIClient` will capture 80 spots in those 100 spots, and `PaymentAPIClient` will only get 20 remanining spots. This means that for the rest of 60 calls from `PaymentAPIClient`, a new connection needs to be opened and closed. This will cause unnecessary pressure on the payments API server. The allocation of these MaxIdleConns will soon get out of your hands! (trust me 😅)
+Both `LoanAPIClient` and `PaymentAPIClient` use the `http.DefaultClient` by calling into `http.Get` and `http.Post`. Let us say our program makes 80 calls from `LoanAPIClient` initially and then makes 200 calls from `PaymentAPIClient`. By default `DefaultClient` only maintains 100 maximum idle connections. So, `LoadAPIClient` will capture 80 spots in those 100 spots, and `PaymentAPIClient` will only get 20 remanining spots. This means that for the rest of 60 calls from `PaymentAPIClient`, a new connection needs to be opened and closed. This will cause unnecessary pressure on the payments API server. The allocation of these MaxIdleConns will soon get out of your hands! (trust me 😅)
 
 ## How do we fix this? 
 
