@@ -131,11 +131,11 @@ If your program is calling into more than one HTTP service, then you might most 
 
 ```go
 type LoanAPIClient struct {
-  http.Client
+  client *http.Client
 }
 
 type PaymentAPIClient struct {
-  http.Client
+  client *http.Client
 }
 ```
 
