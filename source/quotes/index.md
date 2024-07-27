@@ -7,6 +7,88 @@ Some words that inspire and help me.
 
 ---
 
+> "Every great change starts like falling dominoes" - BJ Thornton
+
+By: Gary W. Keller and Jay Papasan
+
+Source: [The one thing](https://the1thing.com/)
+
+---
+
+> "Be like a postage stamp - stick to one thing until you get there" - Josh Billings
+
+By: Gary W. Keller and Jay Papasan
+
+Source: [The one thing](https://the1thing.com/)
+
+---
+
+> "If you chase two rabbits, you will not catch either one" - Russian proverb
+
+By: Gary W. Keller and Jay Papasan
+
+Source: [The one thing](https://the1thing.com/)
+
+---
+
+> "The main thing is to keep the main thing the main thing." - Stephen Covey
+
+By: Uri Levine
+
+Source: [Fall In Love with the Problem, Not the Solution](https://urilevine.com/book/)
+
+---
+
+> Transparency, perhaps more than anything else, creates disruption.
+
+By: Uri Levine
+
+Source: [Fall In Love with the Problem, Not the Solution](https://urilevine.com/book/)
+
+---
+
+> No one can compete against good enough and free.
+
+By: Uri Levine
+
+Source: [Fall In Love with the Problem, Not the Solution](https://urilevine.com/book/)
+
+---
+
+> There are right decisions and there are NO decisions. This is because when you make a decision and choose a path, no one knows what it would be like if you had chosen a different path.
+
+By: Uri Levine
+
+Source: [Fall In Love with the Problem, Not the Solution](https://urilevine.com/book/)
+
+---
+
+> Failure is an event, not a person. That's the only way for an organization to embrace failure and encourage fast recovery toward the next experiment.
+
+By: Uri Levine
+
+Source: [Fall In Love with the Problem, Not the Solution](https://urilevine.com/book/)
+
+---
+
+> Remember that if you are afraid to fail, then in reality you already failed...
+
+By: Uri Levine
+
+Source: [Fall In Love with the Problem, Not the Solution](https://urilevine.com/book/)
+
+---
+
+> If you tell yourself, "Next time, I will do it differently," then make "next time" now. It doesn't matter if this is about your relationships, the way you raise your kids, your job, your studies, or a hobby. If you know something needs to be changed, make that change today. We cannot change the past but we can make changes today that will impact our future.
+>
+> Teaching tolerance for failure is important not only in the start-up world. If you have children, encourage them to try different things. That will help them develop self-confidence. Fail and recover - this is one of the most important lessons to incorporate in your parenthood.
+
+By: Uri Levine
+
+Source: [Fall In Love with the Problem, Not the Solution](https://urilevine.com/book/)
+
+---
+
 > One of the best ways to get to that point is actually to start with something that's not good enough and then iterate repeatedly until it is good enough.
 
 By: Uri Levine
