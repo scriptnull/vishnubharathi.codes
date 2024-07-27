@@ -7,6 +7,46 @@ Some words that inspire and help me.
 
 ---
 
+> One of the best ways to get to that point is actually to start with something that's not good enough and then iterate repeatedly until it is good enough.
+
+By: Uri Levine
+
+Source: [Fall In Love with the Problem, Not the Solution](https://urilevine.com/book/)
+
+---
+
+> It was as Michael Jordan once said, "I've never lost a game. I just ran out of time." 
+
+By: Uri Levine
+
+Source: [Fall In Love with the Problem, Not the Solution](https://urilevine.com/book/)
+
+---
+
+> Your passion for making a change must be greater than your fear of failure and the alternative cost.
+
+By: Uri Levine
+
+Source: [Fall In Love with the Problem, Not the Solution](https://urilevine.com/book/)
+
+---
+
+> When I was young, my dad once told me that if you don't know how much you're paying, you are paying too much.
+
+By: Uri Levine
+
+Source: [Fall In Love with the Problem, Not the Solution](https://urilevine.com/book/)
+
+---
+
+> In my opinion, there are only right decisions or NO decisions.
+
+By: Uri Levine
+
+Source: [Fall In Love with the Problem, Not the Solution](https://urilevine.com/book/)
+
+---
+
 >  Engineering requires not just the ability to use mathematics, but the ability to understand what, if anything, the mathematics tells us about an actual system.
 
 By: Leslie Lamport
