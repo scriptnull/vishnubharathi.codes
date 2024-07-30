@@ -7,6 +7,22 @@ Some words that inspire and help me.
 
 ---
 
+> "I am a spark of the infinite. How can I have fear?"
+
+By: Pravrajika Divyanandaprana
+
+Source: [Miracle of Positive Thinking](https://youtu.be/inxQUC-ZWww?si=iYNisMotS1pcBHLe)
+
+---
+
+> "Thought can create a heaven out of hell and can create a hell out of heaven also. It all depends on how you handle your thought process"
+
+By: Pravrajika Divyanandaprana
+
+Source: [Miracle of Positive Thinking](https://youtu.be/inxQUC-ZWww?si=iYNisMotS1pcBHLe)
+
+---
+
 > "Every great change starts like falling dominoes" - BJ Thornton
 
 By: Gary W. Keller and Jay Papasan
