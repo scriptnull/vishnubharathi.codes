@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> "If you can do, or dream you can, begin it now, for boldness has genius, power, and magic in it." - Goethe
+
+By: Robert Swan
+
+Source: [Let's save the last pristine continent](https://www.youtube.com/watch?v=ZIVSJYazE9s)
+
+---
+
 > "I am a spark of the infinite. How can I have fear?"
 
 By: Pravrajika Divyanandaprana
