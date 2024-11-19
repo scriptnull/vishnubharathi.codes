@@ -7,6 +7,30 @@ Some words that inspire and help me.
 
 ---
 
+> Decide before the race the conditions that will cause you to stop and drop out. You don't want to be out there saying, "Well gee, my leg hurts, I'm a little dehydrated, I'm sleepy, I'm tired, and it's cold and windy." And talk yourself into quitting. If you are making a decision based on how you feel at the moment, you will probably make the wrong decision. - Ultramarathoner Dick Collins.
+
+By: Seth Godin
+
+Source: [The Dip](https://www.goodreads.com/book/show/324748.The_Dip)
+
+---
+
+> Sergey Brin, cofounder of Google, told me, "We knew that Google was going to get better every single day as we worked on it, and we knew that sooner or later, everyone was going to try it. So our feeling was that the later you tried it, the better it was for us because we'd make a better impression with better technology. So we were never in a big hurry to get you to use it today. Tomorrow would be better."
+
+By: Seth Godin
+
+Source: [The Dip](https://www.goodreads.com/book/show/324748.The_Dip)
+
+---
+
+> The next time you catch yourself being average when you feel like quitting, realize that you have only two good choices: Quit or be exceptional. Average is for losers.
+
+By: Seth Godin
+
+Source: [The Dip](https://www.goodreads.com/book/show/324748.The_Dip)
+
+---
+
 > "If you can do, or dream you can, begin it now, for boldness has genius, power, and magic in it." - Goethe
 
 By: Robert Swan
