@@ -6,9 +6,9 @@ tags: ["distributed systems"]
 
 This is supposed to be a distributed systems blog post that I [promised](https://bsky.app/profile/vishnubharathi.codes/post/3lcyrndlxvs2u) to write, but I am unable to keep quiet about a fact that I realized while thinking about writing this post.
 
-That is, "I got too many clocks at my home" - like one per room, except the bathrooms. Trying to convince my family to allow me to achieve full coverage, but they just won't allow me to have a ticking clock in our bathrooms - lol :joy: 
+That is, "I got too many clocks at my home" - like one per room, except the bathrooms. Trying to convince my family to allow me to achieve full coverage, but they just won't allow me to have a ticking clock in our bathrooms - lol 😂 
 
-### Clock Skew
+## Clock Skew
 
 If you have a lot of clocks like me, then there is a good chance that not all the clocks in all rooms are showing the same time. The clock in my bedroom is five minutes faster than the clock in our hall. That makes me a time traveller when I go from one room to another room.
 
@@ -16,7 +16,7 @@ The time in my bedroom is 8:35 AM, but the time in my hall is 8:30 AM. If I beli
 
 It seems like there is a similar situation at hand when you are running multiple different computers. Every machine has its own system clock. There is no guarantee that all the system clocks are having the same time. This difference in time has been causing headaches for programmers and this is what our computer scientists call it to be a "clock skew".
 
-### NTP
+## NTP
 
 What if I went through my house all day long and adjusted all the clocks to the same time? Will that make sure to get rid of the clock skew? Not really, the skew can still occur because the seconds hand in real-world clocks cannot be synchronized with one another. There are external factors like the battery power going down which could eventually cause a clock skew.
 
@@ -24,23 +24,23 @@ In the case of computing, there seems to be a protocol called  [NTP (Network Tim
 
 If you are using an NTP daemon in production, make sure to have an alerting and monitoring setup for it. I learned that some people go to the extremes of plotting graphs against the clock skew and network latency between the machines in their system [^1]. It might be good to have a sense of how much of a clock skew can usually happen while using NTP. 100 to 500 milliseconds seem to be a practical estimate for clock skews [^2].
 
-### Reference clocks
+## Reference clocks
 
 You might be wondering if two clocks are out of sync, which one does the NTP consider a source of truth and adjust accordingly.
 
 To understand it, we have to visit where time comes from. Prepare to be amazed by [this list](https://en.wikipedia.org/wiki/Clock#History_of_time-measuring_devices) of all kinds of ways humans have been finding time so far in history. If you scroll to the bottom of the list, you will find two kinds of clocks that are of interest to us here.
 
-#### Quartz clock
+### Quartz clock
 
 > Quartz clocks are timepieces that use an [electronic oscillator](https://en.wikipedia.org/wiki/Electronic_oscillator) regulated by a [quartz](https://en.wikipedia.org/wiki/Quartz) crystal to keep time. [^3]
 
 If you ever wondered how your laptop shows the right time when you switch it off and turn it on after a month. The reason is that your laptop contains a quartz clock with a separate battery which runs always. When your operating system boots up, it gets the time from this clock.
 
-#### Atomic clock
+### Atomic clock
 
 > An atomic clock is a [clock](https://en.wikipedia.org/wiki/Clock) that measures time by monitoring the resonant frequency of atoms. [^4]
 
-Atomic clocks are the most accurate clocks in existence as of now. In fact, it is so accurate that we have to infer what a second is by using it :exploding_head: 
+Atomic clocks are the most accurate clocks in existence as of now. In fact, it is so accurate that we have to infer what a second is by using it 🤯 
 
 > The second, symbol s, is the SI unit of time. It is defined by taking the fixed numerical value of the caesium frequency, the unperturbed ground-state hyperfine transition frequency of the caesium-133 atom, to be 9192631770 when expressed in the unit Hz, which is equal to s−1.
 
@@ -67,7 +67,7 @@ Some interesting things to explore here would be:
 - [Amazon's Time Sync Service](https://aws.amazon.com/about-aws/whats-new/2017/11/introducing-the-amazon-time-sync-service/)
 - AWS's [clockbound library](https://github.com/aws/clock-bound) can give you a timestamp and the bounds of the timestamp which can be used by your application running on EC2.
 
-### Causal Ordering
+## Causal Ordering
 
 All the above were attempts to make the clock to be more "trustable". There is another extreme where things get even more interesting.
 
@@ -79,7 +79,7 @@ I sent some money to my friend and they received it in their bank account. Sendi
 
 If you think deeply, we need a clock in most of the distributed systems because we just like to have causal ordering of events happening in our system. Be it an e-commerce app or a banking app, the order in which events flow is what we are interested in.
 
-### Logical clocks
+## Logical clocks
 
 This is where things get exciting even more! Let us say we ditch our system clock altogether.
 
@@ -164,10 +164,6 @@ This `type Clock struct` that we have here is the logical clock. In fact, this w
 
 There are other types of logical clocks that can be seen in the wild like vector clocks, hybrid logical clocks, etc. Something for us to explore!
 
-~ ~ ~ ~
-
-Hope you had a good time learning about time!
-
 [^1]:  [Clock Skew and Distributed Systems (Donny Nadolny, PagerDuty)](https://youtu.be/IjsJLTriLzs?si=qFhFtB1XfWkx1uBs)
 [^2]: [What is the average clock skew when using NTP?](https://www.perplexity.ai/search/what-is-the-average-clock-skew-GWjRvNpYSbmRad_YHBswMg#0)
 [^3]: [Quartz Clock](https://en.wikipedia.org/wiki/Quartz_clock)
@@ -175,3 +171,7 @@ Hope you had a good time learning about time!
 [^5]: [NTP FAQ](https://www.ntp.org/ntpfaq/NTP-s-algo/#5111-what-is-a-reference-clock)
 [^6]: [Living without atomic clocks: Where CockroachDB and Spanner diverge](https://www.cockroachlabs.com/blog/living-without-atomic-clocks/)
 [^7]: Leslie Lamport. 1978. Time, clocks, and the ordering of events in a distributed system. Commun. ACM 21, 7 (July 1978), 558–565. https://doi.org/10.1145/359545.359563
+
+~ ~ ~ ~
+
+Hope you had a good time learning about time!
