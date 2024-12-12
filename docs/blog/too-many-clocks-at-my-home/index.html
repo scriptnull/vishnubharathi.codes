@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="This is supposed to be a distributed systems blog post that I promised to write, but I am unable to keep quiet about a fact that I realized while thinking about writing this post. That is, “I got too">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Too many clocks at my home">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="This is supposed to be a distributed systems blog post that I promised to write, but I am unable to keep quiet about a fact that I realized while thinking about writing this post. That is, “I got too">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-12-12T18:17:26.000Z">
+<meta property="article:modified_time" content="2024-12-12T18:20:22.206Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="distributed systems">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Too many clocks at my home</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/fix-up/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&text=Too many clocks at my home"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&title=Too many clocks at my home"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&is_video=false&description=Too many clocks at my home"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Too many clocks at my home&body=Check out this article: https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&title=Too many clocks at my home"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&title=Too many clocks at my home"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&title=Too many clocks at my home"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&title=Too many clocks at my home"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&name=Too many clocks at my home&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&t=Too many clocks at my home"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Clock-Skew"><span class="toc-number">1.</span> <span class="toc-text">Clock Skew</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NTP"><span class="toc-number">2.</span> <span class="toc-text">NTP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reference-clocks"><span class="toc-number">3.</span> <span class="toc-text">Reference clocks</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Quartz-clock"><span class="toc-number">3.1.</span> <span class="toc-text">Quartz clock</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Atomic-clock"><span class="toc-number">3.2.</span> <span class="toc-text">Atomic clock</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Clock-bound"><span class="toc-number">4.</span> <span class="toc-text">Clock bound</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Causal-Ordering"><span class="toc-number">5.</span> <span class="toc-text">Causal Ordering</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Logical-clocks"><span class="toc-number">6.</span> <span class="toc-text">Logical clocks</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Too many clocks at my home
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2024-12-12T18:17:26.000Z" itemprop="datePublished">2024-12-12</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/distributed-systems/" rel="tag">distributed systems</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>This is supposed to be a distributed systems blog post that I <a target="_blank" rel="noopener" href="https://bsky.app/profile/vishnubharathi.codes/post/3lcyrndlxvs2u">promised</a> to write, but I am unable to keep quiet about a fact that I realized while thinking about writing this post.</p>
+<p>That is, “I got too many clocks at my home” - like one per room, except the bathrooms. Trying to convince my family to allow me to achieve full coverage, but they just won’t allow me to have a ticking clock in our bathrooms - lol :joy: </p>
+<h3 id="Clock-Skew"><a href="#Clock-Skew" class="headerlink" title="Clock Skew"></a>Clock Skew</h3><p>If you have a lot of clocks like me, then there is a good chance that not all the clocks in all rooms are showing the same time. The clock in my bedroom is five minutes faster than the clock in our hall. That makes me a time traveller when I go from one room to another room.</p>
+<p>The time in my bedroom is 8:35 AM, but the time in my hall is 8:30 AM. If I believe in both of my clocks and walk from my bedroom to the hall, congrats to me because I have travelled back in time.</p>
+<p>It seems like there is a similar situation at hand when you are running multiple different computers. Every machine has its own system clock. There is no guarantee that all the system clocks are having the same time. This difference in time has been causing headaches for programmers and this is what our computer scientists call it to be a “clock skew”.</p>
+<h3 id="NTP"><a href="#NTP" class="headerlink" title="NTP"></a>NTP</h3><p>What if I went through my house all day long and adjusted all the clocks to the same time? Will that make sure to get rid of the clock skew? Not really, the skew can still occur because the seconds hand in real-world clocks cannot be synchronized with one another. There are external factors like the battery power going down which could eventually cause a clock skew.</p>
+<p>In the case of computing, there seems to be a protocol called  <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Network_Time_Protocol">NTP (Network Time Protocol)</a> that helps do the equivalent of me going around the house and syncing clocks. It synchronizes the clocks between computers and helps us to maintain the clock skew to be minimum. I first heard about it back in 2016 or 2017 at work when we faced some problems due to the clocks going out of sync between the machines in our system. So we had to install the NTP daemon service on all the machines to solve the problem.</p>
+<p>If you are using an NTP daemon in production, make sure to have an alerting and monitoring setup for it. I learned that some people go to the extremes of plotting graphs against the clock skew and network latency between the machines in their system [^1]. It might be good to have a sense of how much of a clock skew can usually happen while using NTP. 100 to 500 milliseconds seem to be a practical estimate for clock skews [^2].</p>
+<h3 id="Reference-clocks"><a href="#Reference-clocks" class="headerlink" title="Reference clocks"></a>Reference clocks</h3><p>You might be wondering if two clocks are out of sync, which one does the NTP consider a source of truth and adjust accordingly.</p>
+<p>To understand it, we have to visit where time comes from. Prepare to be amazed by <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Clock#History_of_time-measuring_devices">this list</a> of all kinds of ways humans have been finding time so far in history. If you scroll to the bottom of the list, you will find two kinds of clocks that are of interest to us here.</p>
+<h4 id="Quartz-clock"><a href="#Quartz-clock" class="headerlink" title="Quartz clock"></a>Quartz clock</h4><blockquote>
+<p>Quartz clocks are timepieces that use an <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Electronic_oscillator">electronic oscillator</a> regulated by a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Quartz">quartz</a> crystal to keep time. [^3]</p>
+</blockquote>
+<p>If you ever wondered how your laptop shows the right time when you switch it off and turn it on after a month. The reason is that your laptop contains a quartz clock with a separate battery which runs always. When your operating system boots up, it gets the time from this clock.</p>
+<h4 id="Atomic-clock"><a href="#Atomic-clock" class="headerlink" title="Atomic clock"></a>Atomic clock</h4><blockquote>
+<p>An atomic clock is a <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Clock">clock</a> that measures time by monitoring the resonant frequency of atoms. [^4]</p>
+</blockquote>
+<p>Atomic clocks are the most accurate clocks in existence as of now. In fact, it is so accurate that we have to infer what a second is by using it :exploding_head: </p>
+<blockquote>
+<p>The second, symbol s, is the SI unit of time. It is defined by taking the fixed numerical value of the caesium frequency, the unperturbed ground-state hyperfine transition frequency of the caesium-133 atom, to be 9192631770 when expressed in the unit Hz, which is equal to s−1.</p>
+</blockquote>
+<p>While storing date-time values in your applications, you might have heard of Co-ordinated Universal Time (UTC).</p>
+<blockquote>
+<p>UTC is based on TAI, which is a weighted average of hundreds of <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Atomic_clock">atomic clocks</a> worldwide.</p>
+</blockquote>
+<p>Now you know how UTC is calculated! If you install NTP on your machines, it will use UTC as the reference time to adjust the clock skew on your machine.</p>
+<p>Satellites (with atomic clocks installed on them) seem to be the ultimate reference clock. GPS receivers can get signals from these satellites about what time it is. NTP uses different levels of reference clocks and these levels are called startum. The atomic clock in the satellite is the stratum 0 which is the reference clock for stratum 1 and so on. [^5]</p>
+<h3 id="Clock-bound"><a href="#Clock-bound" class="headerlink" title="Clock bound"></a>Clock bound</h3><p>We know that we can’t trust our clocks anymore. Big giants like Google and AWS have been thinking about what they can do to improve the situation. As a result, they set up the fancy stratum 0 atomic clocks on satellites connected to their data center regions. Clock skew is inevitable, but with this fancy setup, they are able to achieve clock skews that are within certain bounds.</p>
+<blockquote>
+<p>In Spanner’s case, Google mentions an upper bound of 7ms…..</p>
+</blockquote>
+<p>This means two machines that are part of the spanner cluster can at-most be of 7ms apart. They cleverly use this property:</p>
+<blockquote>
+<p>So how does Spanner use TrueTime to provide linearizability given that there are still inaccuracies between clocks? It’s actually surprisingly simple. It waits. Before a node is allowed to report that a transaction has committed, it must wait 7ms. Because all clocks in the system are within 7ms of each other, waiting 7ms means that no subsequent transaction may commit at an earlier timestamp, even if the earlier transaction was committed on a node with a clock which was fast by the maximum 7ms. Pretty clever. [^6] </p>
+</blockquote>
+<p>Some interesting things to explore here would be:</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://cloud.google.com/spanner/docs/true-time-external-consistency">Google’s TrueTime</a></li>
+<li><a target="_blank" rel="noopener" href="https://aws.amazon.com/about-aws/whats-new/2017/11/introducing-the-amazon-time-sync-service/">Amazon’s Time Sync Service</a></li>
+<li>AWS’s <a target="_blank" rel="noopener" href="https://github.com/aws/clock-bound">clockbound library</a> can give you a timestamp and the bounds of the timestamp which can be used by your application running on EC2.</li>
+</ul>
+<h3 id="Causal-Ordering"><a href="#Causal-Ordering" class="headerlink" title="Causal Ordering"></a>Causal Ordering</h3><p>All the above were attempts to make the clock to be more “trustable”. There is another extreme where things get even more interesting.</p>
+<p>To get there, the first thing you need to note is: It is “causal ordering” and not “casual ordering”.</p>
+<p>Causal means “one” thing in a system <em>caused</em> some other thing in the system. If it was not for the first thing, the things that come after that would have never happened.</p>
+<p>I sent some money to my friend and they received it in their bank account. Sending the money is the event that causes the money to be received in my friend’s account. It can’t be the other way around: My friend received some money out of nowhere and then I sent the money which went nowhere but got detected from my account - there is no causal order here.</p>
+<p>If you think deeply, we need a clock in most of the distributed systems because we just like to have causal ordering of events happening in our system. Be it an e-commerce app or a banking app, the order in which events flow is what we are interested in.</p>
+<h3 id="Logical-clocks"><a href="#Logical-clocks" class="headerlink" title="Logical clocks"></a>Logical clocks</h3><p>This is where things get exciting even more! Let us say we ditch our system clock altogether.</p>
+<p>Instead of a system clock both our server(s) and client would have their own clock (typically as a shared library). Instead of observing the real-world time from this custom clock, our application logic could observe a monotonically increasing counter value. This counter value could give a number that the event can record and increment for the next event to use.</p>
+<p>Do you see what we did here? Instead of storing “event A” that happened at a particular time <code>hh:mm:ss</code>, we record that event A happened as the Nth event in our system. If we sort the numbers stored alongside the event, we get the causal ordering of events. This can help us ensure things like my friend doesn’t get money out of nowhere.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Clock <span class="keyword">struct</span> &#123;</span><br><span class="line">	time <span class="keyword">uint64</span></span><br><span class="line"></span><br><span class="line">	mu sync.RWMutex</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *Clock)</span> <span class="title">Time</span><span class="params">()</span> <span class="title">uint64</span></span> &#123;</span><br><span class="line">	c.mu.RLock()</span><br><span class="line">	<span class="keyword">defer</span> c.mu.RUnlock()</span><br><span class="line">	<span class="keyword">return</span> c.time</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *Clock)</span> <span class="title">Increment</span><span class="params">()</span> <span class="title">uint64</span></span> &#123;</span><br><span class="line">	c.mu.Lock()</span><br><span class="line">	<span class="keyword">defer</span> c.mu.Unlock()</span><br><span class="line">	c.time++</span><br><span class="line">	<span class="keyword">return</span> c.time</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Both our server and client would have their own clocks.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Server <span class="keyword">struct</span> &#123;</span><br><span class="line">	clock *Clock</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Client <span class="keyword">struct</span> &#123;</span><br><span class="line">	clock *Clock</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>And how do we synchronize the time between them? Simple! We just try to adjust the clock whenever we feel like the clock might be running behind.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *Clock)</span> <span class="title">Adjust</span><span class="params">(time <span class="keyword">uint64</span>)</span></span> &#123;</span><br><span class="line">	c.mu.Lock()</span><br><span class="line">	<span class="keyword">defer</span> c.mu.Unlock()</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> c.time &gt; time &#123;</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	c.time = time + <span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Here is a toy example of this. The client talks to the server via an HTTP API and tries to store a key-value pair. It will also send its clock time. But the counter (time) value in the Client’s clock is running behind the server’s clock. So, the server can respond back with an error - maybe a 400 Bad request and a response header containing the latest server time. Now the clock can adjust itself to that time and reattempt the API call once more with the new time.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// This is a super toy version of what could happen in the Client</span></span><br><span class="line"><span class="comment">// I really badly want to get away with code instead of diagrams to explain this</span></span><br><span class="line"><span class="comment">// You will now have to excuse me for using `http.Get` and an unbounded recursive call here.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(c *Client)</span> <span class="title">Store</span><span class="params">(key, value <span class="keyword">string</span>)</span> <span class="params">(<span class="keyword">string</span>, error)</span></span> &#123;</span><br><span class="line">	resp, err := c.Get(</span><br><span class="line">		fmt.Sprintf(<span class="string">&quot;http://localhost:8080/put?key=%s&amp;value=%s,&amp;time=%d&quot;</span>,</span><br><span class="line">			key, value, c.clock.Time(),</span><br><span class="line">		))</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="string">&quot;&quot;</span>, err</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">defer</span> resp.Body.Close()</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> serverTime, err := strconv.ParseUint(resp.Header.Get(<span class="string">&quot;CLOCK_TIME&quot;</span>), <span class="number">10</span>, <span class="number">64</span>); err != <span class="literal">nil</span> &#123;</span><br><span class="line">		c.clock.Adjust(serverTime)</span><br><span class="line">		<span class="keyword">return</span> c.Store(key, value)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> resp.Status, <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>This <code>type Clock struct</code> that we have here is the logical clock. In fact, this was the first of its kind called the Lamport Clock [^7].</p>
+<p>There are other types of logical clocks that can be seen in the wild like vector clocks, hybrid logical clocks, etc. Something for us to explore!</p>
+<p>~ ~ ~ ~</p>
+<p>Hope you had a good time learning about time!</p>
+<p>[^1]:  <a target="_blank" rel="noopener" href="https://youtu.be/IjsJLTriLzs?si=qFhFtB1XfWkx1uBs">Clock Skew and Distributed Systems (Donny Nadolny, PagerDuty)</a><br>[^2]: <a target="_blank" rel="noopener" href="https://www.perplexity.ai/search/what-is-the-average-clock-skew-GWjRvNpYSbmRad_YHBswMg#0">What is the average clock skew when using NTP?</a><br>[^3]: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Quartz_clock">Quartz Clock</a><br>[^4]: <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Atomic_clock">Atomic Clock</a><br>[^5]: <a target="_blank" rel="noopener" href="https://www.ntp.org/ntpfaq/NTP-s-algo/#5111-what-is-a-reference-clock">NTP FAQ</a><br>[^6]: <a target="_blank" rel="noopener" href="https://www.cockroachlabs.com/blog/living-without-atomic-clocks/">Living without atomic clocks: Where CockroachDB and Spanner diverge</a><br>[^7]: Leslie Lamport. 1978. Time, clocks, and the ordering of events in a distributed system. Commun. ACM 21, 7 (July 1978), 558–565. <a target="_blank" rel="noopener" href="https://doi.org/10.1145/359545.359563">https://doi.org/10.1145/359545.359563</a></p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Clock-Skew"><span class="toc-number">1.</span> <span class="toc-text">Clock Skew</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NTP"><span class="toc-number">2.</span> <span class="toc-text">NTP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Reference-clocks"><span class="toc-number">3.</span> <span class="toc-text">Reference clocks</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Quartz-clock"><span class="toc-number">3.1.</span> <span class="toc-text">Quartz clock</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Atomic-clock"><span class="toc-number">3.2.</span> <span class="toc-text">Atomic clock</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Clock-bound"><span class="toc-number">4.</span> <span class="toc-text">Clock bound</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Causal-Ordering"><span class="toc-number">5.</span> <span class="toc-text">Causal Ordering</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Logical-clocks"><span class="toc-number">6.</span> <span class="toc-text">Logical clocks</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&text=Too many clocks at my home"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&title=Too many clocks at my home"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&is_video=false&description=Too many clocks at my home"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Too many clocks at my home&body=Check out this article: https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&title=Too many clocks at my home"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&title=Too many clocks at my home"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&title=Too many clocks at my home"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&title=Too many clocks at my home"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&name=Too many clocks at my home&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/too-many-clocks-at-my-home/&t=Too many clocks at my home"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+<!-- Cloudflare analytics -->
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3a998e7dd4534719a1186cd0b01043fc"}'></script>
+
+
+</body>
+</html>
