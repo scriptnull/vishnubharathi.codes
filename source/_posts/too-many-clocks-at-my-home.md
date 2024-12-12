@@ -52,7 +52,7 @@ Now you know how UTC is calculated! If you install NTP on your machines, it will
 
 Satellites (with atomic clocks installed on them) seem to be the ultimate reference clock. GPS receivers can get signals from these satellites about what time it is. NTP uses different levels of reference clocks and these levels are called startum. The atomic clock in the satellite is the stratum 0 which is the reference clock for stratum 1 and so on. [^5]
 
-### Clock bound
+## Clock bound
 
 We know that we can't trust our clocks anymore. Big giants like Google and AWS have been thinking about what they can do to improve the situation. As a result, they set up the fancy stratum 0 atomic clocks on satellites connected to their data center regions. Clock skew is inevitable, but with this fancy setup, they are able to achieve clock skews that are within certain bounds.
 
