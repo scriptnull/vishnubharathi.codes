@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="After many long years, I am trying to write a small web UI for a side project. It is going to be a single-page application that I would like to be served from my server written in Go. I was introduced">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Baking a React App into a Go server">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="After many long years, I am trying to write a small web UI for a side project. It is going to be a single-page application that I would like to be served from my server written in Go. I was introduced">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://github.com/user-attachments/assets/2fa7a78e-eeb1-4aaf-b969-01c38e044777">
+<meta property="og:image" content="https://github.com/user-attachments/assets/150ae840-d520-47e8-9e87-ddf01713614f">
+<meta property="article:published_time" content="2024-12-22T17:51:09.000Z">
+<meta property="article:modified_time" content="2024-12-22T17:52:33.132Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="go">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://github.com/user-attachments/assets/2fa7a78e-eeb1-4aaf-b969-01c38e044777">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Baking a React App into a Go server</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/too-many-clocks-at-my-home/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&text=Baking a React App into a Go server"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&title=Baking a React App into a Go server"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&is_video=false&description=Baking a React App into a Go server"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Baking a React App into a Go server&body=Check out this article: https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&title=Baking a React App into a Go server"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&title=Baking a React App into a Go server"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&title=Baking a React App into a Go server"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&title=Baking a React App into a Go server"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&name=Baking a React App into a Go server&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&t=Baking a React App into a Go server"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-serve"><span class="toc-number">1.</span> <span class="toc-text">Basic serve</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Searching-for-a-handler"><span class="toc-number">2.</span> <span class="toc-text">Searching for a handler</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-filesystem"><span class="toc-number">3.</span> <span class="toc-text">A filesystem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Baking"><span class="toc-number">4.</span> <span class="toc-text">Baking</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Traverse"><span class="toc-number">5.</span> <span class="toc-text">Traverse</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Compile-time"><span class="toc-number">6.</span> <span class="toc-text">Compile time</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Baking a React App into a Go server
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2024-12-22T17:51:09.000Z" itemprop="datePublished">2024-12-22</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/go/" rel="tag">go</a>, <a class="tag-link-link" href="/tags/programming/" rel="tag">programming</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>After many long years, I am trying to write a small web UI for a side project. It is going to be a single-page application that I would like to be served from my server written in Go. I was introduced to <a target="_blank" rel="noopener" href="https://vite.dev/">vite</a> which gave me a hello world <a target="_blank" rel="noopener" href="https://react.dev/">react</a> app that gave me web assets like</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">webapp&#x2F;</span><br><span class="line">├── dist</span><br><span class="line">│   ├── assets</span><br><span class="line">│   │   ├── index-n_ryQ3BS.css</span><br><span class="line">│   │   ├── index-uO412iEj.js</span><br><span class="line">│   │   └── react-CHdo91hT.svg</span><br><span class="line">│   ├── index.html</span><br><span class="line">│   └── vite.svg</span><br><span class="line">├── index.html</span><br></pre></td></tr></table></figure>
+<h2 id="Basic-serve"><a href="#Basic-serve" class="headerlink" title="Basic serve"></a>Basic serve</h2><p>In order to serve that app from my Go server, I would initialize it to be a go package that exposes a web server that serves it. That means creating <code>webapp/webapp.go</code> in our vite project.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> webapp</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;net/http&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Server <span class="keyword">struct</span> &#123;</span><br><span class="line">	*http.Server</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">New</span><span class="params">(addr <span class="keyword">string</span>)</span> *<span class="title">Server</span></span> &#123;</span><br><span class="line">	routes := http.NewServeMux()</span><br><span class="line"></span><br><span class="line">	routes.HandleFunc(<span class="string">&quot;/&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</span><br><span class="line">		fmt.Fprintln(w, <span class="string">&quot;TODO&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> &amp;Server&#123;</span><br><span class="line">		Server: &amp;http.Server&#123;</span><br><span class="line">			Addr:    addr,</span><br><span class="line">			Handler: routes,</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Now our react app is also a Go package which could be consumed from other packages like this</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">webServer := webapp.New(webServerAddr)</span><br><span class="line"><span class="keyword">if</span> err := webServer.ListenAndServe(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">	log.Fatalln(<span class="string">&quot;Error starting web server&quot;</span>, err)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Searching-for-a-handler"><a href="#Searching-for-a-handler" class="headerlink" title="Searching for a handler"></a>Searching for a handler</h2><p>We would like to serve whatever is in our  <code>dist</code> folder when someone hits our web server. So I searched if there were any such handlers and found two such functions in the standard library.  So that we could register the handler in our <code>routes</code> ServeMux.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">FileServer</span><span class="params">(root FileSystem)</span> <span class="title">Handler</span></span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">FileServerFS</span><span class="params">(root fs.FS)</span> <span class="title">Handler</span></span></span><br></pre></td></tr></table></figure>
+<p>The difference between them is their arguments. <code>FileSystem</code> is part of the <code>net/http</code> library and I found this note about it in the comments:</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// This interface predates the [fs.FS] interface, which can be used instead:</span></span><br><span class="line"><span class="comment">// the [FS] adapter function converts an fs.FS to a FileSystem.</span></span><br><span class="line"><span class="keyword">type</span> FileSystem <span class="keyword">interface</span> &#123;</span><br><span class="line">	Open(name <span class="keyword">string</span>) (File, error)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>So it is a deprecated interface in favor of a new interface. That leaves us with <code>fs.FS</code>.</p>
+<p>It seems like <code>fs.FS</code> is an interface that represents a file system and is present in the <a target="_blank" rel="noopener" href="https://pkg.go.dev/io/fs">io/fs package</a>. I remember that they introduced the <code>io</code> package in the standard library to deprecate the <code>ioutil</code> package and this should have been a sweet addition that came with it?<br>;<br>Anyway, we will choose <code>FileServerFS</code> now.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">routes.Handle(&quot;&#x2F;&quot;, http.FileServerFS(????))</span><br></pre></td></tr></table></figure>
+<h2 id="A-filesystem"><a href="#A-filesystem" class="headerlink" title="A filesystem"></a>A filesystem</h2><p>So we need a filesystem that we can give to our <code>http.FileServerFS()</code> method. I searched through the possible implementations of <code>fs.FS</code> interface and the first one that I was able to surface is <code>os.DirFS</code>.</p>
+<p>It is a function that gives <code>fs.FS</code> based on the contents of a file system directory.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">routes.Handle(&quot;&#x2F;&quot;, http.FileServerFS(os.DirFS(&quot;&#x2F;home&#x2F;vishnu&#x2F;pers&#x2F;gokakashi&#x2F;webapp&#x2F;dist&quot;)))</span><br></pre></td></tr></table></figure>
+<p>The problem with this approach is, that we will hit troubles when we ship our server to a machine on the internet. Now, someone has to take care of creating <code>/home/vishnu/pers/gokakashi/webapp/dist</code> on the server machine or point to a directory that contains our web app’s assets. That becomes messy, right?</p>
+<p>What I would ideally want is to embed all my HTML, CSS, JS files inside our go server binary itself. That way we ship only the binary and it will be able to serve the web app.</p>
+<h2 id="Baking"><a href="#Baking" class="headerlink" title="Baking"></a>Baking</h2><p>I have heard of the <code>embed</code> package which could be used for embedding files inside the go binary. There is <code>embed.FS</code> which satisfied <code>fs.FS</code> interface. So we could probably use it to bake in our assets.</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//go:embed dist</span></span><br><span class="line"><span class="keyword">var</span> WebAssets embed.FS</span><br></pre></td></tr></table></figure>
+<p>We make use of it like<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">routes.Handle(&quot;&#x2F;&quot;, http.FileServerFS(WebAssets))</span><br></pre></td></tr></table></figure><br>This renders:<br><img src="https://github.com/user-attachments/assets/2fa7a78e-eeb1-4aaf-b969-01c38e044777" alt="image"></p>
+<p>(not quite, what we want) Instead of embedding what is inside dist folder, we have embedded the <code>dist</code> folder itself. To inspect what got embedded, we could use the <code>go list</code> command like this:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ go list -f &#39;&#123;&#123;.EmbedFiles&#125;&#125;&#39; .</span><br><span class="line">[dist&#x2F;assets&#x2F;index-n_ryQ3BS.css dist&#x2F;assets&#x2F;index-uO412iEj.js dist&#x2F;assets&#x2F;react-CHdo91hT.svg dist&#x2F;index.html dist&#x2F;vite.svg]</span><br></pre></td></tr></table></figure>
+<p>I tried doing <code>//go:embed dist/*</code> instead of <code>//go:embed dist</code>, that didn’t help as well because (from Go docs)</p>
+<blockquote>
+<p>The difference is that ‘image/*’ embeds ‘image/.tempfile’ while ‘image’ does not. Neither embeds ‘image/dir/.tempfile’.</p>
+</blockquote>
+<p>If I used <code>//go:embed dist/index.html</code>, then the file seems to be still embedded with the <code>dist</code> folder.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ go list -f &#39;&#123;&#123;.EmbedFiles&#125;&#125;&#39; .</span><br><span class="line">[dist&#x2F;index.html]</span><br></pre></td></tr></table></figure><br>I was wondering if there is a way to embed the contents of <code>dist</code> at the root of the FS instead of the FS directory. There seems to be no provision in the <code>embed</code> package to do it. Because it operates at a package level, and it would force us to declare <code>dist</code> as a separate go package and would force us to remove <code>dist</code> folder from <code>.gitignore</code>. That would be messy.</p>
+<h2 id="Traverse"><a href="#Traverse" class="headerlink" title="Traverse"></a>Traverse</h2><p>We know that we can’t change the root of the file system, but what if we traverse to a folder and get an <code>fs.FS</code> representation that projects the selected directory as the root? I suspected that there might be method to help with that in the <code>io/fs</code> package.</p>
+<p>yep, look what I discovered:<br><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Sub returns an FS corresponding to the subtree rooted at fsys&#x27;s dir.</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Sub</span><span class="params">(fsys FS, dir <span class="keyword">string</span>)</span> <span class="params">(FS, error)</span></span></span><br></pre></td></tr></table></figure><br>Now, we just make use of it like this</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//go:embed dist</span></span><br><span class="line"><span class="keyword">var</span> WebAssets embed.FS</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">New</span><span class="params">(addr <span class="keyword">string</span>)</span> <span class="params">(*Server, error)</span></span> &#123;</span><br><span class="line">	routes := http.NewServeMux()</span><br><span class="line"></span><br><span class="line">	reactApp, err := fs.Sub(WebAssets, <span class="string">&quot;dist&quot;</span>)</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		<span class="keyword">return</span> <span class="literal">nil</span>, fmt.Errorf(<span class="string">&quot;error finding the dist folder: %w&quot;</span>, err)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	routes.Handle(<span class="string">&quot;/&quot;</span>, http.FileServerFS(reactApp))</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> &amp;Server&#123;</span><br><span class="line">		Server: &amp;http.Server&#123;</span><br><span class="line">			Addr:    addr,</span><br><span class="line">			Handler: routes,</span><br><span class="line">		&#125;,</span><br><span class="line">	&#125;, <span class="literal">nil</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>And boom!</p>
+<p><img src="https://github.com/user-attachments/assets/150ae840-d520-47e8-9e87-ddf01713614f" alt="Screenshot from 2024-12-21 12-48-57"></p>
+<h2 id="Compile-time"><a href="#Compile-time" class="headerlink" title="Compile time"></a>Compile time</h2><p>The <code>//go:embed dist</code> directive is evaluated during compile time. So when you run <code>go build</code>, the compiler looks for a <code>dist</code> folder and bakes it in the binary.</p>
+<p>Let us say we miss generating the <code>dist</code> folder (maybe we failed running <code>npm run build</code>), that would lead to a compile-time error<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ go build </span><br><span class="line">webapp&#x2F;webapp.go:14:12: pattern dist: no matching files found</span><br></pre></td></tr></table></figure><br>This way we get the guarantee that no one is able to build our Go app without building the frontend that is intended to be embedded in it.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-serve"><span class="toc-number">1.</span> <span class="toc-text">Basic serve</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Searching-for-a-handler"><span class="toc-number">2.</span> <span class="toc-text">Searching for a handler</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#A-filesystem"><span class="toc-number">3.</span> <span class="toc-text">A filesystem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Baking"><span class="toc-number">4.</span> <span class="toc-text">Baking</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Traverse"><span class="toc-number">5.</span> <span class="toc-text">Traverse</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Compile-time"><span class="toc-number">6.</span> <span class="toc-text">Compile time</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&text=Baking a React App into a Go server"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&title=Baking a React App into a Go server"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&is_video=false&description=Baking a React App into a Go server"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Baking a React App into a Go server&body=Check out this article: https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&title=Baking a React App into a Go server"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&title=Baking a React App into a Go server"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&title=Baking a React App into a Go server"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&title=Baking a React App into a Go server"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&name=Baking a React App into a Go server&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/baking-a-react-app-into-a-go-server/&t=Baking a React App into a Go server"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">Home</a></li>
+        
+    <li><a href="/archives/">Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+<!-- Cloudflare analytics -->
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3a998e7dd4534719a1186cd0b01043fc"}'></script>
+
+
+</body>
+</html>
