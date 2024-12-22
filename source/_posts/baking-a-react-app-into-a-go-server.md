@@ -84,7 +84,7 @@ It seems like `fs.FS` is an interface that represents a file system and is prese
 
 Anyway, we will choose `FileServerFS` now.
 
-```
+```go
 routes.Handle("/", http.FileServerFS(????))
 ```
 
@@ -94,7 +94,7 @@ So we need a filesystem that we can give to our `http.FileServerFS()` method. I 
 
 It is a function that gives `fs.FS` based on the contents of a file system directory.
 
-```
+```go
 routes.Handle("/", http.FileServerFS(os.DirFS("/home/vishnu/pers/gokakashi/webapp/dist")))
 ```
 
@@ -113,7 +113,7 @@ var WebAssets embed.FS
 
 We make use of it like
 
-```
+```go
 routes.Handle("/", http.FileServerFS(WebAssets))
 ```
 
