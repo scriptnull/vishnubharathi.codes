@@ -81,7 +81,7 @@ type FileSystem interface {
 So it is a deprecated interface in favor of a new interface. That leaves us with `fs.FS`.
 
 It seems like `fs.FS` is an interface that represents a file system and is present in the [io/fs package](https://pkg.go.dev/io/fs). I remember that they introduced the `io` package in the standard library to deprecate the `ioutil` package and this should have been a sweet addition that came with it?
-;
+
 Anyway, we will choose `FileServerFS` now.
 
 ```
@@ -102,7 +102,6 @@ The problem with this approach is, that we will hit troubles when we ship our se
 
 What I would ideally want is to embed all my HTML, CSS, JS files inside our go server binary itself. That way we ship only the binary and it will be able to serve the web app.
 
-
 ## Baking
 
 I have heard of the `embed` package which could be used for embedding files inside the go binary. There is `embed.FS` which satisfied `fs.FS` interface. So we could probably use it to bake in our assets.
@@ -113,6 +112,7 @@ var WebAssets embed.FS
 ```
 
 We make use of it like
+
 ```
 routes.Handle("/", http.FileServerFS(WebAssets))
 ```
@@ -132,6 +132,7 @@ I tried doing `//go:embed dist/*` instead of `//go:embed dist`, that didn't help
 > The difference is that ‘image/*’ embeds ‘image/.tempfile’ while ‘image’ does not. Neither embeds ‘image/dir/.tempfile’.
 
 If I used `//go:embed dist/index.html`, then the file seems to be still embedded with the `dist` folder.
+
 ```
 $ go list -f '{{.EmbedFiles}}' .
 [dist/index.html]
@@ -144,6 +145,7 @@ I was wondering if there is a way to embed the contents of `dist` at the root of
 We know that we can't change the root of the file system, but what if we traverse to a folder and get an `fs.FS` representation that projects the selected directory as the root? I suspected that there might be method to help with that in the `io/fs` package.
 
 yep, look what I discovered:
+
 ```go
 // Sub returns an FS corresponding to the subtree rooted at fsys's dir.
 func Sub(fsys FS, dir string) (FS, error)
@@ -183,6 +185,7 @@ And boom!
 The `//go:embed dist` directive is evaluated during compile time. So when you run `go build`, the compiler looks for a `dist` folder and bakes it in the binary.
 
 Let us say we miss generating the `dist` folder (maybe we failed running `npm run build`), that would lead to a compile-time error
+
 ```
 $ go build 
 webapp/webapp.go:14:12: pattern dist: no matching files found
