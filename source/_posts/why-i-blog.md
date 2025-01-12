@@ -8,7 +8,7 @@ It has been almost a decade since I started blogging. I have written a total of 
 
 ## Paying it forward
 
-When I was in college, I was trying to learn node.js. None of my teachers or college friends had heard about it. It was so new. I was trying to build a chat app and came across a YouTube video where Ryan Dahl was giving an introduction to node (probably [this video](https://youtu.be/jo_B4LTHi3I?si=XvOgK4zagvA4pr-G)). From that point onward, I tuned into a lot of blog posts on the internet to learn and build stuff. The same thing happened with Angular.js or whatever new technology I was trying to learn in college.
+When I was in college, I was trying to learn node.js. None of my teachers or college friends had heard about it. It was so new. I was trying to build a chat app and came across a YouTube video where Ryan Dahl was giving an introduction to node (probably [this video](https://youtu.be/jo_B4LTHi3I?si=XvOgK4zagvA4pr-G)). I read a lot of random blog posts about node.js and built stuff with the help of it. The same thing happened with Angular.js or whatever new technology I was trying to learn in college.
 
 The best way to learn was by watching conference videos and reading blog posts. I have used this formula to date. [You can learn anything!](https://youtu.be/JC82Il2cjqA?si=dCmJzID8_xUIN578)
 
@@ -16,7 +16,7 @@ I see sharing what I learn or know here as a way of paying it forward. That is t
 
 ## Like a Journal
 
-I used to write blog posts of title "log x = y" which used to be a weekly round-up of some things that I learnt during the week. So in a way I have used this blog as a journal of things that I learned.
+I used to write blog posts titled "log x = y" which used to be a weekly round-up of some things that I learned during the week. So in a way, I have used this blog as a journal of things that I learned.
 
 I don't always look back at my journal, but when I do I find some little things that make me smile. I moved away from this format because I want to get into writing in-depth posts on a particular topic.
 
@@ -48,7 +48,7 @@ In my case, the access to those blog posts which were free and open empowered me
 
 I _really_ _really_ want to write blog posts that are timeless. I believe I have written a few such posts in this blog (I will leave it as a reader's exercise to identify those posts 😅)
 
-You can find many technical blog posts in this blog but the problem is that tech can become out-dated (but I still want to write them because they serve a different purpose).
+You can find many technical blog posts in this blog but the problem is that tech can become outdated (but I still want to write them because they serve a different purpose).
 
 My main motivation for continuing to contribute to this blog is to capture and create timeless wisdom. I see it as a kind of wealth.
 
