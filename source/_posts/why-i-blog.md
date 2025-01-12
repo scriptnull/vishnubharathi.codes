@@ -10,7 +10,7 @@ It has been almost a decade since I started blogging. I have written a total of 
 
 When I was in college, I was trying to learn node.js. None of my teachers or college friends had heard about it. It was so new. I was trying to build a chat app and came across a YouTube video where Ryan Dahl was giving an introduction to node (probably [this video](https://youtu.be/jo_B4LTHi3I?si=XvOgK4zagvA4pr-G)). I read a lot of random blog posts about node.js and built stuff with the help of it. The same thing happened with Angular.js or whatever new technology I was trying to learn in college.
 
-The best way to learn was by watching conference videos and reading blog posts. I have used this formula to date. [You can learn anything!](https://youtu.be/JC82Il2cjqA?si=dCmJzID8_xUIN578)
+The best way to learn was by watching conference videos and reading blog posts. I have used this formula to date. Trust me, [You can learn anything this way!](https://youtu.be/JC82Il2cjqA?si=dCmJzID8_xUIN578)
 
 I see sharing what I learn or know here as a way of paying it forward. That is the least that I can do in exchange for what I got.
 
