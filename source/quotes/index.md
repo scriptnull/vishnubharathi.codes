@@ -5,6 +5,23 @@ date: 2018-09-22 03:24:44
 
 Some words that inspire and help me.
 
+
+---
+
+> Having a clear structure to work in is completely different from making plans about something. If you make a plan, you impose a structure on yourself; it makes you inflexible. To keep going according to plan, you have to push yourself and employ willpower. This is not only demotivating, but also unsustainable for an open-ended process like research, thinking, or studying in general, where we have to adjust our next steps with every new insight, understanding or achievement - which we ideally have on a regular basis and not just as an exception.
+
+By: Sönke Ahrens
+
+Source: [How to take smart notes](https://www.soenkeahrens.de/en/takesmartnotes)
+
+---
+
+> One cannot think without writing
+
+By: Niklas Luhmann
+
+Source: [How to take smart notes](https://www.soenkeahrens.de/en/takesmartnotes)
+
 ---
 
 > Decide before the race the conditions that will cause you to stop and drop out. You don't want to be out there saying, "Well gee, my leg hurts, I'm a little dehydrated, I'm sleepy, I'm tired, and it's cold and windy." And talk yourself into quitting. If you are making a decision based on how you feel at the moment, you will probably make the wrong decision. - Ultramarathoner Dick Collins.
