@@ -46,7 +46,7 @@ I learned this from this [video](https://www.youtube.com/watch?v=apWjoXCxDcg). H
 
 He likes ripping off pages from the notebook, and reading the notes by keeping the ripped-off pages side-by-side. He crumbles the pages and throws them out once he is done.
 
-He seems to finish off one notebook within 2 or 3 weeks. That is a notebook of 100 pages. That is like $100 / (3*7) = 4.7$ which is close enough to Niklas Luhmann (The creator of [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten)). Luhmann took 6 notes per day approx [^1]. Tell me the number of notes that you took in the last day/month/year, I will tell you the number of things you learned. To give an idea, Luhmann took 90,000 notes in his lifetime that helped him produce 58 books and hundreds of articles. So if you are running low on the amount of notes that you take per day/month/year, you will certainly need to retrospect your learning process.
+He seems to finish off one notebook within 2 or 3 weeks. That is a notebook of 100 pages. That is like 100 / (3*7) = 4.7 which is close enough to Niklas Luhmann (The creator of [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten)). Luhmann took 6 notes per day approx [^1]. Tell me the number of notes that you took in the last day/month/year, I will tell you the number of things you learned. To give an idea, Luhmann took 90,000 notes in his lifetime that helped him produce 58 books and hundreds of articles. So if you are running low on the amount of notes that you take per day/month/year, you will certainly need to retrospect your learning process.
 
 One of the big mindset shifts that I had in Altman's technique was "you have to tear pages off from your notebook" which is against the conventional note-taking technique that I have tried in school days: "Write something in your notebook and preserve those pages forever like it is history". That is how you will end up with a pile of notebooks that go unnoticed and thrown away as time progresses.
 
@@ -80,7 +80,7 @@ Let us go back to where we started: [the butterfly site post](https://bsky.app/p
 
 It is a snapshot of the Obsidian graph. If you haven't heard of Obsidian before, I don't want to steal the joy of learning what Obsidian is from you. So I will not talk about it in detail here. I encourage you to [see for yourself](https://obsidian.md/)! Besides I might do a post just about it at some point in the future.
 
-But here is what you need to know. It is a note-taking app. You can implement Zettelkasten with it. You get an awesome graph view - a great dopamine hit every time you watch it. Here is what my graph looks like after 45 days of using it:
+But here is what you need to know. It is a note-taking app. You can implement Zettelkasten with it. You get an awesome graph view - a great dopamine hit every time you watch it. Here is what my graph looks like after 35 days of using it:
 
 ![](/images/bbe530dcc2929d6b4b4e2aeeb19b4a78.png)
 
