@@ -5,6 +5,101 @@ date: 2018-09-22 03:24:44
 
 Some words that inspire and help me.
 
+---
+
+> "When you point to another, notice how many fingers are pointing back to yourself" - Jamaican proverb
+
+By: Seth Kopald
+
+Source: [Self-led](https://www.goodreads.com/book/show/202559882-self-led)
+
+---
+
+> May the self be with you
+
+By: Richard Schwart
+
+Source: [Self-led](https://www.goodreads.com/book/show/202559882-self-led)
+
+---
+
+> Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something
+
+By: Steve Jobs
+
+Source: [How to take smart notes](https://www.soenkeahrens.de/en/takesmartnotes)
+
+---
+
+> The principle is that you must not fool yourself, and you are the easiest person to fool
+
+By: Richard Feynman
+
+Source: [How to take smart notes](https://www.soenkeahrens.de/en/takesmartnotes)
+
+---
+
+> If you can't say it clearly, you don't understand it yourself
+
+By: John Searle
+
+Source: [How to take smart notes](https://www.soenkeahrens.de/en/takesmartnotes)
+
+---
+
+> "Have the courage to use your own understanding", is therefore the motto of the Enlightenment
+
+By: Immanuel Kant
+
+Source: [How to take smart notes](https://www.soenkeahrens.de/en/takesmartnotes)
+
+---
+
+> Chess players, for example, seem to think less than beginners. Rather, they see patterns and let themselves be guided by their experience rather ran attempt to calculate turns far into the future.
+
+By: Sönke Ahrens
+
+Source: [How to take smart notes](https://www.soenkeahrens.de/en/takesmartnotes)
+
+---
+
+> Plans are worthless, but planning is everything
+
+By: Dwight D. Eisenhower
+
+Source: [API Security](https://www.oreilly.com/library/view/api-security-in/9781617296024/)
+
+---
+
+> "All power is within you. You can do anything and everything.... Call upon the sleeping soul and see how it awakens" - Swami Vivekananda
+
+By: Pravrajika Divyanandaprana
+
+Source: [Youtube](https://www.youtube.com/shorts/f_t9y06Ur8w)
+
+---
+
+> "In a gentle way, you can shake the world." - M.K.Gandhi
+
+By: Susan Cain
+
+Source: [A field guide for introverts: How to thrive at work without changing who you are](https://open.spotify.com/episode/7eTRYTQHq4In2VqJbSYGjv?si=bbbfe77db2f6471c)
+
+---
+
+> Build something you want, for you, and people around you, else it's hard to really care about it, when nobody else does
+
+By: Aravind Srinivas
+
+Source: [How AI Will Answer Questions We Haven’t Thought to Ask](https://www.youtube.com/watch?v=MD4W_e3dJPs)
+
+---
+
+> Socrates, the Greek philosopher is famous for saying that wisdom comes from realizing how little we know or progress can be only made by asking better questions
+
+By: Aravind Srinivas
+
+Source: [How AI Will Answer Questions We Haven’t Thought to Ask](https://www.youtube.com/watch?v=MD4W_e3dJPs)
 
 ---
 
