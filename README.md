@@ -13,10 +13,10 @@ This website is deployed via Github Actions. To start an automated deployment fo
 Following instructions apply for local development environment (which could be used for things like patching the theme etc.)
 
 - Install node.js and npm - https://nodejs.org/en/
-- Install hexo-cli
-    ```bash
-    npm install -g hexo-cli
-    ```
-- clone the [theme](https://github.com/scriptnull/hexo-theme-cactus) to themes/cactus folder
-- Make changes and run `hexo generate && hexo server`. Visit http://localhost:4000
+- Run `npm i`.
+- clone the [theme](https://github.com/scriptnull/hexo-theme-cactus) to themes/cactus folder.
+  ```sh
+  git clone git@github.com:scriptnull/hexo-theme-cactus.git
+  ```
+- Make changes and run `npm run dev`. Visit http://localhost:4000
 - To publish all the work, run `./package.sh`. git commit and push to this repository.
