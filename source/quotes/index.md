@@ -7,9 +7,57 @@ Some words that inspire and help me.
 
 ---
 
+> What stands in the way becomes the way.
+
+By: Marcus Aurelius
+
+Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
+> The happiest people don't necessarily have the best of everything, but they make the most of everything
+
+By: Sam Cawthorn
+
+Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
+> If you know the why, you can live anyhow
+
+By: Friedrich Nietzsche
+
+Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
+> You can't change the people around you, but you can change the people around you.
+
+By: Joshua Fields Millburn
+
+Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
+> God, grant me the serenity to accept the things I cannot change; courage to change the things I can; and wisdom to know the difference
+
+By: Reinhold Niebuhr
+
+Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
+> In the end, it's not the years in your life that count, it's life in your years
+
+By: Abraham Lincoln
+
+Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
 > There are naive questions, tedious questions, ill-phrased questions, questions put after inadequate self-criticism. But every question is a cry to understand the world. There is no such thing as dumb questions.
 
- By: Carl sagan
+ By: Carl Sagan
 
  Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
 
