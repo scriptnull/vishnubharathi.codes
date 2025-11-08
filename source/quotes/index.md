@@ -7,6 +7,86 @@ Some words that inspire and help me.
 
 ---
 
+> I have learned a deep respect for one of Goethe's couplets: "whatever you can do, or dream you can, begin it. Boldness has genius, magic, and power in it. Begin it now."
+
+By: W.H. Murray
+
+Source: The Scottish Himalayan Expedition
+
+---
+
+> The Professional cannot allow the actions of others to define his reality. Tomorrow morning, the critic will be gone, but the writer will still be there facing the blank page.
+
+By: Steven Pressfield
+
+Source: [The War of Art](https://www.goodreads.com/book/show/1319.The_War_of_Art)
+
+---
+
+> Technically, the professional takes money. Technically pro plays for pay. But in the end, he does it for love.
+
+By: Steven Pressfield
+
+Source: [The War of Art](https://www.goodreads.com/book/show/1319.The_War_of_Art) 
+
+---
+
+> Bad times are good times to prepare for better times.
+
+By: Ruskin Bond
+
+Source: [A Little Book of Life](https://www.goodreads.com/book/show/17172479-a-little-book-of-life)
+
+---
+
+> Set your life on fire and seek those who fan your flames.
+
+By: Rumi
+
+Source: [Robin Arzón Masterclass](https://www.masterclass.com/classes/robin-arzon-teaches-mental-strength)
+
+---
+
+> You cannot control when life knocks you down. But you can control when to get back up.
+
+By: Mr. Han
+
+Source: Karate Kid Legends
+
+---
+
+> No problem can be solved from the same level of consciousness that created it.
+
+By: Albert Einstein
+
+Source: [Power of Mindset Masterclass](https://www.masterclass.com/classes/power-of-mindse)
+
+---
+
+> If you fail to plan, you are planning to fail.
+
+By: Benjamin Franklin
+
+Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
+> There is a crack in everything. That's how the light gets in
+
+By: Leonard Cohen
+
+Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
+> I shall either find a way or make one.
+
+By: Hannibal Barca
+
+Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
 > What stands in the way becomes the way.
 
 By: Marcus Aurelius
@@ -23,7 +103,7 @@ Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
 
 ---
 
-> If you know the why, you can live anyhow
+> If you know the why, you can live any how
 
 By: Friedrich Nietzsche
 
