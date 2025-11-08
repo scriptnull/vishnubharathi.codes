@@ -7,6 +7,46 @@ Some words that inspire and help me.
 
 ---
 
+> There are naive questions, tedious questions, ill-phrased questions, questions put after inadequate self-criticism. But every question is a cry to understand the world. There is no such thing as dumb questions.
+
+ By: Carl sagan
+
+ Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
+> Mistakes are a great educator when one is honest enough to admit them and willing to learn from them
+
+By: Aleksandr Solzhenitsyn
+
+Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
+> We can do no great things; only small things with great love
+
+By: Mother Teresa
+
+Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
+> Eyes see only light, ears hear only sound, but a listening heart perceives meaning
+
+By: David Steindl-Rast
+
+Source: [The Bullet Journal Method](https://bulletjournal.com/pages/book)
+
+---
+
+> Non-violence is not a weapon of the weak. It is a weapon of the strongest and the bravest
+
+By: M.K.Gandhi
+
+Source: Unknown
+
+---
+
 > "When you point to another, notice how many fingers are pointing back to yourself" - Jamaican proverb
 
 By: Seth Kopald
