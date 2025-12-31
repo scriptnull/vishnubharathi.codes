@@ -6,13 +6,17 @@
 title: Vishnu Bharathi
 subtitle:
 description: >
-            👋 Hi, I am Vishnu Bharathi (aka `scriptnull` on the Internet).<br />
-            
-            💻 I currently work at [Hasura](https://hasura.io/) on infrastructure and tooling.<br />
-            
-            🛠️ Building developer tools and writing software libraries are my passion.<br />
-            
-            📚 In my free time, I like to read [books](/books), research papers, and blogs. I am always on the lookout for life lessons and [quotes](/quotes).<br /><br />
+  👋 Hi, I am Vishnu Bharathi (aka `scriptnull` on the Internet). <br />
+
+  💻 Work: Staff Engineer, [Hasura](https://hasura.io)/[PromptQL](https://promptql.io) - doing {infra, backend, tooling}.<br />
+
+  🇮🇳 Based out of `Bengaluru, India` but mostly the internet.<br />
+
+  ❤️‍🔥 I have a deep passion for developer tools, infra, [Go](https://go.dev), books, blogs, research papers, skateboarding, your CI setup.<br />
+
+  🔗 Hyperlinks (w/ ❤️): 🚢 [things I shipped](/ship), 🗨️ [quotes collection](/quotes), and 📚 [stack of books](/books).<br />
+
+  👯 Let's connect on <a href="mailto:vishnubharathi04@gmail.com"><i class="fas fa-envelope"></i></a>, [X](https://twitter.com/scriptnull), [🦋](https://bsky.app/profile/vishnubharathi.codes), <a href="https://github.com/scriptnull"><i class="fab fa-github"></i></a>, and <a href="https://linkedin.com/in/scriptnull"><i class="fab fa-linkedin"></i></a>.
 keywords:
 author: Vishnu Bharathi
 language: en
@@ -57,7 +61,7 @@ future: true
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
 
@@ -88,23 +92,10 @@ theme_config:
   colorscheme: white
   tags_overview: true
   nav:
-    home: /
-    Blog: /archives/
-  social_links:
-    mail: mailto:vishnubharathi04@gmail.com
-    twitter: https://twitter.com/scriptnull
-    github: https://github.com/scriptnull
-    linkedin: https://linkedin.com/in/scriptnull
-    reddit: https://www.reddit.com/user/scriptnull
-    hacker-news: https://news.ycombinator.com/user?id=scriptnull
-    mastodon: https://recurse.social/@vishnu
-    instagram: https://www.instagram.com/vishnu.bharathi/
-    angellist: https://angel.co/scriptnull
-    pinterest-square: https://in.pinterest.com/scriptnull/
-    docker: https://hub.docker.com/u/scriptnull/
-    quora: https://www.quora.com/profile/Vishnu-Bharathi
-    telegram: http://telegram.me/scriptnull
-    
+    🏠 Home: /
+    ✏️ Blog: /archives/
+  social_links: null
+
   gravatar:
     email: vishnubharathi04@gmail.com
   logo:
