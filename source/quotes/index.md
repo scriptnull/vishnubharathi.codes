@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> You can fail at what you don't want. So you might as well take a chance on doing what you love.
+
+By: Jim Carrey
+
+Source: [The price of not choosing yourself](https://www.youtube.com/watch?v=RrOGQD4Z9A4)
+
+---
+
 > I have learned a deep respect for one of Goethe's couplets: "whatever you can do, or dream you can, begin it. Boldness has genius, magic, and power in it. Begin it now."
 
 By: W.H. Murray
