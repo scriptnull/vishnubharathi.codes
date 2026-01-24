@@ -1,5 +1,19 @@
 (Wish I started this page earlier. Now, I have to reconcile my years of work - lol)
 
+## Week 5, 2026
+(Jan 24 - Jan 30)
+- [Rho Reader](https://github.com/scriptnull/rho-reader):
+  - 🚢 Released [v0.3.0](https://github.com/scriptnull/rho-reader/releases/tag/v0.3.0). It contains:
+    - OPML Import UI
+    - Contextual status message
+    - Pulse animation for status bar indicator
+    - Bug fixes and tests.
+
+## Week 4, 2026
+(Jan 17 - Jan 23)
+- At Work:
+  - 🚢 Rolled out an optimization that speeds up the deployment of [Hasura/PromptQL connectors](https://hasura.io/connectors). It is 30% to 35% faster.
+
 ## Week 3, 2026
 (Jan 10 - Jan 16)
 - At Work:
