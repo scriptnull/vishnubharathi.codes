@@ -1,7 +1,29 @@
 (Wish I started this page earlier. Now, I have to reconcile my years of work - lol)
 
+Legend:
+- 🚢 emoji means "production" deployment.
+- `*` means current week.
+
+## Week 7, 2026*
+(Feb 7 - Feb 13)
+
+- At Work
+  - Continuing with [Supergraph](https://hasura.io/docs/3.0/project-configuration/supergraph/) build speed up experiement.
+  - 🚢 Rolled out infra changes to support my experiment.
+ 
+
+
+## Week 6, 2026
+(Jan 31 - Feb 6)
+- At Work
+  - Priority shifted and did experiments to improve [Supergraph](https://hasura.io/docs/3.0/project-configuration/supergraph/) build speeds.
+- [Rho Reader](https://github.com/scriptnull/rho-reader):
+  - 🤷 No ship.
+
 ## Week 5, 2026
 (Jan 24 - Jan 30)
+- At Work:
+  - Experimented with making [Hasura/PromptQL connector](https://hasura.io/connectors) deployments faster.
 - [Rho Reader](https://github.com/scriptnull/rho-reader):
   - 🚢 Released [v0.3.0](https://github.com/scriptnull/rho-reader/releases/tag/v0.3.0). It contains:
     - OPML Import UI
