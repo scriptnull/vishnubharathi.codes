@@ -4,13 +4,22 @@ Legend:
 - 🚢 emoji means "production" deployment.
 - `*` means current week.
 
-## Week 7, 2026*
+## Week 8, 2026*
+(Feb 14 - Feb 20)
+
+- At Work
+  - 🚧
+- [Rho Reader](https://github.com/scriptnull/rho-reader)
+  - 🚧
+
+## Week 7, 2026
 (Feb 7 - Feb 13)
 
 - At Work
   - Continuing with [Supergraph](https://hasura.io/docs/3.0/project-configuration/supergraph/) build speed up experiement.
   - 🚢 Rolled out infra changes to support my experiment.
- 
+- [Rho Reader](https://github.com/scriptnull/rho-reader):
+  - 🤷 No ship.
 
 
 ## Week 6, 2026
