@@ -10,7 +10,8 @@ Legend:
 - At Work
   - 🚧
 - [Rho Reader](https://github.com/scriptnull/rho-reader)
-  - 🚧
+  - 🚢 Release [v0.3.1](https://github.com/scriptnull/rho-reader/releases/tag/v0.3.1)
+    - Fixed a bug that has been bugging me for a while 😆
 
 ## Week 7, 2026
 (Feb 7 - Feb 13)
