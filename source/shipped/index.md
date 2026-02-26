@@ -4,13 +4,22 @@ Legend:
 - 🚢 emoji means "production" deployment.
 - `*` means current week.
 
-## Week 8, 2026*
+## Week 9, 2026*
+(Feb 21 - Feb 27)
+
+- At Work
+  - :construction:
+- [Rho Reader](https://github.com/scriptnull/rho-reader)
+  - :construction:
+
+
+## Week 8, 2026
 (Feb 14 - Feb 20)
 
 - At Work
-  - 🚧
+  - 🚢 Shipped a new API that helped to avoid 50-second latency in the user experience.
 - [Rho Reader](https://github.com/scriptnull/rho-reader)
-  - 🚢 Release [v0.3.1](https://github.com/scriptnull/rho-reader/releases/tag/v0.3.1)
+  - 🚢 Released [v0.3.1](https://github.com/scriptnull/rho-reader/releases/tag/v0.3.1)
     - Fixed a bug that has been bugging me for a while 😆
 
 ## Week 7, 2026
