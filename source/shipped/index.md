@@ -4,13 +4,24 @@ Legend:
 - 🚢 emoji means "production" deployment.
 - `*` means current week.
 
-## Week 9, 2026*
+## Week 10, 2026*
+(Feb 28 - Mar 6)
+
+- At Work
+  - 🚧
+- [Rho Reader](https://github.com/scriptnull/rho-reader)
+  - 🚧
+
+## Week 9, 2026
 (Feb 21 - Feb 27)
 
 - At Work
-  - :construction:
+  - 📲 On-call week.
+  - 😥 Caused an incident. Made mistakes while handling it. Came out strong with some lessons learned from this experience.
+  - 🚢 Shipped a few [connector](https://hasura.io/connectors) related changes to support the evolving [PromptQL](https://promptql.io) system.
+  - 🚢 Investigated and tweaked Kubernetes configs to enable seamless scale-up/down of a service.
 - [Rho Reader](https://github.com/scriptnull/rho-reader)
-  - :construction:
+  - 🤷 No ship.
 
 
 ## Week 8, 2026
