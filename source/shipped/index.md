@@ -4,13 +4,18 @@ Legend:
 - 🚢 emoji means "production" deployment.
 - `*` means current week.
 
-## Week 10, 2026*
+## Week 11, 2026*
 (Feb 28 - Mar 6)
 
 - At Work
   - 🚧
 - [Rho Reader](https://github.com/scriptnull/rho-reader)
   - 🚧
+
+## Week 10, 2026
+(Feb 28 - Mar 6)
+
+I was down with allergies for most of the week 🤒
 
 ## Week 9, 2026
 (Feb 21 - Feb 27)
