@@ -4,13 +4,19 @@ Legend:
 - 🚢 emoji means "production" deployment.
 - `*` means current week.
 
-## Week 11, 2026*
-(Feb 28 - Mar 6)
+## Week 12, 2026*
+(Mar 14 - Mar 20)
+
+TODO
+
+## Week 11, 2026
+(Mar 7 - Mar 13)
 
 - At Work
-  - 🚧
+  - 📲 On-call week.
+  - 🤹 Juggling between various items.
 - [Rho Reader](https://github.com/scriptnull/rho-reader)
-  - 🚧
+  - 🤷 No ship.
 
 ## Week 10, 2026
 (Feb 28 - Mar 6)
