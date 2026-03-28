@@ -4,10 +4,31 @@ Legend:
 - 🚢 emoji means "production" deployment.
 - `*` means current week.
 
-## Week 12, 2026*
+## Week 14, 2026*
+(Mar 28 - Apr 3)
+
+- At Work
+  - 🏗️ TBD
+- [Rho Reader](https://github.com/scriptnull/rho-reader)
+  - 🏗️ TBD
+
+## Week 13, 2026
+(Mar 21 - Mar 27)
+
+- At Work
+  - 🚢 Small backend change related to [PromptQL OLU Pricing](https://promptql.io/pricing).
+  - 🚢 Lint fixes needed for Go upgrade in multiple services.
+- [Rho Reader](https://github.com/scriptnull/rho-reader)
+  - ⏸️ No ship. Intentionally paused this project.
+
+## Week 12, 2026
 (Mar 14 - Mar 20)
 
-TODO
+- At Work
+  - 🚢 Shipped a UI change related to [PromptQL OLU Pricing](https://promptql.io/pricing).
+  - Went crazy with Claude Code. It helped me create 6 PRs to compare and contrast different UIs for the same functionality.
+- [Rho Reader](https://github.com/scriptnull/rho-reader)
+  - ⏸️ No ship. Intentionally paused this project.
 
 ## Week 11, 2026
 (Mar 7 - Mar 13)
@@ -16,7 +37,7 @@ TODO
   - 📲 On-call week.
   - 🤹 Juggling between various items.
 - [Rho Reader](https://github.com/scriptnull/rho-reader)
-  - 🤷 No ship.
+  - ⏸️ No ship. Intentionally paused this project.
 
 ## Week 10, 2026
 (Feb 28 - Mar 6)
