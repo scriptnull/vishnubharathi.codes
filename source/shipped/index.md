@@ -8,9 +8,9 @@ Legend:
 (Mar 28 - Apr 3)
 
 - At Work
-  - 🏗️ TBD
+  - 🚢 Helped with shipping the base billing system for [PromptQL](https://promptql.io).
 - [Rho Reader](https://github.com/scriptnull/rho-reader)
-  - 🏗️ TBD
+  - 🚢 Released [v0.4.0](https://github.com/scriptnull/rho-reader/releases/tag/v0.4.0). This is a chunky release with lot of features and fixes.
 
 ## Week 13, 2026
 (Mar 21 - Mar 27)
