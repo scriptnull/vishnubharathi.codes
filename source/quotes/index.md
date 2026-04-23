@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> The idea of being flexible, adaptable, and capable of moving quickly into a Plan B and a Plan C, it's a very useful asset in a career. You ahve to be willing to be humble enough to recognise that you don't control everything, but what you do control, you better do something about it.
+
+By: Ajay Banga
+
+Source: [The World Bank President On Why Jobs Fix Everything](https://www.youtube.com/watch?v=QdWHGjReLUo)
+
+---
+
 > You can fail at what you don't want. So you might as well take a chance on doing what you love.
 
 By: Jim Carrey
