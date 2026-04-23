@@ -7,7 +7,7 @@ Some words that inspire and help me.
 
 ---
 
-> The idea of being flexible, adaptable, and capable of moving quickly into a Plan B and a Plan C, it's a very useful asset in a career. You ahve to be willing to be humble enough to recognise that you don't control everything, but what you do control, you better do something about it.
+> The idea of being flexible, adaptable, and capable of moving quickly into a Plan B and a Plan C; it's a very useful asset in a career. You have to be willing to be humble enough to recognise that you don't control everything, but what you do control, you better do something about it.
 
 By: Ajay Banga
 
