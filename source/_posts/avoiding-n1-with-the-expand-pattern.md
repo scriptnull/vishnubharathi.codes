@@ -29,11 +29,45 @@ GET /v1/invoices/:invoice-id
 }
 ```
 
-You usually want to make another request for a field whose id is present in the response. Let us say we want the customer's email address. Then we end up making one more API call to get the full customer object.
+You usually want to make another request for a field whose ID is present in the response. Let us say we want the customer's email address. Then we end up making one more API call to get the full customer object.
+
+This does not look bad for a single invoice. But we usually list things.
+
+```http
+GET /v1/invoices
+```
+
+```json
+{
+  "object": "list",
+  "url": "/v1/invoices",
+  "has_more": false,
+  "data": [
+    {
+      "id": "in_1MtHbELkdIwHu7ixl4OzzPMv",
+      "object": "invoice",
+      "customer": "cus_NeZwdNtLEOXuvB",
+      "amount_due": 5000,
+      "currency": "usd",
+      "status": "open"
+    },
+    {
+      "id": "in_1NaB2cLkdIwHu7ix9Qe3FpzT",
+      "object": "invoice",
+      "customer": "cus_OpZ1aRtMFQYwxC",
+      "amount_due": 8200,
+      "currency": "usd",
+      "status": "open"
+    }
+  ]
+}
+```
+
+To show the customer's email for each invoice, we make one more call per invoice. List N invoices and we make N more calls - 1 for the list and N for the customers. That is the n+1 problem.
 
 ## Expand Pattern
 
-Stripe provides a param called [expand](https://docs.stripe.com/api/expanding_objects) for this on all APIs. You can use it to pass the
+Stripe provides a param called [expand](https://docs.stripe.com/api/expanding_objects) for this on most of its APIs. You can use it to pass the
 field names that you want to expand. That means you get the full object
 instead of just the object id.
 
@@ -58,6 +92,14 @@ GET /v1/invoices/:invoice-id?expand[]=customer
   "status": "open"
 }
 ```
+
+The same works on a list. Expand `data.customer` and every customer comes back inlined in that single call.
+
+```http
+GET /v1/invoices?expand[]=data.customer
+```
+
+No more N extra calls.
 
 ## GraphQL, when?
 
@@ -103,9 +145,9 @@ GET /v1/invoices/:invoice-id?expand[]=customer.default_source
 }
 ```
 
-However there is a limitation for how deep you can traverse - 4 levels. So, in an extreme use case, you end up making 1 API call instead of 4!
+However there is a limitation for how deep you can traverse - 4 levels. Still, a deeply nested fetch that would have been several round trips collapses into one call.
 
-There is no particular reason mentioned for picking 4 as the limit, but if we were to implement the expand pattern in our APIs, we can do something like this:
+There is no particular reason mentioned for picking 4 as the limit, but if we were to implement the expand pattern in our APIs, we can do something like this. We want a default max depth so a single request cannot fan out forever:
 
 ```
 Let T = number of tables
