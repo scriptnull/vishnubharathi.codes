@@ -77,15 +77,15 @@ Study existing posts in `source/_posts/` (e.g. `why-i-blog.md`, `short.md`,
 
 ## TODO markers
 
-Two special placeholders may appear in the author's writing:
+The author uses two placeholder markers while writing to flag things to be
+filled in during editing. Both are written by the author:
 
-- **TK** — a TODO for the author (Vishnu). Leave these in the post as-is; do
-  not fill them in or remove them. After writing the file, list any TK markers
-  you found so the author knows what still needs to be completed before
+- **TK** — a TODO the author will fill in themselves. Leave these in the post
+  as-is; do not fill them in or remove them. After writing the file, list any
+  TK markers you found so the author knows what still needs attention before
   publishing.
-- **TKAI** — a TODO for the coding assistant (you). When you see TKAI in the
-  draft, treat it as an instruction to fill in that section yourself. Replace
-  the TKAI marker with the requested content, applying the same voice-preservation
+- **TKAI** — a TODO for the coding assistant (you) to fill in. Replace the
+  TKAI marker with the requested content, applying the same voice-preservation
   rules as the rest of the post. Mention what you filled in when presenting
   the draft.
 
