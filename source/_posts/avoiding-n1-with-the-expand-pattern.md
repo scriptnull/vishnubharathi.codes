@@ -29,7 +29,7 @@ GET /v1/invoices/:invoice-id
 }
 ```
 
-You usually want to make another request for a field whose id is present in the response.
+You usually want to make another request for a field whose id is present in the response. Let us say we want the customer's email address. Then we end up making one more API call to get the full customer object.
 
 ## Expand Pattern
 
