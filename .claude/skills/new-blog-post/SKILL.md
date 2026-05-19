@@ -26,6 +26,20 @@ This is the most important constraint. The author's style is the product.
 Study existing posts in `source/_posts/` (e.g. `why-i-blog.md`, `short.md`,
 `rlwrap.md`) to internalize the voice before editing.
 
+## Post structure
+
+The author's preferred structure:
+
+- **Intro paragraph(s) first, no heading.** The post opens directly with prose —
+  no `##` or any heading above it. This introductory section sets the context or
+  hook before any sections begin.
+- **Headings for the rest.** Everything after the intro is organized with
+  Markdown headings (`##`, `###`, …) as the author sees fit.
+
+When editing or suggesting structure, respect this pattern. Do not add a heading
+above the opening paragraph(s), and do not collapse sections that the author has
+already headed.
+
 ## Workflow
 
 1. **Collect the writing.** The user types the post body free-form in the
