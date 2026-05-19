@@ -75,6 +75,20 @@ Study existing posts in `source/_posts/` (e.g. `why-i-blog.md`, `short.md`,
    merge/commit message starts with `[deploy]`, or they add a follow-up
    `[deploy]` commit). Do not publish for them unless explicitly asked.
 
+## TODO markers
+
+Two special placeholders may appear in the author's writing:
+
+- **TK** — a TODO for the author (Vishnu). Leave these in the post as-is; do
+  not fill them in or remove them. After writing the file, list any TK markers
+  you found so the author knows what still needs to be completed before
+  publishing.
+- **TKAI** — a TODO for the coding assistant (you). When you see TKAI in the
+  draft, treat it as an instruction to fill in that section yourself. Replace
+  the TKAI marker with the requested content, applying the same voice-preservation
+  rules as the rest of the post. Mention what you filled in when presenting
+  the draft.
+
 ## Notes
 
 - Drafts dir (`source/_drafts/`, `render_drafts: false`) exists but the chosen
