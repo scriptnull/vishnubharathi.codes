@@ -4,12 +4,9 @@ date: 2026-05-19 19:57:43
 tags: ["programming", "api-design"]
 ---
 
-You might have heard of the n+1 problem in API design. I have
-heavily relied on using GraphQL at work and have taken it for granted to avoid the
-problem.
+You might have heard of the n+1 problem in API design. I have heavily relied on using GraphQL and have taken it for granted to avoid the problem.
 
-Today, I came across a way to avoid it in REST APIs too while working with the
-[Stripe API](https://docs.stripe.com/api). I call this the Expand pattern which can be applied to any REST API that we might build to avoid the n+1 problem.
+Today, I came across a way to avoid it in REST APIs too while working with the [Stripe API](https://docs.stripe.com/api). I am naming this the Expand pattern (courtesy of Stripe API Developers). Take this pattern and implement in your REST APIs to avoid the n+1 problem.
 
 ## Problem
 
