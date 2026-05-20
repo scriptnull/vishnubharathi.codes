@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="You might have heard of the n+1 problem in API design. I have taken GraphQL for granted to avoid that problem in the past (and the present). Today, I came across a way to avoid it in REST APIs while w">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Avoiding n+1 with the expand pattern">
+<meta property="og:url" content="https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/index.html">
+<meta property="og:site_name" content="Vishnu Bharathi">
+<meta property="og:description" content="You might have heard of the n+1 problem in API design. I have taken GraphQL for granted to avoid that problem in the past (and the present). Today, I came across a way to avoid it in REST APIs while w">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-05-19T14:27:43.000Z">
+<meta property="article:modified_time" content="2026-05-20T03:45:23.291Z">
+<meta property="article:author" content="Vishnu Bharathi">
+<meta property="article:tag" content="programming">
+<meta property="article:tag" content="api-design">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=16">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=192" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.gravatar.com/avatar/261fb0f50b7dea501c807ac01f242343?s=180">
+          
+        
+    
+    <!-- title -->
+    <title>Avoiding n+1 with the expand pattern</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">🏠 Home</a></li>
+         
+          <li><a href="/archives/">✏️ Blog</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/blog/counting-zeros/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&text=Avoiding n+1 with the expand pattern"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&title=Avoiding n+1 with the expand pattern"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&is_video=false&description=Avoiding n+1 with the expand pattern"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Avoiding n+1 with the expand pattern&body=Check out this article: https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&title=Avoiding n+1 with the expand pattern"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&title=Avoiding n+1 with the expand pattern"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&title=Avoiding n+1 with the expand pattern"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&title=Avoiding n+1 with the expand pattern"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&name=Avoiding n+1 with the expand pattern&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&t=Avoiding n+1 with the expand pattern"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem"><span class="toc-number">1.</span> <span class="toc-text">Problem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Expand-Pattern"><span class="toc-number">2.</span> <span class="toc-text">Expand Pattern</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GraphQL-when"><span class="toc-number">3.</span> <span class="toc-text">GraphQL, when?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nested-Expand"><span class="toc-number">4.</span> <span class="toc-text">Nested Expand</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#No-worries"><span class="toc-number">5.</span> <span class="toc-text">No worries</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Avoiding n+1 with the expand pattern
+    </h1>
+
+
+
+    <div class="meta">
+      
+    <div class="postdate">
+      
+        <time datetime="2026-05-19T14:27:43.000Z" itemprop="datePublished">2026-05-19</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/api-design/" rel="tag">api-design</a>, <a class="tag-link-link" href="/tags/programming/" rel="tag">programming</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>You might have heard of the n+1 problem in API design. I have taken GraphQL for granted to avoid that problem in the past (and the present).</p>
+<p>Today, I came across a way to avoid it in REST APIs while working with the <a target="_blank" rel="noopener" href="https://docs.stripe.com/api">Stripe API</a>. I am naming this the Expand pattern (courtesy of Stripe API Developers). Take this pattern and implement it in your REST APIs to avoid the n+1 problem.</p>
+<h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><p>Let us look at a simple API call.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /v1/invoices/:invoice-id</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;in_1MtHbELkdIwHu7ixl4OzzPMv&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;object&quot;</span>: <span class="string">&quot;invoice&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;customer&quot;</span>: <span class="string">&quot;cus_NeZwdNtLEOXuvB&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;subscription&quot;</span>: <span class="string">&quot;sub_1MoGGTLkdIwHu7ixZkAA1J0n&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;payment_intent&quot;</span>: <span class="string">&quot;pi_3MtHbELkdIwHu7ix0rUOgsLj&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;amount_due&quot;</span>: <span class="number">5000</span>,</span><br><span class="line">  <span class="attr">&quot;currency&quot;</span>: <span class="string">&quot;usd&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;status&quot;</span>: <span class="string">&quot;open&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>You usually want to make another request for a field whose ID is present in the response. Let us say we want the customer’s email address. Then we end up making one more API call to get the full customer object.</p>
+<p>This does not look bad for a single invoice. But we usually list things.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /v1/invoices</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;object&quot;</span>: <span class="string">&quot;list&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;/v1/invoices&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;has_more&quot;</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">&quot;data&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;in_1MtHbELkdIwHu7ixl4OzzPMv&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;object&quot;</span>: <span class="string">&quot;invoice&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;customer&quot;</span>: <span class="string">&quot;cus_NeZwdNtLEOXuvB&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;amount_due&quot;</span>: <span class="number">5000</span>,</span><br><span class="line">      <span class="attr">&quot;currency&quot;</span>: <span class="string">&quot;usd&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;status&quot;</span>: <span class="string">&quot;open&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;in_1NaB2cLkdIwHu7ix9Qe3FpzT&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;object&quot;</span>: <span class="string">&quot;invoice&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;customer&quot;</span>: <span class="string">&quot;cus_OpZ1aRtMFQYwxC&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;amount_due&quot;</span>: <span class="number">8200</span>,</span><br><span class="line">      <span class="attr">&quot;currency&quot;</span>: <span class="string">&quot;usd&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;status&quot;</span>: <span class="string">&quot;open&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>To show the customer’s email for each invoice, we make one more call per invoice. List N invoices and we make N more calls - 1 for the list and N for the customers. That is the n+1 problem.</p>
+<h2 id="Expand-Pattern"><a href="#Expand-Pattern" class="headerlink" title="Expand Pattern"></a>Expand Pattern</h2><p>Stripe provides a param called <a target="_blank" rel="noopener" href="https://docs.stripe.com/api/expanding_objects">expand</a> for this on most of its APIs. You can use it to pass the field names that you want to expand. That means you get the full object instead of just the object id.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /v1/invoices/:invoice-id?expand[]=customer</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;in_1MtHbELkdIwHu7ixl4OzzPMv&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;object&quot;</span>: <span class="string">&quot;invoice&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;customer&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;cus_NeZwdNtLEOXuvB&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;object&quot;</span>: <span class="string">&quot;customer&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;email&quot;</span>: <span class="string">&quot;jenny.rosen@example.com&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Jenny Rosen&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;subscription&quot;</span>: <span class="string">&quot;sub_1MoGGTLkdIwHu7ixZkAA1J0n&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;payment_intent&quot;</span>: <span class="string">&quot;pi_3MtHbELkdIwHu7ix0rUOgsLj&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;amount_due&quot;</span>: <span class="number">5000</span>,</span><br><span class="line">  <span class="attr">&quot;currency&quot;</span>: <span class="string">&quot;usd&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;status&quot;</span>: <span class="string">&quot;open&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>The same works on a list. Expand <code>data.customer</code> and every customer comes back inlined in that single call.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /v1/invoices?expand[]=data.customer</span><br></pre></td></tr></table></figure>
+<p>No more N extra calls.</p>
+<h2 id="GraphQL-when"><a href="#GraphQL-when" class="headerlink" title="GraphQL, when?"></a>GraphQL, when?</h2><p>What if I only want the customer’s email and not the whole customer object?</p>
+<p>That doesn’t seem to be possible with expand. It returns all the fields of the expanded object.</p>
+<p>This is the place where we enter the GraphQL territory. GraphQL lets you pick exactly the fields you want. <code>expand</code> only saves you the extra round trip, not the over-fetching cost. But still a good win!</p>
+<h2 id="Nested-Expand"><a href="#Nested-Expand" class="headerlink" title="Nested Expand"></a>Nested Expand</h2><p>It seems like you can do nested expands in the Stripe API like this</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /v1/invoices/:invoice-id?expand[]=customer.default_source</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;in_1MtHbELkdIwHu7ixl4OzzPMv&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;object&quot;</span>: <span class="string">&quot;invoice&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;customer&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;cus_NeZwdNtLEOXuvB&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;object&quot;</span>: <span class="string">&quot;customer&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;email&quot;</span>: <span class="string">&quot;jenny.rosen@example.com&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Jenny Rosen&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;default_source&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;id&quot;</span>: <span class="string">&quot;card_1NLOFm2eZvKYlo2C8Z9k3K2L&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;object&quot;</span>: <span class="string">&quot;card&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;brand&quot;</span>: <span class="string">&quot;Visa&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;last4&quot;</span>: <span class="string">&quot;4242&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;exp_month&quot;</span>: <span class="number">8</span>,</span><br><span class="line">      <span class="attr">&quot;exp_year&quot;</span>: <span class="number">2026</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;subscription&quot;</span>: <span class="string">&quot;sub_1MoGGTLkdIwHu7ixZkAA1J0n&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;payment_intent&quot;</span>: <span class="string">&quot;pi_3MtHbELkdIwHu7ix0rUOgsLj&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;amount_due&quot;</span>: <span class="number">5000</span>,</span><br><span class="line">  <span class="attr">&quot;currency&quot;</span>: <span class="string">&quot;usd&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;status&quot;</span>: <span class="string">&quot;open&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>However, there is a limitation for how deep you can traverse - 4 levels. Still, a deeply nested fetch that would have been several round trips collapses into one call.</p>
+<p>There is no particular reason mentioned for picking 4 as the limit, but if we were to implement the expand pattern in our APIs, we can do something like this. We want a default max depth so a single request cannot fan out forever:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Let T &#x3D; number of tables</span><br><span class="line">Let D &#x3D; maximum depth of relations between your tables   (the optimal value)</span><br><span class="line">Let B &#x3D; a higher limit you pick for your app&#39;s use case &#x2F; bandwidth savings</span><br><span class="line"></span><br><span class="line">limit &#x3D; min(D, B),  where  limit &lt; T</span><br></pre></td></tr></table></figure>
+<h2 id="No-worries"><a href="#No-worries" class="headerlink" title="No worries"></a>No worries</h2><p>I think this pattern is useful to know about to avoid overthinking things, like “what if my app becomes a hit overnight and it’s doing a lot of n+1 calls”, “That won’t scale!” etc.</p>
+<p>I am never going to worry about anything like that while building new apps. Just focus on a solid REST API and do the expand pattern - That should give us good mileage.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">🏠 Home</a></li>
+         
+          <li><a href="/archives/">✏️ Blog</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Problem"><span class="toc-number">1.</span> <span class="toc-text">Problem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Expand-Pattern"><span class="toc-number">2.</span> <span class="toc-text">Expand Pattern</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GraphQL-when"><span class="toc-number">3.</span> <span class="toc-text">GraphQL, when?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nested-Expand"><span class="toc-number">4.</span> <span class="toc-text">Nested Expand</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#No-worries"><span class="toc-number">5.</span> <span class="toc-text">No worries</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&text=Avoiding n+1 with the expand pattern"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&title=Avoiding n+1 with the expand pattern"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&is_video=false&description=Avoiding n+1 with the expand pattern"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Avoiding n+1 with the expand pattern&body=Check out this article: https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&title=Avoiding n+1 with the expand pattern"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&title=Avoiding n+1 with the expand pattern"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&title=Avoiding n+1 with the expand pattern"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&title=Avoiding n+1 with the expand pattern"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&name=Avoiding n+1 with the expand pattern&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://vishnubharathi.codes/blog/avoiding-n1-with-the-expand-pattern/&t=Avoiding n+1 with the expand pattern"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+<div class="footer-left">
+<a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>
+</div>
+<div class="footer-right">
+<nav>
+<ul>
+
+    <li><a href="/">🏠 Home</a></li>
+        
+    <li><a href="/archives/">✏️ Blog</a></li>
+        
+    <li><a href="/atom.xml">Feed</a></li>
+    <li><a href="http://eepurl.com/gUCSRn" target="_blank" rel="noopener noreferrer">Subscribe</a></li>
+    <li><div class="rc-scout" style="height: 24px; width: 24px;"></div></li>
+</ul>
+</nav>
+</div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+<!-- clipboard -->
+
+  
+<script src="/lib/clipboard/clipboard.min.js"></script>
+
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="far fa-clone"></i>';
+    btn += '</span>'; 
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- Recurse Center -->
+<script async defer src="https://www.recurse-scout.com/loader.js?t=9c0d969e43d5103ee1c163128e870dc3"></script>
+<!-- Cloudflare analytics -->
+
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3a998e7dd4534719a1186cd0b01043fc"}'></script>
+
+
+</body>
+</html>
