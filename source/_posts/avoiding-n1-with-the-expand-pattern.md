@@ -4,9 +4,9 @@ date: 2026-05-19 19:57:43
 tags: ["programming", "api-design"]
 ---
 
-You might have heard of the n+1 problem in API design. I have heavily relied on using GraphQL and have taken it for granted to avoid the problem.
+You might have heard of the n+1 problem in API design. I have taken GraphQL for granted to avoid that problem in the past (and the present).
 
-Today, I came across a way to avoid it in REST APIs too while working with the [Stripe API](https://docs.stripe.com/api). I am naming this the Expand pattern (courtesy of Stripe API Developers). Take this pattern and implement in your REST APIs to avoid the n+1 problem.
+Today, I came across a way to avoid it in REST APIs while working with the [Stripe API](https://docs.stripe.com/api). I am naming this the Expand pattern (courtesy of Stripe API Developers). Take this pattern and implement it in your REST APIs to avoid the n+1 problem.
 
 ## Problem
 
@@ -67,9 +67,7 @@ To show the customer's email for each invoice, we make one more call per invoice
 
 ## Expand Pattern
 
-Stripe provides a param called [expand](https://docs.stripe.com/api/expanding_objects) for this on most of its APIs. You can use it to pass the
-field names that you want to expand. That means you get the full object
-instead of just the object id.
+Stripe provides a param called [expand](https://docs.stripe.com/api/expanding_objects) for this on most of its APIs. You can use it to pass the field names that you want to expand. That means you get the full object instead of just the object id.
 
 ```http
 GET /v1/invoices/:invoice-id?expand[]=customer
@@ -105,15 +103,13 @@ No more N extra calls.
 
 What if I only want the customer's email and not the whole customer object?
 
-That seems to be not possible with expand. It returns all the fields of the expanded object.
+That doesn't seem to be possible with expand. It returns all the fields of the expanded object.
 
-This is the place where we enter the
-GraphQL territory. GraphQL lets you pick exactly the fields you want. expand
-only saves you the extra round trip, not the over-fetching cost. But still a great win to rejoice!
+This is the place where we enter the GraphQL territory. GraphQL lets you pick exactly the fields you want. `expand` only saves you the extra round trip, not the over-fetching cost. But still a good win!
 
 ## Nested Expand
 
-It seems like you can do nested expands in Stripe API like this
+It seems like you can do nested expands in the Stripe API like this
 
 ```http
 GET /v1/invoices/:invoice-id?expand[]=customer.default_source
@@ -145,7 +141,7 @@ GET /v1/invoices/:invoice-id?expand[]=customer.default_source
 }
 ```
 
-However there is a limitation for how deep you can traverse - 4 levels. Still, a deeply nested fetch that would have been several round trips collapses into one call.
+However, there is a limitation for how deep you can traverse - 4 levels. Still, a deeply nested fetch that would have been several round trips collapses into one call.
 
 There is no particular reason mentioned for picking 4 as the limit, but if we were to implement the expand pattern in our APIs, we can do something like this. We want a default max depth so a single request cannot fan out forever:
 
@@ -159,4 +155,6 @@ limit = min(D, B),  where  limit < T
 
 ## No worries
 
-I think this pattern is useful to know about to avoid overthinking things like what if my app becomes a hit overnight and it's doing a lot of n+1 calls. That won't scale! I am never going to worry anything like that while building new apps from now on. Focus on solid REST API and do the expand pattern. That should give us a good mileage.
+I think this pattern is useful to know about to avoid overthinking things, like "what if my app becomes a hit overnight and it's doing a lot of n+1 calls", "That won't scale!" etc.
+
+I am never going to worry about anything like that while building new apps. Just focus on a solid REST API and do the expand pattern - That should give us good mileage.
