@@ -26,6 +26,20 @@ This is the most important constraint. The author's style is the product.
 Study existing posts in `source/_posts/` (e.g. `why-i-blog.md`, `short.md`,
 `rlwrap.md`) to internalize the voice before editing.
 
+## No hard wraps
+
+Do **not** introduce hard line breaks inside paragraphs. Write each paragraph
+as one continuous line and let the editor/renderer soft-wrap it. Specifically:
+
+- Never wrap prose at 80, 100, or any other column width.
+- A newline inside a paragraph means "end of paragraph" — only use it where the
+  author intended a paragraph break.
+- If the author's raw input contains hard wraps (e.g. pasted from a wrapped
+  editor), unwrap them: join the lines back into single-line paragraphs,
+  preserving blank lines between paragraphs.
+- This applies to the body, suggestions you present, and anything else you
+  write into `source/_posts/`.
+
 ## Post structure
 
 The author's preferred structure:
