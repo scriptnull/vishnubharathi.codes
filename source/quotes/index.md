@@ -1420,10 +1420,14 @@ Source: Madame Curie (pg 25)
 
 By: E.L. Doctorow
 
+Source: [Meditation for Mortals](https://www.oliverburkeman.com/meditationformortals) (pg 48)
+
 ---
 
 > There are two mistakes one can make along the road to truth: not going all the way, and not starting.
 
 By: Buddha
+
+Source: [Meditation for Mortals](https://www.oliverburkeman.com/meditationformortals)
 
 ---
