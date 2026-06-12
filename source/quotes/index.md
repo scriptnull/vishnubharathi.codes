@@ -1393,3 +1393,11 @@ By: Stephen R. Covey
 Source: [The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People)
 
 ---
+
+> "What you are shouts so loudly in my ears I cannot hear what you say." - Ralph Waldo Emerson
+
+By: Stephen R. Covey
+
+Source: [The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People)
+
+---
