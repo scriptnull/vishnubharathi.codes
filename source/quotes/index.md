@@ -1385,3 +1385,11 @@ By: Narrator
 Source: Dealt
 
 ---
+
+> Sandra and I were consumed with a desire to help him. We felt that if "success" were important in any area of life, it was supremely important in our role as parents.
+
+By: Stephen R. Covey
+
+Source: [The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People)
+
+---
