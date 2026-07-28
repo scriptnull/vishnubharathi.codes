@@ -7,7 +7,7 @@ I love to collect and read books. They help me a lot.
 
 (I use [goodreads](https://www.goodreads.com/user/show/127522992-vishnu-bharathi) too. Send me a friend request and save me from the loneliness there)
 
-## Computer science & programming
+## Programming
 
 - The Elements of Computing Systems — Noam Nisan & Shimon Schocken
 - Competitive Programming 4 — Steven Halim, Felix Halim & Suhendry Effendy
@@ -27,7 +27,7 @@ I love to collect and read books. They help me a lot.
 - Programming Interviews Exposed — John Mongan, Noah Suojanen & Eric Giguère
 - Pro Git — Scott Chacon & Ben Straub
 
-## Systems & infrastructure
+## Systems
 
 - Designing Data-Intensive Applications — Martin Kleppmann
 - Database Internals — Alex Petrov
@@ -40,7 +40,7 @@ I love to collect and read books. They help me a lot.
 - Building Microservices — Sam Newman
 - The Architecture of Open Source Applications — Amy Brown & Greg Wilson
 
-## AI, hardware & building things
+## Building
 
 - AI Engineering — Chip Huyen
 - Making Embedded Systems — Elecia White
@@ -48,7 +48,7 @@ I love to collect and read books. They help me a lot.
 - The Hardware Hacker — Andrew "bunnie" Huang
 - The Evolution of Useful Things — Henry Petroski
 
-## Career & work
+## Career
 
 - The Staff Engineer's Path — Tanya Reilly
 - High Output Management — Andrew S. Grove
@@ -58,7 +58,7 @@ I love to collect and read books. They help me a lot.
 - An Elegant Puzzle — Will Larson
 - The Start-up of You — Reid Hoffman & Ben Casnocha
 
-## Startups & business
+## Business
 
 - Zero to One — Peter Thiel
 - The Innovator's Dilemma — Clayton M. Christensen
@@ -81,7 +81,7 @@ I love to collect and read books. They help me a lot.
 - The Dip — Seth Godin
 - Linchpin — Seth Godin
 
-## Money & wealth
+## Money
 
 - The Psychology of Money — Morgan Housel
 - The Millionaire Fastlane — MJ DeMarco
@@ -90,7 +90,7 @@ I love to collect and read books. They help me a lot.
 - The Almanack of Naval Ravikant — Eric Jorgenson
 - Let's Talk Money — Monika Halan
 
-## Tech stories & biographies
+## Biographies
 
 - Source Code — Bill Gates
 - In the Plex — Steven Levy
@@ -100,7 +100,7 @@ I love to collect and read books. They help me a lot.
 - Surely You're Joking, Mr. Feynman! — Richard P. Feynman
 - The Scaling Era — Dwarkesh Patel
 
-## Productivity & focus
+## Productivity
 
 - Slow Productivity — Cal Newport
 - Deep Work — Cal Newport
@@ -116,7 +116,7 @@ I love to collect and read books. They help me a lot.
 - Your Brain at Work — Dr. David Rock
 - The Art of Laziness — Library Mindset
 
-## Mind, habits & living well
+## Mind
 
 - Mindset — Dr. Carol S. Dweck
 - Drive — Daniel H. Pink
@@ -143,13 +143,13 @@ I love to collect and read books. They help me a lot.
 - A Little Book of Life — Ruskin Bond
 - Dare to Win — Jack Canfield & Mark Victor Hansen
 
-## Philosophy & stoicism
+## Philosophy
 
 - Meditations — Marcus Aurelius
 - The Daily Stoic — Ryan Holiday & Stephen Hanselman
 - The Obstacle Is the Way — Ryan Holiday
 
-## Leadership, power & communication
+## Influence
 
 - Leaders Eat Last — Simon Sinek
 - The 48 Laws of Power — Robert Greene
@@ -159,7 +159,7 @@ I love to collect and read books. They help me a lot.
 - Storyworthy — Matthew Dicks
 - The Art of Public Speaking — Dale Carnegie
 
-## Writing & creativity
+## Creativity
 
 - On Writing Well — William Zinsser
 - Several Short Sentences About Writing — Verlyn Klinkenborg
@@ -170,7 +170,7 @@ I love to collect and read books. They help me a lot.
 - Understanding Exposure — Bryan Peterson
 - Graphic Design Sourcebook — Charlotte & Peter Fiell
 
-## Reference Books
+## Reference
 
 - Pocket Oxford English Dictionary
 - The Cartoon Introduction to Economics, Volume Two: Macroeconomics — Grady Klein & Yoram Bauman
