@@ -7,8 +7,6 @@ I love to collect and read books. They help me a lot.
 
 (I use [goodreads](https://www.goodreads.com/user/show/127522992-vishnu-bharathi) too. Send me a friend request and save me from the loneliness there)
 
-Here is what sits on my bookshelf these days.
-
 ## Computer science & programming
 
 - The Elements of Computing Systems — Noam Nisan & Shimon Schocken
