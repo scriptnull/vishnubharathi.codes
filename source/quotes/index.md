@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> Your duty is to uphold dharma. You have a right to perform your prescribed action, but you are not entitled to the fruits of your action. Never consider yourself to be the cause of the results of your activities, and never be attached to not doing your duty.
+
+By: Lord Krishna
+
+Source: [The Bhagavad Gita](https://www.holy-bhagavad-gita.org/chapter/2/verse/47)
+
+---
+
 > "What you are shouts so loudly in my ears I cannot hear what you say." - Ralph Waldo Emerson
 
 By: Stephen R. Covey
