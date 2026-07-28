@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> Your duty is to uphold dharma. You have a right to perform your prescribed action, but you are not entitled to the fruits of your action. Never consider yourself to be the cause of the results of your activities, and never be attached to not doing your duty.
+
+By: Lord Krishna
+
+Source: [The Bhagavad Gita](https://www.holy-bhagavad-gita.org/chapter/2/verse/47)
+
+---
+
 > There are two mistakes one can make along the road to truth: not going all the way, and not starting.
 
 By: Buddha
