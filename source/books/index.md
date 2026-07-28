@@ -18,6 +18,14 @@ I love to collect and read books. They help me a lot.
 - Becoming Functional — Joshua Backfield
 - Coding Interview Patterns — Alex Xu & Shaun Gunawardane
 - System Design Interview (Volumes 1 & 2) — Alex Xu & Sahn Lam
+- Introduction to Algorithms — Cormen, Leiserson, Rivest & Stein
+- The Algorithm Design Manual — Steven S. Skiena
+- How to Solve It — G. Polya
+- The Go Programming Language — Alan A. A. Donovan & Brian W. Kernighan
+- Concurrency in Go — Katherine Cox-Buday
+- Head First Design Patterns — Eric Freeman & Elisabeth Robson
+- Programming Interviews Exposed — John Mongan, Noah Suojanen & Eric Giguère
+- Pro Git — Scott Chacon & Ben Straub
 
 ## Systems & infrastructure
 
@@ -27,6 +35,9 @@ I love to collect and read books. They help me a lot.
 - The Site Reliability Workbook — Beyer, Murphy, Rensin, Kawahara & Thorne
 - Container Security — Liz Rice
 - Linux Pocket Guide — Daniel J. Barrett
+- The Linux Programming Interface — Michael Kerrisk
+- Systems Performance — Brendan Gregg
+- Building Microservices — Sam Newman
 - The Architecture of Open Source Applications — Amy Brown & Greg Wilson
 
 ## AI, hardware & building things
@@ -44,6 +55,8 @@ I love to collect and read books. They help me a lot.
 - So Good They Can't Ignore You — Cal Newport
 - What Got You Here Won't Get You There — Marshall Goldsmith
 - Managing Oneself — Peter F. Drucker
+- An Elegant Puzzle — Will Larson
+- The Start-up of You — Reid Hoffman & Ben Casnocha
 
 ## Startups & business
 
@@ -59,6 +72,10 @@ I love to collect and read books. They help me a lot.
 - Start-Up Nation — Dan Senor & Saul Singer
 - $100M Offers — Alex Hormozi
 - $100M Leads — Alex Hormozi
+- The Mom Test — Rob Fitzpatrick
+- The Embedded Entrepreneur — Arvid Kahl
+- Working in Public — Nadia Eghbal
+- Hacking Capitalism — Kris Nóva
 - This Is Marketing — Seth Godin
 - Purple Cow — Seth Godin
 - The Dip — Seth Godin
@@ -71,6 +88,7 @@ I love to collect and read books. They help me a lot.
 - How to Get Rich — Felix Dennis
 - Poor Charlie's Almanack — Charlie Munger
 - The Almanack of Naval Ravikant — Eric Jorgenson
+- Let's Talk Money — Monika Halan
 
 ## Tech stories & biographies
 
@@ -80,11 +98,14 @@ I love to collect and read books. They help me a lot.
 - The Idea Factory — Jon Gertner
 - The Book of Elon — Eric Jorgenson
 - Surely You're Joking, Mr. Feynman! — Richard P. Feynman
+- The Scaling Era — Dwarkesh Patel
 
 ## Productivity & focus
 
 - Slow Productivity — Cal Newport
+- Deep Work — Cal Newport
 - Digital Minimalism — Cal Newport
+- Make Time — Jake Knapp & John Zeratsky
 - Four Thousand Weeks — Oliver Burkeman
 - Meditations for Mortals — Oliver Burkeman
 - The One Thing — Gary Keller & Jay Papasan
@@ -109,6 +130,7 @@ I love to collect and read books. They help me a lot.
 - Self-Led — Seth Kopald
 - Changing for Good — Prochaska, Norcross & DiClemente
 - The Science of Happiness
+- Feel the Fear and Do It Anyway — Susan Jeffers
 - Make Your Bed — William H. McRaven
 - Excellent Advice for Living — Kevin Kelly
 - Life's Little Instruction Book — H. Jackson Brown Jr.
