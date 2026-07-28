@@ -45,4 +45,5 @@ When editing content, you generally do **not** need to hand-edit `docs/` — CI 
 ## Conventions
 
 - Commit messages for content/site changes that should go live are prefixed `[deploy]` (e.g. `[deploy] add a new quote`). CI's own build commits use `Generated site :sparkles:`.
+- New quotes in `source/quotes/index.md` are added to the **top** of the list (just after the intro line, newest first), not appended to the bottom.
 - Theme changes are made in the separate `hexo-theme-cactus` repo, not here; this repo only consumes it.

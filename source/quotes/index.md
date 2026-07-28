@@ -7,6 +7,22 @@ Some words that inspire and help me.
 
 ---
 
+> "What you are shouts so loudly in my ears I cannot hear what you say." - Ralph Waldo Emerson
+
+By: Stephen R. Covey
+
+Source: [The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People)
+
+---
+
+> Sandra and I were consumed with a desire to help him. We felt that if "success" were important in any area of life, it was supremely important in our role as parents.
+
+By: Stephen R. Covey
+
+Source: [The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People)
+
+---
+
 > The idea of being flexible, adaptable, and capable of moving quickly into a Plan B and a Plan C; it's a very useful asset in a career. You have to be willing to be humble enough to recognise that you don't control everything, but what you do control, you better do something about it.
 
 By: Ajay Banga
@@ -1383,21 +1399,5 @@ Source: Dealt
 By: Narrator
 
 Source: Dealt
-
----
-
-> Sandra and I were consumed with a desire to help him. We felt that if "success" were important in any area of life, it was supremely important in our role as parents.
-
-By: Stephen R. Covey
-
-Source: [The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People)
-
----
-
-> "What you are shouts so loudly in my ears I cannot hear what you say." - Ralph Waldo Emerson
-
-By: Stephen R. Covey
-
-Source: [The 7 Habits of Highly Effective People](https://www.goodreads.com/book/show/36072.The_7_Habits_of_Highly_Effective_People)
 
 ---
