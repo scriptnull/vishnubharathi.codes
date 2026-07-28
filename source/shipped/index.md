@@ -1,3 +1,5 @@
+> **Note:** This page is discontinued. Keeping it updated every week became a bit of a hassle, so I have stopped. Leaving whatever was written here as an archive.
+
 (Wish I started this page earlier. Now, I have to reconcile my years of work - lol)
 
 Legend:
