@@ -7,6 +7,30 @@ Some words that inspire and help me.
 
 ---
 
+> There are two mistakes one can make along the road to truth: not going all the way, and not starting.
+
+By: Buddha
+
+Source: [Meditation for Mortals](https://www.oliverburkeman.com/meditationformortals)
+
+---
+
+> What the novelist Doctorow said about novel-writing applied to everything else, too: it's like driving a car at night. You never see further than your headlights, but you can make the whole trip that way.
+
+By: E.L. Doctorow
+
+Source: [Meditation for Mortals](https://www.oliverburkeman.com/meditationformortals)
+
+---
+
+> One never notices what has been done; one can see only what remains to be done.
+
+By: Marie Curie
+
+Source: [Madame Curie: A Biography](https://www.goodreads.com/book/show/341166.Madame_Curie)
+
+---
+
 > "What you are shouts so loudly in my ears I cannot hear what you say." - Ralph Waldo Emerson
 
 By: Stephen R. Covey
@@ -1402,32 +1426,3 @@ Source: Dealt
 
 ---
 
-> children are not things to be moulded, but people to be unfolded.
-
-By: Jess Lair
-
----
-
-> One never notices what has been done; one can see only what remains to be done.
-
-By: Marie Curie
-
-Source: Madame Curie (pg 25)
-
----
-
-> What the novelist Doctorow said about novel-writing applied to everything else, too: it's like driving a car at night. You never see further than your headlights, but you can make the whole trip that way.
-
-By: E.L. Doctorow
-
-Source: [Meditation for Mortals](https://www.oliverburkeman.com/meditationformortals) (pg 48)
-
----
-
-> There are two mistakes one can make along the road to truth: not going all the way, and not starting.
-
-By: Buddha
-
-Source: [Meditation for Mortals](https://www.oliverburkeman.com/meditationformortals)
-
----
