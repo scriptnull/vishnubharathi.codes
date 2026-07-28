@@ -150,10 +150,13 @@ Here is what sits on my bookshelf these days.
 - Understanding Exposure — Bryan Peterson
 - Graphic Design Sourcebook — Charlotte & Peter Fiell
 
-## Fiction & everything else
+## Reference Books
+
+- Pocket Oxford English Dictionary
+- The Cartoon Introduction to Economics, Volume Two: Macroeconomics — Grady Klein & Yoram Bauman
+- Great Quotes for Great Businesses — Bud Carter
+
+## Fiction
 
 - Dune — Frank Herbert
 - The Library of Babel — Jorge Luis Borges
-- The Cartoon Introduction to Economics, Volume Two: Macroeconomics — Grady Klein & Yoram Bauman
-- Great Quotes for Great Businesses — Bud Carter
-- Pocket Oxford English Dictionary
