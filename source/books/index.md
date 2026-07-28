@@ -7,13 +7,15 @@ I love to collect and read books. They help me a lot.
 
 (I use [goodreads](https://www.goodreads.com/user/show/127522992-vishnu-bharathi) too. Send me a friend request and save me from the loneliness there)
 
----
+<div id="book-tags"></div>
 
-## Programming
+---
 
 > The Elements of Computing Systems
 
 By: Noam Nisan & Shimon Schocken
+
+Tags: programming
 
 ---
 
@@ -21,11 +23,15 @@ By: Noam Nisan & Shimon Schocken
 
 By: Steven Halim, Felix Halim & Suhendry Effendy
 
+Tags: programming
+
 ---
 
 > Data Structures and Algorithms Made Easy in Java
 
 By: Narasimha Karumanchi
+
+Tags: programming
 
 ---
 
@@ -33,11 +39,15 @@ By: Narasimha Karumanchi
 
 By: Mark Allen Weiss
 
+Tags: programming
+
 ---
 
 > Mathematical Statistics and Data Analysis
 
 By: John A. Rice
+
+Tags: programming
 
 ---
 
@@ -45,11 +55,15 @@ By: John A. Rice
 
 By: Addy Osmani
 
+Tags: programming
+
 ---
 
 > Becoming Functional
 
 By: Joshua Backfield
+
+Tags: programming
 
 ---
 
@@ -57,11 +71,15 @@ By: Joshua Backfield
 
 By: Alex Xu & Shaun Gunawardane
 
+Tags: programming
+
 ---
 
 > System Design Interview (Volumes 1 & 2)
 
 By: Alex Xu & Sahn Lam
+
+Tags: programming
 
 ---
 
@@ -69,11 +87,15 @@ By: Alex Xu & Sahn Lam
 
 By: Cormen, Leiserson, Rivest & Stein
 
+Tags: programming
+
 ---
 
 > The Algorithm Design Manual
 
 By: Steven S. Skiena
+
+Tags: programming
 
 ---
 
@@ -81,11 +103,15 @@ By: Steven S. Skiena
 
 By: G. Polya
 
+Tags: programming
+
 ---
 
 > The Go Programming Language
 
 By: Alan A. A. Donovan & Brian W. Kernighan
+
+Tags: programming
 
 ---
 
@@ -93,11 +119,15 @@ By: Alan A. A. Donovan & Brian W. Kernighan
 
 By: Katherine Cox-Buday
 
+Tags: programming
+
 ---
 
 > Head First Design Patterns
 
 By: Eric Freeman & Elisabeth Robson
+
+Tags: programming
 
 ---
 
@@ -105,19 +135,23 @@ By: Eric Freeman & Elisabeth Robson
 
 By: John Mongan, Noah Suojanen & Eric Giguère
 
+Tags: programming
+
 ---
 
 > Pro Git
 
 By: Scott Chacon & Ben Straub
 
----
+Tags: programming
 
-## Systems
+---
 
 > Designing Data-Intensive Applications
 
 By: Martin Kleppmann
+
+Tags: systems
 
 ---
 
@@ -125,11 +159,15 @@ By: Martin Kleppmann
 
 By: Alex Petrov
 
+Tags: systems
+
 ---
 
 > Patterns of Distributed Systems
 
 By: Unmesh Joshi
+
+Tags: systems
 
 ---
 
@@ -137,11 +175,15 @@ By: Unmesh Joshi
 
 By: Beyer, Murphy, Rensin, Kawahara & Thorne
 
+Tags: systems
+
 ---
 
 > Container Security
 
 By: Liz Rice
+
+Tags: systems
 
 ---
 
@@ -149,11 +191,15 @@ By: Liz Rice
 
 By: Daniel J. Barrett
 
+Tags: systems
+
 ---
 
 > The Linux Programming Interface
 
 By: Michael Kerrisk
+
+Tags: systems
 
 ---
 
@@ -161,11 +207,15 @@ By: Michael Kerrisk
 
 By: Brendan Gregg
 
+Tags: systems
+
 ---
 
 > Building Microservices
 
 By: Sam Newman
+
+Tags: systems
 
 ---
 
@@ -173,13 +223,15 @@ By: Sam Newman
 
 By: Amy Brown & Greg Wilson
 
----
+Tags: systems
 
-## Building
+---
 
 > AI Engineering
 
 By: Chip Huyen
+
+Tags: building
 
 ---
 
@@ -187,11 +239,15 @@ By: Chip Huyen
 
 By: Elecia White
 
+Tags: building
+
 ---
 
 > Prototype to Product
 
 By: Alan Cohen
+
+Tags: building
 
 ---
 
@@ -199,19 +255,23 @@ By: Alan Cohen
 
 By: Andrew "bunnie" Huang
 
+Tags: building
+
 ---
 
 > The Evolution of Useful Things
 
 By: Henry Petroski
 
----
+Tags: building
 
-## Career
+---
 
 > The Staff Engineer's Path
 
 By: Tanya Reilly
+
+Tags: career
 
 ---
 
@@ -219,11 +279,15 @@ By: Tanya Reilly
 
 By: Andrew S. Grove
 
+Tags: career
+
 ---
 
 > So Good They Can't Ignore You
 
 By: Cal Newport
+
+Tags: career
 
 ---
 
@@ -231,11 +295,15 @@ By: Cal Newport
 
 By: Marshall Goldsmith
 
+Tags: career
+
 ---
 
 > Managing Oneself
 
 By: Peter F. Drucker
+
+Tags: career
 
 ---
 
@@ -243,19 +311,23 @@ By: Peter F. Drucker
 
 By: Will Larson
 
+Tags: career
+
 ---
 
 > The Start-up of You
 
 By: Reid Hoffman & Ben Casnocha
 
----
+Tags: career
 
-## Business
+---
 
 > Zero to One
 
 By: Peter Thiel
+
+Tags: business
 
 ---
 
@@ -263,11 +335,15 @@ By: Peter Thiel
 
 By: Clayton M. Christensen
 
+Tags: business
+
 ---
 
 > Rework
 
 By: Jason Fried & David Heinemeier Hansson
+
+Tags: business
 
 ---
 
@@ -275,11 +351,15 @@ By: Jason Fried & David Heinemeier Hansson
 
 By: Tony Fadell
 
+Tags: business
+
 ---
 
 > All In
 
 By: Girish Mathrubootham with Pankaj Mishra
+
+Tags: business
 
 ---
 
@@ -287,11 +367,15 @@ By: Girish Mathrubootham with Pankaj Mishra
 
 By: Uri Levine
 
+Tags: business
+
 ---
 
 > Million Dollar Weekend
 
 By: Noah Kagan
+
+Tags: business
 
 ---
 
@@ -299,11 +383,15 @@ By: Noah Kagan
 
 By: Chris Guillebeau
 
+Tags: business
+
 ---
 
 > Company of One
 
 By: Paul Jarvis
+
+Tags: business
 
 ---
 
@@ -311,11 +399,15 @@ By: Paul Jarvis
 
 By: Dan Senor & Saul Singer
 
+Tags: business
+
 ---
 
 > $100M Offers
 
 By: Alex Hormozi
+
+Tags: business
 
 ---
 
@@ -323,11 +415,15 @@ By: Alex Hormozi
 
 By: Alex Hormozi
 
+Tags: business
+
 ---
 
 > The Mom Test
 
 By: Rob Fitzpatrick
+
+Tags: business
 
 ---
 
@@ -335,11 +431,15 @@ By: Rob Fitzpatrick
 
 By: Arvid Kahl
 
+Tags: business
+
 ---
 
 > Working in Public
 
 By: Nadia Eghbal
+
+Tags: business
 
 ---
 
@@ -347,11 +447,15 @@ By: Nadia Eghbal
 
 By: Kris Nóva
 
+Tags: business
+
 ---
 
 > This Is Marketing
 
 By: Seth Godin
+
+Tags: business
 
 ---
 
@@ -359,11 +463,15 @@ By: Seth Godin
 
 By: Seth Godin
 
+Tags: business
+
 ---
 
 > The Dip
 
 By: Seth Godin
+
+Tags: business
 
 ---
 
@@ -371,13 +479,15 @@ By: Seth Godin
 
 By: Seth Godin
 
----
+Tags: business
 
-## Money
+---
 
 > The Psychology of Money
 
 By: Morgan Housel
+
+Tags: money
 
 ---
 
@@ -385,11 +495,15 @@ By: Morgan Housel
 
 By: MJ DeMarco
 
+Tags: money
+
 ---
 
 > How to Get Rich
 
 By: Felix Dennis
+
+Tags: money
 
 ---
 
@@ -397,11 +511,15 @@ By: Felix Dennis
 
 By: Charlie Munger
 
+Tags: money
+
 ---
 
 > The Almanack of Naval Ravikant
 
 By: Eric Jorgenson
+
+Tags: money
 
 ---
 
@@ -409,13 +527,15 @@ By: Eric Jorgenson
 
 By: Monika Halan
 
----
+Tags: money
 
-## Biographies
+---
 
 > Source Code
 
 By: Bill Gates
+
+Tags: biographies
 
 ---
 
@@ -423,11 +543,15 @@ By: Bill Gates
 
 By: Steven Levy
 
+Tags: biographies
+
 ---
 
 > Hit Refresh
 
 By: Satya Nadella
+
+Tags: biographies
 
 ---
 
@@ -435,11 +559,15 @@ By: Satya Nadella
 
 By: Jon Gertner
 
+Tags: biographies
+
 ---
 
 > The Book of Elon
 
 By: Eric Jorgenson
+
+Tags: biographies
 
 ---
 
@@ -447,19 +575,23 @@ By: Eric Jorgenson
 
 By: Richard P. Feynman
 
+Tags: biographies
+
 ---
 
 > The Scaling Era
 
 By: Dwarkesh Patel
 
----
+Tags: biographies
 
-## Productivity
+---
 
 > Slow Productivity
 
 By: Cal Newport
+
+Tags: productivity
 
 ---
 
@@ -467,11 +599,15 @@ By: Cal Newport
 
 By: Cal Newport
 
+Tags: productivity
+
 ---
 
 > Digital Minimalism
 
 By: Cal Newport
+
+Tags: productivity
 
 ---
 
@@ -479,11 +615,15 @@ By: Cal Newport
 
 By: Jake Knapp & John Zeratsky
 
+Tags: productivity
+
 ---
 
 > Four Thousand Weeks
 
 By: Oliver Burkeman
+
+Tags: productivity
 
 ---
 
@@ -491,11 +631,15 @@ By: Oliver Burkeman
 
 By: Oliver Burkeman
 
+Tags: productivity
+
 ---
 
 > The One Thing
 
 By: Gary Keller & Jay Papasan
+
+Tags: productivity
 
 ---
 
@@ -503,11 +647,15 @@ By: Gary Keller & Jay Papasan
 
 By: Brian Tracy
 
+Tags: productivity
+
 ---
 
 > The 7 Habits of Highly Effective People
 
 By: Stephen R. Covey
+
+Tags: productivity
 
 ---
 
@@ -515,11 +663,15 @@ By: Stephen R. Covey
 
 By: Robin Sharma
 
+Tags: productivity
+
 ---
 
 > How to Take Smart Notes
 
 By: Sönke Ahrens
+
+Tags: productivity
 
 ---
 
@@ -527,19 +679,23 @@ By: Sönke Ahrens
 
 By: Dr. David Rock
 
+Tags: productivity
+
 ---
 
 > The Art of Laziness
 
 By: Library Mindset
 
----
+Tags: productivity
 
-## Mind
+---
 
 > Mindset
 
 By: Dr. Carol S. Dweck
+
+Tags: mind
 
 ---
 
@@ -547,11 +703,15 @@ By: Dr. Carol S. Dweck
 
 By: Daniel H. Pink
 
+Tags: mind
+
 ---
 
 > Flow
 
 By: Mihaly Csikszentmihalyi
+
+Tags: mind
 
 ---
 
@@ -559,11 +719,15 @@ By: Mihaly Csikszentmihalyi
 
 By: Susan Cain
 
+Tags: mind
+
 ---
 
 > Dopamine Nation
 
 By: Dr. Anna Lembke
+
+Tags: mind
 
 ---
 
@@ -571,11 +735,15 @@ By: Dr. Anna Lembke
 
 By: Annie Duke
 
+Tags: mind
+
 ---
 
 > Why Has Nobody Told Me This Before?
 
 By: Dr. Julie Smith
+
+Tags: mind
 
 ---
 
@@ -583,11 +751,15 @@ By: Dr. Julie Smith
 
 By: Darius Foroux
 
+Tags: mind
+
 ---
 
 > Motivational Interviewing
 
 By: William R. Miller & Stephen Rollnick
+
+Tags: mind
 
 ---
 
@@ -595,15 +767,21 @@ By: William R. Miller & Stephen Rollnick
 
 By: Seth Kopald
 
+Tags: mind
+
 ---
 
 > Changing for Good
 
 By: Prochaska, Norcross & DiClemente
 
+Tags: mind
+
 ---
 
 > The Science of Happiness
+
+Tags: mind
 
 ---
 
@@ -611,11 +789,15 @@ By: Prochaska, Norcross & DiClemente
 
 By: Susan Jeffers
 
+Tags: mind
+
 ---
 
 > Make Your Bed
 
 By: William H. McRaven
+
+Tags: mind
 
 ---
 
@@ -623,11 +805,15 @@ By: William H. McRaven
 
 By: Kevin Kelly
 
+Tags: mind
+
 ---
 
 > Life's Little Instruction Book
 
 By: H. Jackson Brown Jr.
+
+Tags: mind
 
 ---
 
@@ -635,11 +821,15 @@ By: H. Jackson Brown Jr.
 
 By: Oprah Winfrey
 
+Tags: mind
+
 ---
 
 > The Master Key System
 
 By: Charles F. Haanel
+
+Tags: mind
 
 ---
 
@@ -647,11 +837,15 @@ By: Charles F. Haanel
 
 By: Paras Chopra
 
+Tags: mind
+
 ---
 
 > Let Go
 
 By: Daisuke Yosumi
+
+Tags: mind
 
 ---
 
@@ -659,11 +853,15 @@ By: Daisuke Yosumi
 
 By: Robin Sharma
 
+Tags: mind
+
 ---
 
 > Gita Wisdom Through Quotes
 
 By: Chaitanya Charan
+
+Tags: mind
 
 ---
 
@@ -671,19 +869,23 @@ By: Chaitanya Charan
 
 By: Ruskin Bond
 
+Tags: mind
+
 ---
 
 > Dare to Win
 
 By: Jack Canfield & Mark Victor Hansen
 
----
+Tags: mind
 
-## Philosophy
+---
 
 > Meditations
 
 By: Marcus Aurelius
+
+Tags: philosophy
 
 ---
 
@@ -691,19 +893,23 @@ By: Marcus Aurelius
 
 By: Ryan Holiday & Stephen Hanselman
 
+Tags: philosophy
+
 ---
 
 > The Obstacle Is the Way
 
 By: Ryan Holiday
 
----
+Tags: philosophy
 
-## Influence
+---
 
 > Leaders Eat Last
 
 By: Simon Sinek
+
+Tags: influence
 
 ---
 
@@ -711,11 +917,15 @@ By: Simon Sinek
 
 By: Robert Greene
 
+Tags: influence
+
 ---
 
 > 7 Rules of Power
 
 By: Jeffrey Pfeffer
+
+Tags: influence
 
 ---
 
@@ -723,11 +933,15 @@ By: Jeffrey Pfeffer
 
 By: Patterson, Grenny, McMillan & Switzler
 
+Tags: influence
+
 ---
 
 > Supercommunicators
 
 By: Charles Duhigg
+
+Tags: influence
 
 ---
 
@@ -735,19 +949,23 @@ By: Charles Duhigg
 
 By: Matthew Dicks
 
+Tags: influence
+
 ---
 
 > The Art of Public Speaking
 
 By: Dale Carnegie
 
----
+Tags: influence
 
-## Creativity
+---
 
 > On Writing Well
 
 By: William Zinsser
+
+Tags: creativity
 
 ---
 
@@ -755,11 +973,15 @@ By: William Zinsser
 
 By: Verlyn Klinkenborg
 
+Tags: creativity
+
 ---
 
 > The War of Art
 
 By: Steven Pressfield
+
+Tags: creativity
 
 ---
 
@@ -767,11 +989,15 @@ By: Steven Pressfield
 
 By: Steven Pressfield
 
+Tags: creativity
+
 ---
 
 > Do the Work
 
 By: Steven Pressfield
+
+Tags: creativity
 
 ---
 
@@ -779,11 +1005,15 @@ By: Steven Pressfield
 
 By: Rick Rubin
 
+Tags: creativity
+
 ---
 
 > Understanding Exposure
 
 By: Bryan Peterson
+
+Tags: creativity
 
 ---
 
@@ -791,11 +1021,13 @@ By: Bryan Peterson
 
 By: Charlotte & Peter Fiell
 
+Tags: creativity
+
 ---
 
-## Reference
-
 > Pocket Oxford English Dictionary
+
+Tags: reference
 
 ---
 
@@ -803,19 +1035,23 @@ By: Charlotte & Peter Fiell
 
 By: Grady Klein & Yoram Bauman
 
+Tags: reference
+
 ---
 
 > Great Quotes for Great Businesses
 
 By: Bud Carter
 
----
+Tags: reference
 
-## Fiction
+---
 
 > Dune
 
 By: Frank Herbert
+
+Tags: fiction
 
 ---
 
@@ -823,4 +1059,58 @@ By: Frank Herbert
 
 By: Jorge Luis Borges
 
+Tags: fiction
+
 ---
+
+
+<style>
+#book-tags a { display: inline-block; margin: 0 8px 8px 0; padding: 1px 10px; border: 1px solid currentColor; border-radius: 12px; cursor: pointer; }
+#book-tags a.active { font-weight: bold; }
+</style>
+<script>
+(function(){
+  var holder = document.getElementById('book-tags');
+  if (!holder) return;
+  var container = holder.parentElement;
+  var nodes = Array.prototype.slice.call(container.children);
+  var entries = [], current = [];
+  for (var i = nodes.indexOf(holder) + 1; i < nodes.length; i++) {
+    var n = nodes[i];
+    if (n.tagName === 'SCRIPT' || n.tagName === 'STYLE') continue;
+    current.push(n);
+    if (n.tagName === 'HR') { entries.push(current); current = []; }
+  }
+  if (current.length) entries.push(current);
+  var books = entries.map(function(group){
+    var tags = [];
+    group.forEach(function(el){
+      if (el.tagName === 'P' && /^Tags:/.test(el.textContent)) {
+        tags = el.textContent.replace(/^Tags:\s*/, '').split(',').map(function(t){ return t.trim().toLowerCase(); }).filter(Boolean);
+      }
+    });
+    return { nodes: group, tags: tags };
+  }).filter(function(b){ return b.tags.length; });
+  var counts = {};
+  books.forEach(function(b){ b.tags.forEach(function(t){ counts[t] = (counts[t] || 0) + 1; }); });
+  var names = Object.keys(counts).sort();
+  function render(active){
+    holder.innerHTML = '';
+    ['all'].concat(names).forEach(function(t){
+      var a = document.createElement('a');
+      a.textContent = t === 'all' ? 'all (' + books.length + ')' : t + ' (' + counts[t] + ')';
+      if (t === active) a.className = 'active';
+      a.onclick = function(e){ e.preventDefault(); apply(t); };
+      holder.appendChild(a);
+    });
+  }
+  function apply(tag){
+    books.forEach(function(b){
+      var show = tag === 'all' || b.tags.indexOf(tag) > -1;
+      b.nodes.forEach(function(n){ n.style.display = show ? '' : 'none'; });
+    });
+    render(tag);
+  }
+  apply('all');
+})();
+</script>
