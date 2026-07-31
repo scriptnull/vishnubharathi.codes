@@ -7,6 +7,14 @@ Some words that inspire and help me.
 
 ---
 
+> in a moving world the nomad is the one standing still
+
+By: Reiser and Umemoto
+
+Source: The Atlas of Novel Tectonics, via [Hacker News](https://news.ycombinator.com/item?id=49119484)
+
+---
+
 > Your duty is to uphold dharma. You have a right to perform your prescribed action, but you are not entitled to the fruits of your action. Never consider yourself to be the cause of the results of your activities, and never be attached to not doing your duty.
 
 By: Lord Krishna
