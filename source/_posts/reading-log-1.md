@@ -4,7 +4,7 @@ date: 2026-08-02 01:20:00
 tags: ["reading", "books", "blogging"]
 ---
 
-I am trying something new. I used to use [Feedly](https://feedly.com/) for a long time for keeping up with my favorite blogs. But then I started working my own [RSS feed reader](https://github.com/scriptnull/rho-reader) in my free time for the past 6 months. It is in a weird shape but definitely distracted myself from doing the real reading that I enjoy.
+I used to use [Feedly](https://feedly.com/) for a long time for keeping up with my favorite blogs. But then I started working my own [RSS feed reader](https://github.com/scriptnull/rho-reader) in my free time for the past 6 months. It is in a weird shape but definitely distracted myself from doing the real reading that I enjoy.
 
 I have mashed up a new blog reading system for me but not based on my reader. Sadly it is not working out and I have to give it up. Maybe I will talk about the new system some other time after experimenting it for a bit.
 
@@ -14,21 +14,15 @@ But for now, here is what I read in the week of 27 to 31 July 2026.
 
 - [AI Made Me Braver](https://neilkakkar.com/ai-made-me-braver.html) by Neil Kakkar
 
-  There is a DOCX to DOCX converter, wait what? One is Google Docs DOCX, and another is my DOCX.
-
-  I like this quote:
-
-  > Looking back, being productive is nice. But imo feeling braver matters more.
+  There is a DOCX to DOCX converter, wait what?
 
 - [How I get things done](https://mxstbr.com/notes/getting-things-done) by Max Stoiber
 
-  RACI vs ARCI & DRI.
+  I have come across RACI/ARCI & DRI at work before. I still feel like it is "too much theory" but the author gets to the practicality of it i.e. "Assign one accountable owner" is a distillation that I like to remember from this post.
 
 - [The AI Productivity Gap](https://bjorg.bjornroche.com/management/ai-productivity-gap/) by Bjorn Roche
 
-  Love multiple takes in this one.
-
-  I do find myself in a similar position to the author on the topic of taking longer times to read AI written artifacts.
+  Love multiple takes in this one. I do find myself in a similar position to the author on the topic of taking longer times to read AI written artifacts.
 
   > Using AI to make your work easier while making other people's job harder
 
@@ -36,13 +30,7 @@ But for now, here is what I read in the week of 27 to 31 July 2026.
 
 - [Mastodon, The Only Good Choice](https://www.tbray.org/ongoing/When/202x/2026/07/05/Choose-Mastodon) by Tim Bray
 
-  Rekindled my interest in Mastodon and to get serious about it.
-
-  I have been using all the others (X, bsky) but stopped using Mastodon, mostly I think I was confused to what is the place I want to use for short form blogging.
-
-  Based on this blog post and my own experiences in the past few months, I clearly need to try Mastodon now.
-
-  I spent much time exploring Mastodon. Still not so clear with it. e.g. which server?
+  Rekindled my interest in Mastodon. I have been using all the others (X, bsky) but stopped using Mastodon, mostly I think I was confused to what is the place I want to use for short form blogging.
 
 - [Generated and suppressed demand](https://lethain.com/generated-demand/) by Will Larson
 
