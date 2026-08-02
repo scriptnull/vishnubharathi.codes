@@ -76,7 +76,7 @@ But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 20
 
 ## Books
 
-- **Rework** - pages 1-32 on Sunday, 32-42 on Monday, 32-66 and then 67-82 on Tuesday.
+- **Rework** - 82 pages
 
-- **Let Go** - pages 77-115 on Tuesday.
+- **Let Go** - 38 pages
 
