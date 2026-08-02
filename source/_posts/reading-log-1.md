@@ -1,12 +1,12 @@
 ---
 title: "Reading Log #1"
 date: 2026-08-02 01:20:00
-tags: ["reading", "books", "blogging"]
+tags: ["reading", "books", "blogs"]
 ---
 
-I used to use [Feedly](https://feedly.com/) for a long time for keeping up with my favorite blogs. But then I started working my own [RSS feed reader](https://github.com/scriptnull/rho-reader) in my free time for the past 6 months. It is in a weird shape but definitely distracted myself from doing the real reading that I enjoy.
+I used to use [Feedly](https://feedly.com/) for a long time to keep up to date with my favorite blogs. Six months back, one fine day, I started working my own [RSS feed reader](https://github.com/scriptnull/rho-reader) in my free time. It went somewhere but my reading time went down. Sadly my reader didn't work out - it has hindered my reading and now I am out here resuming my reading.
 
-I have mashed up a new blog reading system for me but not based on my reader. Sadly it is not working out and I have to give up to get back to reading. Maybe I will talk about the new system some other time after experimenting with it for a bit.
+So I have mashed up a new blog reading system for me but not based on my reader. Maybe I will talk about the new system some other time after experimenting with it for a bit.
 
 But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 2026.
 
