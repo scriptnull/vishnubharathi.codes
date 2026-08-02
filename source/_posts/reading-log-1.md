@@ -6,11 +6,15 @@ tags: ["reading", "books", "blogging"]
 
 I used to use [Feedly](https://feedly.com/) for a long time for keeping up with my favorite blogs. But then I started working my own [RSS feed reader](https://github.com/scriptnull/rho-reader) in my free time for the past 6 months. It is in a weird shape but definitely distracted myself from doing the real reading that I enjoy.
 
-I have mashed up a new blog reading system for me but not based on my reader. Sadly it is not working out and I have to give it up. Maybe I will talk about the new system some other time after experimenting it for a bit.
+I have mashed up a new blog reading system for me but not based on my reader. Sadly it is not working out and I have to give up to get back to reading. Maybe I will talk about the new system some other time after experimenting with it for a bit.
 
-But for now, here is what I read in the week of 27 to 31 July 2026.
+But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 2026.
 
 ## Blogs
+
+- [Fool yourself](https://muratbuffalo.blogspot.com/2016/01/fool-yourself.html)
+
+  I am on the internet for gold mines like this.
 
 - [AI Made Me Braver](https://neilkakkar.com/ai-made-me-braver.html)
 
@@ -18,19 +22,19 @@ But for now, here is what I read in the week of 27 to 31 July 2026.
 
 - [How I get things done](https://mxstbr.com/notes/getting-things-done)
 
-  I have come across RACI/ARCI & DRI at work before. I still feel like it is "too much theory" but the author gets to the practicality of it i.e. "Assign one accountable owner" is a distillation that I like to remember from this post.
+  I have come across RACI/ARCI & DRI at work before. I still feel like it is "too much theory" but the author gets to the practicality of it. "Assign one accountable owner" is a distillation that I like to remember from this post.
 
 - [The AI Productivity Gap](https://bjorg.bjornroche.com/management/ai-productivity-gap/)
 
-  Love multiple takes in this one. I do find myself in a similar position to the author on the topic of taking longer times to read AI written artifacts.
+  Love multiple takes in this one. I do find myself in a similar position to the author on the topic of taking longer times to read AI written artifacts. There was this particular line that caught my attention:
 
   > Using AI to make your work easier while making other people's job harder
 
-  I can relate to this. As we use more and more of AI in a team setting, I think we need to be mindful and compassionate towards our colleagues.
+  My take: As we use AI more and more in a team setting, we need to be very thoughtful and mindful in producing artifacts that doesn't overload our colleagues. Example: don't vibe code a 1000 line PR and send it to your teammate for a "code review".
 
 - [Mastodon, The Only Good Choice](https://www.tbray.org/ongoing/When/202x/2026/07/05/Choose-Mastodon)
 
-  Rekindled my interest in Mastodon. I have been using all the others (X, bsky) but stopped using Mastodon, mostly I think I was confused to what is the place I want to use for short form blogging.
+  Rekindled my interest in Mastodon. I have been using all the others (X, bsky) but stopped using Mastodon. While doing my re-exploration of Mastodon, I met https://indieweb.org which made me double down on starting to write a blog post like the one you are reading now.
 
 - [Generated and suppressed demand](https://lethain.com/generated-demand/)
 
@@ -77,10 +81,6 @@ But for now, here is what I read in the week of 27 to 31 July 2026.
 - [The Religion of Speed](https://graybeard.ing/the-religion-of-speed/)
 
   Great article, especially relevant in the age of AI where software teams are expected to move with speed.
-
-- [Fool yourself](https://muratbuffalo.blogspot.com/2016/01/fool-yourself.html)
-
-  I am on the internet for gold mines like this.
 
 ## Books
 
