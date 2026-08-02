@@ -4,25 +4,9 @@ date: 2026-08-02 01:20:00
 tags: ["reading", "books", "blogging"]
 ---
 
-I keep a daily log in a bullet journal. Two of the markers I use in it are `B:` for a book I read that day and `BL:` for a blog I read that day. When I flip back through a week, those are the lines I keep stopping at. So I am starting a reading log here to collect them, along with whatever I scribbled next to them at the time.
+I am trying something new. I used to use [Feedly](https://feedly.com/) for a long time for keeping up with my favorite blogs. But then I started working my own [RSS feed reader](https://github.com/scriptnull/rho-reader) in my free time for the past 6 months. It is in a weird shape but definitely distracted myself from doing the real reading that I enjoy.
 
-My super power is reading. I should use it to my advantage.
-
-Most of the blogs below were read on paper. They usually exist with a `printed` tag in my Readwise, because I print them out and read them away from the screen.
-
-This is the week of 27 July to 31 July 2026.
-
-## Books
-
-- **Rework** - pages 1-32 on Sunday, 32-42 on Monday, 32-66 and then 67-82 on Tuesday.
-
-  TK
-
-- **Let Go** - pages 77-115 on Tuesday.
-
-  Great set of learning.
-
-  TK - author/link for this one.
+This is what I read in the week of 27 July to 31 July 2026.
 
 ## Blogs
 
@@ -107,3 +91,15 @@ This is the week of 27 July to 31 July 2026.
 - [Fool yourself](https://muratbuffalo.blogspot.com/2016/01/fool-yourself.html) by Murat Demirbas
 
   I am on the internet for gold mines like this.
+
+## Books
+
+- **Rework** - pages 1-32 on Sunday, 32-42 on Monday, 32-66 and then 67-82 on Tuesday.
+
+  TK
+
+- **Let Go** - pages 77-115 on Tuesday.
+
+  Great set of learning.
+
+  TK - author/link for this one.
