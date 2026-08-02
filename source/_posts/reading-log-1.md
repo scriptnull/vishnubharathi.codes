@@ -6,7 +6,9 @@ tags: ["reading", "books", "blogging"]
 
 I am trying something new. I used to use [Feedly](https://feedly.com/) for a long time for keeping up with my favorite blogs. But then I started working my own [RSS feed reader](https://github.com/scriptnull/rho-reader) in my free time for the past 6 months. It is in a weird shape but definitely distracted myself from doing the real reading that I enjoy.
 
-This is what I read in the week of 27 July to 31 July 2026.
+I have mashed up a new blog reading system for me but not based on my reader. Sadly it is not working out and I have to give it up. Maybe I will talk about the new system some other time after experimenting it for a bit.
+
+But for now, here is what I read in the week of 27 to 31 July 2026.
 
 ## Blogs
 
@@ -96,10 +98,5 @@ This is what I read in the week of 27 July to 31 July 2026.
 
 - **Rework** - pages 1-32 on Sunday, 32-42 on Monday, 32-66 and then 67-82 on Tuesday.
 
-  TK
-
 - **Let Go** - pages 77-115 on Tuesday.
 
-  Great set of learning.
-
-  TK - author/link for this one.
