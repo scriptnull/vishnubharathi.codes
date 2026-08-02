@@ -78,9 +78,9 @@ But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 20
 
 - **Rework** - 82 pages
 
-  TK - thoughts on Rework. Journal hook from the same week: you listened to DHH on the David Senra show and wrote "he really cares that his day is within his control. I think that is what I should aspire for right now."
+  I haven't been taking notes for this one. Because it is the kind of a book that you could re-read instead of reading your notes.
 
 - **Let Go** - 38 pages
 
-  TK - thoughts on Let Go. Journal hook: "Great set of learning." Also still missing the author/link for this one.
+  My wife picked up this book from the book store. I randomly started reading on a weekday night. I could visibly feel my "stress level" going down page after page. wow, books are weird - they can alter space, time, and mind.
 
