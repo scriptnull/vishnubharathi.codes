@@ -1,5 +1,5 @@
 ---
-title: Reading Log #1
+title: "Reading Log #1"
 date: 2026-08-02 01:20:00
 tags: ["reading", "books", "blogging"]
 ---
