@@ -78,5 +78,9 @@ But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 20
 
 - **Rework** - 82 pages
 
+  TK - thoughts on Rework. Journal hook from the same week: you listened to DHH on the David Senra show and wrote "he really cares that his day is within his control. I think that is what I should aspire for right now."
+
 - **Let Go** - 38 pages
+
+  TK - thoughts on Let Go. Journal hook: "Great set of learning." Also still missing the author/link for this one.
 
