@@ -78,13 +78,13 @@ But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 20
 
 - **Rework**
 
-  82 pages read
+  (read 82 pages)
 
   I haven't been taking notes for this one. Because it is the kind of a book that you could re-read instead of reading your notes.
 
 - **Let Go**
 
-  38 pages read
+  (read 38 pages)
 
   My wife picked up this book from the book store. I randomly started reading on a weekday night. I could visibly feel my "stress level" going down page after page. wow, books are weird - they can alter space, time, and mind.
 
