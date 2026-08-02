@@ -30,7 +30,7 @@ But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 20
 
   > Using AI to make your work easier while making other people's job harder
 
-  My take: As we use AI more and more in a team setting, we need to be very thoughtful and mindful in producing artifacts that doesn't overload our colleagues.
+  My take: As we use AI more and more in a team setting, we need to be very thoughtful and mindful in producing artifacts that don't overload our colleagues.
 
 - [Mastodon, The Only Good Choice](https://www.tbray.org/ongoing/When/202x/2026/07/05/Choose-Mastodon)
 
@@ -76,11 +76,15 @@ But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 20
 
 ## Books
 
-- **Rework** - 82 pages
+- **Rework**
+
+  82 pages read
 
   I haven't been taking notes for this one. Because it is the kind of a book that you could re-read instead of reading your notes.
 
-- **Let Go** - 38 pages
+- **Let Go**
+
+  38 pages read
 
   My wife picked up this book from the book store. I randomly started reading on a weekday night. I could visibly feel my "stress level" going down page after page. wow, books are weird - they can alter space, time, and mind.
 
