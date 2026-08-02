@@ -30,21 +30,15 @@ But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 20
 
   > Using AI to make your work easier while making other people's job harder
 
-  My take: As we use AI more and more in a team setting, we need to be very thoughtful and mindful in producing artifacts that doesn't overload our colleagues. Example: don't vibe code a 1000 line PR and send it to your teammate for a "code review".
+  My take: As we use AI more and more in a team setting, we need to be very thoughtful and mindful in producing artifacts that doesn't overload our colleagues.
 
 - [Mastodon, The Only Good Choice](https://www.tbray.org/ongoing/When/202x/2026/07/05/Choose-Mastodon)
 
-  Rekindled my interest in Mastodon. I have been using all the others (X, bsky) but stopped using Mastodon. While doing my re-exploration of Mastodon, I met https://indieweb.org which made me double down on starting to write a blog post like the one you are reading now.
+  Rekindled my interest in Mastodon. While doing my re-exploration of Mastodon, I met https://indieweb.org which made me double down on starting to write a blog post like the one you are reading now.
 
 - [Generated and suppressed demand](https://lethain.com/generated-demand/)
 
-  TK - link Will Larson's "reading notes" OG post.
-
-  Suppressed demand is the idea of incoming work that isn't incoming, because teams stop asking you for help.
-
-  Generated demand is when an increasingly effective team's progress is noticed and previously suppressed demand is converted into actual demand.
-
-  I haven't fully internalised the concepts in this post.
+  I suggest reading [this post](https://lethain.com/durably-excellent-teams/) first - something that I have read in the past that gave me a good mental model of team performance. I haven't fully internalised the concepts in this new post though.
 
 - [The Productivity Mirage](https://frantic.im/mirage/)
 
@@ -62,7 +56,7 @@ But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 20
 
 - [The Cold Email](https://zachholman.com/posts/cold-email)
 
-  My rate of sending cold emails is very low. But there was one time where a response to my cold email completely changed my world view. Maybe I need to try to send more.
+  My rate of sending cold emails is very low. But there was one time where a response to my cold email completely changed my world view. Maybe I need to try to send more of these?
 
   Oh, I have also gotten a few cold emails from people around the web and have genuinely enjoyed those conversations.
 
@@ -74,13 +68,11 @@ But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 20
 
 - [What should a personal website be?](http://ratfactor.com/cards/personal-website)
 
-  It has to be whatever you want it to be.
-
-  I really want to put out more of my thoughts on this site. I think that is what I want my website to be about.
+  Spoiler: It has to be whatever you want it to be.
 
 - [The Religion of Speed](https://graybeard.ing/the-religion-of-speed/)
 
-  Great article, especially relevant in the age of AI where software teams are expected to move with speed.
+  Great article, especially relevant in the age of AI where software teams are expected to move with "speed".
 
 ## Books
 
