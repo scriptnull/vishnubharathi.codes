@@ -38,7 +38,7 @@ Here is what I read from 1<sup>st</sup> to 7<sup>th</sup> August 2026.
 
 - [In defense of not understanding your codebase](https://seangoedecke.com/in-defense-of-not-understanding-your-codebase/)
 
-  "Theory of the program" is one important concept I learned from the article. I have been thinking of starting a commonplace notebook for work.
+  "Theory of the program" is one important concept I learned from the article. I have been thinking of starting a commonplace notebook to jot down the theory of the programs and started one after reading this post. Let us see where it goes.
 
 - [Avoid the trap of magical thinking](https://bjorg.bjornroche.com/management/magical-thinking/)
 
@@ -46,15 +46,15 @@ Here is what I read from 1<sup>st</sup> to 7<sup>th</sup> August 2026.
 
 - [What have note-taking PKMs accomplished, really?](https://brennan.day/what-have-note-taking-pkms-accomplished-really/) and [Note-Taking and Personal Knowledge Management](https://unattributed.cc/note-taking-and-personal-knowledge-management)
 
-  I am interested in PKMs, so I read them out of curiosity. But I would not recommend them for general audience.
+  I am interested in PKMs, so I read them out of curiosity. But I would not recommend these posts for general audience.
 
 - [Don't be a meat proxy](https://gruhn.me/blog/2026-08-03/)
 
-  Nice articulation of the idea. This is what I meant in the previous reading log as being empathetic towards colleagues. Short and to the point.
+  Nice articulation of the idea. This is what I meant in the previous reading log as being empathetic towards colleagues. This post is short and to the point.
 
 - [88 Prompts for Long Term Thinking](https://kk.org/thetechnium/88-prompts-for-long-term-thinking/)
 
-  Plan vs perspective: a plan is a type of answer, a perspective is a type of question.
+  The prompts that I really loved:
 
   > Individually we are better off with expanding possibilities for everyone
 
