@@ -99,10 +99,13 @@ tags: ["reading", "books", "blogging"]
 
 ### 4. Write the post
 
-Structure — intro prose with no heading above it, then blogs, then books:
+Structure — intro prose with no heading above it, then blogs, then books. The
+intro is his to write; you supply only the date line (see below):
 
 ```markdown
-<intro paragraphs>
+<he fills this in>
+
+But for now, here is what I read from <date range>.
 
 ## Blogs
 
@@ -145,14 +148,18 @@ is fine and necessary ("Great article, esp relevant..." → "Great article,
 especially relevant..."); rewriting is not. Anything he wrote inside quote
 marks was quoted from the article, so set it as a blockquote.
 
-The intro is the one part with no journal source, so you have to write it.
-It's a short personal lead-in — what's going on with his reading lately —
-ending with the date range, e.g. "here is what I read from 27<sup>th</sup> to
-31<sup>st</sup> July 2026." Don't explain the journal, the `B:`/`BL:` markers,
-or the printing habit; that's the machinery behind the post, not its subject.
-Once a few of these exist, follow the previous one's opening rather than
-inventing a new framing, and say plainly in your reply that the intro is
-yours to rewrite.
+**Don't write an intro.** The only line you generate above `## Blogs` is the
+date line:
+
+```markdown
+But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 2026.
+```
+
+The paragraphs above it are his — where his reading is at lately, what he's
+been building, why he's writing this one. None of that is in the journal, so
+anything you put there is invention he has to read and then delete, which
+costs him more than a blank would. Leave the space empty, and say in your
+reply that the intro is his to add.
 
 ### 5. Preview it
 
@@ -178,7 +185,7 @@ The post is a draft, not a delivery, so end with what he needs to decide:
 - Anything you read as ambiguous handwriting, with your best guess named
 - Any `B:` or `BL:` line you couldn't resolve to a title or a link
 - Larger grammar or flow edits you did **not** apply, as before/after pairs
-- The fact that the intro is yours
+- That the intro is still his to write — you left it blank
 
 Keep the report to those items. Lines outside `B:` and `BL:` don't belong in
 your reply any more than they belong in the post.
