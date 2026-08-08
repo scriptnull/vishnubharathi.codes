@@ -4,9 +4,7 @@ date: 2026-08-08 23:10:00
 tags: ["reading", "books", "blogging"]
 ---
 
-TK intro
-
-But for now, here is what I read from 1<sup>st</sup> to 7<sup>th</sup> August 2026.
+Here is what I read from 1<sup>st</sup> to 7<sup>th</sup> August 2026.
 
 ## Blogs
 
