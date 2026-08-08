@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="I love to collect and read books. They help me a lot.  (I use goodreads too. Send me a friend request and save me from the loneliness there)         The Elements of Computing Systems By: Noam Nisan &amp;">
+    <meta name="description" content="I love to collect and read books. They help me a lot.  (I use goodreads too. Send me a friend request and save me from the loneliness there)       document.documentElement.className +&#x3D; &#39; js-shuffle&#39;;">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Books">
 <meta property="og:url" content="https://vishnubharathi.codes/books/index.html">
 <meta property="og:site_name" content="Vishnu Bharathi">
-<meta property="og:description" content="I love to collect and read books. They help me a lot.  (I use goodreads too. Send me a friend request and save me from the loneliness there)         The Elements of Computing Systems By: Noam Nisan &amp;">
+<meta property="og:description" content="I love to collect and read books. They help me a lot.  (I use goodreads too. Send me a friend request and save me from the loneliness there)       document.documentElement.className +&#x3D; &#39; js-shuffle&#39;;">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2018-09-21T22:10:42.000Z">
-<meta property="article:modified_time" content="2026-08-08T19:50:15.891Z">
+<meta property="article:modified_time" content="2026-08-08T20:02:35.787Z">
 <meta property="article:author" content="Vishnu Bharathi">
 <meta name="twitter:card" content="summary">
     
@@ -95,6 +95,11 @@
 <div id="book-tags"></div>
 
 <hr>
+
+<!-- Hide the list until it has been shuffled, so the reorder is not visible.
+     The class is only set when JS runs, so with JS off the list stays visible. -->
+<script>document.documentElement.className += ' js-shuffle';</script>
+<style>.js-shuffle #books-list { visibility: hidden; }</style>
 
 <div id="books-list">
 
@@ -1044,6 +1049,20 @@
 <script>
 (function(){
   var holder = document.getElementById('book-tags');
+  var list = document.getElementById('books-list');
+
+  // Shuffle on every visit, so the shelf reads as a whole rather than as
+  // whatever order the books happened to be added in.
+  var shuffled = Array.prototype.slice.call(list.querySelectorAll('.book'));
+  for (var i = shuffled.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var swap = shuffled[i]; shuffled[i] = shuffled[j]; shuffled[j] = swap;
+  }
+  var frag = document.createDocumentFragment();
+  shuffled.forEach(function(div){ frag.appendChild(div); });
+  list.appendChild(frag);
+  list.style.visibility = 'visible';
+
   var books = Array.prototype.slice.call(document.querySelectorAll('#books-list .book'));
   var data = books.map(function(div){
     var tags = [];
