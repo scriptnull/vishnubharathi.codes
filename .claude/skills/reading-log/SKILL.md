@@ -105,7 +105,7 @@ intro is his to write; you supply only the date line (see below):
 ```markdown
 <he fills this in>
 
-But for now, here is what I read from <date range>.
+Here is what I read from <date range>.
 
 ## Blogs
 
@@ -152,7 +152,7 @@ marks was quoted from the article, so set it as a blockquote.
 date line:
 
 ```markdown
-But for now, here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 2026.
+Here is what I read from 27<sup>th</sup> to 31<sup>st</sup> July 2026.
 ```
 
 The paragraphs above it are his — where his reading is at lately, what he's
