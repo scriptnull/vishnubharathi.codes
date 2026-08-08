@@ -11,6 +11,11 @@ date: 2018-09-22 03:40:42
 
 <hr>
 
+<!-- Hide the list until it has been shuffled, so the reorder is not visible.
+     The class is only set when JS runs, so with JS off the list stays visible. -->
+<script>document.documentElement.className += ' js-shuffle';</script>
+<style>.js-shuffle #books-list { visibility: hidden; }</style>
+
 <div id="books-list">
 
 <div class="book">
@@ -959,6 +964,20 @@ date: 2018-09-22 03:40:42
 <script>
 (function(){
   var holder = document.getElementById('book-tags');
+  var list = document.getElementById('books-list');
+
+  // Shuffle on every visit, so the shelf reads as a whole rather than as
+  // whatever order the books happened to be added in.
+  var shuffled = Array.prototype.slice.call(list.querySelectorAll('.book'));
+  for (var i = shuffled.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var swap = shuffled[i]; shuffled[i] = shuffled[j]; shuffled[j] = swap;
+  }
+  var frag = document.createDocumentFragment();
+  shuffled.forEach(function(div){ frag.appendChild(div); });
+  list.appendChild(frag);
+  list.style.visibility = 'visible';
+
   var books = Array.prototype.slice.call(document.querySelectorAll('#books-list .book'));
   var data = books.map(function(div){
     var tags = [];
