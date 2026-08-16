@@ -66,7 +66,7 @@ Here is what I read from 8<sup>th</sup> to 16<sup>th</sup> August 2026.
 
 - [Notes from the AI Coding Transition](https://emschwartz.me/notes-from-the-ai-coding-transition/)
 
-  I felt lost in this AI coding transition phase. I am glad that I started reading blogs right now. A blog post like this is exactly what I wanted to read. This post is making me think how I am handling this transition and how can I better handle it.
+  I too felt lost in this AI coding transition phase. I am glad that I started reading blogs right now. A blog post like this is exactly what I wanted to read. This post is making me think how I am handling this transition and how can I better handle it.
 
 ## Books
 
