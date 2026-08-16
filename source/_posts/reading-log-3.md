@@ -34,7 +34,7 @@ Here is what I read from 8<sup>th</sup> to 16<sup>th</sup> August 2026.
 
 - [Joining Cursor](https://arslan.io/2026/08/10/joining-cursor/)
 
-  I have been following Fatih's journey for a while. I don't think he will discover this blog, but if he did somehow: "congrats, buddy! I watching this space closely and I look forward to your updates."
+  I have been following Fatih's journey for a while. I don't think he will discover this blog, but if he did somehow: "congrats, buddy! I am watching this space closely and I look forward to your updates."
 
 - [Touring The Consensus, six months in](http://notes.eatonphil.com/2026-08-05-touring-the-consensus-six-months-in.html)
 
