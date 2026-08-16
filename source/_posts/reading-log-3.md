@@ -10,7 +10,7 @@ Here is what I read from 8<sup>th</sup> to 16<sup>th</sup> August 2026.
 
 - [Reflections on my relationship with social media](https://arslan.io/2022/10/27/reflections-on-the-relationship-with-social-media/)
 
-  My usage of social media is already low. I can go on days without opening Instagram. My Twitter/X usage has been spiking up a bit these days, so I looked around to see if there is something out there to help me. It is a solid post and I read it to gain more momentum to be more productive with how I use my time. There was this one point about "environments" that resonated with me. I recently bought a book stand and the book reading in the family has gone up.
+  My usage of social media is already low. I can go on days without opening Instagram. My Twitter/X usage has been spiking up a bit these days, so I looked around to see if there is something out there to help me. It is a solid post and I read it to gain more momentum to be more productive with how I use my time. There was this one point about "environments" that resonated with me.
 
 - [If AI Writes All the Code, What Do the Programmers Do?](https://probablydance.com/2026/07/27/if-ai-writes-all-the-code-what-do-the-programmers-do/)
 
@@ -34,11 +34,11 @@ Here is what I read from 8<sup>th</sup> to 16<sup>th</sup> August 2026.
 
 - [Joining Cursor](https://arslan.io/2026/08/10/joining-cursor/)
 
-  I have been following Fatih's journey for a long time. I don't think he will discover this blog, but if you did somehow - congrats, buddy! I am having a front row seat and watching this space closely. I look forward to your updates.
+  I have been following Fatih's journey for a while. I don't think he will discover this blog, but if he did somehow: "congrats, buddy! I watching this space closely and I look forward to your updates."
 
 - [Touring The Consensus, six months in](http://notes.eatonphil.com/2026-08-05-touring-the-consensus-six-months-in.html)
 
-  I lurk around on the software internals discord and know about the Consensus project that Phil Eaton was working on. I haven't had a chance to check it closely myself and this post came up as a good reminder of what the project has evolved into. I am exploring the site as I write this.
+  I lurk around on the [Software Internals discord](https://eatonphil.com/discord.html) and know about the Consensus project that Phil Eaton was working on. I haven't had a chance to check it closely myself and this post came up as a good reminder of what the project has evolved into. I am exploring the site as I write this.
 
 - [AI is removing the middle class of software engineering](https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html)
 
@@ -58,7 +58,7 @@ Here is what I read from 8<sup>th</sup> to 16<sup>th</sup> August 2026.
 
 - [Not Holding Back the Ocean](https://ethanniser.substack.com/p/not-holding-back-the-ocean)
 
-  Must read for engineers trying to navigate the current AI landscape. Discovered this post via a podcast (Next Token, Ep. 3 TK link the podcast episode).
+  Must read for engineers trying to navigate the current AI landscape. Discovered this post via a podcast ([Next Token, Ep. 3](https://open.spotify.com/episode/66VkIHiJ73ZS0nY4i68nSW)).
 
 - [Write something worth becoming known for](https://x.com/jasonfreedman/status/2086594887210901555/?rw_tt_thread=True)
 
@@ -74,6 +74,10 @@ Here is what I read from 8<sup>th</sup> to 16<sup>th</sup> August 2026.
 
   (read 131 pages)
 
+  Completed reading this book with this batch of papers. This is about a lot of things. It will make you a human being.
+
 - **Tao Te Ching**
 
   (read a few random pages)
+
+  "The way is wide open"
