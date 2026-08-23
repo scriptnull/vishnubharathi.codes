@@ -14,11 +14,11 @@ Here is what I read from 17<sup>th</sup> to 23<sup>rd</sup> August 2026.
 
 - [Build Wide, Ship Narrow](https://adapt.com/blog/build-wide-ship-narrow)
 
-  I have been personally having trouble asking AI to come up with a design doc because it usually dumps a whole lot of 8 to 12 pages for a simple feature work. I arrived at a point that this post suggests to do first after experimentation: first thing to do is make AI ask you a lot of questions. The blog author has a skill for it. TK: checkout grill-me skill
+  I have been personally having trouble in asking AI to come up with a design doc because it usually dumps a whole lot of 8 to 12 pages for a simple feature work. I arrived at a point that this post suggests to do first after experimentation: first thing to do is make AI ask you a lot of questions. The blog author tells about a skill for it: [grill-me](https://www.aihero.dev/skills-grill-me) (tried it, pretty awesome!).
 
 - [Thirty Percent Feedback](https://humbledmba.com/thirty-percent-feedback/)
 
-  If you are working at / building a startup, this might be a good read. My guess is that building a culture like this is probably what we might want for a startup and people in those startups to succeed. I don't know if I am making sense but I like blog posts like this which give a new or contrarian mental model that I might want to consider. TIL YC makes startups demo every week. The post is from 2014, so not sure if this is true anymore.
+  If you are working at / building a startup, this might be a good read. My guess is that building a culture like this is probably what we might want for a startup and people in those startups to succeed. I don't know if I am making sense, but I like blog posts like this which give a new or contrarian mental model that I might want to consider. TIL YC makes startups demo every week. The post is from 2014, so not sure if this is true anymore.
 
 - [The Personal Reset](https://adamfortuna.com/reset)
 
@@ -36,7 +36,7 @@ Here is what I read from 17<sup>th</sup> to 23<sup>rd</sup> August 2026.
 
 - [AI;DR (AI; Didn't Read)](https://www.rickmanelius.com/p/aidr-ai-didnt-read)
 
-  I am going to use this acronym with AI to let it rewrite the response in a manner that will help in unslopping. But yeah, never send slop to friends. Always handcraft.
+  I am going to use this acronym both with humans and AI to let it rewrite the response in a manner that will help in unslopping. But yeah, never send slop to friends. Always handcraft.
 
 - [How things win](https://stephango.com/moats)
 
