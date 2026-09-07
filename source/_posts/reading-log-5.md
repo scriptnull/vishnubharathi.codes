@@ -10,7 +10,7 @@ Here is what I read from 24<sup>th</sup> August to 6<sup>th</sup> September 2026
 
 - [The end of programming](https://pauldix.com/the-end-of-programming)
 
-  AI models have gotten so good that it is becoming trivial to produce a lot of code in a day. Almost unreasonable amount of code that it would take even days to read through and get into them. I have been facing similar situation recently. This going to get normal. Let us figure out how to navigate this!
+  AI models have gotten so good that it is becoming trivial to produce a lot of code in a day. Almost unreasonable amount of code that it would take even days to read through and get into them. I have been facing similar situation recently. This is going to get normal. Let us figure out how to navigate this!
 
 - [Why I am shutting down my bookstore in New Delhi](https://www.dailyo.in/arts/fact-and-fiction-bookstore-new-delhi-independent-book-shops-india-5415)
 
@@ -30,7 +30,7 @@ Here is what I read from 24<sup>th</sup> August to 6<sup>th</sup> September 2026
 
 - [Huzzah](https://www.danielvaughn.dev/posts/huzzah/)
 
-  Huge amounts of code is getting written with AI these days. It is getting out of hands. I suspect that there is place for tools like this that help humans to have their understanding in sync with what AI produces. I am looking forward to more new ideas and tools like this. It is upto us to figure this out now!
+  Huge amounts of code are getting written with AI these days. It is getting out of hand. I suspect that there is place for tools like this that help humans to have their understanding in sync with what AI produces. I am looking forward to more new ideas and tools like this. It is upto us to figure this out now!
 
 - [AI-pilling our company: lessons learned](https://sierra.ai/blog/ai-pilling-our-company-lessons-learned)
 
