@@ -46,7 +46,7 @@ Here is what I read from 24<sup>th</sup> August to 6<sup>th</sup> September 2026
 
 - **Essentialism**
 
-  (read 195 pages)
+  (read 203 pages)
 
   Finished this book. It gave me a sense of calm and the courage to ask "what is essential here?" whenever I like to.
 
