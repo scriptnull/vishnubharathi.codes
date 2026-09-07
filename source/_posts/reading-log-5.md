@@ -22,7 +22,7 @@ Here is what I read from 24<sup>th</sup> August to 6<sup>th</sup> September 2026
 
 - [What is a Harness?](https://earendil.com/posts/what-is-a-harness/)
 
-  Good, short!
+  Good intro!
 
 - [Rebuilding Linear's delta sync read path](https://linear.app/now/rebuilding-delta-sync-read-path)
 
