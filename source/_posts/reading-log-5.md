@@ -26,7 +26,7 @@ Here is what I read from 24<sup>th</sup> August to 6<sup>th</sup> September 2026
 
   Interesting. This has made a few more interesting questions to delve on. Going to explore a bit. What are inverted indexes? What is the purpose of GIN?
 
-- Revised Roles of Engineering Leadership TK
+- [Revised Rules of Engineering Leadership](https://lethain.com/revised-rules-of-engineering-leadership/)
 
 - [Huzzah](https://www.danielvaughn.dev/posts/huzzah/)
 
@@ -36,7 +36,7 @@ Here is what I read from 24<sup>th</sup> August to 6<sup>th</sup> September 2026
 
   Good takeaways. This is how most software teams will look like — they will face all the points mentioned in this post and have some version of the agent powering the team.
 
-- The Bottlenecks for AI-Driven System Design: why principal engineers are not (yet) obsolete TK
+- [The Bottlenecks for AI-Driven System Design: why principal engineers are not (yet) obsolete](https://maheshba.bitbucket.io/blog/2026/07/22/agentdesign.html)
 
   What is a hill-climbing exercise? I notice this term being used when discussing about performance.
 
