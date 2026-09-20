@@ -1,6 +1,6 @@
 ---
 title: "Reading Log #6"
-date: 2026-09-18 07:55:00
+date: 2026-09-20 07:21:58
 tags: ["reading", "books", "blogging"]
 ---
 
