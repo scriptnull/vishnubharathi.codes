@@ -48,7 +48,7 @@ Here is what I read from 7<sup>th</sup> to 17<sup>th</sup> September 2026.
 
   I am convinced!
 
-- Rich, fully attributed content timeout errors in Go TK
+- [Rich, fully attributed context timeout errors in Go](https://brandur.org/fragments/attributed-context-errors)
 
   Good to read a "Go" post after a long while.
 
