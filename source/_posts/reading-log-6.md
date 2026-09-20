@@ -10,7 +10,7 @@ Here is what I read from 7<sup>th</sup> to 17<sup>th</sup> September 2026.
 
 - [Maybe We Shouldn't Be Reviewing All This Code](https://martinfowler.com/rachels-ramblings/code-review.html)
 
-  The same problem that I have been thinking about in the background for a while now, i.e. AI agents are dumping a huge amount of code and how do humans catch up?
+  I have been thinking about the same problem in the background for a while now, i.e. AI agents are dumping a huge amount of code and how do humans catch up?
 
 - [Invisible Companies](https://colossus.com/article/invisible-companies/)
 
@@ -27,6 +27,8 @@ Here is what I read from 7<sup>th</sup> to 17<sup>th</sup> September 2026.
   I always translate uptime percent to be "how much time this was down for the past 30 days?" — it takes a while. The author suggests to directly give that information instead of the cryptic percentage (for general audience).
 
 - [The irrational effectiveness of the Pi harness](https://rednafi.com/misc/pi-harness/)
+
+  Pi again!
 
 - [Every Customer Gets the Same Software. That's Ending.](https://julien.danjou.info/blog/every-customer-gets-the-same-software/)
 
@@ -56,9 +58,11 @@ Here is what I read from 7<sup>th</sup> to 17<sup>th</sup> September 2026.
 
 - [You have to beat the models at something](https://seangoedecke.com/you-have-to-beat-the-models-at-something/)
 
-  Wow, second post that made me understand that "writing" is the best human activity in the age of AI.
+  Wow, this is the second post that this week that relays that "writing" is one of the things that is more human in the age of AI.
 
-- [A Billion Dollars](https://kk.org/thetechnium/a-billion-dollars/)
+- ⭐ [A Billion Dollars](https://kk.org/thetechnium/a-billion-dollars/)
+
+  The first ever essay that I got to share with my sister!
 
 - [You need to find product-market fit again (sorry)](https://newsletter.posthog.com/p/you-need-to-find-product-market-fit)
 
@@ -72,13 +76,17 @@ Here is what I read from 7<sup>th</sup> to 17<sup>th</sup> September 2026.
 
 ## Books
 
-- **Keep Going**
+- ⭐ ✅ **Keep Going**
 
   (read 200 pages)
 
-- **How Will You Measure Your Life?**
+  Fantastic book! Must-read for people who are interested in doing art.
+
+- ⭐ **How Will You Measure Your Life?**
 
   (read 82 pages)
+
+  Definitely altering who I am!
 
 - **Make It Stick**
 
@@ -88,12 +96,10 @@ Here is what I read from 7<sup>th</sup> to 17<sup>th</sup> September 2026.
 
   (read 7 pages)
 
-- **IIR** TK
+- **Introduction to Information Retrieval**
 
   (read 6 pages)
 
 - **Tools of Titans**
 
   (read 4 pages, plus a few more at random)
-
-  Gail connection TK
