@@ -10,7 +10,7 @@ Here is what I read from 18<sup>th</sup> September to 3<sup>rd</sup> October 202
 
 - [The revolt of the reader](https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/)
 
-  Discovered Pangram (TK: link it) via this post. I haven't run into blog posts where an LLM has written most of it — lucky that I don't get to follow/stumble upon that part of the internet. But I have stumbled upon too many website copies being authored by LLMs and it makes me furious all the time.
+  Discovered [Pangram](https://www.pangram.com/) via this post. I haven't run into blog posts where an LLM has written most of it — lucky that I don't get to follow/stumble upon that part of the internet. But I have stumbled upon too many website copies being authored by LLMs and it makes me furious all the time.
 
 - ⭐ [the senior engineer death spiral](https://sunilpai.dev/posts/the-senior-engineer-death-spiral/)
 
@@ -38,11 +38,11 @@ Here is what I read from 18<sup>th</sup> September to 3<sup>rd</sup> October 202
 
 - [Trying the Software factory pattern.](https://lethain.com/software-factory-experiment/)
 
-- Three Sticky Notes (TK: link)
+- [Three Sticky Notes](https://clarionsong.substack.com/p/three-sticky-notes)
 
   I have been recently experimenting with using sticky notes for managing my TODOs. It has been working out okay some days and I go off track on some days. But I have to tell you this: it is so satisfying to crush the sticky note for a done task.
 
-- Joy & Curiosity #101 (TK: link)
+- [Joy & Curiosity #101](https://registerspill.thorstenball.com/p/joy-and-curiosity-101)
 
 - [AI Has No Wisdom and Neither Will You](https://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/)
 
@@ -54,7 +54,7 @@ Here is what I read from 18<sup>th</sup> September to 3<sup>rd</sup> October 202
 
 - [I don't want the details](https://michaelheap.com/i-dont-want-the-details/)
 
-  A good CxO would make you feel that they trust you and steer you towards doing your best work at hard times. The trust part isn't always obvious. For example, when a CxO says "I don't want the details", you might feel rudeness, but what it could be might be different. Imposter syndrome could be at play here. I believe it takes both the humans to operate with optimism in tough times.
+  A good CXO would make you feel that they trust you and steer you towards doing your best work at hard times. The trust part isn't always obvious. For example, when a CXO says "I don't want the details", you might feel rudeness, but what it could mean might be different. Imposter syndrome could be at play. I believe it takes both the humans to operate with optimism in tough times to achieve great results!
 
 - [Attention is all you have](https://alicegg.tech/2026/09/21/attention)
 
@@ -70,9 +70,13 @@ Here is what I read from 18<sup>th</sup> September to 3<sup>rd</sup> October 202
 
   (read 122 pages)
 
+  I haven't experienced something like this. The book belongs to a genre that I can't explain. This is definitely one of the best books I have read this year. And it goes straight to my "suggest-to-anyone-as-a-must-read-book" list.
+
 - **Digital Minimalism**
 
   (read 64 pages)
+
+  I already have a good hang of some parts of my digital life. But want to revise my way of using social media a bit.
 
 - **Show Your Work!**
 
@@ -81,6 +85,8 @@ Here is what I read from 18<sup>th</sup> September to 3<sup>rd</sup> October 202
 - **Grandma's Bag of Stories**
 
   (read 5 pages)
+
+  Bedtime stories!
 
 - **Letters from a Stoic**
 
