@@ -20,7 +20,7 @@ Here is what I read from 6<sup>th</sup> to 18<sup>th</sup> October 2026.
 
 - [Developers Should Read the Classics Too](https://www.mtsoukalos.eu/2026/10/developers-should-read-the-classics-too/)
 
-  Excellent, loved it! I already have a stack of classics waiting for me, and Animal Farm is my top choice too — glad I got a nice print of it.
+  Excellent, loved it! I already have a stack of classics waiting for me, and Animal Farm is my top choice too.
 
 - [Don't give in to nostalgia](https://elliot.my/dont-give-in-to-nostalgia/)
 
