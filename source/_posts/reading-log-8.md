@@ -6,6 +6,8 @@ tags: ["reading", "books", "blogging"]
 
 Here is what I read from 6<sup>th</sup> to 18<sup>th</sup> October 2026.
 
+Side note: I have been travelling for festive holidays here in India and doing a Harry Potter movie marathon (currently on part 7) during this period of time.
+
 ## Blogs
 
 - [How I manage my agents](https://arslan.io/2026/09/11/how-i-manage-my-agents/)
@@ -65,6 +67,8 @@ Here is what I read from 6<sup>th</sup> to 18<sup>th</sup> October 2026.
 - **How to Fail at Almost Everything and Still Win Big**
 
   (read 5 pages)
+
+  I read the book once a long, long time ago. Found it in a bunch of books that I kept back in my native place.
 
 - **Tao Te Ching**
 
