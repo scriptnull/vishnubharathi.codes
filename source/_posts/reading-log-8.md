@@ -28,13 +28,13 @@ Here is what I read from 6<sup>th</sup> to 18<sup>th</sup> October 2026.
 
 - [Why do we listen to people with no skin in the game?](https://rednafi.com/zephyr/no-skin-in-the-game/)
 
-- You should never be angry at work TK
+- [You should never be angry at work](https://www.seangoedecke.com/you-should-never-be-angry-at-work/)
 
 - [Doing everyone else's job](https://yosefk.com/blog/doing-everyone-elses-job.html)
 
 - [How to keep learning in the age of LLMs](https://ogzhanolguncu.com/blog/how-to-keep-learning-in-the-age-of-llms/)
 
-- I wasted an hour on X TK
+- [True Things About X](https://www.tbray.org/ongoing/When/202x/2026/10/13/True-Things-About-X)
 
 - ⭐ [How to be more ambitious: A tutorial for humans with models](https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/)
 
@@ -48,7 +48,7 @@ Here is what I read from 6<sup>th</sup> to 18<sup>th</sup> October 2026.
 
   Fantastic read! One of my regrets, which I have noticed with myself and some friends, is that we focused pretty much our early years on just one type of capital (skill, reputation, relationships, knowledge, finance) and stagnated our growth to it. But don't be me — diversify!
 
-- Software engineers don't get to be Luddites about AI TK
+- [Software engineers don't get to be Luddites about AI](https://www.seangoedecke.com/software-engineers-dont-get-to-be-luddites-about-ai/)
 
 ## Books
 
