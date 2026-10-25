@@ -1,7 +1,7 @@
 ---
 title: Constellation
 date: 2026-10-25 22:58:00
-tags: []
+tags: ["life", "nostalgia", "poetry"]
 ---
 
 I came across a beautiful poem written by my sister Ananya recently. She seems to have written it as a stress buster while preparing for her exams.
