@@ -18,19 +18,15 @@ Before I tell you what the word means, I want to talk a little bit about the boo
 
 The book is written in a language called Tamil. The title of the book translates to "Bright Future".
 
-The book is a transcript of a speech delivered by [Vedhathiri Maharishi](https://en.wikipedia.org/wiki/Vethathiri_Maharishi). He created Manavalakalai Yoga (simplified yoga) that can be understood by anybody. The slang used in the book is "Thooya Tamil" (pure Tamil) and contains Tamil poems dated 1000+ years and the text explaining the meaning of the word "perspicacity".
+The book is a transcript of a speech delivered by [Vedhathiri Maharishi](https://en.wikipedia.org/wiki/Vethathiri_Maharishi). He created Manavalakalai Yoga (simplified yoga) that can be understood by anybody. The slang used in the book is "Thooya Tamil" (pure Tamil). Here is the part that made me say wow: the book contains Tamil poems dated 1000+ years, explains grammar of ancient Tamil Poems and at the same time contains a little passage explaining the meaning of the word "perspicacity"!
 
 Here is the quote from it:
 
-> Perspicacity: Quick insight of the mind linking past experiences, present circumstances and future results taking a right decision in right time and following and getting benefit.
+> Perspicacity என்றால் Quick insight of the mind linking past experiences, present circumstances and future results taking a right decision in right time and following and getting benefit.
 
-With the advent of AI, I have been thinking about what do I need to navigate this? I have come across soms words people mention to describe what you need to succeed in AI: "moat", "agency", etc.
+With the advent of AI, I have been thinking about what do I need to navigate this? I have come across some words people mention to describe what you need to succeed in AI: "moat", "agency", etc. - most of them you would need before AI too.
 
-Take "agency" for example. Agency means the capacity to act and get things done. I often relate it with ownership. Owning some piece of the system and acting on it to get business value is my understanding of agency.
-
-All of those (agency, moat, etc.) were needed before AI too.
-
-Now with AI (especially in software development), I think we need "perspicacity". Here is my theory on why: AI is producing tons of code and documents a.k.a AI slop. Now almost every engineer I talk to is feeling overwhelmed by it. I myself find it too much to digest and I would say that it is my number one blocker for doing hard things now.
+With AI, I think we need "perspicacity". Here is my theory on why: AI is producing tons of code and documents a.k.a AI slop. Now almost every engineer I talk to is feeling overwhelmed by it. I myself find it too much to digest and I would say that it is my number one blocker for doing hard things now.
 
 So here is my advice to myself and to you (if you are looking to work better with AI): Do things that increase your perspicacity.
 
@@ -48,7 +44,7 @@ So do what you need to do to maximize the right insights to arrive in your mind.
 
 Just ask "what is going to increase my perspicacity?" in a given situation and follow-through.
 
-Oh! and the closest of an answer to AI slop that I have found so far is to ask a lot of questions to it or make it ask a lot of questions to you ([grill me skill](https://github.com/mattpocock/skills/blob/main/docs/productivity/grill-me.md)). If you feel like you are drowning, cut scope or ship in smaller milestones.
+Oh! and the closest of an answer to AI slop that I have found so far is to ask a lot of questions to it or make it ask a lot of questions to you ([grill me skill](https://github.com/mattpocock/skills/blob/main/docs/productivity/grill-me.md)). Vibe-coding isn't going to give you insights. Trying to read through every line of code will make you feel left behind. You need to do something in the middle where you are able to generate insights! That usually means building [theory of programs](https://www.seangoedecke.com/programming-with-ai-agents-as-theory-building/) to serve you at the right time.
 
 That's all I have for now.
 
