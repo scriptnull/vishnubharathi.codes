@@ -1,7 +1,7 @@
 ---
 title: Perspicacity
 date: 2026-10-25 19:00:00
-tags: ["AI", "career advice"]
+tags: ["AI", "career advice", "books", "productivity"]
 ---
 
 I learnt this new word: "perspicacity".
