@@ -56,6 +56,8 @@ Here is what I read from 23<sup>rd</sup> October to 11<sup>th</sup> November 202
 
   If you are afraid that AI will take your jobs, then you should read this post. Also, from this point onwards, I consider myself to be a protopian.
 
+- [Joy & Curiosity #105](https://registerspill.thorstenball.com/p/joy-and-curiosity-105)
+
 ## Books
 
 - **Digital Minimalism**
